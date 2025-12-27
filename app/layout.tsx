@@ -10,11 +10,6 @@ export const metadata: Metadata = {
     title: 'VLA SOTA Leaderboard',
     description: 'Vision-Language-Action Model Benchmark Rankings - Track state-of-the-art VLA models on LIBERO, CALVIN, and Meta-World benchmarks.',
     keywords: ['VLA', 'Vision-Language-Action', 'Robotics', 'Benchmark', 'Leaderboard', 'LIBERO', 'CALVIN', 'Meta-World'],
-    icons: {
-        icon: '/logo/EvoMind0.png',
-        shortcut: '/logo/EvoMind0.png',
-        apple: '/logo/EvoMind0.png',
-    },
 };
 
 export default function RootLayout({
@@ -22,8 +17,15 @@ export default function RootLayout({
 }: {
     children: React.ReactNode;
 }) {
+    const basePath = process.env.NODE_ENV === 'production' ? '/Evo-SOTA.io' : '';
+
     return (
         <html lang="en">
+            <head>
+                <link rel="icon" href={`${basePath}/logo/EvoMind0.png`} />
+                <link rel="shortcut icon" href={`${basePath}/logo/EvoMind0.png`} />
+                <link rel="apple-touch-icon" href={`${basePath}/logo/EvoMind0.png`} />
+            </head>
             <body className={inter.className}>
                 <LanguageProvider>
                     <div className="min-h-screen flex flex-col">
