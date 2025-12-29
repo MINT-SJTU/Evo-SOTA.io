@@ -39,10 +39,15 @@ export default function StatsOverview() {
                 const calvin = await calvinRes.json();
                 const metaworld = await metaworldRes.json();
 
-                // 计算统计数据
-                const liberoCount = libero.length;
-                const calvinCount = calvin.abc_d.length;
-                const metaworldCount = metaworld.length;
+                // 计算统计数据 - 使用标准开源模型数量
+                const liberoCount = libero.standard_opensource?.length || 0;
+                const calvinCount = calvin.abc_d?.standard_opensource?.length || 0;
+                const metaworldCount = metaworld.standard_opensource?.length || 0;
+
+                // 获取第一名
+                const topLiberoModel = libero.standard_opensource?.[0];
+                const topCalvinModel = calvin.abc_d?.standard_opensource?.[0];
+                const topMetaworldModel = metaworld.standard_opensource?.[0];
 
                 const newStats: StatsData = {
                     totalModels: liberoCount + calvinCount + metaworldCount,
@@ -50,9 +55,9 @@ export default function StatsOverview() {
                     calvinModels: calvinCount,
                     metaworldModels: metaworldCount,
                     latestYear: '2025',
-                    topLibero: { name: libero[0]?.name || 'N/A', score: libero[0]?.average || 0 },
-                    topCalvin: { name: calvin.abc_d[0]?.name || 'N/A', score: calvin.abc_d[0]?.avg_len || 0 },
-                    topMetaworld: { name: metaworld[0]?.name || 'N/A', score: metaworld[0]?.average || 0 },
+                    topLibero: { name: topLiberoModel?.name || 'N/A', score: topLiberoModel?.average || 0 },
+                    topCalvin: { name: topCalvinModel?.name || 'N/A', score: topCalvinModel?.avg_len || 0 },
+                    topMetaworld: { name: topMetaworldModel?.name || 'N/A', score: topMetaworldModel?.average || 0 },
                 };
 
                 setStats(newStats);

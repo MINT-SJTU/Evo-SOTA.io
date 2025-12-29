@@ -25,29 +25,42 @@ interface DataPoint {
 
 interface LiberoModel {
     name: string;
-    pub_date: string;
+    pub_date: string | null;
     average: number | null;
-    paper_url?: string;
+    paper_url?: string | null;
 }
 
 interface CalvinModel {
     name: string;
-    pub_date: string;
+    pub_date: string | null;
     avg_len: number | null;
-    paper_url?: string;
+    paper_url?: string | null;
 }
 
 interface MetaworldModel {
     name: string;
-    pub_date: string;
+    pub_date: string | null;
     average: number | null;
-    paper_url?: string;
+    paper_url?: string | null;
+}
+
+// 新的分类数据结构
+interface CategorizedData<T> {
+    standard_opensource: T[];
+    standard_closed: T[];
+    non_standard: T[];
+}
+
+interface CalvinSettingData {
+    standard_opensource: CalvinModel[];
+    standard_closed: CalvinModel[];
+    non_standard: CalvinModel[];
 }
 
 interface CalvinData {
-    abc_d: CalvinModel[];
-    abcd_d: CalvinModel[];
-    d_d: CalvinModel[];
+    abc_d: CalvinSettingData;
+    abcd_d: CalvinSettingData;
+    d_d: CalvinSettingData;
 }
 
 // 自定义 Tooltip
@@ -108,44 +121,65 @@ export default function ProgressChart() {
                     fetch(`${basePath}/data/metaworld.json`)
                 ]);
 
-                const libero: LiberoModel[] = await liberoRes.json();
+                const libero: CategorizedData<LiberoModel> = await liberoRes.json();
                 const calvin: CalvinData = await calvinRes.json();
-                const metaworld: MetaworldModel[] = await metaworldRes.json();
+                const metaworld: CategorizedData<MetaworldModel> = await metaworldRes.json();
+
+                // 合并所有分类的数据（standard_opensource, standard_closed, non_standard）
+                const allLibero = [
+                    ...libero.standard_opensource,
+                    ...libero.standard_closed,
+                    ...libero.non_standard
+                ];
 
                 // 处理 LIBERO 数据
-                const liberoPoints: DataPoint[] = libero
+                const liberoPoints: DataPoint[] = allLibero
                     .filter(m => m.average !== null && m.pub_date)
                     .map(m => ({
                         name: m.name,
-                        date: parseDate(m.pub_date),
-                        dateStr: formatDate(m.pub_date),
+                        date: parseDate(m.pub_date!),
+                        dateStr: formatDate(m.pub_date!),
                         score: m.average!,
                         benchmark: 'LIBERO',
-                        paper_url: m.paper_url
+                        paper_url: m.paper_url || undefined
                     }));
 
+                // 合并 CALVIN ABC→D 所有分类
+                const allCalvinAbcD = [
+                    ...calvin.abc_d.standard_opensource,
+                    ...calvin.abc_d.standard_closed,
+                    ...calvin.abc_d.non_standard
+                ];
+
                 // 处理 CALVIN 数据 (使用 ABC→D 设置)
-                const calvinPoints: DataPoint[] = calvin.abc_d
+                const calvinPoints: DataPoint[] = allCalvinAbcD
                     .filter(m => m.avg_len !== null && m.pub_date)
                     .map(m => ({
                         name: m.name,
-                        date: parseDate(m.pub_date),
-                        dateStr: formatDate(m.pub_date),
+                        date: parseDate(m.pub_date!),
+                        dateStr: formatDate(m.pub_date!),
                         score: m.avg_len!,
                         benchmark: 'CALVIN',
-                        paper_url: m.paper_url
+                        paper_url: m.paper_url || undefined
                     }));
 
+                // 合并所有分类的 Meta-World 数据
+                const allMetaworld = [
+                    ...metaworld.standard_opensource,
+                    ...metaworld.standard_closed,
+                    ...metaworld.non_standard
+                ];
+
                 // 处理 Meta-World 数据
-                const metaworldPoints: DataPoint[] = metaworld
+                const metaworldPoints: DataPoint[] = allMetaworld
                     .filter(m => m.average !== null && m.pub_date)
                     .map(m => ({
                         name: m.name,
-                        date: parseDate(m.pub_date),
-                        dateStr: formatDate(m.pub_date),
+                        date: parseDate(m.pub_date!),
+                        dateStr: formatDate(m.pub_date!),
                         score: m.average!,
                         benchmark: 'Meta-World',
-                        paper_url: m.paper_url
+                        paper_url: m.paper_url || undefined
                     }));
 
                 setLiberoData(liberoPoints);

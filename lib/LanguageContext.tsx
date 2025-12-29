@@ -19,6 +19,7 @@ type TranslationType = {
         models: string;
         topPerformers: string;
         primaryMetric: string;
+        starUs: string;
     };
     benchmark: {
         rank: string;

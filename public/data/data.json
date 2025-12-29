@@ -1,6 +1,9 @@
 {
   "libero": {
-    "total_models": 57,
+    "total_models": 56,
+    "standard_opensource_count": 32,
+    "standard_closed_count": 11,
+    "non_standard_count": 13,
     "primary_metric": "Average Success Rate (%)",
     "top_5": [
       {
@@ -14,66 +17,72 @@
         "rank": 2
       },
       {
-        "name": "AVA-VLA",
-        "score": 98.3,
-        "rank": 3
-      },
-      {
         "name": "X-VLA",
         "score": 98.1,
-        "rank": 4
+        "rank": 3
       },
       {
         "name": "VOTE",
         "score": 98.0,
+        "rank": 4
+      },
+      {
+        "name": "VLA-Cache (OpenVLA+VLA-Cache)",
+        "score": 97.4,
         "rank": 5
       }
     ]
   },
   "metaworld": {
-    "total_models": 12,
+    "total_models": 13,
+    "standard_opensource_count": 5,
+    "standard_closed_count": 0,
+    "non_standard_count": 8,
     "primary_metric": "Average Success Rate (%)",
     "top_5": [
       {
-        "name": "MPI",
-        "score": 86.0,
+        "name": "Evo-1",
+        "score": 80.6,
         "rank": 1
       },
       {
-        "name": "iRe-VLA",
-        "score": 83.0,
+        "name": "SmolVLA",
+        "score": 68.2,
         "rank": 2
       },
       {
-        "name": "Evo-1",
-        "score": 80.6,
+        "name": "pi0",
+        "score": 47.9,
         "rank": 3
       },
       {
-        "name": "Baku",
-        "score": 79.0,
+        "name": "TinyVLA-H",
+        "score": 31.6,
         "rank": 4
       },
       {
-        "name": "TriVLA",
-        "score": 71.4,
+        "name": "Diffusion Policy",
+        "score": 10.5,
         "rank": 5
       }
     ]
   },
   "calvin": {
-    "total_models": 35,
+    "total_models": 36,
+    "standard_opensource_count": 27,
+    "standard_closed_count": 6,
+    "non_standard_count": 3,
     "primary_metric": "Average Length (Avg. Len.)",
     "description": "ABC-D Setting (Default)",
     "top_5": [
       {
-        "name": "AVA-VLA",
-        "score": 4.65,
+        "name": "Flower VLA",
+        "score": 4.53,
         "rank": 1
       },
       {
-        "name": "Flower VLA",
-        "score": 4.53,
+        "name": "VLA-Adapter-pro",
+        "score": 4.5,
         "rank": 2
       },
       {
@@ -93,9 +102,9 @@
       }
     ],
     "settings": {
-      "abcd_d": 14,
-      "abc_d": 35,
-      "d_d": 12
+      "abcd_d": 15,
+      "abc_d": 36,
+      "d_d": 11
     }
   }
 }

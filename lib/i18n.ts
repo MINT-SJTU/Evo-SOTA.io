@@ -24,6 +24,7 @@ export const translations = {
             models: 'Models',
             topPerformers: 'Top Performers',
             primaryMetric: 'Primary Metric',
+            starUs: 'Star us on GitHub if you find this useful!',
         },
         // Benchmark 页面
         benchmark: {
@@ -133,6 +134,7 @@ export const translations = {
             models: '模型',
             topPerformers: '领先模型',
             primaryMetric: '主要指标',
+            starUs: '如果觉得有用，请给我们的 GitHub 仓库点个 Star！',
         },
         // Benchmark 页面
         benchmark: {
