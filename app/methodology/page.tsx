@@ -31,7 +31,9 @@ export default function MethodologyPage() {
             dataNotice: 'Data Notice',
             dataNoticeDesc1: 'Data collection deadline: December 29, 2025.',
             dataNoticeDesc2: 'If you find any errors or omissions, please let us know by creating an issue on GitHub or contacting us via email.',
-            emailContact: 'Email: XXX@email.com',
+            contactUs: 'Contact Us',
+            contactUsDesc: 'Found errors or want to submit your model? Reach out via GitHub Issue or email!',
+            contactEmail: 'business@evomind-tech.com',
         },
         zh: {
             title: '方法说明',
@@ -58,7 +60,9 @@ export default function MethodologyPage() {
             dataNotice: '数据说明',
             dataNoticeDesc1: '数据收集截止日期：2025年12月29日。',
             dataNoticeDesc2: '如有错误或遗漏，敬请谅解。您可以在 GitHub 的 Issue 中提出，或通过邮件联系我们，我们会及时改进。',
-            emailContact: '邮箱：XXX@email.com',
+            contactUs: '联系我们',
+            contactUsDesc: '发现错误或想提交您的模型？请通过 GitHub Issue 或邮件联系我们！',
+            contactEmail: 'business@evomind-tech.com',
         }
     };
 
@@ -252,9 +256,9 @@ export default function MethodologyPage() {
                                 <li className="flex items-start gap-2">
                                     <span className="text-blue-500 mt-1">•</span>
                                     <span className="flex items-center gap-2">
-                                        {t.emailContact}
+                                        Email: {t.contactEmail}
                                         <a
-                                            href="mailto:XXX@email.com"
+                                            href={`mailto:${t.contactEmail}`}
                                             className="text-blue-600 hover:text-blue-800 underline"
                                         >
                                             <svg className="w-4 h-4 inline" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -292,7 +296,7 @@ export default function MethodologyPage() {
                     <h2 className="text-2xl font-bold text-slate-800 mb-6 text-center">
                         Supported Benchmarks
                     </h2>
-                    <div className="grid md:grid-cols-3 gap-4">
+                    <div className="grid md:grid-cols-4 gap-4">
                         <a
                             href="https://github.com/Lifelong-Robot-Learning/LIBERO"
                             target="_blank"
@@ -302,6 +306,16 @@ export default function MethodologyPage() {
                             <h3 className="font-semibold text-blue-800">LIBERO</h3>
                             <p className="text-sm text-blue-600 mt-1">Average Success Rate (%)</p>
                             <p className="text-xs text-blue-500 mt-2">130 language-conditioned tasks</p>
+                        </a>
+                        <a
+                            href="https://github.com/sylvestf/LIBERO-plus"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="bg-cyan-50 border border-cyan-200 rounded-lg p-4 hover:shadow-md transition-shadow"
+                        >
+                            <h3 className="font-semibold text-cyan-800">LIBERO Plus</h3>
+                            <p className="text-sm text-cyan-600 mt-1">Average Success Rate (%)</p>
+                            <p className="text-xs text-cyan-500 mt-2">Extended LIBERO with 6 categories</p>
                         </a>
                         <a
                             href="https://github.com/mees/calvin"
@@ -347,6 +361,34 @@ export default function MethodologyPage() {
                                 <path d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12" />
                             </svg>
                             Star on GitHub
+                        </a>
+                    </div>
+                </div>
+
+                {/* Contact Us Section */}
+                <div className="mt-12 bg-gradient-to-r from-blue-600 to-indigo-700 text-white rounded-xl p-8 text-center">
+                    <h2 className="text-2xl font-bold mb-4">{t.contactUs}</h2>
+                    <p className="text-blue-100 mb-6">{t.contactUsDesc}</p>
+                    <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
+                        <a
+                            href="https://github.com/MINT-SJTU/Evo-SOTA.io/issues"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="flex items-center gap-2 px-6 py-3 bg-white text-slate-800 rounded-lg font-medium hover:bg-slate-100 transition-colors"
+                        >
+                            <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
+                                <path d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12" />
+                            </svg>
+                            GitHub Issue
+                        </a>
+                        <a
+                            href={`mailto:${t.contactEmail}`}
+                            className="flex items-center gap-2 px-6 py-3 bg-white text-slate-800 rounded-lg font-medium hover:bg-slate-100 transition-colors"
+                        >
+                            <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+                            </svg>
+                            {t.contactEmail}
                         </a>
                     </div>
                 </div>

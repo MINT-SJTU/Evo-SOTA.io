@@ -3,6 +3,7 @@
 import { useState, useEffect } from 'react';
 import Link from 'next/link';
 import { useLanguage } from '@/lib/LanguageContext';
+import ContactFooter from '@/components/ContactFooter';
 
 interface LiberoPlusModel {
     name: string;
@@ -639,6 +640,9 @@ export default function LiberoPlusPage() {
                         )}
                     </div>
                 )} */}
+
+                {/* Contact Footer */}
+                <ContactFooter />
             </div>
         </div>
     );

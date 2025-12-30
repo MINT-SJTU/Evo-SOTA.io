@@ -34,8 +34,8 @@
     ]
   },
   "libero_plus": {
-    "total_models": 9,
-    "standard_opensource_count": 8,
+    "total_models": 10,
+    "standard_opensource_count": 9,
     "standard_opensource_mixsft_count": 1,
     "standard_closed_count": 0,
     "standard_closed_mixsft_count": 0,
@@ -64,8 +64,8 @@
         "rank": 4
       },
       {
-        "name": "pi0",
-        "score": 53.6,
+        "name": "OpenVLA-OFT",
+        "score": 55.8,
         "rank": 5
       }
     ]

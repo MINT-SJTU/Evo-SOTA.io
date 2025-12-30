@@ -3,6 +3,7 @@
 import { useState, useEffect } from 'react';
 import Link from 'next/link';
 import { useLanguage } from '@/lib/LanguageContext';
+import ContactFooter from '@/components/ContactFooter';
 
 interface MetaworldModel {
     name: string;
@@ -473,6 +474,9 @@ export default function MetaWorldPage() {
                     </div>
                 )}
                 */}
+
+                {/* Contact Footer */}
+                <ContactFooter />
             </div>
         </div>
     );

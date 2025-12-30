@@ -4,6 +4,7 @@ import { useState, useEffect } from 'react';
 import Link from 'next/link';
 import dynamic from 'next/dynamic';
 import { useLanguage } from '@/lib/LanguageContext';
+import ContactFooter from '@/components/ContactFooter';
 
 // 动态导入图表组件，避免 SSR 问题
 const ProgressChart = dynamic(() => import('@/components/ProgressChart'), {
@@ -303,6 +304,11 @@ export default function Home() {
 
             {/* Progress Chart Section */}
             <ProgressChart />
+
+            {/* Contact Footer */}
+            <div className="max-w-7xl mx-auto px-4">
+                <ContactFooter />
+            </div>
         </div>
     );
 }
