@@ -293,7 +293,7 @@ export default function ProgressChart() {
             showTopOnly: 'Show Top Performers Only',
             showOpenSourceOnly: 'Open-Source Models Only',
             liberoDesc: 'LIBERO: Success Rate (%)',
-            liberoPlusDesc: 'LIBERO Plus: Total Success Rate (%)',
+            liberoPlusDesc: 'LIBERO Plus: Success Rate (%)',
             calvinDesc: 'CALVIN: Avg. Completed Tasks',
             metaworldDesc: 'Meta-World: Success Rate (%)',
             note: 'Note: CALVIN uses a different metric scale (0-5 tasks) compared to LIBERO, LIBERO Plus and Meta-World (0-100%)',
@@ -304,7 +304,7 @@ export default function ProgressChart() {
             showTopOnly: '仅显示最佳表现',
             showOpenSourceOnly: '仅显示开源模型',
             liberoDesc: 'LIBERO: 成功率 (%)',
-            liberoPlusDesc: 'LIBERO Plus: 总成功率 (%)',
+            liberoPlusDesc: 'LIBERO Plus: 成功率 (%)',
             calvinDesc: 'CALVIN: 平均完成任务数',
             metaworldDesc: 'Meta-World: 成功率 (%)',
             note: '注：CALVIN 使用不同的指标尺度 (0-5 任务数)，与 LIBERO、LIBERO Plus 和 Meta-World (0-100%) 不同',
@@ -503,7 +503,7 @@ export default function ProgressChart() {
                                                     tick={{ fill: '#64748b', fontSize: 12 }}
                                                     axisLine={{ stroke: '#cbd5e1' }}
                                                     label={{
-                                                        value: 'Total Success Rate (%)',
+                                                        value: 'Success Rate (%)',
                                                         angle: -90,
                                                         position: 'insideLeft',
                                                         style: { fill: '#64748b', fontSize: 12 }

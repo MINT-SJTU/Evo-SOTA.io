@@ -8,19 +8,18 @@ A comprehensive leaderboard tracking the state-of-the-art (SOTA) performance of 
 
 ## 📊 Supported Benchmarks
 
-| Benchmark      | Description                                                              | Primary Metric                |
-| -------------- | ------------------------------------------------------------------------ | ----------------------------- |
-| **LIBERO**     | Lifelong robot learning with 130 language-conditioned manipulation tasks | Average Success Rate (%)      |
-| **CALVIN**     | Long-horizon language-conditioned tasks (ABC→D, ABCD→D, D→D settings)    | Average Completed Tasks (0-5) |
-| **Meta-World** | Multi-task learning with 50 distinct robotic manipulation tasks          | Average Success Rate (%)      |
+| Benchmark       | Description                                                                                       | Primary Metric                |
+| --------------- | ------------------------------------------------------------------------------------------------- | ----------------------------- |
+| **LIBERO**      | Lifelong robot learning with 130 language-conditioned manipulation tasks                          | Average Success Rate (%)      |
+| **LIBERO Plus** | Extended LIBERO with 6 robustness categories (camera, robot, language, light, background, layout) | Average Success Rate (%)      |
+| **CALVIN**      | Long-horizon language-conditioned tasks (ABC→D, ABCD→D, D→D settings)                             | Average Completed Tasks (0-5) |
+| **Meta-World**  | Multi-task learning with 50 distinct robotic manipulation tasks                                   | Average Success Rate (%)      |
 
 ## ✨ Features
 
 - 📈 **Interactive Leaderboards** - Sortable tables with expandable details for each model
 - 📉 **Progress Visualization** - Scatter plot showing VLA development over time
 - 🌍 **Bilingual Support** - English and Chinese (中文) interface
-- 📱 **Responsive Design** - Works on desktop and mobile devices
-- 📊 **Visitor Statistics** - Built-in visitor counter using Busuanzi
 
 ## 🛠️ Tech Stack
 
@@ -70,11 +69,13 @@ Evo-SOTA.io/
 │   ├── methodology/       # Methodology page
 │   └── benchmarks/        # Benchmark leaderboard pages
 │       ├── libero/
+│       ├── liberoplus/
 │       ├── calvin/
 │       └── metaworld/
 ├── components/            # React components
 ├── data/                  # JSON data files & processing scripts
 │   ├── libero.json
+│   ├── liberoPlus.json
 │   ├── calvin.json
 │   ├── metaworld.json
 │   └── DataProcess.py     # CSV to JSON converter
@@ -82,19 +83,11 @@ Evo-SOTA.io/
 └── public/               # Static assets
 ```
 
-## 📝 Adding New Models
+## 📧 Contact
 
-1. Update the source CSV file (`data/VLA_SOTA.csv`)
-2. Run the data processing script:
-   ```bash
-   cd data
-   python DataProcess.py
-   ```
-3. Copy updated JSON files to `public/data/`:
-   ```bash
-   cp data/*.json public/data/
-   ```
-4. Commit and push changes
+Found errors or want to submit your model? Reach out to us:
+- **GitHub Issues**: [Create an issue](https://github.com/MINT-SJTU/Evo-SOTA.io/issues)
+- **Email**: business@evomind-tech.com
 
 ## 🤝 Contributing
 
@@ -118,7 +111,7 @@ This project is open source and available under the [MIT License](LICENSE).
 ## 🙏 Acknowledgments
 
 - Thanks to all researchers who contributed to the VLA field
-- Benchmark creators: LIBERO, CALVIN, Meta-World teams
+- Benchmark creators: LIBERO, LIBERO Plus, CALVIN, Meta-World teams
 - [Busuanzi](http://busuanzi.ibruce.info/) for visitor statistics
 
 ---

@@ -97,7 +97,7 @@ export const translations = {
             liberoPlus: {
                 name: 'LIBERO Plus',
                 description: 'LIBERO Plus is an extended benchmark testing robustness across 7 perturbation dimensions: Camera, Robot, Language, Light, Background, Noise, and Layout.',
-                metric: 'Total Success Rate (%)',
+                metric: 'Average Success Rate (%)',
             },
         },
         // Methodology 页面

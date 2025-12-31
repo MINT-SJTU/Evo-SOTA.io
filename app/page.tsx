@@ -278,7 +278,7 @@ export default function Home() {
                                                             {model.name}
                                                         </span>
                                                     </div>
-                                                    <span className={`font-mono text-sm ${colors.text}`}>
+                                                    <span className={`font-semibold text-sm ${colors.text}`}>
                                                         {model.score}
                                                     </span>
                                                 </div>

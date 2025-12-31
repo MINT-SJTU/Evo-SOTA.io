@@ -4,6 +4,7 @@ import { useState, useEffect } from 'react';
 import Link from 'next/link';
 import { useLanguage } from '@/lib/LanguageContext';
 import ContactFooter from '@/components/ContactFooter';
+import { Average } from 'next/font/google';
 
 interface LiberoPlusModel {
     name: string;
@@ -85,7 +86,7 @@ export default function LiberoPlusPage() {
             background: 'Background',
             noise: 'Noise',
             layout: 'Layout',
-            total: 'Total',
+            total: 'Average',
             metricDesc: {
                 camera: 'Camera viewpoint variations',
                 robot: 'Different robot embodiments',
@@ -94,7 +95,7 @@ export default function LiberoPlusPage() {
                 background: 'Background variations',
                 noise: 'Observation noise robustness',
                 layout: 'Object layout changes',
-                total: 'Overall success rate'
+                total: 'Average success rate'
             }
         },
         zh: {
@@ -141,7 +142,7 @@ export default function LiberoPlusPage() {
                 background: '背景变化',
                 noise: '观测噪声鲁棒性',
                 layout: '物体布局变化',
-                total: '总体成功率'
+                total: '平均成功率'
             }
         }
     };
@@ -282,7 +283,7 @@ export default function LiberoPlusPage() {
                                 onClick={() => handleSort('total')}
                             >
                                 <div className="flex items-center gap-1">
-                                    Total
+                                    Average
                                     {sortBy === 'total' && (
                                         <span className="text-orange-600">{sortOrder === 'desc' ? '↓' : '↑'}</span>
                                     )}
