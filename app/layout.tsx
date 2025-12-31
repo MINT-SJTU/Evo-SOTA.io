@@ -4,7 +4,10 @@ import './globals.css';
 import { LanguageProvider } from '@/lib/LanguageContext';
 import Navbar from '@/components/Navbar';
 
-const inter = Inter({ subsets: ['latin'] });
+const inter = Inter({
+    subsets: ['latin'],
+    variable: '--font-inter',
+});
 
 export const metadata: Metadata = {
     title: 'VLA SOTA Leaderboard',
@@ -26,7 +29,7 @@ export default function RootLayout({
                 <link rel="shortcut icon" href={`${basePath}/logo/EvoMind0.png`} />
                 <link rel="apple-touch-icon" href={`${basePath}/logo/EvoMind0.png`} />
             </head>
-            <body className={inter.className}>
+            <body className={`${inter.variable} font-sans`}>
                 <LanguageProvider>
                     <div className="min-h-screen flex flex-col">
                         <Navbar />

@@ -14,6 +14,12 @@ body {
             rgb(var(--background-start-rgb)),
             rgb(var(--background-end-rgb)));
     min-height: 100vh;
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif !important;
+}
+
+/* 确保所有元素使用无衬线字体 */
+* {
+    font-family: inherit;
 }
 
 @layer utilities {
