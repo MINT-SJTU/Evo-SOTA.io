@@ -1,9 +1,9 @@
 {
   "libero": {
-    "total_models": 57,
-    "standard_opensource_count": 32,
+    "total_models": 60,
+    "standard_opensource_count": 34,
     "standard_closed_count": 11,
-    "non_standard_count": 14,
+    "non_standard_count": 15,
     "primary_metric": "Average Success Rate (%)",
     "top_5": [
       {
@@ -71,10 +71,10 @@
     ]
   },
   "metaworld": {
-    "total_models": 13,
+    "total_models": 14,
     "standard_opensource_count": 5,
     "standard_closed_count": 0,
-    "non_standard_count": 8,
+    "non_standard_count": 9,
     "primary_metric": "Average Success Rate (%)",
     "top_5": [
       {
@@ -141,7 +141,7 @@
     "settings": {
       "abcd_d": 15,
       "abc_d": 36,
-      "d_d": 11
+      "d_d": 12
     }
   }
 }

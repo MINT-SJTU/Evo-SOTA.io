@@ -32,7 +32,7 @@ export default function MethodologyPage() {
             dataNoticeDesc1: 'Data collection deadline: December 29, 2025.',
             dataNoticeDesc2: 'If you find any errors or omissions, please let us know by creating an issue on GitHub or contacting us via email: business@evomind-tech.com',
             contactUs: 'Contact Us',
-            contactUsDesc: 'Found errors or want to submit your model? Reach out via GitHub Issue or email!',
+            contactUsDesc: 'Found errors or want to submit your model? Reach out via GitHub Issue, email or Wechat group!',
             contactEmail: 'business@evomind-tech.com',
         },
         zh: {
@@ -61,7 +61,7 @@ export default function MethodologyPage() {
             dataNoticeDesc1: '数据收集截止日期：2025年12月29日。',
             dataNoticeDesc2: '如有错误或遗漏，敬请谅解。您可以在 GitHub 的 Issue 中提出，或通过邮件 business@evomind-tech.com 联系我们，我们会及时改进。',
             contactUs: '联系我们',
-            contactUsDesc: '发现错误或想提交您的模型？请通过 GitHub Issue 或邮件联系我们！',
+            contactUsDesc: '发现错误或想提交您的模型？请通过 GitHub Issue，邮件或微信群联系我们！',
             contactEmail: 'business@evomind-tech.com',
         }
     };

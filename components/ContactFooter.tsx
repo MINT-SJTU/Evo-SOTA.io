@@ -9,12 +9,12 @@ const texts: Record<string, {
 }> = {
     en: {
         contactUs: 'Contact Us',
-        contactUsDesc: 'Found errors or want to submit your model? Reach out via GitHub Issue or email!',
+        contactUsDesc: 'Found errors or want to submit your model? Reach out via GitHub Issue, email or Wechat group!',
         contactEmail: 'business@evomind-tech.com',
     },
     zh: {
         contactUs: '联系我们',
-        contactUsDesc: '发现错误或想提交您的模型？请通过 GitHub Issue 或邮件联系我们！',
+        contactUsDesc: '发现错误或想提交您的模型？请通过 GitHub Issue、邮件或微信群联系我们！',
         contactEmail: 'business@evomind-tech.com',
     }
 };
