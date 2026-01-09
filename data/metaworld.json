@@ -17,22 +17,6 @@
       "rank": 1
     },
     {
-      "name": "RoboTron Mani",
-      "paper_url": "https://arxiv.org/pdf/2412.07215v1",
-      "pub_date": "2025-11",
-      "is_opensource": true,
-      "opensource_url": "https://github.com/EmbodiedAI-RoboTron/RoboTron-Mani",
-      "easy": 85.5,
-      "medium": 67.7,
-      "hard": 76.7,
-      "very_hard": 81.0,
-      "average": 80.1,
-      "source": "original",
-      "is_standard": true,
-      "note": "",
-      "rank": 2
-    },
-    {
       "name": "SmolVLA",
       "paper_url": "https://arxiv.org/abs/2506.01844",
       "pub_date": "2025-06",
@@ -46,7 +30,7 @@
       "source": "original",
       "is_standard": true,
       "note": "",
-      "rank": 3
+      "rank": 2
     },
     {
       "name": "pi0",
@@ -62,7 +46,7 @@
       "source": "original",
       "is_standard": true,
       "note": "不清楚具体实验设置，因此无法判断来自于是同一个权重还是四个权重",
-      "rank": 4
+      "rank": 3
     },
     {
       "name": "TinyVLA-H",
@@ -78,7 +62,7 @@
       "source": "original",
       "is_standard": true,
       "note": "",
-      "rank": 5
+      "rank": 4
     },
     {
       "name": "Diffusion Policy",
@@ -94,7 +78,7 @@
       "source": "from TinyVLA",
       "is_standard": true,
       "note": "",
-      "rank": 6
+      "rank": 5
     }
   ],
   "standard_closed": [],
