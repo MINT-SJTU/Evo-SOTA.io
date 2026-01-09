@@ -17,6 +17,22 @@
       "rank": 1
     },
     {
+      "name": "RoboTron Mani",
+      "paper_url": "https://arxiv.org/pdf/2412.07215v1",
+      "pub_date": "2025-11",
+      "is_opensource": true,
+      "opensource_url": "https://github.com/EmbodiedAI-RoboTron/RoboTron-Mani",
+      "easy": 85.5,
+      "medium": 67.7,
+      "hard": 76.7,
+      "very_hard": 81.0,
+      "average": 80.1,
+      "source": "original",
+      "is_standard": true,
+      "note": "",
+      "rank": 2
+    },
+    {
       "name": "SmolVLA",
       "paper_url": "https://arxiv.org/abs/2506.01844",
       "pub_date": "2025-06",
@@ -30,7 +46,7 @@
       "source": "original",
       "is_standard": true,
       "note": "",
-      "rank": 2
+      "rank": 3
     },
     {
       "name": "pi0",
@@ -46,7 +62,7 @@
       "source": "original",
       "is_standard": true,
       "note": "不清楚具体实验设置，因此无法判断来自于是同一个权重还是四个权重",
-      "rank": 3
+      "rank": 4
     },
     {
       "name": "TinyVLA-H",
@@ -62,7 +78,7 @@
       "source": "original",
       "is_standard": true,
       "note": "",
-      "rank": 4
+      "rank": 5
     },
     {
       "name": "Diffusion Policy",
@@ -78,7 +94,7 @@
       "source": "from TinyVLA",
       "is_standard": true,
       "note": "",
-      "rank": 5
+      "rank": 6
     }
   ],
   "standard_closed": [],
@@ -116,22 +132,6 @@
       "rank": 2
     },
     {
-      "name": "RoboMM",
-      "paper_url": "https://arxiv.org/pdf/2412.07215v1",
-      "pub_date": "2025-11",
-      "is_opensource": true,
-      "opensource_url": "https://github.com/EmbodiedAI-RoboTron/RoboTron-Mani",
-      "easy": 85.5,
-      "medium": 67.7,
-      "hard": 76.7,
-      "very_hard": 81.0,
-      "average": 80.1,
-      "source": "original",
-      "is_standard": false,
-      "note": "",
-      "rank": 3
-    },
-    {
       "name": "Baku",
       "paper_url": "https://arxiv.org/abs/2406.07539",
       "pub_date": "2024-06",
@@ -145,7 +145,7 @@
       "source": "original",
       "is_standard": false,
       "note": "30个子任务",
-      "rank": 4
+      "rank": 3
     },
     {
       "name": "TriVLA",
@@ -161,7 +161,7 @@
       "source": "original",
       "is_standard": false,
       "note": "测试时将Hard和VeryHard统一为Hard了",
-      "rank": 5
+      "rank": 4
     },
     {
       "name": "VPP",
@@ -177,7 +177,7 @@
       "source": "original",
       "is_standard": false,
       "note": "测试时将Hard和VeryHard统一为Hard了",
-      "rank": 6
+      "rank": 5
     },
     {
       "name": "GR-1",
@@ -193,7 +193,7 @@
       "source": "From VPP",
       "is_standard": false,
       "note": "测试时将Hard和VeryHard统一为Hard了",
-      "rank": 7
+      "rank": 6
     },
     {
       "name": "AVDC",
@@ -209,7 +209,7 @@
       "source": "original",
       "is_standard": false,
       "note": "11个任务，混合不同难度",
-      "rank": 8
+      "rank": 7
     },
     {
       "name": "SuSIE",
@@ -225,7 +225,7 @@
       "source": "from VPP",
       "is_standard": false,
       "note": "测试时将Hard和VeryHard统一为Hard了",
-      "rank": 9
+      "rank": 8
     }
   ]
 }

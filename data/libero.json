@@ -205,6 +205,23 @@
       "rank": 12
     },
     {
+      "name": "InstructVLA",
+      "paper_url": "https://arxiv.org/pdf/2507.17520",
+      "pub_date": "2025-07",
+      "is_opensource": true,
+      "opensource_url": "https://github.com/InternRobotics/InstructVLA",
+      "spatial": 97.3,
+      "object": 99.6,
+      "goal": 96.5,
+      "long": 89.8,
+      "libero_90": null,
+      "average": 95.8,
+      "source": "original",
+      "is_standard": true,
+      "note": "",
+      "rank": 13
+    },
+    {
       "name": "UniVLA",
       "paper_url": "https://arxiv.org/abs/2506.19850",
       "pub_date": "2025-06",
@@ -219,7 +236,7 @@
       "source": "original",
       "is_standard": true,
       "note": "",
-      "rank": 13
+      "rank": 14
     },
     {
       "name": "Evo-1",
@@ -236,7 +253,7 @@
       "source": "original",
       "is_standard": true,
       "note": "",
-      "rank": 14
+      "rank": 15
     },
     {
       "name": "BitVLA",
@@ -253,7 +270,7 @@
       "source": "original",
       "is_standard": true,
       "note": "",
-      "rank": 15
+      "rank": 16
     },
     {
       "name": "VLA-0",
@@ -270,7 +287,7 @@
       "source": "original",
       "is_standard": true,
       "note": "",
-      "rank": 16
+      "rank": 17
     },
     {
       "name": "pi0.5-KI",
@@ -287,7 +304,7 @@
       "source": "original",
       "is_standard": true,
       "note": "",
-      "rank": 17
+      "rank": 18
     },
     {
       "name": "pi0",
@@ -304,7 +321,7 @@
       "source": "original",
       "is_standard": true,
       "note": "",
-      "rank": 18
+      "rank": 19
     },
     {
       "name": "GR00T-N1",
@@ -321,7 +338,7 @@
       "source": "From VLA-0",
       "is_standard": true,
       "note": "",
-      "rank": 19
+      "rank": 20
     },
     {
       "name": "SmolVLA",
@@ -338,7 +355,7 @@
       "source": "original",
       "is_standard": true,
       "note": "",
-      "rank": 20
+      "rank": 21
     },
     {
       "name": "NORA",
@@ -355,7 +372,7 @@
       "source": "original",
       "is_standard": true,
       "note": "",
-      "rank": 21
+      "rank": 22
     },
     {
       "name": "MolmoAct",
@@ -372,7 +389,7 @@
       "source": "original",
       "is_standard": true,
       "note": "",
-      "rank": 22
+      "rank": 23
     },
     {
       "name": "pi0-FAST",
@@ -389,7 +406,7 @@
       "source": "from evo-1 & pi0.5KI",
       "is_standard": true,
       "note": "",
-      "rank": 23
+      "rank": 24
     },
     {
       "name": "Dita",
@@ -406,7 +423,7 @@
       "source": "original",
       "is_standard": true,
       "note": "",
-      "rank": 24
+      "rank": 25
     },
     {
       "name": "WorldVLA",
@@ -423,7 +440,7 @@
       "source": "original",
       "is_standard": true,
       "note": "",
-      "rank": 25
+      "rank": 26
     },
     {
       "name": "VLA-RL",
@@ -440,7 +457,7 @@
       "source": "original",
       "is_standard": true,
       "note": "",
-      "rank": 26
+      "rank": 27
     },
     {
       "name": "GRAPE",
@@ -457,7 +474,7 @@
       "source": "original",
       "is_standard": true,
       "note": "",
-      "rank": 27
+      "rank": 28
     },
     {
       "name": "SpatialVLA",
@@ -474,7 +491,7 @@
       "source": "original",
       "is_standard": true,
       "note": "",
-      "rank": 28
+      "rank": 29
     },
     {
       "name": "OpenVLA",
@@ -491,7 +508,7 @@
       "source": "from evo-1 & VLA-0 & MolmoAct",
       "is_standard": true,
       "note": "",
-      "rank": 29
+      "rank": 30
     },
     {
       "name": "Octo",
@@ -508,7 +525,7 @@
       "source": "from 4D-VLA & VLA-0 & OpenVLA-OFT & MolmoAct",
       "is_standard": true,
       "note": "",
-      "rank": 30
+      "rank": 31
     },
     {
       "name": "TraceVLA",
@@ -525,7 +542,7 @@
       "source": "from NORA & MolmoAct",
       "is_standard": true,
       "note": "",
-      "rank": 31
+      "rank": 32
     },
     {
       "name": "UniAct",
@@ -542,7 +559,7 @@
       "source": "original",
       "is_standard": true,
       "note": "",
-      "rank": 32
+      "rank": 33
     },
     {
       "name": "TTF-VLA (VLA-cache+TTF)",
@@ -559,7 +576,7 @@
       "source": "original",
       "is_standard": true,
       "note": "",
-      "rank": 33
+      "rank": 34
     },
     {
       "name": "Diffusion Policy",
@@ -576,7 +593,7 @@
       "source": "From 4D-VLA & VLA-0 & OpenVLA-OFT",
       "is_standard": true,
       "note": "",
-      "rank": 34
+      "rank": 35
     }
   ],
   "standard_closed": [
@@ -1008,7 +1025,7 @@
       "rank": 14
     },
     {
-      "name": "RoboMM",
+      "name": "RoboTron Mani",
       "paper_url": "https://arxiv.org/pdf/2412.07215v1",
       "pub_date": "2025-11",
       "is_opensource": true,
