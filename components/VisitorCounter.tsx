@@ -7,8 +7,8 @@ interface VisitorCounterProps {
 }
 
 // 基础访客数偏移量（之前积累的数据）
-const BASE_UV_OFFSET = 350;  // 换用统计工具之前的总访客数
-const BASE_PV_OFFSET = 450;  // 换用统计工具之前的总访问量
+const BASE_UV_OFFSET = 357;  // 换用统计工具之前的总访客数
+const BASE_PV_OFFSET = 454;  // 换用统计工具之前的总访问量
 
 export default function VisitorCounter({ className = '' }: VisitorCounterProps) {
     const [mounted, setMounted] = useState(false);

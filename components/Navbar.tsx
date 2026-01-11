@@ -49,9 +49,6 @@ export default function Navbar() {
                                 height={36}
                                 className="rounded"
                             />
-                            <span className="hidden sm:inline-block px-3 py-1 bg-primary-550 text-white font-bold text-sm rounded-lg">
-                                VLA SOTA
-                            </span>
                         </Link>
                     </div>
 

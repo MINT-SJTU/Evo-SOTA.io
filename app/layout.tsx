@@ -58,7 +58,7 @@ export default function RootLayout({
                                                 rel="noopener noreferrer"
                                                 className="hover:text-white transition-colors"
                                             >
-                                                EvoMind & SJTU
+                                                EvoMind & MINT-SJTU
                                             </a>
                                         </p>
                                     </div>
