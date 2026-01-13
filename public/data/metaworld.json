@@ -17,6 +17,22 @@
       "rank": 1
     },
     {
+      "name": "RoboTron Mani",
+      "paper_url": "https://arxiv.org/pdf/2412.07215v1",
+      "pub_date": "2025-11",
+      "is_opensource": true,
+      "opensource_url": "https://github.com/EmbodiedAI-RoboTron/RoboTron-Mani",
+      "easy": 85.54,
+      "medium": 67.72,
+      "hard": 76.67,
+      "very_hard": 81.0,
+      "average": 77.74,
+      "source": "original",
+      "is_standard": true,
+      "note": "RoboTron-Mani 采用了自定义的数据生成协议， 而不是标准的训练数据， 但是介于很多别的论文也干了。原文：“ To address the lack of training data for simulation learning, we adopt the scripted policies from Yu et al. [68] and introduce Gaussian noise N(0, 0.1) to the generated actions at each step, resulting in a total of 22,500 trajectories, with each task producing 500 successful trajectories. ”",
+      "rank": 2
+    },
+    {
       "name": "SmolVLA",
       "paper_url": "https://arxiv.org/abs/2506.01844",
       "pub_date": "2025-06",
@@ -30,7 +46,7 @@
       "source": "original",
       "is_standard": true,
       "note": "",
-      "rank": 2
+      "rank": 3
     },
     {
       "name": "pi0",
@@ -46,7 +62,7 @@
       "source": "from smolVLA",
       "is_standard": true,
       "note": "不清楚具体实验设置，因此无法判断来自于是同一个权重还是四个权重",
-      "rank": 3
+      "rank": 4
     },
     {
       "name": "TinyVLA-H",
@@ -62,7 +78,7 @@
       "source": "original",
       "is_standard": true,
       "note": "",
-      "rank": 4
+      "rank": 5
     },
     {
       "name": "Diffusion Policy",
@@ -78,7 +94,7 @@
       "source": "from TinyVLA",
       "is_standard": true,
       "note": "",
-      "rank": 5
+      "rank": 6
     }
   ],
   "standard_closed": [],

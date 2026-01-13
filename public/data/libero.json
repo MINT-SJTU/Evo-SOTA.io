@@ -69,7 +69,7 @@
       "rank": 4
     },
     {
-      "name": "RIPT-VLA (OpenVLA+RIPT)",
+      "name": "RIPT-VLA (OpenVLA+RIFT)",
       "paper_url": "https://arxiv.org/abs/2505.17016",
       "pub_date": "2025-05",
       "is_opensource": true,
@@ -1023,6 +1023,23 @@
       "is_standard": false,
       "note": "90上预训练后再微调得到10",
       "rank": 14
+    },
+    {
+      "name": "RoboTron Mani",
+      "paper_url": "https://arxiv.org/pdf/2412.07215v1",
+      "pub_date": "2025-11",
+      "is_opensource": true,
+      "opensource_url": "https://github.com/EmbodiedAI-RoboTron/RoboTron-Mani",
+      "spatial": null,
+      "object": null,
+      "goal": null,
+      "long": null,
+      "libero_90": 91.7,
+      "average": null,
+      "source": "original",
+      "is_standard": false,
+      "note": "只给出libero 90的表现",
+      "rank": 15
     }
   ]
 }

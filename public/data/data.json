@@ -1,9 +1,9 @@
 {
   "libero": {
-    "total_models": 60,
+    "total_models": 61,
     "standard_opensource_count": 35,
     "standard_closed_count": 11,
-    "non_standard_count": 14,
+    "non_standard_count": 15,
     "primary_metric": "Average Success Rate (%)",
     "top_5": [
       {
@@ -27,7 +27,7 @@
         "rank": 4
       },
       {
-        "name": "RIPT-VLA (OpenVLA+RIPT)",
+        "name": "RIPT-VLA (OpenVLA+RIFT)",
         "score": 97.5,
         "rank": 5
       }
@@ -71,8 +71,8 @@
     ]
   },
   "metaworld": {
-    "total_models": 13,
-    "standard_opensource_count": 5,
+    "total_models": 14,
+    "standard_opensource_count": 6,
     "standard_closed_count": 0,
     "non_standard_count": 8,
     "primary_metric": "Average Success Rate (%)",
@@ -83,23 +83,23 @@
         "rank": 1
       },
       {
+        "name": "RoboTron Mani",
+        "score": 77.74,
+        "rank": 2
+      },
+      {
         "name": "SmolVLA",
         "score": 68.2,
-        "rank": 2
+        "rank": 3
       },
       {
         "name": "pi0",
         "score": 47.9,
-        "rank": 3
+        "rank": 4
       },
       {
         "name": "TinyVLA-H",
         "score": 31.6,
-        "rank": 4
-      },
-      {
-        "name": "Diffusion Policy",
-        "score": 10.5,
         "rank": 5
       }
     ]
@@ -139,7 +139,7 @@
       }
     ],
     "settings": {
-      "abcd_d": 15,
+      "abcd_d": 16,
       "abc_d": 36,
       "d_d": 11
     }
