@@ -43,7 +43,7 @@
       "hard": 41.7,
       "very_hard": 30.0,
       "average": 47.9,
-      "source": "original",
+      "source": "from smolVLA",
       "is_standard": true,
       "note": "不清楚具体实验设置，因此无法判断来自于是同一个权重还是四个权重",
       "rank": 3

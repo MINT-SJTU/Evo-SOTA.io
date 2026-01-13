@@ -69,7 +69,7 @@
       "rank": 4
     },
     {
-      "name": "RIPT-VLA (OpenVLA+RIFT)",
+      "name": "RIPT-VLA (OpenVLA+RIPT)",
       "paper_url": "https://arxiv.org/abs/2505.17016",
       "pub_date": "2025-05",
       "is_opensource": true,
@@ -318,7 +318,7 @@
       "long": 85.2,
       "libero_90": null,
       "average": 94.2,
-      "source": "original",
+      "source": "from evo-1 & VLA-0 & pi0.5KI",
       "is_standard": true,
       "note": "",
       "rank": 19
