@@ -935,6 +935,23 @@
         "rank": 2
       },
       {
+        "name": "DaDu-Corki-SW",
+        "paper_url": "https://arxiv.org/abs/2407.04292",
+        "pub_date": "2024-07",
+        "is_opensource": true,
+        "opensource_url": "https://github.com/hyy02/Corki/tree/main",
+        "is_standard": true,
+        "note": "",
+        "inst1": 0.923,
+        "inst2": 0.8,
+        "inst3": 0.674,
+        "inst4": 0.566,
+        "inst5": 0.458,
+        "avg_len": 3.42,
+        "source": "original",
+        "rank": 3
+      },
+      {
         "name": "TaKSIE",
         "paper_url": "https://arxiv.org/pdf/2410.11013",
         "pub_date": "2024-01",
@@ -949,7 +966,7 @@
         "inst5": 0.408,
         "avg_len": 3.18,
         "source": "original",
-        "rank": 3
+        "rank": 4
       },
       {
         "name": "MT-ACT",
@@ -966,7 +983,7 @@
         "inst5": 0.353,
         "avg_len": 2.98,
         "source": "from MDT",
-        "rank": 4
+        "rank": 5
       },
       {
         "name": "Distill-D",
@@ -983,7 +1000,7 @@
         "inst5": 0.356,
         "avg_len": 2.97,
         "source": "from MDT",
-        "rank": 5
+        "rank": 6
       },
       {
         "name": "LCD",
@@ -1000,7 +1017,7 @@
         "inst5": 0.322,
         "avg_len": 2.88,
         "source": "original",
-        "rank": 6
+        "rank": 7
       },
       {
         "name": "SPIL",
@@ -1017,7 +1034,7 @@
         "inst5": 0.286,
         "avg_len": 2.67,
         "source": "original",
-        "rank": 7
+        "rank": 8
       },
       {
         "name": "HULC",
@@ -1034,7 +1051,7 @@
         "inst5": 0.283,
         "avg_len": 2.64,
         "source": "original",
-        "rank": 8
+        "rank": 9
       },
       {
         "name": "RoboFlamingo",
@@ -1051,7 +1068,7 @@
         "inst5": 0.192,
         "avg_len": 2.12,
         "source": "original",
-        "rank": 9
+        "rank": 10
       }
     ],
     "standard_closed": [

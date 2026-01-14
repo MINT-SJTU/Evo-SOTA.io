@@ -1,7 +1,7 @@
 {
   "libero": {
-    "total_models": 61,
-    "standard_opensource_count": 35,
+    "total_models": 62,
+    "standard_opensource_count": 36,
     "standard_closed_count": 11,
     "non_standard_count": 15,
     "primary_metric": "Average Success Rate (%)",
@@ -27,7 +27,7 @@
         "rank": 4
       },
       {
-        "name": "RIPT-VLA (OpenVLA+RIFT)",
+        "name": "RIPT-VLA (OpenVLA+RIPT)",
         "score": 97.5,
         "rank": 5
       }
@@ -141,7 +141,7 @@
     "settings": {
       "abcd_d": 16,
       "abc_d": 36,
-      "d_d": 11
+      "d_d": 12
     }
   }
 }
