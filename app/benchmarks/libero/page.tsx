@@ -68,9 +68,9 @@ export default function LiberoPage() {
             note: 'Note',
             policyFilterLabel: 'Training Policy',
             policyAll: 'All',
-            policy0: 'Not clear',
-            policy1: 'Single policy',
-            policy2: 'Multiple policies',
+            policy0: 'Unknown',
+            policy1: 'Single Weight',
+            policy2: 'Multiple Weights',
         },
         zh: {
             title: 'LIBERO 基准测试榜单',
@@ -97,8 +97,8 @@ export default function LiberoPage() {
             note: '备注',
             policyFilterLabel: '模型训练方法',
             policyAll: '全部',
-            policy0: '不确实',
-            policy1: '一套权重',
+            policy0: '未知',
+            policy1: '单套权重',
             policy2: '多套权重',
         }
     };
@@ -454,22 +454,48 @@ export default function LiberoPage() {
                         >
                             {showClosedSource ? t.showAllModels : t.openSourceOnly}
                         </button>
-                        <div className="flex items-center gap-2">
-                            <label className="text-sm font-medium text-slate-600">{t.policyFilterLabel}</label>
-                            <select
-                                value={policyFilter}
-                                onChange={(e) => setPolicyFilter(e.target.value as 'all' | '0' | '1' | '2')}
-                                className="px-3 py-2 rounded-lg border border-slate-200 bg-white text-sm text-slate-700 focus:outline-none focus:ring-2 focus:ring-blue-200"
-                            >
-                                <option value="all">{t.policyAll}</option>
-                                <option value="0">{t.policy0}</option>
-                                <option value="1">{t.policy1}</option>
-                                <option value="2">{t.policy2}</option>
-                            </select>
-                        </div>
                     </div>
-                    <p className="text-sm text-slate-500">{t.clickToExpand}</p>
+
+                    <div className="flex items-center gap-2 bg-white rounded-lg p-1 border border-slate-200">
+                        <button
+                            onClick={() => setPolicyFilter('all')}
+                            className={`px-3 py-1.5 rounded-md text-sm font-medium transition-all ${policyFilter === 'all'
+                                ? 'bg-blue-600 text-white'
+                                : 'text-slate-600 hover:bg-slate-100'
+                                }`}
+                        >
+                            {t.policyAll}
+                        </button>
+                        <button
+                            onClick={() => setPolicyFilter('0')}
+                            className={`px-3 py-1.5 rounded-md text-sm font-medium transition-all ${policyFilter === '0'
+                                ? 'bg-slate-600 text-white'
+                                : 'text-slate-600 hover:bg-slate-100'
+                                }`}
+                        >
+                            {t.policy0}
+                        </button>
+                        <button
+                            onClick={() => setPolicyFilter('1')}
+                            className={`px-3 py-1.5 rounded-md text-sm font-medium transition-all ${policyFilter === '1'
+                                ? 'bg-purple-600 text-white'
+                                : 'text-slate-600 hover:bg-slate-100'
+                                }`}
+                        >
+                            {t.policy1}
+                        </button>
+                        <button
+                            onClick={() => setPolicyFilter('2')}
+                            className={`px-3 py-1.5 rounded-md text-sm font-medium transition-all ${policyFilter === '2'
+                                ? 'bg-green-600 text-white'
+                                : 'text-slate-600 hover:bg-slate-100'
+                                }`}
+                        >
+                            {t.policy2}
+                        </button>
+                    </div>
                 </div>
+                <p className="text-sm text-slate-500 mb-4">{t.clickToExpand}</p>
 
                 {/* Main Table */}
                 <h2 className="text-xl font-bold text-slate-800 mb-4">{t.standardModels}</h2>
