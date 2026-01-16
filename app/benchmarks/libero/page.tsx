@@ -71,6 +71,10 @@ export default function LiberoPage() {
             policy0: 'Unknown',
             policy1: 'Single Weight',
             policy2: 'Multiple Weights',
+            policyDescTitle: 'Policy Description',
+            policyDescSingle: 'Train one set of weights on all training data, then evaluate that same model on every test suite.',
+            policyDescMultiple: 'Train separate weights for each of the four suites, then evaluate each model on its corresponding suite.',
+            policyDescUnknown: 'The paper does not clearly specify the policy setting.',
         },
         zh: {
             title: 'LIBERO 基准测试榜单',
@@ -100,6 +104,10 @@ export default function LiberoPage() {
             policy0: '未知',
             policy1: '单套权重',
             policy2: '多套权重',
+            policyDescTitle: '权重说明',
+            policyDescSingle: '用全部训练数据训练一套权重，再用这套模型在所有测试套件上评测。',
+            policyDescMultiple: '四个测试套件各自训练一套权重，并在对应套件上评测。',
+            policyDescUnknown: '论文未明确说明权重设置。',
         }
     };
 
@@ -511,6 +519,14 @@ export default function LiberoPage() {
                         <div><span className="font-medium">Long:</span> LIBERO-Long task suite</div>
                         <div><span className="font-medium">LIBERO-90:</span> 90 tasks benchmark</div>
                         <div><span className="font-medium">Average:</span> Mean success rate across suites</div>
+                    </div>
+                </div>
+                <div className="mt-4 p-4 bg-white rounded-lg border border-slate-200">
+                    <h3 className="text-sm font-semibold text-slate-700 mb-2">{t.policyDescTitle}</h3>
+                    <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-4 text-sm text-slate-600">
+                        <div><span className="font-medium">Single weight:</span> {t.policyDescSingle}</div>
+                        <div><span className="font-medium">Multiple weight:</span> {t.policyDescMultiple}</div>
+                        <div><span className="font-medium">Unknown:</span> {t.policyDescUnknown}</div>
                     </div>
                 </div>
 
