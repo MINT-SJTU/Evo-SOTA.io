@@ -103,6 +103,7 @@ Contributions are welcome! If you'd like to:
 - Results may vary due to different evaluation protocols, random seeds, or implementation details
 - This leaderboard is for research reference only and does not represent official rankings
 - Please verify results with original papers before citation
+- We will categorize entries by specific training methodologies to keep comparisons as fair and objective as possible.
 
 ## 📄 License
 
