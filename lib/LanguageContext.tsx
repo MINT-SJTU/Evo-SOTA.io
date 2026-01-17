@@ -89,6 +89,11 @@ type TranslationType = {
             description: string;
             metric: string;
         };
+        robochallenge: {
+            name: string;
+            description: string;
+            metric: string;
+        };
     };
     methodology: {
         title: string;

@@ -9,11 +9,13 @@ interface StatsData {
     liberoPlusModels: number;
     calvinModels: number;
     metaworldModels: number;
+    robochallengeModels: number;
     latestYear: string;
     topLibero: { name: string; score: number };
     topLiberoPlus: { name: string; score: number };
     topCalvin: { name: string; score: number };
     topMetaworld: { name: string; score: number };
+    topRobochallenge: { name: string; score: number };
 }
 
 export default function StatsOverview() {
@@ -25,28 +27,32 @@ export default function StatsOverview() {
         liberoPlusModels: 0,
         calvinModels: 0,
         metaworldModels: 0,
+        robochallengeModels: 0,
     });
 
     useEffect(() => {
         const loadStats = async () => {
             try {
-                const [liberoRes, liberoPlusRes, calvinRes, metaworldRes] = await Promise.all([
+                const [liberoRes, liberoPlusRes, calvinRes, metaworldRes, robochallengeRes] = await Promise.all([
                     fetch(`/data/libero.json`),
                     fetch(`/data/liberoPlus.json`),
                     fetch(`/data/calvin.json`),
-                    fetch(`/data/metaworld.json`)
+                    fetch(`/data/metaworld.json`),
+                    fetch(`/data/robochallenge.json`)
                 ]);
 
                 const libero = await liberoRes.json();
                 const liberoPlus = await liberoPlusRes.json();
                 const calvin = await calvinRes.json();
                 const metaworld = await metaworldRes.json();
+                const robochallenge = await robochallengeRes.json();
 
                 // 计算统计数据 - 使用标准开源模型数量
                 const liberoCount = libero.standard_opensource?.length || 0;
                 const liberoPlusCount = (liberoPlus.standard_opensource?.length || 0) + (liberoPlus.standard_opensource_mixsft?.length || 0);
                 const calvinCount = calvin.abc_d?.standard_opensource?.length || 0;
                 const metaworldCount = metaworld.standard_opensource?.length || 0;
+                const robochallengeCount = robochallenge.standard_opensource?.length || 0;
 
                 // 获取第一名
                 const topLiberoModel = libero.standard_opensource?.[0];
@@ -58,18 +64,21 @@ export default function StatsOverview() {
                 const topLiberoPlusModel = allLiberoPlusModels[0];
                 const topCalvinModel = calvin.abc_d?.standard_opensource?.[0];
                 const topMetaworldModel = metaworld.standard_opensource?.[0];
+                const topRobochallengeModel = robochallenge.standard_opensource?.[0];
 
                 const newStats: StatsData = {
-                    totalModels: liberoCount + liberoPlusCount + calvinCount + metaworldCount,
+                    totalModels: liberoCount + liberoPlusCount + calvinCount + metaworldCount + robochallengeCount,
                     liberoModels: liberoCount,
                     liberoPlusModels: liberoPlusCount,
                     calvinModels: calvinCount,
                     metaworldModels: metaworldCount,
+                    robochallengeModels: robochallengeCount,
                     latestYear: '2025',
                     topLibero: { name: topLiberoModel?.name || 'N/A', score: topLiberoModel?.average || 0 },
                     topLiberoPlus: { name: topLiberoPlusModel?.name || 'N/A', score: topLiberoPlusModel?.total || 0 },
                     topCalvin: { name: topCalvinModel?.name || 'N/A', score: topCalvinModel?.avg_len || 0 },
                     topMetaworld: { name: topMetaworldModel?.name || 'N/A', score: topMetaworldModel?.average || 0 },
+                    topRobochallenge: { name: topRobochallengeModel?.name || 'N/A', score: topRobochallengeModel?.score || 0 },
                 };
 
                 setStats(newStats);
@@ -91,6 +100,7 @@ export default function StatsOverview() {
                         liberoPlusModels: Math.round(newStats.liberoPlusModels * easeOut),
                         calvinModels: Math.round(newStats.calvinModels * easeOut),
                         metaworldModels: Math.round(newStats.metaworldModels * easeOut),
+                        robochallengeModels: Math.round(newStats.robochallengeModels * easeOut),
                     });
 
                     if (currentStep >= steps) {
@@ -157,7 +167,7 @@ export default function StatsOverview() {
 
                     {/* Benchmarks */}
                     <div className="bg-white rounded-xl p-6 shadow-sm border border-slate-200 hover:shadow-md transition-shadow">
-                        <div className="text-4xl font-bold text-purple-600 mb-1">4</div>
+                        <div className="text-4xl font-bold text-purple-600 mb-1">5</div>
                         <div className="text-slate-600 text-sm">{t.benchmarks}</div>
                     </div>
 
@@ -186,6 +196,11 @@ export default function StatsOverview() {
                                 CALVIN: {animatedValues.calvinModels}
                             </span>
                         </div>
+                        <div className="flex flex-wrap items-center gap-1 text-xs mt-1">
+                            <span className="px-2 py-1 bg-teal-100 text-teal-700 rounded-full font-medium">
+                                RoboChallenge: {animatedValues.robochallengeModels}
+                            </span>
+                        </div>
                     </div>
                 </div>
 
@@ -194,16 +209,16 @@ export default function StatsOverview() {
                     <h3 className="text-lg font-semibold text-slate-700 mb-4 text-center">
                         🏆 {t.currentLeaders}
                     </h3>
-                    <div className="grid md:grid-cols-4 gap-4">
-                        <div className="bg-gradient-to-br from-blue-500 to-blue-600 text-white rounded-xl p-4 shadow-lg">
-                            <div className="text-xs opacity-80 mb-1">LIBERO</div>
-                            <div className="font-bold text-lg truncate">{stats.topLibero.name}</div>
-                            <div className="text-2xl font-mono mt-1">{stats.topLibero.score}%</div>
-                        </div>
+                    <div className="grid md:grid-cols-5 gap-4">
                         <div className="bg-gradient-to-br from-orange-500 to-orange-600 text-white rounded-xl p-4 shadow-lg">
                             <div className="text-xs opacity-80 mb-1">LIBERO Plus</div>
                             <div className="font-bold text-lg truncate">{stats.topLiberoPlus.name}</div>
                             <div className="text-2xl font-mono mt-1">{stats.topLiberoPlus.score}%</div>
+                        </div>
+                        <div className="bg-gradient-to-br from-blue-500 to-blue-600 text-white rounded-xl p-4 shadow-lg">
+                            <div className="text-xs opacity-80 mb-1">LIBERO</div>
+                            <div className="font-bold text-lg truncate">{stats.topLibero.name}</div>
+                            <div className="text-2xl font-mono mt-1">{stats.topLibero.score}%</div>
                         </div>
                         <div className="bg-gradient-to-br from-purple-500 to-purple-600 text-white rounded-xl p-4 shadow-lg">
                             <div className="text-xs opacity-80 mb-1">Meta-World</div>
@@ -214,6 +229,11 @@ export default function StatsOverview() {
                             <div className="text-xs opacity-80 mb-1">CALVIN (ABC→D)</div>
                             <div className="font-bold text-lg truncate">{stats.topCalvin.name}</div>
                             <div className="text-2xl font-mono mt-1">{stats.topCalvin.score.toFixed(2)}</div>
+                        </div>
+                        <div className="bg-gradient-to-br from-teal-500 to-teal-600 text-white rounded-xl p-4 shadow-lg">
+                            <div className="text-xs opacity-80 mb-1">RoboChallenge</div>
+                            <div className="font-bold text-lg truncate">{stats.topRobochallenge.name}</div>
+                            <div className="text-2xl font-mono mt-1">{stats.topRobochallenge.score}</div>
                         </div>
                     </div>
                 </div>
