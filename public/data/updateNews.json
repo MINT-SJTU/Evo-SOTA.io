@@ -1,0 +1,29 @@
+{
+    "news": [
+        {
+            "date": "2025-01-19",
+            "content_en": "New Leaderboard: RoboChallenge, New Feature: Policy Setting filter in LIBERO; Bug Fixes: Link errors and inappropriate filter in Libero Plus",
+            "content_zh": "新增榜单: RoboChallenge, 新增功能: LIBERO 策略设置过滤器; 修复 Bugs: Libero Plus 中的链接错误和不恰当的过滤器"
+        },
+        {
+            "date": "2025-01-14",
+            "content_en": "New models: DeepThinkVLA, Dadu-Corki",
+            "content_zh": "新增模型: DeepThinkVLA, Dadu-Corki"
+        },
+        {
+            "date": "2025-01-13",
+            "content_en": "New model: RoboTron Mani",
+            "content_zh": "新增模型: RoboTron Mani"
+        },
+        {
+            "date": "2025-01-09",
+            "content_en": "New models: CronusVLA, InstructVLA, InternVLA-M1",
+            "content_zh": "新增模型: CronusVLA, InstructVLA, InternVLA-M1"
+        },
+        {
+            "date": "2025-01-06",
+            "content_en": "Website launched with LIBERO, LIBERO Plus, Meta-World, CALVIN benchmarks",
+            "content_zh": "网站正式上线，支持 LIBERO, LIBERO Plus, Meta-World, CALVIN 基准测试"
+        }
+    ]
+}
