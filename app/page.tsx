@@ -49,7 +49,6 @@ interface SummaryData {
     libero_plus: {
         total_models: number;
         standard_opensource_count: number;
-        standard_opensource_mixsft_count: number;
         top_5: { name: string; score: number; rank: number }[];
     };
     calvin: {
@@ -62,27 +61,45 @@ interface SummaryData {
         standard_opensource_count: number;
         top_5: { name: string; score: number; rank: number }[];
     };
+    robochallenge: {
+        total_models: number;
+        standard_opensource_count: number;
+        top_5: { name: string; score: number; rank: number }[];
+    };
+}
+
+interface NewsItem {
+    date: string;
+    content_en: string;
+    content_zh: string;
 }
 
 export default function Home() {
-    const { t } = useLanguage();
+    const { t, locale } = useLanguage();
     const [summaryData, setSummaryData] = useState<SummaryData | null>(null);
+    const [newsData, setNewsData] = useState<NewsItem[]>([]);
 
     useEffect(() => {
         const loadData = async () => {
             try {
-                const res = await fetch(`/data/data.json`);
-                const json = await res.json();
-                setSummaryData(json);
+                const [summaryRes, newsRes] = await Promise.all([
+                    fetch(`/data/data.json`),
+                    fetch(`/data/updateNews.json`)
+                ]);
+                const summaryJson = await summaryRes.json();
+                const newsJson = await newsRes.json();
+                setSummaryData(summaryJson);
+                setNewsData(newsJson.news || []);
             } catch (error) {
-                console.error('Error loading summary data:', error);
+                console.error('Error loading data:', error);
             }
         };
         loadData();
     }, []);
 
-    // 构建 benchmarks 数据 - 顺序: libero, libero plus, metaworld, calvin
-    const benchmarks = [
+    // 构建 benchmarks 数据 - 顺序: libero plus, libero, metaworld, calvin, robochallenge
+    // 第一行: libero, metaworld, calvin
+    const firstRowBenchmarks = [
         {
             id: 'libero',
             name: t.benchmarkDesc.libero.name,
@@ -95,19 +112,6 @@ export default function Home() {
                 score: m.score,
             })) || [],
             color: 'blue',
-        },
-        {
-            id: 'liberoplus',
-            name: t.benchmarkDesc.liberoPlus.name,
-            description: t.benchmarkDesc.liberoPlus.description,
-            metric: t.benchmarkDesc.liberoPlus.metric,
-            modelCount: (summaryData?.libero_plus.standard_opensource_count || 0) + (summaryData?.libero_plus.standard_opensource_mixsft_count || 0),
-            topModels: summaryData?.libero_plus.top_5.map(m => ({
-                rank: m.rank,
-                name: m.name,
-                score: m.score,
-            })) || [],
-            color: 'orange',
         },
         {
             id: 'metaworld',
@@ -134,6 +138,36 @@ export default function Home() {
                 score: m.score,
             })) || [],
             color: 'green',
+        },
+    ];
+
+    // 第二行: libero plus, robochallenge
+    const secondRowBenchmarks = [
+        {
+            id: 'liberoplus',
+            name: t.benchmarkDesc.liberoPlus.name,
+            description: t.benchmarkDesc.liberoPlus.description,
+            metric: t.benchmarkDesc.liberoPlus.metric,
+            modelCount: summaryData?.libero_plus.standard_opensource_count || 0,
+            topModels: summaryData?.libero_plus.top_5.map(m => ({
+                rank: m.rank,
+                name: m.name,
+                score: m.score,
+            })) || [],
+            color: 'orange',
+        },
+        {
+            id: 'robochallenge',
+            name: t.benchmarkDesc.robochallenge?.name || 'RoboChallenge',
+            description: t.benchmarkDesc.robochallenge?.description || 'Real-world robotic manipulation benchmark',
+            metric: t.benchmarkDesc.robochallenge?.metric || 'Score',
+            modelCount: summaryData?.robochallenge?.standard_opensource_count || 0,
+            topModels: summaryData?.robochallenge?.top_5?.map(m => ({
+                rank: m.rank,
+                name: m.name,
+                score: m.score,
+            })) || [],
+            color: 'teal',
         },
     ];
 
@@ -165,6 +199,13 @@ export default function Home() {
             text: 'text-purple-600',
             badge: 'bg-purple-100 text-purple-800',
             button: 'bg-purple-600 hover:bg-purple-700',
+        },
+        teal: {
+            bg: 'bg-teal-50',
+            border: 'border-teal-200',
+            text: 'text-teal-600',
+            badge: 'bg-teal-100 text-teal-800',
+            button: 'bg-teal-600 hover:bg-teal-700',
         },
     };
 
@@ -213,23 +254,122 @@ export default function Home() {
                 </div>
             </section>
 
+            {/* Update News - 浅黄色背景，从 JSON 文件读取 */}
+            <div className="bg-amber-50 border-y border-amber-200 py-4 px-4 sm:px-6 lg:px-8">
+                <div className="max-w-7xl mx-auto">
+                    <div className="flex items-start gap-4">
+                        <span className="text-sm font-bold text-amber-800 whitespace-nowrap flex items-center gap-1 pt-0.5">
+                            📢 {locale === 'zh' ? '最近更新' : 'Latest Updates'}
+                        </span>
+                        <div className="flex flex-col gap-1 text-sm">
+                            {newsData.slice(0, 5).map((news, index) => (
+                                <div key={index} className="text-amber-900">
+                                    <span className="font-medium text-amber-700">
+                                        {news.date.slice(5).replace('-', '-')}
+                                    </span>{' '}
+                                    {locale === 'zh' ? news.content_zh : news.content_en}
+                                </div>
+                            ))}
+                        </div>
+                    </div>
+                </div>
+            </div>
+
             {/* Stats Overview */}
             <StatsOverview />
 
             {/* Benchmark Cards */}
             <section className="py-16 px-4 sm:px-6 lg:px-8">
-                <div className="max-w-7xl mx-auto">
+                <div className="max-w-6xl mx-auto">
                     <h2 className="text-2xl font-bold text-slate-800 mb-8 text-center">
                         {t.nav.benchmarks}
                     </h2>
 
-                    <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
-                        {benchmarks.map((benchmark) => {
+                    {/* 第一行: LIBERO, MetaWorld, CALVIN */}
+                    <div className="flex justify-center gap-5 mb-5 flex-wrap">
+                        {firstRowBenchmarks.map((benchmark) => {
                             const colors = colorClasses[benchmark.color as keyof typeof colorClasses];
                             return (
                                 <div
                                     key={benchmark.id}
-                                    className={`rounded-xl border-2 ${colors.border} ${colors.bg} overflow-hidden card-hover`}
+                                    className={`w-80 rounded-xl border-2 ${colors.border} ${colors.bg} overflow-hidden card-hover`}
+                                >
+                                    {/* Card Header */}
+                                    <div className="p-6 border-b border-slate-200 bg-white">
+                                        <div className="flex items-center justify-between mb-2">
+                                            <h3 className={`text-xl font-bold ${colors.text}`}>
+                                                {benchmark.name}
+                                            </h3>
+                                            <span className={`px-2 py-1 rounded-full text-xs font-medium ${colors.badge}`}>
+                                                {benchmark.modelCount} {t.home.models}
+                                            </span>
+                                        </div>
+                                        <p className="text-sm text-slate-600 line-clamp-2">
+                                            {benchmark.description}
+                                        </p>
+                                        <p className="text-xs text-slate-500 mt-2">
+                                            {t.home.primaryMetric}: {benchmark.metric}
+                                        </p>
+                                    </div>
+
+                                    {/* Top Models */}
+                                    <div className="p-4">
+                                        <h4 className="text-sm font-semibold text-slate-700 mb-3">
+                                            {t.home.topPerformers}
+                                        </h4>
+                                        <div className="space-y-2">
+                                            {benchmark.topModels.map((model) => (
+                                                <div
+                                                    key={model.rank}
+                                                    className="flex items-center justify-between bg-white rounded-lg px-3 py-2 shadow-sm"
+                                                >
+                                                    <div className="flex items-center space-x-3">
+                                                        <span
+                                                            className={`w-6 h-6 rounded-full flex items-center justify-center text-xs font-bold ${model.rank === 1
+                                                                ? 'bg-yellow-100 text-yellow-700'
+                                                                : model.rank === 2
+                                                                    ? 'bg-gray-100 text-gray-600'
+                                                                    : model.rank === 3
+                                                                        ? 'bg-orange-100 text-orange-700'
+                                                                        : 'bg-slate-100 text-slate-600'
+                                                                }`}
+                                                        >
+                                                            {model.rank}
+                                                        </span>
+                                                        <span className="font-medium text-slate-800 text-sm">
+                                                            {model.name}
+                                                        </span>
+                                                    </div>
+                                                    <span className={`font-semibold text-sm ${colors.text}`}>
+                                                        {model.score}
+                                                    </span>
+                                                </div>
+                                            ))}
+                                        </div>
+                                    </div>
+
+                                    {/* Card Footer */}
+                                    <div className="p-4 pt-0">
+                                        <Link
+                                            href={`/benchmarks/${benchmark.id}`}
+                                            className={`block w-full text-center py-2 rounded-lg text-white font-medium transition-colors ${colors.button}`}
+                                        >
+                                            {t.home.viewLeaderboard}
+                                        </Link>
+                                    </div>
+                                </div>
+                            );
+                        })}
+                    </div>
+
+                    {/* 第二行: LIBERO Plus, RoboChallenge (居中) */}
+                    <div className="flex justify-center gap-5 flex-wrap">
+                        {secondRowBenchmarks.map((benchmark) => {
+                            const colors = colorClasses[benchmark.color as keyof typeof colorClasses];
+                            return (
+                                <div
+                                    key={benchmark.id}
+                                    className={`w-80 rounded-xl border-2 ${colors.border} ${colors.bg} overflow-hidden card-hover`}
                                 >
                                     {/* Card Header */}
                                     <div className="p-6 border-b border-slate-200 bg-white">

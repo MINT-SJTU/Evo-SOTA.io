@@ -56,6 +56,14 @@ interface LiberoPlusModel {
     is_opensource?: boolean;
 }
 
+interface RoboChallengeModel {
+    name: string;
+    pub_date: string | null;
+    score: number | null;
+    paper_url?: string | null;
+    is_opensource?: boolean;
+}
+
 // 新的分类数据结构
 interface CategorizedData<T> {
     standard_opensource: T[];
@@ -97,7 +105,8 @@ const CustomTooltip = ({ active, payload }: { active?: boolean; payload?: Array<
                     <span className={`font-medium ${data.benchmark === 'LIBERO' ? 'text-blue-600' :
                         data.benchmark === 'LIBERO Plus' ? 'text-orange-600' :
                             data.benchmark === 'CALVIN' ? 'text-emerald-600' :
-                                'text-purple-600'
+                                data.benchmark === 'RoboChallenge' ? 'text-teal-600' :
+                                    'text-purple-600'
                         }`}>
                         {data.benchmark}
                     </span>
@@ -115,7 +124,8 @@ export default function ProgressChart() {
     const [liberoPlusData, setLiberoPlusData] = useState<DataPoint[]>([]);
     const [calvinData, setCalvinData] = useState<DataPoint[]>([]);
     const [metaworldData, setMetaworldData] = useState<DataPoint[]>([]);
-    const [selectedBenchmarks, setSelectedBenchmarks] = useState<string[]>(['LIBERO', 'LIBERO Plus', 'Meta-World', 'CALVIN']);
+    const [robochallengeData, setRobochallengeData] = useState<DataPoint[]>([]);
+    const [selectedBenchmarks, setSelectedBenchmarks] = useState<string[]>(['LIBERO', 'LIBERO Plus', 'Meta-World', 'CALVIN', 'RoboChallenge']);
     const [showTopOnly, setShowTopOnly] = useState(false);
     const [showOpenSourceOnly, setShowOpenSourceOnly] = useState(false);
 
@@ -137,17 +147,19 @@ export default function ProgressChart() {
         // 加载数据
         const loadData = async () => {
             try {
-                const [liberoRes, liberoPlusRes, calvinRes, metaworldRes] = await Promise.all([
+                const [liberoRes, liberoPlusRes, calvinRes, metaworldRes, robochallengeRes] = await Promise.all([
                     fetch(`/data/libero.json`),
                     fetch(`/data/liberoPlus.json`),
                     fetch(`/data/calvin.json`),
-                    fetch(`/data/metaworld.json`)
+                    fetch(`/data/metaworld.json`),
+                    fetch(`/data/robochallenge.json`)
                 ]);
 
                 const libero: CategorizedData<LiberoModel> = await liberoRes.json();
                 const liberoPlus: LiberoPlusCategorizedData = await liberoPlusRes.json();
                 const calvin: CalvinData = await calvinRes.json();
                 const metaworld: CategorizedData<MetaworldModel> = await metaworldRes.json();
+                const robochallenge: CategorizedData<RoboChallengeModel> = await robochallengeRes.json();
 
                 // 只使用标准模型数据（standard_opensource + standard_closed）
                 const standardLibero = [
@@ -225,10 +237,30 @@ export default function ProgressChart() {
                         is_opensource: m.is_opensource
                     }));
 
+                // 只使用 RoboChallenge 标准模型
+                const standardRobochallenge = [
+                    ...(robochallenge.standard_opensource || []).map(m => ({ ...m, is_opensource: true })),
+                    ...(robochallenge.standard_closed || []).map(m => ({ ...m, is_opensource: false }))
+                ];
+
+                // 处理 RoboChallenge 数据
+                const robochallengePoints: DataPoint[] = standardRobochallenge
+                    .filter(m => m.score !== null && m.pub_date)
+                    .map(m => ({
+                        name: m.name,
+                        date: parseDate(m.pub_date!),
+                        dateStr: formatDate(m.pub_date!),
+                        score: m.score!,
+                        benchmark: 'RoboChallenge',
+                        paper_url: m.paper_url || undefined,
+                        is_opensource: m.is_opensource
+                    }));
+
                 setLiberoData(liberoPoints);
                 setLiberoPlusData(liberoPlusPoints);
                 setCalvinData(calvinPoints);
                 setMetaworldData(metaworldPoints);
+                setRobochallengeData(robochallengePoints);
             } catch (error) {
                 console.error('Error loading data:', error);
             }
@@ -260,7 +292,7 @@ export default function ProgressChart() {
     }, [showTopOnly, showOpenSourceOnly]);
 
     // 计算X轴范围
-    const allDates = [...liberoData, ...liberoPlusData, ...calvinData, ...metaworldData].map(d => d.date);
+    const allDates = [...liberoData, ...liberoPlusData, ...calvinData, ...metaworldData, ...robochallengeData].map(d => d.date);
     const minDate = allDates.length ? Math.min(...allDates) : new Date(2023, 0, 1).getTime();
     const maxDate = allDates.length ? Math.max(...allDates) : new Date(2025, 11, 1).getTime();
 
@@ -293,6 +325,7 @@ export default function ProgressChart() {
             liberoPlusDesc: 'LIBERO Plus: Success Rate (%)',
             calvinDesc: 'CALVIN: Avg. Completed Tasks',
             metaworldDesc: 'Meta-World: Success Rate (%)',
+            robochallengeDesc: 'RoboChallenge: Score',
             note: 'Note: CALVIN uses a different metric scale (0-5 tasks) compared to LIBERO, LIBERO Plus and Meta-World (0-100%)',
         },
         zh: {
@@ -304,6 +337,7 @@ export default function ProgressChart() {
             liberoPlusDesc: 'LIBERO Plus: 成功率 (%)',
             calvinDesc: 'CALVIN: 平均完成任务数',
             metaworldDesc: 'Meta-World: 成功率 (%)',
+            robochallengeDesc: 'RoboChallenge: 分数',
             note: '注：CALVIN 使用不同的指标尺度 (0-5 任务数)，与 LIBERO、LIBERO Plus 和 Meta-World (0-100%) 不同',
         }
     };
@@ -326,15 +360,6 @@ export default function ProgressChart() {
                 <div className="flex flex-wrap justify-center gap-4 mb-6">
                     <div className="flex flex-wrap items-center gap-2">
                         <button
-                            onClick={() => toggleBenchmark('LIBERO')}
-                            className={`px-4 py-2 rounded-lg font-medium transition-all ${selectedBenchmarks.includes('LIBERO')
-                                ? 'bg-blue-600 text-white shadow-md'
-                                : 'bg-white text-blue-600 border border-blue-200 hover:bg-blue-50'
-                                }`}
-                        >
-                            LIBERO
-                        </button>
-                        <button
                             onClick={() => toggleBenchmark('LIBERO Plus')}
                             className={`px-4 py-2 rounded-lg font-medium transition-all ${selectedBenchmarks.includes('LIBERO Plus')
                                 ? 'bg-orange-600 text-white shadow-md'
@@ -342,6 +367,15 @@ export default function ProgressChart() {
                                 }`}
                         >
                             LIBERO Plus
+                        </button>
+                        <button
+                            onClick={() => toggleBenchmark('LIBERO')}
+                            className={`px-4 py-2 rounded-lg font-medium transition-all ${selectedBenchmarks.includes('LIBERO')
+                                ? 'bg-blue-600 text-white shadow-md'
+                                : 'bg-white text-blue-600 border border-blue-200 hover:bg-blue-50'
+                                }`}
+                        >
+                            LIBERO
                         </button>
                         <button
                             onClick={() => toggleBenchmark('Meta-World')}
@@ -360,6 +394,15 @@ export default function ProgressChart() {
                                 }`}
                         >
                             CALVIN
+                        </button>
+                        <button
+                            onClick={() => toggleBenchmark('RoboChallenge')}
+                            className={`px-4 py-2 rounded-lg font-medium transition-all ${selectedBenchmarks.includes('RoboChallenge')
+                                ? 'bg-teal-600 text-white shadow-md'
+                                : 'bg-white text-teal-600 border border-teal-200 hover:bg-teal-50'
+                                }`}
+                        >
+                            RoboChallenge
                         </button>
                     </div>
                     <label className="flex items-center gap-2 cursor-pointer">
@@ -382,13 +425,14 @@ export default function ProgressChart() {
                     </label>
                 </div>
 
-                {/* Charts Grid - 支持1-4张图的动态布局 */}
+                {/* Charts Grid - 支持1-5张图的动态布局 */}
                 {(() => {
                     const activeCharts = [];
-                    if (selectedBenchmarks.includes('LIBERO')) activeCharts.push('LIBERO');
                     if (selectedBenchmarks.includes('LIBERO Plus')) activeCharts.push('LIBERO Plus');
+                    if (selectedBenchmarks.includes('LIBERO')) activeCharts.push('LIBERO');
                     if (selectedBenchmarks.includes('Meta-World')) activeCharts.push('Meta-World');
                     if (selectedBenchmarks.includes('CALVIN')) activeCharts.push('CALVIN');
+                    if (selectedBenchmarks.includes('RoboChallenge')) activeCharts.push('RoboChallenge');
                     const chartCount = activeCharts.length;
 
                     // 根据图表数量决定布局
@@ -396,6 +440,7 @@ export default function ProgressChart() {
                     // 2张图：并排居中，各占约1/2宽度
                     // 3张图：品字形（上2下1居中）
                     // 4张图：田字形 2x2
+                    // 5张图：2+2+1，最后一张居中
                     const getGridClass = () => {
                         if (chartCount === 1) return 'flex justify-center';
                         if (chartCount === 2) return 'grid grid-cols-1 lg:grid-cols-2 gap-6';
@@ -404,8 +449,9 @@ export default function ProgressChart() {
 
                     const renderChart = (benchmark: string, index: number) => {
                         // 对于3张图的情况，第3张图需要居中显示
-                        const isLastInThree = chartCount === 3 && index === 2;
-                        const chartWrapperClass = isLastInThree
+                        // 对于5张图的情况，第5张图需要居中显示
+                        const isLastInOdd = (chartCount === 3 && index === 2) || (chartCount === 5 && index === 4);
+                        const chartWrapperClass = isLastInOdd
                             ? 'md:col-span-2 flex justify-center'
                             : '';
                         // 根据图表数量设置宽度
@@ -414,7 +460,7 @@ export default function ProgressChart() {
                         const chartStyle = chartCount === 1
                             ? { width: '66.67%', minWidth: '400px' }
                             : undefined;
-                        const chartClass = isLastInThree
+                        const chartClass = isLastInOdd
                             ? 'w-full md:w-1/2'
                             : 'w-full';
 
@@ -638,6 +684,63 @@ export default function ProgressChart() {
                                                     name="CALVIN (ABC→D)"
                                                     data={getDisplayData(calvinData)}
                                                     fill="#10b981"
+                                                    fillOpacity={0.7}
+                                                />
+                                            </ScatterChart>
+                                        </ResponsiveContainer>
+                                    </div>
+                                </div>
+                            );
+                        }
+                        if (benchmark === 'RoboChallenge') {
+                            return (
+                                <div key="robochallenge" className={chartWrapperClass} style={chartStyle}>
+                                    <div className={`bg-white rounded-xl p-6 shadow-sm border border-slate-200 ${chartClass}`}>
+                                        <h3 className="text-lg font-semibold text-slate-700 mb-4">
+                                            {t.robochallengeDesc}
+                                        </h3>
+                                        <ResponsiveContainer width="100%" height={350}>
+                                            <ScatterChart margin={{ top: 20, right: 20, bottom: 20, left: 10 }}>
+                                                <CartesianGrid strokeDasharray="3 3" stroke="#e2e8f0" />
+                                                <XAxis
+                                                    type="number"
+                                                    dataKey="date"
+                                                    domain={[minDate, maxDate]}
+                                                    tickFormatter={formatXAxis}
+                                                    tick={{ fill: '#64748b', fontSize: 12 }}
+                                                    axisLine={{ stroke: '#cbd5e1' }}
+                                                />
+                                                <YAxis
+                                                    type="number"
+                                                    dataKey="score"
+                                                    domain={[0, 'auto']}
+                                                    tick={{ fill: '#64748b', fontSize: 12 }}
+                                                    axisLine={{ stroke: '#cbd5e1' }}
+                                                    label={{
+                                                        value: 'Score',
+                                                        angle: -90,
+                                                        position: 'insideLeft',
+                                                        style: { fill: '#64748b', fontSize: 12 }
+                                                    }}
+                                                />
+                                                <Tooltip content={<CustomTooltip />} />
+                                                <Legend />
+                                                <ReferenceLine
+                                                    x={new Date(2024, 0, 1).getTime()}
+                                                    stroke="#94a3b8"
+                                                    strokeDasharray="5 5"
+                                                    label={{ value: '2024', fill: '#94a3b8', fontSize: 10 }}
+                                                />
+                                                <ReferenceLine
+                                                    x={new Date(2025, 0, 1).getTime()}
+                                                    stroke="#94a3b8"
+                                                    strokeDasharray="5 5"
+                                                    label={{ value: '2025', fill: '#94a3b8', fontSize: 10 }}
+                                                />
+                                                <Scatter
+                                                    name="RoboChallenge"
+                                                    data={getDisplayData(robochallengeData)}
+                                                    fill="#14b8a6"
                                                     fillOpacity={0.7}
                                                 />
                                             </ScatterChart>

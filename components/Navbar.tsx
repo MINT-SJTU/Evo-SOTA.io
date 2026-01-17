@@ -22,10 +22,11 @@ export default function Navbar() {
     };
 
     const benchmarks = [
-        { name: 'LIBERO', href: '/benchmarks/libero' },
         { name: 'LIBERO Plus', href: '/benchmarks/liberoplus' },
+        { name: 'LIBERO', href: '/benchmarks/libero' },
         { name: 'Meta-World', href: '/benchmarks/metaworld' },
         { name: 'CALVIN', href: '/benchmarks/calvin' },
+        { name: 'RoboChallenge', href: '/benchmarks/robochallenge' },
     ];
 
     return (

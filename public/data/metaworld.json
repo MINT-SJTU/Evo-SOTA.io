@@ -2,6 +2,8 @@
   "standard_opensource": [
     {
       "name": "Evo-1",
+      "base_name": "Evo-1",
+      "setting": "",
       "paper_url": "https://arxiv.org/abs/2511.04555",
       "pub_date": "2025-11",
       "is_opensource": true,
@@ -18,6 +20,8 @@
     },
     {
       "name": "RoboTron Mani",
+      "base_name": "RoboTron Mani",
+      "setting": "",
       "paper_url": "https://arxiv.org/pdf/2412.07215v1",
       "pub_date": "2025-11",
       "is_opensource": true,
@@ -34,6 +38,8 @@
     },
     {
       "name": "SmolVLA",
+      "base_name": "SmolVLA",
+      "setting": "",
       "paper_url": "https://arxiv.org/abs/2506.01844",
       "pub_date": "2025-06",
       "is_opensource": true,
@@ -50,6 +56,8 @@
     },
     {
       "name": "pi0",
+      "base_name": "pi0",
+      "setting": "",
       "paper_url": "https://arxiv.org/html/2410.24164v1",
       "pub_date": "2024-01",
       "is_opensource": true,
@@ -66,6 +74,8 @@
     },
     {
       "name": "TinyVLA-H",
+      "base_name": "TinyVLA-H",
+      "setting": "",
       "paper_url": "https://arxiv.org/html/2409.12514v1",
       "pub_date": "2024-09",
       "is_opensource": true,
@@ -82,6 +92,8 @@
     },
     {
       "name": "Diffusion Policy",
+      "base_name": "Diffusion Policy",
+      "setting": "",
       "paper_url": "https://arxiv.org/pdf/2303.04137",
       "pub_date": "2023-03",
       "is_opensource": true,
@@ -101,6 +113,8 @@
   "non_standard": [
     {
       "name": "MPI",
+      "base_name": "MPI",
+      "setting": "",
       "paper_url": "https://arxiv.org/pdf/2406.00439",
       "pub_date": "2024-06",
       "is_opensource": true,
@@ -117,6 +131,8 @@
     },
     {
       "name": "iRe-VLA",
+      "base_name": "iRe-VLA",
+      "setting": "",
       "paper_url": "https://arxiv.org/pdf/2501.16664",
       "pub_date": "2025-01",
       "is_opensource": false,
@@ -133,6 +149,8 @@
     },
     {
       "name": "Baku",
+      "base_name": "Baku",
+      "setting": "",
       "paper_url": "https://arxiv.org/abs/2406.07539",
       "pub_date": "2024-06",
       "is_opensource": true,
@@ -149,6 +167,8 @@
     },
     {
       "name": "TriVLA",
+      "base_name": "TriVLA",
+      "setting": "",
       "paper_url": "https://arxiv.org/abs/2507.01424",
       "pub_date": "2025-07",
       "is_opensource": false,
@@ -165,6 +185,8 @@
     },
     {
       "name": "VPP",
+      "base_name": "VPP",
+      "setting": "",
       "paper_url": "https://arxiv.org/abs/2412.14803",
       "pub_date": "2024-12",
       "is_opensource": true,
@@ -181,6 +203,8 @@
     },
     {
       "name": "GR-1",
+      "base_name": "GR-1",
+      "setting": "",
       "paper_url": "https://arxiv.org/abs/2312.13139",
       "pub_date": "2023-12",
       "is_opensource": true,
@@ -197,6 +221,8 @@
     },
     {
       "name": "AVDC",
+      "base_name": "AVDC",
+      "setting": "",
       "paper_url": "https://flow-diffusion.github.io/AVDC.pdf",
       "pub_date": "2023-01",
       "is_opensource": true,
@@ -213,6 +239,8 @@
     },
     {
       "name": "SuSIE",
+      "base_name": "SuSIE",
+      "setting": "",
       "paper_url": "https://arxiv.org/abs/2310.10639",
       "pub_date": "2023-01",
       "is_opensource": true,

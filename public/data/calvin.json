@@ -3,6 +3,8 @@
     "standard_opensource": [
       {
         "name": "Flower VLA",
+        "base_name": "Flower VLA",
+        "setting": "",
         "paper_url": "https://arxiv.org/pdf/2509.04996",
         "pub_date": "2025-09",
         "is_opensource": true,
@@ -19,7 +21,9 @@
         "rank": 1
       },
       {
-        "name": "UniVLA",
+        "name": "UnifiedVLA",
+        "base_name": "UnifiedVLA",
+        "setting": "",
         "paper_url": "https://arxiv.org/abs/2506.19850",
         "pub_date": "2025-06",
         "is_opensource": true,
@@ -36,7 +40,28 @@
         "rank": 2
       },
       {
+        "name": "MDT",
+        "base_name": "MDT",
+        "setting": "",
+        "paper_url": "https://arxiv.org/abs/2407.05996",
+        "pub_date": "2024-07",
+        "is_opensource": true,
+        "opensource_url": "https://github.com/intuitive-robots/mdt_policy",
+        "is_standard": true,
+        "note": "",
+        "inst1": 0.986,
+        "inst2": 0.958,
+        "inst3": 0.916,
+        "inst4": 0.862,
+        "inst5": 0.801,
+        "avg_len": 4.52,
+        "source": "original",
+        "rank": 3
+      },
+      {
         "name": "UP-VLA",
+        "base_name": "UP-VLA",
+        "setting": "",
         "paper_url": "https://arxiv.org/abs/2501.18867",
         "pub_date": "2025-01",
         "is_opensource": true,
@@ -50,10 +75,12 @@
         "inst5": 0.812,
         "avg_len": 4.42,
         "source": "original",
-        "rank": 3
+        "rank": 4
       },
       {
         "name": "MoDE",
+        "base_name": "MoDE",
+        "setting": "",
         "paper_url": "https://arxiv.org/pdf/2412.12953",
         "pub_date": "2024-12",
         "is_opensource": true,
@@ -67,10 +94,12 @@
         "inst5": 0.779,
         "avg_len": 4.39,
         "source": "original",
-        "rank": 4
+        "rank": 5
       },
       {
         "name": "GR-1",
+        "base_name": "GR-1",
+        "setting": "",
         "paper_url": "https://arxiv.org/abs/2312.13139",
         "pub_date": "2023-12",
         "is_opensource": true,
@@ -84,10 +113,12 @@
         "inst5": 0.731,
         "avg_len": 4.21,
         "source": "original",
-        "rank": 5
+        "rank": 6
       },
       {
         "name": "DeeR-VLA",
+        "base_name": "DeeR-VLA",
+        "setting": "",
         "paper_url": "https://arxiv.org/abs/2411.02359",
         "pub_date": "2024-11",
         "is_opensource": true,
@@ -101,10 +132,12 @@
         "inst5": null,
         "avg_len": 4.13,
         "source": "original",
-        "rank": 6
+        "rank": 7
       },
       {
         "name": "RoboFlamingo",
+        "base_name": "RoboFlamingo",
+        "setting": "",
         "paper_url": "https://arxiv.org/abs/2311.01378",
         "pub_date": "2023-11",
         "is_opensource": true,
@@ -118,10 +151,12 @@
         "inst5": 0.66,
         "avg_len": 4.09,
         "source": "original",
-        "rank": 7
+        "rank": 8
       },
       {
         "name": "RoboTron Mani",
+        "base_name": "RoboTron Mani",
+        "setting": "",
         "paper_url": "https://arxiv.org/pdf/2412.07215v1",
         "pub_date": "2025-11",
         "is_opensource": true,
@@ -135,10 +170,12 @@
         "inst5": 0.468,
         "avg_len": 3.51,
         "source": "original",
-        "rank": 8
+        "rank": 9
       },
       {
         "name": "Distill-D",
+        "base_name": "Distill-D",
+        "setting": "",
         "paper_url": "https://arxiv.org/abs/2307.14535",
         "pub_date": "2023-07",
         "is_opensource": true,
@@ -152,10 +189,12 @@
         "inst5": 0.417,
         "avg_len": 3.16,
         "source": "from MDT",
-        "rank": 9
+        "rank": 10
       },
       {
         "name": "HULC",
+        "base_name": "HULC",
+        "setting": "",
         "paper_url": "https://arxiv.org/abs/2204.06252",
         "pub_date": "2022-04",
         "is_opensource": true,
@@ -169,10 +208,12 @@
         "inst5": 0.383,
         "avg_len": 3.06,
         "source": "original",
-        "rank": 10
+        "rank": 11
       },
       {
         "name": "MT-ACT",
+        "base_name": "MT-ACT",
+        "setting": "",
         "paper_url": "https://arxiv.org/pdf/2309.01918",
         "pub_date": "2023-09",
         "is_opensource": true,
@@ -186,10 +227,12 @@
         "inst5": 0.293,
         "avg_len": 2.8,
         "source": "from MDT",
-        "rank": 11
+        "rank": 12
       },
       {
         "name": "RT-1",
+        "base_name": "RT-1",
+        "setting": "",
         "paper_url": "https://arxiv.org/abs/2212.06817",
         "pub_date": "2022-12",
         "is_opensource": true,
@@ -203,12 +246,14 @@
         "inst5": 0.227,
         "avg_len": 2.45,
         "source": "from GR-1",
-        "rank": 12
+        "rank": 13
       }
     ],
     "standard_closed": [
       {
         "name": "GR-2",
+        "base_name": "GR-2",
+        "setting": "",
         "paper_url": "https://arxiv.org/abs/2410.06158",
         "pub_date": "2024-01",
         "is_opensource": false,
@@ -225,24 +270,9 @@
         "rank": 1
       },
       {
-        "name": "MDT",
-        "paper_url": "https://arxiv.org/abs/2407.05996",
-        "pub_date": "2024-07",
-        "is_opensource": false,
-        "opensource_url": null,
-        "is_standard": true,
-        "note": "",
-        "inst1": 0.986,
-        "inst2": 0.958,
-        "inst3": 0.916,
-        "inst4": 0.862,
-        "inst5": 0.801,
-        "avg_len": 4.52,
-        "source": "original",
-        "rank": 2
-      },
-      {
         "name": "PD-VLA",
+        "base_name": "PD-VLA",
+        "setting": "",
         "paper_url": "https://arxiv.org/abs/2503.02310",
         "pub_date": "2025-03",
         "is_opensource": false,
@@ -256,10 +286,12 @@
         "inst5": 0.505,
         "avg_len": 3.55,
         "source": "original",
-        "rank": 3
+        "rank": 2
       },
       {
         "name": "MCIL",
+        "base_name": "MCIL",
+        "setting": "",
         "paper_url": "https://arxiv.org/abs/2005.07648",
         "pub_date": "2020-05",
         "is_opensource": false,
@@ -273,7 +305,7 @@
         "inst5": 0.0,
         "avg_len": 0.4,
         "source": "from HULC",
-        "rank": 4
+        "rank": 3
       }
     ],
     "non_standard": []
@@ -282,6 +314,8 @@
     "standard_opensource": [
       {
         "name": "Flower VLA",
+        "base_name": "Flower VLA",
+        "setting": "",
         "paper_url": "https://arxiv.org/pdf/2509.04996",
         "pub_date": "2025-09",
         "is_opensource": true,
@@ -299,6 +333,8 @@
       },
       {
         "name": "VLA-Adapter-pro",
+        "base_name": "VLA-Adapter-pro",
+        "setting": "",
         "paper_url": "https://arxiv.org/abs/2509.09372",
         "pub_date": "2025-09",
         "is_opensource": true,
@@ -316,6 +352,8 @@
       },
       {
         "name": "DreamVLA",
+        "base_name": "DreamVLA",
+        "setting": "",
         "paper_url": "https://arxiv.org/abs/2507.04447",
         "pub_date": "2025-07",
         "is_opensource": true,
@@ -333,6 +371,8 @@
       },
       {
         "name": "X-VLA",
+        "base_name": "X-VLA",
+        "setting": "",
         "paper_url": "https://arxiv.org/abs/2510.10274",
         "pub_date": "2025-01",
         "is_opensource": true,
@@ -349,7 +389,9 @@
         "rank": 4
       },
       {
-        "name": "UniVLA",
+        "name": "UnifiedVLA",
+        "base_name": "UnifiedVLA",
+        "setting": "",
         "paper_url": "https://arxiv.org/abs/2506.19850",
         "pub_date": "2025-06",
         "is_opensource": true,
@@ -367,6 +409,8 @@
       },
       {
         "name": "VPP",
+        "base_name": "VPP",
+        "setting": "",
         "paper_url": "https://arxiv.org/abs/2412.14803",
         "pub_date": "2024-12",
         "is_opensource": true,
@@ -384,6 +428,8 @@
       },
       {
         "name": "Seer",
+        "base_name": "Seer",
+        "setting": "",
         "paper_url": "https://arxiv.org/pdf/2412.15109",
         "pub_date": "2024-12",
         "is_opensource": true,
@@ -401,6 +447,8 @@
       },
       {
         "name": "UP-VLA",
+        "base_name": "UP-VLA",
+        "setting": "",
         "paper_url": "https://arxiv.org/abs/2501.18867",
         "pub_date": "2025-01",
         "is_opensource": true,
@@ -418,6 +466,8 @@
       },
       {
         "name": "GR-MG",
+        "base_name": "GR-MG",
+        "setting": "",
         "paper_url": "https://arxiv.org/abs/2408.14368",
         "pub_date": "2024-08",
         "is_opensource": true,
@@ -435,6 +485,8 @@
       },
       {
         "name": "MoDE",
+        "base_name": "MoDE",
+        "setting": "",
         "paper_url": "https://arxiv.org/pdf/2412.12953",
         "pub_date": "2024-12",
         "is_opensource": true,
@@ -452,6 +504,8 @@
       },
       {
         "name": "GHIL-Glue",
+        "base_name": "GHIL-Glue",
+        "setting": "",
         "paper_url": "https://arxiv.org/pdf/2410.20018",
         "pub_date": "2024-01",
         "is_opensource": true,
@@ -469,6 +523,8 @@
       },
       {
         "name": "CEED-VLA",
+        "base_name": "CEED-VLA",
+        "setting": "",
         "paper_url": "https://arxiv.org/abs/2506.13725",
         "pub_date": "2025-06",
         "is_opensource": true,
@@ -486,6 +542,8 @@
       },
       {
         "name": "RoboUniview",
+        "base_name": "RoboUniview",
+        "setting": "",
         "paper_url": "https://arxiv.org/abs/2406.18977",
         "pub_date": "2024-06",
         "is_opensource": true,
@@ -503,6 +561,8 @@
       },
       {
         "name": "Dita",
+        "base_name": "Dita",
+        "setting": "",
         "paper_url": "https://arxiv.org/abs/2410.15959v4",
         "pub_date": "2025-03",
         "is_opensource": true,
@@ -520,6 +580,8 @@
       },
       {
         "name": "CLOVER",
+        "base_name": "CLOVER",
+        "setting": "",
         "paper_url": "https://arxiv.org/pdf/2409.09016",
         "pub_date": "2024-09",
         "is_opensource": true,
@@ -537,6 +599,8 @@
       },
       {
         "name": "RoboDual",
+        "base_name": "RoboDual",
+        "setting": "",
         "paper_url": "https://arxiv.org/pdf/2410.08001",
         "pub_date": "2024-01",
         "is_opensource": true,
@@ -554,6 +618,8 @@
       },
       {
         "name": "Vidman",
+        "base_name": "Vidman",
+        "setting": "",
         "paper_url": "https://arxiv.org/abs/2411.09153",
         "pub_date": "2024-11",
         "is_opensource": true,
@@ -571,6 +637,8 @@
       },
       {
         "name": "3D Diffuser Actor",
+        "base_name": "3D Diffuser Actor",
+        "setting": "",
         "paper_url": "https://arxiv.org/abs/2402.10885",
         "pub_date": "2024-02",
         "is_opensource": true,
@@ -588,6 +656,8 @@
       },
       {
         "name": "Moto",
+        "base_name": "Moto",
+        "setting": "",
         "paper_url": "https://arxiv.org/abs/2412.04445",
         "pub_date": "2024-12",
         "is_opensource": true,
@@ -605,6 +675,8 @@
       },
       {
         "name": "GR-1",
+        "base_name": "GR-1",
+        "setting": "",
         "paper_url": "https://arxiv.org/abs/2312.13139",
         "pub_date": "2023-12",
         "is_opensource": true,
@@ -622,6 +694,8 @@
       },
       {
         "name": "DeeR-VLA",
+        "base_name": "DeeR-VLA",
+        "setting": "",
         "paper_url": "https://arxiv.org/abs/2411.02359",
         "pub_date": "2024-11",
         "is_opensource": true,
@@ -638,7 +712,28 @@
         "rank": 21
       },
       {
+        "name": "SuSIE",
+        "base_name": "SuSIE",
+        "setting": "",
+        "paper_url": "https://arxiv.org/abs/2310.10639",
+        "pub_date": "2023-01",
+        "is_opensource": true,
+        "opensource_url": "https://github.com/kvablack/susie",
+        "is_standard": true,
+        "note": "",
+        "inst1": 0.87,
+        "inst2": 0.69,
+        "inst3": 0.49,
+        "inst4": 0.38,
+        "inst5": 0.26,
+        "avg_len": 2.69,
+        "source": "original",
+        "rank": 22
+      },
+      {
         "name": "RoboFlamingo",
+        "base_name": "RoboFlamingo",
+        "setting": "",
         "paper_url": "https://arxiv.org/abs/2311.01378",
         "pub_date": "2023-11",
         "is_opensource": true,
@@ -652,10 +747,12 @@
         "inst5": 0.235,
         "avg_len": 2.48,
         "source": "original",
-        "rank": 22
+        "rank": 23
       },
       {
         "name": "SPIL",
+        "base_name": "SPIL",
+        "setting": "",
         "paper_url": "https://arxiv.org/pdf/2305.19075",
         "pub_date": "2023-05",
         "is_opensource": true,
@@ -669,10 +766,31 @@
         "inst5": 0.08,
         "avg_len": 1.71,
         "source": "original",
-        "rank": 23
+        "rank": 24
+      },
+      {
+        "name": "MDT",
+        "base_name": "MDT",
+        "setting": "",
+        "paper_url": "https://arxiv.org/abs/2407.05996",
+        "pub_date": "2024-07",
+        "is_opensource": true,
+        "opensource_url": "https://github.com/intuitive-robots/mdt_policy",
+        "is_standard": true,
+        "note": "",
+        "inst1": 0.631,
+        "inst2": 0.429,
+        "inst3": 0.247,
+        "inst4": 0.151,
+        "inst5": 0.091,
+        "avg_len": 1.55,
+        "source": "from FLOWER & VPP",
+        "rank": 25
       },
       {
         "name": "RT-1",
+        "base_name": "RT-1",
+        "setting": "",
         "paper_url": "https://arxiv.org/abs/2212.06817",
         "pub_date": "2022-12",
         "is_opensource": true,
@@ -686,10 +804,12 @@
         "inst5": 0.013,
         "avg_len": 0.9,
         "source": "from VPP & RoboUniview & RoboDual & GR-1",
-        "rank": 24
+        "rank": 26
       },
       {
         "name": "HULC",
+        "base_name": "HULC",
+        "setting": "",
         "paper_url": "https://arxiv.org/abs/2204.06252",
         "pub_date": "2022-04",
         "is_opensource": true,
@@ -703,10 +823,12 @@
         "inst5": 0.011,
         "avg_len": 0.67,
         "source": "original",
-        "rank": 25
+        "rank": 27
       },
       {
         "name": "Diffusion Policy",
+        "base_name": "Diffusion Policy",
+        "setting": "",
         "paper_url": "https://arxiv.org/pdf/2303.04137",
         "pub_date": "2023-03",
         "is_opensource": true,
@@ -720,29 +842,14 @@
         "inst5": 0.0,
         "avg_len": 0.56,
         "source": "from UP-VLA",
-        "rank": 26
-      },
-      {
-        "name": "SuSIE",
-        "paper_url": "https://arxiv.org/abs/2310.10639",
-        "pub_date": "2023-01",
-        "is_opensource": true,
-        "opensource_url": "https://github.com/kvablack/susie",
-        "is_standard": true,
-        "note": "",
-        "inst1": 0.87,
-        "inst2": 0.69,
-        "inst3": 0.49,
-        "inst4": 0.38,
-        "inst5": 0.26,
-        "avg_len": null,
-        "source": "original",
-        "rank": 27
+        "rank": 28
       }
     ],
     "standard_closed": [
       {
         "name": "AVA-VLA",
+        "base_name": "AVA-VLA",
+        "setting": "",
         "paper_url": "https://arxiv.org/abs/2511.18960",
         "pub_date": "2025-11",
         "is_opensource": false,
@@ -760,6 +867,8 @@
       },
       {
         "name": "TriVLA",
+        "base_name": "TriVLA",
+        "setting": "",
         "paper_url": "https://arxiv.org/abs/2507.01424",
         "pub_date": "2025-07",
         "is_opensource": false,
@@ -777,6 +886,8 @@
       },
       {
         "name": "OE-VLA",
+        "base_name": "OE-VLA",
+        "setting": "",
         "paper_url": "https://arxiv.org/abs/2505.11214",
         "pub_date": "2025-05",
         "is_opensource": false,
@@ -793,24 +904,9 @@
         "rank": 3
       },
       {
-        "name": "MDT",
-        "paper_url": "https://arxiv.org/abs/2407.05996",
-        "pub_date": "2024-07",
-        "is_opensource": false,
-        "opensource_url": null,
-        "is_standard": true,
-        "note": "",
-        "inst1": 0.631,
-        "inst2": 0.429,
-        "inst3": 0.247,
-        "inst4": 0.151,
-        "inst5": 0.091,
-        "avg_len": 1.55,
-        "source": "from FLOWER & VPP",
-        "rank": 4
-      },
-      {
         "name": "UniPi",
+        "base_name": "UniPi",
+        "setting": "",
         "paper_url": "https://arxiv.org/abs/2302.00111",
         "pub_date": "2023-02",
         "is_opensource": false,
@@ -824,10 +920,12 @@
         "inst5": 0.04,
         "avg_len": 0.92,
         "source": "from VPP & SuSIE",
-        "rank": 5
+        "rank": 4
       },
       {
         "name": "MCIL",
+        "base_name": "MCIL",
+        "setting": "",
         "paper_url": "https://arxiv.org/abs/2005.07648",
         "pub_date": "2020-05",
         "is_opensource": false,
@@ -841,12 +939,14 @@
         "inst5": 0.0,
         "avg_len": 0.31,
         "source": "from RoboDual",
-        "rank": 6
+        "rank": 5
       }
     ],
     "non_standard": [
       {
         "name": "RationalVLA",
+        "base_name": "RationalVLA",
+        "setting": "",
         "paper_url": "https://arxiv.org/abs/2506.10826",
         "pub_date": "2025-06",
         "is_opensource": false,
@@ -864,6 +964,8 @@
       },
       {
         "name": "ReinboT",
+        "base_name": "ReinboT",
+        "setting": "",
         "paper_url": "https://arxiv.org/pdf/2505.07395",
         "pub_date": "2025-05",
         "is_opensource": false,
@@ -881,6 +983,8 @@
       },
       {
         "name": "LCBC",
+        "base_name": "LCBC",
+        "setting": "",
         "paper_url": "https://arxiv.org/pdf/2308.12952",
         "pub_date": "2023-08",
         "is_opensource": true,
@@ -902,6 +1006,8 @@
     "standard_opensource": [
       {
         "name": "Flower VLA",
+        "base_name": "Flower VLA",
+        "setting": "",
         "paper_url": "https://arxiv.org/pdf/2509.04996",
         "pub_date": "2025-09",
         "is_opensource": true,
@@ -919,6 +1025,8 @@
       },
       {
         "name": "RoboUniview",
+        "base_name": "RoboUniview",
+        "setting": "",
         "paper_url": "https://arxiv.org/abs/2406.18977",
         "pub_date": "2024-06",
         "is_opensource": true,
@@ -935,7 +1043,28 @@
         "rank": 2
       },
       {
+        "name": "MDT",
+        "base_name": "MDT",
+        "setting": "",
+        "paper_url": "https://arxiv.org/abs/2407.05996",
+        "pub_date": "2024-07",
+        "is_opensource": true,
+        "opensource_url": "https://github.com/intuitive-robots/mdt_policy",
+        "is_standard": true,
+        "note": "",
+        "inst1": 0.937,
+        "inst2": 0.845,
+        "inst3": 0.741,
+        "inst4": 0.644,
+        "inst5": 0.556,
+        "avg_len": 3.72,
+        "source": "original",
+        "rank": 3
+      },
+      {
         "name": "DaDu-Corki-SW",
+        "base_name": "DaDu-Corki-SW",
+        "setting": "",
         "paper_url": "https://arxiv.org/abs/2407.04292",
         "pub_date": "2024-07",
         "is_opensource": true,
@@ -949,10 +1078,12 @@
         "inst5": 0.458,
         "avg_len": 3.42,
         "source": "original",
-        "rank": 3
+        "rank": 4
       },
       {
         "name": "TaKSIE",
+        "base_name": "TaKSIE",
+        "setting": "",
         "paper_url": "https://arxiv.org/pdf/2410.11013",
         "pub_date": "2024-01",
         "is_opensource": true,
@@ -966,10 +1097,12 @@
         "inst5": 0.408,
         "avg_len": 3.18,
         "source": "original",
-        "rank": 4
+        "rank": 5
       },
       {
         "name": "MT-ACT",
+        "base_name": "MT-ACT",
+        "setting": "",
         "paper_url": "https://arxiv.org/pdf/2309.01918",
         "pub_date": "2023-09",
         "is_opensource": true,
@@ -983,10 +1116,12 @@
         "inst5": 0.353,
         "avg_len": 2.98,
         "source": "from MDT",
-        "rank": 5
+        "rank": 6
       },
       {
         "name": "Distill-D",
+        "base_name": "Distill-D",
+        "setting": "",
         "paper_url": "https://arxiv.org/abs/2307.14535",
         "pub_date": "2023-07",
         "is_opensource": true,
@@ -1000,10 +1135,12 @@
         "inst5": 0.356,
         "avg_len": 2.97,
         "source": "from MDT",
-        "rank": 6
+        "rank": 7
       },
       {
         "name": "LCD",
+        "base_name": "LCD",
+        "setting": "",
         "paper_url": "https://arxiv.org/pdf/2210.15629",
         "pub_date": "2022-01",
         "is_opensource": true,
@@ -1017,10 +1154,12 @@
         "inst5": 0.322,
         "avg_len": 2.88,
         "source": "original",
-        "rank": 7
+        "rank": 8
       },
       {
         "name": "SPIL",
+        "base_name": "SPIL",
+        "setting": "",
         "paper_url": "https://arxiv.org/pdf/2305.19075",
         "pub_date": "2023-05",
         "is_opensource": true,
@@ -1034,10 +1173,12 @@
         "inst5": 0.286,
         "avg_len": 2.67,
         "source": "original",
-        "rank": 8
+        "rank": 9
       },
       {
         "name": "HULC",
+        "base_name": "HULC",
+        "setting": "",
         "paper_url": "https://arxiv.org/abs/2204.06252",
         "pub_date": "2022-04",
         "is_opensource": true,
@@ -1051,10 +1192,12 @@
         "inst5": 0.283,
         "avg_len": 2.64,
         "source": "original",
-        "rank": 9
+        "rank": 10
       },
       {
         "name": "RoboFlamingo",
+        "base_name": "RoboFlamingo",
+        "setting": "",
         "paper_url": "https://arxiv.org/abs/2311.01378",
         "pub_date": "2023-11",
         "is_opensource": true,
@@ -1068,29 +1211,14 @@
         "inst5": 0.192,
         "avg_len": 2.12,
         "source": "original",
-        "rank": 10
+        "rank": 11
       }
     ],
     "standard_closed": [
       {
-        "name": "MDT",
-        "paper_url": "https://arxiv.org/abs/2407.05996",
-        "pub_date": "2024-07",
-        "is_opensource": false,
-        "opensource_url": null,
-        "is_standard": true,
-        "note": "",
-        "inst1": 0.937,
-        "inst2": 0.845,
-        "inst3": 0.741,
-        "inst4": 0.644,
-        "inst5": 0.556,
-        "avg_len": 3.72,
-        "source": "original",
-        "rank": 1
-      },
-      {
         "name": "MCIL",
+        "base_name": "MCIL",
+        "setting": "",
         "paper_url": "https://arxiv.org/abs/2005.07648",
         "pub_date": "2020-05",
         "is_opensource": false,
@@ -1104,7 +1232,7 @@
         "inst5": 0.093,
         "avg_len": 1.82,
         "source": "from HULC",
-        "rank": 2
+        "rank": 1
       }
     ],
     "non_standard": []

@@ -99,6 +99,11 @@ export const translations = {
                 description: 'LIBERO Plus is an extended benchmark testing robustness across 7 perturbation dimensions: Camera, Robot, Language, Light, Background, Noise, and Layout.',
                 metric: 'Average Success Rate (%)',
             },
+            robochallenge: {
+                name: 'RoboChallenge',
+                description: 'RoboChallenge is a real-world robotic manipulation benchmark featuring challenging tasks in diverse environments.',
+                metric: 'Score',
+            },
         },
         // Methodology 页面
         methodology: {
@@ -213,6 +218,11 @@ export const translations = {
                 name: 'LIBERO Plus',
                 description: 'LIBERO Plus 是一个扩展基准测试，测试模型在 7 个扰动维度上的鲁棒性：相机、机器人、语言、光照、背景、噪声和布局。',
                 metric: '总成功率 (%)',
+            },
+            robochallenge: {
+                name: 'RoboChallenge',
+                description: 'RoboChallenge 是一个真实世界机器人操作基准测试，包含多种环境中的挑战性任务。',
+                metric: '分数',
             },
         },
         // Methodology 页面
