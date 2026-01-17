@@ -138,7 +138,8 @@
       "source": "original",
       "is_standard": true,
       "note": "",
-      "rank": 7
+      "rank": 7,
+      "policy_setting": 2
     },
     {
       "name": "CronusVLA",
