@@ -75,6 +75,8 @@ export default function LiberoPage() {
             policyDescSingle: 'Train one set of weights on all training data, then evaluate that same model on every test suite.',
             policyDescMultiple: 'Train separate weights for each of the four suites, then evaluate each model on its corresponding suite.',
             policyDescUnknown: 'The paper does not clearly specify the policy setting.',
+            policySuitesNote: 'Note: LIBERO has multiple suites. Some models use one shared weight set for all suites, while others train four separate weights and evaluate each on its corresponding suite.',
+            policyDescLink: 'Jump to policy description',
         },
         zh: {
             title: 'LIBERO 基准测试榜单',
@@ -108,6 +110,8 @@ export default function LiberoPage() {
             policyDescSingle: '用全部训练数据训练一套权重，再用这套模型在所有测试套件上评测。',
             policyDescMultiple: '四个测试套件各自训练一套权重，并在对应套件上评测。',
             policyDescUnknown: '论文未明确说明权重设置。',
+            policySuitesNote: '补充：LIBERO 包含多个测试套件。有的模型用一套权重评测所有套件，有的模型会为四个套件分别训练权重并在对应套件上测试。',
+            policyDescLink: '查看权重说明',
         }
     };
 
@@ -503,6 +507,11 @@ export default function LiberoPage() {
                         </button>
                     </div>
                 </div>
+                <div className="flex justify-end mb-2">
+                    <a href="#policy-description" className="text-sm text-blue-600 hover:text-blue-800 underline">
+                        {t.policyDescLink}
+                    </a>
+                </div>
                 <p className="text-sm text-slate-500 mb-4">{t.clickToExpand}</p>
 
                 {/* Main Table */}
@@ -521,15 +530,15 @@ export default function LiberoPage() {
                         <div><span className="font-medium">Average:</span> Mean success rate across suites</div>
                     </div>
                 </div>
-                <div className="mt-4 p-4 bg-white rounded-lg border border-slate-200">
+                <div id="policy-description" className="mt-4 p-4 bg-white rounded-lg border border-slate-200">
                     <h3 className="text-sm font-semibold text-slate-700 mb-2">{t.policyDescTitle}</h3>
                     <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-4 text-sm text-slate-600">
                         <div><span className="font-medium">Single weight:</span> {t.policyDescSingle}</div>
                         <div><span className="font-medium">Multiple weight:</span> {t.policyDescMultiple}</div>
                         <div><span className="font-medium">Unknown:</span> {t.policyDescUnknown}</div>
                     </div>
+                    <p className="mt-3 text-sm text-slate-500">{t.policySuitesNote}</p>
                 </div>
-
                 {/* Appendix Section - 暂时注释掉，可能在未来更新中启用
                 {appendixData.length > 0 && (
                     <div className="mt-12">
