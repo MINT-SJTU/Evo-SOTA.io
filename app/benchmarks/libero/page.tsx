@@ -11,6 +11,7 @@ interface LiberoModel {
     pub_date: string | null;
     is_opensource: boolean;
     opensource_url: string | null;
+    policy_setting?: number;
     spatial: number | null;
     object: number | null;
     goal: number | null;
@@ -39,6 +40,7 @@ export default function LiberoPage() {
     const [showAppendix, setShowAppendix] = useState(true);
     const [sortBy, setSortBy] = useState<'rank' | 'average' | 'date'>('rank');
     const [sortOrder, setSortOrder] = useState<'asc' | 'desc'>('asc');
+    const [policyFilter, setPolicyFilter] = useState<'all' | '0' | '1' | '2'>('all');
 
     const texts = {
         en: {
@@ -64,6 +66,17 @@ export default function LiberoPage() {
             standardModels: 'Standard Evaluation Models',
             opensource: 'Open Source',
             note: 'Note',
+            policyFilterLabel: 'Training Policy',
+            policyAll: 'All',
+            policy0: 'Unknown',
+            policy1: 'One Policy for All 4 Suites',
+            policy2: 'One Policy per Suite',
+            policyDescTitle: 'Policy Setting Description',
+            policyDescSingle: 'Train one set of weights on all training data, then evaluate that same model on every test suite.',
+            policyDescMultiple: 'Train separate weights for each of the four suites, then evaluate each model on its corresponding suite.',
+            policyDescUnknown: 'The paper does not clearly specify the policy setting.',
+            policySuitesNote: 'Note: LIBERO has multiple suites. Some models use one shared weight set for all suites, while others train four separate weights and evaluate each on its corresponding suite. Typically, multi-policy settings yield better performance.',
+            policyDescLink: 'Jump to policy setting description',
         },
         zh: {
             title: 'LIBERO 基准测试榜单',
@@ -88,6 +101,17 @@ export default function LiberoPage() {
             standardModels: '标准测试模型',
             opensource: '开源',
             note: '备注',
+            policyFilterLabel: '模型训练方法',
+            policyAll: '全部',
+            policy0: '未知',
+            policy1: '单套权重',
+            policy2: '多套权重',
+            policyDescTitle: '权重说明',
+            policyDescSingle: '用全部训练数据训练一套权重，再用这套模型在所有测试套件上评测。',
+            policyDescMultiple: '四个测试套件各自训练一套权重，并在对应套件上评测。',
+            policyDescUnknown: '论文未明确说明权重设置。',
+            policySuitesNote: '补充：LIBERO 包含多个测试套件。有的模型用一套权重评测所有套件，有的模型会为四个套件分别训练权重并在对应套件上测试。通常多套权重的测试方案表现会更好一些。',
+            policyDescLink: '查看权重说明',
         }
     };
 
@@ -141,6 +165,11 @@ export default function LiberoPage() {
         });
     };
 
+    const applyPolicyFilter = (models: LiberoModel[]) => {
+        if (policyFilter === 'all') return models;
+        return models.filter((model) => String(model.policy_setting ?? 0) === policyFilter);
+    };
+
     // 合并标准测试数据
     const getDisplayData = () => {
         if (!data) return [];
@@ -148,13 +177,14 @@ export default function LiberoPage() {
         if (showClosedSource) {
             models = [...models, ...data.standard_closed];
         }
+        models = applyPolicyFilter(models);
         // 重新排名
         models.sort((a, b) => (b.average || 0) - (a.average || 0));
         return models.map((m, i) => ({ ...m, rank: i + 1 }));
     };
 
     const displayData = sortData(getDisplayData());
-    const appendixData = data ? sortData(data.non_standard) : [];
+    const appendixData = data ? sortData(applyPolicyFilter(data.non_standard)) : [];
 
     const formatValue = (value: number | null): string => {
         if (value === null) return '-';
@@ -437,8 +467,52 @@ export default function LiberoPage() {
                             {showClosedSource ? t.showAllModels : t.openSourceOnly}
                         </button>
                     </div>
-                    <p className="text-sm text-slate-500">{t.clickToExpand}</p>
+
+                    <div className="flex items-center gap-2 bg-white rounded-lg p-1 border border-slate-200">
+                        <button
+                            onClick={() => setPolicyFilter('all')}
+                            className={`px-3 py-1.5 rounded-md text-sm font-medium transition-all ${policyFilter === 'all'
+                                ? 'bg-blue-600 text-white'
+                                : 'text-slate-600 hover:bg-slate-100'
+                                }`}
+                        >
+                            {t.policyAll}
+                        </button>
+                        <button
+                            onClick={() => setPolicyFilter('1')}
+                            className={`px-3 py-1.5 rounded-md text-sm font-medium transition-all ${policyFilter === '1'
+                                ? 'bg-purple-600 text-white'
+                                : 'text-slate-600 hover:bg-slate-100'
+                                }`}
+                        >
+                            {t.policy1}
+                        </button>
+                        <button
+                            onClick={() => setPolicyFilter('2')}
+                            className={`px-3 py-1.5 rounded-md text-sm font-medium transition-all ${policyFilter === '2'
+                                ? 'bg-green-600 text-white'
+                                : 'text-slate-600 hover:bg-slate-100'
+                                }`}
+                        >
+                            {t.policy2}
+                        </button>
+                        <button
+                            onClick={() => setPolicyFilter('0')}
+                            className={`px-3 py-1.5 rounded-md text-sm font-medium transition-all ${policyFilter === '0'
+                                ? 'bg-slate-600 text-white'
+                                : 'text-slate-600 hover:bg-slate-100'
+                                }`}
+                        >
+                            {t.policy0}
+                        </button>
+                    </div>
                 </div>
+                <div className="flex justify-end mb-2">
+                    <a href="#policy-description" className="text-sm text-blue-600 hover:text-blue-800 underline">
+                        {t.policyDescLink}
+                    </a>
+                </div>
+                <p className="text-sm text-slate-500 mb-4">{t.clickToExpand}</p>
 
                 {/* Main Table */}
                 <h2 className="text-xl font-bold text-slate-800 mb-4">{t.standardModels}</h2>
@@ -456,7 +530,15 @@ export default function LiberoPage() {
                         <div><span className="font-medium">Average:</span> Mean success rate across suites</div>
                     </div>
                 </div>
-
+                <div id="policy-description" className="mt-4 p-4 bg-white rounded-lg border border-slate-200">
+                    <h3 className="text-sm font-semibold text-slate-700 mb-2">{t.policyDescTitle}</h3>
+                    <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-4 text-sm text-slate-600">
+                        <div><span className="font-medium">One Policy for All 4 Suites:</span> {t.policyDescSingle}</div>
+                        <div><span className="font-medium">One Policy per Suite:</span> {t.policyDescMultiple}</div>
+                        <div><span className="font-medium">Unknown:</span> {t.policyDescUnknown}</div>
+                    </div>
+                    <p className="mt-3 text-sm text-slate-500">{t.policySuitesNote}</p>
+                </div>
                 {/* Appendix Section - 暂时注释掉，可能在未来更新中启用
                 {appendixData.length > 0 && (
                     <div className="mt-12">

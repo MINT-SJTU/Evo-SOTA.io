@@ -8,12 +8,13 @@ A comprehensive leaderboard tracking the state-of-the-art (SOTA) performance of 
 
 ## 📊 Supported Benchmarks
 
-| Benchmark       | Description                                                                                       | Primary Metric                |
-| --------------- | ------------------------------------------------------------------------------------------------- | ----------------------------- |
-| **LIBERO**      | Lifelong robot learning with 130 language-conditioned manipulation tasks                          | Average Success Rate (%)      |
-| **LIBERO Plus** | Extended LIBERO with 6 robustness categories (camera, robot, language, light, background, layout) | Average Success Rate (%)      |
-| **CALVIN**      | Long-horizon language-conditioned tasks (ABC→D, ABCD→D, D→D settings)                             | Average Completed Tasks (0-5) |
-| **Meta-World**  | Multi-task learning with 50 distinct robotic manipulation tasks                                   | Average Success Rate (%)      |
+| Benchmark         | Description                                                                                       | Primary Metric                |
+| ----------------- | ------------------------------------------------------------------------------------------------- | ----------------------------- |
+| **LIBERO**        | Lifelong robot learning with 130 language-conditioned manipulation tasks                          | Average Success Rate (%)      |
+| **LIBERO Plus**   | Extended LIBERO with 6 robustness categories (camera, robot, language, light, background, layout) | Average Success Rate (%)      |
+| **Meta-World**    | Multi-task learning with 50 distinct robotic manipulation tasks                                   | Average Success Rate (%)      |
+| **CALVIN**        | Long-horizon language-conditioned tasks (ABC→D, ABCD→D, D→D settings)                             | Average Completed Tasks (0-5) |
+| **RoboChallenge** | Real-world robotic manipulation benchmark with diverse household tasks                            | Score                         |
 
 ## ✨ Features
 
@@ -71,13 +72,15 @@ Evo-SOTA.io/
 │       ├── libero/
 │       ├── liberoplus/
 │       ├── calvin/
-│       └── metaworld/
+│       ├── metaworld/
+│       └── robochallenge/
 ├── components/            # React components
 ├── data/                  # JSON data files & processing scripts
 │   ├── libero.json
 │   ├── liberoPlus.json
 │   ├── calvin.json
 │   ├── metaworld.json
+│   ├── robochallenge.json
 │   └── DataProcess.py     # CSV to JSON converter
 ├── lib/                   # Utilities & i18n
 └── public/               # Static assets
@@ -112,7 +115,7 @@ This project is open source and available under the [MIT License](LICENSE).
 ## 🙏 Acknowledgments
 
 - Thanks to all researchers who contributed to the VLA field
-- Benchmark creators: LIBERO, LIBERO Plus, CALVIN, Meta-World teams
+- Benchmark creators: LIBERO, LIBERO Plus, CALVIN, Meta-World, RoboChallenge teams
 - [https://github.com/EvanNotFound/vercount](https://github.com/EvanNotFound/vercount) for visitor statistics
 
 ---

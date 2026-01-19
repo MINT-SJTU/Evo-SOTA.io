@@ -1,8 +1,8 @@
 {
   "libero": {
-    "total_models": 62,
-    "standard_opensource_count": 36,
-    "standard_closed_count": 11,
+    "total_models": 65,
+    "standard_opensource_count": 38,
+    "standard_closed_count": 12,
     "non_standard_count": 15,
     "primary_metric": "Average Success Rate (%)",
     "top_5": [
@@ -35,12 +35,9 @@
   },
   "libero_plus": {
     "total_models": 10,
-    "standard_opensource_count": 9,
-    "standard_opensource_mixsft_count": 1,
+    "standard_opensource_count": 10,
     "standard_closed_count": 0,
-    "standard_closed_mixsft_count": 0,
     "non_standard_count": 0,
-    "non_standard_mixsft_count": 0,
     "primary_metric": "Total Success Rate (%)",
     "top_5": [
       {
@@ -54,7 +51,7 @@
         "rank": 2
       },
       {
-        "name": "OpenVLA-OFT",
+        "name": "OpenVLA-OFT (mix-sft)",
         "score": 67.9,
         "rank": 3
       },
@@ -64,7 +61,7 @@
         "rank": 4
       },
       {
-        "name": "OpenVLA-OFT",
+        "name": "OpenVLA-OFT (without wrist input)",
         "score": 55.8,
         "rank": 5
       }
@@ -104,10 +101,44 @@
       }
     ]
   },
+  "robochallenge": {
+    "total_models": 8,
+    "standard_opensource_count": 8,
+    "standard_closed_count": 0,
+    "non_standard_count": 0,
+    "primary_metric": "Score",
+    "top_5": [
+      {
+        "name": "Spirit v1.5",
+        "score": 66.09,
+        "rank": 1
+      },
+      {
+        "name": "pi0.5",
+        "score": 61.84,
+        "rank": 2
+      },
+      {
+        "name": "wall-oss-v0.1",
+        "score": 55.3,
+        "rank": 3
+      },
+      {
+        "name": "pi0",
+        "score": 46.41,
+        "rank": 4
+      },
+      {
+        "name": "pi0.5 (generalist)",
+        "score": 31.27,
+        "rank": 5
+      }
+    ]
+  },
   "calvin": {
     "total_models": 36,
-    "standard_opensource_count": 27,
-    "standard_closed_count": 6,
+    "standard_opensource_count": 28,
+    "standard_closed_count": 5,
     "non_standard_count": 3,
     "primary_metric": "Average Length (Avg. Len.)",
     "description": "ABC-D Setting (Default)",
@@ -133,7 +164,7 @@
         "rank": 4
       },
       {
-        "name": "UniVLA",
+        "name": "UnifiedVLA",
         "score": 4.41,
         "rank": 5
       }

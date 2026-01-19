@@ -12,7 +12,7 @@ export default function MethodologyPage() {
             dataSource: 'Data Sources',
             dataSourceDesc: 'All benchmark results are collected from published papers and official repositories. We do not re-run experiments.',
             rankingRules: 'Ranking Rules',
-            rankingRulesDesc: 'Models are ranked by their primary metric on each benchmark. For LIBERO and Meta-World, this is the Average Success Rate. For CALVIN, this is the Average Length (Avg. Len.) on the ABC→D setting.',
+            rankingRulesDesc: 'Models are ranked by their primary metric on each benchmark. For LIBERO and Meta-World, this is the Average Success Rate. For CALVIN, this is the Average Length (Avg. Len.) on the ABC→D setting. For RoboChallenge, this is the Score.',
             limitations: 'Known Limitations',
             limitationsDesc: 'Results across different benchmarks are not directly comparable. Different papers may use slightly different evaluation protocols.',
             disclaimer: 'Disclaimer',
@@ -29,7 +29,7 @@ export default function MethodologyPage() {
             starUs: 'Support This Project',
             starUsDesc: 'If you find this leaderboard helpful for your research, please consider giving us a star on GitHub!',
             dataNotice: 'Data Notice',
-            dataNoticeDesc1: 'Data collection deadline: December 29, 2025.',
+            dataNoticeDesc1: 'Data notice last updated: Jan 17, 2026.',
             dataNoticeDesc2: 'If you find any errors or omissions, please let us know by creating an issue on GitHub or contacting us via email: business@evomind-tech.com',
             contactUs: 'Contact Us',
             contactUsDesc: 'Found errors or want to submit your model? Reach out via GitHub Issue, email or Wechat group!',
@@ -41,7 +41,7 @@ export default function MethodologyPage() {
             dataSource: '数据来源',
             dataSourceDesc: '所有基准测试结果均来自已发表的论文和官方代码库。我们不重新运行实验。',
             rankingRules: '排名规则',
-            rankingRulesDesc: '模型根据每个基准测试的主要指标进行排名。对于 LIBERO 和 Meta-World，主要指标是平均成功率。对于 CALVIN，主要指标是 ABC→D 设置下的平均长度 (Avg. Len.)。',
+            rankingRulesDesc: '模型根据每个基准测试的主要指标进行排名。对于 LIBERO 和 Meta-World，主要指标是平均成功率。对于 CALVIN，主要指标是 ABC→D 设置下的平均长度 (Avg. Len.)。对于 RoboChallenge，主要指标是分数 (Score)。',
             limitations: '已知局限性',
             limitationsDesc: '不同基准测试的结果不能直接比较。不同论文可能使用略有不同的评估协议。',
             disclaimer: '免责声明',
@@ -58,7 +58,7 @@ export default function MethodologyPage() {
             starUs: '支持本项目',
             starUsDesc: '如果这个排行榜对您的研究有帮助，请考虑在 GitHub 上给我们一个 Star！',
             dataNotice: '数据说明',
-            dataNoticeDesc1: '数据收集截止日期：2025年12月29日。',
+            dataNoticeDesc1: '数据说明最后修改时间：2026年1月17日。',
             dataNoticeDesc2: '如有错误或遗漏，敬请谅解。您可以在 GitHub 的 Issue 中提出，或通过邮件 business@evomind-tech.com 联系我们，我们会及时改进。',
             contactUs: '联系我们',
             contactUsDesc: '发现错误或想提交您的模型？请通过 GitHub Issue，邮件或微信群联系我们！',
@@ -296,7 +296,17 @@ export default function MethodologyPage() {
                     <h2 className="text-2xl font-bold text-slate-800 mb-6 text-center">
                         Supported Benchmarks
                     </h2>
-                    <div className="grid md:grid-cols-4 gap-4">
+                    <div className="grid md:grid-cols-5 gap-4">
+                        <a
+                            href="https://github.com/sylvestf/LIBERO-plus"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="bg-orange-50 border border-orange-200 rounded-lg p-4 hover:shadow-md transition-shadow"
+                        >
+                            <h3 className="font-semibold text-orange-800">LIBERO Plus</h3>
+                            <p className="text-sm text-orange-600 mt-1">Average Success Rate (%)</p>
+                            <p className="text-xs text-orange-500 mt-2">Extended LIBERO with 6 categories</p>
+                        </a>
                         <a
                             href="https://github.com/Lifelong-Robot-Learning/LIBERO"
                             target="_blank"
@@ -308,14 +318,14 @@ export default function MethodologyPage() {
                             <p className="text-xs text-blue-500 mt-2">130 language-conditioned tasks</p>
                         </a>
                         <a
-                            href="https://github.com/sylvestf/LIBERO-plus"
+                            href="https://github.com/Farama-Foundation/Metaworld"
                             target="_blank"
                             rel="noopener noreferrer"
-                            className="bg-orange-50 border border-orange-200 rounded-lg p-4 hover:shadow-md transition-shadow"
+                            className="bg-purple-50 border border-purple-200 rounded-lg p-4 hover:shadow-md transition-shadow"
                         >
-                            <h3 className="font-semibold text-orange-800">LIBERO Plus</h3>
-                            <p className="text-sm text-orange-600 mt-1">Average Success Rate (%)</p>
-                            <p className="text-xs text-orange-500 mt-2">Extended LIBERO with 6 categories</p>
+                            <h3 className="font-semibold text-purple-800">Meta-World</h3>
+                            <p className="text-sm text-purple-600 mt-1">Average Success Rate (%)</p>
+                            <p className="text-xs text-purple-500 mt-2">50 robotic manipulation tasks</p>
                         </a>
                         <a
                             href="https://github.com/mees/calvin"
@@ -328,14 +338,14 @@ export default function MethodologyPage() {
                             <p className="text-xs text-emerald-500 mt-2">Long-horizon manipulation</p>
                         </a>
                         <a
-                            href="https://github.com/Farama-Foundation/Metaworld"
+                            href="https://robochallenge.ai/home"
                             target="_blank"
                             rel="noopener noreferrer"
-                            className="bg-purple-50 border border-purple-200 rounded-lg p-4 hover:shadow-md transition-shadow"
+                            className="bg-teal-50 border border-teal-200 rounded-lg p-4 hover:shadow-md transition-shadow"
                         >
-                            <h3 className="font-semibold text-purple-800">Meta-World</h3>
-                            <p className="text-sm text-purple-600 mt-1">Average Success Rate (%)</p>
-                            <p className="text-xs text-purple-500 mt-2">50 robotic manipulation tasks</p>
+                            <h3 className="font-semibold text-teal-800">RoboChallenge</h3>
+                            <p className="text-sm text-teal-600 mt-1">Score</p>
+                            <p className="text-xs text-teal-500 mt-2">Real-world robotic manipulation</p>
                         </a>
                     </div>
                 </div>
