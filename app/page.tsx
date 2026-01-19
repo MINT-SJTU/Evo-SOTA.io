@@ -97,6 +97,39 @@ export default function Home() {
         loadData();
     }, []);
 
+    // 格式化新闻内容：榜单用粗体+蓝色，模型用斜体+紫色
+    const formatNewsContent = (content: string) => {
+        // 榜单列表（需要粗体和蓝色）
+        const benchmarks = ['RoboChallenge', 'LIBERO Plus', 'LIBERO', 'Meta-World', 'CALVIN', 'Libero Plus', 'Libero', 'Calvin'];
+        // 模型列表（需要斜体和紫色）
+        const models = [
+            'DeepThinkVLA', 'Dadu-Corki', 'RoboTron Mani', 'CronusVLA', 'InstructVLA', 'InternVLA-M1',
+            'OpenVLA', 'VLA', 'Pi0', 'RIPT'
+        ];
+
+        let formattedContent = content;
+
+        // 先处理榜单
+        benchmarks.forEach(benchmark => {
+            const regex = new RegExp(`(${benchmark})`, 'g');
+            formattedContent = formattedContent.replace(
+                regex,
+                '<span class="font-bold text-amber-700">$1</span>'
+            );
+        });
+
+        // 再处理模型
+        models.forEach(model => {
+            const regex = new RegExp(`(${model})`, 'g');
+            formattedContent = formattedContent.replace(
+                regex,
+                '<span class="italic text-amber-700">$1</span>'
+            );
+        });
+
+        return formattedContent;
+    };
+
     // 构建 benchmarks 数据 - 顺序: libero plus, libero, metaworld, calvin, robochallenge
     // 第一行: libero, metaworld, calvin
     const firstRowBenchmarks = [
@@ -262,14 +295,18 @@ export default function Home() {
                             📢 {locale === 'zh' ? '最近更新' : 'Latest Updates'}
                         </span>
                         <div className="flex flex-col gap-1 text-sm">
-                            {newsData.slice(0, 5).map((news, index) => (
-                                <div key={index} className="text-amber-900">
-                                    <span className="font-medium text-amber-700">
-                                        {news.date.slice(5).replace('-', '-')}
-                                    </span>{' '}
-                                    {locale === 'zh' ? news.content_zh : news.content_en}
-                                </div>
-                            ))}
+                            {newsData.slice(0, 5).map((news, index) => {
+                                const content = locale === 'zh' ? news.content_zh : news.content_en;
+                                const formattedContent = formatNewsContent(content);
+                                return (
+                                    <div key={index} className="text-amber-900">
+                                        <span className="font-medium text-amber-700">
+                                            {news.date.replace('-', '-')}
+                                        </span>{' '}
+                                        <span dangerouslySetInnerHTML={{ __html: formattedContent }} />
+                                    </div>
+                                );
+                            })}
                         </div>
                     </div>
                 </div>

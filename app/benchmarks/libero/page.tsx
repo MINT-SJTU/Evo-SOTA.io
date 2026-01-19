@@ -69,14 +69,14 @@ export default function LiberoPage() {
             policyFilterLabel: 'Training Policy',
             policyAll: 'All',
             policy0: 'Unknown',
-            policy1: 'Single Weight',
-            policy2: 'Multiple Weights',
-            policyDescTitle: 'Policy Description',
+            policy1: 'One Policy for All 4 Suites',
+            policy2: 'One Policy per Suite',
+            policyDescTitle: 'Policy Setting Description',
             policyDescSingle: 'Train one set of weights on all training data, then evaluate that same model on every test suite.',
             policyDescMultiple: 'Train separate weights for each of the four suites, then evaluate each model on its corresponding suite.',
             policyDescUnknown: 'The paper does not clearly specify the policy setting.',
-            policySuitesNote: 'Note: LIBERO has multiple suites. Some models use one shared weight set for all suites, while others train four separate weights and evaluate each on its corresponding suite.',
-            policyDescLink: 'Jump to policy description',
+            policySuitesNote: 'Note: LIBERO has multiple suites. Some models use one shared weight set for all suites, while others train four separate weights and evaluate each on its corresponding suite. Typically, multi-policy settings yield better performance.',
+            policyDescLink: 'Jump to policy setting description',
         },
         zh: {
             title: 'LIBERO 基准测试榜单',
@@ -110,7 +110,7 @@ export default function LiberoPage() {
             policyDescSingle: '用全部训练数据训练一套权重，再用这套模型在所有测试套件上评测。',
             policyDescMultiple: '四个测试套件各自训练一套权重，并在对应套件上评测。',
             policyDescUnknown: '论文未明确说明权重设置。',
-            policySuitesNote: '补充：LIBERO 包含多个测试套件。有的模型用一套权重评测所有套件，有的模型会为四个套件分别训练权重并在对应套件上测试。',
+            policySuitesNote: '补充：LIBERO 包含多个测试套件。有的模型用一套权重评测所有套件，有的模型会为四个套件分别训练权重并在对应套件上测试。通常多套权重的测试方案表现会更好一些。',
             policyDescLink: '查看权重说明',
         }
     };
@@ -203,196 +203,196 @@ export default function LiberoPage() {
             <div className="overflow-x-auto">
                 <table className="w-full">
                     <thead>
-                    <tr className={`${isAppendix ? 'bg-amber-50' : 'bg-slate-50'} border-b border-slate-200`}>
-                        <th
-                            className="px-4 py-3 text-left text-sm font-semibold text-slate-700 cursor-pointer hover:bg-slate-100"
-                            onClick={() => handleSort('rank')}
-                        >
-                            <div className="flex items-center gap-1">
-                                {t.rank}
-                                {sortBy === 'rank' && (
-                                    <span className="text-blue-600">{sortOrder === 'asc' ? '↑' : '↓'}</span>
-                                )}
-                            </div>
-                        </th>
-                        <th className="px-4 py-3 text-left text-sm font-semibold text-slate-700">
-                            {t.model}
-                        </th>
-                        <th
-                            className="px-4 py-3 text-left text-sm font-semibold text-slate-700 cursor-pointer hover:bg-slate-100"
-                            onClick={() => handleSort('average')}
-                        >
-                            <div className="flex items-center gap-1">
-                                Average
-                                {sortBy === 'average' && (
-                                    <span className="text-blue-600">{sortOrder === 'desc' ? '↓' : '↑'}</span>
-                                )}
-                            </div>
-                        </th>
-                        {showAllMetrics && (
-                            <>
-                                <th className="px-4 py-3 text-left text-sm font-semibold text-slate-700">Spatial</th>
-                                <th className="px-4 py-3 text-left text-sm font-semibold text-slate-700">Object</th>
-                                <th className="px-4 py-3 text-left text-sm font-semibold text-slate-700">Goal</th>
-                                <th className="px-4 py-3 text-left text-sm font-semibold text-slate-700">Long</th>
-                                <th className="px-4 py-3 text-left text-sm font-semibold text-slate-700">LIBERO-90</th>
-                            </>
-                        )}
-                        <th
-                            className="px-4 py-3 text-left text-sm font-semibold text-slate-700 cursor-pointer hover:bg-slate-100"
-                            onClick={() => handleSort('date')}
-                        >
-                            <div className="flex items-center gap-1">
-                                {t.date}
-                                {sortBy === 'date' && (
-                                    <span className="text-blue-600">{sortOrder === 'desc' ? '↓' : '↑'}</span>
-                                )}
-                            </div>
-                        </th>
-                        <th className="px-4 py-3 text-left text-sm font-semibold text-slate-700">{t.paper}</th>
-                    </tr>
+                        <tr className={`${isAppendix ? 'bg-amber-50' : 'bg-slate-50'} border-b border-slate-200`}>
+                            <th
+                                className="px-4 py-3 text-left text-sm font-semibold text-slate-700 cursor-pointer hover:bg-slate-100"
+                                onClick={() => handleSort('rank')}
+                            >
+                                <div className="flex items-center gap-1">
+                                    {t.rank}
+                                    {sortBy === 'rank' && (
+                                        <span className="text-blue-600">{sortOrder === 'asc' ? '↑' : '↓'}</span>
+                                    )}
+                                </div>
+                            </th>
+                            <th className="px-4 py-3 text-left text-sm font-semibold text-slate-700">
+                                {t.model}
+                            </th>
+                            <th
+                                className="px-4 py-3 text-left text-sm font-semibold text-slate-700 cursor-pointer hover:bg-slate-100"
+                                onClick={() => handleSort('average')}
+                            >
+                                <div className="flex items-center gap-1">
+                                    Average
+                                    {sortBy === 'average' && (
+                                        <span className="text-blue-600">{sortOrder === 'desc' ? '↓' : '↑'}</span>
+                                    )}
+                                </div>
+                            </th>
+                            {showAllMetrics && (
+                                <>
+                                    <th className="px-4 py-3 text-left text-sm font-semibold text-slate-700">Spatial</th>
+                                    <th className="px-4 py-3 text-left text-sm font-semibold text-slate-700">Object</th>
+                                    <th className="px-4 py-3 text-left text-sm font-semibold text-slate-700">Goal</th>
+                                    <th className="px-4 py-3 text-left text-sm font-semibold text-slate-700">Long</th>
+                                    <th className="px-4 py-3 text-left text-sm font-semibold text-slate-700">LIBERO-90</th>
+                                </>
+                            )}
+                            <th
+                                className="px-4 py-3 text-left text-sm font-semibold text-slate-700 cursor-pointer hover:bg-slate-100"
+                                onClick={() => handleSort('date')}
+                            >
+                                <div className="flex items-center gap-1">
+                                    {t.date}
+                                    {sortBy === 'date' && (
+                                        <span className="text-blue-600">{sortOrder === 'desc' ? '↓' : '↑'}</span>
+                                    )}
+                                </div>
+                            </th>
+                            <th className="px-4 py-3 text-left text-sm font-semibold text-slate-700">{t.paper}</th>
+                        </tr>
                     </thead>
                     <tbody>
-                    {models.map((model, idx) => {
-                        const rowKey = `${isAppendix ? 'appendix' : 'main'}-${model.name}-${idx}`;
-                        return (
-                            <>
-                                <tr
-                                    key={rowKey}
-                                    className={`border-b border-slate-100 hover:bg-slate-50 cursor-pointer transition-colors ${expandedRows.has(rowKey) ? 'bg-blue-50' : ''
-                                    }`}
-                                    onClick={() => toggleRow(rowKey)}
-                                >
-                                    <td className="px-4 py-3">
+                        {models.map((model, idx) => {
+                            const rowKey = `${isAppendix ? 'appendix' : 'main'}-${model.name}-${idx}`;
+                            return (
+                                <>
+                                    <tr
+                                        key={rowKey}
+                                        className={`border-b border-slate-100 hover:bg-slate-50 cursor-pointer transition-colors ${expandedRows.has(rowKey) ? 'bg-blue-50' : ''
+                                            }`}
+                                        onClick={() => toggleRow(rowKey)}
+                                    >
+                                        <td className="px-4 py-3">
                                             <span className={`inline-flex items-center justify-center w-8 h-8 rounded-full text-sm font-bold border ${getRankStyle(model.rank)}`}>
                                                 {model.rank}
                                             </span>
-                                    </td>
-                                    <td className="px-4 py-3">
-                                        <div className="flex items-center gap-2">
-                                            <span className="font-medium text-slate-800">{model.name}</span>
-                                            {model.is_opensource && (
-                                                <span className="px-1.5 py-0.5 bg-green-100 text-green-700 text-xs rounded">
+                                        </td>
+                                        <td className="px-4 py-3">
+                                            <div className="flex items-center gap-2">
+                                                <span className="font-medium text-slate-800">{model.name}</span>
+                                                {model.is_opensource && (
+                                                    <span className="px-1.5 py-0.5 bg-green-100 text-green-700 text-xs rounded">
                                                         {t.opensource}
                                                     </span>
-                                            )}
-                                        </div>
-                                        <div className="text-xs text-slate-500">{model.source}</div>
-                                    </td>
-                                    <td className="px-4 py-3">
+                                                )}
+                                            </div>
+                                            <div className="text-xs text-slate-500">{model.source}</div>
+                                        </td>
+                                        <td className="px-4 py-3">
                                             <span className="font-mono text-lg font-semibold text-blue-600">
                                                 {formatValue(model.average)}
                                             </span>
-                                    </td>
-                                    {showAllMetrics && (
-                                        <>
-                                            <td className="px-4 py-3 font-mono text-slate-600">{formatValue(model.spatial)}</td>
-                                            <td className="px-4 py-3 font-mono text-slate-600">{formatValue(model.object)}</td>
-                                            <td className="px-4 py-3 font-mono text-slate-600">{formatValue(model.goal)}</td>
-                                            <td className="px-4 py-3 font-mono text-slate-600">{formatValue(model.long)}</td>
-                                            <td className="px-4 py-3 font-mono text-slate-600">{formatValue(model.libero_90)}</td>
-                                        </>
-                                    )}
-                                    <td className="px-4 py-3 text-slate-600 text-sm">{model.pub_date || '-'}</td>
-                                    <td className="px-4 py-3">
-                                        {model.paper_url && (
-                                            <a
-                                                href={model.paper_url}
-                                                target="_blank"
-                                                rel="noopener noreferrer"
-                                                className="text-blue-600 hover:text-blue-800 hover:underline text-sm"
-                                                onClick={(e) => e.stopPropagation()}
-                                            >
-                                                📄 Link
-                                            </a>
+                                        </td>
+                                        {showAllMetrics && (
+                                            <>
+                                                <td className="px-4 py-3 font-mono text-slate-600">{formatValue(model.spatial)}</td>
+                                                <td className="px-4 py-3 font-mono text-slate-600">{formatValue(model.object)}</td>
+                                                <td className="px-4 py-3 font-mono text-slate-600">{formatValue(model.goal)}</td>
+                                                <td className="px-4 py-3 font-mono text-slate-600">{formatValue(model.long)}</td>
+                                                <td className="px-4 py-3 font-mono text-slate-600">{formatValue(model.libero_90)}</td>
+                                            </>
                                         )}
-                                    </td>
-                                </tr>
-                                {/* Expanded Details Row */}
-                                {expandedRows.has(rowKey) && (
-                                    <tr key={`${rowKey}-expanded`} className="bg-blue-50 border-b border-slate-200">
-                                        <td colSpan={showAllMetrics ? 10 : 5} className="px-4 py-4">
-                                            <div className="ml-12 space-y-4">
-                                                {/* Sub-metrics */}
-                                                {!showAllMetrics && (
-                                                    <div>
-                                                        <h4 className="text-sm font-semibold text-slate-700 mb-3">{t.metrics}</h4>
-                                                        <div className="grid grid-cols-2 md:grid-cols-5 gap-4">
-                                                            <div className="bg-white rounded-lg p-3 shadow-sm">
-                                                                <div className="text-xs text-slate-500 mb-1">Spatial</div>
-                                                                <div className="font-mono text-lg font-semibold text-slate-800">
-                                                                    {formatValue(model.spatial)}
+                                        <td className="px-4 py-3 text-slate-600 text-sm">{model.pub_date || '-'}</td>
+                                        <td className="px-4 py-3">
+                                            {model.paper_url && (
+                                                <a
+                                                    href={model.paper_url}
+                                                    target="_blank"
+                                                    rel="noopener noreferrer"
+                                                    className="text-blue-600 hover:text-blue-800 hover:underline text-sm"
+                                                    onClick={(e) => e.stopPropagation()}
+                                                >
+                                                    📄 Link
+                                                </a>
+                                            )}
+                                        </td>
+                                    </tr>
+                                    {/* Expanded Details Row */}
+                                    {expandedRows.has(rowKey) && (
+                                        <tr key={`${rowKey}-expanded`} className="bg-blue-50 border-b border-slate-200">
+                                            <td colSpan={showAllMetrics ? 10 : 5} className="px-4 py-4">
+                                                <div className="ml-12 space-y-4">
+                                                    {/* Sub-metrics */}
+                                                    {!showAllMetrics && (
+                                                        <div>
+                                                            <h4 className="text-sm font-semibold text-slate-700 mb-3">{t.metrics}</h4>
+                                                            <div className="grid grid-cols-2 md:grid-cols-5 gap-4">
+                                                                <div className="bg-white rounded-lg p-3 shadow-sm">
+                                                                    <div className="text-xs text-slate-500 mb-1">Spatial</div>
+                                                                    <div className="font-mono text-lg font-semibold text-slate-800">
+                                                                        {formatValue(model.spatial)}
+                                                                    </div>
                                                                 </div>
-                                                            </div>
-                                                            <div className="bg-white rounded-lg p-3 shadow-sm">
-                                                                <div className="text-xs text-slate-500 mb-1">Object</div>
-                                                                <div className="font-mono text-lg font-semibold text-slate-800">
-                                                                    {formatValue(model.object)}
+                                                                <div className="bg-white rounded-lg p-3 shadow-sm">
+                                                                    <div className="text-xs text-slate-500 mb-1">Object</div>
+                                                                    <div className="font-mono text-lg font-semibold text-slate-800">
+                                                                        {formatValue(model.object)}
+                                                                    </div>
                                                                 </div>
-                                                            </div>
-                                                            <div className="bg-white rounded-lg p-3 shadow-sm">
-                                                                <div className="text-xs text-slate-500 mb-1">Goal</div>
-                                                                <div className="font-mono text-lg font-semibold text-slate-800">
-                                                                    {formatValue(model.goal)}
+                                                                <div className="bg-white rounded-lg p-3 shadow-sm">
+                                                                    <div className="text-xs text-slate-500 mb-1">Goal</div>
+                                                                    <div className="font-mono text-lg font-semibold text-slate-800">
+                                                                        {formatValue(model.goal)}
+                                                                    </div>
                                                                 </div>
-                                                            </div>
-                                                            <div className="bg-white rounded-lg p-3 shadow-sm">
-                                                                <div className="text-xs text-slate-500 mb-1">Long</div>
-                                                                <div className="font-mono text-lg font-semibold text-slate-800">
-                                                                    {formatValue(model.long)}
+                                                                <div className="bg-white rounded-lg p-3 shadow-sm">
+                                                                    <div className="text-xs text-slate-500 mb-1">Long</div>
+                                                                    <div className="font-mono text-lg font-semibold text-slate-800">
+                                                                        {formatValue(model.long)}
+                                                                    </div>
                                                                 </div>
-                                                            </div>
-                                                            <div className="bg-white rounded-lg p-3 shadow-sm">
-                                                                <div className="text-xs text-slate-500 mb-1">LIBERO-90</div>
-                                                                <div className="font-mono text-lg font-semibold text-slate-800">
-                                                                    {formatValue(model.libero_90)}
+                                                                <div className="bg-white rounded-lg p-3 shadow-sm">
+                                                                    <div className="text-xs text-slate-500 mb-1">LIBERO-90</div>
+                                                                    <div className="font-mono text-lg font-semibold text-slate-800">
+                                                                        {formatValue(model.libero_90)}
+                                                                    </div>
                                                                 </div>
                                                             </div>
                                                         </div>
-                                                    </div>
-                                                )}
-                                                {/* Links */}
-                                                <div className="flex items-center gap-4">
-                                                    {model.opensource_url && (
-                                                        <a
-                                                            href={model.opensource_url}
-                                                            target="_blank"
-                                                            rel="noopener noreferrer"
-                                                            className="inline-flex items-center gap-1 px-3 py-1.5 bg-slate-800 text-white rounded-lg text-sm hover:bg-slate-700 transition-colors"
-                                                            onClick={(e) => e.stopPropagation()}
-                                                        >
-                                                            <svg className="w-4 h-4" fill="currentColor" viewBox="0 0 24 24">
-                                                                <path d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12" />
-                                                            </svg>
-                                                            {t.github}
-                                                        </a>
                                                     )}
-                                                    {model.paper_url && (
-                                                        <a
-                                                            href={model.paper_url}
-                                                            target="_blank"
-                                                            rel="noopener noreferrer"
-                                                            className="inline-flex items-center gap-1 px-3 py-1.5 bg-blue-600 text-white rounded-lg text-sm hover:bg-blue-700 transition-colors"
-                                                            onClick={(e) => e.stopPropagation()}
-                                                        >
-                                                            📄 {t.paper}
-                                                        </a>
+                                                    {/* Links */}
+                                                    <div className="flex items-center gap-4">
+                                                        {model.opensource_url && (
+                                                            <a
+                                                                href={model.opensource_url}
+                                                                target="_blank"
+                                                                rel="noopener noreferrer"
+                                                                className="inline-flex items-center gap-1 px-3 py-1.5 bg-slate-800 text-white rounded-lg text-sm hover:bg-slate-700 transition-colors"
+                                                                onClick={(e) => e.stopPropagation()}
+                                                            >
+                                                                <svg className="w-4 h-4" fill="currentColor" viewBox="0 0 24 24">
+                                                                    <path d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12" />
+                                                                </svg>
+                                                                {t.github}
+                                                            </a>
+                                                        )}
+                                                        {model.paper_url && (
+                                                            <a
+                                                                href={model.paper_url}
+                                                                target="_blank"
+                                                                rel="noopener noreferrer"
+                                                                className="inline-flex items-center gap-1 px-3 py-1.5 bg-blue-600 text-white rounded-lg text-sm hover:bg-blue-700 transition-colors"
+                                                                onClick={(e) => e.stopPropagation()}
+                                                            >
+                                                                📄 {t.paper}
+                                                            </a>
+                                                        )}
+                                                    </div>
+                                                    {/* Note for non-standard */}
+                                                    {isAppendix && model.note && (
+                                                        <div className="bg-amber-50 border border-amber-200 rounded-lg p-3">
+                                                            <span className="text-sm font-medium text-amber-800">{t.note}: </span>
+                                                            <span className="text-sm text-amber-700">{model.note}</span>
+                                                        </div>
                                                     )}
                                                 </div>
-                                                {/* Note for non-standard */}
-                                                {isAppendix && model.note && (
-                                                    <div className="bg-amber-50 border border-amber-200 rounded-lg p-3">
-                                                        <span className="text-sm font-medium text-amber-800">{t.note}: </span>
-                                                        <span className="text-sm text-amber-700">{model.note}</span>
-                                                    </div>
-                                                )}
-                                            </div>
-                                        </td>
-                                    </tr>
-                                )}
-                            </>
-                        );
-                    })}
+                                            </td>
+                                        </tr>
+                                    )}
+                                </>
+                            );
+                        })}
                     </tbody>
                 </table>
             </div>
@@ -453,7 +453,7 @@ export default function LiberoPage() {
                             className={`px-4 py-2 rounded-lg font-medium transition-all ${showAllMetrics
                                 ? 'bg-blue-600 text-white'
                                 : 'bg-white text-blue-600 border border-blue-200 hover:bg-blue-50'
-                            }`}
+                                }`}
                         >
                             {showAllMetrics ? t.hideMetrics : t.showAllMetrics}
                         </button>
@@ -462,7 +462,7 @@ export default function LiberoPage() {
                             className={`px-4 py-2 rounded-lg font-medium transition-all ${showClosedSource
                                 ? 'bg-purple-600 text-white'
                                 : 'bg-white text-purple-600 border border-purple-200 hover:bg-purple-50'
-                            }`}
+                                }`}
                         >
                             {showClosedSource ? t.showAllModels : t.openSourceOnly}
                         </button>
@@ -477,15 +477,6 @@ export default function LiberoPage() {
                                 }`}
                         >
                             {t.policyAll}
-                        </button>
-                        <button
-                            onClick={() => setPolicyFilter('0')}
-                            className={`px-3 py-1.5 rounded-md text-sm font-medium transition-all ${policyFilter === '0'
-                                ? 'bg-slate-600 text-white'
-                                : 'text-slate-600 hover:bg-slate-100'
-                                }`}
-                        >
-                            {t.policy0}
                         </button>
                         <button
                             onClick={() => setPolicyFilter('1')}
@@ -504,6 +495,15 @@ export default function LiberoPage() {
                                 }`}
                         >
                             {t.policy2}
+                        </button>
+                        <button
+                            onClick={() => setPolicyFilter('0')}
+                            className={`px-3 py-1.5 rounded-md text-sm font-medium transition-all ${policyFilter === '0'
+                                ? 'bg-slate-600 text-white'
+                                : 'text-slate-600 hover:bg-slate-100'
+                                }`}
+                        >
+                            {t.policy0}
                         </button>
                     </div>
                 </div>
@@ -533,8 +533,8 @@ export default function LiberoPage() {
                 <div id="policy-description" className="mt-4 p-4 bg-white rounded-lg border border-slate-200">
                     <h3 className="text-sm font-semibold text-slate-700 mb-2">{t.policyDescTitle}</h3>
                     <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-4 text-sm text-slate-600">
-                        <div><span className="font-medium">Single weight:</span> {t.policyDescSingle}</div>
-                        <div><span className="font-medium">Multiple weight:</span> {t.policyDescMultiple}</div>
+                        <div><span className="font-medium">One Policy for All 4 Suites:</span> {t.policyDescSingle}</div>
+                        <div><span className="font-medium">One Policy per Suite:</span> {t.policyDescMultiple}</div>
                         <div><span className="font-medium">Unknown:</span> {t.policyDescUnknown}</div>
                     </div>
                     <p className="mt-3 text-sm text-slate-500">{t.policySuitesNote}</p>
