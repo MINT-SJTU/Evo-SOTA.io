@@ -104,7 +104,7 @@ Contributions are welcome! If you'd like to:
 
 - All benchmark results are collected from original papers or reproduced by third parties
 - Results may vary due to different evaluation protocols, random seeds, or implementation details
-- This leaderboard is for research reference only and does not represent official rankings
+- This leaderboard is for research reference only and does not represent official rankingsDev
 - Please verify results with original papers before citation
 - We will categorize entries by specific training methodologies to keep comparisons as fair and objective as possible.
 

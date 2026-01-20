@@ -103,7 +103,7 @@ export default function Home() {
         const benchmarks = ['RoboChallenge', 'LIBERO Plus', 'LIBERO', 'Meta-World', 'CALVIN', 'Libero Plus', 'Libero', 'Calvin'];
         // 模型列表（需要斜体和紫色）
         const models = [
-            'DeepThinkVLA', 'Dadu-Corki', 'RoboTron Mani', 'CronusVLA', 'InstructVLA', 'InternVLA-M1',
+            'DeepThinkVLA', 'Dadu-Corki', 'RoboTron Mani', 'CronusVLA', 'InstructVLA', 'InternVLA-M1', 'ACoT-VLA',
             'OpenVLA', 'VLA', 'Pi0', 'RIPT'
         ];
 
