@@ -1,6 +1,27 @@
 {
   "standard_opensource": [
     {
+      "name": "DeepThinkVLA",
+      "base_name": "DeepThinkVLA",
+      "setting": "",
+      "paper_url": "https://arxiv.org/abs/2511.15669",
+      "pub_date": "2025-11",
+      "is_opensource": true,
+      "opensource_url": "https://github.com/OpenBMB/DeepThinkVLA",
+      "camera": 88.5,
+      "robot": 40.5,
+      "language": 84.5,
+      "light": 90.0,
+      "background": 75.3,
+      "noise": 94.4,
+      "layout": 79.9,
+      "total": 79.0,
+      "source": "original",
+      "is_standard": true,
+      "note": "",
+      "rank": 1
+    },
+    {
       "name": "OpenVLA-OFT",
       "base_name": "OpenVLA-OFT",
       "setting": "",
@@ -19,7 +40,7 @@
       "source": "from Libero-plus",
       "is_standard": true,
       "note": "",
-      "rank": 1
+      "rank": 2
     },
     {
       "name": "RIPT-VLA",
@@ -40,7 +61,7 @@
       "source": "from Libero-plus",
       "is_standard": true,
       "note": "",
-      "rank": 2
+      "rank": 3
     },
     {
       "name": "OpenVLA-OFT (mix-sft)",
@@ -61,7 +82,7 @@
       "source": "from Libero-plus",
       "is_standard": true,
       "note": "",
-      "rank": 3
+      "rank": 4
     },
     {
       "name": "pi0-FAST",
@@ -82,7 +103,7 @@
       "source": "from Libero-plus",
       "is_standard": true,
       "note": "",
-      "rank": 4
+      "rank": 5
     },
     {
       "name": "OpenVLA-OFT (without wrist input)",
@@ -103,7 +124,7 @@
       "source": "from Libero-plus",
       "is_standard": true,
       "note": "",
-      "rank": 5
+      "rank": 6
     },
     {
       "name": "pi0",
@@ -124,7 +145,7 @@
       "source": "from Libero-plus",
       "is_standard": true,
       "note": "",
-      "rank": 6
+      "rank": 7
     },
     {
       "name": "UniVLA",
@@ -145,7 +166,7 @@
       "source": "from Libero-plus",
       "is_standard": true,
       "note": "",
-      "rank": 7
+      "rank": 8
     },
     {
       "name": "NORA",
@@ -166,7 +187,7 @@
       "source": "from Libero-plus",
       "is_standard": true,
       "note": "",
-      "rank": 8
+      "rank": 9
     },
     {
       "name": "WorldVLA",
@@ -187,7 +208,7 @@
       "source": "from Libero-plus",
       "is_standard": true,
       "note": "",
-      "rank": 9
+      "rank": 10
     },
     {
       "name": "OpenVLA",
@@ -208,9 +229,31 @@
       "source": "from Libero-plus",
       "is_standard": true,
       "note": "",
-      "rank": 10
+      "rank": 11
     }
   ],
-  "standard_closed": [],
+  "standard_closed": [
+    {
+      "name": "ACoT-VLA",
+      "base_name": "ACoT-VLA",
+      "setting": "",
+      "paper_url": "https://arxiv.org/abs/2601.11404",
+      "pub_date": "2026-01",
+      "is_opensource": false,
+      "opensource_url": null,
+      "camera": 91.2,
+      "robot": 62.5,
+      "language": 80.3,
+      "light": 95.1,
+      "background": 91.5,
+      "noise": 88.3,
+      "layout": 84.9,
+      "total": 84.1,
+      "source": "original",
+      "is_standard": true,
+      "note": "",
+      "rank": 1
+    }
+  ],
   "non_standard": []
 }

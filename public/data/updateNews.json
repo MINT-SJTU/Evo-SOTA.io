@@ -1,6 +1,11 @@
 {
     "news": [
         {
+            "date": "🗓️ 2025-01-20: ",
+            "content_en": "New models: Add DeepThinkVLA to LIBERO Plus, ACoT-VLA to LIBERO and LIBERO Plus",
+            "content_zh": "新增模型: 增加 DeepThinkVLA 到 LIBERO Plus, ACoT-VLA 到 LIBERO 和 LIBERO Plus"
+        },
+        {
             "date": "🗓️ 2025-01-19: ",
             "content_en": "🚀 Major update: New Leaderboard: RoboChallenge, New Feature: Policy Setting filter in LIBERO; Bug Fixes: Link errors and inappropriate filter in LIBERO Plus",
             "content_zh": "🚀 重大更新: 新增榜单: RoboChallenge, 新增功能: LIBERO 策略设置筛选; 修复 Bugs: LIBERO Plus 中的链接错误和不恰当的筛选"

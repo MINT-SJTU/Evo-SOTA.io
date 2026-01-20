@@ -1,8 +1,8 @@
 {
   "libero": {
-    "total_models": 65,
+    "total_models": 66,
     "standard_opensource_count": 38,
-    "standard_closed_count": 12,
+    "standard_closed_count": 13,
     "non_standard_count": 15,
     "primary_metric": "Average Success Rate (%)",
     "top_5": [
@@ -34,35 +34,35 @@
     ]
   },
   "libero_plus": {
-    "total_models": 10,
-    "standard_opensource_count": 10,
-    "standard_closed_count": 0,
+    "total_models": 12,
+    "standard_opensource_count": 11,
+    "standard_closed_count": 1,
     "non_standard_count": 0,
     "primary_metric": "Total Success Rate (%)",
     "top_5": [
       {
+        "name": "DeepThinkVLA",
+        "score": 79.0,
+        "rank": 1
+      },
+      {
         "name": "OpenVLA-OFT",
         "score": 69.6,
-        "rank": 1
+        "rank": 2
       },
       {
         "name": "RIPT-VLA",
         "score": 68.4,
-        "rank": 2
+        "rank": 3
       },
       {
         "name": "OpenVLA-OFT (mix-sft)",
         "score": 67.9,
-        "rank": 3
+        "rank": 4
       },
       {
         "name": "pi0-FAST",
         "score": 61.6,
-        "rank": 4
-      },
-      {
-        "name": "OpenVLA-OFT (without wrist input)",
-        "score": 55.8,
         "rank": 5
       }
     ]

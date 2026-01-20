@@ -138,8 +138,7 @@
       "source": "original",
       "is_standard": true,
       "note": "",
-      "rank": 7,
-      "policy_setting": 2
+      "rank": 7
     },
     {
       "name": "CronusVLA",
@@ -309,7 +308,7 @@
       "pub_date": "2025-02",
       "is_opensource": true,
       "opensource_url": "https://github.com/moojink/openvla-oft",
-      "policy_setting": 1,
+      "policy_setting": 2,
       "spatial": 96.2,
       "object": 98.3,
       "goal": 96.2,
@@ -764,6 +763,26 @@
   ],
   "standard_closed": [
     {
+      "name": "ACoT-VLA",
+      "base_name": "ACoT-VLA",
+      "setting": "",
+      "paper_url": "https://arxiv.org/abs/2601.11404",
+      "pub_date": "2026-01",
+      "is_opensource": false,
+      "opensource_url": null,
+      "policy_setting": 1,
+      "spatial": 99.4,
+      "object": 99.6,
+      "goal": 98.8,
+      "long": 96.0,
+      "libero_90": null,
+      "average": 98.5,
+      "source": "original",
+      "is_standard": true,
+      "note": "",
+      "rank": 1
+    },
+    {
       "name": "AVA-VLA",
       "base_name": "AVA-VLA",
       "setting": "",
@@ -781,7 +800,7 @@
       "source": "original",
       "is_standard": true,
       "note": "",
-      "rank": 1
+      "rank": 2
     },
     {
       "name": "dVLA",
@@ -801,7 +820,7 @@
       "source": "original",
       "is_standard": true,
       "note": "",
-      "rank": 2
+      "rank": 3
     },
     {
       "name": "DepthVLA",
@@ -821,7 +840,7 @@
       "source": "original",
       "is_standard": true,
       "note": "",
-      "rank": 3
+      "rank": 4
     },
     {
       "name": "PD-VLA",
@@ -841,7 +860,7 @@
       "source": "From AVA-VLA",
       "is_standard": true,
       "note": "",
-      "rank": 4
+      "rank": 5
     },
     {
       "name": "4D-VLA",
@@ -861,7 +880,7 @@
       "source": "original",
       "is_standard": true,
       "note": "",
-      "rank": 5
+      "rank": 6
     },
     {
       "name": "FPC-VLA",
@@ -881,7 +900,7 @@
       "source": "original",
       "is_standard": true,
       "note": "",
-      "rank": 6
+      "rank": 7
     },
     {
       "name": "InSpire",
@@ -901,7 +920,7 @@
       "source": "original",
       "is_standard": true,
       "note": "",
-      "rank": 7
+      "rank": 8
     },
     {
       "name": "ThinkAct",
@@ -921,7 +940,7 @@
       "source": "original",
       "is_standard": true,
       "note": "",
-      "rank": 8
+      "rank": 9
     },
     {
       "name": "Eva-VLA (OpenVLA+Theta)",
@@ -941,7 +960,7 @@
       "source": "original",
       "is_standard": true,
       "note": "都只使用了各自数据集微调",
-      "rank": 9
+      "rank": 10
     },
     {
       "name": "CoT-VLA",
@@ -961,7 +980,7 @@
       "source": "original",
       "is_standard": true,
       "note": "",
-      "rank": 10
+      "rank": 11
     },
     {
       "name": "CoA-VLA",
@@ -981,7 +1000,7 @@
       "source": "original",
       "is_standard": true,
       "note": "",
-      "rank": 11
+      "rank": 12
     },
     {
       "name": "TriVLA",
@@ -1001,7 +1020,7 @@
       "source": "original",
       "is_standard": true,
       "note": "",
-      "rank": 12
+      "rank": 13
     }
   ],
   "non_standard": [
