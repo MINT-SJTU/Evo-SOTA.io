@@ -118,7 +118,7 @@ Contributions are welcome! If you'd like to:
 - **Ye Zewei**： Website development and updates, data collection
 - **Li Yiqin**： Website updates, data collection
 - **Mao Yiran**:  Data collection 
-- **Lin Tao (@EvoMind)**: Project Lead, Review
+- **Lin Tao (@EvoMind)**: Project Lead
 
 ## 🙏 Acknowledgments
 
