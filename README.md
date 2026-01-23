@@ -91,6 +91,11 @@ Evo-SOTA.io/
 Found errors or want to submit your model? Reach out to us:
 - **GitHub Issues**: [Create an issue](https://github.com/MINT-SJTU/Evo-SOTA.io/issues)
 - **Email**: business@evomind-tech.com
+- **Wechat group**: Join our Wechat Group
+
+<p align="center">
+<img src="public/QRcode/evomind_wechat.jpg" width="250" height="250">
+</p>
 
 ## 🤝 Contributing
 
@@ -107,9 +112,13 @@ Contributions are welcome! If you'd like to:
 - This leaderboard is for research reference only and does not represent official rankingsDev
 - Please verify results with original papers before citation
 
-## 📄 License
 
-This project is open source and available under the [MIT License](LICENSE).
+## 👥 Contributors
+
+- **Ye Zewei**： Website development and updates, data collection
+- **Li Yiqin**： Website updates, data collection
+- **Mao Yiran**:  Data collection 
+- **Lin Tao**: Review and suggestions
 
 ## 🙏 Acknowledgments
 
