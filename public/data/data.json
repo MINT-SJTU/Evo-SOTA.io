@@ -1,9 +1,9 @@
 {
   "libero": {
-    "total_models": 66,
-    "standard_opensource_count": 38,
+    "total_models": 70,
+    "standard_opensource_count": 41,
     "standard_closed_count": 13,
-    "non_standard_count": 15,
+    "non_standard_count": 16,
     "primary_metric": "Average Success Rate (%)",
     "top_5": [
       {
@@ -12,23 +12,23 @@
         "rank": 1
       },
       {
+        "name": "Being-H0.5 (Specialist)",
+        "score": 98.9,
+        "rank": 2
+      },
+      {
         "name": "VLA-Adapter-pro",
         "score": 98.5,
-        "rank": 2
+        "rank": 3
+      },
+      {
+        "name": "EO-1",
+        "score": 98.2,
+        "rank": 4
       },
       {
         "name": "X-VLA",
         "score": 98.1,
-        "rank": 3
-      },
-      {
-        "name": "VOTE",
-        "score": 98.0,
-        "rank": 4
-      },
-      {
-        "name": "RIPT-VLA (OpenVLA+RIPT)",
-        "score": 97.5,
         "rank": 5
       }
     ]
