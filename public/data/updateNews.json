@@ -1,6 +1,11 @@
 {
     "news": [
         {
+            "date": "🗓️ 2026-01-27: ",
+            "content_en": "New models: Add NORA-1.5, Being-H0.5, EO-1 to LIBERO",
+            "content_zh": "新增模型: 增加 NORA-1.5, Being-H0.5, EO-1 到 LIBERO"
+        },
+        {
             "date": "🗓️ 2026-01-20: ",
             "content_en": "New models: Add DeepThinkVLA to LIBERO Plus, ACoT-VLA to LIBERO and LIBERO Plus",
             "content_zh": "新增模型: 增加 DeepThinkVLA 到 LIBERO Plus, ACoT-VLA 到 LIBERO 和 LIBERO Plus"
