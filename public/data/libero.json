@@ -61,9 +61,9 @@
       "rank": 3
     },
     {
-      "name": "pi-RL (pi0.5+RL)",
+      "name": "pi-RL",
       "base_name": "pi-RL",
-      "setting": "pi0.5+RL",
+      "setting": "",
       "paper_url": "https://arxiv.org/abs/2510.25889",
       "pub_date": "2025-01",
       "is_opensource": true,
@@ -121,9 +121,9 @@
       "rank": 6
     },
     {
-      "name": "RLinf-VLA (OpenVLA-OFT+GRPO)",
+      "name": "RLinf-VLA",
       "base_name": "RLinf-VLA",
-      "setting": "OpenVLA-OFT+GRPO",
+      "setting": "",
       "paper_url": "https://arxiv.org/abs/2510.06710",
       "pub_date": "2025-01",
       "is_opensource": true,
@@ -161,9 +161,9 @@
       "rank": 8
     },
     {
-      "name": "RIPT-VLA (OpenVLA+RIPT)",
+      "name": "RIPT-VLA",
       "base_name": "RIPT-VLA",
-      "setting": "OpenVLA+RIPT",
+      "setting": "",
       "paper_url": "https://arxiv.org/abs/2505.17016",
       "pub_date": "2025-05",
       "is_opensource": true,
@@ -181,9 +181,9 @@
       "rank": 9
     },
     {
-      "name": "VLA-Cache (OpenVLA+VLA-Cache)",
+      "name": "VLA-Cache",
       "base_name": "VLA-Cache",
-      "setting": "OpenVLA+VLA-Cache",
+      "setting": "",
       "paper_url": "https://arxiv.org/abs/2502.02175",
       "pub_date": "2025-02",
       "is_opensource": true,
@@ -841,9 +841,9 @@
       "rank": 42
     },
     {
-      "name": "TTF-VLA (VLA-cache+TTF)",
+      "name": "TTF-VLA",
       "base_name": "TTF-VLA",
-      "setting": "VLA-cache+TTF",
+      "setting": "",
       "paper_url": "https://arxiv.org/abs/2508.19257",
       "pub_date": "2025-08",
       "is_opensource": true,
@@ -1063,9 +1063,9 @@
       "rank": 9
     },
     {
-      "name": "Eva-VLA (OpenVLA+Theta)",
+      "name": "Eva-VLA",
       "base_name": "Eva-VLA",
-      "setting": "OpenVLA+Theta",
+      "setting": "",
       "paper_url": "https://arxiv.org/abs/2509.18953",
       "pub_date": "2025-09",
       "is_opensource": false,
