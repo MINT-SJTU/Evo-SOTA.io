@@ -1,6 +1,11 @@
 {
     "news": [
         {
+            "date": "🗓️ 2026-01-29: ",
+            "content_en": "New models: Add DreamVLA, Rlinf-VLA, pi-RL to LIBERO",
+            "content_zh": "新增模型: 增加 DreamVLA, Rlinf-VLA, pi-RL 到 LIBERO"
+        },
+        {
             "date": "🗓️ 2026-01-27: ",
             "content_en": "New models: Add NORA-1.5, Being-H0.5, EO-1 to LIBERO",
             "content_zh": "新增模型: 增加 NORA-1.5, Being-H0.5, EO-1 到 LIBERO"

@@ -1,9 +1,9 @@
 {
   "libero": {
-    "total_models": 70,
-    "standard_opensource_count": 41,
+    "total_models": 72,
+    "standard_opensource_count": 44,
     "standard_closed_count": 13,
-    "non_standard_count": 16,
+    "non_standard_count": 15,
     "primary_metric": "Average Success Rate (%)",
     "top_5": [
       {
@@ -22,13 +22,13 @@
         "rank": 3
       },
       {
-        "name": "EO-1",
-        "score": 98.2,
+        "name": "pi-RL (pi0.5+RL)",
+        "score": 98.3,
         "rank": 4
       },
       {
-        "name": "X-VLA",
-        "score": 98.1,
+        "name": "EO-1",
+        "score": 98.2,
         "rank": 5
       }
     ]
