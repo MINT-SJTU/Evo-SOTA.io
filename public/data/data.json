@@ -135,6 +135,40 @@
       }
     ]
   },
+  "robocasa": {
+    "total_models": 7,
+    "standard_opensource_count": 7,
+    "standard_closed_count": 0,
+    "non_standard_count": 0,
+    "primary_metric": "Average Success Rate (%)",
+    "top_5": [
+      {
+        "name": "BayesianVLA",
+        "score": 66.5,
+        "rank": 1
+      },
+      {
+        "name": "TwinBrainVLA",
+        "score": 54.6,
+        "rank": 2
+      },
+      {
+        "name": "StarVLA (Qwen3OFT)",
+        "score": 48.8,
+        "rank": 3
+      },
+      {
+        "name": "StarVLA (Qwen3GR00T)",
+        "score": 47.8,
+        "rank": 4
+      },
+      {
+        "name": "GR00T-N1.6",
+        "score": 47.6,
+        "rank": 5
+      }
+    ]
+  },
   "calvin": {
     "total_models": 36,
     "standard_opensource_count": 28,

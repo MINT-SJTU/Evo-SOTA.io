@@ -12,7 +12,7 @@ export default function MethodologyPage() {
             dataSource: 'Data Sources',
             dataSourceDesc: 'All benchmark results are collected from published papers and official repositories. We do not re-run experiments.',
             rankingRules: 'Ranking Rules',
-            rankingRulesDesc: 'Models are ranked by their primary metric on each benchmark. For LIBERO and Meta-World, this is the Average Success Rate. For CALVIN, this is the Average Length (Avg. Len.) on the ABC→D setting. For RoboChallenge, this is the Score.',
+            rankingRulesDesc: 'Models are ranked by their primary metric on each benchmark. For LIBERO, Meta-World and RoboCasa-GR1-Tabletop, this is the Average Success Rate. For CALVIN, this is the Average Length (Avg. Len.) on the ABC→D setting. For RoboChallenge, this is the Score.',
             limitations: 'Known Limitations',
             limitationsDesc: 'Results across different benchmarks are not directly comparable. Different papers may use slightly different evaluation protocols.',
             disclaimer: 'Disclaimer',
@@ -41,7 +41,7 @@ export default function MethodologyPage() {
             dataSource: '数据来源',
             dataSourceDesc: '所有基准测试结果均来自已发表的论文和官方代码库。我们不重新运行实验。',
             rankingRules: '排名规则',
-            rankingRulesDesc: '模型根据每个基准测试的主要指标进行排名。对于 LIBERO 和 Meta-World，主要指标是平均成功率。对于 CALVIN，主要指标是 ABC→D 设置下的平均长度 (Avg. Len.)。对于 RoboChallenge，主要指标是分数 (Score)。',
+            rankingRulesDesc: '模型根据每个基准测试的主要指标进行排名。对于 LIBERO，Meta-World 和 RoboCasa-GR1-Tabletop，主要指标是平均成功率。对于 CALVIN，主要指标是 ABC→D 设置下的平均长度 (Avg. Len.)。对于 RoboChallenge，主要指标是分数 (Score)。',
             limitations: '已知局限性',
             limitationsDesc: '不同基准测试的结果不能直接比较。不同论文可能使用略有不同的评估协议。',
             disclaimer: '免责声明',
@@ -296,7 +296,7 @@ export default function MethodologyPage() {
                     <h2 className="text-2xl font-bold text-slate-800 mb-6 text-center">
                         Supported Benchmarks
                     </h2>
-                    <div className="grid md:grid-cols-5 gap-4">
+                    <div className="grid md:grid-cols-6 gap-4">
                         <a
                             href="https://github.com/sylvestf/LIBERO-plus"
                             target="_blank"
@@ -346,6 +346,16 @@ export default function MethodologyPage() {
                             <h3 className="font-semibold text-teal-800">RoboChallenge</h3>
                             <p className="text-sm text-teal-600 mt-1">Score</p>
                             <p className="text-xs text-teal-500 mt-2">Real-world robotic manipulation</p>
+                        </a>
+                        <a
+                            href="https://robocasa.ai/"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="bg-rose-50 border border-rose-200 rounded-lg p-4 hover:shadow-md transition-shadow"
+                        >
+                            <h3 className="font-semibold text-rose-800">RoboCasa-GR1-Tabletop</h3>
+                            <p className="text-sm text-rose-600 mt-1">Average Success Rate (%)</p>
+                            <p className="text-xs text-rose-500 mt-2">Tabletop manipulation tasks</p>
                         </a>
                     </div>
                 </div>

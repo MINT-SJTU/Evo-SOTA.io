@@ -1,6 +1,11 @@
 {
     "news": [
         {
+            "date": "🗓️ 2026-01-30: ",
+            "content_en": "🚀 Major update: New Leaderboard: RoboCasa-GR1-Tabletop; Added related models in this benchmark.",
+            "content_zh": "🚀 重大更新: 新增榜单: RoboCasa-GR1-Tabletop；添加了此榜单中的相关模型。"
+        },
+        {
             "date": "🗓️ 2026-01-29: ",
             "content_en": "New models: Add DreamVLA, Rlinf-VLA, pi-RL to LIBERO",
             "content_zh": "新增模型: 增加 DreamVLA, Rlinf-VLA, pi-RL 到 LIBERO"

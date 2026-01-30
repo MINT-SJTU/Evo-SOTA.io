@@ -104,6 +104,11 @@ export const translations = {
                 description: 'RoboChallenge is a real-world robotic manipulation benchmark featuring challenging tasks in diverse environments.',
                 metric: 'Score',
             },
+            robocasa: {
+                name: 'RoboCasa-GR1-Tabletop',
+                description: 'RoboCasa-GR1-Tabletop is a benchmark built upon the RoboCasa simulation framework by GR00T-N1.5, tailored for GR-1 tabletop tasks, enabling the evaluation of generalist robotic policies in diverse household tasks.',
+                metric: 'Average Success Rate (%)',
+            },
         },
         // Methodology 页面
         methodology: {
@@ -223,6 +228,11 @@ export const translations = {
                 name: 'RoboChallenge',
                 description: 'RoboChallenge 是一个真实世界机器人操作基准测试，包含多种环境中的挑战性任务。',
                 metric: '分数',
+            },
+            robocasa: {
+                name: 'RoboCasa-GR1-Tabletop',
+                description: 'RoboCasa-GR1-Tabletop 是 GR00T-N1.5 基于 RoboCasa 仿真框架构建的基准测试，专为 GR-1 桌面任务定制，旨在评估通用机器人在多样化家庭任务中的策略。',
+                metric: '平均成功率 (%)',
             },
         },
         // Methodology 页面

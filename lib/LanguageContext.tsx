@@ -94,6 +94,11 @@ type TranslationType = {
             description: string;
             metric: string;
         };
+        robocasa: {
+            name: string;
+            description: string;
+            metric: string;
+        };
     };
     methodology: {
         title: string;

@@ -27,6 +27,7 @@ export default function Navbar() {
         { name: 'Meta-World', href: '/benchmarks/metaworld' },
         { name: 'CALVIN', href: '/benchmarks/calvin' },
         { name: 'RoboChallenge', href: '/benchmarks/robochallenge' },
+        { name: 'RoboCasa-GR1-Tabletop', href: '/benchmarks/robocasa_gr1_tabletop' },
     ];
 
     return (

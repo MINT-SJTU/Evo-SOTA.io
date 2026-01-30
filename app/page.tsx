@@ -66,6 +66,11 @@ interface SummaryData {
         standard_opensource_count: number;
         top_5: { name: string; score: number; rank: number }[];
     };
+    robocasa: {
+        total_models: number;
+        standard_opensource_count: number;
+        top_5: { name: string; score: number; rank: number }[];
+    };
 }
 
 interface NewsItem {
@@ -100,7 +105,7 @@ export default function Home() {
     // 格式化新闻内容：榜单用粗体+蓝色，模型用斜体+紫色
     const formatNewsContent = (content: string) => {
         // 榜单列表（需要粗体和蓝色）
-        const benchmarks = ['RoboChallenge', 'LIBERO Plus', 'LIBERO', 'Meta-World', 'CALVIN', 'Libero Plus', 'Libero', 'Calvin'];
+        const benchmarks = ['RoboChallenge', 'RoboCasa-GR1-Tabletop', 'LIBERO Plus', 'LIBERO', 'Meta-World', 'CALVIN', 'Libero Plus', 'Libero', 'Calvin'];
         // 模型列表（需要斜体和紫色）
         const models = [
             'DeepThinkVLA', 'Dadu-Corki', 'RoboTron Mani', 'CronusVLA', 'InstructVLA', 'InternVLA-M1', 'ACoT-VLA',
@@ -174,7 +179,7 @@ export default function Home() {
         },
     ];
 
-    // 第二行: libero plus, robochallenge
+    // 第二行: libero plus, robochallenge, robocasa
     const secondRowBenchmarks = [
         {
             id: 'liberoplus',
@@ -201,6 +206,19 @@ export default function Home() {
                 score: m.score,
             })) || [],
             color: 'teal',
+        },
+        {
+            id: 'robocasa_gr1_tabletop',
+            name: t.benchmarkDesc.robocasa?.name || 'RoboCasa-GR1-Tabletop',
+            description: t.benchmarkDesc.robocasa?.description || 'Tabletop manipulation tasks benchmark based on RoboCasa',
+            metric: t.benchmarkDesc.robocasa?.metric || 'Average Success Rate (%)',
+            modelCount: summaryData?.robocasa?.standard_opensource_count || 0,
+            topModels: summaryData?.robocasa?.top_5?.map(m => ({
+                rank: m.rank,
+                name: m.name,
+                score: m.score,
+            })) || [],
+            color: 'rose',
         },
     ];
 
@@ -239,6 +257,13 @@ export default function Home() {
             text: 'text-teal-600',
             badge: 'bg-teal-100 text-teal-800',
             button: 'bg-teal-600 hover:bg-teal-700',
+        },
+        rose: {
+            bg: 'bg-rose-50',
+            border: 'border-rose-200',
+            text: 'text-rose-600',
+            badge: 'bg-rose-100 text-rose-800',
+            button: 'bg-rose-600 hover:bg-rose-700',
         },
     };
 
@@ -334,14 +359,14 @@ export default function Home() {
                                     {/* Card Header */}
                                     <div className="p-6 border-b border-slate-200 bg-white">
                                         <div className="flex items-center justify-between mb-2">
-                                            <h3 className={`text-xl font-bold ${colors.text}`}>
+                                            <h3 className={`text-xl font-bold ${colors.text} h-14 flex items-center`}>
                                                 {benchmark.name}
                                             </h3>
                                             <span className={`px-2 py-1 rounded-full text-xs font-medium ${colors.badge}`}>
                                                 {benchmark.modelCount} {t.home.models}
                                             </span>
                                         </div>
-                                        <p className="text-sm text-slate-600 line-clamp-2">
+                                        <p className="text-sm text-slate-600 line-clamp-2 h-10">
                                             {benchmark.description}
                                         </p>
                                         <p className="text-xs text-slate-500 mt-2">
@@ -411,14 +436,14 @@ export default function Home() {
                                     {/* Card Header */}
                                     <div className="p-6 border-b border-slate-200 bg-white">
                                         <div className="flex items-center justify-between mb-2">
-                                            <h3 className={`text-xl font-bold ${colors.text}`}>
+                                            <h3 className={`text-xl font-bold ${colors.text} h-14 flex items-center`}>
                                                 {benchmark.name}
                                             </h3>
                                             <span className={`px-2 py-1 rounded-full text-xs font-medium ${colors.badge}`}>
                                                 {benchmark.modelCount} {t.home.models}
                                             </span>
                                         </div>
-                                        <p className="text-sm text-slate-600 line-clamp-2">
+                                        <p className="text-sm text-slate-600 line-clamp-2 h-10">
                                             {benchmark.description}
                                         </p>
                                         <p className="text-xs text-slate-500 mt-2">
