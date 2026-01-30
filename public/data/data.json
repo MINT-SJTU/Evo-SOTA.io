@@ -1,7 +1,7 @@
 {
   "libero": {
-    "total_models": 72,
-    "standard_opensource_count": 44,
+    "total_models": 73,
+    "standard_opensource_count": 45,
     "standard_closed_count": 13,
     "non_standard_count": 15,
     "primary_metric": "Average Success Rate (%)",
@@ -17,18 +17,18 @@
         "rank": 2
       },
       {
+        "name": "UnifoLM-VLA-0",
+        "score": 98.7,
+        "rank": 3
+      },
+      {
         "name": "VLA-Adapter-pro",
         "score": 98.5,
-        "rank": 3
+        "rank": 4
       },
       {
         "name": "pi-RL",
         "score": 98.3,
-        "rank": 4
-      },
-      {
-        "name": "EO-1",
-        "score": 98.2,
         "rank": 5
       }
     ]
@@ -131,6 +131,40 @@
       {
         "name": "pi0.5 (generalist)",
         "score": 31.27,
+        "rank": 5
+      }
+    ]
+  },
+  "robocasa": {
+    "total_models": 7,
+    "standard_opensource_count": 7,
+    "standard_closed_count": 0,
+    "non_standard_count": 0,
+    "primary_metric": "Average Success Rate (%)",
+    "top_5": [
+      {
+        "name": "BayesianVLA",
+        "score": 66.5,
+        "rank": 1
+      },
+      {
+        "name": "TwinBrainVLA",
+        "score": 54.6,
+        "rank": 2
+      },
+      {
+        "name": "StarVLA (Qwen3OFT)",
+        "score": 48.8,
+        "rank": 3
+      },
+      {
+        "name": "StarVLA (Qwen3GR00T)",
+        "score": 47.8,
+        "rank": 4
+      },
+      {
+        "name": "GR00T-N1.6",
+        "score": 47.6,
         "rank": 5
       }
     ]

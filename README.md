@@ -15,6 +15,7 @@ A comprehensive leaderboard tracking the state-of-the-art (SOTA) performance of 
 | **Meta-World**    | Multi-task learning with 50 distinct robotic manipulation tasks                                   | Average Success Rate (%)      |
 | **CALVIN**        | Long-horizon language-conditioned tasks (ABC→D, ABCD→D, D→D settings)                             | Average Completed Tasks (0-5) |
 | **RoboChallenge** | Real-world robotic manipulation benchmark with diverse household tasks                            | Score                         |
+| **RoboCasa-GR1-Tabletop** | Household tabletop manipulation tasks in realistic environments using GR1 robot                      | Average Success Rate (%)      |
 
 ## ✨ Features
 
@@ -74,6 +75,7 @@ Evo-SOTA.io/
 │       ├── calvin/
 │       ├── metaworld/
 │       └── robochallenge/
+│       └── robocasa_gr1_tabletop/
 ├── components/            # React components
 ├── data/                  # JSON data files & processing scripts
 │   ├── libero.json
@@ -81,6 +83,7 @@ Evo-SOTA.io/
 │   ├── calvin.json
 │   ├── metaworld.json
 │   ├── robochallenge.json
+│   ├── robocasa_gr1_tabletop.json
 │   └── DataProcess.py     # CSV to JSON converter
 ├── lib/                   # Utilities & i18n
 └── public/               # Static assets
@@ -111,19 +114,20 @@ Contributions are welcome! If you'd like to:
 - Results may vary due to different evaluation protocols, random seeds, or implementation details
 - This leaderboard is for research reference only and does not represent official rankingsDev
 - Please verify results with original papers before citation
+- We will categorize entries by specific training methodologies to keep comparisons as fair and objective as possible.
 
 
 ## 👥 Contributors
 
 - **Ye Zewei**: Website development and updates, Data collection
 - **Li Yiqin**: Website updates, Data collection
-- **Mao Yiran**: Data collection 
+- **Mao Yiran**: Website updates, Data collection 
 - **Lin Tao (@EvoMind)**: Project Lead
 
 ## 🙏 Acknowledgments
 
 - Thanks to all researchers who contributed to the VLA field
-- Benchmark creators: LIBERO, LIBERO Plus, CALVIN, Meta-World, RoboChallenge teams
+- Benchmark creators: LIBERO, LIBERO Plus, CALVIN, Meta-World, RoboChallenge, RoboCasa-GR1-Tabletop-Tasks teams
 - [https://github.com/EvanNotFound/vercount](https://github.com/EvanNotFound/vercount) for visitor statistics
 
 ---

@@ -12,7 +12,7 @@ export default function MethodologyPage() {
             dataSource: 'Data Sources',
             dataSourceDesc: 'All benchmark results are collected from published papers and official repositories. We do not re-run experiments.',
             rankingRules: 'Ranking Rules',
-            rankingRulesDesc: 'Models are ranked by their primary metric on each benchmark. For LIBERO and Meta-World, this is the Average Success Rate. For CALVIN, this is the Average Length (Avg. Len.) on the ABC→D setting. For RoboChallenge, this is the Score.',
+            rankingRulesDesc: 'Models are ranked by their primary metric on each benchmark. For LIBERO, Meta-World and RoboCasa-GR1-Tabletop, this is the Average Success Rate. For CALVIN, this is the Average Length (Avg. Len.) on the ABC→D setting. For RoboChallenge, this is the Score.',
             limitations: 'Known Limitations',
             limitationsDesc: 'Results across different benchmarks are not directly comparable. Different papers may use slightly different evaluation protocols.',
             disclaimer: 'Disclaimer',
@@ -41,7 +41,7 @@ export default function MethodologyPage() {
             dataSource: '数据来源',
             dataSourceDesc: '所有基准测试结果均来自已发表的论文和官方代码库。我们不重新运行实验。',
             rankingRules: '排名规则',
-            rankingRulesDesc: '模型根据每个基准测试的主要指标进行排名。对于 LIBERO 和 Meta-World，主要指标是平均成功率。对于 CALVIN，主要指标是 ABC→D 设置下的平均长度 (Avg. Len.)。对于 RoboChallenge，主要指标是分数 (Score)。',
+            rankingRulesDesc: '模型根据每个基准测试的主要指标进行排名。对于 LIBERO，Meta-World 和 RoboCasa-GR1-Tabletop，主要指标是平均成功率。对于 CALVIN，主要指标是 ABC→D 设置下的平均长度 (Avg. Len.)。对于 RoboChallenge，主要指标是分数 (Score)。',
             limitations: '已知局限性',
             limitationsDesc: '不同基准测试的结果不能直接比较。不同论文可能使用略有不同的评估协议。',
             disclaimer: '免责声明',
@@ -296,56 +296,66 @@ export default function MethodologyPage() {
                     <h2 className="text-2xl font-bold text-slate-800 mb-6 text-center">
                         Supported Benchmarks
                     </h2>
-                    <div className="grid md:grid-cols-5 gap-4">
-                        <a
-                            href="https://github.com/sylvestf/LIBERO-plus"
-                            target="_blank"
-                            rel="noopener noreferrer"
-                            className="bg-orange-50 border border-orange-200 rounded-lg p-4 hover:shadow-md transition-shadow"
-                        >
-                            <h3 className="font-semibold text-orange-800">LIBERO Plus</h3>
-                            <p className="text-sm text-orange-600 mt-1">Average Success Rate (%)</p>
-                            <p className="text-xs text-orange-500 mt-2">Extended LIBERO with 6 categories</p>
-                        </a>
+                    <div className="grid sm:grid-cols-2 md:grid-cols-3 gap-4">
                         <a
                             href="https://github.com/Lifelong-Robot-Learning/LIBERO"
                             target="_blank"
                             rel="noopener noreferrer"
-                            className="bg-blue-50 border border-blue-200 rounded-lg p-4 hover:shadow-md transition-shadow"
+                            className="bg-blue-50 border border-blue-200 rounded-lg p-5 hover:shadow-md transition-shadow flex flex-col"
                         >
-                            <h3 className="font-semibold text-blue-800">LIBERO</h3>
+                            <h3 className="font-semibold text-blue-800 text-lg">LIBERO</h3>
                             <p className="text-sm text-blue-600 mt-1">Average Success Rate (%)</p>
-                            <p className="text-xs text-blue-500 mt-2">130 language-conditioned tasks</p>
+                            <p className="text-xs text-blue-500 mt-2 flex-grow">130 language-conditioned tasks</p>
                         </a>
                         <a
                             href="https://github.com/Farama-Foundation/Metaworld"
                             target="_blank"
                             rel="noopener noreferrer"
-                            className="bg-purple-50 border border-purple-200 rounded-lg p-4 hover:shadow-md transition-shadow"
+                            className="bg-purple-50 border border-purple-200 rounded-lg p-5 hover:shadow-md transition-shadow flex flex-col"
                         >
-                            <h3 className="font-semibold text-purple-800">Meta-World</h3>
+                            <h3 className="font-semibold text-purple-800 text-lg">Meta-World</h3>
                             <p className="text-sm text-purple-600 mt-1">Average Success Rate (%)</p>
-                            <p className="text-xs text-purple-500 mt-2">50 robotic manipulation tasks</p>
+                            <p className="text-xs text-purple-500 mt-2 flex-grow">50 robotic manipulation tasks</p>
                         </a>
                         <a
                             href="https://github.com/mees/calvin"
                             target="_blank"
                             rel="noopener noreferrer"
-                            className="bg-emerald-50 border border-emerald-200 rounded-lg p-4 hover:shadow-md transition-shadow"
+                            className="bg-emerald-50 border border-emerald-200 rounded-lg p-5 hover:shadow-md transition-shadow flex flex-col"
                         >
-                            <h3 className="font-semibold text-emerald-800">CALVIN</h3>
+                            <h3 className="font-semibold text-emerald-800 text-lg">CALVIN</h3>
                             <p className="text-sm text-emerald-600 mt-1">Average Length (Mainly ABC→D)</p>
-                            <p className="text-xs text-emerald-500 mt-2">Long-horizon manipulation</p>
+                            <p className="text-xs text-emerald-500 mt-2 flex-grow">Long-horizon manipulation</p>
+                        </a>
+                        <a
+                            href="https://github.com/sylvestf/LIBERO-plus"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="bg-orange-50 border border-orange-200 rounded-lg p-5 hover:shadow-md transition-shadow flex flex-col"
+                        >
+                            <h3 className="font-semibold text-orange-800 text-lg">LIBERO Plus</h3>
+                            <p className="text-sm text-orange-600 mt-1">Average Success Rate (%)</p>
+                            <p className="text-xs text-orange-500 mt-2 flex-grow">Extended LIBERO with 6 categories</p>
                         </a>
                         <a
                             href="https://robochallenge.ai/home"
                             target="_blank"
                             rel="noopener noreferrer"
-                            className="bg-teal-50 border border-teal-200 rounded-lg p-4 hover:shadow-md transition-shadow"
+                            className="bg-teal-50 border border-teal-200 rounded-lg p-5 hover:shadow-md transition-shadow flex flex-col"
                         >
-                            <h3 className="font-semibold text-teal-800">RoboChallenge</h3>
+                            <h3 className="font-semibold text-teal-800 text-lg">RoboChallenge</h3>
                             <p className="text-sm text-teal-600 mt-1">Score</p>
-                            <p className="text-xs text-teal-500 mt-2">Real-world robotic manipulation</p>
+                            <p className="text-xs text-teal-500 mt-2 flex-grow">Real-world robotic manipulation</p>
+                        </a>
+                        <a
+                            href="https://robocasa.ai/"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="bg-rose-50 border border-rose-200 rounded-lg p-5 hover:shadow-md transition-shadow flex flex-col"
+                        >
+                            <h3 className="font-semibold text-rose-800 text-lg">RoboCasa-GR1-Tabletop</h3>
+                            <p className="text-sm text-rose-600 mt-1">Average Success Rate (%)</p>
+                            <p className="text-xs text-rose-500 mt-2 flex-grow">Tabletop manipulation tasks</p>
                         </a>
                     </div>
                 </div>

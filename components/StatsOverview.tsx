@@ -10,12 +10,14 @@ interface StatsData {
     calvinModels: number;
     metaworldModels: number;
     robochallengeModels: number;
+    robocasaModels: number;
     latestYear: string;
     topLibero: { name: string; score: number };
     topLiberoPlus: { name: string; score: number };
     topCalvin: { name: string; score: number };
     topMetaworld: { name: string; score: number };
     topRobochallenge: { name: string; score: number };
+    topRobocasa: { name: string; score: number };
 }
 
 export default function StatsOverview() {
@@ -28,17 +30,19 @@ export default function StatsOverview() {
         calvinModels: 0,
         metaworldModels: 0,
         robochallengeModels: 0,
+        robocasaModels: 0,
     });
 
     useEffect(() => {
         const loadStats = async () => {
             try {
-                const [liberoRes, liberoPlusRes, calvinRes, metaworldRes, robochallengeRes] = await Promise.all([
+                const [liberoRes, liberoPlusRes, calvinRes, metaworldRes, robochallengeRes, robocasaRes] = await Promise.all([
                     fetch(`/data/libero.json`),
                     fetch(`/data/liberoPlus.json`),
                     fetch(`/data/calvin.json`),
                     fetch(`/data/metaworld.json`),
-                    fetch(`/data/robochallenge.json`)
+                    fetch(`/data/robochallenge.json`),
+                    fetch(`/data/robocasa_gr1_tabletop.json`)
                 ]);
 
                 const libero = await liberoRes.json();
@@ -46,6 +50,7 @@ export default function StatsOverview() {
                 const calvin = await calvinRes.json();
                 const metaworld = await metaworldRes.json();
                 const robochallenge = await robochallengeRes.json();
+                const robocasa = await robocasaRes.json();
 
                 // 计算统计数据 - 使用标准开源模型数量
                 const liberoCount = libero.standard_opensource?.length || 0;
@@ -53,6 +58,7 @@ export default function StatsOverview() {
                 const calvinCount = calvin.abc_d?.standard_opensource?.length || 0;
                 const metaworldCount = metaworld.standard_opensource?.length || 0;
                 const robochallengeCount = robochallenge.standard_opensource?.length || 0;
+                const robocasaCount = robocasa.standard_opensource?.length || 0;
 
                 // 获取第一名
                 const topLiberoModel = libero.standard_opensource?.[0];
@@ -65,20 +71,23 @@ export default function StatsOverview() {
                 const topCalvinModel = calvin.abc_d?.standard_opensource?.[0];
                 const topMetaworldModel = metaworld.standard_opensource?.[0];
                 const topRobochallengeModel = robochallenge.standard_opensource?.[0];
+                const topRobocasaModel = robocasa.standard_opensource?.[0];
 
                 const newStats: StatsData = {
-                    totalModels: liberoCount + liberoPlusCount + calvinCount + metaworldCount + robochallengeCount,
+                    totalModels: liberoCount + liberoPlusCount + calvinCount + metaworldCount + robochallengeCount + robocasaCount,
                     liberoModels: liberoCount,
                     liberoPlusModels: liberoPlusCount,
                     calvinModels: calvinCount,
                     metaworldModels: metaworldCount,
                     robochallengeModels: robochallengeCount,
+                    robocasaModels: robocasaCount,
                     latestYear: '2025',
                     topLibero: { name: topLiberoModel?.name || 'N/A', score: topLiberoModel?.average || 0 },
                     topLiberoPlus: { name: topLiberoPlusModel?.name || 'N/A', score: topLiberoPlusModel?.total || 0 },
                     topCalvin: { name: topCalvinModel?.name || 'N/A', score: topCalvinModel?.avg_len || 0 },
                     topMetaworld: { name: topMetaworldModel?.name || 'N/A', score: topMetaworldModel?.average || 0 },
                     topRobochallenge: { name: topRobochallengeModel?.name || 'N/A', score: topRobochallengeModel?.score || 0 },
+                    topRobocasa: { name: topRobocasaModel?.name || 'N/A', score: topRobocasaModel?.avg_success_rate || 0 },
                 };
 
                 setStats(newStats);
@@ -101,6 +110,7 @@ export default function StatsOverview() {
                         calvinModels: Math.round(newStats.calvinModels * easeOut),
                         metaworldModels: Math.round(newStats.metaworldModels * easeOut),
                         robochallengeModels: Math.round(newStats.robochallengeModels * easeOut),
+                        robocasaModels: Math.round(newStats.robocasaModels * easeOut),
                     });
 
                     if (currentStep >= steps) {
@@ -158,7 +168,7 @@ export default function StatsOverview() {
             <div className="max-w-7xl mx-auto">
                 <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
                     {/* Total Models */}
-                    <div className="bg-white rounded-xl p-6 shadow-sm border border-slate-200 hover:shadow-md transition-shadow">
+                    <div className="bg-white rounded-xl p-6 shadow-sm border border-slate-200 hover:shadow-md transition-shadow flex flex-col items-start justify-center">
                         <div className="text-4xl font-bold text-primary-600 mb-1">
                             {animatedValues.totalModels}+
                         </div>
@@ -166,13 +176,13 @@ export default function StatsOverview() {
                     </div>
 
                     {/* Benchmarks */}
-                    <div className="bg-white rounded-xl p-6 shadow-sm border border-slate-200 hover:shadow-md transition-shadow">
-                        <div className="text-4xl font-bold text-purple-600 mb-1">5</div>
+                    <div className="bg-white rounded-xl p-6 shadow-sm border border-slate-200 hover:shadow-md transition-shadow flex flex-col items-start justify-center">
+                        <div className="text-4xl font-bold text-purple-600 mb-1">6</div>
                         <div className="text-slate-600 text-sm">{t.benchmarks}</div>
                     </div>
 
                     {/* Years */}
-                    <div className="bg-white rounded-xl p-6 shadow-sm border border-slate-200 hover:shadow-md transition-shadow">
+                    <div className="bg-white rounded-xl p-6 shadow-sm border border-slate-200 hover:shadow-md transition-shadow flex flex-col items-start justify-center">
                         <div className="text-4xl font-bold text-emerald-600 mb-1">3+</div>
                         <div className="text-slate-600 text-sm">{t.yearsOfProgress}</div>
                     </div>
@@ -180,25 +190,28 @@ export default function StatsOverview() {
                     {/* Distribution */}
                     <div className="bg-white rounded-xl p-6 shadow-sm border border-slate-200 hover:shadow-md transition-shadow">
                         <div className="text-sm text-slate-600 mb-2">{t.covering}</div>
-                        <div className="flex flex-wrap items-center gap-1 text-xs">
-                            <span className="px-2 py-1 bg-blue-100 text-blue-700 rounded-full font-medium">
+                        <div className="flex flex-wrap items-center gap-1" style={{ fontSize: '10px' }}>
+                            <span className="px-1.5 py-0.5 bg-blue-100 text-blue-700 rounded-full font-medium">
                                 LIBERO: {animatedValues.liberoModels}
                             </span>
-                            <span className="px-2 py-1 bg-orange-100 text-orange-700 rounded-full font-medium">
+                            <span className="px-1.5 py-0.5 bg-orange-100 text-orange-700 rounded-full font-medium">
                                 LIBERO Plus: {animatedValues.liberoPlusModels}
                             </span>
                         </div>
-                        <div className="flex flex-wrap items-center gap-1 text-xs mt-1">
-                            <span className="px-2 py-1 bg-purple-100 text-purple-700 rounded-full font-medium">
+                        <div className="flex flex-wrap items-center gap-1 mt-1" style={{ fontSize: '10px' }}>
+                            <span className="px-1.5 py-0.5 bg-purple-100 text-purple-700 rounded-full font-medium">
                                 Meta-World: {animatedValues.metaworldModels}
                             </span>
-                            <span className="px-2 py-1 bg-emerald-100 text-emerald-700 rounded-full font-medium">
+                            <span className="px-1.5 py-0.5 bg-emerald-100 text-emerald-700 rounded-full font-medium">
                                 CALVIN: {animatedValues.calvinModels}
                             </span>
                         </div>
-                        <div className="flex flex-wrap items-center gap-1 text-xs mt-1">
-                            <span className="px-2 py-1 bg-teal-100 text-teal-700 rounded-full font-medium">
+                        <div className="flex flex-wrap items-center gap-1 mt-1" style={{ fontSize: '10px' }}>
+                            <span className="px-1.5 py-0.5 bg-teal-100 text-teal-700 rounded-full font-medium">
                                 RoboChallenge: {animatedValues.robochallengeModels}
+                            </span>
+                            <span className="px-1.5 py-0.5 bg-rose-100 text-rose-700 rounded-full font-medium">
+                                RoboCasa-GR1: {animatedValues.robocasaModels}
                             </span>
                         </div>
                     </div>
@@ -209,7 +222,7 @@ export default function StatsOverview() {
                     <h3 className="text-lg font-semibold text-slate-700 mb-4 text-center">
                         🏆 {t.currentLeaders}
                     </h3>
-                    <div className="grid md:grid-cols-5 gap-4">
+                    <div className="grid md:grid-cols-6 gap-4">
                         <div className="bg-gradient-to-br from-orange-500 to-orange-600 text-white rounded-xl p-4 shadow-lg">
                             <div className="text-xs opacity-80 mb-1">LIBERO Plus</div>
                             <div className="font-bold text-lg truncate">{stats.topLiberoPlus.name}</div>
@@ -234,6 +247,11 @@ export default function StatsOverview() {
                             <div className="text-xs opacity-80 mb-1">RoboChallenge</div>
                             <div className="font-bold text-lg truncate">{stats.topRobochallenge.name}</div>
                             <div className="text-2xl font-mono mt-1">{stats.topRobochallenge.score}</div>
+                        </div>
+                        <div className="bg-gradient-to-br from-rose-500 to-rose-600 text-white rounded-xl p-4 shadow-lg">
+                            <div className="text-xs opacity-80 mb-1">RoboCasa-GR1-Tabletop</div>
+                            <div className="font-bold text-lg truncate">{stats.topRobocasa.name}</div>
+                            <div className="text-2xl font-mono mt-1">{stats.topRobocasa.score}%</div>
                         </div>
                     </div>
                 </div>
