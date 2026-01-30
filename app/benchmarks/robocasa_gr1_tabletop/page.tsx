@@ -8,11 +8,11 @@ import ContactFooter from '@/components/ContactFooter';
 // 1. 定义符合你要求的新数据结构
 interface RoboCasaModel {
     name: string;
-    paper_url: string | null;      
-    pub_date: string | null;       
-    is_opensource: boolean;        
-    opensource_url: string | null; 
-    avg_success_rate: number | null;     
+    paper_url: string | null;
+    pub_date: string | null;
+    is_opensource: boolean;
+    opensource_url: string | null;
+    avg_success_rate: number | null;
     note: string;
     rank: number;
     source: string;
@@ -145,7 +145,7 @@ export default function RoboCasaPage() {
 
     const formatValue = (value: number | null): string => {
         if (value === null) return '-';
-        return `${value.toFixed(2)}%`;
+        return `${value.toFixed(1)}%`;
     };
 
     const getRankStyle = (rank: number) => {
@@ -168,7 +168,7 @@ export default function RoboCasaPage() {
                                 <div className="flex items-center gap-1">
                                     {t.rank}
                                     {sortBy === 'rank' && (
-                                        <span className="text-teal-600">{sortOrder === 'asc' ? '↑' : '↓'}</span>
+                                        <span className="text-rose-600">{sortOrder === 'asc' ? '↑' : '↓'}</span>
                                     )}
                                 </div>
                             </th>
@@ -182,7 +182,7 @@ export default function RoboCasaPage() {
                                 <div className="flex items-center gap-1">
                                     {t.score}
                                     {sortBy === 'avg_success_rate' && (
-                                        <span className="text-teal-600">{sortOrder === 'desc' ? '↓' : '↑'}</span>
+                                        <span className="text-rose-600">{sortOrder === 'desc' ? '↓' : '↑'}</span>
                                     )}
                                 </div>
                             </th>
@@ -193,7 +193,7 @@ export default function RoboCasaPage() {
                                 <div className="flex items-center gap-1">
                                     {t.date}
                                     {sortBy === 'date' && (
-                                        <span className="text-teal-600">{sortOrder === 'desc' ? '↓' : '↑'}</span>
+                                        <span className="text-rose-600">{sortOrder === 'desc' ? '↓' : '↑'}</span>
                                     )}
                                 </div>
                             </th>
@@ -207,7 +207,7 @@ export default function RoboCasaPage() {
                                 <>
                                     <tr
                                         key={rowKey}
-                                        className={`border-b border-slate-100 hover:bg-slate-50 cursor-pointer transition-colors ${expandedRows.has(rowKey) ? 'bg-teal-50' : ''}`}
+                                        className={`border-b border-slate-100 hover:bg-slate-50 cursor-pointer transition-colors ${expandedRows.has(rowKey) ? 'bg-rose-50' : ''}`}
                                         onClick={() => toggleRow(rowKey)}
                                     >
                                         <td className="px-4 py-3">
@@ -227,7 +227,7 @@ export default function RoboCasaPage() {
                                             <div className="text-xs text-slate-500">{model.source || ''}</div>
                                         </td>
                                         <td className="px-4 py-3">
-                                            <span className="font-mono text-lg font-semibold text-teal-600">
+                                            <span className="font-mono text-lg font-semibold text-rose-600">
                                                 {formatValue(model.avg_success_rate)}
                                             </span>
                                         </td>
@@ -238,7 +238,7 @@ export default function RoboCasaPage() {
                                                     href={model.paper_url}
                                                     target="_blank"
                                                     rel="noopener noreferrer"
-                                                    className="text-teal-600 hover:text-teal-800 hover:underline text-sm"
+                                                    className="text-rose-600 hover:text-rose-800 hover:underline text-sm"
                                                     onClick={(e) => e.stopPropagation()}
                                                 >
                                                     📄 Link
@@ -247,13 +247,13 @@ export default function RoboCasaPage() {
                                         </td>
                                     </tr>
                                     {expandedRows.has(rowKey) && (
-                                        <tr key={`${rowKey}-expanded`} className="bg-teal-50 border-b border-slate-200">
+                                        <tr key={`${rowKey}-expanded`} className="bg-rose-50 border-b border-slate-200">
                                             <td colSpan={5} className="px-4 py-4">
                                                 <div className="ml-12 space-y-4">
                                                     <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-                                                        <div className="bg-teal-100 rounded-lg p-3 shadow-sm">
-                                                            <div className="text-xs text-teal-600 mb-1">{t.score}</div>
-                                                            <div className="font-mono text-xl font-semibold text-teal-700">
+                                                        <div className="bg-rose-100 rounded-lg p-3 shadow-sm">
+                                                            <div className="text-xs text-rose-600 mb-1">{t.score}</div>
+                                                            <div className="font-mono text-xl font-semibold text-rose-700">
                                                                 {formatValue(model.avg_success_rate)}
                                                             </div>
                                                         </div>
@@ -286,7 +286,7 @@ export default function RoboCasaPage() {
                                                                 href={model.paper_url}
                                                                 target="_blank"
                                                                 rel="noopener noreferrer"
-                                                                className="inline-flex items-center gap-1 px-3 py-1.5 bg-teal-600 text-white rounded-lg text-sm hover:bg-teal-700 transition-colors"
+                                                                className="inline-flex items-center gap-1 px-3 py-1.5 bg-rose-600 text-white rounded-lg text-sm hover:bg-rose-700 transition-colors"
                                                                 onClick={(e) => e.stopPropagation()}
                                                             >
                                                                 📄 {t.paper}
@@ -322,25 +322,25 @@ export default function RoboCasaPage() {
 
     return (
         <div className="min-h-screen bg-slate-50">
-            <div className="bg-gradient-to-r from-teal-500 to-teal-600 text-white py-12 px-4">
+            <div className="bg-gradient-to-r from-rose-500 to-rose-600 text-white py-12 px-4">
                 <div className="max-w-7xl mx-auto">
-                    <div className="flex items-center gap-2 text-teal-200 text-sm mb-4">
+                    <div className="flex items-center gap-2 text-rose-200 text-sm mb-4">
                         <Link href="/" className="hover:text-white transition-colors">Home</Link>
                         <span>/</span>
                         <span>RoboCasa</span>
                     </div>
                     <h1 className="text-3xl md:text-4xl font-bold mb-4">{t.title}</h1>
-                    <p className="text-teal-100 max-w-3xl mb-4">{t.benchmarkIntro}</p>
+                    <p className="text-rose-100 max-w-3xl mb-4">{t.benchmarkIntro}</p>
                     <a
-                        href="https://github.com/robocasa/robocasa-gr1-tabletop-tasks" 
+                        href="https://github.com/robocasa/robocasa-gr1-tabletop-tasks"
                         target="_blank"
                         rel="noopener noreferrer"
-                        className="inline-flex items-center gap-2 px-4 py-2 bg-teal-400 hover:bg-teal-300 rounded-lg text-sm transition-colors"
+                        className="inline-flex items-center gap-2 px-4 py-2 bg-rose-400 hover:bg-rose-300 rounded-lg text-sm transition-colors"
                     >
                         🌐 {t.benchmarkLink}
                     </a>
                     <div className="mt-4 flex items-center gap-4">
-                        <span className="px-3 py-1 bg-teal-400 rounded-full text-sm">
+                        <span className="px-3 py-1 bg-rose-400 rounded-full text-sm">
                             {displayData.length} {t.models}
                         </span>
                     </div>
