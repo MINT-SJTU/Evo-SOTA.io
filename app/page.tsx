@@ -109,7 +109,7 @@ export default function Home() {
         // 模型列表（需要斜体和紫色）
         const models = [
             'DeepThinkVLA', 'Dadu-Corki', 'RoboTron Mani', 'CronusVLA', 'InstructVLA', 'InternVLA-M1', 'ACoT-VLA',
-            'OpenVLA', 'Pi0', 'RIPT', 'NORA-1.5', 'Being-H0.5', 'EO-1', 'DreamVLA', 'Rlinf-VLA', 'pi-RL'
+            'OpenVLA', 'Pi0', 'RIPT', 'NORA-1.5', 'Being-H0.5', 'EO-1', 'DreamVLA', 'Rlinf-VLA', 'pi-RL', 'UnifoLM-VLA-0'
         ];
 
         let formattedContent = content;
@@ -358,11 +358,11 @@ export default function Home() {
                                 >
                                     {/* Card Header */}
                                     <div className="p-6 border-b border-slate-200 bg-white">
-                                        <div className="flex items-center justify-between mb-2">
-                                            <h3 className={`text-xl font-bold ${colors.text} h-14 flex items-center`}>
+                                        <div className="flex items-start justify-between mb-2 gap-2">
+                                            <h3 className={`text-xl font-bold ${colors.text} min-h-[3.5rem] flex items-center flex-1 min-w-0 leading-tight`}>
                                                 {benchmark.name}
                                             </h3>
-                                            <span className={`px-2 py-1 rounded-full text-xs font-medium ${colors.badge}`}>
+                                            <span className={`px-2 py-1 rounded-full text-xs font-medium ${colors.badge} whitespace-nowrap flex-shrink-0 mt-1`}>
                                                 {benchmark.modelCount} {t.home.models}
                                             </span>
                                         </div>
@@ -424,7 +424,7 @@ export default function Home() {
                         })}
                     </div>
 
-                    {/* 第二行: LIBERO Plus, RoboChallenge (居中) */}
+                    {/* 第二行: LIBERO Plus, RoboChallenge, RoboCasa-GR1_tabletop */}
                     <div className="flex justify-center gap-5 flex-wrap">
                         {secondRowBenchmarks.map((benchmark) => {
                             const colors = colorClasses[benchmark.color as keyof typeof colorClasses];
@@ -435,11 +435,11 @@ export default function Home() {
                                 >
                                     {/* Card Header */}
                                     <div className="p-6 border-b border-slate-200 bg-white">
-                                        <div className="flex items-center justify-between mb-2">
-                                            <h3 className={`text-xl font-bold ${colors.text} h-14 flex items-center`}>
+                                        <div className="flex items-start justify-between mb-2 gap-2">
+                                            <h3 className={`text-xl font-bold ${colors.text} min-h-[3.5rem] flex items-center flex-1 min-w-0 leading-tight`}>
                                                 {benchmark.name}
                                             </h3>
-                                            <span className={`px-2 py-1 rounded-full text-xs font-medium ${colors.badge}`}>
+                                            <span className={`px-2 py-1 rounded-full text-xs font-medium ${colors.badge} whitespace-nowrap flex-shrink-0 mt-1`}>
                                                 {benchmark.modelCount} {t.home.models}
                                             </span>
                                         </div>

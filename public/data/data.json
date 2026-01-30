@@ -1,7 +1,7 @@
 {
   "libero": {
-    "total_models": 72,
-    "standard_opensource_count": 44,
+    "total_models": 73,
+    "standard_opensource_count": 45,
     "standard_closed_count": 13,
     "non_standard_count": 15,
     "primary_metric": "Average Success Rate (%)",
@@ -17,18 +17,18 @@
         "rank": 2
       },
       {
+        "name": "UnifoLM-VLA-0",
+        "score": 98.7,
+        "rank": 3
+      },
+      {
         "name": "VLA-Adapter-pro",
         "score": 98.5,
-        "rank": 3
+        "rank": 4
       },
       {
         "name": "pi-RL",
         "score": 98.3,
-        "rank": 4
-      },
-      {
-        "name": "EO-1",
-        "score": 98.2,
         "rank": 5
       }
     ]

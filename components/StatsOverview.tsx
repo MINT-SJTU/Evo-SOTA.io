@@ -168,7 +168,7 @@ export default function StatsOverview() {
             <div className="max-w-7xl mx-auto">
                 <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
                     {/* Total Models */}
-                    <div className="bg-white rounded-xl p-6 shadow-sm border border-slate-200 hover:shadow-md transition-shadow">
+                    <div className="bg-white rounded-xl p-6 shadow-sm border border-slate-200 hover:shadow-md transition-shadow flex flex-col items-start justify-center">
                         <div className="text-4xl font-bold text-primary-600 mb-1">
                             {animatedValues.totalModels}+
                         </div>
@@ -176,13 +176,13 @@ export default function StatsOverview() {
                     </div>
 
                     {/* Benchmarks */}
-                    <div className="bg-white rounded-xl p-6 shadow-sm border border-slate-200 hover:shadow-md transition-shadow">
+                    <div className="bg-white rounded-xl p-6 shadow-sm border border-slate-200 hover:shadow-md transition-shadow flex flex-col items-start justify-center">
                         <div className="text-4xl font-bold text-purple-600 mb-1">6</div>
                         <div className="text-slate-600 text-sm">{t.benchmarks}</div>
                     </div>
 
                     {/* Years */}
-                    <div className="bg-white rounded-xl p-6 shadow-sm border border-slate-200 hover:shadow-md transition-shadow">
+                    <div className="bg-white rounded-xl p-6 shadow-sm border border-slate-200 hover:shadow-md transition-shadow flex flex-col items-start justify-center">
                         <div className="text-4xl font-bold text-emerald-600 mb-1">3+</div>
                         <div className="text-slate-600 text-sm">{t.yearsOfProgress}</div>
                     </div>
@@ -190,28 +190,28 @@ export default function StatsOverview() {
                     {/* Distribution */}
                     <div className="bg-white rounded-xl p-6 shadow-sm border border-slate-200 hover:shadow-md transition-shadow">
                         <div className="text-sm text-slate-600 mb-2">{t.covering}</div>
-                        <div className="flex flex-wrap items-center gap-1 text-xs">
-                            <span className="px-2 py-1 bg-blue-100 text-blue-700 rounded-full font-medium">
+                        <div className="flex flex-wrap items-center gap-1" style={{ fontSize: '10px' }}>
+                            <span className="px-1.5 py-0.5 bg-blue-100 text-blue-700 rounded-full font-medium">
                                 LIBERO: {animatedValues.liberoModels}
                             </span>
-                            <span className="px-2 py-1 bg-orange-100 text-orange-700 rounded-full font-medium">
+                            <span className="px-1.5 py-0.5 bg-orange-100 text-orange-700 rounded-full font-medium">
                                 LIBERO Plus: {animatedValues.liberoPlusModels}
                             </span>
                         </div>
-                        <div className="flex flex-wrap items-center gap-1 text-xs mt-1">
-                            <span className="px-2 py-1 bg-purple-100 text-purple-700 rounded-full font-medium">
+                        <div className="flex flex-wrap items-center gap-1 mt-1" style={{ fontSize: '10px' }}>
+                            <span className="px-1.5 py-0.5 bg-purple-100 text-purple-700 rounded-full font-medium">
                                 Meta-World: {animatedValues.metaworldModels}
                             </span>
-                            <span className="px-2 py-1 bg-emerald-100 text-emerald-700 rounded-full font-medium">
+                            <span className="px-1.5 py-0.5 bg-emerald-100 text-emerald-700 rounded-full font-medium">
                                 CALVIN: {animatedValues.calvinModels}
                             </span>
                         </div>
-                        <div className="flex flex-wrap items-center gap-1 text-xs mt-1">
-                            <span className="px-2 py-1 bg-teal-100 text-teal-700 rounded-full font-medium">
+                        <div className="flex flex-wrap items-center gap-1 mt-1" style={{ fontSize: '10px' }}>
+                            <span className="px-1.5 py-0.5 bg-teal-100 text-teal-700 rounded-full font-medium">
                                 RoboChallenge: {animatedValues.robochallengeModels}
                             </span>
-                            <span className="px-2 py-1 bg-rose-100 text-rose-700 rounded-full font-medium">
-                                RoboCasa: {animatedValues.robocasaModels}
+                            <span className="px-1.5 py-0.5 bg-rose-100 text-rose-700 rounded-full font-medium">
+                                RoboCasa-GR1: {animatedValues.robocasaModels}
                             </span>
                         </div>
                     </div>
@@ -249,7 +249,7 @@ export default function StatsOverview() {
                             <div className="text-2xl font-mono mt-1">{stats.topRobochallenge.score}</div>
                         </div>
                         <div className="bg-gradient-to-br from-rose-500 to-rose-600 text-white rounded-xl p-4 shadow-lg">
-                            <div className="text-xs opacity-80 mb-1">RoboCasa</div>
+                            <div className="text-xs opacity-80 mb-1">RoboCasa-GR1-Tabletop</div>
                             <div className="font-bold text-lg truncate">{stats.topRobocasa.name}</div>
                             <div className="text-2xl font-mono mt-1">{stats.topRobocasa.score}%</div>
                         </div>

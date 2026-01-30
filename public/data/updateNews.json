@@ -2,8 +2,8 @@
     "news": [
         {
             "date": "🗓️ 2026-01-30: ",
-            "content_en": "🚀 Major update: New Leaderboard: RoboCasa-GR1-Tabletop; Added related models in this benchmark.",
-            "content_zh": "🚀 重大更新: 新增榜单: RoboCasa-GR1-Tabletop；添加了此榜单中的相关模型。"
+            "content_en": "🚀 Major update: New Leaderboard: RoboCasa-GR1-Tabletop; New models: Add UnifoLM-VLA-0 to LIBERO",
+            "content_zh": "🚀 重大更新: 新增榜单: RoboCasa-GR1-Tabletop；新增模型：增加UnifoLM-VLA-0 到 LIBERO"
         },
         {
             "date": "🗓️ 2026-01-29: ",
