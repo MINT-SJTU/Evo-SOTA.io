@@ -255,7 +255,7 @@
         "base_name": "GR-2",
         "setting": "",
         "paper_url": "https://arxiv.org/abs/2410.06158",
-        "pub_date": "2024-01",
+        "pub_date": "2024-10",
         "is_opensource": false,
         "opensource_url": null,
         "is_standard": true,
@@ -313,6 +313,25 @@
   "abc_d": {
     "standard_opensource": [
       {
+        "name": "pi-RL",
+        "base_name": "pi-RL",
+        "setting": "",
+        "paper_url": "https://arxiv.org/abs/2510.25889",
+        "pub_date": "2025-10",
+        "is_opensource": true,
+        "opensource_url": "https://github.com/RLinf/RLinf",
+        "is_standard": true,
+        "note": "",
+        "inst1": 0.997,
+        "inst2": 0.982,
+        "inst3": 0.958,
+        "inst4": 0.91,
+        "inst5": 0.87,
+        "avg_len": 4.71,
+        "source": "original",
+        "rank": 1
+      },
+      {
         "name": "Flower VLA",
         "base_name": "Flower VLA",
         "setting": "",
@@ -329,7 +348,7 @@
         "inst5": 0.778,
         "avg_len": 4.53,
         "source": "original",
-        "rank": 1
+        "rank": 2
       },
       {
         "name": "VLA-Adapter-pro",
@@ -348,7 +367,7 @@
         "inst5": 0.8,
         "avg_len": 4.5,
         "source": "original",
-        "rank": 2
+        "rank": 3
       },
       {
         "name": "DreamVLA",
@@ -367,14 +386,14 @@
         "inst5": 0.781,
         "avg_len": 4.44,
         "source": "original",
-        "rank": 3
+        "rank": 4
       },
       {
         "name": "X-VLA",
         "base_name": "X-VLA",
         "setting": "",
         "paper_url": "https://arxiv.org/abs/2510.10274",
-        "pub_date": "2025-01",
+        "pub_date": "2025-10",
         "is_opensource": true,
         "opensource_url": "https://github.com/2toinf/X-VLA",
         "is_standard": true,
@@ -386,7 +405,7 @@
         "inst5": null,
         "avg_len": 4.43,
         "source": "original",
-        "rank": 4
+        "rank": 5
       },
       {
         "name": "UnifiedVLA",
@@ -405,7 +424,7 @@
         "inst5": 0.751,
         "avg_len": 4.41,
         "source": "original",
-        "rank": 5
+        "rank": 6
       },
       {
         "name": "VPP",
@@ -424,7 +443,7 @@
         "inst5": 0.769,
         "avg_len": 4.33,
         "source": "original",
-        "rank": 6
+        "rank": 7
       },
       {
         "name": "Seer",
@@ -443,7 +462,7 @@
         "inst5": 0.74,
         "avg_len": 4.28,
         "source": "original",
-        "rank": 7
+        "rank": 8
       },
       {
         "name": "UP-VLA",
@@ -462,7 +481,7 @@
         "inst5": 0.699,
         "avg_len": 4.08,
         "source": "original",
-        "rank": 8
+        "rank": 9
       },
       {
         "name": "GR-MG",
@@ -481,7 +500,7 @@
         "inst5": 0.644,
         "avg_len": 4.04,
         "source": "original",
-        "rank": 9
+        "rank": 10
       },
       {
         "name": "MoDE",
@@ -500,14 +519,14 @@
         "inst5": 0.635,
         "avg_len": 4.01,
         "source": "original",
-        "rank": 10
+        "rank": 11
       },
       {
         "name": "GHIL-Glue",
         "base_name": "GHIL-Glue",
         "setting": "",
         "paper_url": "https://arxiv.org/pdf/2410.20018",
-        "pub_date": "2024-01",
+        "pub_date": "2024-10",
         "is_opensource": true,
         "opensource_url": "https://github.com/kyle-hatch-tri/ghil-glue",
         "is_standard": true,
@@ -519,7 +538,7 @@
         "inst5": 0.498,
         "avg_len": 3.69,
         "source": "original",
-        "rank": 11
+        "rank": 12
       },
       {
         "name": "CEED-VLA",
@@ -538,7 +557,7 @@
         "inst5": null,
         "avg_len": 3.67,
         "source": "original",
-        "rank": 12
+        "rank": 13
       },
       {
         "name": "RoboUniview",
@@ -557,7 +576,7 @@
         "inst5": 0.507,
         "avg_len": 3.65,
         "source": "original",
-        "rank": 13
+        "rank": 14
       },
       {
         "name": "Dita",
@@ -576,7 +595,7 @@
         "inst5": 0.5,
         "avg_len": 3.61,
         "source": "original",
-        "rank": 14
+        "rank": 15
       },
       {
         "name": "CLOVER",
@@ -595,14 +614,14 @@
         "inst5": 0.454,
         "avg_len": 3.53,
         "source": "original",
-        "rank": 15
+        "rank": 16
       },
       {
         "name": "RoboDual",
         "base_name": "RoboDual",
         "setting": "",
         "paper_url": "https://arxiv.org/pdf/2410.08001",
-        "pub_date": "2024-01",
+        "pub_date": "2024-10",
         "is_opensource": true,
         "opensource_url": "https://github.com/OpenDriveLab/RoboDual",
         "is_standard": true,
@@ -614,7 +633,7 @@
         "inst5": 0.488,
         "avg_len": 3.47,
         "source": "original",
-        "rank": 16
+        "rank": 17
       },
       {
         "name": "Vidman",
@@ -633,7 +652,7 @@
         "inst5": 0.467,
         "avg_len": 3.42,
         "source": "original",
-        "rank": 17
+        "rank": 18
       },
       {
         "name": "3D Diffuser Actor",
@@ -652,7 +671,7 @@
         "inst5": 0.412,
         "avg_len": 3.35,
         "source": "original",
-        "rank": 18
+        "rank": 19
       },
       {
         "name": "Moto",
@@ -671,7 +690,7 @@
         "inst5": 0.386,
         "avg_len": 3.1,
         "source": "original",
-        "rank": 19
+        "rank": 20
       },
       {
         "name": "GR-1",
@@ -690,7 +709,7 @@
         "inst5": 0.401,
         "avg_len": 3.06,
         "source": "original",
-        "rank": 20
+        "rank": 21
       },
       {
         "name": "DeeR-VLA",
@@ -709,14 +728,14 @@
         "inst5": null,
         "avg_len": 2.9,
         "source": "original",
-        "rank": 21
+        "rank": 22
       },
       {
         "name": "SuSIE",
         "base_name": "SuSIE",
         "setting": "",
         "paper_url": "https://arxiv.org/abs/2310.10639",
-        "pub_date": "2023-01",
+        "pub_date": "2023-10",
         "is_opensource": true,
         "opensource_url": "https://github.com/kvablack/susie",
         "is_standard": true,
@@ -728,7 +747,7 @@
         "inst5": 0.26,
         "avg_len": 2.69,
         "source": "original",
-        "rank": 22
+        "rank": 23
       },
       {
         "name": "RoboFlamingo",
@@ -747,7 +766,7 @@
         "inst5": 0.235,
         "avg_len": 2.48,
         "source": "original",
-        "rank": 23
+        "rank": 24
       },
       {
         "name": "SPIL",
@@ -766,7 +785,7 @@
         "inst5": 0.08,
         "avg_len": 1.71,
         "source": "original",
-        "rank": 24
+        "rank": 25
       },
       {
         "name": "MDT",
@@ -785,7 +804,7 @@
         "inst5": 0.091,
         "avg_len": 1.55,
         "source": "from FLOWER & VPP",
-        "rank": 25
+        "rank": 26
       },
       {
         "name": "RT-1",
@@ -804,7 +823,7 @@
         "inst5": 0.013,
         "avg_len": 0.9,
         "source": "from VPP & RoboUniview & RoboDual & GR-1",
-        "rank": 26
+        "rank": 27
       },
       {
         "name": "HULC",
@@ -823,7 +842,7 @@
         "inst5": 0.011,
         "avg_len": 0.67,
         "source": "original",
-        "rank": 27
+        "rank": 28
       },
       {
         "name": "Diffusion Policy",
@@ -842,7 +861,7 @@
         "inst5": 0.0,
         "avg_len": 0.56,
         "source": "from UP-VLA",
-        "rank": 28
+        "rank": 29
       }
     ],
     "standard_closed": [
@@ -1085,7 +1104,7 @@
         "base_name": "TaKSIE",
         "setting": "",
         "paper_url": "https://arxiv.org/pdf/2410.11013",
-        "pub_date": "2024-01",
+        "pub_date": "2024-10",
         "is_opensource": true,
         "opensource_url": "https://github.com/Shua-Kang/TaKSIE",
         "is_standard": true,
@@ -1142,7 +1161,7 @@
         "base_name": "LCD",
         "setting": "",
         "paper_url": "https://arxiv.org/pdf/2210.15629",
-        "pub_date": "2022-01",
+        "pub_date": "2022-10",
         "is_opensource": true,
         "opensource_url": "https://github.com/ezhang7423/language-control-diffusion",
         "is_standard": true,

@@ -135,6 +135,15 @@ export default function Home() {
         return formattedContent;
     };
 
+    // 格式化分数：根据不同 benchmark 使用不同小数位数
+    // CALVIN, RoboChallenge: 两位小数
+    // LIBERO, Meta-World, LIBERO Plus, RoboCasa-GR1-Tabletop: 一位小数
+    const formatScore = (score: number, benchmarkId: string): string => {
+        const twoDecimalBenchmarks = ['calvin', 'robochallenge'];
+        const decimals = twoDecimalBenchmarks.includes(benchmarkId) ? 2 : 1;
+        return score.toFixed(decimals);
+    };
+
     // 构建 benchmarks 数据 - 顺序: libero plus, libero, metaworld, calvin, robochallenge
     // 第一行: libero, metaworld, calvin
     const firstRowBenchmarks = [
@@ -403,7 +412,7 @@ export default function Home() {
                                                         </span>
                                                     </div>
                                                     <span className={`font-semibold text-sm ${colors.text}`}>
-                                                        {model.score}
+                                                        {formatScore(model.score, benchmark.id)}
                                                     </span>
                                                 </div>
                                             ))}
@@ -480,7 +489,7 @@ export default function Home() {
                                                         </span>
                                                     </div>
                                                     <span className={`font-semibold text-sm ${colors.text}`}>
-                                                        {model.score}
+                                                        {formatScore(model.score, benchmark.id)}
                                                     </span>
                                                 </div>
                                             ))}

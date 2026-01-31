@@ -1,10 +1,10 @@
 {
   "standard_opensource": [
     {
-      "name": "BayesianVLA",
-      "base_name": "BayesianVLA",
+      "name": "Langforce",
+      "base_name": "Langforce",
       "setting": "",
-      "paper_url": "https://arxiv.org/html/2601.15197v3",
+      "paper_url": "https://arxiv.org/html/2601.15197v4",
       "pub_date": "2026-01",
       "is_opensource": true,
       "opensource_url": "https://github.com/ZGC-EmbodyAI/BayesianVLA",

@@ -29,8 +29,7 @@ export default function MethodologyPage() {
             starUs: 'Support This Project',
             starUsDesc: 'If you find this leaderboard helpful for your research, please consider giving us a star on GitHub!',
             dataNotice: 'Data Notice',
-            dataNoticeDesc1: 'Data notice last updated: Jan 17, 2026.',
-            dataNoticeDesc2: 'If you find any errors or omissions, please let us know by creating an issue on GitHub or contacting us via email: business@evomind-tech.com',
+            dataNoticeDesc2: 'If you find any errors or omissions, please let us know by creating an issue on GitHub, contacting us via email: business@evomind-tech.com or joining our Wechat group!',
             contactUs: 'Contact Us',
             contactUsDesc: 'Found errors or want to submit your model? Reach out via GitHub Issue, email or Wechat group!',
             contactEmail: 'business@evomind-tech.com',
@@ -58,8 +57,7 @@ export default function MethodologyPage() {
             starUs: '支持本项目',
             starUsDesc: '如果这个排行榜对您的研究有帮助，请考虑在 GitHub 上给我们一个 Star！',
             dataNotice: '数据说明',
-            dataNoticeDesc1: '数据说明最后修改时间：2026年1月17日。',
-            dataNoticeDesc2: '如有错误或遗漏，敬请谅解。您可以在 GitHub 的 Issue 中提出，或通过邮件 business@evomind-tech.com 联系我们，我们会及时改进。',
+            dataNoticeDesc2: '如有错误或遗漏，敬请谅解。您可以在 GitHub 的 Issue 中提出，通过邮件 business@evomind-tech.com 联系我们或加入我们的微信交流群群，我们会及时改进。',
             contactUs: '联系我们',
             contactUsDesc: '发现错误或想提交您的模型？请通过 GitHub Issue，邮件或微信群联系我们！',
             contactEmail: 'business@evomind-tech.com',
@@ -235,10 +233,6 @@ export default function MethodologyPage() {
                                 {t.dataNotice}
                             </h3>
                             <ul className="text-blue-700 space-y-2">
-                                <li className="flex items-start gap-2">
-                                    <span className="text-blue-500 mt-1">•</span>
-                                    {t.dataNoticeDesc1}
-                                </li>
                                 <li className="flex items-start gap-2">
                                     <span className="text-blue-500 mt-1">•</span>
                                     {t.dataNoticeDesc2}
