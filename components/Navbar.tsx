@@ -3,6 +3,7 @@
 import Link from 'next/link';
 import Image from 'next/image';
 import { useState } from 'react';
+import { usePathname } from 'next/navigation';
 import dynamic from 'next/dynamic';
 import { useLanguage } from '@/lib/LanguageContext';
 
@@ -14,6 +15,10 @@ const VisitorCounter = dynamic(() => import('./VisitorCounter'), {
 
 export default function Navbar() {
     const { locale, setLocale, t } = useLanguage();
+    const pathname = usePathname();
+    const isDex = pathname?.startsWith('/dex');
+    const switchHref = isDex ? '/' : '/dex';
+    const switchAria = isDex ? 'Go to VLA site' : 'Go to Dex site';
     const [isMenuOpen, setIsMenuOpen] = useState(false);
     const [isBenchmarkDropdownOpen, setIsBenchmarkDropdownOpen] = useState(false);
 
@@ -106,6 +111,14 @@ export default function Navbar() {
                         {/* Visitor Counter */}
                         <VisitorCounter />
 
+                        <Link
+                            href={switchHref}
+                            aria-label={switchAria}
+                            className="flex items-center space-x-1 px-3 py-1.5 rounded-lg border border-slate-300 hover:border-primary-500 hover:bg-primary-50 transition-colors text-sm font-medium"
+                        >
+                            <span>Dex / VLA</span>
+                        </Link>
+
                         {/* Language Toggle */}
                         <button
                             onClick={toggleLanguage}
@@ -151,6 +164,13 @@ export default function Navbar() {
                                 onClick={() => setIsMenuOpen(false)}
                             >
                                 {t.nav.home}
+                            </Link>
+                            <Link
+                                href={switchHref}
+                                className="block px-4 py-2 text-slate-600 hover:bg-primary-50 hover:text-primary-600 rounded-lg"
+                                onClick={() => setIsMenuOpen(false)}
+                            >
+                                Dex / VLA
                             </Link>
 
                             <div className="px-4 py-2 text-sm font-semibold text-slate-400 uppercase">

@@ -40,3 +40,9 @@ next-env.d.ts
 
 # raw data
 /data/
+
+# Dex data
+data/dex/leaderboard.json
+
+# Local raw assets
+assets/

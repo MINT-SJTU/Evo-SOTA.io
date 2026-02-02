@@ -7,13 +7,16 @@
         "dev": "next dev",
         "build": "next build",
         "start": "next start",
-        "lint": "next lint"
+        "lint": "next lint",
+        "build:dex-data": "node scripts/build-dex-data.mjs",
+        "prebuild": "npm run build:dex-data"
     },
     "dependencies": {
         "next": "^14.2.0",
         "react": "^18.2.0",
         "react-dom": "^18.2.0",
-        "recharts": "^3.6.0"
+        "recharts": "^3.6.0",
+        "xlsx": "^0.18.5"
     },
     "devDependencies": {
         "@types/node": "^20.11.0",
