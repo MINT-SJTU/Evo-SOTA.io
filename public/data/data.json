@@ -1,7 +1,7 @@
 {
   "libero": {
-    "total_models": 72,
-    "standard_opensource_count": 44,
+    "total_models": 73,
+    "standard_opensource_count": 45,
     "standard_closed_count": 13,
     "non_standard_count": 15,
     "primary_metric": "Average Success Rate (%)",
@@ -17,18 +17,18 @@
         "rank": 2
       },
       {
+        "name": "UnifoLM-VLA-0",
+        "score": 98.7,
+        "rank": 3
+      },
+      {
         "name": "VLA-Adapter-pro",
         "score": 98.5,
-        "rank": 3
+        "rank": 4
       },
       {
         "name": "pi-RL",
         "score": 98.3,
-        "rank": 4
-      },
-      {
-        "name": "EO-1",
-        "score": 98.2,
         "rank": 5
       }
     ]
@@ -68,35 +68,35 @@
     ]
   },
   "metaworld": {
-    "total_models": 14,
-    "standard_opensource_count": 6,
+    "total_models": 15,
+    "standard_opensource_count": 7,
     "standard_closed_count": 0,
     "non_standard_count": 8,
     "primary_metric": "Average Success Rate (%)",
     "top_5": [
       {
+        "name": "pi-RL",
+        "score": 85.8,
+        "rank": 1
+      },
+      {
         "name": "Evo-1",
         "score": 80.6,
-        "rank": 1
+        "rank": 2
       },
       {
         "name": "RoboTron Mani",
         "score": 77.7,
-        "rank": 2
+        "rank": 3
       },
       {
         "name": "SmolVLA",
         "score": 68.2,
-        "rank": 3
+        "rank": 4
       },
       {
         "name": "pi0",
         "score": 47.9,
-        "rank": 4
-      },
-      {
-        "name": "TinyVLA-H",
-        "score": 31.6,
         "rank": 5
       }
     ]
@@ -135,43 +135,77 @@
       }
     ]
   },
+  "robocasa": {
+    "total_models": 7,
+    "standard_opensource_count": 7,
+    "standard_closed_count": 0,
+    "non_standard_count": 0,
+    "primary_metric": "Average Success Rate (%)",
+    "top_5": [
+      {
+        "name": "Langforce",
+        "score": 66.5,
+        "rank": 1
+      },
+      {
+        "name": "TwinBrainVLA",
+        "score": 54.6,
+        "rank": 2
+      },
+      {
+        "name": "StarVLA (Qwen3OFT)",
+        "score": 48.8,
+        "rank": 3
+      },
+      {
+        "name": "StarVLA (Qwen3GR00T)",
+        "score": 47.8,
+        "rank": 4
+      },
+      {
+        "name": "GR00T-N1.6",
+        "score": 47.6,
+        "rank": 5
+      }
+    ]
+  },
   "calvin": {
-    "total_models": 36,
-    "standard_opensource_count": 28,
+    "total_models": 37,
+    "standard_opensource_count": 29,
     "standard_closed_count": 5,
     "non_standard_count": 3,
     "primary_metric": "Average Length (Avg. Len.)",
     "description": "ABC-D Setting (Default)",
     "top_5": [
       {
+        "name": "pi-RL",
+        "score": 4.71,
+        "rank": 1
+      },
+      {
         "name": "Flower VLA",
         "score": 4.53,
-        "rank": 1
+        "rank": 2
       },
       {
         "name": "VLA-Adapter-pro",
         "score": 4.5,
-        "rank": 2
+        "rank": 3
       },
       {
         "name": "DreamVLA",
         "score": 4.44,
-        "rank": 3
+        "rank": 4
       },
       {
         "name": "X-VLA",
         "score": 4.43,
-        "rank": 4
-      },
-      {
-        "name": "UnifiedVLA",
-        "score": 4.41,
         "rank": 5
       }
     ],
     "settings": {
       "abcd_d": 16,
-      "abc_d": 36,
+      "abc_d": 37,
       "d_d": 12
     }
   }

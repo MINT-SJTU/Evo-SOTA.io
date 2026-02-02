@@ -1,6 +1,24 @@
 {
   "standard_opensource": [
     {
+      "name": "pi-RL",
+      "base_name": "pi-RL",
+      "setting": "",
+      "paper_url": "https://arxiv.org/abs/2510.25889",
+      "pub_date": "2025-10",
+      "is_opensource": true,
+      "opensource_url": "https://github.com/RLinf/RLinf",
+      "easy": 91.1,
+      "medium": 81.8,
+      "hard": 78.3,
+      "very_hard": 92.0,
+      "average": 85.8,
+      "source": "original",
+      "is_standard": true,
+      "note": "",
+      "rank": 1
+    },
+    {
       "name": "Evo-1",
       "base_name": "Evo-1",
       "setting": "",
@@ -16,7 +34,7 @@
       "source": "original",
       "is_standard": true,
       "note": "",
-      "rank": 1
+      "rank": 2
     },
     {
       "name": "RoboTron Mani",
@@ -34,7 +52,7 @@
       "source": "original",
       "is_standard": true,
       "note": "RoboTron-Mani 采用了自定义的数据生成协议， 而不是标准的训练数据， 但是介于很多别的论文也干了。原文：“ To address the lack of training data for simulation learning, we adopt the scripted policies from Yu et al. [68] and introduce Gaussian noise N(0, 0.1) to the generated actions at each step, resulting in a total of 22,500 trajectories, with each task producing 500 successful trajectories. ”",
-      "rank": 2
+      "rank": 3
     },
     {
       "name": "SmolVLA",
@@ -52,14 +70,14 @@
       "source": "original",
       "is_standard": true,
       "note": "",
-      "rank": 3
+      "rank": 4
     },
     {
       "name": "pi0",
       "base_name": "pi0",
       "setting": "",
       "paper_url": "https://arxiv.org/html/2410.24164v1",
-      "pub_date": "2024-01",
+      "pub_date": "2024-10",
       "is_opensource": true,
       "opensource_url": "https://github.com/Physical-Intelligence/openpi",
       "easy": 71.8,
@@ -70,7 +88,7 @@
       "source": "from smolVLA",
       "is_standard": true,
       "note": "不清楚具体实验设置，因此无法判断来自于是同一个权重还是四个权重",
-      "rank": 4
+      "rank": 5
     },
     {
       "name": "TinyVLA-H",
@@ -88,7 +106,7 @@
       "source": "original",
       "is_standard": true,
       "note": "",
-      "rank": 5
+      "rank": 6
     },
     {
       "name": "Diffusion Policy",
@@ -106,7 +124,7 @@
       "source": "from TinyVLA",
       "is_standard": true,
       "note": "",
-      "rank": 6
+      "rank": 7
     }
   ],
   "standard_closed": [],
@@ -224,7 +242,7 @@
       "base_name": "AVDC",
       "setting": "",
       "paper_url": "https://flow-diffusion.github.io/AVDC.pdf",
-      "pub_date": "2023-01",
+      "pub_date": "2023-10",
       "is_opensource": true,
       "opensource_url": "https://github.com/flow-diffusion/AVDC",
       "easy": null,
@@ -242,7 +260,7 @@
       "base_name": "SuSIE",
       "setting": "",
       "paper_url": "https://arxiv.org/abs/2310.10639",
-      "pub_date": "2023-01",
+      "pub_date": "2023-10",
       "is_opensource": true,
       "opensource_url": "https://github.com/kvablack/susie",
       "easy": 56.0,
