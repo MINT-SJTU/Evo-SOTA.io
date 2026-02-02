@@ -272,6 +272,8 @@ const data = {
   updates
 };
 
+const publicBenchmarksPath = path.resolve("public/dex/data/benchmarks.json");
+
 benchmarks.forEach((benchmark) => {
   const scored = methods
     .map((method) => ({
@@ -288,5 +290,19 @@ benchmarks.forEach((benchmark) => {
 
 fs.mkdirSync(path.dirname(outputPath), { recursive: true });
 fs.writeFileSync(outputPath, JSON.stringify(data, null, 2));
+
+fs.mkdirSync(path.dirname(publicBenchmarksPath), { recursive: true });
+fs.writeFileSync(
+  publicBenchmarksPath,
+  JSON.stringify(
+    data.benchmarks.map((benchmark) => ({
+      id: benchmark.id,
+      name: benchmark.name,
+      href: `/dex/benchmarks/${benchmark.id}`
+    })),
+    null,
+    2
+  )
+);
 
 console.log(`Wrote ${methods.length} methods to ${outputPath}`);

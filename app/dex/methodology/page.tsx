@@ -242,7 +242,7 @@ export default function MethodologyPage() {
               <p className="text-slate-300 text-sm">{texts.starUsDesc}</p>
             </div>
             <a
-              href="https://github.com/Elvin-yk/Dexterous-Manipulation-on-SOTA-leaderboard"
+              href="https://github.com/MINT-SJTU/Evo-SOTA.io"
               target="_blank"
               rel="noopener noreferrer"
               className="flex items-center gap-2 px-6 py-3 bg-white text-slate-800 rounded-lg font-medium hover:bg-slate-100 transition-colors"
@@ -260,7 +260,7 @@ export default function MethodologyPage() {
           <p className="text-blue-100 mb-6">{texts.contactUsDesc}</p>
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
             <a
-              href="https://github.com/Elvin-yk/Dexterous-Manipulation-on-SOTA-leaderboard/issues"
+              href="https://github.com/MINT-SJTU/Evo-SOTA.io/issues"
               target="_blank"
               rel="noopener noreferrer"
               className="flex items-center gap-2 px-6 py-3 bg-white text-slate-800 rounded-lg font-medium hover:bg-slate-100 transition-colors"

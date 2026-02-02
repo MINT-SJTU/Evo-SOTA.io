@@ -1,0 +1,17 @@
+[
+  {
+    "id": "adroit",
+    "name": "Adroit",
+    "href": "/dex/benchmarks/adroit"
+  },
+  {
+    "id": "dexart",
+    "name": "DexArt",
+    "href": "/dex/benchmarks/dexart"
+  },
+  {
+    "id": "bidexhands",
+    "name": "Bi-DexHands",
+    "href": "/dex/benchmarks/bidexhands"
+  }
+]

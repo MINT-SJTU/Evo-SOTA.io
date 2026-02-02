@@ -2,7 +2,7 @@
 
 import Link from 'next/link';
 import Image from 'next/image';
-import { useState } from 'react';
+import { useEffect, useMemo, useState } from 'react';
 import { usePathname } from 'next/navigation';
 import dynamic from 'next/dynamic';
 import { useLanguage } from '@/lib/LanguageContext';
@@ -26,7 +26,7 @@ export default function Navbar() {
         setLocale(locale === 'en' ? 'zh' : 'en');
     };
 
-    const benchmarks = [
+    const vlaBenchmarks = [
         { name: 'LIBERO Plus', href: '/benchmarks/liberoplus' },
         { name: 'LIBERO', href: '/benchmarks/libero' },
         { name: 'Meta-World', href: '/benchmarks/metaworld' },
@@ -34,6 +34,36 @@ export default function Navbar() {
         { name: 'RoboChallenge', href: '/benchmarks/robochallenge' },
         { name: 'RoboCasa-GR1-Tabletop', href: '/benchmarks/robocasa_gr1_tabletop' },
     ];
+    const [dexBenchmarks, setDexBenchmarks] = useState<{ name: string; href: string }[]>([]);
+
+    useEffect(() => {
+        if (!isDex) return;
+        let cancelled = false;
+        const loadDexBenchmarks = async () => {
+            try {
+                const res = await fetch('/dex/data/benchmarks.json');
+                if (!res.ok) return;
+                const data = await res.json();
+                if (cancelled || !Array.isArray(data)) return;
+                setDexBenchmarks(data);
+            } catch {
+                // ignore
+            }
+        };
+        loadDexBenchmarks();
+        return () => {
+            cancelled = true;
+        };
+    }, [isDex]);
+
+    const benchmarks = useMemo(() => {
+        if (isDex && dexBenchmarks.length) return dexBenchmarks;
+        if (isDex) return [];
+        return vlaBenchmarks;
+    }, [isDex, dexBenchmarks]);
+
+    const homeHref = isDex ? '/dex' : '/';
+    const methodologyHref = isDex ? '/dex/methodology' : '/methodology';
 
     return (
         <nav className="bg-white shadow-sm border-b border-slate-200 sticky top-0 z-50">
@@ -62,7 +92,7 @@ export default function Navbar() {
                     {/* Desktop Navigation */}
                     <div className="hidden md:flex items-center space-x-8">
                         <Link
-                            href="/"
+                            href={homeHref}
                             className="text-slate-600 hover:text-primary-600 transition-colors font-medium"
                         >
                             {t.nav.home}
@@ -88,21 +118,25 @@ export default function Navbar() {
 
                             {isBenchmarkDropdownOpen && (
                                 <div className="absolute top-full left-0 mt-2 w-48 bg-white rounded-lg shadow-lg border border-slate-200 py-2">
-                                    {benchmarks.map((benchmark) => (
-                                        <Link
-                                            key={benchmark.href}
-                                            href={benchmark.href}
-                                            className="block px-4 py-2 text-slate-600 hover:bg-primary-50 hover:text-primary-600 transition-colors"
-                                        >
-                                            {benchmark.name}
-                                        </Link>
-                                    ))}
+                                    {benchmarks.length ? (
+                                        benchmarks.map((benchmark) => (
+                                            <Link
+                                                key={benchmark.href}
+                                                href={benchmark.href}
+                                                className="block px-4 py-2 text-slate-600 hover:bg-primary-50 hover:text-primary-600 transition-colors"
+                                            >
+                                                {benchmark.name}
+                                            </Link>
+                                        ))
+                                    ) : (
+                                        <div className="px-4 py-2 text-sm text-slate-400">Loading...</div>
+                                    )}
                                 </div>
                             )}
                         </div>
 
                         <Link
-                            href="/methodology"
+                            href={methodologyHref}
                             className="text-slate-600 hover:text-primary-600 transition-colors font-medium"
                         >
                             {t.nav.methodology}
@@ -159,7 +193,7 @@ export default function Navbar() {
                     <div className="md:hidden py-4 border-t border-slate-200">
                         <div className="space-y-2">
                             <Link
-                                href="/"
+                                href={homeHref}
                                 className="block px-4 py-2 text-slate-600 hover:bg-primary-50 hover:text-primary-600 rounded-lg"
                                 onClick={() => setIsMenuOpen(false)}
                             >
@@ -176,19 +210,23 @@ export default function Navbar() {
                             <div className="px-4 py-2 text-sm font-semibold text-slate-400 uppercase">
                                 {t.nav.benchmarks}
                             </div>
-                            {benchmarks.map((benchmark) => (
-                                <Link
-                                    key={benchmark.href}
-                                    href={benchmark.href}
-                                    className="block px-8 py-2 text-slate-600 hover:bg-primary-50 hover:text-primary-600 rounded-lg"
-                                    onClick={() => setIsMenuOpen(false)}
-                                >
-                                    {benchmark.name}
-                                </Link>
-                            ))}
+                            {benchmarks.length ? (
+                                benchmarks.map((benchmark) => (
+                                    <Link
+                                        key={benchmark.href}
+                                        href={benchmark.href}
+                                        className="block px-8 py-2 text-slate-600 hover:bg-primary-50 hover:text-primary-600 rounded-lg"
+                                        onClick={() => setIsMenuOpen(false)}
+                                    >
+                                        {benchmark.name}
+                                    </Link>
+                                ))
+                            ) : (
+                                <div className="px-8 py-2 text-sm text-slate-400">Loading...</div>
+                            )}
 
                             <Link
-                                href="/methodology"
+                                href={methodologyHref}
                                 className="block px-4 py-2 text-slate-600 hover:bg-primary-50 hover:text-primary-600 rounded-lg"
                                 onClick={() => setIsMenuOpen(false)}
                             >

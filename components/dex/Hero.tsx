@@ -30,7 +30,7 @@ export default function Hero() {
         </div>
         <div className="mt-4">
           <a
-            href="https://github.com/Elvin-yk/Dexterous-Manipulation-on-SOTA-leaderboard"
+            href="https://github.com/MINT-SJTU/Evo-SOTA.io"
             target="_blank"
             rel="noreferrer"
             className="inline-flex items-center gap-2 px-4 py-2 bg-slate-700 hover:bg-slate-600 rounded-full text-sm transition-colors"
