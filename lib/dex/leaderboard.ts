@@ -11,7 +11,7 @@ const fallbackData: LeaderboardData = {
 
 export const loadDexLeaderboardData = (): LeaderboardData => {
   try {
-    const filePath = path.resolve(process.cwd(), "data/dex/leaderboard.json");
+    const filePath = path.resolve(process.cwd(), "public/dex/data/leaderboard.json");
     if (!fs.existsSync(filePath)) return fallbackData;
     const raw = fs.readFileSync(filePath, "utf-8");
     return JSON.parse(raw) as LeaderboardData;

@@ -1,0 +1,1501 @@
+{
+  "generatedAt": "2026-02-02T12:05:24.871Z",
+  "benchmarks": [
+    {
+      "id": "adroit",
+      "name": "Adroit",
+      "description": "In-hand manipulation benchmarks featuring the Adroit hand and diverse object tasks.",
+      "meanColumnId": "meanSucc",
+      "columns": [
+        {
+          "id": "meanSucc",
+          "label": "Mean Succ",
+          "kind": "score"
+        },
+        {
+          "id": "pen",
+          "label": "Pen",
+          "kind": "score"
+        },
+        {
+          "id": "door",
+          "label": "Door",
+          "kind": "score"
+        },
+        {
+          "id": "hammer",
+          "label": "Hammer",
+          "kind": "score"
+        },
+        {
+          "id": "relocate",
+          "label": "Relocate",
+          "kind": "score"
+        },
+        {
+          "id": "setting",
+          "label": "Setting",
+          "kind": "meta"
+        },
+        {
+          "id": "source",
+          "label": "Source",
+          "kind": "meta"
+        },
+        {
+          "id": "proof",
+          "label": "Proof",
+          "kind": "meta"
+        }
+      ],
+      "color": "hsl(329, 70%, 55%)",
+      "links": [
+        {
+          "label": "Website",
+          "url": "https://sites.google.com/view/deeprl-dexterous-manipulation"
+        },
+        {
+          "label": "Paper",
+          "url": "https://arxiv.org/abs/1709.10087"
+        }
+      ]
+    },
+    {
+      "id": "dexart",
+      "name": "DexArt",
+      "description": "DexArt benchmarks emphasize articulated object manipulation and tool use.",
+      "meanColumnId": "meanSucc",
+      "columns": [
+        {
+          "id": "laptop",
+          "label": "Laptop",
+          "kind": "score"
+        },
+        {
+          "id": "faucet",
+          "label": "Faucet",
+          "kind": "score"
+        },
+        {
+          "id": "toilet",
+          "label": "Toilet",
+          "kind": "score"
+        },
+        {
+          "id": "bucket",
+          "label": "Bucket",
+          "kind": "score"
+        },
+        {
+          "id": "meanSucc",
+          "label": "Mean Succ",
+          "kind": "score"
+        },
+        {
+          "id": "setting",
+          "label": "Setting",
+          "kind": "meta"
+        },
+        {
+          "id": "source",
+          "label": "Source",
+          "kind": "meta"
+        },
+        {
+          "id": "proof",
+          "label": "Proof",
+          "kind": "meta"
+        }
+      ],
+      "color": "hsl(307, 70%, 55%)",
+      "links": [
+        {
+          "label": "Website",
+          "url": "https://www.chenbao.tech/dexart/"
+        },
+        {
+          "label": "Paper",
+          "url": "https://arxiv.org/abs/2305.05706"
+        }
+      ]
+    },
+    {
+      "id": "bidexhands",
+      "name": "Bi-DexHands",
+      "description": "Bimanual dexterous manipulation tasks from Bi-DexHands.",
+      "meanColumnId": "meanSucc",
+      "columns": [
+        {
+          "id": "handover",
+          "label": "HandOver",
+          "kind": "score"
+        },
+        {
+          "id": "doorCloseInward",
+          "label": "DoorCloseInward",
+          "kind": "score"
+        },
+        {
+          "id": "doorCloseOutward",
+          "label": "DoorCloseOutward",
+          "kind": "score"
+        },
+        {
+          "id": "doorOpenInward",
+          "label": "DoorOpenInward",
+          "kind": "score"
+        },
+        {
+          "id": "doorOpenOutward",
+          "label": "DoorOpenOutward",
+          "kind": "score"
+        },
+        {
+          "id": "scissors",
+          "label": "Scissors",
+          "kind": "score"
+        },
+        {
+          "id": "swingCup",
+          "label": "Swing cup",
+          "kind": "score"
+        },
+        {
+          "id": "switch",
+          "label": "Switch",
+          "kind": "score"
+        },
+        {
+          "id": "kettle",
+          "label": "Kettle",
+          "kind": "score"
+        },
+        {
+          "id": "liftUnderarm",
+          "label": "LiftUderarm",
+          "kind": "score"
+        },
+        {
+          "id": "pen",
+          "label": "Pen",
+          "kind": "score"
+        },
+        {
+          "id": "bottleCap",
+          "label": "BottleCap",
+          "kind": "score"
+        },
+        {
+          "id": "catchAbreast",
+          "label": "CatchAbreast",
+          "kind": "score"
+        },
+        {
+          "id": "catchOver2UnderArm",
+          "label": "CatchOver2UnderArm",
+          "kind": "score"
+        },
+        {
+          "id": "catchUnderarm",
+          "label": "CatchUnderarm",
+          "kind": "score"
+        },
+        {
+          "id": "reOrientation",
+          "label": "ReOrientation",
+          "kind": "score"
+        },
+        {
+          "id": "graspAndPlace",
+          "label": "GraspAndPlace",
+          "kind": "score"
+        },
+        {
+          "id": "blockStack",
+          "label": "BlockStack",
+          "kind": "score"
+        },
+        {
+          "id": "pushBlock",
+          "label": "PushBlock",
+          "kind": "score"
+        },
+        {
+          "id": "twoCatchUnderarm",
+          "label": "TwoCatchUnderarm",
+          "kind": "score"
+        },
+        {
+          "id": "meanSucc",
+          "label": "Mean Succ",
+          "kind": "score"
+        },
+        {
+          "id": "setting",
+          "label": "Setting",
+          "kind": "meta"
+        },
+        {
+          "id": "source",
+          "label": "Source",
+          "kind": "meta"
+        },
+        {
+          "id": "proof",
+          "label": "Proof",
+          "kind": "meta"
+        }
+      ],
+      "color": "hsl(265, 70%, 55%)",
+      "links": [
+        {
+          "label": "Code",
+          "url": "https://github.com/PKU-MARL/DexterousHands"
+        },
+        {
+          "label": "Paper",
+          "url": "https://arxiv.org/abs/2206.08686v2"
+        }
+      ]
+    }
+  ],
+  "methods": [
+    {
+      "id": "maniflow",
+      "shortName": "ManiFlow",
+      "title": "ManiFlow: A General Robot Manipulation Policy via Consistency Flow Training",
+      "time": "2025.09",
+      "paper": {
+        "label": "Paper",
+        "url": "https://arxiv.org/pdf/2509.01819"
+      },
+      "project": {
+        "label": "Code",
+        "url": "https://maniflow-policy.github.io/"
+      },
+      "isOpenSource": true,
+      "ranks": {
+        "adroit": 3,
+        "dexart": 3
+      },
+      "benchmarks": {
+        "adroit": {
+          "values": {
+            "meanSucc": "78.6",
+            "pen": "55.5",
+            "door": "80.3",
+            "hammer": "100",
+            "relocate": null,
+            "setting": "10 demos",
+            "source": "Origin",
+            "proof": null
+          },
+          "setting": "10 demos",
+          "source": "Origin",
+          "proof": null
+        },
+        "dexart": {
+          "values": {
+            "laptop": "93",
+            "faucet": "45",
+            "toilet": "79.3",
+            "bucket": "35.3",
+            "meanSucc": "63.2",
+            "setting": "100 demos",
+            "source": "Origin",
+            "proof": null
+          },
+          "setting": "100 demos",
+          "source": "Origin",
+          "proof": null
+        },
+        "bidexhands": {
+          "values": {
+            "handover": null,
+            "doorCloseInward": null,
+            "doorCloseOutward": null,
+            "doorOpenInward": null,
+            "doorOpenOutward": null,
+            "scissors": null,
+            "swingCup": null,
+            "switch": null,
+            "kettle": null,
+            "liftUnderarm": null,
+            "pen": null,
+            "bottleCap": null,
+            "catchAbreast": null,
+            "catchOver2UnderArm": null,
+            "catchUnderarm": null,
+            "reOrientation": null,
+            "graspAndPlace": null,
+            "blockStack": null,
+            "pushBlock": null,
+            "twoCatchUnderarm": null,
+            "meanSucc": null,
+            "setting": null,
+            "source": null,
+            "proof": null
+          },
+          "setting": null,
+          "source": null,
+          "proof": null
+        }
+      }
+    },
+    {
+      "id": "iss-policy",
+      "shortName": "ISS Policy",
+      "title": "ISS Policy : Scalable Diffusion Policy with Implicit Scene Supervision",
+      "time": "2025.12",
+      "paper": {
+        "label": "Paper",
+        "url": "https://arxiv.org/pdf/2512.15020v1"
+      },
+      "isOpenSource": false,
+      "ranks": {
+        "adroit": 4
+      },
+      "benchmarks": {
+        "adroit": {
+          "values": {
+            "meanSucc": "74.8",
+            "pen": "52.3",
+            "door": "72",
+            "hammer": "100",
+            "relocate": null,
+            "setting": "10 demos",
+            "source": "Origin",
+            "proof": null
+          },
+          "setting": "10 demos",
+          "source": "Origin",
+          "proof": null
+        },
+        "dexart": {
+          "values": {
+            "laptop": null,
+            "faucet": null,
+            "toilet": null,
+            "bucket": null,
+            "meanSucc": null,
+            "setting": null,
+            "source": null,
+            "proof": null
+          },
+          "setting": null,
+          "source": null,
+          "proof": null
+        },
+        "bidexhands": {
+          "values": {
+            "handover": null,
+            "doorCloseInward": null,
+            "doorCloseOutward": null,
+            "doorOpenInward": null,
+            "doorOpenOutward": null,
+            "scissors": null,
+            "swingCup": null,
+            "switch": null,
+            "kettle": null,
+            "liftUnderarm": null,
+            "pen": null,
+            "bottleCap": null,
+            "catchAbreast": null,
+            "catchOver2UnderArm": null,
+            "catchUnderarm": null,
+            "reOrientation": null,
+            "graspAndPlace": null,
+            "blockStack": null,
+            "pushBlock": null,
+            "twoCatchUnderarm": null,
+            "meanSucc": null,
+            "setting": null,
+            "source": null,
+            "proof": null
+          },
+          "setting": null,
+          "source": null,
+          "proof": null
+        }
+      }
+    },
+    {
+      "id": "dp3",
+      "shortName": "DP3",
+      "title": "3D Diffusion Policy: Generalizable Visuomotor Policy Learning via Simple 3D Representations",
+      "time": "2024.03",
+      "paper": {
+        "label": "Paper",
+        "url": "https://arxiv.org/pdf/2403.03954"
+      },
+      "project": {
+        "label": "Code",
+        "url": "https://3d-diffusion-policy.github.io/"
+      },
+      "isOpenSource": true,
+      "ranks": {
+        "adroit": 6,
+        "dexart": 2,
+        "bidexhands": 1
+      },
+      "benchmarks": {
+        "adroit": {
+          "values": {
+            "meanSucc": "68.3",
+            "pen": "43",
+            "door": "62",
+            "hammer": "100",
+            "relocate": null,
+            "setting": "10 demos",
+            "source": "Origin",
+            "proof": null
+          },
+          "setting": "10 demos",
+          "source": "Origin",
+          "proof": null
+        },
+        "dexart": {
+          "values": {
+            "laptop": "83",
+            "faucet": "63",
+            "toilet": "82",
+            "bucket": "46",
+            "meanSucc": "68.5",
+            "setting": "100 demos",
+            "source": "Origin",
+            "proof": null
+          },
+          "setting": "100 demos",
+          "source": "Origin",
+          "proof": null
+        },
+        "bidexhands": {
+          "values": {
+            "handover": "45",
+            "doorCloseInward": null,
+            "doorCloseOutward": null,
+            "doorOpenInward": null,
+            "doorOpenOutward": "100",
+            "scissors": "100",
+            "swingCup": null,
+            "switch": null,
+            "kettle": null,
+            "liftUnderarm": null,
+            "pen": null,
+            "bottleCap": "83",
+            "catchAbreast": null,
+            "catchOver2UnderArm": null,
+            "catchUnderarm": null,
+            "reOrientation": null,
+            "graspAndPlace": "69",
+            "blockStack": "24",
+            "pushBlock": null,
+            "twoCatchUnderarm": null,
+            "meanSucc": "70.2",
+            "setting": "1*",
+            "source": "Origin",
+            "proof": null
+          },
+          "setting": "1*",
+          "source": "Origin",
+          "proof": null
+        }
+      }
+    },
+    {
+      "id": "dexhanddiff",
+      "shortName": "DexHandDiff",
+      "title": "DexHandDiff: Interaction-aware Diffusion Planning for Adaptive Dexterous Manipulation",
+      "time": "2024.11",
+      "paper": {
+        "label": "Paper",
+        "url": "https://arxiv.org/abs/2411.18562"
+      },
+      "project": {
+        "label": "Code",
+        "url": "https://dexdiffuser.github.io/"
+      },
+      "isOpenSource": true,
+      "ranks": {
+        "adroit": 1
+      },
+      "benchmarks": {
+        "adroit": {
+          "values": {
+            "meanSucc": "92.5",
+            "pen": "93.3",
+            "door": "90",
+            "hammer": "90",
+            "relocate": "96.7",
+            "setting": null,
+            "source": "Origin",
+            "proof": null
+          },
+          "setting": null,
+          "source": "Origin",
+          "proof": null
+        },
+        "dexart": {
+          "values": {
+            "laptop": null,
+            "faucet": null,
+            "toilet": null,
+            "bucket": null,
+            "meanSucc": null,
+            "setting": null,
+            "source": null,
+            "proof": null
+          },
+          "setting": null,
+          "source": null,
+          "proof": null
+        },
+        "bidexhands": {
+          "values": {
+            "handover": null,
+            "doorCloseInward": null,
+            "doorCloseOutward": null,
+            "doorOpenInward": null,
+            "doorOpenOutward": null,
+            "scissors": null,
+            "swingCup": null,
+            "switch": null,
+            "kettle": null,
+            "liftUnderarm": null,
+            "pen": null,
+            "bottleCap": null,
+            "catchAbreast": null,
+            "catchOver2UnderArm": null,
+            "catchUnderarm": null,
+            "reOrientation": null,
+            "graspAndPlace": null,
+            "blockStack": null,
+            "pushBlock": null,
+            "twoCatchUnderarm": null,
+            "meanSucc": null,
+            "setting": null,
+            "source": null,
+            "proof": null
+          },
+          "setting": null,
+          "source": null,
+          "proof": null
+        }
+      }
+    },
+    {
+      "id": "diffusion-policy",
+      "shortName": "Diffusion Policy",
+      "title": "Diffusion Policy: Visuomotor Policy Learning via Action Diffusion",
+      "time": "2023.03",
+      "paper": {
+        "label": "Paper",
+        "url": "https://arxiv.org/pdf/2303.04137"
+      },
+      "project": {
+        "label": "Code",
+        "url": "https://github.com/real-stanford/diffusion_policy"
+      },
+      "isOpenSource": true,
+      "ranks": {
+        "adroit": 7,
+        "dexart": 11,
+        "bidexhands": 2
+      },
+      "benchmarks": {
+        "adroit": {
+          "values": {
+            "meanSucc": "62.3",
+            "pen": "25",
+            "door": "62",
+            "hammer": "100",
+            "relocate": null,
+            "setting": null,
+            "source": "Reproduced by DP3",
+            "proof": null
+          },
+          "setting": null,
+          "source": "Reproduced by DP3",
+          "proof": null
+        },
+        "dexart": {
+          "values": {
+            "laptop": "69",
+            "faucet": "23",
+            "toilet": "58",
+            "bucket": "46",
+            "meanSucc": "49",
+            "setting": "100 demos",
+            "source": "Reproduced by DP3",
+            "proof": null
+          },
+          "setting": "100 demos",
+          "source": "Reproduced by DP3",
+          "proof": null
+        },
+        "bidexhands": {
+          "values": {
+            "handover": "38",
+            "doorCloseInward": null,
+            "doorCloseOutward": null,
+            "doorOpenInward": null,
+            "doorOpenOutward": "100",
+            "scissors": "100",
+            "swingCup": null,
+            "switch": null,
+            "kettle": null,
+            "liftUnderarm": null,
+            "pen": null,
+            "bottleCap": "61",
+            "catchAbreast": null,
+            "catchOver2UnderArm": null,
+            "catchUnderarm": null,
+            "reOrientation": null,
+            "graspAndPlace": "65",
+            "blockStack": "4",
+            "pushBlock": null,
+            "twoCatchUnderarm": null,
+            "meanSucc": "61.3",
+            "setting": "1*",
+            "source": "Reproduced by DP3",
+            "proof": null
+          },
+          "setting": "1*",
+          "source": "Reproduced by DP3",
+          "proof": null
+        }
+      }
+    },
+    {
+      "id": "flow-matching",
+      "shortName": "Flow Matching",
+      "title": "Affordance-based Robot Manipulation with Flow Matching",
+      "time": "2024.09",
+      "paper": {
+        "label": "Paper",
+        "url": "https://arxiv.org/pdf/2409.01083"
+      },
+      "project": {
+        "label": "Code",
+        "url": "https://hri-eu.github.io/flow-matching-policy/"
+      },
+      "isOpenSource": true,
+      "ranks": {
+        "adroit": 8,
+        "dexart": 10
+      },
+      "benchmarks": {
+        "adroit": {
+          "values": {
+            "meanSucc": "39",
+            "pen": "21.2",
+            "door": "40",
+            "hammer": "55.7",
+            "relocate": null,
+            "setting": null,
+            "source": "Reproduced by ManiFlow",
+            "proof": null
+          },
+          "setting": null,
+          "source": "Reproduced by ManiFlow",
+          "proof": null
+        },
+        "dexart": {
+          "values": {
+            "laptop": "81.7",
+            "faucet": "31.3",
+            "toilet": "76.3",
+            "bucket": "24",
+            "meanSucc": "53.3",
+            "setting": "100 demos",
+            "source": "Reproduced by ManiFlow",
+            "proof": null
+          },
+          "setting": "100 demos",
+          "source": "Reproduced by ManiFlow",
+          "proof": null
+        },
+        "bidexhands": {
+          "values": {
+            "handover": null,
+            "doorCloseInward": null,
+            "doorCloseOutward": null,
+            "doorOpenInward": null,
+            "doorOpenOutward": null,
+            "scissors": null,
+            "swingCup": null,
+            "switch": null,
+            "kettle": null,
+            "liftUnderarm": null,
+            "pen": null,
+            "bottleCap": null,
+            "catchAbreast": null,
+            "catchOver2UnderArm": null,
+            "catchUnderarm": null,
+            "reOrientation": null,
+            "graspAndPlace": null,
+            "blockStack": null,
+            "pushBlock": null,
+            "twoCatchUnderarm": null,
+            "meanSucc": null,
+            "setting": null,
+            "source": null,
+            "proof": null
+          },
+          "setting": null,
+          "source": null,
+          "proof": null
+        }
+      }
+    },
+    {
+      "id": "freqpolicy",
+      "shortName": "FreqPolicy",
+      "title": "FreqPolicy: Frequency Autoregressive Visuomotor Policy with Continuous Tokens",
+      "time": "2025.06",
+      "paper": {
+        "label": "Paper",
+        "url": "https://arxiv.org/pdf/2506.01583"
+      },
+      "project": {
+        "label": "Code",
+        "url": "https://freq-policy.github.io/"
+      },
+      "isOpenSource": true,
+      "ranks": {
+        "adroit": 5,
+        "dexart": 7
+      },
+      "benchmarks": {
+        "adroit": {
+          "values": {
+            "meanSucc": "74.7",
+            "pen": "59",
+            "door": "65",
+            "hammer": "100",
+            "relocate": null,
+            "setting": null,
+            "source": "Origin",
+            "proof": null
+          },
+          "setting": null,
+          "source": "Origin",
+          "proof": null
+        },
+        "dexart": {
+          "values": {
+            "laptop": "85",
+            "faucet": "30",
+            "toilet": "77",
+            "bucket": "25",
+            "meanSucc": "54.3",
+            "setting": "“use the same parameters and observation input as 3D DiffusionPolicy for the 3D tasks\"，但expert demo 不同",
+            "source": "Origin",
+            "proof": null
+          },
+          "setting": "“use the same parameters and observation input as 3D DiffusionPolicy for the 3D tasks\"，但expert demo 不同",
+          "source": "Origin",
+          "proof": null
+        },
+        "bidexhands": {
+          "values": {
+            "handover": null,
+            "doorCloseInward": null,
+            "doorCloseOutward": null,
+            "doorOpenInward": null,
+            "doorOpenOutward": null,
+            "scissors": null,
+            "swingCup": null,
+            "switch": null,
+            "kettle": null,
+            "liftUnderarm": null,
+            "pen": null,
+            "bottleCap": null,
+            "catchAbreast": null,
+            "catchOver2UnderArm": null,
+            "catchUnderarm": null,
+            "reOrientation": null,
+            "graspAndPlace": null,
+            "blockStack": null,
+            "pushBlock": null,
+            "twoCatchUnderarm": null,
+            "meanSucc": null,
+            "setting": null,
+            "source": null,
+            "proof": null
+          },
+          "setting": null,
+          "source": null,
+          "proof": null
+        }
+      }
+    },
+    {
+      "id": "dp4",
+      "shortName": "DP4",
+      "title": "Spatial-Temporal Aware Visuomotor Diffusion Policy Learning",
+      "time": "2025.07",
+      "paper": {
+        "label": "Paper",
+        "url": "https://arxiv.org/pdf/2507.06710"
+      },
+      "project": {
+        "label": "Code",
+        "url": "https://zhenyangliu.github.io/DP4/"
+      },
+      "isOpenSource": true,
+      "ranks": {
+        "dexart": 1
+      },
+      "benchmarks": {
+        "adroit": {
+          "values": {
+            "meanSucc": null,
+            "pen": null,
+            "door": null,
+            "hammer": null,
+            "relocate": null,
+            "setting": null,
+            "source": null,
+            "proof": null
+          },
+          "setting": null,
+          "source": null,
+          "proof": null
+        },
+        "dexart": {
+          "values": {
+            "laptop": "92",
+            "faucet": "84",
+            "toilet": "64",
+            "bucket": "90",
+            "meanSucc": "82.5",
+            "setting": "100 demos",
+            "source": "Origin",
+            "proof": null
+          },
+          "setting": "100 demos",
+          "source": "Origin",
+          "proof": null
+        },
+        "bidexhands": {
+          "values": {
+            "handover": null,
+            "doorCloseInward": null,
+            "doorCloseOutward": null,
+            "doorOpenInward": null,
+            "doorOpenOutward": null,
+            "scissors": null,
+            "swingCup": null,
+            "switch": null,
+            "kettle": null,
+            "liftUnderarm": null,
+            "pen": null,
+            "bottleCap": null,
+            "catchAbreast": null,
+            "catchOver2UnderArm": null,
+            "catchUnderarm": null,
+            "reOrientation": null,
+            "graspAndPlace": null,
+            "blockStack": null,
+            "pushBlock": null,
+            "twoCatchUnderarm": null,
+            "meanSucc": null,
+            "setting": null,
+            "source": null,
+            "proof": null
+          },
+          "setting": null,
+          "source": null,
+          "proof": null
+        }
+      }
+    },
+    {
+      "id": "bridgepolicy",
+      "shortName": "BridgePolicy",
+      "title": "Sample from What You See: Visuomotor Policy Learning via Diffusion Bridge with Observation-Embedded Stochastic Differential Equation",
+      "time": "2025.12",
+      "paper": {
+        "label": "Paper",
+        "url": "https://arxiv.org/pdf/2512.07212"
+      },
+      "isOpenSource": false,
+      "ranks": {
+        "adroit": 2,
+        "dexart": 4
+      },
+      "benchmarks": {
+        "adroit": {
+          "values": {
+            "meanSucc": "80.7",
+            "pen": "58",
+            "door": "84",
+            "hammer": "100",
+            "relocate": null,
+            "setting": null,
+            "source": "Origin",
+            "proof": null
+          },
+          "setting": null,
+          "source": "Origin",
+          "proof": null
+        },
+        "dexart": {
+          "values": {
+            "laptop": "88",
+            "faucet": "44",
+            "toilet": "76",
+            "bucket": "32",
+            "meanSucc": "60",
+            "setting": "100 demos",
+            "source": "Origin",
+            "proof": null
+          },
+          "setting": "100 demos",
+          "source": "Origin",
+          "proof": null
+        },
+        "bidexhands": {
+          "values": {
+            "handover": null,
+            "doorCloseInward": null,
+            "doorCloseOutward": null,
+            "doorOpenInward": null,
+            "doorOpenOutward": null,
+            "scissors": null,
+            "swingCup": null,
+            "switch": null,
+            "kettle": null,
+            "liftUnderarm": null,
+            "pen": null,
+            "bottleCap": null,
+            "catchAbreast": null,
+            "catchOver2UnderArm": null,
+            "catchUnderarm": null,
+            "reOrientation": null,
+            "graspAndPlace": null,
+            "blockStack": null,
+            "pushBlock": null,
+            "twoCatchUnderarm": null,
+            "meanSucc": null,
+            "setting": null,
+            "source": null,
+            "proof": null
+          },
+          "setting": null,
+          "source": null,
+          "proof": null
+        }
+      }
+    },
+    {
+      "id": "flowpolicy",
+      "shortName": "FlowPolicy",
+      "title": "FlowPolicy: Enabling Fast and Robust 3D Flow-based Policy via Consistency Flow Matching for Robot Manipulation",
+      "time": "2024.12",
+      "paper": {
+        "label": "Paper",
+        "url": "https://arxiv.org/pdf/2412.04987"
+      },
+      "project": {
+        "label": "Code",
+        "url": "https://github.com/zql-kk/FlowPolicy"
+      },
+      "isOpenSource": true,
+      "ranks": {
+        "dexart": 8
+      },
+      "benchmarks": {
+        "adroit": {
+          "values": {
+            "meanSucc": null,
+            "pen": "53",
+            "door": "58",
+            "hammer": "100",
+            "relocate": null,
+            "setting": null,
+            "source": "Reproduced by BridgePolicy",
+            "proof": null
+          },
+          "setting": null,
+          "source": "Reproduced by BridgePolicy",
+          "proof": null
+        },
+        "dexart": {
+          "values": {
+            "laptop": "80",
+            "faucet": "38",
+            "toilet": "70",
+            "bucket": "28",
+            "meanSucc": "54",
+            "setting": "100 demos",
+            "source": "Reproduced by BridgePolicy",
+            "proof": null
+          },
+          "setting": "100 demos",
+          "source": "Reproduced by BridgePolicy",
+          "proof": null
+        },
+        "bidexhands": {
+          "values": {
+            "handover": null,
+            "doorCloseInward": null,
+            "doorCloseOutward": null,
+            "doorOpenInward": null,
+            "doorOpenOutward": null,
+            "scissors": null,
+            "swingCup": null,
+            "switch": null,
+            "kettle": null,
+            "liftUnderarm": null,
+            "pen": null,
+            "bottleCap": null,
+            "catchAbreast": null,
+            "catchOver2UnderArm": null,
+            "catchUnderarm": null,
+            "reOrientation": null,
+            "graspAndPlace": null,
+            "blockStack": null,
+            "pushBlock": null,
+            "twoCatchUnderarm": null,
+            "meanSucc": null,
+            "setting": null,
+            "source": null,
+            "proof": null
+          },
+          "setting": null,
+          "source": null,
+          "proof": null
+        }
+      }
+    },
+    {
+      "id": "sdm-policy",
+      "shortName": "SDM Policy",
+      "title": "Score and Distribution Matching Policy: Advanced Accelerated Visuomotor Policies via Matched Distillation",
+      "time": "2024.12",
+      "paper": {
+        "label": "Paper",
+        "url": "https://arxiv.org/pdf/2412.09265"
+      },
+      "project": {
+        "label": "Code",
+        "url": "https://sdm-policy.github.io/"
+      },
+      "isOpenSource": true,
+      "ranks": {
+        "dexart": 6
+      },
+      "benchmarks": {
+        "adroit": {
+          "values": {
+            "meanSucc": null,
+            "pen": "49",
+            "door": "73",
+            "hammer": "100",
+            "relocate": null,
+            "setting": null,
+            "source": "Origin",
+            "proof": null
+          },
+          "setting": null,
+          "source": "Origin",
+          "proof": null
+        },
+        "dexart": {
+          "values": {
+            "laptop": "83",
+            "faucet": "38",
+            "toilet": "72",
+            "bucket": "31",
+            "meanSucc": "56",
+            "setting": "10 demos",
+            "source": "Origin",
+            "proof": null
+          },
+          "setting": "10 demos",
+          "source": "Origin",
+          "proof": null
+        },
+        "bidexhands": {
+          "values": {
+            "handover": null,
+            "doorCloseInward": null,
+            "doorCloseOutward": null,
+            "doorOpenInward": null,
+            "doorOpenOutward": null,
+            "scissors": null,
+            "swingCup": null,
+            "switch": null,
+            "kettle": null,
+            "liftUnderarm": null,
+            "pen": null,
+            "bottleCap": null,
+            "catchAbreast": null,
+            "catchOver2UnderArm": null,
+            "catchUnderarm": null,
+            "reOrientation": null,
+            "graspAndPlace": null,
+            "blockStack": null,
+            "pushBlock": null,
+            "twoCatchUnderarm": null,
+            "meanSucc": null,
+            "setting": null,
+            "source": null,
+            "proof": null
+          },
+          "setting": null,
+          "source": null,
+          "proof": null
+        }
+      }
+    },
+    {
+      "id": "manicm",
+      "shortName": "ManiCM",
+      "title": "ManiCM: Real-time 3D Diffusion Policy via Consistency Model for Robotic Manipulation",
+      "time": "2024.06",
+      "paper": {
+        "label": "Paper",
+        "url": "https://arxiv.org/pdf/2406.01586"
+      },
+      "project": {
+        "label": "Code",
+        "url": "https://manicm-fast.github.io/"
+      },
+      "isOpenSource": true,
+      "ranks": {
+        "dexart": 5
+      },
+      "benchmarks": {
+        "adroit": {
+          "values": {
+            "meanSucc": null,
+            "pen": "49",
+            "door": "68",
+            "hammer": "100",
+            "relocate": null,
+            "setting": null,
+            "source": "Reproduced by SDM",
+            "proof": null
+          },
+          "setting": null,
+          "source": "Reproduced by SDM",
+          "proof": null
+        },
+        "dexart": {
+          "values": {
+            "laptop": "83",
+            "faucet": "34",
+            "toilet": "74",
+            "bucket": "36",
+            "meanSucc": "56.8",
+            "setting": "10 demos",
+            "source": "Reproduced by SDM",
+            "proof": null
+          },
+          "setting": "10 demos",
+          "source": "Reproduced by SDM",
+          "proof": null
+        },
+        "bidexhands": {
+          "values": {
+            "handover": null,
+            "doorCloseInward": null,
+            "doorCloseOutward": null,
+            "doorOpenInward": null,
+            "doorOpenOutward": null,
+            "scissors": null,
+            "swingCup": null,
+            "switch": null,
+            "kettle": null,
+            "liftUnderarm": null,
+            "pen": null,
+            "bottleCap": null,
+            "catchAbreast": null,
+            "catchOver2UnderArm": null,
+            "catchUnderarm": null,
+            "reOrientation": null,
+            "graspAndPlace": null,
+            "blockStack": null,
+            "pushBlock": null,
+            "twoCatchUnderarm": null,
+            "meanSucc": null,
+            "setting": null,
+            "source": null,
+            "proof": null
+          },
+          "setting": null,
+          "source": null,
+          "proof": null
+        }
+      }
+    },
+    {
+      "id": "mambapolicy",
+      "shortName": "MambaPolicy",
+      "title": "MambaPolicy: Towards Efficient 3D Diffusion Policy with Hybrid Selective State Models",
+      "time": "2024.09",
+      "paper": {
+        "label": "Paper",
+        "url": "https://arxiv.org/pdf/2409.07163"
+      },
+      "project": {
+        "label": "Code",
+        "url": "https://sagecao1125.github.io/mamba_policy/"
+      },
+      "isOpenSource": true,
+      "ranks": {
+        "dexart": 9
+      },
+      "benchmarks": {
+        "adroit": {
+          "values": {
+            "meanSucc": null,
+            "pen": "41",
+            "door": "68.3",
+            "hammer": "100",
+            "relocate": null,
+            "setting": null,
+            "source": "Origin",
+            "proof": null
+          },
+          "setting": null,
+          "source": "Origin",
+          "proof": null
+        },
+        "dexart": {
+          "values": {
+            "laptop": "79.6",
+            "faucet": "33",
+            "toilet": "76.3",
+            "bucket": "27",
+            "meanSucc": "54",
+            "setting": "100 demos",
+            "source": "Origin",
+            "proof": null
+          },
+          "setting": "100 demos",
+          "source": "Origin",
+          "proof": null
+        },
+        "bidexhands": {
+          "values": {
+            "handover": null,
+            "doorCloseInward": null,
+            "doorCloseOutward": null,
+            "doorOpenInward": null,
+            "doorOpenOutward": null,
+            "scissors": null,
+            "swingCup": null,
+            "switch": null,
+            "kettle": null,
+            "liftUnderarm": null,
+            "pen": null,
+            "bottleCap": null,
+            "catchAbreast": null,
+            "catchOver2UnderArm": null,
+            "catchUnderarm": null,
+            "reOrientation": null,
+            "graspAndPlace": null,
+            "blockStack": null,
+            "pushBlock": null,
+            "twoCatchUnderarm": null,
+            "meanSucc": null,
+            "setting": null,
+            "source": null,
+            "proof": null
+          },
+          "setting": null,
+          "source": null,
+          "proof": null
+        }
+      }
+    },
+    {
+      "id": "progresscounts",
+      "shortName": "ProgressCounts",
+      "title": "Automated Rewards via LLM-Generated Progress Functions",
+      "time": "2024.1",
+      "paper": {
+        "label": "Paper",
+        "url": "https://arxiv.org/abs/2410.09187"
+      },
+      "project": {
+        "label": "Assets",
+        "url": "https://drive.google.com/drive/folders/1G88Je0K4BuexWhE8ZLgoM0WM6vHcBrvt"
+      },
+      "isOpenSource": true,
+      "ranks": {
+        "bidexhands": 3
+      },
+      "benchmarks": {
+        "adroit": {
+          "values": {
+            "meanSucc": null,
+            "pen": null,
+            "door": null,
+            "hammer": null,
+            "relocate": null,
+            "setting": null,
+            "source": null,
+            "proof": null
+          },
+          "setting": null,
+          "source": null,
+          "proof": null
+        },
+        "dexart": {
+          "values": {
+            "laptop": null,
+            "faucet": null,
+            "toilet": null,
+            "bucket": null,
+            "meanSucc": null,
+            "setting": null,
+            "source": null,
+            "proof": null
+          },
+          "setting": null,
+          "source": null,
+          "proof": null
+        },
+        "bidexhands": {
+          "values": {
+            "handover": "93",
+            "doorCloseInward": "100",
+            "doorCloseOutward": "90",
+            "doorOpenInward": "7",
+            "doorOpenOutward": "99",
+            "scissors": "100",
+            "swingCup": "97",
+            "switch": "0",
+            "kettle": "99",
+            "liftUnderarm": "22",
+            "pen": "49",
+            "bottleCap": "94",
+            "catchAbreast": "56",
+            "catchOver2UnderArm": "90",
+            "catchUnderarm": "76",
+            "reOrientation": "3",
+            "graspAndPlace": "99",
+            "blockStack": "5",
+            "pushBlock": "3",
+            "twoCatchUnderarm": "3",
+            "meanSucc": "59.3",
+            "setting": "1*",
+            "source": "Origin",
+            "proof": null
+          },
+          "setting": "1*",
+          "source": "Origin",
+          "proof": null
+        }
+      }
+    },
+    {
+      "id": "eureka",
+      "shortName": "Eureka",
+      "title": "Eureka: Human-Level Reward Design via Coding Large Language Models",
+      "time": "2023.1",
+      "paper": {
+        "label": "Paper",
+        "url": "https://arxiv.org/abs/2310.12931"
+      },
+      "project": {
+        "label": "Code",
+        "url": "https://github.com/eureka-research/Eureka"
+      },
+      "isOpenSource": true,
+      "ranks": {
+        "bidexhands": 4
+      },
+      "benchmarks": {
+        "adroit": {
+          "values": {
+            "meanSucc": null,
+            "pen": null,
+            "door": null,
+            "hammer": null,
+            "relocate": null,
+            "setting": null,
+            "source": null,
+            "proof": null
+          },
+          "setting": null,
+          "source": null,
+          "proof": null
+        },
+        "dexart": {
+          "values": {
+            "laptop": null,
+            "faucet": null,
+            "toilet": null,
+            "bucket": null,
+            "meanSucc": null,
+            "setting": null,
+            "source": null,
+            "proof": null
+          },
+          "setting": null,
+          "source": null,
+          "proof": null
+        },
+        "bidexhands": {
+          "values": {
+            "handover": "92",
+            "doorCloseInward": "100",
+            "doorCloseOutward": "96",
+            "doorOpenInward": "0",
+            "doorOpenOutward": "100",
+            "scissors": "100",
+            "swingCup": "66",
+            "switch": "0",
+            "kettle": "89",
+            "liftUnderarm": "70",
+            "pen": "57",
+            "bottleCap": "32",
+            "catchAbreast": "50",
+            "catchOver2UnderArm": "90",
+            "catchUnderarm": "67",
+            "reOrientation": "31",
+            "graspAndPlace": "50",
+            "blockStack": "14",
+            "pushBlock": "9",
+            "twoCatchUnderarm": "0",
+            "meanSucc": "55.7",
+            "setting": "1*",
+            "source": "Origin",
+            "proof": null
+          },
+          "setting": "1*",
+          "source": "Origin",
+          "proof": null
+        }
+      }
+    }
+  ],
+  "updates": [
+    {
+      "date": "2025.12",
+      "text": "ISS Policy: ISS Policy : Scalable Diffusion Policy with Implicit Scene Supervision"
+    },
+    {
+      "date": "2025.12",
+      "text": "BridgePolicy: Sample from What You See: Visuomotor Policy Learning via Diffusion Bridge with Observation-Embedded Stochastic Differential Equation"
+    },
+    {
+      "date": "2025.09",
+      "text": "ManiFlow: ManiFlow: A General Robot Manipulation Policy via Consistency Flow Training"
+    },
+    {
+      "date": "2025.07",
+      "text": "DP4: Spatial-Temporal Aware Visuomotor Diffusion Policy Learning"
+    },
+    {
+      "date": "2025.06",
+      "text": "FreqPolicy: FreqPolicy: Frequency Autoregressive Visuomotor Policy with Continuous Tokens"
+    }
+  ]
+}

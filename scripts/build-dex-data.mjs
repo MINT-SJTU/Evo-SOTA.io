@@ -3,8 +3,8 @@ import path from "path";
 import XLSX from "xlsx";
 
 const workbookPath = path.resolve("assets/dex/raw/Dexterous Manipulation SOTA Leaderboard.xlsx");
-const outputPath = path.resolve("data/dex/leaderboard.json");
-const colorMapPath = path.resolve("data/dex/benchmark-colors.json");
+const outputPath = path.resolve("public/dex/data/leaderboard.json");
+const colorMapPath = path.resolve("public/dex/data/benchmark-colors.json");
 
 if (!fs.existsSync(workbookPath)) {
   console.error(`Missing Excel file: ${workbookPath}`);
