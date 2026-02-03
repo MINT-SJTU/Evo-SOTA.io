@@ -143,13 +143,13 @@
     "primary_metric": "Average Success Rate (%)",
     "top_5": [
       {
-        "name": "Langforce",
-        "score": 66.5,
+        "name": "TwinBrainVLA",
+        "score": 54.6,
         "rank": 1
       },
       {
-        "name": "TwinBrainVLA",
-        "score": 54.6,
+        "name": "Langforce",
+        "score": 52.6,
         "rank": 2
       },
       {

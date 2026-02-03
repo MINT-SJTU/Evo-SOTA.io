@@ -1,20 +1,6 @@
 {
   "standard_opensource": [
     {
-      "name": "Langforce",
-      "base_name": "Langforce",
-      "setting": "",
-      "paper_url": "https://arxiv.org/html/2601.15197v4",
-      "pub_date": "2026-01",
-      "is_opensource": true,
-      "opensource_url": "https://github.com/ZGC-EmbodyAI/BayesianVLA",
-      "avg_success_rate": 66.5,
-      "source": "original",
-      "is_standard": true,
-      "note": "",
-      "rank": 1
-    },
-    {
       "name": "TwinBrainVLA",
       "base_name": "TwinBrainVLA",
       "setting": "",
@@ -23,6 +9,20 @@
       "is_opensource": true,
       "opensource_url": "https://github.com/ZGC-EmbodyAI/TwinBrainVLA",
       "avg_success_rate": 54.6,
+      "source": "original",
+      "is_standard": true,
+      "note": "",
+      "rank": 1
+    },
+    {
+      "name": "Langforce",
+      "base_name": "Langforce",
+      "setting": "",
+      "paper_url": "https://arxiv.org/html/2601.15197v4",
+      "pub_date": "2026-01",
+      "is_opensource": true,
+      "opensource_url": "https://github.com/ZGC-EmbodyAI/LangForce",
+      "avg_success_rate": 52.6,
       "source": "original",
       "is_standard": true,
       "note": "",
