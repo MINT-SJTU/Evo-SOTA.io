@@ -8,12 +8,29 @@
       "pub_date": "2026-01",
       "is_opensource": true,
       "opensource_url": "https://github.com/Spirit-AI-Team/spirit-v1.5",
+      "is_rl": false,
       "score": 66.09,
       "success_rate": 50.33,
       "source": "original",
       "is_standard": true,
       "note": "",
       "rank": 1
+    },
+    {
+      "name": "Giga-Brain-0.1",
+      "base_name": "Giga-Brain-0.1",
+      "setting": "",
+      "paper_url": "https://arxiv.org/abs/2510.19430",
+      "pub_date": "2025-10",
+      "is_opensource": true,
+      "opensource_url": "https://github.com/open-gigaai/giga-brain-0",
+      "is_rl": false,
+      "score": 63.95,
+      "success_rate": 45.0,
+      "source": "original",
+      "is_standard": true,
+      "note": "",
+      "rank": 2
     },
     {
       "name": "pi0.5",
@@ -23,12 +40,13 @@
       "pub_date": "2025-04",
       "is_opensource": true,
       "opensource_url": "https://github.com/Physical-Intelligence/openpi",
+      "is_rl": false,
       "score": 61.84,
       "success_rate": 42.67,
       "source": "from RoboChallenge",
       "is_standard": true,
       "note": "",
-      "rank": 2
+      "rank": 3
     },
     {
       "name": "wall-oss-v0.1",
@@ -38,12 +56,13 @@
       "pub_date": "2025-09",
       "is_opensource": true,
       "opensource_url": "https://github.com/X-Square-Robot/wall-x",
+      "is_rl": false,
       "score": 55.3,
       "success_rate": 35.33,
       "source": "from RoboChallenge",
       "is_standard": true,
       "note": "",
-      "rank": 3
+      "rank": 4
     },
     {
       "name": "pi0",
@@ -53,12 +72,13 @@
       "pub_date": "2024-10",
       "is_opensource": true,
       "opensource_url": "https://github.com/Physical-Intelligence/openpi",
+      "is_rl": false,
       "score": 46.41,
       "success_rate": 28.33,
       "source": "from RoboChallenge",
       "is_standard": true,
       "note": "",
-      "rank": 4
+      "rank": 5
     },
     {
       "name": "pi0.5 (generalist)",
@@ -68,12 +88,29 @@
       "pub_date": "2025-04",
       "is_opensource": true,
       "opensource_url": "https://github.com/Physical-Intelligence/openpi",
+      "is_rl": false,
       "score": 31.27,
       "success_rate": 17.67,
       "source": "from RoboChallenge",
       "is_standard": true,
       "note": "",
-      "rank": 5
+      "rank": 6
+    },
+    {
+      "name": "RDT-1B",
+      "base_name": "RDT-1B",
+      "setting": "",
+      "paper_url": "https://arxiv.org/abs/2410.07864",
+      "pub_date": "2025-03",
+      "is_opensource": true,
+      "opensource_url": "https://github.com/thu-ml/RoboticsDiffusionTransformer",
+      "is_rl": false,
+      "score": 28.84,
+      "success_rate": 15.0,
+      "source": "original",
+      "is_standard": true,
+      "note": "",
+      "rank": 7
     },
     {
       "name": "CogACT",
@@ -83,12 +120,13 @@
       "pub_date": "2024-11",
       "is_opensource": true,
       "opensource_url": "https://github.com/microsoft/CogACT",
+      "is_rl": false,
       "score": 21.83,
       "success_rate": 11.67,
       "source": "from RoboChallenge",
       "is_standard": true,
       "note": "",
-      "rank": 6
+      "rank": 8
     },
     {
       "name": "pi0 (generalist)",
@@ -98,12 +136,13 @@
       "pub_date": "2024-10",
       "is_opensource": true,
       "opensource_url": "https://github.com/Physical-Intelligence/openpi",
+      "is_rl": false,
       "score": 20.22,
       "success_rate": 9.0,
       "source": "from RoboChallenge",
       "is_standard": true,
       "note": "",
-      "rank": 7
+      "rank": 9
     },
     {
       "name": "OpenVLA-OFT",
@@ -113,12 +152,13 @@
       "pub_date": "2025-02",
       "is_opensource": true,
       "opensource_url": "https://github.com/moojink/openvla-oft",
+      "is_rl": false,
       "score": 8.66,
       "success_rate": 5.0,
       "source": "from RoboChallenge",
       "is_standard": true,
       "note": "",
-      "rank": 8
+      "rank": 10
     }
   ],
   "standard_closed": [],
