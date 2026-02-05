@@ -236,12 +236,12 @@
     ]
   },
   "robochallenge": {
-    "total_models": 8,
-    "standard_opensource_count": 8,
+    "total_models": 10,
+    "standard_opensource_count": 10,
     "standard_closed_count": 0,
     "non_standard_count": 0,
     "model_type_count": {
-      "sft": 8,
+      "sft": 10,
       "rl": 0
     },
     "primary_metric": "Score",
@@ -252,23 +252,23 @@
         "rank": 1
       },
       {
+        "name": "Giga-Brain-0.1",
+        "score": 63.95,
+        "rank": 2
+      },
+      {
         "name": "pi0.5",
         "score": 61.84,
-        "rank": 2
+        "rank": 3
       },
       {
         "name": "wall-oss-v0.1",
         "score": 55.3,
-        "rank": 3
+        "rank": 4
       },
       {
         "name": "pi0",
         "score": 46.41,
-        "rank": 4
-      },
-      {
-        "name": "pi0.5 (generalist)",
-        "score": 31.27,
         "rank": 5
       }
     ],
@@ -279,23 +279,23 @@
         "rank": 1
       },
       {
+        "name": "Giga-Brain-0.1",
+        "score": 63.95,
+        "rank": 2
+      },
+      {
         "name": "pi0.5",
         "score": 61.84,
-        "rank": 2
+        "rank": 3
       },
       {
         "name": "wall-oss-v0.1",
         "score": 55.3,
-        "rank": 3
+        "rank": 4
       },
       {
         "name": "pi0",
         "score": 46.41,
-        "rank": 4
-      },
-      {
-        "name": "pi0.5 (generalist)",
-        "score": 31.27,
         "rank": 5
       }
     ],

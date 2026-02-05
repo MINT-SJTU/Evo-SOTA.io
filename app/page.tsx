@@ -122,7 +122,7 @@ export default function Home() {
         // 模型列表（需要斜体和紫色）
         const models = [
             'DeepThinkVLA', 'Dadu-Corki', 'RoboTron Mani', 'CronusVLA', 'InstructVLA', 'InternVLA-M1', 'ACoT-VLA',
-            'OpenVLA', 'Pi0', 'RIPT', 'NORA-1.5', 'Being-H0.5', 'EO-1', 'DreamVLA', 'Rlinf-VLA', 'pi-RL', 'UnifoLM-VLA-0'
+            'OpenVLA', 'Pi0', 'RIPT', 'NORA-1.5', 'Being-H0.5', 'EO-1', 'DreamVLA', 'Rlinf-VLA', 'pi-RL', 'UnifoLM-VLA-0', 'Giga-Brain-0.1', 'RDT-1B'
         ];
 
         let formattedContent = content;

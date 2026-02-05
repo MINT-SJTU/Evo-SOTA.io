@@ -2,8 +2,8 @@
     "news": [
         {
             "date": "🗓️ 2026-02-05: ",
-            "content_en": "📌 Important update: New Feature: RL models filetrs in all benchmarks and home page",
-            "content_zh": "📌 重要更新: 新增功能: 所有基准测试和主页中RL模型筛选功能"
+            "content_en": "📌 Important update: New Feature: RL models filetrs in all benchmarks and home page; New Modles: Add Giga-Brain-0.1 and RDT-1B to RoboChallenge",
+            "content_zh": "📌 重要更新: 新增功能: 所有基准测试和主页中RL模型筛选功能；新增模型: 增加 Giga-Brain-0.1 和 RDT-1B 到 RoboChallenge"
         },
         {
             "date": "🗓️ 2026-02-02: ",
