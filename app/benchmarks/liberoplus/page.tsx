@@ -13,6 +13,7 @@ interface LiberoPlusModel {
     pub_date: string | null;
     is_opensource: boolean;
     opensource_url: string | null;
+    is_rl: boolean;
     camera: number | null;
     robot: number | null;
     language: number | null;
@@ -43,6 +44,7 @@ export default function LiberoPlusPage() {
     const [showAppendix, setShowAppendix] = useState(true);
     const [sortBy, setSortBy] = useState<'rank' | 'total' | 'date'>('rank');
     const [sortOrder, setSortOrder] = useState<'asc' | 'desc'>('asc');
+    const [modelTypeFilter, setModelTypeFilter] = useState<'all' | 'sft' | 'rl'>('sft');
 
     const texts = {
         en: {
@@ -69,6 +71,10 @@ export default function LiberoPlusPage() {
             opensource: 'Open Source',
             note: 'Note',
             total: 'Total',
+            modelTypeLabel: 'Model Type',
+            modelTypeAll: 'All Models',
+            modelTypeSft: 'SFT Only',
+            modelTypeRl: 'RL Only',
         },
         zh: {
             title: 'LIBERO Plus 基准测试榜单',
@@ -94,6 +100,10 @@ export default function LiberoPlusPage() {
             opensource: '开源',
             note: '备注',
             total: '总分',
+            modelTypeLabel: '模型类型',
+            modelTypeAll: '全部模型',
+            modelTypeSft: '仅 SFT',
+            modelTypeRl: '仅 RL',
         }
     };
 
@@ -147,18 +157,26 @@ export default function LiberoPlusPage() {
         });
     };
 
+    const applyModelTypeFilter = (models: LiberoPlusModel[]) => {
+        if (modelTypeFilter === 'all') return models;
+        if (modelTypeFilter === 'sft') return models.filter((model) => !model.is_rl);
+        if (modelTypeFilter === 'rl') return models.filter((model) => model.is_rl);
+        return models;
+    };
+
     const getDisplayData = () => {
         if (!data) return [];
         let models: LiberoPlusModel[] = [...data.standard_opensource];
         if (showClosedSource) {
             models = [...models, ...data.standard_closed];
         }
+        models = applyModelTypeFilter(models);
         models.sort((a, b) => (b.total || 0) - (a.total || 0));
         return models.map((m, i) => ({ ...m, rank: i + 1 }));
     };
 
     const displayData = sortData(getDisplayData());
-    const appendixData = data ? sortData(data.non_standard) : [];
+    const appendixData = data ? sortData(applyModelTypeFilter(data.non_standard)) : [];
 
     const formatValue = (value: number | null | undefined): string => {
         if (value === null || value === undefined) return '-';
@@ -449,12 +467,46 @@ export default function LiberoPlusPage() {
                         <button
                             onClick={() => setShowClosedSource(!showClosedSource)}
                             className={`px-4 py-2 rounded-lg font-medium transition-all ${showClosedSource
-                                ? 'bg-purple-600 text-white'
-                                : 'bg-white text-purple-600 border border-purple-200 hover:bg-purple-50'
+                                ? 'bg-orange-600 text-white'
+                                : 'bg-white text-orange-600 border border-orange-200 hover:bg-orange-50'
                                 }`}
                         >
                             {showClosedSource ? t.showAllModels : t.openSourceOnly}
                         </button>
+                    </div>
+
+                    {/* Model Type Filter - 靠右 */}
+                    <div className="flex items-center gap-2">
+                        <span className="text-sm text-slate-600">{t.modelTypeLabel}:</span>
+                        <div className="inline-flex rounded-lg overflow-hidden border border-orange-200">
+                            <button
+                                onClick={() => setModelTypeFilter('sft')}
+                                className={`px-3 py-1.5 text-sm font-medium transition-all ${modelTypeFilter === 'sft'
+                                    ? 'bg-orange-600 text-white'
+                                    : 'bg-white text-orange-600 hover:bg-orange-50'
+                                    }`}
+                            >
+                                {t.modelTypeSft}
+                            </button>
+                            <button
+                                onClick={() => setModelTypeFilter('rl')}
+                                className={`px-3 py-1.5 text-sm font-medium transition-all border-l border-orange-200 ${modelTypeFilter === 'rl'
+                                    ? 'bg-orange-600 text-white'
+                                    : 'bg-white text-orange-600 hover:bg-orange-50'
+                                    }`}
+                            >
+                                {t.modelTypeRl}
+                            </button>
+                            <button
+                                onClick={() => setModelTypeFilter('all')}
+                                className={`px-3 py-1.5 text-sm font-medium transition-all border-l border-orange-200 ${modelTypeFilter === 'all'
+                                    ? 'bg-orange-600 text-white'
+                                    : 'bg-white text-orange-600 hover:bg-orange-50'
+                                    }`}
+                            >
+                                {t.modelTypeAll}
+                            </button>
+                        </div>
                     </div>
                 </div>
 

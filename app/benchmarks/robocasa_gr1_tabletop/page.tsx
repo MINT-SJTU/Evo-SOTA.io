@@ -12,6 +12,7 @@ interface RoboCasaModel {
     pub_date: string | null;
     is_opensource: boolean;
     opensource_url: string | null;
+    is_rl?: boolean;
     avg_success_rate: number | null;
     note: string;
     rank: number;
@@ -33,6 +34,7 @@ export default function RoboCasaPage() {
     const [showClosedSource, setShowClosedSource] = useState(false);
     const [sortBy, setSortBy] = useState<'rank' | 'avg_success_rate' | 'date'>('rank');
     const [sortOrder, setSortOrder] = useState<'asc' | 'desc'>('asc');
+    const [modelTypeFilter, setModelTypeFilter] = useState<'all' | 'sft' | 'rl'>('sft');
 
     const texts = {
         en: {
@@ -52,6 +54,10 @@ export default function RoboCasaPage() {
             standardModels: 'Standard Evaluation Models',
             opensource: 'Open Source',
             note: 'Note',
+            modelTypeLabel: 'Model Type',
+            modelTypeAll: 'All Models',
+            modelTypeSft: 'SFT Only',
+            modelTypeRl: 'RL Only',
             metricDesc: {
                 score: 'Average success rate across all evaluation tasks',
             }
@@ -73,6 +79,10 @@ export default function RoboCasaPage() {
             standardModels: '标准测试模型',
             opensource: '开源',
             note: '备注',
+            modelTypeLabel: '模型类型',
+            modelTypeAll: '全部模型',
+            modelTypeSft: '仅 SFT',
+            modelTypeRl: '仅 RL',
             metricDesc: {
                 score: '所有评估任务的平均成功率',
             }
@@ -130,12 +140,21 @@ export default function RoboCasaPage() {
         });
     };
 
+    // 模型类型过滤
+    const applyModelTypeFilter = (models: RoboCasaModel[]) => {
+        if (modelTypeFilter === 'all') return models;
+        if (modelTypeFilter === 'sft') return models.filter(m => !m.is_rl);
+        return models.filter(m => m.is_rl === true);
+    };
+
     const getDisplayData = () => {
         if (!data) return [];
         let models: RoboCasaModel[] = [...data.standard_opensource];
         if (showClosedSource) {
             models = [...models, ...data.standard_closed];
         }
+        // 应用模型类型过滤
+        models = applyModelTypeFilter(models);
         // 默认按分数降序
         models.sort((a, b) => (b.avg_success_rate || 0) - (a.avg_success_rate || 0));
         return models.map((m, i) => ({ ...m, rank: i + 1 }));
@@ -353,12 +372,45 @@ export default function RoboCasaPage() {
                         <button
                             onClick={() => setShowClosedSource(!showClosedSource)}
                             className={`px-4 py-2 rounded-lg font-medium transition-all ${showClosedSource
-                                ? 'bg-purple-600 text-white'
-                                : 'bg-white text-purple-600 border border-purple-200 hover:bg-purple-50'
+                                ? 'bg-rose-600 text-white'
+                                : 'bg-white text-rose-600 border border-rose-200 hover:bg-rose-50'
                                 }`}
                         >
                             {showClosedSource ? t.showAllModels : t.openSourceOnly}
                         </button>
+                    </div>
+                    {/* Model Type Filter - 靠右 */}
+                    <div className="flex items-center gap-2">
+                        <span className="text-sm text-slate-600">{t.modelTypeLabel}:</span>
+                        <div className="inline-flex rounded-lg overflow-hidden border border-rose-200">
+                            <button
+                                onClick={() => setModelTypeFilter('sft')}
+                                className={`px-3 py-1.5 text-sm font-medium transition-all ${modelTypeFilter === 'sft'
+                                    ? 'bg-rose-600 text-white'
+                                    : 'bg-white text-rose-600 hover:bg-rose-50'
+                                    }`}
+                            >
+                                {t.modelTypeSft}
+                            </button>
+                            <button
+                                onClick={() => setModelTypeFilter('rl')}
+                                className={`px-3 py-1.5 text-sm font-medium transition-all border-l border-rose-200 ${modelTypeFilter === 'rl'
+                                    ? 'bg-rose-600 text-white'
+                                    : 'bg-white text-rose-600 hover:bg-rose-50'
+                                    }`}
+                            >
+                                {t.modelTypeRl}
+                            </button>
+                            <button
+                                onClick={() => setModelTypeFilter('all')}
+                                className={`px-3 py-1.5 text-sm font-medium transition-all border-l border-rose-200 ${modelTypeFilter === 'all'
+                                    ? 'bg-rose-600 text-white'
+                                    : 'bg-white text-rose-600 hover:bg-rose-50'
+                                    }`}
+                            >
+                                {t.modelTypeAll}
+                            </button>
+                        </div>
                     </div>
                 </div>
 

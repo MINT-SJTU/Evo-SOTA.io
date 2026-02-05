@@ -11,6 +11,7 @@ interface CalvinModel {
     pub_date: string | null;
     is_opensource: boolean;
     opensource_url: string | null;
+    is_rl?: boolean;
     inst1: number | null;
     inst2: number | null;
     inst3: number | null;
@@ -48,6 +49,7 @@ export default function CalvinPage() {
     const [showAppendix, setShowAppendix] = useState(true);
     const [sortBy, setSortBy] = useState<'rank' | 'avg_len' | 'date'>('rank');
     const [sortOrder, setSortOrder] = useState<'asc' | 'desc'>('asc');
+    const [modelTypeFilter, setModelTypeFilter] = useState<'all' | 'sft' | 'rl'>('sft');
 
     const texts = {
         en: {
@@ -79,6 +81,10 @@ export default function CalvinPage() {
             standardModels: 'Standard Evaluation Models',
             opensource: 'Open Source',
             note: 'Note',
+            modelTypeLabel: 'Model Type',
+            modelTypeAll: 'All Models',
+            modelTypeSft: 'SFT Only',
+            modelTypeRl: 'RL Only',
         },
         zh: {
             title: 'CALVIN 基准测试榜单',
@@ -109,6 +115,10 @@ export default function CalvinPage() {
             standardModels: '标准测试模型',
             opensource: '开源',
             note: '备注',
+            modelTypeLabel: '模型类型',
+            modelTypeAll: '全部模型',
+            modelTypeSft: '仅 SFT',
+            modelTypeRl: '仅 RL',
         }
     };
 
@@ -168,6 +178,13 @@ export default function CalvinPage() {
         });
     };
 
+    // 模型类型过滤
+    const applyModelTypeFilter = (models: CalvinModel[]) => {
+        if (modelTypeFilter === 'all') return models;
+        if (modelTypeFilter === 'sft') return models.filter(m => !m.is_rl);
+        return models.filter(m => m.is_rl === true);
+    };
+
     const getCurrentSettingData = (): CalvinSettingData | null => {
         if (!data) return null;
         return data[activeSetting];
@@ -181,6 +198,8 @@ export default function CalvinPage() {
         if (showClosedSource) {
             models = [...models, ...settingData.standard_closed];
         }
+        // 应用模型类型过滤
+        models = applyModelTypeFilter(models);
         // 重新排名
         models.sort((a, b) => (b.avg_len || 0) - (a.avg_len || 0));
         return models.map((m, i) => ({ ...m, rank: i + 1 }));
@@ -188,7 +207,7 @@ export default function CalvinPage() {
 
     const displayData = sortData(getDisplayData());
     const settingData = getCurrentSettingData();
-    const appendixData = settingData ? sortData(settingData.non_standard) : [];
+    const appendixData = settingData ? sortData(applyModelTypeFilter(settingData.non_standard).map((m, i) => ({ ...m, rank: i + 1 }))) : [];
 
     const formatValue = (value: number | null, decimals: number = 2): string => {
         if (value === null) return '-';
@@ -472,15 +491,48 @@ export default function CalvinPage() {
                         <button
                             onClick={() => setShowClosedSource(!showClosedSource)}
                             className={`px-4 py-2 rounded-lg font-medium transition-all ${showClosedSource
-                                ? 'bg-purple-600 text-white'
-                                : 'bg-white text-purple-600 border border-purple-200 hover:bg-purple-50'
+                                ? 'bg-emerald-600 text-white'
+                                : 'bg-white text-emerald-600 border border-emerald-200 hover:bg-emerald-50'
                                 }`}
                         >
                             {showClosedSource ? t.showAllModels : t.openSourceOnly}
                         </button>
                     </div>
-                    <p className="text-sm text-slate-500">{t.clickToExpand}</p>
+                    {/* Model Type Filter - 靠右 */}
+                    <div className="flex items-center gap-2">
+                        <span className="text-sm text-slate-600">{t.modelTypeLabel}:</span>
+                        <div className="inline-flex rounded-lg overflow-hidden border border-emerald-200">
+                            <button
+                                onClick={() => setModelTypeFilter('sft')}
+                                className={`px-3 py-1.5 text-sm font-medium transition-all ${modelTypeFilter === 'sft'
+                                    ? 'bg-emerald-600 text-white'
+                                    : 'bg-white text-emerald-600 hover:bg-emerald-50'
+                                    }`}
+                            >
+                                {t.modelTypeSft}
+                            </button>
+                            <button
+                                onClick={() => setModelTypeFilter('rl')}
+                                className={`px-3 py-1.5 text-sm font-medium transition-all border-l border-emerald-200 ${modelTypeFilter === 'rl'
+                                    ? 'bg-emerald-600 text-white'
+                                    : 'bg-white text-emerald-600 hover:bg-emerald-50'
+                                    }`}
+                            >
+                                {t.modelTypeRl}
+                            </button>
+                            <button
+                                onClick={() => setModelTypeFilter('all')}
+                                className={`px-3 py-1.5 text-sm font-medium transition-all border-l border-emerald-200 ${modelTypeFilter === 'all'
+                                    ? 'bg-emerald-600 text-white'
+                                    : 'bg-white text-emerald-600 hover:bg-emerald-50'
+                                    }`}
+                            >
+                                {t.modelTypeAll}
+                            </button>
+                        </div>
+                    </div>
                 </div>
+                <p className="text-sm text-slate-500 mb-4">{t.clickToExpand}</p>
 
                 {/* Main Table */}
                 <h2 className="text-xl font-bold text-slate-800 mb-4">{t.standardModels}</h2>
