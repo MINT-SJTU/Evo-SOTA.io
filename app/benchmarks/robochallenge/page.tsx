@@ -13,6 +13,7 @@ interface RoboChallengeModel {
     pub_date: string | null;
     is_opensource: boolean;
     opensource_url: string | null;
+    is_rl?: boolean;
     score: number | null;
     success_rate: number | null;
     source: string;
@@ -35,6 +36,7 @@ export default function RoboChallengePage() {
     const [showClosedSource, setShowClosedSource] = useState(false);
     const [sortBy, setSortBy] = useState<'rank' | 'score' | 'success_rate' | 'date'>('rank');
     const [sortOrder, setSortOrder] = useState<'asc' | 'desc'>('asc');
+    const [modelTypeFilter, setModelTypeFilter] = useState<'all' | 'sft' | 'rl'>('sft');
 
     const texts = {
         en: {
@@ -55,6 +57,10 @@ export default function RoboChallengePage() {
             standardModels: 'Standard Evaluation Models',
             opensource: 'Open Source',
             note: 'Note',
+            modelTypeLabel: 'Model Type',
+            modelTypeAll: 'All Models',
+            modelTypeSft: 'SFT Only',
+            modelTypeRl: 'RL Only',
             metricDesc: {
                 score: 'Overall performance score combining multiple factors',
                 successRate: 'Percentage of successfully completed tasks'
@@ -78,6 +84,10 @@ export default function RoboChallengePage() {
             standardModels: '标准测试模型',
             opensource: '开源',
             note: '备注',
+            modelTypeLabel: '模型类型',
+            modelTypeAll: '全部模型',
+            modelTypeSft: '仅 SFT',
+            modelTypeRl: '仅 RL',
             metricDesc: {
                 score: '综合多个因素的整体性能得分',
                 successRate: '成功完成任务的百分比'
@@ -137,12 +147,21 @@ export default function RoboChallengePage() {
         });
     };
 
+    // 模型类型过滤
+    const applyModelTypeFilter = (models: RoboChallengeModel[]) => {
+        if (modelTypeFilter === 'all') return models;
+        if (modelTypeFilter === 'sft') return models.filter(m => !m.is_rl);
+        return models.filter(m => m.is_rl === true);
+    };
+
     const getDisplayData = () => {
         if (!data) return [];
         let models: RoboChallengeModel[] = [...data.standard_opensource];
         if (showClosedSource) {
             models = [...models, ...data.standard_closed];
         }
+        // 应用模型类型过滤
+        models = applyModelTypeFilter(models);
         models.sort((a, b) => (b.score || 0) - (a.score || 0));
         return models.map((m, i) => ({ ...m, rank: i + 1 }));
     };
@@ -373,12 +392,45 @@ export default function RoboChallengePage() {
                         <button
                             onClick={() => setShowClosedSource(!showClosedSource)}
                             className={`px-4 py-2 rounded-lg font-medium transition-all ${showClosedSource
-                                ? 'bg-purple-600 text-white'
-                                : 'bg-white text-purple-600 border border-purple-200 hover:bg-purple-50'
+                                ? 'bg-teal-600 text-white'
+                                : 'bg-white text-teal-600 border border-teal-200 hover:bg-teal-50'
                                 }`}
                         >
                             {showClosedSource ? t.showAllModels : t.openSourceOnly}
                         </button>
+                    </div>
+                    {/* Model Type Filter - 靠右 */}
+                    <div className="flex items-center gap-2">
+                        <span className="text-sm text-slate-600">{t.modelTypeLabel}:</span>
+                        <div className="inline-flex rounded-lg overflow-hidden border border-teal-200">
+                            <button
+                                onClick={() => setModelTypeFilter('sft')}
+                                className={`px-3 py-1.5 text-sm font-medium transition-all ${modelTypeFilter === 'sft'
+                                    ? 'bg-teal-600 text-white'
+                                    : 'bg-white text-teal-600 hover:bg-teal-50'
+                                    }`}
+                            >
+                                {t.modelTypeSft}
+                            </button>
+                            <button
+                                onClick={() => setModelTypeFilter('rl')}
+                                className={`px-3 py-1.5 text-sm font-medium transition-all border-l border-teal-200 ${modelTypeFilter === 'rl'
+                                    ? 'bg-teal-600 text-white'
+                                    : 'bg-white text-teal-600 hover:bg-teal-50'
+                                    }`}
+                            >
+                                {t.modelTypeRl}
+                            </button>
+                            <button
+                                onClick={() => setModelTypeFilter('all')}
+                                className={`px-3 py-1.5 text-sm font-medium transition-all border-l border-teal-200 ${modelTypeFilter === 'all'
+                                    ? 'bg-teal-600 text-white'
+                                    : 'bg-white text-teal-600 hover:bg-teal-50'
+                                    }`}
+                            >
+                                {t.modelTypeAll}
+                            </button>
+                        </div>
                     </div>
                 </div>
 

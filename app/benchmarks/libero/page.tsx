@@ -11,6 +11,7 @@ interface LiberoModel {
     pub_date: string | null;
     is_opensource: boolean;
     opensource_url: string | null;
+    is_rl: boolean;
     policy_setting?: number;
     spatial: number | null;
     object: number | null;
@@ -41,6 +42,7 @@ export default function LiberoPage() {
     const [sortBy, setSortBy] = useState<'rank' | 'average' | 'date'>('rank');
     const [sortOrder, setSortOrder] = useState<'asc' | 'desc'>('asc');
     const [policyFilter, setPolicyFilter] = useState<'all' | '0' | '1' | '2'>('all');
+    const [modelTypeFilter, setModelTypeFilter] = useState<'all' | 'sft' | 'rl'>('sft');
 
     const texts = {
         en: {
@@ -77,6 +79,10 @@ export default function LiberoPage() {
             policyDescUnknown: 'The paper does not clearly specify the policy setting.',
             policySuitesNote: 'Note: LIBERO has multiple suites. Some models use one shared weight set for all suites, while others train four separate weights and evaluate each on its corresponding suite. Typically, multi-policy settings yield better performance.',
             policyDescLink: 'Jump to policy setting description',
+            modelTypeLabel: 'Model Type',
+            modelTypeAll: 'All Models',
+            modelTypeSft: 'SFT Only',
+            modelTypeRl: 'RL Only',
         },
         zh: {
             title: 'LIBERO 基准测试榜单',
@@ -112,6 +118,10 @@ export default function LiberoPage() {
             policyDescUnknown: '论文未明确说明权重设置。',
             policySuitesNote: '补充：LIBERO 包含多个测试套件。有的模型用一套权重评测所有套件，有的模型会为四个套件分别训练权重并在对应套件上测试。通常多套权重的测试方案表现会更好一些。',
             policyDescLink: '查看权重说明',
+            modelTypeLabel: '模型类型',
+            modelTypeAll: '全部模型',
+            modelTypeSft: '仅 SFT',
+            modelTypeRl: '仅 RL',
         }
     };
 
@@ -170,6 +180,13 @@ export default function LiberoPage() {
         return models.filter((model) => String(model.policy_setting ?? 0) === policyFilter);
     };
 
+    const applyModelTypeFilter = (models: LiberoModel[]) => {
+        if (modelTypeFilter === 'all') return models;
+        if (modelTypeFilter === 'sft') return models.filter((model) => !model.is_rl);
+        if (modelTypeFilter === 'rl') return models.filter((model) => model.is_rl);
+        return models;
+    };
+
     // 合并标准测试数据
     const getDisplayData = () => {
         if (!data) return [];
@@ -178,13 +195,14 @@ export default function LiberoPage() {
             models = [...models, ...data.standard_closed];
         }
         models = applyPolicyFilter(models);
+        models = applyModelTypeFilter(models);
         // 重新排名
         models.sort((a, b) => (b.average || 0) - (a.average || 0));
         return models.map((m, i) => ({ ...m, rank: i + 1 }));
     };
 
     const displayData = sortData(getDisplayData());
-    const appendixData = data ? sortData(applyPolicyFilter(data.non_standard)) : [];
+    const appendixData = data ? sortData(applyModelTypeFilter(applyPolicyFilter(data.non_standard))) : [];
 
     const formatValue = (value: number | null): string => {
         if (value === null) return '-';
@@ -460,51 +478,86 @@ export default function LiberoPage() {
                         <button
                             onClick={() => setShowClosedSource(!showClosedSource)}
                             className={`px-4 py-2 rounded-lg font-medium transition-all ${showClosedSource
-                                ? 'bg-purple-600 text-white'
-                                : 'bg-white text-purple-600 border border-purple-200 hover:bg-purple-50'
+                                ? 'bg-blue-600 text-white'
+                                : 'bg-white text-blue-600 border border-blue-200 hover:bg-blue-50'
                                 }`}
                         >
                             {showClosedSource ? t.showAllModels : t.openSourceOnly}
                         </button>
+
+                        {/* Policy Filter */}
+                        <div className="inline-flex rounded-lg overflow-hidden border border-blue-200">
+                            <button
+                                onClick={() => setPolicyFilter('all')}
+                                className={`px-3 py-1.5 text-sm font-medium transition-all ${policyFilter === 'all'
+                                    ? 'bg-blue-600 text-white'
+                                    : 'bg-white text-blue-600 hover:bg-blue-50'
+                                    }`}
+                            >
+                                {t.policyAll}
+                            </button>
+                            <button
+                                onClick={() => setPolicyFilter('1')}
+                                className={`px-3 py-1.5 text-sm font-medium transition-all border-l border-blue-200 ${policyFilter === '1'
+                                    ? 'bg-blue-600 text-white'
+                                    : 'bg-white text-blue-600 hover:bg-blue-50'
+                                    }`}
+                            >
+                                {t.policy1}
+                            </button>
+                            <button
+                                onClick={() => setPolicyFilter('2')}
+                                className={`px-3 py-1.5 text-sm font-medium transition-all border-l border-blue-200 ${policyFilter === '2'
+                                    ? 'bg-blue-600 text-white'
+                                    : 'bg-white text-blue-600 hover:bg-blue-50'
+                                    }`}
+                            >
+                                {t.policy2}
+                            </button>
+                            <button
+                                onClick={() => setPolicyFilter('0')}
+                                className={`px-3 py-1.5 text-sm font-medium transition-all border-l border-blue-200 ${policyFilter === '0'
+                                    ? 'bg-blue-600 text-white'
+                                    : 'bg-white text-blue-600 hover:bg-blue-50'
+                                    }`}
+                            >
+                                {t.policy0}
+                            </button>
+                        </div>
                     </div>
 
-                    <div className="flex items-center gap-2 bg-white rounded-lg p-1 border border-slate-200">
-                        <button
-                            onClick={() => setPolicyFilter('all')}
-                            className={`px-3 py-1.5 rounded-md text-sm font-medium transition-all ${policyFilter === 'all'
-                                ? 'bg-blue-600 text-white'
-                                : 'text-slate-600 hover:bg-slate-100'
-                                }`}
-                        >
-                            {t.policyAll}
-                        </button>
-                        <button
-                            onClick={() => setPolicyFilter('1')}
-                            className={`px-3 py-1.5 rounded-md text-sm font-medium transition-all ${policyFilter === '1'
-                                ? 'bg-purple-600 text-white'
-                                : 'text-slate-600 hover:bg-slate-100'
-                                }`}
-                        >
-                            {t.policy1}
-                        </button>
-                        <button
-                            onClick={() => setPolicyFilter('2')}
-                            className={`px-3 py-1.5 rounded-md text-sm font-medium transition-all ${policyFilter === '2'
-                                ? 'bg-green-600 text-white'
-                                : 'text-slate-600 hover:bg-slate-100'
-                                }`}
-                        >
-                            {t.policy2}
-                        </button>
-                        <button
-                            onClick={() => setPolicyFilter('0')}
-                            className={`px-3 py-1.5 rounded-md text-sm font-medium transition-all ${policyFilter === '0'
-                                ? 'bg-slate-600 text-white'
-                                : 'text-slate-600 hover:bg-slate-100'
-                                }`}
-                        >
-                            {t.policy0}
-                        </button>
+                    {/* Model Type Filter - 靠右 */}
+                    <div className="flex items-center gap-2">
+                        <span className="text-sm text-slate-600">{t.modelTypeLabel}:</span>
+                        <div className="inline-flex rounded-lg overflow-hidden border border-blue-200">
+                            <button
+                                onClick={() => setModelTypeFilter('sft')}
+                                className={`px-3 py-1.5 text-sm font-medium transition-all ${modelTypeFilter === 'sft'
+                                    ? 'bg-blue-600 text-white'
+                                    : 'bg-white text-blue-600 hover:bg-blue-50'
+                                    }`}
+                            >
+                                {t.modelTypeSft}
+                            </button>
+                            <button
+                                onClick={() => setModelTypeFilter('rl')}
+                                className={`px-3 py-1.5 text-sm font-medium transition-all border-l border-blue-200 ${modelTypeFilter === 'rl'
+                                    ? 'bg-blue-600 text-white'
+                                    : 'bg-white text-blue-600 hover:bg-blue-50'
+                                    }`}
+                            >
+                                {t.modelTypeRl}
+                            </button>
+                            <button
+                                onClick={() => setModelTypeFilter('all')}
+                                className={`px-3 py-1.5 text-sm font-medium transition-all border-l border-blue-200 ${modelTypeFilter === 'all'
+                                    ? 'bg-blue-600 text-white'
+                                    : 'bg-white text-blue-600 hover:bg-blue-50'
+                                    }`}
+                            >
+                                {t.modelTypeAll}
+                            </button>
+                        </div>
                     </div>
                 </div>
                 <div className="flex justify-end mb-2">
