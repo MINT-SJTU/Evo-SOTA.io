@@ -13,6 +13,7 @@ import {
 } from "recharts";
 import { Benchmark, LeaderboardData } from "@/types/dex/leaderboard";
 import { toHsla } from "@/lib/dex/colors";
+import { useLanguage } from "@/lib/LanguageContext";
 
 type DataPoint = {
   id: string;
@@ -73,6 +74,7 @@ const CustomTooltip = ({
 };
 
 export default function ProgressChart({ data }: { data: LeaderboardData }) {
+  const { t } = useLanguage();
   const [selectedBenchmarks, setSelectedBenchmarks] = useState<string[]>(
     data.benchmarks.map((benchmark) => benchmark.id)
   );
@@ -165,9 +167,9 @@ export default function ProgressChart({ data }: { data: LeaderboardData }) {
     <section className="py-16 px-4 sm:px-6 lg:px-8 bg-slate-50">
       <div className="max-w-7xl mx-auto">
         <div className="text-center mb-8">
-          <h2 className="text-2xl font-bold text-slate-800">Dexterous Progress Over Time</h2>
+          <h2 className="text-2xl font-bold text-slate-800">{t.dex.progressChart.title}</h2>
           <p className="text-slate-600">
-            Tracking the evolution of dexterous manipulation models across benchmarks.
+            {t.dex.progressChart.subtitle}
           </p>
         </div>
 
@@ -199,7 +201,7 @@ export default function ProgressChart({ data }: { data: LeaderboardData }) {
               onChange={(event) => setShowTopOnly(event.target.checked)}
               className="w-4 h-4 text-primary-600 rounded border-gray-300 focus:ring-primary-500"
             />
-            <span className="text-sm text-slate-600">Show Top Performers Only</span>
+            <span className="text-sm text-slate-600">{t.dex.progressChart.showTopOnly}</span>
           </label>
           <label className="flex items-center gap-2 cursor-pointer">
             <input
@@ -208,7 +210,7 @@ export default function ProgressChart({ data }: { data: LeaderboardData }) {
               onChange={(event) => setShowOpenSourceOnly(event.target.checked)}
               className="w-4 h-4 text-emerald-600 rounded border-gray-300 focus:ring-emerald-500"
             />
-            <span className="text-sm text-slate-600">Open-Source Models Only</span>
+            <span className="text-sm text-slate-600">{t.dex.progressChart.openSourceOnly}</span>
           </label>
         </div>
 
@@ -225,7 +227,7 @@ export default function ProgressChart({ data }: { data: LeaderboardData }) {
                 const chartStyle = chartCount === 1 ? { width: "66.67%", minWidth: "400px" } : undefined;
                 const chartClass = isLastInOdd ? "w-full md:w-1/2" : "w-full";
                 const meanLabel =
-                  benchmark.columns.find((col) => col.id === benchmark.meanColumnId)?.label || "Mean";
+                  benchmark.columns.find((col) => col.id === benchmark.meanColumnId)?.label || t.dex.progressChart.meanFallback;
 
                 return (
                   <div key={benchmark.id} className={chartWrapperClass} style={chartStyle}>

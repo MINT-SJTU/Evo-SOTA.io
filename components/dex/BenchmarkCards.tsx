@@ -1,6 +1,9 @@
+"use client";
+
 import Link from "next/link";
 import { Benchmark, MethodRow } from "@/types/dex/leaderboard";
 import { toHsla } from "@/lib/dex/colors";
+import { useLanguage } from "@/lib/LanguageContext";
 
 const parseScore = (value: string | null | undefined) => {
   if (!value) return null;
@@ -42,11 +45,13 @@ export default function BenchmarkCards({
   benchmarks: Benchmark[];
   methods: MethodRow[];
 }) {
+  const { t } = useLanguage();
+
   if (!benchmarks.length) {
     return (
       <section className="max-w-6xl mx-auto px-6 py-16">
-        <h2 className="text-2xl font-display font-semibold mb-4">Benchmarks</h2>
-        <p className="text-muted">No benchmarks loaded yet.</p>
+        <h2 className="text-2xl font-display font-semibold mb-4">{t.dex.benchmarkCards.title}</h2>
+        <p className="text-muted">{t.dex.benchmarkCards.empty}</p>
       </section>
     );
   }
@@ -54,7 +59,7 @@ export default function BenchmarkCards({
   return (
     <section className="py-16 px-4 sm:px-6 lg:px-8" id="benchmarks">
       <div className="max-w-6xl mx-auto">
-        <h2 className="text-2xl font-bold text-slate-800 mb-8 text-center">Benchmarks</h2>
+        <h2 className="text-2xl font-bold text-slate-800 mb-8 text-center">{t.dex.benchmarkCards.title}</h2>
 
         <div className="flex justify-center gap-5 flex-wrap">
           {benchmarks.map((benchmark) => {
@@ -62,6 +67,7 @@ export default function BenchmarkCards({
             const modelCount = countModels(benchmark, methods);
             const accent = benchmark.color || "#3b82f6";
             const badgeBg = toHsla(accent, 0.2);
+            const localizedDescription = t.dex.benchmarkDescriptions[benchmark.id] || benchmark.description;
 
             return (
               <div
@@ -78,15 +84,15 @@ export default function BenchmarkCards({
                       className="px-2 py-1 rounded-full text-xs font-medium"
                       style={{ backgroundColor: badgeBg, color: accent }}
                     >
-                      {modelCount} Models
+                      {modelCount} {t.dex.benchmarkCards.models}
                     </span>
                   </div>
-                  <p className="text-sm text-slate-600 line-clamp-2">{benchmark.description}</p>
-                  <p className="text-xs text-slate-500 mt-2">Primary Metric: Mean Success Rate (%)</p>
+                  <p className="text-sm text-slate-600 line-clamp-2">{localizedDescription}</p>
+                  <p className="text-xs text-slate-500 mt-2">{t.dex.benchmarkCards.primaryMetric}: {t.dex.benchmarkCards.primaryMetricValue}</p>
                 </div>
 
                 <div className="p-4">
-                  <h4 className="text-sm font-semibold text-slate-700 mb-3">Top Performers</h4>
+                  <h4 className="text-sm font-semibold text-slate-700 mb-3">{t.dex.benchmarkCards.topPerformers}</h4>
                   <div className="space-y-2">
                     {top.length ? (
                       top.map((item, rankIdx) => (
@@ -116,7 +122,7 @@ export default function BenchmarkCards({
                         </div>
                       ))
                     ) : (
-                      <div className="text-sm text-slate-500">No results yet.</div>
+                      <div className="text-sm text-slate-500">{t.dex.benchmarkCards.noResults}</div>
                     )}
                   </div>
                 </div>
@@ -127,7 +133,7 @@ export default function BenchmarkCards({
                     className="block w-full text-center py-2 rounded-lg text-white font-medium transition-colors"
                     style={{ backgroundColor: accent }}
                   >
-                    View Leaderboard
+                    {t.dex.benchmarkCards.viewLeaderboard}
                   </Link>
                 </div>
               </div>

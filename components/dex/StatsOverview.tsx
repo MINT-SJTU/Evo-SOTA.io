@@ -1,5 +1,8 @@
+"use client";
+
 import { Benchmark, MethodRow } from "@/types/dex/leaderboard";
 import { toHsla } from "@/lib/dex/colors";
+import { useLanguage } from "@/lib/LanguageContext";
 
 const parseScore = (value: string | null | undefined) => {
   if (!value) return null;
@@ -37,6 +40,8 @@ export default function StatsOverview({
   benchmarks: Benchmark[];
   methods: MethodRow[];
 }) {
+  const { t } = useLanguage();
+
   const benchmarkCounts = benchmarks.map((benchmark) => ({
     id: benchmark.id,
     name: benchmark.name,
@@ -71,18 +76,18 @@ export default function StatsOverview({
         <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
           <div className="bg-white rounded-xl p-6 shadow-sm border border-slate-200 hover:shadow-md transition-shadow">
             <div className="text-4xl font-bold text-primary-600 mb-1">{totalModels}+</div>
-            <div className="text-slate-600 text-sm">Total Models Tracked</div>
+            <div className="text-slate-600 text-sm">{t.dex.stats.totalModelsTracked}</div>
           </div>
           <div className="bg-white rounded-xl p-6 shadow-sm border border-slate-200 hover:shadow-md transition-shadow">
             <div className="text-4xl font-bold text-purple-600 mb-1">{benchmarks.length}</div>
-            <div className="text-slate-600 text-sm">Benchmarks</div>
+            <div className="text-slate-600 text-sm">{t.dex.stats.benchmarks}</div>
           </div>
           <div className="bg-white rounded-xl p-6 shadow-sm border border-slate-200 hover:shadow-md transition-shadow">
             <div className="text-4xl font-bold text-emerald-600 mb-1">{yearsOfProgress}+</div>
-            <div className="text-slate-600 text-sm">Years of Progress</div>
+            <div className="text-slate-600 text-sm">{t.dex.stats.yearsOfProgress}</div>
           </div>
           <div className="bg-white rounded-xl p-6 shadow-sm border border-slate-200 hover:shadow-md transition-shadow">
-            <div className="text-sm text-slate-600 mb-2">Covering</div>
+            <div className="text-sm text-slate-600 mb-2">{t.dex.stats.covering}</div>
             <div className="flex flex-wrap items-center gap-1 text-xs">
               {benchmarkCounts.map((benchmark) => (
                 <span
@@ -101,7 +106,7 @@ export default function StatsOverview({
         </div>
 
         <div className="mt-8">
-          <h3 className="text-lg font-semibold text-slate-700 mb-4 text-center">🏆 Current Leaders</h3>
+          <h3 className="text-lg font-semibold text-slate-700 mb-4 text-center">🏆 {t.dex.stats.currentLeaders}</h3>
           <div className="grid md:grid-cols-3 gap-4">
             {leaderCards.map((item) => (
               <div

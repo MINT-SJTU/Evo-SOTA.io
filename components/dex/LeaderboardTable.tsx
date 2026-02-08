@@ -3,6 +3,7 @@
 import { useMemo, useState } from "react";
 import { Benchmark, MethodRow } from "@/types/dex/leaderboard";
 import { toHsla, shiftHslLightness } from "@/lib/dex/colors";
+import { useLanguage } from "@/lib/LanguageContext";
 
 const parseScore = (value: string | null | undefined) => {
   if (!value) return null;
@@ -36,8 +37,9 @@ export default function LeaderboardTable({
 }: {
   benchmark: Benchmark;
   rows: MethodRow[];
-  title: string;
+  title?: string;
 }) {
+  const { t } = useLanguage();
   const [showAllMetrics, setShowAllMetrics] = useState(false);
   const [showOpenSourceOnly, setShowOpenSourceOnly] = useState(false);
   const [sortBy, setSortBy] = useState<"rank" | "date">("rank");
@@ -78,12 +80,14 @@ export default function LeaderboardTable({
 
   const detailColumns = benchmark.columns.filter((col) => col.kind === "score" && col.id !== benchmark.meanColumnId);
 
+  const displayTitle = title || `${benchmark.name} ${t.dex.leaderboardTable.leaderboardSuffix}`;
+
   return (
     <section className="max-w-6xl mx-auto px-6 py-12">
       <div className="flex items-center justify-between flex-wrap gap-4">
         <div>
           <p className="text-xs uppercase tracking-wide text-muted">{benchmark.name}</p>
-          <h2 className="text-2xl font-display font-semibold">{title}</h2>
+          <h2 className="text-2xl font-display font-semibold">{displayTitle}</h2>
         </div>
         <div className="flex gap-3 flex-wrap">
           {benchmark.links.map((link) => (
@@ -103,7 +107,7 @@ export default function LeaderboardTable({
 
       <div className="mt-6 flex flex-wrap items-center justify-between gap-4">
         <div className="flex items-center gap-3 text-sm text-slate-600">
-          <span>Sort by:</span>
+          <span>{t.dex.leaderboardTable.sortBy}</span>
           <button
             onClick={() => {
               if (sortBy === "rank") {
@@ -115,7 +119,7 @@ export default function LeaderboardTable({
             }}
             className="px-3 py-1.5 border border-slate-300 rounded-lg hover:border-primary-500"
           >
-            Rank {sortBy === "rank" && (sortOrder === "asc" ? "↑" : "↓")}
+            {t.dex.leaderboardTable.rank} {sortBy === "rank" && (sortOrder === "asc" ? "↑" : "↓")}
           </button>
           <button
             onClick={() => {
@@ -128,7 +132,7 @@ export default function LeaderboardTable({
             }}
             className="px-3 py-1.5 border border-slate-300 rounded-lg hover:border-primary-500"
           >
-            Date {sortBy === "date" && (sortOrder === "asc" ? "↑" : "↓")}
+            {t.dex.leaderboardTable.date} {sortBy === "date" && (sortOrder === "asc" ? "↑" : "↓")}
           </button>
           <label className="flex items-center gap-2 cursor-pointer text-sm text-slate-600">
             <input
@@ -137,14 +141,14 @@ export default function LeaderboardTable({
               onChange={(e) => setShowOpenSourceOnly(e.target.checked)}
               className="w-4 h-4 text-primary-600 rounded border-gray-300 focus:ring-primary-500"
             />
-            Open-Source Models Only
+            {t.dex.leaderboardTable.openSourceOnly}
           </label>
         </div>
         <button
           onClick={() => setShowAllMetrics(!showAllMetrics)}
           className="px-4 py-2 rounded-lg border border-slate-300 hover:border-primary-500 text-sm font-medium"
         >
-          {showAllMetrics ? "Compact View" : "Show All Metrics"}
+          {showAllMetrics ? t.dex.leaderboardTable.compactView : t.dex.leaderboardTable.showAllMetrics}
         </button>
       </div>
 
@@ -153,24 +157,24 @@ export default function LeaderboardTable({
           <table className="w-full text-sm">
             <thead>
               <tr className="border-b border-slate-200" style={{ background: toHsla(accent, 0.1) }}>
-                <th className="px-4 py-3 text-left text-sm font-semibold text-slate-700">Rank</th>
-                <th className="px-4 py-3 text-left text-sm font-semibold text-slate-700">Model</th>
-                <th className="px-4 py-3 text-left text-sm font-semibold text-slate-700">Mean</th>
-                <th className="px-4 py-3 text-left text-sm font-semibold text-slate-700">Date</th>
+                <th className="px-4 py-3 text-left text-sm font-semibold text-slate-700">{t.dex.leaderboardTable.rank}</th>
+                <th className="px-4 py-3 text-left text-sm font-semibold text-slate-700">{t.dex.leaderboardTable.model}</th>
+                <th className="px-4 py-3 text-left text-sm font-semibold text-slate-700">{t.dex.leaderboardTable.mean}</th>
+                <th className="px-4 py-3 text-left text-sm font-semibold text-slate-700">{t.dex.leaderboardTable.date}</th>
                 {showAllMetrics &&
                   detailColumns.map((col) => (
                     <th key={col.id} className="px-4 py-3 text-left text-sm font-semibold text-slate-700">
                       {col.label}
                     </th>
                   ))}
-                <th className="px-4 py-3 text-center text-sm font-semibold text-slate-700">Details</th>
+                <th className="px-4 py-3 text-center text-sm font-semibold text-slate-700">{t.dex.leaderboardTable.details}</th>
               </tr>
             </thead>
             <tbody className="divide-y divide-slate-100">
             {sortedRows.length === 0 ? (
               <tr>
                 <td colSpan={6} className="px-4 py-8 text-center text-slate-500">
-                  No data available.
+                  {t.dex.leaderboardTable.noData}
                 </td>
               </tr>
             ) : (
@@ -246,7 +250,7 @@ export default function LeaderboardTable({
                         <td className="px-4 py-3 text-center">
                           <button
                             className="text-slate-400 hover:text-slate-600"
-                            aria-label={isExpanded ? "Hide details" : "Show details"}
+                            aria-label={isExpanded ? t.dex.leaderboardTable.hideDetails : t.dex.leaderboardTable.showDetails}
                           >
                             <svg
                               className={`w-5 h-5 transition-transform ${isExpanded ? "rotate-180" : ""}`}
@@ -265,7 +269,7 @@ export default function LeaderboardTable({
                             <div className="ml-4 space-y-4">
                               {!showAllMetrics && (
                                 <div>
-                                  <h4 className="text-sm font-semibold text-slate-700 mb-3">Sub-metrics</h4>
+                                  <h4 className="text-sm font-semibold text-slate-700 mb-3">{t.dex.leaderboardTable.subMetrics}</h4>
                                   <div className="grid grid-cols-2 md:grid-cols-4 gap-3">
                                     {detailColumns.map((col) => (
                                       <div key={col.id} className="bg-white rounded-lg p-3 shadow-sm">
@@ -287,7 +291,7 @@ export default function LeaderboardTable({
                                     className="inline-flex items-center gap-1 px-3 py-1.5 bg-slate-800 text-white rounded-lg text-sm hover:bg-slate-700 transition-colors"
                                     onClick={(e) => e.stopPropagation()}
                                   >
-                                    Code / Project
+                                    {t.dex.leaderboardTable.codeProject}
                                   </a>
                                 )}
                                 {row.paper && (
@@ -299,13 +303,13 @@ export default function LeaderboardTable({
                                     style={{ backgroundColor: accent }}
                                     onClick={(e) => e.stopPropagation()}
                                   >
-                                    📄 Paper
+                                    📄 {t.dex.leaderboardTable.paper}
                                   </a>
                                 )}
                               </div>
                               {meta?.source && meta.source !== "original" && (
                                 <div className="bg-amber-50 border border-amber-200 rounded-lg p-3">
-                                  <span className="text-sm font-medium text-amber-800">Source: </span>
+                                  <span className="text-sm font-medium text-amber-800">{t.dex.leaderboardTable.source}: </span>
                                   <span className="text-sm text-amber-700">{meta.source}</span>
                                 </div>
                               )}
