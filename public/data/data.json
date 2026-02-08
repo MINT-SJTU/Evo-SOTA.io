@@ -4,6 +4,10 @@
     "standard_opensource_count": 45,
     "standard_closed_count": 13,
     "non_standard_count": 15,
+    "model_type_count": {
+      "sft": 40,
+      "rl": 5
+    },
     "primary_metric": "Average Success Rate (%)",
     "top_5": [
       {
@@ -31,6 +35,60 @@
         "score": 98.3,
         "rank": 5
       }
+    ],
+    "top_5_sft": [
+      {
+        "name": "Being-H0.5 (Specialist)",
+        "score": 98.9,
+        "rank": 1
+      },
+      {
+        "name": "UnifoLM-VLA-0",
+        "score": 98.7,
+        "rank": 2
+      },
+      {
+        "name": "VLA-Adapter-pro",
+        "score": 98.5,
+        "rank": 3
+      },
+      {
+        "name": "EO-1",
+        "score": 98.2,
+        "rank": 4
+      },
+      {
+        "name": "X-VLA",
+        "score": 98.1,
+        "rank": 5
+      }
+    ],
+    "top_5_rl": [
+      {
+        "name": "SimpleVLA-RL",
+        "score": 99.1,
+        "rank": 1
+      },
+      {
+        "name": "pi-RL",
+        "score": 98.3,
+        "rank": 2
+      },
+      {
+        "name": "RLinf-VLA",
+        "score": 98.1,
+        "rank": 3
+      },
+      {
+        "name": "RIPT-VLA",
+        "score": 97.5,
+        "rank": 4
+      },
+      {
+        "name": "VLA-RL",
+        "score": 81.0,
+        "rank": 5
+      }
     ]
   },
   "libero_plus": {
@@ -38,6 +96,10 @@
     "standard_opensource_count": 11,
     "standard_closed_count": 1,
     "non_standard_count": 0,
+    "model_type_count": {
+      "sft": 10,
+      "rl": 1
+    },
     "primary_metric": "Total Success Rate (%)",
     "top_5": [
       {
@@ -65,6 +127,40 @@
         "score": 61.6,
         "rank": 5
       }
+    ],
+    "top_5_sft": [
+      {
+        "name": "DeepThinkVLA",
+        "score": 79.0,
+        "rank": 1
+      },
+      {
+        "name": "OpenVLA-OFT",
+        "score": 69.6,
+        "rank": 2
+      },
+      {
+        "name": "OpenVLA-OFT (mix-sft)",
+        "score": 67.9,
+        "rank": 3
+      },
+      {
+        "name": "pi0-FAST",
+        "score": 61.6,
+        "rank": 4
+      },
+      {
+        "name": "OpenVLA-OFT (without wrist input)",
+        "score": 55.8,
+        "rank": 5
+      }
+    ],
+    "top_5_rl": [
+      {
+        "name": "RIPT-VLA",
+        "score": 68.4,
+        "rank": 1
+      }
     ]
   },
   "metaworld": {
@@ -72,6 +168,10 @@
     "standard_opensource_count": 7,
     "standard_closed_count": 0,
     "non_standard_count": 8,
+    "model_type_count": {
+      "sft": 6,
+      "rl": 1
+    },
     "primary_metric": "Average Success Rate (%)",
     "top_5": [
       {
@@ -99,13 +199,51 @@
         "score": 47.9,
         "rank": 5
       }
+    ],
+    "top_5_sft": [
+      {
+        "name": "Evo-1",
+        "score": 80.6,
+        "rank": 1
+      },
+      {
+        "name": "RoboTron Mani",
+        "score": 77.7,
+        "rank": 2
+      },
+      {
+        "name": "SmolVLA",
+        "score": 68.2,
+        "rank": 3
+      },
+      {
+        "name": "pi0",
+        "score": 47.9,
+        "rank": 4
+      },
+      {
+        "name": "TinyVLA-H",
+        "score": 31.6,
+        "rank": 5
+      }
+    ],
+    "top_5_rl": [
+      {
+        "name": "pi-RL",
+        "score": 85.8,
+        "rank": 1
+      }
     ]
   },
   "robochallenge": {
-    "total_models": 8,
-    "standard_opensource_count": 8,
+    "total_models": 10,
+    "standard_opensource_count": 10,
     "standard_closed_count": 0,
     "non_standard_count": 0,
+    "model_type_count": {
+      "sft": 10,
+      "rl": 0
+    },
     "primary_metric": "Score",
     "top_5": [
       {
@@ -114,42 +252,74 @@
         "rank": 1
       },
       {
+        "name": "Giga-Brain-0.1",
+        "score": 63.95,
+        "rank": 2
+      },
+      {
         "name": "pi0.5",
         "score": 61.84,
-        "rank": 2
+        "rank": 3
       },
       {
         "name": "wall-oss-v0.1",
         "score": 55.3,
-        "rank": 3
+        "rank": 4
       },
       {
         "name": "pi0",
         "score": 46.41,
+        "rank": 5
+      }
+    ],
+    "top_5_sft": [
+      {
+        "name": "Spirit v1.5",
+        "score": 66.09,
+        "rank": 1
+      },
+      {
+        "name": "Giga-Brain-0.1",
+        "score": 63.95,
+        "rank": 2
+      },
+      {
+        "name": "pi0.5",
+        "score": 61.84,
+        "rank": 3
+      },
+      {
+        "name": "wall-oss-v0.1",
+        "score": 55.3,
         "rank": 4
       },
       {
-        "name": "pi0.5 (generalist)",
-        "score": 31.27,
+        "name": "pi0",
+        "score": 46.41,
         "rank": 5
       }
-    ]
+    ],
+    "top_5_rl": []
   },
   "robocasa": {
     "total_models": 7,
     "standard_opensource_count": 7,
     "standard_closed_count": 0,
     "non_standard_count": 0,
+    "model_type_count": {
+      "sft": 7,
+      "rl": 0
+    },
     "primary_metric": "Average Success Rate (%)",
     "top_5": [
       {
-        "name": "Langforce",
-        "score": 66.5,
+        "name": "TwinBrainVLA",
+        "score": 54.6,
         "rank": 1
       },
       {
-        "name": "TwinBrainVLA",
-        "score": 54.6,
+        "name": "Langforce",
+        "score": 52.6,
         "rank": 2
       },
       {
@@ -167,13 +337,45 @@
         "score": 47.6,
         "rank": 5
       }
-    ]
+    ],
+    "top_5_sft": [
+      {
+        "name": "TwinBrainVLA",
+        "score": 54.6,
+        "rank": 1
+      },
+      {
+        "name": "Langforce",
+        "score": 52.6,
+        "rank": 2
+      },
+      {
+        "name": "StarVLA (Qwen3OFT)",
+        "score": 48.8,
+        "rank": 3
+      },
+      {
+        "name": "StarVLA (Qwen3GR00T)",
+        "score": 47.8,
+        "rank": 4
+      },
+      {
+        "name": "GR00T-N1.6",
+        "score": 47.6,
+        "rank": 5
+      }
+    ],
+    "top_5_rl": []
   },
   "calvin": {
     "total_models": 37,
     "standard_opensource_count": 29,
     "standard_closed_count": 5,
     "non_standard_count": 3,
+    "model_type_count": {
+      "sft": 28,
+      "rl": 1
+    },
     "primary_metric": "Average Length (Avg. Len.)",
     "description": "ABC-D Setting (Default)",
     "top_5": [
@@ -201,6 +403,40 @@
         "name": "X-VLA",
         "score": 4.43,
         "rank": 5
+      }
+    ],
+    "top_5_sft": [
+      {
+        "name": "Flower VLA",
+        "score": 4.53,
+        "rank": 1
+      },
+      {
+        "name": "VLA-Adapter-pro",
+        "score": 4.5,
+        "rank": 2
+      },
+      {
+        "name": "DreamVLA",
+        "score": 4.44,
+        "rank": 3
+      },
+      {
+        "name": "X-VLA",
+        "score": 4.43,
+        "rank": 4
+      },
+      {
+        "name": "UnifiedVLA",
+        "score": 4.41,
+        "rank": 5
+      }
+    ],
+    "top_5_rl": [
+      {
+        "name": "pi-RL",
+        "score": 4.71,
+        "rank": 1
       }
     ],
     "settings": {

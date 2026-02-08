@@ -45,31 +45,43 @@ interface SummaryData {
         total_models: number;
         standard_opensource_count: number;
         top_5: { name: string; score: number; rank: number }[];
+        top_5_sft: { name: string; score: number; rank: number }[];
+        top_5_rl: { name: string; score: number; rank: number }[];
     };
     libero_plus: {
         total_models: number;
         standard_opensource_count: number;
         top_5: { name: string; score: number; rank: number }[];
+        top_5_sft: { name: string; score: number; rank: number }[];
+        top_5_rl: { name: string; score: number; rank: number }[];
     };
     calvin: {
         total_models: number;
         standard_opensource_count: number;
         top_5: { name: string; score: number; rank: number }[];
+        top_5_sft: { name: string; score: number; rank: number }[];
+        top_5_rl: { name: string; score: number; rank: number }[];
     };
     metaworld: {
         total_models: number;
         standard_opensource_count: number;
         top_5: { name: string; score: number; rank: number }[];
+        top_5_sft: { name: string; score: number; rank: number }[];
+        top_5_rl: { name: string; score: number; rank: number }[];
     };
     robochallenge: {
         total_models: number;
         standard_opensource_count: number;
         top_5: { name: string; score: number; rank: number }[];
+        top_5_sft: { name: string; score: number; rank: number }[];
+        top_5_rl: { name: string; score: number; rank: number }[];
     };
     robocasa: {
         total_models: number;
         standard_opensource_count: number;
         top_5: { name: string; score: number; rank: number }[];
+        top_5_sft: { name: string; score: number; rank: number }[];
+        top_5_rl: { name: string; score: number; rank: number }[];
     };
 }
 
@@ -83,6 +95,7 @@ export default function Home() {
     const { t, locale } = useLanguage();
     const [summaryData, setSummaryData] = useState<SummaryData | null>(null);
     const [newsData, setNewsData] = useState<NewsItem[]>([]);
+    const [includeRlModels, setIncludeRlModels] = useState(false);
 
     useEffect(() => {
         const loadData = async () => {
@@ -109,7 +122,7 @@ export default function Home() {
         // 模型列表（需要斜体和紫色）
         const models = [
             'DeepThinkVLA', 'Dadu-Corki', 'RoboTron Mani', 'CronusVLA', 'InstructVLA', 'InternVLA-M1', 'ACoT-VLA',
-            'OpenVLA', 'Pi0', 'RIPT', 'NORA-1.5', 'Being-H0.5', 'EO-1', 'DreamVLA', 'Rlinf-VLA', 'pi-RL', 'UnifoLM-VLA-0'
+            'OpenVLA', 'Pi0', 'RIPT', 'NORA-1.5', 'Being-H0.5', 'EO-1', 'DreamVLA', 'Rlinf-VLA', 'pi-RL', 'UnifoLM-VLA-0', 'Giga-Brain-0.1', 'RDT-1B'
         ];
 
         let formattedContent = content;
@@ -145,6 +158,16 @@ export default function Home() {
     };
 
     // 构建 benchmarks 数据 - 顺序: libero plus, libero, metaworld, calvin, robochallenge
+    // 根据 includeRlModels 选择数据源
+    const getTopModels = (benchmark: keyof SummaryData) => {
+        if (!summaryData) return [];
+        const data = summaryData[benchmark];
+        if (includeRlModels) {
+            return data.top_5?.map(m => ({ rank: m.rank, name: m.name, score: m.score })) || [];
+        }
+        return data.top_5_sft?.map(m => ({ rank: m.rank, name: m.name, score: m.score })) || [];
+    };
+
     // 第一行: libero, metaworld, calvin
     const firstRowBenchmarks = [
         {
@@ -153,11 +176,7 @@ export default function Home() {
             description: t.benchmarkDesc.libero.description,
             metric: t.benchmarkDesc.libero.metric,
             modelCount: summaryData?.libero.standard_opensource_count || 0,
-            topModels: summaryData?.libero.top_5.map(m => ({
-                rank: m.rank,
-                name: m.name,
-                score: m.score,
-            })) || [],
+            topModels: getTopModels('libero'),
             color: 'blue',
         },
         {
@@ -166,11 +185,7 @@ export default function Home() {
             description: t.benchmarkDesc.metaworld.description,
             metric: t.benchmarkDesc.metaworld.metric,
             modelCount: summaryData?.metaworld.standard_opensource_count || 0,
-            topModels: summaryData?.metaworld.top_5.map(m => ({
-                rank: m.rank,
-                name: m.name,
-                score: m.score,
-            })) || [],
+            topModels: getTopModels('metaworld'),
             color: 'purple',
         },
         {
@@ -179,11 +194,7 @@ export default function Home() {
             description: t.benchmarkDesc.calvin.description,
             metric: t.benchmarkDesc.calvin.metric,
             modelCount: summaryData?.calvin.standard_opensource_count || 0,
-            topModels: summaryData?.calvin.top_5.map(m => ({
-                rank: m.rank,
-                name: m.name,
-                score: m.score,
-            })) || [],
+            topModels: getTopModels('calvin'),
             color: 'green',
         },
     ];
@@ -196,11 +207,7 @@ export default function Home() {
             description: t.benchmarkDesc.liberoPlus.description,
             metric: t.benchmarkDesc.liberoPlus.metric,
             modelCount: summaryData?.libero_plus.standard_opensource_count || 0,
-            topModels: summaryData?.libero_plus.top_5.map(m => ({
-                rank: m.rank,
-                name: m.name,
-                score: m.score,
-            })) || [],
+            topModels: getTopModels('libero_plus'),
             color: 'orange',
         },
         {
@@ -209,11 +216,7 @@ export default function Home() {
             description: t.benchmarkDesc.robochallenge?.description || 'Real-world robotic manipulation benchmark',
             metric: t.benchmarkDesc.robochallenge?.metric || 'Score',
             modelCount: summaryData?.robochallenge?.standard_opensource_count || 0,
-            topModels: summaryData?.robochallenge?.top_5?.map(m => ({
-                rank: m.rank,
-                name: m.name,
-                score: m.score,
-            })) || [],
+            topModels: getTopModels('robochallenge'),
             color: 'teal',
         },
         {
@@ -222,11 +225,7 @@ export default function Home() {
             description: t.benchmarkDesc.robocasa?.description || 'Tabletop manipulation tasks benchmark based on RoboCasa',
             metric: t.benchmarkDesc.robocasa?.metric || 'Average Success Rate (%)',
             modelCount: summaryData?.robocasa?.standard_opensource_count || 0,
-            topModels: summaryData?.robocasa?.top_5?.map(m => ({
-                rank: m.rank,
-                name: m.name,
-                score: m.score,
-            })) || [],
+            topModels: getTopModels('robocasa'),
             color: 'rose',
         },
     ];
@@ -352,9 +351,27 @@ export default function Home() {
             {/* Benchmark Cards */}
             <section className="py-16 px-4 sm:px-6 lg:px-8">
                 <div className="max-w-6xl mx-auto">
-                    <h2 className="text-2xl font-bold text-slate-800 mb-8 text-center">
-                        {t.nav.benchmarks}
-                    </h2>
+                    <div className="flex items-center justify-between mb-8">
+                        <h2 className="text-2xl font-bold text-slate-800">
+                            {t.nav.benchmarks}
+                        </h2>
+                        {/* RL Models Toggle */}
+                        <div className="flex items-center gap-2">
+                            <span className="text-sm text-slate-600">
+                                {locale === 'zh' ? '包含 RL 模型' : 'Include RL Models'}
+                            </span>
+                            <button
+                                onClick={() => setIncludeRlModels(!includeRlModels)}
+                                className={`relative inline-flex h-6 w-11 items-center rounded-full transition-colors ${includeRlModels ? 'bg-primary-600' : 'bg-slate-300'
+                                    }`}
+                            >
+                                <span
+                                    className={`inline-block h-4 w-4 transform rounded-full bg-white transition-transform ${includeRlModels ? 'translate-x-6' : 'translate-x-1'
+                                        }`}
+                                />
+                            </button>
+                        </div>
+                    </div>
 
                     {/* 第一行: LIBERO, MetaWorld, CALVIN */}
                     <div className="flex justify-center gap-5 mb-5 flex-wrap">
