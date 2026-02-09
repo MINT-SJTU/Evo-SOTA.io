@@ -118,7 +118,7 @@ export default function Home() {
     // 格式化新闻内容：榜单用粗体+蓝色，模型用斜体+紫色
     const formatNewsContent = (content: string) => {
         // 榜单列表（需要粗体和蓝色）
-        const benchmarks = ['RoboChallenge', 'RoboCasa-GR1-Tabletop', 'LIBERO Plus', 'LIBERO', 'Meta-World', 'CALVIN', 'Libero Plus', 'Libero', 'Calvin'];
+        const benchmarks = ['RoboChallenge', 'RoboCasa-GR1-Tabletop', 'LIBERO Plus', 'LIBERO', 'Meta-World', 'CALVIN', 'Libero Plus', 'Libero', 'Calvin', 'Adroit', 'DexArt', 'Bi-DexHands'];
         // 模型列表（需要斜体和紫色）
         const models = [
             'DeepThinkVLA', 'Dadu-Corki', 'RoboTron Mani', 'CronusVLA', 'InstructVLA', 'InternVLA-M1', 'ACoT-VLA',
