@@ -1,16 +1,16 @@
 {
   "standard_opensource": [
     {
-      "name": "Spirit v1.5",
-      "base_name": "Spirit v1.5",
+      "name": "DM0",
+      "base_name": "DM0",
       "setting": "",
-      "paper_url": "https://www.spirit-ai.com/en/blog/spirit-v1-5",
-      "pub_date": "2026-01",
+      "paper_url": "https://dexmal.com/DM0_Tech_Report.pdf",
+      "pub_date": "2026-02",
       "is_opensource": true,
-      "opensource_url": "https://github.com/Spirit-AI-Team/spirit-v1.5",
+      "opensource_url": "https://github.com/Dexmal/dexbotic",
       "is_rl": false,
-      "score": 66.09,
-      "success_rate": 50.33,
+      "score": 72.25,
+      "success_rate": 62.0,
       "source": "original",
       "is_standard": true,
       "note": "",
@@ -25,12 +25,28 @@
       "is_opensource": true,
       "opensource_url": "https://github.com/open-gigaai/giga-brain-0",
       "is_rl": false,
-      "score": 63.95,
-      "success_rate": 45.0,
+      "score": 68.34,
+      "success_rate": 51.67,
       "source": "original",
       "is_standard": true,
       "note": "",
       "rank": 2
+    },
+    {
+      "name": "Spirit v1.5",
+      "base_name": "Spirit v1.5",
+      "setting": "",
+      "paper_url": "https://www.spirit-ai.com/en/blog/spirit-v1-5",
+      "pub_date": "2026-01",
+      "is_opensource": true,
+      "opensource_url": "https://github.com/Spirit-AI-Team/spirit-v1.5",
+      "is_rl": false,
+      "score": 66.09,
+      "success_rate": 50.33,
+      "source": "original",
+      "is_standard": true,
+      "note": "",
+      "rank": 3
     },
     {
       "name": "pi0.5",
@@ -46,7 +62,7 @@
       "source": "from RoboChallenge",
       "is_standard": true,
       "note": "",
-      "rank": 3
+      "rank": 4
     },
     {
       "name": "wall-oss-v0.1",
@@ -62,7 +78,23 @@
       "source": "from RoboChallenge",
       "is_standard": true,
       "note": "",
-      "rank": 4
+      "rank": 5
+    },
+    {
+      "name": "DM0 (generalist)",
+      "base_name": "DM0",
+      "setting": "generalist",
+      "paper_url": "https://dexmal.com/DM0_Tech_Report.pdf",
+      "pub_date": "2026-02",
+      "is_opensource": true,
+      "opensource_url": "https://github.com/Dexmal/dexbotic",
+      "is_rl": false,
+      "score": 49.08,
+      "success_rate": 37.33,
+      "source": "original",
+      "is_standard": true,
+      "note": "",
+      "rank": 6
     },
     {
       "name": "pi0",
@@ -78,7 +110,7 @@
       "source": "from RoboChallenge",
       "is_standard": true,
       "note": "",
-      "rank": 5
+      "rank": 7
     },
     {
       "name": "pi0.5 (generalist)",
@@ -94,7 +126,7 @@
       "source": "from RoboChallenge",
       "is_standard": true,
       "note": "",
-      "rank": 6
+      "rank": 8
     },
     {
       "name": "RDT-1B",
@@ -110,7 +142,7 @@
       "source": "original",
       "is_standard": true,
       "note": "",
-      "rank": 7
+      "rank": 9
     },
     {
       "name": "CogACT",
@@ -126,7 +158,7 @@
       "source": "from RoboChallenge",
       "is_standard": true,
       "note": "",
-      "rank": 8
+      "rank": 10
     },
     {
       "name": "pi0 (generalist)",
@@ -142,7 +174,7 @@
       "source": "from RoboChallenge",
       "is_standard": true,
       "note": "",
-      "rank": 9
+      "rank": 11
     },
     {
       "name": "OpenVLA-OFT",
@@ -158,7 +190,7 @@
       "source": "from RoboChallenge",
       "is_standard": true,
       "note": "",
-      "rank": 10
+      "rank": 12
     }
   ],
   "standard_closed": [],

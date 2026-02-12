@@ -106,6 +106,22 @@
       "rank": 7
     }
   ],
-  "standard_closed": [],
+  "standard_closed": [
+    {
+      "name": "ABot-M0",
+      "base_name": "ABot-M0",
+      "setting": "",
+      "paper_url": "https://github.com/amap-cvlab/ABot-Manipulation/blob/main/assets/ABot-M0_Technical_Report.pdf",
+      "pub_date": "2026-02",
+      "is_opensource": false,
+      "opensource_url": null,
+      "is_rl": false,
+      "avg_success_rate": 58.3,
+      "source": "original",
+      "is_standard": true,
+      "note": "",
+      "rank": 1
+    }
+  ],
   "non_standard": []
 }

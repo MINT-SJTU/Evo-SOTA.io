@@ -151,7 +151,7 @@ Contributions are welcome! If you'd like to:
 - **Ye Zewei**: Website development and updates, Data collection
 - **Li Yiqin**: Website updates, Data collection
 - **Mao Yiran**: Website updates, Data collection 
-- **Ye Kai**: Dexterous hand pages development
+- **Ye Kai**: Dexterous hand pages development and data collection
 - **Lin Tao (@EvoMind)**: Project Lead
 
 ## 🙏 Acknowledgments
