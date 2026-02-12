@@ -1,6 +1,11 @@
 {
     "news": [
         {
+            "date": "🗓️ 2026-02-12: ",
+            "content_en": "New models: Add Abot-M0 to LIBERO, LIBERO Plus and RoboCasa-GR1-Tabletop; DM0 to RoboChallenge",
+            "content_zh": "新增模型：增加 Abot-M0 到 LIBERO, LIBERO Plus 和 RoboCasa-GR1-Tabletop; 增加 DM0 到 RoboChallenge"
+        },
+        {
             "date": "🗓️ 2026-02-09: ",
             "content_en": "🚀 Major update: New Leaderboards: Three leaderboards of dexterous hand - Adroit, DexArt and Bi-DexHands - is available now! Check the Dex button for details.",
             "content_zh": "🚀 重大更新: 新增页面和榜单: 三个灵巧手榜单 Adroit, DexArt 和 Bi-DexHands 现已上线！点击右上方 Dex 按钮查看详情。"

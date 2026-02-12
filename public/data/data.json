@@ -1,11 +1,11 @@
 {
   "libero": {
-    "total_models": 73,
-    "standard_opensource_count": 45,
-    "standard_closed_count": 13,
+    "total_models": 75,
+    "standard_opensource_count": 46,
+    "standard_closed_count": 14,
     "non_standard_count": 15,
     "model_type_count": {
-      "sft": 40,
+      "sft": 41,
       "rl": 5
     },
     "primary_metric": "Average Success Rate (%)",
@@ -92,9 +92,9 @@
     ]
   },
   "libero_plus": {
-    "total_models": 12,
+    "total_models": 13,
     "standard_opensource_count": 11,
-    "standard_closed_count": 1,
+    "standard_closed_count": 2,
     "non_standard_count": 0,
     "model_type_count": {
       "sft": 10,
@@ -236,75 +236,75 @@
     ]
   },
   "robochallenge": {
-    "total_models": 10,
-    "standard_opensource_count": 10,
+    "total_models": 12,
+    "standard_opensource_count": 12,
     "standard_closed_count": 0,
     "non_standard_count": 0,
     "model_type_count": {
-      "sft": 10,
+      "sft": 12,
       "rl": 0
     },
     "primary_metric": "Score",
     "top_5": [
       {
-        "name": "Spirit v1.5",
-        "score": 66.09,
+        "name": "DM0",
+        "score": 72.25,
         "rank": 1
       },
       {
         "name": "Giga-Brain-0.1",
-        "score": 63.95,
+        "score": 68.34,
         "rank": 2
+      },
+      {
+        "name": "Spirit v1.5",
+        "score": 66.09,
+        "rank": 3
       },
       {
         "name": "pi0.5",
         "score": 61.84,
-        "rank": 3
+        "rank": 4
       },
       {
         "name": "wall-oss-v0.1",
         "score": 55.3,
-        "rank": 4
-      },
-      {
-        "name": "pi0",
-        "score": 46.41,
         "rank": 5
       }
     ],
     "top_5_sft": [
       {
-        "name": "Spirit v1.5",
-        "score": 66.09,
+        "name": "DM0",
+        "score": 72.25,
         "rank": 1
       },
       {
         "name": "Giga-Brain-0.1",
-        "score": 63.95,
+        "score": 68.34,
         "rank": 2
+      },
+      {
+        "name": "Spirit v1.5",
+        "score": 66.09,
+        "rank": 3
       },
       {
         "name": "pi0.5",
         "score": 61.84,
-        "rank": 3
+        "rank": 4
       },
       {
         "name": "wall-oss-v0.1",
         "score": 55.3,
-        "rank": 4
-      },
-      {
-        "name": "pi0",
-        "score": 46.41,
         "rank": 5
       }
     ],
     "top_5_rl": []
   },
   "robocasa": {
-    "total_models": 7,
+    "total_models": 8,
     "standard_opensource_count": 7,
-    "standard_closed_count": 0,
+    "standard_closed_count": 1,
     "non_standard_count": 0,
     "model_type_count": {
       "sft": 7,

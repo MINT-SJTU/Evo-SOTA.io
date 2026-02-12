@@ -265,6 +265,28 @@
       "is_standard": true,
       "note": "",
       "rank": 1
+    },
+    {
+      "name": "ABot-M0",
+      "base_name": "ABot-M0",
+      "setting": "",
+      "paper_url": "https://github.com/amap-cvlab/ABot-Manipulation/blob/main/assets/ABot-M0_Technical_Report.pdf",
+      "pub_date": "2026-02",
+      "is_opensource": false,
+      "opensource_url": null,
+      "is_rl": false,
+      "camera": 60.4,
+      "robot": 67.9,
+      "language": 86.4,
+      "light": 96.2,
+      "background": 91.6,
+      "noise": 86.4,
+      "layout": 82.6,
+      "total": 80.5,
+      "source": "original",
+      "is_standard": true,
+      "note": "",
+      "rank": 2
     }
   ],
   "non_standard": []
