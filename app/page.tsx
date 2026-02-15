@@ -122,8 +122,9 @@ export default function Home() {
         // 模型列表（需要斜体和紫色）
         const models = [
             'DeepThinkVLA', 'Dadu-Corki', 'RoboTron Mani', 'CronusVLA', 'InstructVLA', 'InternVLA-M1', 'ACoT-VLA',
-            'OpenVLA', 'Pi0', 'RIPT', 'NORA-1.5', 'Being-H0.5', 'EO-1', 'DreamVLA', 'Rlinf-VLA', 'pi-RL', 'UnifoLM-VLA-0', 'Giga-Brain-0.1', 'RDT-1B', 'Abot-M0', 'DM0'
+            'OpenVLA', 'Pi0', 'RIPT', 'NORA-1.5', 'Being-H0.5', 'EO-1', 'DreamVLA', 'Rlinf-VLA', 'pi-RL', 'UnifoLM-VLA-0', 'Giga-Brain-0.1', 'RDT-1B', 'Abot-M0', 'DM0', 'Xiaomi-Robotics-0'
         ];
+        const springFestival = ['Wishing everyone a happy Lunar New Year!', '祝大家新年快乐！']
 
         let formattedContent = content;
 
@@ -142,6 +143,14 @@ export default function Home() {
             formattedContent = formattedContent.replace(
                 regex,
                 '<span class="italic text-amber-700">$1</span>'
+            );
+        });
+
+        springFestival.forEach(festival => {
+            const regex = new RegExp(`(${festival})`, 'g');
+            formattedContent = formattedContent.replace(
+                regex,
+                '<span class="font-bold text-red-700">$1</span>'
             );
         });
 
