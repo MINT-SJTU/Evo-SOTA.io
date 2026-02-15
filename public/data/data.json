@@ -1,11 +1,11 @@
 {
   "libero": {
-    "total_models": 75,
-    "standard_opensource_count": 46,
+    "total_models": 76,
+    "standard_opensource_count": 47,
     "standard_closed_count": 14,
     "non_standard_count": 15,
     "model_type_count": {
-      "sft": 41,
+      "sft": 42,
       "rl": 5
     },
     "primary_metric": "Average Success Rate (%)",
@@ -26,13 +26,13 @@
         "rank": 3
       },
       {
-        "name": "VLA-Adapter-pro",
-        "score": 98.5,
+        "name": "Xiaomi-Robotics-0",
+        "score": 98.7,
         "rank": 4
       },
       {
-        "name": "pi-RL",
-        "score": 98.3,
+        "name": "VLA-Adapter-pro",
+        "score": 98.5,
         "rank": 5
       }
     ],
@@ -48,18 +48,18 @@
         "rank": 2
       },
       {
+        "name": "Xiaomi-Robotics-0",
+        "score": 98.7,
+        "rank": 3
+      },
+      {
         "name": "VLA-Adapter-pro",
         "score": 98.5,
-        "rank": 3
+        "rank": 4
       },
       {
         "name": "EO-1",
         "score": 98.2,
-        "rank": 4
-      },
-      {
-        "name": "X-VLA",
-        "score": 98.1,
         "rank": 5
       }
     ],
@@ -368,67 +368,67 @@
     "top_5_rl": []
   },
   "calvin": {
-    "total_models": 37,
-    "standard_opensource_count": 29,
+    "total_models": 38,
+    "standard_opensource_count": 30,
     "standard_closed_count": 5,
     "non_standard_count": 3,
     "model_type_count": {
-      "sft": 28,
+      "sft": 29,
       "rl": 1
     },
     "primary_metric": "Average Length (Avg. Len.)",
     "description": "ABC-D Setting (Default)",
     "top_5": [
       {
+        "name": "Xiaomi-Robotics-0",
+        "score": 4.75,
+        "rank": 1
+      },
+      {
         "name": "pi-RL",
         "score": 4.71,
-        "rank": 1
+        "rank": 2
       },
       {
         "name": "Flower VLA",
         "score": 4.53,
-        "rank": 2
+        "rank": 3
       },
       {
         "name": "VLA-Adapter-pro",
         "score": 4.5,
-        "rank": 3
+        "rank": 4
       },
       {
         "name": "DreamVLA",
         "score": 4.44,
-        "rank": 4
-      },
-      {
-        "name": "X-VLA",
-        "score": 4.43,
         "rank": 5
       }
     ],
     "top_5_sft": [
       {
+        "name": "Xiaomi-Robotics-0",
+        "score": 4.75,
+        "rank": 1
+      },
+      {
         "name": "Flower VLA",
         "score": 4.53,
-        "rank": 1
+        "rank": 2
       },
       {
         "name": "VLA-Adapter-pro",
         "score": 4.5,
-        "rank": 2
+        "rank": 3
       },
       {
         "name": "DreamVLA",
         "score": 4.44,
-        "rank": 3
+        "rank": 4
       },
       {
         "name": "X-VLA",
         "score": 4.43,
-        "rank": 4
-      },
-      {
-        "name": "UnifiedVLA",
-        "score": 4.41,
         "rank": 5
       }
     ],
@@ -440,8 +440,8 @@
       }
     ],
     "settings": {
-      "abcd_d": 16,
-      "abc_d": 37,
+      "abcd_d": 17,
+      "abc_d": 38,
       "d_d": 12
     }
   }

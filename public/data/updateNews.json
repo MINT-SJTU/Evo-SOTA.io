@@ -1,8 +1,13 @@
 {
     "news": [
         {
+            "date": "🗓️ 2026-02-15: ",
+            "content_en": "New models: Add Xiaomi-Robotics-0 to LIBERO and CALVIN. Our last update before the Chinese New Year. 🎉 Wishing everyone a happy Lunar New Year! 🎉",
+            "content_zh": "新增模型：增加 Xiaomi-Robotics-0 到 LIBERO 和 CALVIN。春节前最后一次更新。🎉 祝大家新年快乐！ 🎉"
+        },
+        {
             "date": "🗓️ 2026-02-12: ",
-            "content_en": "New models: Add Abot-M0 to LIBERO, LIBERO Plus and RoboCasa-GR1-Tabletop; DM0 to RoboChallenge",
+            "content_en": "New models: Add Abot-M0 to LIBERO, LIBERO Plus and RoboCasa-GR1-Tabletop; DM0 to RoboChallenge.",
             "content_zh": "新增模型：增加 Abot-M0 到 LIBERO, LIBERO Plus 和 RoboCasa-GR1-Tabletop; 增加 DM0 到 RoboChallenge"
         },
         {
@@ -12,52 +17,52 @@
         },
         {
             "date": "🗓️ 2026-02-05: ",
-            "content_en": "📌 Important update: New Feature: RL models filetrs in all benchmarks and home page; New Modles: Add Giga-Brain-0.1 and RDT-1B to RoboChallenge",
+            "content_en": "📌 Important update: New Feature: RL models filetrs in all benchmarks and home page; New Modles: Add Giga-Brain-0.1 and RDT-1B to RoboChallenge.",
             "content_zh": "📌 重要更新: 新增功能: 所有基准测试和主页中RL模型筛选功能；新增模型: 增加 Giga-Brain-0.1 和 RDT-1B 到 RoboChallenge"
         },
         {
             "date": "🗓️ 2026-02-02: ",
-            "content_en": "🚀 Major update: New Leaderboard: RoboCasa-GR1-Tabletop; New models: Add UnifoLM-VLA-0 to LIBERO, add pi-RL to Meta-World and CALVIN",
+            "content_en": "🚀 Major update: New Leaderboard: RoboCasa-GR1-Tabletop; New models: Add UnifoLM-VLA-0 to LIBERO, add pi-RL to Meta-World and CALVIN.",
             "content_zh": "🚀 重大更新: 新增榜单: RoboCasa-GR1-Tabletop；新增模型：增加UnifoLM-VLA-0 到 LIBERO, 增加 pi-RL 到 Meta-World 和 CALVIN"
         },
         {
             "date": "🗓️ 2026-01-29: ",
-            "content_en": "New models: Add DreamVLA, Rlinf-VLA, pi-RL to LIBERO",
+            "content_en": "New models: Add DreamVLA, Rlinf-VLA, pi-RL to LIBERO.",
             "content_zh": "新增模型: 增加 DreamVLA, Rlinf-VLA, pi-RL 到 LIBERO"
         },
         {
             "date": "🗓️ 2026-01-27: ",
-            "content_en": "New models: Add NORA-1.5, Being-H0.5, EO-1 to LIBERO",
+            "content_en": "New models: Add NORA-1.5, Being-H0.5, EO-1 to LIBERO.",
             "content_zh": "新增模型: 增加 NORA-1.5, Being-H0.5, EO-1 到 LIBERO"
         },
         {
             "date": "🗓️ 2026-01-20: ",
-            "content_en": "New models: Add DeepThinkVLA to LIBERO Plus, ACoT-VLA to LIBERO and LIBERO Plus",
+            "content_en": "New models: Add DeepThinkVLA to LIBERO Plus, ACoT-VLA to LIBERO and LIBERO Plus.",
             "content_zh": "新增模型: 增加 DeepThinkVLA 到 LIBERO Plus, ACoT-VLA 到 LIBERO 和 LIBERO Plus"
         },
         {
             "date": "🗓️ 2026-01-19: ",
-            "content_en": "🚀 Major update: New Leaderboard: RoboChallenge, New Feature: Policy Setting filter in LIBERO; Bug Fixes: Link errors and inappropriate filter in LIBERO Plus",
+            "content_en": "🚀 Major update: New Leaderboard: RoboChallenge, New Feature: Policy Setting filter in LIBERO; Bug Fixes: Link errors and inappropriate filter in LIBERO Plus.",
             "content_zh": "🚀 重大更新: 新增榜单: RoboChallenge, 新增功能: LIBERO 策略设置筛选; 修复 Bugs: LIBERO Plus 中的链接错误和不恰当的筛选"
         },
         {
             "date": "🗓️ 2026-01-14: ",
-            "content_en": "New models: Add DeepThinkVLA, Dadu-Corki to LIBERO",
+            "content_en": "New models: Add DeepThinkVLA, Dadu-Corki to LIBERO.",
             "content_zh": "新增模型: 增加 DeepThinkVLA, Dadu-Corki 到 LIBERO"
         },
         {
             "date": "🗓️ 2026-01-13: ",
-            "content_en": "New model: Add RoboTron Mani to Meta-World and CALVIN",
+            "content_en": "New model: Add RoboTron Mani to Meta-World and CALVIN.",
             "content_zh": "新增模型: 增加 RoboTron Mani 到 Meta-World 和 CALVIN"
         },
         {
             "date": "🗓️ 2026-01-09: ",
-            "content_en": "New models: Add CronusVLA, InstructVLA, InternVLA-M1 to LIBERO",
+            "content_en": "New models: Add CronusVLA, InstructVLA, InternVLA-M1 to LIBERO.",
             "content_zh": "新增模型: 增加 CronusVLA, InstructVLA, InternVLA-M1 到 LIBERO"
         },
         {
             "date": "🗓️ 2026-01-06: ",
-            "content_en": "🚀 Website launched with LIBERO, LIBERO Plus, Meta-World, CALVIN benchmarks",
+            "content_en": "🚀 Website launched with LIBERO, LIBERO Plus, Meta-World, CALVIN benchmarks.",
             "content_zh": "🚀 网站正式上线，支持 LIBERO, LIBERO Plus, Meta-World, CALVIN 基准测试"
         }
     ]
