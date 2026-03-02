@@ -1,11 +1,11 @@
 {
   "libero": {
-    "total_models": 76,
-    "standard_opensource_count": 47,
-    "standard_closed_count": 14,
+    "total_models": 79,
+    "standard_opensource_count": 48,
+    "standard_closed_count": 16,
     "non_standard_count": 15,
     "model_type_count": {
-      "sft": 42,
+      "sft": 43,
       "rl": 5
     },
     "primary_metric": "Average Success Rate (%)",
@@ -92,66 +92,66 @@
     ]
   },
   "libero_plus": {
-    "total_models": 13,
-    "standard_opensource_count": 11,
+    "total_models": 14,
+    "standard_opensource_count": 12,
     "standard_closed_count": 2,
     "non_standard_count": 0,
     "model_type_count": {
-      "sft": 10,
+      "sft": 11,
       "rl": 1
     },
     "primary_metric": "Total Success Rate (%)",
     "top_5": [
       {
+        "name": "VLA-JEPA",
+        "score": 79.5,
+        "rank": 1
+      },
+      {
         "name": "DeepThinkVLA",
         "score": 79.0,
-        "rank": 1
+        "rank": 2
       },
       {
         "name": "OpenVLA-OFT",
         "score": 69.6,
-        "rank": 2
+        "rank": 3
       },
       {
         "name": "RIPT-VLA",
         "score": 68.4,
-        "rank": 3
+        "rank": 4
       },
       {
         "name": "OpenVLA-OFT (mix-sft)",
         "score": 67.9,
-        "rank": 4
-      },
-      {
-        "name": "pi0-FAST",
-        "score": 61.6,
         "rank": 5
       }
     ],
     "top_5_sft": [
       {
+        "name": "VLA-JEPA",
+        "score": 79.5,
+        "rank": 1
+      },
+      {
         "name": "DeepThinkVLA",
         "score": 79.0,
-        "rank": 1
+        "rank": 2
       },
       {
         "name": "OpenVLA-OFT",
         "score": 69.6,
-        "rank": 2
+        "rank": 3
       },
       {
         "name": "OpenVLA-OFT (mix-sft)",
         "score": 67.9,
-        "rank": 3
+        "rank": 4
       },
       {
         "name": "pi0-FAST",
         "score": 61.6,
-        "rank": 4
-      },
-      {
-        "name": "OpenVLA-OFT (without wrist input)",
-        "score": 55.8,
         "rank": 5
       }
     ],
