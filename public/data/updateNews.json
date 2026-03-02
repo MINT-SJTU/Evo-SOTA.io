@@ -1,8 +1,13 @@
 {
     "news": [
         {
+            "date": "🗓️ 2026-03-02: ",
+            "content_en": "New models: Add VLA-JEPA, JEPA-VLA and Pose-VLA to LIBERO, VLA-JEPA to LIBERO Plus",
+            "content_zh": "新增模型：增加 VLA-JEPA, JEPA-VLA 和 Pose-VLA 到 LIBERO, VLA-JEPA 到 LIBERO Plus"
+        },
+        {
             "date": "🗓️ 2026-02-15: ",
-            "content_en": "New models: Add Xiaomi-Robotics-0 to LIBERO and CALVIN. Our last update before the Chinese New Year. 🎉 Wishing everyone a happy Lunar New Year! 🎉",
+            "content_en": "New model: Add Xiaomi-Robotics-0 to LIBERO and CALVIN. 🎉 Wishing everyone a happy Lunar New Year! 🎉",
             "content_zh": "新增模型：增加 Xiaomi-Robotics-0 到 LIBERO 和 CALVIN。春节前最后一次更新。🎉 祝大家新年快乐！ 🎉"
         },
         {
@@ -17,7 +22,7 @@
         },
         {
             "date": "🗓️ 2026-02-05: ",
-            "content_en": "📌 Important update: New Feature: RL models filetrs in all benchmarks and home page; New Modles: Add Giga-Brain-0.1 and RDT-1B to RoboChallenge.",
+            "content_en": "📌 Important update: New Feature: RL models filetrs in all benchmarks and home page; New models: Add Giga-Brain-0.1 and RDT-1B to RoboChallenge.",
             "content_zh": "📌 重要更新: 新增功能: 所有基准测试和主页中RL模型筛选功能；新增模型: 增加 Giga-Brain-0.1 和 RDT-1B 到 RoboChallenge"
         },
         {
