@@ -1,11 +1,11 @@
 {
   "libero": {
     "total_models": 79,
-    "standard_opensource_count": 48,
-    "standard_closed_count": 16,
+    "standard_opensource_count": 49,
+    "standard_closed_count": 15,
     "non_standard_count": 15,
     "model_type_count": {
-      "sft": 43,
+      "sft": 44,
       "rl": 5
     },
     "primary_metric": "Average Success Rate (%)",
@@ -31,8 +31,8 @@
         "rank": 4
       },
       {
-        "name": "VLA-Adapter-pro",
-        "score": 98.5,
+        "name": "ABot-M0",
+        "score": 98.6,
         "rank": 5
       }
     ],
@@ -53,13 +53,13 @@
         "rank": 3
       },
       {
-        "name": "VLA-Adapter-pro",
-        "score": 98.5,
+        "name": "ABot-M0",
+        "score": 98.6,
         "rank": 4
       },
       {
-        "name": "EO-1",
-        "score": 98.2,
+        "name": "VLA-Adapter-pro",
+        "score": 98.5,
         "rank": 5
       }
     ],
@@ -93,65 +93,65 @@
   },
   "libero_plus": {
     "total_models": 14,
-    "standard_opensource_count": 12,
-    "standard_closed_count": 2,
+    "standard_opensource_count": 13,
+    "standard_closed_count": 1,
     "non_standard_count": 0,
     "model_type_count": {
-      "sft": 11,
+      "sft": 12,
       "rl": 1
     },
     "primary_metric": "Total Success Rate (%)",
     "top_5": [
       {
+        "name": "ABot-M0",
+        "score": 80.5,
+        "rank": 1
+      },
+      {
         "name": "VLA-JEPA",
         "score": 79.5,
-        "rank": 1
+        "rank": 2
       },
       {
         "name": "DeepThinkVLA",
         "score": 79.0,
-        "rank": 2
+        "rank": 3
       },
       {
         "name": "OpenVLA-OFT",
         "score": 69.6,
-        "rank": 3
+        "rank": 4
       },
       {
         "name": "RIPT-VLA",
         "score": 68.4,
-        "rank": 4
-      },
-      {
-        "name": "OpenVLA-OFT (mix-sft)",
-        "score": 67.9,
         "rank": 5
       }
     ],
     "top_5_sft": [
       {
+        "name": "ABot-M0",
+        "score": 80.5,
+        "rank": 1
+      },
+      {
         "name": "VLA-JEPA",
         "score": 79.5,
-        "rank": 1
+        "rank": 2
       },
       {
         "name": "DeepThinkVLA",
         "score": 79.0,
-        "rank": 2
+        "rank": 3
       },
       {
         "name": "OpenVLA-OFT",
         "score": 69.6,
-        "rank": 3
+        "rank": 4
       },
       {
         "name": "OpenVLA-OFT (mix-sft)",
         "score": 67.9,
-        "rank": 4
-      },
-      {
-        "name": "pi0-FAST",
-        "score": 61.6,
         "rank": 5
       }
     ],
@@ -303,65 +303,65 @@
   },
   "robocasa": {
     "total_models": 8,
-    "standard_opensource_count": 7,
-    "standard_closed_count": 1,
+    "standard_opensource_count": 8,
+    "standard_closed_count": 0,
     "non_standard_count": 0,
     "model_type_count": {
-      "sft": 7,
+      "sft": 8,
       "rl": 0
     },
     "primary_metric": "Average Success Rate (%)",
     "top_5": [
       {
+        "name": "ABot-M0",
+        "score": 58.3,
+        "rank": 1
+      },
+      {
         "name": "TwinBrainVLA",
         "score": 54.6,
-        "rank": 1
+        "rank": 2
       },
       {
         "name": "Langforce",
         "score": 52.6,
-        "rank": 2
+        "rank": 3
       },
       {
         "name": "StarVLA (Qwen3OFT)",
         "score": 48.8,
-        "rank": 3
+        "rank": 4
       },
       {
         "name": "StarVLA (Qwen3GR00T)",
         "score": 47.8,
-        "rank": 4
-      },
-      {
-        "name": "GR00T-N1.6",
-        "score": 47.6,
         "rank": 5
       }
     ],
     "top_5_sft": [
       {
+        "name": "ABot-M0",
+        "score": 58.3,
+        "rank": 1
+      },
+      {
         "name": "TwinBrainVLA",
         "score": 54.6,
-        "rank": 1
+        "rank": 2
       },
       {
         "name": "Langforce",
         "score": 52.6,
-        "rank": 2
+        "rank": 3
       },
       {
         "name": "StarVLA (Qwen3OFT)",
         "score": 48.8,
-        "rank": 3
+        "rank": 4
       },
       {
         "name": "StarVLA (Qwen3GR00T)",
         "score": 47.8,
-        "rank": 4
-      },
-      {
-        "name": "GR00T-N1.6",
-        "score": 47.6,
         "rank": 5
       }
     ],

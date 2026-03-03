@@ -1,6 +1,21 @@
 {
   "standard_opensource": [
     {
+      "name": "ABot-M0",
+      "base_name": "ABot-M0",
+      "setting": "",
+      "paper_url": "https://github.com/amap-cvlab/ABot-Manipulation/blob/main/assets/ABot-M0_Technical_Report.pdf",
+      "pub_date": "2026-02",
+      "is_opensource": true,
+      "opensource_url": "https://github.com/amap-cvlab/ABot-Manipulation",
+      "is_rl": false,
+      "avg_success_rate": 58.3,
+      "source": "original",
+      "is_standard": true,
+      "note": "",
+      "rank": 1
+    },
+    {
       "name": "TwinBrainVLA",
       "base_name": "TwinBrainVLA",
       "setting": "",
@@ -13,7 +28,7 @@
       "source": "original",
       "is_standard": true,
       "note": "",
-      "rank": 1
+      "rank": 2
     },
     {
       "name": "Langforce",
@@ -28,7 +43,7 @@
       "source": "original",
       "is_standard": true,
       "note": "",
-      "rank": 2
+      "rank": 3
     },
     {
       "name": "StarVLA (Qwen3OFT)",
@@ -43,7 +58,7 @@
       "source": "original",
       "is_standard": true,
       "note": "",
-      "rank": 3
+      "rank": 4
     },
     {
       "name": "StarVLA (Qwen3GR00T)",
@@ -58,7 +73,7 @@
       "source": "original",
       "is_standard": true,
       "note": "",
-      "rank": 4
+      "rank": 5
     },
     {
       "name": "GR00T-N1.6",
@@ -73,7 +88,7 @@
       "source": "from StarVLA",
       "is_standard": true,
       "note": "",
-      "rank": 5
+      "rank": 6
     },
     {
       "name": "StarVLA (Qwen3PI)",
@@ -88,7 +103,7 @@
       "source": "original",
       "is_standard": true,
       "note": "",
-      "rank": 6
+      "rank": 7
     },
     {
       "name": "StarVLA (Qwen3FAST)",
@@ -103,25 +118,9 @@
       "source": "original",
       "is_standard": true,
       "note": "",
-      "rank": 7
+      "rank": 8
     }
   ],
-  "standard_closed": [
-    {
-      "name": "ABot-M0",
-      "base_name": "ABot-M0",
-      "setting": "",
-      "paper_url": "https://github.com/amap-cvlab/ABot-Manipulation/blob/main/assets/ABot-M0_Technical_Report.pdf",
-      "pub_date": "2026-02",
-      "is_opensource": false,
-      "opensource_url": null,
-      "is_rl": false,
-      "avg_success_rate": 58.3,
-      "source": "original",
-      "is_standard": true,
-      "note": "",
-      "rank": 1
-    }
-  ],
+  "standard_closed": [],
   "non_standard": []
 }
