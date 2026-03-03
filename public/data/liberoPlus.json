@@ -1,6 +1,28 @@
 {
   "standard_opensource": [
     {
+      "name": "ABot-M0",
+      "base_name": "ABot-M0",
+      "setting": "",
+      "paper_url": "https://github.com/amap-cvlab/ABot-Manipulation/blob/main/assets/ABot-M0_Technical_Report.pdf",
+      "pub_date": "2026-02",
+      "is_opensource": true,
+      "opensource_url": "https://github.com/amap-cvlab/ABot-Manipulation",
+      "is_rl": false,
+      "camera": 60.4,
+      "robot": 67.9,
+      "language": 86.4,
+      "light": 96.2,
+      "background": 91.6,
+      "noise": 86.4,
+      "layout": 82.6,
+      "total": 80.5,
+      "source": "original",
+      "is_standard": true,
+      "note": "",
+      "rank": 1
+    },
+    {
       "name": "VLA-JEPA",
       "base_name": "VLA-JEPA",
       "setting": "",
@@ -20,7 +42,7 @@
       "source": "original",
       "is_standard": true,
       "note": "",
-      "rank": 1
+      "rank": 2
     },
     {
       "name": "DeepThinkVLA",
@@ -42,7 +64,7 @@
       "source": "original",
       "is_standard": true,
       "note": "",
-      "rank": 2
+      "rank": 3
     },
     {
       "name": "OpenVLA-OFT",
@@ -64,7 +86,7 @@
       "source": "from Libero-plus",
       "is_standard": true,
       "note": "",
-      "rank": 3
+      "rank": 4
     },
     {
       "name": "RIPT-VLA",
@@ -86,7 +108,7 @@
       "source": "from Libero-plus",
       "is_standard": true,
       "note": "",
-      "rank": 4
+      "rank": 5
     },
     {
       "name": "OpenVLA-OFT (mix-sft)",
@@ -108,7 +130,7 @@
       "source": "from Libero-plus",
       "is_standard": true,
       "note": "",
-      "rank": 5
+      "rank": 6
     },
     {
       "name": "pi0-FAST",
@@ -130,7 +152,7 @@
       "source": "from Libero-plus",
       "is_standard": true,
       "note": "",
-      "rank": 6
+      "rank": 7
     },
     {
       "name": "OpenVLA-OFT (without wrist input)",
@@ -152,7 +174,7 @@
       "source": "from Libero-plus",
       "is_standard": true,
       "note": "",
-      "rank": 7
+      "rank": 8
     },
     {
       "name": "pi0",
@@ -174,7 +196,7 @@
       "source": "from Libero-plus",
       "is_standard": true,
       "note": "",
-      "rank": 8
+      "rank": 9
     },
     {
       "name": "UniVLA",
@@ -196,7 +218,7 @@
       "source": "from Libero-plus",
       "is_standard": true,
       "note": "",
-      "rank": 9
+      "rank": 10
     },
     {
       "name": "NORA",
@@ -218,7 +240,7 @@
       "source": "from Libero-plus",
       "is_standard": true,
       "note": "",
-      "rank": 10
+      "rank": 11
     },
     {
       "name": "WorldVLA",
@@ -240,7 +262,7 @@
       "source": "from Libero-plus",
       "is_standard": true,
       "note": "",
-      "rank": 11
+      "rank": 12
     },
     {
       "name": "OpenVLA",
@@ -262,7 +284,7 @@
       "source": "from Libero-plus",
       "is_standard": true,
       "note": "",
-      "rank": 12
+      "rank": 13
     }
   ],
   "standard_closed": [
@@ -287,28 +309,6 @@
       "is_standard": true,
       "note": "",
       "rank": 1
-    },
-    {
-      "name": "ABot-M0",
-      "base_name": "ABot-M0",
-      "setting": "",
-      "paper_url": "https://github.com/amap-cvlab/ABot-Manipulation/blob/main/assets/ABot-M0_Technical_Report.pdf",
-      "pub_date": "2026-02",
-      "is_opensource": false,
-      "opensource_url": null,
-      "is_rl": false,
-      "camera": 60.4,
-      "robot": 67.9,
-      "language": 86.4,
-      "light": 96.2,
-      "background": 91.6,
-      "noise": 86.4,
-      "layout": 82.6,
-      "total": 80.5,
-      "source": "original",
-      "is_standard": true,
-      "note": "",
-      "rank": 2
     }
   ],
   "non_standard": []
