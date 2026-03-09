@@ -164,3 +164,7 @@ Contributions are welcome! If you'd like to:
 ---
 
 **Note**: This is a community-maintained project. For official benchmark results, please refer to the original papers and repositories. The leaderboard includes both VLA models for language-conditioned manipulation and dexterous manipulation models for hand-based control tasks.
+
+## Star History
+
+[![Star History Chart](https://api.star-history.com/image?repos=MINT-SJTU/Evo-SOTA.io&type=date&legend=top-left)](https://www.star-history.com/?repos=MINT-SJTU%2FEvo-SOTA.io&type=date&legend=top-left)
