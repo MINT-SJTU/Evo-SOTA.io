@@ -113,6 +113,22 @@
       "rank": 7
     },
     {
+      "name": "X-VLA",
+      "base_name": "X-VLA",
+      "setting": "",
+      "paper_url": "https://arxiv.org/abs/2510.10274",
+      "pub_date": "2025-10",
+      "is_opensource": true,
+      "opensource_url": "https://github.com/2toinf/X-VLA",
+      "is_rl": false,
+      "score": 34.75,
+      "success_rate": 21.33,
+      "source": "from RoboChallenge",
+      "is_standard": true,
+      "note": "",
+      "rank": 8
+    },
+    {
       "name": "pi0.5 (generalist)",
       "base_name": "pi0.5",
       "setting": "generalist",
@@ -126,7 +142,7 @@
       "source": "from RoboChallenge",
       "is_standard": true,
       "note": "",
-      "rank": 8
+      "rank": 9
     },
     {
       "name": "RDT-1B",
@@ -142,7 +158,7 @@
       "source": "original",
       "is_standard": true,
       "note": "",
-      "rank": 9
+      "rank": 10
     },
     {
       "name": "CogACT",
@@ -158,7 +174,7 @@
       "source": "from RoboChallenge",
       "is_standard": true,
       "note": "",
-      "rank": 10
+      "rank": 11
     },
     {
       "name": "pi0 (generalist)",
@@ -174,7 +190,7 @@
       "source": "from RoboChallenge",
       "is_standard": true,
       "note": "",
-      "rank": 11
+      "rank": 12
     },
     {
       "name": "OpenVLA-OFT",
@@ -190,7 +206,7 @@
       "source": "from RoboChallenge",
       "is_standard": true,
       "note": "",
-      "rank": 12
+      "rank": 13
     }
   ],
   "standard_closed": [],

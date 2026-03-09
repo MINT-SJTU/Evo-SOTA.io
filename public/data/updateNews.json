@@ -1,6 +1,11 @@
 {
     "news": [
         {
+            "date": "🗓️ 2026-03-09: ",
+            "content_en": "New models: Add pi-StepNFT, QuantVLA, Fast-ThinkAct, ATA, SRPO, LingBot-VA, RynnVLA-002 to LIBERO, SRPO to LIBERO Plus, X-VLA to RoboChallenge",
+            "content_zh": "新增模型：增加 pi-StepNFT，QuantVLA，Fast-ThinkAct，ATA，SRPO，LingBot-VA，RynnVLA-002 到 LIBERO, SRPO 到 LIBERO Plus，X-VLA 到 RoboChallenge"
+        },
+        {
             "date": "🗓️ 2026-03-02: ",
             "content_en": "New models: Add VLA-JEPA, JEPA-VLA and Pose-VLA to LIBERO, VLA-JEPA to LIBERO Plus",
             "content_zh": "新增模型：增加 VLA-JEPA, JEPA-VLA 和 Pose-VLA 到 LIBERO, VLA-JEPA 到 LIBERO Plus"
