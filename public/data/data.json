@@ -1,38 +1,38 @@
 {
   "libero": {
-    "total_models": 79,
-    "standard_opensource_count": 49,
-    "standard_closed_count": 15,
-    "non_standard_count": 15,
+    "total_models": 87,
+    "standard_opensource_count": 54,
+    "standard_closed_count": 17,
+    "non_standard_count": 16,
     "model_type_count": {
-      "sft": 44,
-      "rl": 5
+      "sft": 47,
+      "rl": 7
     },
     "primary_metric": "Average Success Rate (%)",
     "top_5": [
       {
+        "name": "SRPO",
+        "score": 99.2,
+        "rank": 1
+      },
+      {
         "name": "SimpleVLA-RL",
         "score": 99.1,
-        "rank": 1
+        "rank": 2
       },
       {
         "name": "Being-H0.5 (Specialist)",
         "score": 98.9,
-        "rank": 2
+        "rank": 3
       },
       {
         "name": "UnifoLM-VLA-0",
         "score": 98.7,
-        "rank": 3
+        "rank": 4
       },
       {
         "name": "Xiaomi-Robotics-0",
         "score": 98.7,
-        "rank": 4
-      },
-      {
-        "name": "ABot-M0",
-        "score": 98.6,
         "rank": 5
       }
     ],
@@ -65,40 +65,40 @@
     ],
     "top_5_rl": [
       {
+        "name": "SRPO",
+        "score": 99.2,
+        "rank": 1
+      },
+      {
         "name": "SimpleVLA-RL",
         "score": 99.1,
-        "rank": 1
+        "rank": 2
       },
       {
         "name": "pi-RL",
         "score": 98.3,
-        "rank": 2
+        "rank": 3
       },
       {
         "name": "RLinf-VLA",
         "score": 98.1,
-        "rank": 3
+        "rank": 4
       },
       {
         "name": "RIPT-VLA",
         "score": 97.5,
-        "rank": 4
-      },
-      {
-        "name": "VLA-RL",
-        "score": 81.0,
         "rank": 5
       }
     ]
   },
   "libero_plus": {
-    "total_models": 14,
-    "standard_opensource_count": 13,
+    "total_models": 15,
+    "standard_opensource_count": 14,
     "standard_closed_count": 1,
     "non_standard_count": 0,
     "model_type_count": {
       "sft": 12,
-      "rl": 1
+      "rl": 2
     },
     "primary_metric": "Total Success Rate (%)",
     "top_5": [
@@ -160,6 +160,11 @@
         "name": "RIPT-VLA",
         "score": 68.4,
         "rank": 1
+      },
+      {
+        "name": "SRPO",
+        "score": 59.6,
+        "rank": 2
       }
     ]
   },
@@ -236,12 +241,12 @@
     ]
   },
   "robochallenge": {
-    "total_models": 12,
-    "standard_opensource_count": 12,
+    "total_models": 13,
+    "standard_opensource_count": 13,
     "standard_closed_count": 0,
     "non_standard_count": 0,
     "model_type_count": {
-      "sft": 12,
+      "sft": 13,
       "rl": 0
     },
     "primary_metric": "Score",
