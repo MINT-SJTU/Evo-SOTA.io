@@ -1,11 +1,11 @@
 {
   "libero": {
     "total_models": 87,
-    "standard_opensource_count": 54,
-    "standard_closed_count": 17,
+    "standard_opensource_count": 55,
+    "standard_closed_count": 16,
     "non_standard_count": 16,
     "model_type_count": {
-      "sft": 47,
+      "sft": 48,
       "rl": 7
     },
     "primary_metric": "Average Success Rate (%)",
@@ -93,65 +93,65 @@
   },
   "libero_plus": {
     "total_models": 15,
-    "standard_opensource_count": 14,
-    "standard_closed_count": 1,
+    "standard_opensource_count": 15,
+    "standard_closed_count": 0,
     "non_standard_count": 0,
     "model_type_count": {
-      "sft": 12,
+      "sft": 13,
       "rl": 2
     },
     "primary_metric": "Total Success Rate (%)",
     "top_5": [
       {
+        "name": "ACoT-VLA",
+        "score": 84.1,
+        "rank": 1
+      },
+      {
         "name": "ABot-M0",
         "score": 80.5,
-        "rank": 1
+        "rank": 2
       },
       {
         "name": "VLA-JEPA",
         "score": 79.5,
-        "rank": 2
+        "rank": 3
       },
       {
         "name": "DeepThinkVLA",
         "score": 79.0,
-        "rank": 3
+        "rank": 4
       },
       {
         "name": "OpenVLA-OFT",
         "score": 69.6,
-        "rank": 4
-      },
-      {
-        "name": "RIPT-VLA",
-        "score": 68.4,
         "rank": 5
       }
     ],
     "top_5_sft": [
       {
+        "name": "ACoT-VLA",
+        "score": 84.1,
+        "rank": 1
+      },
+      {
         "name": "ABot-M0",
         "score": 80.5,
-        "rank": 1
+        "rank": 2
       },
       {
         "name": "VLA-JEPA",
         "score": 79.5,
-        "rank": 2
+        "rank": 3
       },
       {
         "name": "DeepThinkVLA",
         "score": 79.0,
-        "rank": 3
+        "rank": 4
       },
       {
         "name": "OpenVLA-OFT",
         "score": 69.6,
-        "rank": 4
-      },
-      {
-        "name": "OpenVLA-OFT (mix-sft)",
-        "score": 67.9,
         "rank": 5
       }
     ],
