@@ -489,6 +489,26 @@
         "rank": 7
       },
       {
+        "name": "HiF-VLA",
+        "base_name": "HiF-VLA",
+        "setting": "",
+        "paper_url": "https://arxiv.org/abs/2512.09928",
+        "pub_date": "2025-12",
+        "is_opensource": true,
+        "opensource_url": "https://github.com/OpenHelix-Team/HiF-VLA",
+        "is_rl": false,
+        "is_standard": true,
+        "note": "",
+        "inst1": 0.985,
+        "inst2": 0.941,
+        "inst3": 0.881,
+        "inst4": 0.814,
+        "inst5": 0.731,
+        "avg_len": 4.35,
+        "source": "original",
+        "rank": 8
+      },
+      {
         "name": "VPP",
         "base_name": "VPP",
         "setting": "",
@@ -506,7 +526,7 @@
         "inst5": 0.769,
         "avg_len": 4.33,
         "source": "original",
-        "rank": 8
+        "rank": 9
       },
       {
         "name": "Seer",
@@ -526,7 +546,7 @@
         "inst5": 0.74,
         "avg_len": 4.28,
         "source": "original",
-        "rank": 9
+        "rank": 10
       },
       {
         "name": "UP-VLA",
@@ -546,7 +566,7 @@
         "inst5": 0.699,
         "avg_len": 4.08,
         "source": "original",
-        "rank": 10
+        "rank": 11
       },
       {
         "name": "GR-MG",
@@ -566,7 +586,7 @@
         "inst5": 0.644,
         "avg_len": 4.04,
         "source": "original",
-        "rank": 11
+        "rank": 12
       },
       {
         "name": "MoDE",
@@ -586,7 +606,7 @@
         "inst5": 0.635,
         "avg_len": 4.01,
         "source": "original",
-        "rank": 12
+        "rank": 13
       },
       {
         "name": "GHIL-Glue",
@@ -606,7 +626,7 @@
         "inst5": 0.498,
         "avg_len": 3.69,
         "source": "original",
-        "rank": 13
+        "rank": 14
       },
       {
         "name": "CEED-VLA",
@@ -626,7 +646,7 @@
         "inst5": null,
         "avg_len": 3.67,
         "source": "original",
-        "rank": 14
+        "rank": 15
       },
       {
         "name": "RoboUniview",
@@ -646,7 +666,7 @@
         "inst5": 0.507,
         "avg_len": 3.65,
         "source": "original",
-        "rank": 15
+        "rank": 16
       },
       {
         "name": "Dita",
@@ -666,7 +686,7 @@
         "inst5": 0.5,
         "avg_len": 3.61,
         "source": "original",
-        "rank": 16
+        "rank": 17
       },
       {
         "name": "CLOVER",
@@ -686,7 +706,7 @@
         "inst5": 0.454,
         "avg_len": 3.53,
         "source": "original",
-        "rank": 17
+        "rank": 18
       },
       {
         "name": "RoboDual",
@@ -706,7 +726,7 @@
         "inst5": 0.488,
         "avg_len": 3.47,
         "source": "original",
-        "rank": 18
+        "rank": 19
       },
       {
         "name": "Vidman",
@@ -726,7 +746,7 @@
         "inst5": 0.467,
         "avg_len": 3.42,
         "source": "original",
-        "rank": 19
+        "rank": 20
       },
       {
         "name": "3D Diffuser Actor",
@@ -746,7 +766,7 @@
         "inst5": 0.412,
         "avg_len": 3.35,
         "source": "original",
-        "rank": 20
+        "rank": 21
       },
       {
         "name": "Moto",
@@ -766,7 +786,7 @@
         "inst5": 0.386,
         "avg_len": 3.1,
         "source": "original",
-        "rank": 21
+        "rank": 22
       },
       {
         "name": "GR-1",
@@ -786,7 +806,7 @@
         "inst5": 0.401,
         "avg_len": 3.06,
         "source": "original",
-        "rank": 22
+        "rank": 23
       },
       {
         "name": "DeeR-VLA",
@@ -806,7 +826,7 @@
         "inst5": null,
         "avg_len": 2.9,
         "source": "original",
-        "rank": 23
+        "rank": 24
       },
       {
         "name": "SuSIE",
@@ -826,7 +846,7 @@
         "inst5": 0.26,
         "avg_len": 2.69,
         "source": "original",
-        "rank": 24
+        "rank": 25
       },
       {
         "name": "RoboFlamingo",
@@ -846,7 +866,7 @@
         "inst5": 0.235,
         "avg_len": 2.48,
         "source": "original",
-        "rank": 25
+        "rank": 26
       },
       {
         "name": "SPIL",
@@ -866,7 +886,7 @@
         "inst5": 0.08,
         "avg_len": 1.71,
         "source": "original",
-        "rank": 26
+        "rank": 27
       },
       {
         "name": "MDT",
@@ -886,7 +906,7 @@
         "inst5": 0.091,
         "avg_len": 1.55,
         "source": "from FLOWER & VPP",
-        "rank": 27
+        "rank": 28
       },
       {
         "name": "RT-1",
@@ -906,7 +926,7 @@
         "inst5": 0.013,
         "avg_len": 0.9,
         "source": "from VPP & RoboUniview & RoboDual & GR-1",
-        "rank": 28
+        "rank": 29
       },
       {
         "name": "HULC",
@@ -926,7 +946,7 @@
         "inst5": 0.011,
         "avg_len": 0.67,
         "source": "original",
-        "rank": 29
+        "rank": 30
       },
       {
         "name": "Diffusion Policy",
@@ -946,7 +966,7 @@
         "inst5": 0.0,
         "avg_len": 0.56,
         "source": "from UP-VLA",
-        "rank": 30
+        "rank": 31
       }
     ],
     "standard_closed": [
@@ -1053,6 +1073,46 @@
     ],
     "non_standard": [
       {
+        "name": "NS-VLA",
+        "base_name": "NS-VLA",
+        "setting": "",
+        "paper_url": "https://arxiv.org/abs/2603.09542",
+        "pub_date": "2026-03",
+        "is_opensource": true,
+        "opensource_url": "https://github.com/Zuzuzzy/NS-VLA",
+        "is_rl": true,
+        "is_standard": false,
+        "note": "",
+        "inst1": null,
+        "inst2": null,
+        "inst3": null,
+        "inst4": null,
+        "inst5": null,
+        "avg_len": 4.56,
+        "source": "original",
+        "rank": 1
+      },
+      {
+        "name": "AtomicVLA",
+        "base_name": "AtomicVLA",
+        "setting": "",
+        "paper_url": "https://arxiv.org/abs/2603.07648",
+        "pub_date": "2026-03",
+        "is_opensource": true,
+        "opensource_url": "https://github.com/zhanglk9/AtomicVLA",
+        "is_rl": false,
+        "is_standard": false,
+        "note": "",
+        "inst1": 0.941,
+        "inst2": 0.887,
+        "inst3": 0.852,
+        "inst4": 0.817,
+        "inst5": 0.776,
+        "avg_len": 4.27,
+        "source": "original",
+        "rank": 2
+      },
+      {
         "name": "RationalVLA",
         "base_name": "RationalVLA",
         "setting": "",
@@ -1070,7 +1130,7 @@
         "inst5": 0.236,
         "avg_len": 2.48,
         "source": "original",
-        "rank": 1
+        "rank": 3
       },
       {
         "name": "ReinboT",
@@ -1090,7 +1150,7 @@
         "inst5": 0.21,
         "avg_len": 2.26,
         "source": "original",
-        "rank": 2
+        "rank": 4
       },
       {
         "name": "LCBC",
@@ -1110,7 +1170,7 @@
         "inst5": 0.06,
         "avg_len": null,
         "source": "from SuSIE",
-        "rank": 3
+        "rank": 5
       }
     ]
   },

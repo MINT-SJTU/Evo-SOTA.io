@@ -44,6 +44,16 @@ export default function LiberoPage() {
     const [policyFilter, setPolicyFilter] = useState<'all' | '0' | '1' | '2'>('all');
     const [modelTypeFilter, setModelTypeFilter] = useState<'all' | 'sft' | 'rl'>('sft');
 
+    // 从 URL 参数初始化 filter 状态（用于从 models 页面跳转时自动切换到正确视图）
+    useEffect(() => {
+        const params = new URLSearchParams(window.location.search);
+        const type = params.get('type');
+        const filter = params.get('filter');
+        if (type === 'rl') setModelTypeFilter('rl');
+        else if (type === 'sft') setModelTypeFilter('sft');
+        if (filter === 'all') setShowClosedSource(true);
+    }, []);
+
     const texts = {
         en: {
             title: 'LIBERO Benchmark Leaderboard',
@@ -141,6 +151,14 @@ export default function LiberoPage() {
         };
         loadData();
     }, []);
+
+    useEffect(() => {
+        if (!loading && window.location.hash) {
+            const id = decodeURIComponent(window.location.hash.slice(1));
+            const el = document.getElementById(id);
+            if (el) el.scrollIntoView({ behavior: 'smooth', block: 'center' });
+        }
+    }, [loading]);
 
     const toggleRow = (key: string) => {
         const newExpanded = new Set(expandedRows);
@@ -277,6 +295,7 @@ export default function LiberoPage() {
                                 <>
                                     <tr
                                         key={rowKey}
+                                        id={`model-row-${encodeURIComponent(model.name)}`}
                                         className={`border-b border-slate-100 hover:bg-slate-50 cursor-pointer transition-colors ${expandedRows.has(rowKey) ? 'bg-blue-50' : ''
                                             }`}
                                         onClick={() => toggleRow(rowKey)}

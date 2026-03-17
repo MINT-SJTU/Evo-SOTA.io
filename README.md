@@ -34,7 +34,8 @@ A comprehensive leaderboard tracking the state-of-the-art (SOTA) performance of:
 - 📈 **Interactive Leaderboards** - Sortable tables with expandable details for each model
 - **Dual Track Coverage** - VLA models and dexterous manipulation models in separate sections
 - 📉 **Progress Visualization** - Scatter plots showing development over time for both tracks
-- 🔍 **Smart Filtering** - Filter by model type (SFT/RL), benchmark settings, and more
+- 🔍 **Smart Filtering** - Filter by model type (SFT/RL), benchmark settings, and open-source status
+- 🔎 **Model Search** - Dedicated `/models` page with fuzzy search across all benchmarks; quickly find any model's scores, ranks, and leaderboard links from a single interface; also accessible via the search bar on the homepage
 - 🌍 **Bilingual Support** - English and Chinese (中文) interface
 
 ## 🛠️ Tech Stack
@@ -82,6 +83,7 @@ The static files will be generated in the `out/` directory.
 Evo-SOTA.io/
 ├── app/                    # Next.js App Router pages
 │   ├── page.tsx           # VLA Homepage
+│   ├── models/            # Model search page (fuzzy search across all benchmarks)
 │   ├── methodology/       # VLA Methodology page
 │   ├── benchmarks/        # VLA Benchmark leaderboard pages
 │   │   ├── libero/
