@@ -1,11 +1,11 @@
 {
   "libero": {
-    "total_models": 87,
-    "standard_opensource_count": 55,
-    "standard_closed_count": 16,
-    "non_standard_count": 16,
+    "total_models": 100,
+    "standard_opensource_count": 61,
+    "standard_closed_count": 21,
+    "non_standard_count": 18,
     "model_type_count": {
-      "sft": 48,
+      "sft": 54,
       "rl": 7
     },
     "primary_metric": "Average Success Rate (%)",
@@ -21,45 +21,45 @@
         "rank": 2
       },
       {
-        "name": "Being-H0.5 (Specialist)",
-        "score": 98.9,
+        "name": "SaiVLA-0",
+        "score": 99.0,
         "rank": 3
       },
       {
-        "name": "UnifoLM-VLA-0",
-        "score": 98.7,
+        "name": "Being-H0.5 (Specialist)",
+        "score": 98.9,
         "rank": 4
       },
       {
-        "name": "Xiaomi-Robotics-0",
+        "name": "UnifoLM-VLA-0",
         "score": 98.7,
         "rank": 5
       }
     ],
     "top_5_sft": [
       {
+        "name": "SaiVLA-0",
+        "score": 99.0,
+        "rank": 1
+      },
+      {
         "name": "Being-H0.5 (Specialist)",
         "score": 98.9,
-        "rank": 1
+        "rank": 2
       },
       {
         "name": "UnifoLM-VLA-0",
         "score": 98.7,
-        "rank": 2
+        "rank": 3
       },
       {
         "name": "Xiaomi-Robotics-0",
         "score": 98.7,
-        "rank": 3
+        "rank": 4
       },
       {
         "name": "ABot-M0",
         "score": 98.6,
-        "rank": 4
-      },
-      {
-        "name": "VLA-Adapter-pro",
-        "score": 98.5,
         "rank": 5
       }
     ],
@@ -92,12 +92,12 @@
     ]
   },
   "libero_plus": {
-    "total_models": 15,
-    "standard_opensource_count": 15,
-    "standard_closed_count": 0,
-    "non_standard_count": 0,
+    "total_models": 18,
+    "standard_opensource_count": 16,
+    "standard_closed_count": 1,
+    "non_standard_count": 1,
     "model_type_count": {
-      "sft": 13,
+      "sft": 14,
       "rl": 2
     },
     "primary_metric": "Total Success Rate (%)",
@@ -123,8 +123,8 @@
         "rank": 4
       },
       {
-        "name": "OpenVLA-OFT",
-        "score": 69.6,
+        "name": "MergeVLA",
+        "score": 72.4,
         "rank": 5
       }
     ],
@@ -150,8 +150,8 @@
         "rank": 4
       },
       {
-        "name": "OpenVLA-OFT",
-        "score": 69.6,
+        "name": "MergeVLA",
+        "score": 72.4,
         "rank": 5
       }
     ],
@@ -307,9 +307,9 @@
     "top_5_rl": []
   },
   "robocasa": {
-    "total_models": 8,
+    "total_models": 9,
     "standard_opensource_count": 8,
-    "standard_closed_count": 0,
+    "standard_closed_count": 1,
     "non_standard_count": 0,
     "model_type_count": {
       "sft": 8,
@@ -373,12 +373,12 @@
     "top_5_rl": []
   },
   "calvin": {
-    "total_models": 38,
-    "standard_opensource_count": 30,
+    "total_models": 41,
+    "standard_opensource_count": 31,
     "standard_closed_count": 5,
-    "non_standard_count": 3,
+    "non_standard_count": 5,
     "model_type_count": {
-      "sft": 29,
+      "sft": 30,
       "rl": 1
     },
     "primary_metric": "Average Length (Avg. Len.)",
@@ -446,7 +446,7 @@
     ],
     "settings": {
       "abcd_d": 17,
-      "abc_d": 38,
+      "abc_d": 41,
       "d_d": 12
     }
   }

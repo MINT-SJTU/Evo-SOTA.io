@@ -125,9 +125,9 @@ export default function Home() {
             'DeepThinkVLA', 'Dadu-Corki', 'RoboTron Mani', 'CronusVLA', 'InstructVLA', 'InternVLA-M1', 'ACoT-VLA',
             'OpenVLA', 'Pi0', 'RIPT', 'NORA-1.5', 'Being-H0.5', 'EO-1', 'DreamVLA', 'Rlinf-VLA', 'pi-RL', 'UnifoLM-VLA-0',
             'Giga-Brain-0.1', 'RDT-1B', 'Abot-M0', 'DM0', 'Xiaomi-Robotics-0', 'VLA-JEPA', 'JEPA-VLA', 'Pose-VLA', 'pi-StepNFT',
-            'QuantVLA', 'Fast-ThinkAct', 'ATA', 'SRPO', 'LingBot-VA', 'RynnVLA-002', 'X-VLA'
+            'QuantVLA', 'Fast-ThinkAct', 'ATA', 'SRPO', 'LingBot-VA', 'RynnVLA-002', 'X-VLA', 'SaiVLA-0', 'Atomic VLA', 'FutureVLA', 'MergeVLA', 'GST-VLA', 'ReViP', 'DiT4DiT', 'Cosmos Policy', 'SimVLA', 'CORAL', 'HiF-VLA', 'AVA-VLA'
         ];
-        const springFestival = ['Wishing everyone a happy Lunar New Year!', '祝大家新年快乐！']
+        const redImportant = ['Wishing everyone a happy Lunar New Year!', '祝大家新年快乐！', 'Searching models is available now!', '模型搜索功能已上线！'];
 
         let formattedContent = content;
 
@@ -149,7 +149,7 @@ export default function Home() {
             );
         });
 
-        springFestival.forEach(festival => {
+        redImportant.forEach(festival => {
             const regex = new RegExp(`(${festival})`, 'g');
             formattedContent = formattedContent.replace(
                 regex,
@@ -341,10 +341,10 @@ export default function Home() {
             <div className="bg-amber-50 border-y border-amber-200 py-4 px-4 sm:px-6 lg:px-8">
                 <div className="max-w-7xl mx-auto">
                     <div className="flex items-start gap-4">
-                        <span className="text-sm font-bold text-amber-800 whitespace-nowrap flex items-center gap-1 pt-0.5">
+                        <span className="text-xs font-bold text-amber-800 whitespace-nowrap flex items-center gap-1 pt-0.5">
                             📢 {locale === 'zh' ? '最近更新' : 'Latest Updates'}
                         </span>
-                        <div className="flex flex-col gap-1 text-sm">
+                        <div className="flex flex-col gap-1 text-xs">
                             {newsData.slice(0, 5).map((news, index) => {
                                 const content = locale === 'zh' ? news.content_zh : news.content_en;
                                 const formattedContent = formatNewsContent(content);

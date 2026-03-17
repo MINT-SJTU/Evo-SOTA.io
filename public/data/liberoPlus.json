@@ -89,6 +89,28 @@
       "rank": 4
     },
     {
+      "name": "MergeVLA",
+      "base_name": "MergeVLA",
+      "setting": "",
+      "paper_url": "https://arxiv.org/abs/2511.18810",
+      "pub_date": "2025-11",
+      "is_opensource": true,
+      "opensource_url": "https://github.com/MergeVLA/MergeVLA",
+      "is_rl": false,
+      "camera": 62.4,
+      "robot": 46.4,
+      "language": 75.7,
+      "light": 92.7,
+      "background": 92.7,
+      "noise": 74.7,
+      "layout": 73.7,
+      "total": 72.4,
+      "source": "original",
+      "is_standard": true,
+      "note": "",
+      "rank": 5
+    },
+    {
       "name": "OpenVLA-OFT",
       "base_name": "OpenVLA-OFT",
       "setting": "",
@@ -108,7 +130,7 @@
       "source": "from Libero-plus",
       "is_standard": true,
       "note": "",
-      "rank": 5
+      "rank": 6
     },
     {
       "name": "RIPT-VLA",
@@ -130,7 +152,7 @@
       "source": "from Libero-plus",
       "is_standard": true,
       "note": "",
-      "rank": 6
+      "rank": 7
     },
     {
       "name": "OpenVLA-OFT (mix-sft)",
@@ -152,7 +174,7 @@
       "source": "from Libero-plus",
       "is_standard": true,
       "note": "",
-      "rank": 7
+      "rank": 8
     },
     {
       "name": "pi0-FAST",
@@ -174,7 +196,7 @@
       "source": "from Libero-plus",
       "is_standard": true,
       "note": "",
-      "rank": 8
+      "rank": 9
     },
     {
       "name": "SRPO",
@@ -196,7 +218,7 @@
       "source": "original",
       "is_standard": true,
       "note": "",
-      "rank": 9
+      "rank": 10
     },
     {
       "name": "OpenVLA-OFT (without wrist input)",
@@ -218,7 +240,7 @@
       "source": "from Libero-plus",
       "is_standard": true,
       "note": "",
-      "rank": 10
+      "rank": 11
     },
     {
       "name": "pi0",
@@ -240,7 +262,7 @@
       "source": "from Libero-plus",
       "is_standard": true,
       "note": "",
-      "rank": 11
+      "rank": 12
     },
     {
       "name": "UniVLA",
@@ -262,7 +284,7 @@
       "source": "from Libero-plus",
       "is_standard": true,
       "note": "",
-      "rank": 12
+      "rank": 13
     },
     {
       "name": "NORA",
@@ -284,7 +306,7 @@
       "source": "from Libero-plus",
       "is_standard": true,
       "note": "",
-      "rank": 13
+      "rank": 14
     },
     {
       "name": "WorldVLA",
@@ -306,7 +328,7 @@
       "source": "from Libero-plus",
       "is_standard": true,
       "note": "",
-      "rank": 14
+      "rank": 15
     },
     {
       "name": "OpenVLA",
@@ -328,9 +350,55 @@
       "source": "from Libero-plus",
       "is_standard": true,
       "note": "",
-      "rank": 15
+      "rank": 16
     }
   ],
-  "standard_closed": [],
-  "non_standard": []
+  "standard_closed": [
+    {
+      "name": "AVA-VLA",
+      "base_name": "AVA-VLA",
+      "setting": "",
+      "paper_url": "https://arxiv.org/abs/2511.18960",
+      "pub_date": "2025-11",
+      "is_opensource": false,
+      "opensource_url": null,
+      "is_rl": false,
+      "camera": 69.4,
+      "robot": 34.9,
+      "language": 81.5,
+      "light": 97.5,
+      "background": 94.1,
+      "noise": 79.1,
+      "layout": 78.3,
+      "total": 74.7,
+      "source": "original",
+      "is_standard": true,
+      "note": "one policy per suite",
+      "rank": 1
+    }
+  ],
+  "non_standard": [
+    {
+      "name": "NS-VLA",
+      "base_name": "NS-VLA",
+      "setting": "",
+      "paper_url": "https://arxiv.org/abs/2603.09542",
+      "pub_date": "2026-03",
+      "is_opensource": true,
+      "opensource_url": "https://github.com/Zuzuzzy/NS-VLA",
+      "is_rl": true,
+      "camera": null,
+      "robot": null,
+      "language": null,
+      "light": null,
+      "background": null,
+      "noise": null,
+      "layout": null,
+      "total": 79.4,
+      "source": "original",
+      "is_standard": false,
+      "note": "",
+      "rank": 1
+    }
+  ]
 }
