@@ -5,6 +5,7 @@ import Link from 'next/link';
 import dynamic from 'next/dynamic';
 import { useLanguage } from '@/lib/LanguageContext';
 import ContactFooter from '@/components/ContactFooter';
+import SearchBar from '@/components/SearchBar';
 
 // 动态导入图表组件，避免 SSR 问题
 const ProgressChart = dynamic(() => import('@/components/ProgressChart'), {
@@ -122,8 +123,8 @@ export default function Home() {
         // 模型列表（需要斜体和紫色）
         const models = [
             'DeepThinkVLA', 'Dadu-Corki', 'RoboTron Mani', 'CronusVLA', 'InstructVLA', 'InternVLA-M1', 'ACoT-VLA',
-            'OpenVLA', 'Pi0', 'RIPT', 'NORA-1.5', 'Being-H0.5', 'EO-1', 'DreamVLA', 'Rlinf-VLA', 'pi-RL', 'UnifoLM-VLA-0', 
-            'Giga-Brain-0.1', 'RDT-1B', 'Abot-M0', 'DM0', 'Xiaomi-Robotics-0', 'VLA-JEPA', 'JEPA-VLA', 'Pose-VLA', 'pi-StepNFT', 
+            'OpenVLA', 'Pi0', 'RIPT', 'NORA-1.5', 'Being-H0.5', 'EO-1', 'DreamVLA', 'Rlinf-VLA', 'pi-RL', 'UnifoLM-VLA-0',
+            'Giga-Brain-0.1', 'RDT-1B', 'Abot-M0', 'DM0', 'Xiaomi-Robotics-0', 'VLA-JEPA', 'JEPA-VLA', 'Pose-VLA', 'pi-StepNFT',
             'QuantVLA', 'Fast-ThinkAct', 'ATA', 'SRPO', 'LingBot-VA', 'RynnVLA-002', 'X-VLA'
         ];
         const springFestival = ['Wishing everyone a happy Lunar New Year!', '祝大家新年快乐！']
@@ -313,6 +314,11 @@ export default function Home() {
                         >
                             {t.common.learnMore}
                         </Link>
+                    </div>
+
+                    {/* Model Search Bar */}
+                    <div className="max-w-xl mx-auto mb-6">
+                        <SearchBar />
                     </div>
                     {/* Star CTA */}
                     <div className="mt-4">

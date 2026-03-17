@@ -36,6 +36,15 @@ export default function RoboCasaPage() {
     const [sortOrder, setSortOrder] = useState<'asc' | 'desc'>('asc');
     const [modelTypeFilter, setModelTypeFilter] = useState<'all' | 'sft' | 'rl'>('sft');
 
+    useEffect(() => {
+        const params = new URLSearchParams(window.location.search);
+        const type = params.get('type');
+        const filter = params.get('filter');
+        if (type === 'rl') setModelTypeFilter('rl');
+        else if (type === 'sft') setModelTypeFilter('sft');
+        if (filter === 'all') setShowClosedSource(true);
+    }, []);
+
     const texts = {
         en: {
             title: 'RoboCasa-GR1-Tabletop Leaderboard',
@@ -106,6 +115,14 @@ export default function RoboCasaPage() {
         };
         loadData();
     }, []);
+
+    useEffect(() => {
+        if (!loading && window.location.hash) {
+            const id = decodeURIComponent(window.location.hash.slice(1));
+            const el = document.getElementById(id);
+            if (el) el.scrollIntoView({ behavior: 'smooth', block: 'center' });
+        }
+    }, [loading]);
 
     const toggleRow = (key: string) => {
         const newExpanded = new Set(expandedRows);
@@ -226,6 +243,7 @@ export default function RoboCasaPage() {
                                 <>
                                     <tr
                                         key={rowKey}
+                                        id={`model-row-${encodeURIComponent(model.name)}`}
                                         className={`border-b border-slate-100 hover:bg-slate-50 cursor-pointer transition-colors ${expandedRows.has(rowKey) ? 'bg-rose-50' : ''}`}
                                         onClick={() => toggleRow(rowKey)}
                                     >

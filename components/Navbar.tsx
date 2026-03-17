@@ -135,6 +135,19 @@ export default function Navbar() {
                             )}
                         </div>
 
+                        {/* Models Search Link - only for VLA section */}
+                        {!isDex && (
+                            <Link
+                                href="/models"
+                                className="text-slate-600 hover:text-primary-600 transition-colors font-medium flex items-center gap-1"
+                            >
+                                <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
+                                </svg>
+                                {t.nav.models}
+                            </Link>
+                        )}
+
                         <Link
                             href={methodologyHref}
                             className="text-slate-600 hover:text-primary-600 transition-colors font-medium"
@@ -223,6 +236,16 @@ export default function Navbar() {
                                 ))
                             ) : (
                                 <div className="px-8 py-2 text-sm text-slate-400">Loading...</div>
+                            )}
+
+                            {!isDex && (
+                                <Link
+                                    href="/models"
+                                    className="block px-4 py-2 text-slate-600 hover:bg-primary-50 hover:text-primary-600 rounded-lg"
+                                    onClick={() => setIsMenuOpen(false)}
+                                >
+                                    {t.nav.models}
+                                </Link>
                             )}
 
                             <Link
