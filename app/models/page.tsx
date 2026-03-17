@@ -243,9 +243,9 @@ function ModelCard({ model, isExpanded, onToggle, benchmarkName, locale, msOpenS
                                                             )}
                                                             {entry.rank != null && (
                                                                 <span className={`text-xs font-bold px-2 py-0.5 rounded-full ${entry.rank === 1 ? 'bg-yellow-100 text-yellow-700' :
-                                                                        entry.rank === 2 ? 'bg-slate-100 text-slate-600' :
-                                                                            entry.rank === 3 ? 'bg-orange-100 text-orange-700' :
-                                                                                'bg-slate-50 text-slate-500'
+                                                                    entry.rank === 2 ? 'bg-slate-100 text-slate-600' :
+                                                                        entry.rank === 3 ? 'bg-orange-100 text-orange-700' :
+                                                                            'bg-slate-50 text-slate-500'
                                                                     }`}>
                                                                     #{entry.rank}
                                                                 </span>
@@ -268,8 +268,8 @@ function ModelCard({ model, isExpanded, onToggle, benchmarkName, locale, msOpenS
                                                                 <div key={dk} className="text-center">
                                                                     <div className="text-xs text-slate-400">{subLabels[dk] || dk}</div>
                                                                     <div className={`text-sm font-semibold ${dk === 'average' || dk === 'total' || dk === 'avg_len' || dk === 'avg_success_rate' || dk === 'score'
-                                                                            ? 'text-primary-600'
-                                                                            : 'text-slate-700'
+                                                                        ? 'text-primary-600'
+                                                                        : 'text-slate-700'
                                                                         }`}>
                                                                         {typeof dv === 'number' ? formatScore(key, dv as number) : '—'}
                                                                     </div>
@@ -301,7 +301,7 @@ function ModelsPageContent() {
     const [query, setQuery] = useState('');
     const [displayQuery, setDisplayQuery] = useState('');
     const [typeFilter, setTypeFilter] = useState<'all' | 'sft' | 'rl'>('all');
-    const [openFilter, setOpenFilter] = useState(true);  // 问题2：默认显示开源
+    const [openFilter, setOpenFilter] = useState(false);  // 问题2：默认显示开源
     const [sortBy, setSortBy] = useState<'date' | 'name'>('date');
     const [suggestions, setSuggestions] = useState<ModelEntry[]>([]);
     const [showDropdown, setShowDropdown] = useState(false);
