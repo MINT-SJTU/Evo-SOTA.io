@@ -377,6 +377,28 @@
   ],
   "standard_closed": [
     {
+      "name": "FutureVLA",
+      "base_name": "FutureVLA",
+      "setting": "",
+      "paper_url": "https://arxiv.org/abs/2603.10712",
+      "pub_date": "2026-03",
+      "is_opensource": false,
+      "opensource_url": null,
+      "is_rl": false,
+      "camera": 59.7,
+      "robot": 66.0,
+      "language": 88.2,
+      "light": 97.4,
+      "background": 97.8,
+      "noise": 77.3,
+      "layout": 82.6,
+      "total": 79.7,
+      "source": "original",
+      "is_standard": true,
+      "note": "",
+      "rank": 1
+    },
+    {
       "name": "AVA-VLA",
       "base_name": "AVA-VLA",
       "setting": "",
@@ -396,7 +418,7 @@
       "source": "original",
       "is_standard": true,
       "note": "one policy per suite",
-      "rank": 1
+      "rank": 2
     }
   ],
   "non_standard": [

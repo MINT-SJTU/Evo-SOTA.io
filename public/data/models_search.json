@@ -155,6 +155,24 @@
             "average": 98.3
           }
         }
+      ],
+      "libero_plus": [
+        {
+          "setting": "default",
+          "score": 79.7,
+          "is_standard": true,
+          "note": "",
+          "data": {
+            "camera": 59.7,
+            "robot": 66.0,
+            "language": 88.2,
+            "light": 97.4,
+            "background": 97.8,
+            "noise": 77.3,
+            "layout": 82.6,
+            "total": 79.7
+          }
+        }
       ]
     }
   },
