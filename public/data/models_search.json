@@ -23,7 +23,7 @@
             "libero_90": null,
             "average": 94.0
           },
-          "rank": 44
+          "rank": 46
         }
       ]
     }
@@ -109,7 +109,7 @@
             "libero_90": null,
             "average": 97.8
           },
-          "rank": 18
+          "rank": 19
         }
       ],
       "calvin_abc_d": [
@@ -316,6 +316,67 @@
     }
   },
   {
+    "name": "Dual-CoT VLA",
+    "paper_url": "https://arxiv.org/abs/2603.22280",
+    "pub_date": "2026-03",
+    "is_opensource": false,
+    "opensource_url": null,
+    "is_rl": false,
+    "settings": [],
+    "benchmarks": {
+      "libero": [
+        {
+          "setting": "default",
+          "score": 98.8,
+          "is_standard": true,
+          "note": "",
+          "data": {
+            "policy_setting": 0,
+            "spatial": 99.4,
+            "object": 99.8,
+            "goal": 97.8,
+            "long": 98.2,
+            "libero_90": null,
+            "average": 98.8
+          }
+        }
+      ],
+      "robocasa": [
+        {
+          "setting": "default",
+          "score": 55.1,
+          "is_standard": true,
+          "note": "",
+          "data": {
+            "avg_success_rate": 55.1
+          }
+        }
+      ]
+    }
+  },
+  {
+    "name": "VP-VLA",
+    "paper_url": "https://arxiv.org/abs/2603.22003",
+    "pub_date": "2026-03",
+    "is_opensource": false,
+    "opensource_url": null,
+    "is_rl": false,
+    "settings": [],
+    "benchmarks": {
+      "robocasa": [
+        {
+          "setting": "default",
+          "score": 53.8,
+          "is_standard": true,
+          "note": "",
+          "data": {
+            "avg_success_rate": 53.8
+          }
+        }
+      ]
+    }
+  },
+  {
     "name": "DM0",
     "paper_url": "https://dexmal.com/DM0_Tech_Report.pdf",
     "pub_date": "2026-02",
@@ -341,7 +402,7 @@
             "libero_90": null,
             "average": 94.1
           },
-          "rank": 43
+          "rank": 45
         }
       ],
       "robochallenge": [
@@ -413,7 +474,7 @@
             "layout": 82.6,
             "total": 80.5
           },
-          "rank": 2
+          "rank": 3
         }
       ],
       "robocasa": [
@@ -517,7 +578,7 @@
             "libero_90": null,
             "average": 97.2
           },
-          "rank": 23
+          "rank": 24
         }
       ],
       "libero_plus": [
@@ -536,7 +597,7 @@
             "layout": 85.1,
             "total": 79.5
           },
-          "rank": 3
+          "rank": 4
         }
       ]
     }
@@ -621,7 +682,7 @@
             "libero_90": null,
             "average": 97.6
           },
-          "rank": 19
+          "rank": 20
         }
       ]
     }
@@ -651,6 +712,54 @@
             "average": 98.6
           },
           "rank": 8
+        }
+      ]
+    }
+  },
+  {
+    "name": "ROCKET",
+    "paper_url": "https://arxiv.org/abs/2602.17951",
+    "pub_date": "2026-02",
+    "is_opensource": true,
+    "opensource_url": "https://github.com/CASE-Lab-UMD/ROCKET-VLA",
+    "is_rl": false,
+    "settings": [],
+    "benchmarks": {
+      "libero": [
+        {
+          "setting": "default",
+          "score": 98.5,
+          "is_standard": true,
+          "note": "",
+          "data": {
+            "policy_setting": 1,
+            "spatial": 98.2,
+            "object": 99.8,
+            "goal": 98.8,
+            "long": 97.0,
+            "libero_90": null,
+            "average": 98.5
+          },
+          "rank": 13
+        }
+      ],
+      "libero_plus": [
+        {
+          "setting": "default",
+          "score": 81.7,
+          "is_standard": true,
+          "note": "",
+          "data": {
+            "camera": 91.8,
+            "robot": 41.8,
+            "language": 78.0,
+            "light": 94.7,
+            "background": 91.8,
+            "noise": 92.5,
+            "layout": 81.2,
+            "total": 81.7
+          },
+          "rank": 2
         }
       ]
     }
@@ -1080,7 +1189,7 @@
             "libero_90": null,
             "average": 94.8
           },
-          "rank": 38
+          "rank": 40
         }
       ],
       "metaworld": [
@@ -1231,7 +1340,7 @@
             "libero_90": null,
             "average": 97.0
           },
-          "rank": 26
+          "rank": 27
         }
       ],
       "libero_plus": [
@@ -1250,7 +1359,7 @@
             "layout": 79.9,
             "total": 79.0
           },
-          "rank": 4
+          "rank": 5
         }
       ]
     }
@@ -1296,7 +1405,7 @@
             "libero_90": null,
             "average": 95.0
           },
-          "rank": 37
+          "rank": 39
         }
       ]
     }
@@ -1372,7 +1481,7 @@
             "layout": 72.4,
             "total": 59.6
           },
-          "rank": 10
+          "rank": 11
         }
       ]
     }
@@ -1401,7 +1510,7 @@
             "libero_90": null,
             "average": 97.4
           },
-          "rank": 22
+          "rank": 23
         }
       ]
     }
@@ -1430,7 +1539,7 @@
             "libero_90": null,
             "average": 96.7
           },
-          "rank": 29
+          "rank": 30
         }
       ],
       "libero_plus": [
@@ -1449,7 +1558,36 @@
             "layout": 73.7,
             "total": 72.4
           },
-          "rank": 5
+          "rank": 6
+        }
+      ]
+    }
+  },
+  {
+    "name": "Mantis",
+    "paper_url": "https://arxiv.org/abs/2511.16175",
+    "pub_date": "2025-11",
+    "is_opensource": true,
+    "opensource_url": "https://github.com/SJTU-DENG-Lab/Mantis",
+    "is_rl": false,
+    "settings": [],
+    "benchmarks": {
+      "libero": [
+        {
+          "setting": "default",
+          "score": 96.7,
+          "is_standard": true,
+          "note": "",
+          "data": {
+            "policy_setting": 0,
+            "spatial": 98.8,
+            "object": 99.2,
+            "goal": 94.4,
+            "long": 94.2,
+            "libero_90": null,
+            "average": 96.7
+          },
+          "rank": 31
         }
       ]
     }
@@ -1470,7 +1608,7 @@
           "is_standard": true,
           "note": "",
           "data": {
-            "policy_setting": 0,
+            "policy_setting": 2,
             "spatial": 97.0,
             "object": 97.8,
             "goal": 96.2,
@@ -1478,7 +1616,7 @@
             "libero_90": null,
             "average": 94.7
           },
-          "rank": 40
+          "rank": 42
         }
       ]
     }
@@ -1507,7 +1645,7 @@
             "libero_90": null,
             "average": 98.1
           },
-          "rank": 15
+          "rank": 16
         }
       ],
       "robochallenge": [
@@ -1594,7 +1732,7 @@
             "libero_90": null,
             "average": 95.9
           },
-          "rank": 32
+          "rank": 34
         }
       ]
     }
@@ -1623,7 +1761,7 @@
             "libero_90": null,
             "average": 97.0
           },
-          "rank": 25
+          "rank": 26
         }
       ]
     }
@@ -1652,7 +1790,7 @@
             "libero_90": null,
             "average": 98.3
           },
-          "rank": 13
+          "rank": 14
         }
       ],
       "metaworld": [
@@ -1714,7 +1852,7 @@
             "libero_90": 98.6,
             "average": 98.1
           },
-          "rank": 16
+          "rank": 17
         }
       ]
     }
@@ -1744,6 +1882,35 @@
     }
   },
   {
+    "name": "VLA-RFT",
+    "paper_url": "https://arxiv.org/abs/2510.00406",
+    "pub_date": "2025-10",
+    "is_opensource": true,
+    "opensource_url": "https://github.com/OpenHelix-Team/VLA-RFT",
+    "is_rl": true,
+    "settings": [],
+    "benchmarks": {
+      "libero": [
+        {
+          "setting": "default",
+          "score": 91.1,
+          "is_standard": true,
+          "note": "",
+          "data": {
+            "policy_setting": 1,
+            "spatial": 94.4,
+            "object": 94.4,
+            "goal": 95.4,
+            "long": 80.2,
+            "libero_90": null,
+            "average": 91.1
+          },
+          "rank": 49
+        }
+      ]
+    }
+  },
+  {
     "name": "Flower VLA",
     "paper_url": "https://arxiv.org/pdf/2509.04996",
     "pub_date": "2025-09",
@@ -1767,7 +1934,7 @@
             "libero_90": 94.7,
             "average": 96.9
           },
-          "rank": 28
+          "rank": 29
         }
       ],
       "calvin_abcd_d": [
@@ -2030,7 +2197,7 @@
             "libero_90": null,
             "average": 74.0
           },
-          "rank": 60
+          "rank": 64
         }
       ]
     }
@@ -2059,7 +2226,7 @@
             "libero_90": 95.6,
             "average": 96.5
           },
-          "rank": 30
+          "rank": 32
         }
       ]
     }
@@ -2088,7 +2255,7 @@
             "libero_90": null,
             "average": 86.6
           },
-          "rank": 49
+          "rank": 53
         }
       ]
     }
@@ -2117,7 +2284,7 @@
             "libero_90": null,
             "average": 96.3
           },
-          "rank": 31
+          "rank": 33
         }
       ]
     }
@@ -2174,7 +2341,7 @@
             "libero_90": null,
             "average": 98.2
           },
-          "rank": 14
+          "rank": 15
         }
       ]
     }
@@ -2213,7 +2380,7 @@
             "libero_90": null,
             "average": 98.0
           },
-          "rank": 17
+          "rank": 18
         }
       ]
     }
@@ -2329,7 +2496,7 @@
             "libero_90": null,
             "average": 92.6
           },
-          "rank": 46
+          "rank": 48
         }
       ],
       "calvin_abc_d": [
@@ -2385,7 +2552,7 @@
             "libero_90": null,
             "average": 95.8
           },
-          "rank": 33
+          "rank": 35
         }
       ]
     }
@@ -2414,7 +2581,7 @@
             "libero_90": null,
             "average": 88.8
           },
-          "rank": 47
+          "rank": 50
         }
       ],
       "metaworld": [
@@ -2439,8 +2606,8 @@
     "name": "4D-VLA",
     "paper_url": "https://arxiv.org/abs/2506.22242",
     "pub_date": "2025-06",
-    "is_opensource": false,
-    "opensource_url": null,
+    "is_opensource": true,
+    "opensource_url": "https://github.com/LogosRoboticsGroup/4D-VLA",
     "is_rl": false,
     "settings": [],
     "benchmarks": {
@@ -2458,7 +2625,8 @@
             "long": 79.1,
             "libero_90": null,
             "average": 88.6
-          }
+          },
+          "rank": 51
         }
       ]
     }
@@ -2487,7 +2655,7 @@
             "libero_90": null,
             "average": 95.5
           },
-          "rank": 34
+          "rank": 36
         }
       ],
       "calvin_abcd_d": [
@@ -2550,7 +2718,7 @@
             "libero_90": null,
             "average": 81.8
           },
-          "rank": 52
+          "rank": 56
         }
       ],
       "libero_plus": [
@@ -2569,7 +2737,7 @@
             "layout": 38.0,
             "total": 25.0
           },
-          "rank": 15
+          "rank": 16
         }
       ]
     }
@@ -2598,7 +2766,7 @@
             "libero_90": null,
             "average": 94.8
           },
-          "rank": 39
+          "rank": 41
         }
       ]
     }
@@ -2682,7 +2850,7 @@
             "libero_90": 96.0,
             "average": 94.3
           },
-          "rank": 41
+          "rank": 43
         }
       ]
     }
@@ -2711,7 +2879,7 @@
             "libero_90": null,
             "average": 81.0
           },
-          "rank": 53
+          "rank": 57
         }
       ]
     }
@@ -2768,7 +2936,7 @@
             "libero_90": null,
             "average": 95.2
           },
-          "rank": 36
+          "rank": 38
         }
       ],
       "libero_plus": [
@@ -2787,7 +2955,7 @@
             "layout": 31.9,
             "total": 43.9
           },
-          "rank": 13
+          "rank": 14
         }
       ]
     }
@@ -2898,7 +3066,7 @@
             "libero_90": null,
             "average": 97.5
           },
-          "rank": 20
+          "rank": 21
         }
       ],
       "libero_plus": [
@@ -2917,17 +3085,17 @@
             "layout": 74.2,
             "total": 68.4
           },
-          "rank": 7
+          "rank": 8
         }
       ]
     }
   },
   {
     "name": "pi0.5",
-    "paper_url": "https://arxiv.org/abs/2504.16054",
+    "paper_url": null,
     "pub_date": "2025-04",
     "is_opensource": true,
-    "opensource_url": "https://github.com/Physical-Intelligence/openpi",
+    "opensource_url": null,
     "is_rl": false,
     "settings": [
       "generalist"
@@ -2948,7 +3116,7 @@
             "libero_90": null,
             "average": 96.9
           },
-          "rank": 27
+          "rank": 28
         }
       ],
       "robochallenge": [
@@ -2972,7 +3140,7 @@
             "score": 31.27,
             "success_rate": 17.67
           },
-          "rank": 9
+          "rank": 10
         }
       ]
     }
@@ -3001,7 +3169,7 @@
             "libero_90": null,
             "average": 87.9
           },
-          "rank": 48
+          "rank": 52
         }
       ],
       "libero_plus": [
@@ -3020,7 +3188,7 @@
             "layout": 62.1,
             "total": 39.0
           },
-          "rank": 14
+          "rank": 15
         }
       ]
     }
@@ -3030,7 +3198,7 @@
     "paper_url": "https://arxiv.org/abs/2503.14734",
     "pub_date": "2025-03",
     "is_opensource": true,
-    "opensource_url": "https://github.com/NVIDIA/Isaac-GR00T/tree/n1-release",
+    "opensource_url": "https://github.com/NVIDIA/Isaac-GR00T",
     "is_rl": false,
     "settings": [],
     "benchmarks": {
@@ -3049,7 +3217,31 @@
             "libero_90": null,
             "average": 93.9
           },
-          "rank": 45
+          "rank": 47
+        }
+      ]
+    }
+  },
+  {
+    "name": "GR00T",
+    "paper_url": "https://arxiv.org/abs/2503.14734",
+    "pub_date": "2025-03",
+    "is_opensource": true,
+    "opensource_url": "https://github.com/NVIDIA/Isaac-GR00T",
+    "is_rl": false,
+    "settings": [],
+    "benchmarks": {
+      "robochallenge": [
+        {
+          "setting": "default",
+          "score": 31.64,
+          "is_standard": true,
+          "note": "",
+          "data": {
+            "score": 31.64,
+            "success_rate": 14.33
+          },
+          "rank": 9
         }
       ]
     }
@@ -3173,7 +3365,7 @@
             "score": 28.84,
             "success_rate": 15.0
           },
-          "rank": 10
+          "rank": 11
         }
       ]
     }
@@ -3202,7 +3394,7 @@
             "libero_90": null,
             "average": 82.4
           },
-          "rank": 51
+          "rank": 55
         }
       ],
       "calvin_abc_d": [
@@ -3253,7 +3445,7 @@
             "libero_90": null,
             "average": 95.3
           },
-          "rank": 35
+          "rank": 37
         },
         {
           "setting": "wrist & third-person images",
@@ -3269,7 +3461,7 @@
             "libero_90": null,
             "average": 97.1
           },
-          "rank": 24
+          "rank": 25
         }
       ],
       "libero_plus": [
@@ -3288,7 +3480,7 @@
             "layout": 74.2,
             "total": 69.6
           },
-          "rank": 6
+          "rank": 7
         },
         {
           "setting": "mix-sft",
@@ -3305,7 +3497,7 @@
             "layout": 68.7,
             "total": 67.9
           },
-          "rank": 8
+          "rank": 9
         },
         {
           "setting": "without wrist input",
@@ -3322,7 +3514,7 @@
             "layout": 69.9,
             "total": 55.8
           },
-          "rank": 11
+          "rank": 12
         }
       ],
       "robochallenge": [
@@ -3335,7 +3527,7 @@
             "score": 8.66,
             "success_rate": 5.0
           },
-          "rank": 13
+          "rank": 14
         }
       ]
     }
@@ -3364,7 +3556,7 @@
             "libero_90": null,
             "average": 97.4
           },
-          "rank": 21
+          "rank": 22
         }
       ]
     }
@@ -3393,7 +3585,7 @@
             "libero_90": null,
             "average": 85.5
           },
-          "rank": 50
+          "rank": 54
         }
       ],
       "libero_plus": [
@@ -3412,7 +3604,7 @@
             "layout": 68.8,
             "total": 61.6
           },
-          "rank": 9
+          "rank": 10
         }
       ]
     }
@@ -3486,7 +3678,7 @@
             "libero_90": 73.0,
             "average": 74.0
           },
-          "rank": 59
+          "rank": 63
         }
       ]
     }
@@ -3515,7 +3707,7 @@
             "libero_90": null,
             "average": 78.1
           },
-          "rank": 55
+          "rank": 59
         }
       ]
     }
@@ -3570,7 +3762,7 @@
             "libero_90": null,
             "average": 74.8
           },
-          "rank": 58
+          "rank": 62
         }
       ]
     }
@@ -3816,7 +4008,7 @@
             "libero_90": null,
             "average": 80.2
           },
-          "rank": 54
+          "rank": 58
         }
       ]
     }
@@ -3868,7 +4060,7 @@
             "score": 21.83,
             "success_rate": 11.67
           },
-          "rank": 11
+          "rank": 12
         }
       ]
     }
@@ -3899,7 +4091,7 @@
             "libero_90": null,
             "average": 94.2
           },
-          "rank": 42
+          "rank": 44
         }
       ],
       "libero_plus": [
@@ -3918,7 +4110,7 @@
             "layout": 68.9,
             "total": 53.6
           },
-          "rank": 12
+          "rank": 13
         }
       ],
       "metaworld": [
@@ -3958,7 +4150,7 @@
             "score": 20.22,
             "success_rate": 9.0
           },
-          "rank": 12
+          "rank": 13
         }
       ]
     }
@@ -4288,7 +4480,7 @@
             "libero_90": null,
             "average": 76.5
           },
-          "rank": 56
+          "rank": 60
         }
       ],
       "libero_plus": [
@@ -4307,7 +4499,7 @@
             "layout": 28.5,
             "total": 15.6
           },
-          "rank": 16
+          "rank": 17
         }
       ]
     }
@@ -4433,7 +4625,7 @@
             "libero_90": null,
             "average": 75.1
           },
-          "rank": 57
+          "rank": 61
         }
       ]
     }
@@ -4881,7 +5073,7 @@
             "libero_90": null,
             "average": 72.4
           },
-          "rank": 61
+          "rank": 65
         }
       ],
       "metaworld": [

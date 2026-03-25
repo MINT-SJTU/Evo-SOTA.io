@@ -1,12 +1,12 @@
 {
   "libero": {
-    "total_models": 100,
-    "standard_opensource_count": 61,
+    "total_models": 104,
+    "standard_opensource_count": 65,
     "standard_closed_count": 21,
     "non_standard_count": 18,
     "model_type_count": {
-      "sft": 54,
-      "rl": 7
+      "sft": 57,
+      "rl": 8
     },
     "primary_metric": "Average Success Rate (%)",
     "top_5": [
@@ -92,12 +92,12 @@
     ]
   },
   "libero_plus": {
-    "total_models": 18,
-    "standard_opensource_count": 16,
+    "total_models": 19,
+    "standard_opensource_count": 17,
     "standard_closed_count": 1,
     "non_standard_count": 1,
     "model_type_count": {
-      "sft": 14,
+      "sft": 15,
       "rl": 2
     },
     "primary_metric": "Total Success Rate (%)",
@@ -108,23 +108,23 @@
         "rank": 1
       },
       {
+        "name": "ROCKET",
+        "score": 81.7,
+        "rank": 2
+      },
+      {
         "name": "ABot-M0",
         "score": 80.5,
-        "rank": 2
+        "rank": 3
       },
       {
         "name": "VLA-JEPA",
         "score": 79.5,
-        "rank": 3
+        "rank": 4
       },
       {
         "name": "DeepThinkVLA",
         "score": 79.0,
-        "rank": 4
-      },
-      {
-        "name": "MergeVLA",
-        "score": 72.4,
         "rank": 5
       }
     ],
@@ -135,23 +135,23 @@
         "rank": 1
       },
       {
+        "name": "ROCKET",
+        "score": 81.7,
+        "rank": 2
+      },
+      {
         "name": "ABot-M0",
         "score": 80.5,
-        "rank": 2
+        "rank": 3
       },
       {
         "name": "VLA-JEPA",
         "score": 79.5,
-        "rank": 3
+        "rank": 4
       },
       {
         "name": "DeepThinkVLA",
         "score": 79.0,
-        "rank": 4
-      },
-      {
-        "name": "MergeVLA",
-        "score": 72.4,
         "rank": 5
       }
     ],
@@ -241,12 +241,12 @@
     ]
   },
   "robochallenge": {
-    "total_models": 13,
-    "standard_opensource_count": 13,
+    "total_models": 14,
+    "standard_opensource_count": 14,
     "standard_closed_count": 0,
     "non_standard_count": 0,
     "model_type_count": {
-      "sft": 13,
+      "sft": 14,
       "rl": 0
     },
     "primary_metric": "Score",
@@ -307,9 +307,9 @@
     "top_5_rl": []
   },
   "robocasa": {
-    "total_models": 9,
+    "total_models": 11,
     "standard_opensource_count": 8,
-    "standard_closed_count": 1,
+    "standard_closed_count": 3,
     "non_standard_count": 0,
     "model_type_count": {
       "sft": 8,
