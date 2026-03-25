@@ -23,6 +23,28 @@
       "rank": 1
     },
     {
+      "name": "ROCKET",
+      "base_name": "ROCKET",
+      "setting": "",
+      "paper_url": "https://arxiv.org/abs/2602.17951",
+      "pub_date": "2026-02",
+      "is_opensource": true,
+      "opensource_url": "https://github.com/CASE-Lab-UMD/ROCKET-VLA",
+      "is_rl": false,
+      "camera": 91.8,
+      "robot": 41.8,
+      "language": 78.0,
+      "light": 94.7,
+      "background": 91.8,
+      "noise": 92.5,
+      "layout": 81.2,
+      "total": 81.7,
+      "source": "original",
+      "is_standard": true,
+      "note": "",
+      "rank": 2
+    },
+    {
       "name": "ABot-M0",
       "base_name": "ABot-M0",
       "setting": "",
@@ -42,7 +64,7 @@
       "source": "original",
       "is_standard": true,
       "note": "",
-      "rank": 2
+      "rank": 3
     },
     {
       "name": "VLA-JEPA",
@@ -64,7 +86,7 @@
       "source": "original",
       "is_standard": true,
       "note": "",
-      "rank": 3
+      "rank": 4
     },
     {
       "name": "DeepThinkVLA",
@@ -86,7 +108,7 @@
       "source": "original",
       "is_standard": true,
       "note": "",
-      "rank": 4
+      "rank": 5
     },
     {
       "name": "MergeVLA",
@@ -108,7 +130,7 @@
       "source": "original",
       "is_standard": true,
       "note": "",
-      "rank": 5
+      "rank": 6
     },
     {
       "name": "OpenVLA-OFT",
@@ -130,7 +152,7 @@
       "source": "from Libero-plus",
       "is_standard": true,
       "note": "",
-      "rank": 6
+      "rank": 7
     },
     {
       "name": "RIPT-VLA",
@@ -152,7 +174,7 @@
       "source": "from Libero-plus",
       "is_standard": true,
       "note": "",
-      "rank": 7
+      "rank": 8
     },
     {
       "name": "OpenVLA-OFT (mix-sft)",
@@ -174,7 +196,7 @@
       "source": "from Libero-plus",
       "is_standard": true,
       "note": "",
-      "rank": 8
+      "rank": 9
     },
     {
       "name": "pi0-FAST",
@@ -196,7 +218,7 @@
       "source": "from Libero-plus",
       "is_standard": true,
       "note": "",
-      "rank": 9
+      "rank": 10
     },
     {
       "name": "SRPO",
@@ -218,7 +240,7 @@
       "source": "original",
       "is_standard": true,
       "note": "",
-      "rank": 10
+      "rank": 11
     },
     {
       "name": "OpenVLA-OFT (without wrist input)",
@@ -240,7 +262,7 @@
       "source": "from Libero-plus",
       "is_standard": true,
       "note": "",
-      "rank": 11
+      "rank": 12
     },
     {
       "name": "pi0",
@@ -262,7 +284,7 @@
       "source": "from Libero-plus",
       "is_standard": true,
       "note": "",
-      "rank": 12
+      "rank": 13
     },
     {
       "name": "UniVLA",
@@ -284,7 +306,7 @@
       "source": "from Libero-plus",
       "is_standard": true,
       "note": "",
-      "rank": 13
+      "rank": 14
     },
     {
       "name": "NORA",
@@ -306,7 +328,7 @@
       "source": "from Libero-plus",
       "is_standard": true,
       "note": "",
-      "rank": 14
+      "rank": 15
     },
     {
       "name": "WorldVLA",
@@ -328,7 +350,7 @@
       "source": "from Libero-plus",
       "is_standard": true,
       "note": "",
-      "rank": 15
+      "rank": 16
     },
     {
       "name": "OpenVLA",
@@ -350,7 +372,7 @@
       "source": "from Libero-plus",
       "is_standard": true,
       "note": "",
-      "rank": 16
+      "rank": 17
     }
   ],
   "standard_closed": [

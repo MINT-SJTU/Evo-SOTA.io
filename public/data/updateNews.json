@@ -1,6 +1,11 @@
 {
     "news": [
         {
+            "date": "🗓️ 2026-03-25: ",
+            "content_en": "New models: Add VLA-RFT, Mantis, ROCKET, Dual-CoT VLA to LIBERO, ROCKET to LIBERO Plus, Dual-CoT VLA, VP-VLA to RoboCasa-GR1-Tabletop, GR00T to RoboChallenge",
+            "content_zh": "新增模型：增加 VLA-RFT, Mantis, ROCKET, Dual-CoT VLA 到 LIBERO, ROCKET 到 LIBERO Plus, Dual-CoT VLA, VP-VLA 到 RoboCasa-GR1-Tabletop, GR00T 到 RoboChallenge"
+        },
+        {
             "date": "🗓️ 2026-03-17: ",
             "content_en": "🚀 Major update: New feature: Searching models is available now! Search directly on the Home or Models page. New models: Add SaiVLA-0, Atomic VLA, FutureVLA, MergeVLA, GST-VLA, ReViP, DiT4DiT, Cosmos Policy, SimVLA, CORAL to LIBERO; AVA-VLA, MergeVLA to LIBERO Plus; Atomic VLA, HiF-VLA to CALVIN; DiT4DiT to Robocasa-GR1-Tabletop",
             "content_zh": "🚀 重大更新：新增功能：模型搜索功能已上线！你可以直接在 Home 或 Models 页面搜索模型。新增模型：增加 SaiVLA-0, Atomic VLA, FutureVLA, MergeVLA, GST-VLA, ReViP, DiT4DiT, Cosmos Policy, SimVLA, CORAL 到 LIBERO; 增加 AVA-VLA, MergeVLA 到 LIBERO Plus; 增加 Atomic VLA, HiF-VLA 到 CALVIN; 增加 DiT4DiT 到 Robocasa-GR1-Tabletop"

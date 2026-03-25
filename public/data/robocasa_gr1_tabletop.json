@@ -123,6 +123,36 @@
   ],
   "standard_closed": [
     {
+      "name": "Dual-CoT VLA",
+      "base_name": "Dual-CoT VLA",
+      "setting": "",
+      "paper_url": "https://arxiv.org/abs/2603.22280",
+      "pub_date": "2026-03",
+      "is_opensource": false,
+      "opensource_url": null,
+      "is_rl": false,
+      "avg_success_rate": 55.1,
+      "source": "original",
+      "is_standard": true,
+      "note": "",
+      "rank": 1
+    },
+    {
+      "name": "VP-VLA",
+      "base_name": "VP-VLA",
+      "setting": "",
+      "paper_url": "https://arxiv.org/abs/2603.22003",
+      "pub_date": "2026-03",
+      "is_opensource": false,
+      "opensource_url": null,
+      "is_rl": false,
+      "avg_success_rate": 53.8,
+      "source": "original",
+      "is_standard": true,
+      "note": "",
+      "rank": 2
+    },
+    {
       "name": "DiT4DiT",
       "base_name": "DiT4DiT",
       "setting": "",
@@ -135,7 +165,7 @@
       "source": "original",
       "is_standard": true,
       "note": "",
-      "rank": 1
+      "rank": 3
     }
   ],
   "non_standard": []
