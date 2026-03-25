@@ -92,9 +92,9 @@
     ]
   },
   "libero_plus": {
-    "total_models": 19,
+    "total_models": 20,
     "standard_opensource_count": 17,
-    "standard_closed_count": 1,
+    "standard_closed_count": 2,
     "non_standard_count": 1,
     "model_type_count": {
       "sft": 15,

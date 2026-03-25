@@ -542,7 +542,7 @@ export default function LiberoPlusPage() {
                     {renderTable(displayData)}
                 </div>
 
-                {/* Non-Standard Models Appendix */}
+                {/* {Non-Standard Models Appendix}
                 {appendixData.length > 0 && (
                     <div className="mt-12">
                         <div className="flex items-center justify-between mb-4">
@@ -561,7 +561,7 @@ export default function LiberoPlusPage() {
                             </>
                         )}
                     </div>
-                )}
+                )} */}
 
                 {/* Contact Footer */}
                 <div className="mt-12">
