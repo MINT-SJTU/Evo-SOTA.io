@@ -23,7 +23,7 @@
             "libero_90": null,
             "average": 94.0
           },
-          "rank": 46
+          "rank": 49
         }
       ]
     }
@@ -80,7 +80,7 @@
             "libero_90": null,
             "average": 99.0
           },
-          "rank": 3
+          "rank": 4
         }
       ]
     }
@@ -109,7 +109,7 @@
             "libero_90": null,
             "average": 97.8
           },
-          "rank": 19
+          "rank": 22
         }
       ],
       "calvin_abc_d": [
@@ -309,8 +309,8 @@
     "name": "CORAL",
     "paper_url": "https://arxiv.org/abs/2603.09298",
     "pub_date": "2026-03",
-    "is_opensource": false,
-    "opensource_url": null,
+    "is_opensource": true,
+    "opensource_url": "https://github.com/LUOyk1999/CORAL",
     "is_rl": false,
     "settings": [],
     "benchmarks": {
@@ -328,7 +328,8 @@
             "long": 98.8,
             "libero_90": null,
             "average": 99.3
-          }
+          },
+          "rank": 1
         }
       ]
     }
@@ -395,6 +396,152 @@
     }
   },
   {
+    "name": "DFM-VLA",
+    "paper_url": "https://arxiv.org/abs/2603.26320",
+    "pub_date": "2026-03",
+    "is_opensource": false,
+    "opensource_url": null,
+    "is_rl": false,
+    "settings": [],
+    "benchmarks": {
+      "libero": [
+        {
+          "setting": "default",
+          "score": 95.7,
+          "is_standard": true,
+          "note": "",
+          "data": {
+            "policy_setting": 0,
+            "spatial": 96.8,
+            "object": 98.8,
+            "goal": 94.4,
+            "long": 92.6,
+            "libero_90": null,
+            "average": 95.7
+          }
+        }
+      ],
+      "calvin_abcd_d": [
+        {
+          "setting": "default",
+          "score": 4.44,
+          "is_standard": true,
+          "note": "",
+          "data": {
+            "inst1": 0.976,
+            "inst2": 0.944,
+            "inst3": 0.892,
+            "inst4": 0.844,
+            "inst5": 0.78,
+            "avg_len": 4.44
+          }
+        }
+      ]
+    }
+  },
+  {
+    "name": "MMaDA-VLA",
+    "paper_url": "https://arxiv.org/abs/2603.25406",
+    "pub_date": "2026-03",
+    "is_opensource": true,
+    "opensource_url": "https://github.com/yliu-cs/MMaDA-VLA",
+    "is_rl": false,
+    "settings": [],
+    "benchmarks": {
+      "libero": [
+        {
+          "setting": "default",
+          "score": 98.0,
+          "is_standard": true,
+          "note": "",
+          "data": {
+            "policy_setting": 2,
+            "spatial": 98.8,
+            "object": 99.8,
+            "goal": 98.0,
+            "long": 95.2,
+            "libero_90": null,
+            "average": 98.0
+          },
+          "rank": 21
+        }
+      ],
+      "calvin_abc_d": [
+        {
+          "setting": "default",
+          "score": 4.78,
+          "is_standard": true,
+          "note": "",
+          "data": {
+            "inst1": 0.998,
+            "inst2": 0.986,
+            "inst3": 0.963,
+            "inst4": 0.935,
+            "inst5": 0.897,
+            "avg_len": 4.78
+          },
+          "rank": 1
+        }
+      ]
+    }
+  },
+  {
+    "name": "StreamingVLA",
+    "paper_url": "https://arxiv.org/abs/2603.28565",
+    "pub_date": "2026-03",
+    "is_opensource": false,
+    "opensource_url": null,
+    "is_rl": false,
+    "settings": [],
+    "benchmarks": {
+      "libero": [
+        {
+          "setting": "default",
+          "score": 97.1,
+          "is_standard": true,
+          "note": "",
+          "data": {
+            "policy_setting": 1,
+            "spatial": 97.6,
+            "object": 99.0,
+            "goal": 98.8,
+            "long": 93.0,
+            "libero_90": null,
+            "average": 97.1
+          }
+        }
+      ]
+    }
+  },
+  {
+    "name": "FocusVLA",
+    "paper_url": "https://arxiv.org/abs/2603.28740",
+    "pub_date": "2026-03",
+    "is_opensource": false,
+    "opensource_url": null,
+    "is_rl": false,
+    "settings": [],
+    "benchmarks": {
+      "libero": [
+        {
+          "setting": "default",
+          "score": 98.7,
+          "is_standard": true,
+          "note": "",
+          "data": {
+            "policy_setting": 2,
+            "spatial": 99.6,
+            "object": 100.0,
+            "goal": 98.8,
+            "long": 96.2,
+            "libero_90": null,
+            "average": 98.7
+          }
+        }
+      ]
+    }
+  },
+  {
     "name": "DM0",
     "paper_url": "https://dexmal.com/DM0_Tech_Report.pdf",
     "pub_date": "2026-02",
@@ -420,7 +567,7 @@
             "libero_90": null,
             "average": 94.1
           },
-          "rank": 45
+          "rank": 48
         }
       ],
       "robochallenge": [
@@ -473,7 +620,7 @@
             "libero_90": null,
             "average": 98.6
           },
-          "rank": 7
+          "rank": 8
         }
       ],
       "libero_plus": [
@@ -533,7 +680,7 @@
             "libero_90": null,
             "average": 98.7
           },
-          "rank": 6
+          "rank": 7
         }
       ],
       "calvin_abcd_d": [
@@ -567,7 +714,7 @@
             "inst5": 0.881,
             "avg_len": 4.75
           },
-          "rank": 1
+          "rank": 2
         }
       ]
     }
@@ -596,7 +743,7 @@
             "libero_90": null,
             "average": 97.2
           },
-          "rank": 24
+          "rank": 27
         }
       ],
       "libero_plus": [
@@ -700,7 +847,7 @@
             "libero_90": null,
             "average": 97.6
           },
-          "rank": 20
+          "rank": 23
         }
       ]
     }
@@ -729,7 +876,7 @@
             "libero_90": null,
             "average": 98.6
           },
-          "rank": 8
+          "rank": 9
         }
       ]
     }
@@ -758,7 +905,7 @@
             "libero_90": null,
             "average": 98.5
           },
-          "rank": 13
+          "rank": 14
         }
       ],
       "libero_plus": [
@@ -830,7 +977,7 @@
             "libero_90": null,
             "average": 98.5
           },
-          "rank": 10
+          "rank": 11
         }
       ],
       "libero_plus": [
@@ -880,7 +1027,7 @@
             "libero_90": null,
             "average": 98.9
           },
-          "rank": 4
+          "rank": 5
         }
       ]
     }
@@ -955,7 +1102,7 @@
             "libero_90": null,
             "average": 98.7
           },
-          "rank": 5
+          "rank": 6
         }
       ]
     }
@@ -1012,7 +1159,7 @@
             "libero_90": null,
             "average": 98.5
           },
-          "rank": 11
+          "rank": 12
         }
       ]
     }
@@ -1069,7 +1216,7 @@
             "libero_90": null,
             "average": 98.5
           },
-          "rank": 12
+          "rank": 13
         }
       ]
     }
@@ -1178,7 +1325,7 @@
             "inst5": 0.731,
             "avg_len": 4.35
           },
-          "rank": 8
+          "rank": 9
         }
       ]
     }
@@ -1207,7 +1354,7 @@
             "libero_90": null,
             "average": 94.8
           },
-          "rank": 40
+          "rank": 43
         }
       ],
       "metaworld": [
@@ -1358,7 +1505,7 @@
             "libero_90": null,
             "average": 97.0
           },
-          "rank": 27
+          "rank": 30
         }
       ],
       "libero_plus": [
@@ -1423,7 +1570,7 @@
             "libero_90": null,
             "average": 95.0
           },
-          "rank": 39
+          "rank": 42
         }
       ]
     }
@@ -1480,7 +1627,7 @@
             "libero_90": null,
             "average": 99.2
           },
-          "rank": 1
+          "rank": 2
         }
       ],
       "libero_plus": [
@@ -1528,7 +1675,7 @@
             "libero_90": null,
             "average": 97.4
           },
-          "rank": 23
+          "rank": 26
         }
       ]
     }
@@ -1557,7 +1704,7 @@
             "libero_90": null,
             "average": 96.7
           },
-          "rank": 30
+          "rank": 33
         }
       ],
       "libero_plus": [
@@ -1605,7 +1752,7 @@
             "libero_90": null,
             "average": 96.7
           },
-          "rank": 31
+          "rank": 34
         }
       ]
     }
@@ -1634,7 +1781,7 @@
             "libero_90": null,
             "average": 94.7
           },
-          "rank": 42
+          "rank": 45
         }
       ]
     }
@@ -1663,7 +1810,7 @@
             "libero_90": null,
             "average": 98.1
           },
-          "rank": 16
+          "rank": 17
         }
       ],
       "robochallenge": [
@@ -1693,7 +1840,7 @@
             "inst5": null,
             "avg_len": 4.43
           },
-          "rank": 6
+          "rank": 7
         }
       ]
     }
@@ -1750,7 +1897,7 @@
             "libero_90": null,
             "average": 95.9
           },
-          "rank": 34
+          "rank": 37
         }
       ]
     }
@@ -1779,7 +1926,7 @@
             "libero_90": null,
             "average": 97.0
           },
-          "rank": 26
+          "rank": 29
         }
       ]
     }
@@ -1808,7 +1955,7 @@
             "libero_90": null,
             "average": 98.3
           },
-          "rank": 14
+          "rank": 15
         }
       ],
       "metaworld": [
@@ -1841,7 +1988,7 @@
             "inst5": 0.87,
             "avg_len": 4.71
           },
-          "rank": 2
+          "rank": 3
         }
       ]
     }
@@ -1870,7 +2017,7 @@
             "libero_90": 98.6,
             "average": 98.1
           },
-          "rank": 17
+          "rank": 18
         }
       ]
     }
@@ -1923,7 +2070,7 @@
             "libero_90": null,
             "average": 91.1
           },
-          "rank": 49
+          "rank": 52
         }
       ]
     }
@@ -1952,7 +2099,7 @@
             "libero_90": 94.7,
             "average": 96.9
           },
-          "rank": 29
+          "rank": 32
         }
       ],
       "calvin_abcd_d": [
@@ -1986,7 +2133,7 @@
             "inst5": 0.778,
             "avg_len": 4.53
           },
-          "rank": 3
+          "rank": 4
         }
       ],
       "calvin_d_d": [
@@ -2032,7 +2179,7 @@
             "libero_90": null,
             "average": 99.1
           },
-          "rank": 2
+          "rank": 3
         }
       ]
     }
@@ -2089,7 +2236,7 @@
             "libero_90": null,
             "average": 98.5
           },
-          "rank": 9
+          "rank": 10
         }
       ],
       "calvin_abc_d": [
@@ -2106,7 +2253,7 @@
             "inst5": 0.8,
             "avg_len": 4.5
           },
-          "rank": 4
+          "rank": 5
         }
       ]
     }
@@ -2215,7 +2362,7 @@
             "libero_90": null,
             "average": 74.0
           },
-          "rank": 64
+          "rank": 67
         }
       ]
     }
@@ -2244,7 +2391,7 @@
             "libero_90": 95.6,
             "average": 96.5
           },
-          "rank": 32
+          "rank": 35
         }
       ]
     }
@@ -2273,7 +2420,7 @@
             "libero_90": null,
             "average": 86.6
           },
-          "rank": 53
+          "rank": 56
         }
       ]
     }
@@ -2302,7 +2449,7 @@
             "libero_90": null,
             "average": 96.3
           },
-          "rank": 33
+          "rank": 36
         }
       ]
     }
@@ -2359,7 +2506,7 @@
             "libero_90": null,
             "average": 98.2
           },
-          "rank": 15
+          "rank": 16
         }
       ]
     }
@@ -2398,7 +2545,7 @@
             "libero_90": null,
             "average": 98.0
           },
-          "rank": 18
+          "rank": 20
         }
       ]
     }
@@ -2514,7 +2661,7 @@
             "libero_90": null,
             "average": 92.6
           },
-          "rank": 48
+          "rank": 51
         }
       ],
       "calvin_abc_d": [
@@ -2531,7 +2678,7 @@
             "inst5": 0.781,
             "avg_len": 4.44
           },
-          "rank": 5
+          "rank": 6
         }
       ]
     }
@@ -2570,7 +2717,7 @@
             "libero_90": null,
             "average": 95.8
           },
-          "rank": 35
+          "rank": 38
         }
       ]
     }
@@ -2599,7 +2746,7 @@
             "libero_90": null,
             "average": 88.8
           },
-          "rank": 50
+          "rank": 53
         }
       ],
       "metaworld": [
@@ -2644,7 +2791,7 @@
             "libero_90": null,
             "average": 88.6
           },
-          "rank": 51
+          "rank": 54
         }
       ]
     }
@@ -2673,7 +2820,7 @@
             "libero_90": null,
             "average": 95.5
           },
-          "rank": 36
+          "rank": 39
         }
       ],
       "calvin_abcd_d": [
@@ -2707,7 +2854,7 @@
             "inst5": 0.751,
             "avg_len": 4.41
           },
-          "rank": 7
+          "rank": 8
         }
       ]
     }
@@ -2736,7 +2883,7 @@
             "libero_90": null,
             "average": 81.8
           },
-          "rank": 56
+          "rank": 59
         }
       ],
       "libero_plus": [
@@ -2784,7 +2931,7 @@
             "libero_90": null,
             "average": 94.8
           },
-          "rank": 41
+          "rank": 44
         }
       ]
     }
@@ -2839,7 +2986,7 @@
             "inst5": null,
             "avg_len": 3.67
           },
-          "rank": 15
+          "rank": 16
         }
       ]
     }
@@ -2868,7 +3015,7 @@
             "libero_90": 96.0,
             "average": 94.3
           },
-          "rank": 43
+          "rank": 46
         }
       ]
     }
@@ -2897,7 +3044,7 @@
             "libero_90": null,
             "average": 81.0
           },
-          "rank": 57
+          "rank": 60
         }
       ]
     }
@@ -2954,7 +3101,7 @@
             "libero_90": null,
             "average": 95.2
           },
-          "rank": 38
+          "rank": 41
         }
       ],
       "libero_plus": [
@@ -3084,7 +3231,7 @@
             "libero_90": null,
             "average": 97.5
           },
-          "rank": 21
+          "rank": 24
         }
       ],
       "libero_plus": [
@@ -3104,6 +3251,35 @@
             "total": 68.4
           },
           "rank": 8
+        }
+      ]
+    }
+  },
+  {
+    "name": "3D-CAVLA",
+    "paper_url": "https://arxiv.org/abs/2505.05800",
+    "pub_date": "2025-05",
+    "is_opensource": true,
+    "opensource_url": "https://github.com/vineet2104/3dcavla/",
+    "is_rl": true,
+    "settings": [],
+    "benchmarks": {
+      "libero": [
+        {
+          "setting": "default",
+          "score": 98.1,
+          "is_standard": true,
+          "note": "",
+          "data": {
+            "policy_setting": 0,
+            "spatial": 98.2,
+            "object": 99.8,
+            "goal": 98.2,
+            "long": 96.1,
+            "libero_90": null,
+            "average": 98.1
+          },
+          "rank": 19
         }
       ]
     }
@@ -3134,7 +3310,7 @@
             "libero_90": null,
             "average": 96.9
           },
-          "rank": 28
+          "rank": 31
         }
       ],
       "robochallenge": [
@@ -3187,7 +3363,7 @@
             "libero_90": null,
             "average": 87.9
           },
-          "rank": 52
+          "rank": 55
         }
       ],
       "libero_plus": [
@@ -3235,7 +3411,7 @@
             "libero_90": null,
             "average": 93.9
           },
-          "rank": 47
+          "rank": 50
         }
       ]
     }
@@ -3412,7 +3588,7 @@
             "libero_90": null,
             "average": 82.4
           },
-          "rank": 55
+          "rank": 58
         }
       ],
       "calvin_abc_d": [
@@ -3429,7 +3605,7 @@
             "inst5": 0.5,
             "avg_len": 3.61
           },
-          "rank": 17
+          "rank": 18
         }
       ]
     }
@@ -3463,7 +3639,7 @@
             "libero_90": null,
             "average": 95.3
           },
-          "rank": 37
+          "rank": 40
         },
         {
           "setting": "wrist & third-person images",
@@ -3479,7 +3655,7 @@
             "libero_90": null,
             "average": 97.1
           },
-          "rank": 25
+          "rank": 28
         }
       ],
       "libero_plus": [
@@ -3574,7 +3750,7 @@
             "libero_90": null,
             "average": 97.4
           },
-          "rank": 22
+          "rank": 25
         }
       ]
     }
@@ -3603,7 +3779,7 @@
             "libero_90": null,
             "average": 85.5
           },
-          "rank": 54
+          "rank": 57
         }
       ],
       "libero_plus": [
@@ -3667,7 +3843,7 @@
             "inst5": 0.699,
             "avg_len": 4.08
           },
-          "rank": 11
+          "rank": 12
         }
       ]
     }
@@ -3696,7 +3872,7 @@
             "libero_90": 73.0,
             "average": 74.0
           },
-          "rank": 63
+          "rank": 66
         }
       ]
     }
@@ -3725,7 +3901,7 @@
             "libero_90": null,
             "average": 78.1
           },
-          "rank": 59
+          "rank": 62
         }
       ]
     }
@@ -3780,7 +3956,7 @@
             "libero_90": null,
             "average": 74.8
           },
-          "rank": 62
+          "rank": 65
         }
       ]
     }
@@ -3808,7 +3984,7 @@
             "inst5": 0.386,
             "avg_len": 3.1
           },
-          "rank": 22
+          "rank": 23
         }
       ]
     }
@@ -3853,7 +4029,7 @@
             "inst5": 0.635,
             "avg_len": 4.01
           },
-          "rank": 13
+          "rank": 14
         }
       ]
     }
@@ -3881,7 +4057,7 @@
             "inst5": 0.74,
             "avg_len": 4.28
           },
-          "rank": 10
+          "rank": 11
         }
       ]
     }
@@ -3924,7 +4100,7 @@
             "inst5": 0.769,
             "avg_len": 4.33
           },
-          "rank": 9
+          "rank": 10
         }
       ]
     }
@@ -3997,7 +4173,7 @@
             "inst5": null,
             "avg_len": 2.9
           },
-          "rank": 24
+          "rank": 25
         }
       ]
     }
@@ -4026,7 +4202,7 @@
             "libero_90": null,
             "average": 80.2
           },
-          "rank": 58
+          "rank": 61
         }
       ]
     }
@@ -4054,7 +4230,7 @@
             "inst5": 0.467,
             "avg_len": 3.42
           },
-          "rank": 20
+          "rank": 21
         }
       ]
     }
@@ -4109,7 +4285,7 @@
             "libero_90": null,
             "average": 94.2
           },
-          "rank": 44
+          "rank": 47
         }
       ],
       "libero_plus": [
@@ -4223,7 +4399,7 @@
             "inst5": 0.488,
             "avg_len": 3.47
           },
-          "rank": 19
+          "rank": 20
         }
       ]
     }
@@ -4279,7 +4455,7 @@
             "inst5": 0.498,
             "avg_len": 3.69
           },
-          "rank": 14
+          "rank": 15
         }
       ]
     }
@@ -4334,7 +4510,7 @@
             "inst5": 0.454,
             "avg_len": 3.53
           },
-          "rank": 18
+          "rank": 19
         }
       ]
     }
@@ -4362,7 +4538,7 @@
             "inst5": 0.644,
             "avg_len": 4.04
           },
-          "rank": 12
+          "rank": 13
         }
       ]
     }
@@ -4424,7 +4600,7 @@
             "inst5": 0.091,
             "avg_len": 1.55
           },
-          "rank": 28
+          "rank": 29
         }
       ],
       "calvin_d_d": [
@@ -4498,7 +4674,7 @@
             "libero_90": null,
             "average": 76.5
           },
-          "rank": 60
+          "rank": 63
         }
       ],
       "libero_plus": [
@@ -4597,7 +4773,7 @@
             "inst5": 0.507,
             "avg_len": 3.65
           },
-          "rank": 16
+          "rank": 17
         }
       ],
       "calvin_d_d": [
@@ -4643,7 +4819,7 @@
             "libero_90": null,
             "average": 75.1
           },
-          "rank": 61
+          "rank": 64
         }
       ]
     }
@@ -4671,7 +4847,7 @@
             "inst5": 0.412,
             "avg_len": 3.35
           },
-          "rank": 21
+          "rank": 22
         }
       ]
     }
@@ -4731,7 +4907,7 @@
             "inst5": 0.401,
             "avg_len": 3.06
           },
-          "rank": 23
+          "rank": 24
         }
       ]
     }
@@ -4776,7 +4952,7 @@
             "inst5": 0.235,
             "avg_len": 2.48
           },
-          "rank": 26
+          "rank": 27
         }
       ],
       "calvin_d_d": [
@@ -4836,7 +5012,7 @@
             "inst5": 0.26,
             "avg_len": 2.69
           },
-          "rank": 25
+          "rank": 26
         }
       ]
     }
@@ -5045,7 +5221,7 @@
             "inst5": 0.08,
             "avg_len": 1.71
           },
-          "rank": 27
+          "rank": 28
         }
       ],
       "calvin_d_d": [
@@ -5091,7 +5267,7 @@
             "libero_90": null,
             "average": 72.4
           },
-          "rank": 65
+          "rank": 68
         }
       ],
       "metaworld": [
@@ -5124,7 +5300,7 @@
             "inst5": 0.0,
             "avg_len": 0.56
           },
-          "rank": 31
+          "rank": 32
         }
       ]
     }
@@ -5196,7 +5372,7 @@
             "inst5": 0.013,
             "avg_len": 0.9
           },
-          "rank": 29
+          "rank": 30
         }
       ]
     }
@@ -5269,7 +5445,7 @@
             "inst5": 0.011,
             "avg_len": 0.67
           },
-          "rank": 30
+          "rank": 31
         }
       ],
       "calvin_d_d": [

@@ -1,6 +1,11 @@
 {
     "news": [
         {
+            "date": "🗓️ 2026-04-01: ",
+            "content_en": "New models: Add DFM-VLA, MMaDA-VLA, StreamingVLA, 3D-CAVLA, FocusVLA to LIBERO, DFM-VLA, MMaDA-VLA to CALVIN",
+            "content_zh": "新增模型：增加 DFM-VLA, MMaDA-VLA, StreamingVLA, 3D CAVLA, FocusVLA 到 LIBERO, DFM-VLA, MMaDA-VLA 到 CALVIN"
+        },
+        {
             "date": "🗓️ 2026-03-25: ",
             "content_en": "New models: Add VLA-RFT, Mantis, ROCKET, Dual-CoT VLA to LIBERO, ROCKET, FutureVLA to LIBERO Plus, Dual-CoT VLA, VP-VLA to RoboCasa-GR1-Tabletop, GR00T to RoboChallenge",
             "content_zh": "新增模型：增加 VLA-RFT, Mantis, ROCKET, Dual-CoT VLA 到 LIBERO, ROCKET 到 LIBERO Plus, Dual-CoT VLA, VP-VLA 到 RoboCasa-GR1-Tabletop, GR00T 到 RoboChallenge"
