@@ -1,65 +1,65 @@
 {
   "libero": {
-    "total_models": 104,
-    "standard_opensource_count": 65,
-    "standard_closed_count": 21,
+    "total_models": 109,
+    "standard_opensource_count": 68,
+    "standard_closed_count": 23,
     "non_standard_count": 18,
     "model_type_count": {
-      "sft": 57,
-      "rl": 8
+      "sft": 59,
+      "rl": 9
     },
     "primary_metric": "Average Success Rate (%)",
     "top_5": [
       {
+        "name": "CORAL",
+        "score": 99.3,
+        "rank": 1
+      },
+      {
         "name": "SRPO",
         "score": 99.2,
-        "rank": 1
+        "rank": 2
       },
       {
         "name": "SimpleVLA-RL",
         "score": 99.1,
-        "rank": 2
+        "rank": 3
       },
       {
         "name": "SaiVLA-0",
         "score": 99.0,
-        "rank": 3
+        "rank": 4
       },
       {
         "name": "Being-H0.5 (Specialist)",
         "score": 98.9,
-        "rank": 4
-      },
-      {
-        "name": "UnifoLM-VLA-0",
-        "score": 98.7,
         "rank": 5
       }
     ],
     "top_5_sft": [
       {
+        "name": "CORAL",
+        "score": 99.3,
+        "rank": 1
+      },
+      {
         "name": "SaiVLA-0",
         "score": 99.0,
-        "rank": 1
+        "rank": 2
       },
       {
         "name": "Being-H0.5 (Specialist)",
         "score": 98.9,
-        "rank": 2
+        "rank": 3
       },
       {
         "name": "UnifoLM-VLA-0",
         "score": 98.7,
-        "rank": 3
+        "rank": 4
       },
       {
         "name": "Xiaomi-Robotics-0",
         "score": 98.7,
-        "rank": 4
-      },
-      {
-        "name": "ABot-M0",
-        "score": 98.6,
         "rank": 5
       }
     ],
@@ -85,8 +85,8 @@
         "rank": 4
       },
       {
-        "name": "RIPT-VLA",
-        "score": 97.5,
+        "name": "3D-CAVLA",
+        "score": 98.1,
         "rank": 5
       }
     ]
@@ -373,67 +373,67 @@
     "top_5_rl": []
   },
   "calvin": {
-    "total_models": 41,
-    "standard_opensource_count": 31,
+    "total_models": 42,
+    "standard_opensource_count": 32,
     "standard_closed_count": 5,
     "non_standard_count": 5,
     "model_type_count": {
-      "sft": 30,
+      "sft": 31,
       "rl": 1
     },
     "primary_metric": "Average Length (Avg. Len.)",
     "description": "ABC-D Setting (Default)",
     "top_5": [
       {
+        "name": "MMaDA-VLA",
+        "score": 4.78,
+        "rank": 1
+      },
+      {
         "name": "Xiaomi-Robotics-0",
         "score": 4.75,
-        "rank": 1
+        "rank": 2
       },
       {
         "name": "pi-RL",
         "score": 4.71,
-        "rank": 2
+        "rank": 3
       },
       {
         "name": "Flower VLA",
         "score": 4.53,
-        "rank": 3
+        "rank": 4
       },
       {
         "name": "VLA-Adapter-pro",
         "score": 4.5,
-        "rank": 4
-      },
-      {
-        "name": "DreamVLA",
-        "score": 4.44,
         "rank": 5
       }
     ],
     "top_5_sft": [
       {
+        "name": "MMaDA-VLA",
+        "score": 4.78,
+        "rank": 1
+      },
+      {
         "name": "Xiaomi-Robotics-0",
         "score": 4.75,
-        "rank": 1
+        "rank": 2
       },
       {
         "name": "Flower VLA",
         "score": 4.53,
-        "rank": 2
+        "rank": 3
       },
       {
         "name": "VLA-Adapter-pro",
         "score": 4.5,
-        "rank": 3
+        "rank": 4
       },
       {
         "name": "DreamVLA",
         "score": 4.44,
-        "rank": 4
-      },
-      {
-        "name": "X-VLA",
-        "score": 4.43,
         "rank": 5
       }
     ],
@@ -445,8 +445,8 @@
       }
     ],
     "settings": {
-      "abcd_d": 17,
-      "abc_d": 41,
+      "abcd_d": 18,
+      "abc_d": 42,
       "d_d": 12
     }
   }
