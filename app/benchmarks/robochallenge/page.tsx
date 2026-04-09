@@ -179,7 +179,7 @@ export default function RoboChallengePage() {
         }
         // 应用模型类型过滤
         models = applyModelTypeFilter(models);
-        models.sort((a, b) => (b.score || 0) - (a.score || 0));
+        models.sort((a, b) => (b.success_rate || 0) - (a.success_rate || 0));
         return models.map((m, i) => ({ ...m, rank: i + 1 }));
     };
 

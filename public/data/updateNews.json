@@ -1,6 +1,11 @@
 {
     "news": [
         {
+            "date": "🗓️ 2026-04-09: ",
+            "content_en": "New models: Add GeoPredict, TAG, A1 to LIBERO, TAG, pi0.5 to LIBERO Plus, A1 to RoboChallenge.",
+            "content_zh": "新增模型：增加 GeoPredict, TAG, A1 到 LIBERO, TAG, pi0.5 到 LIBERO Plus, A1 到 RoboChallenge"
+        },
+        {
             "date": "🗓️ 2026-04-01: ",
             "content_en": "New models: Add DFM-VLA, MMaDA-VLA, StreamingVLA, 3D-CAVLA, FocusVLA to LIBERO, DFM-VLA, MMaDA-VLA to CALVIN",
             "content_zh": "新增模型：增加 DFM-VLA, MMaDA-VLA, StreamingVLA, 3D CAVLA, FocusVLA 到 LIBERO, DFM-VLA, MMaDA-VLA 到 CALVIN"
