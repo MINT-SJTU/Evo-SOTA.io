@@ -125,7 +125,7 @@ export default function Home() {
             'DeepThinkVLA', 'Dadu-Corki', 'RoboTron Mani', 'CronusVLA', 'InstructVLA', 'InternVLA-M1', 'ACoT-VLA',
             'OpenVLA', 'Pi0', 'RIPT', 'NORA-1.5', 'Being-H0.5', 'EO-1', 'DreamVLA', 'Rlinf-VLA', 'pi-RL', 'UnifoLM-VLA-0',
             'Giga-Brain-0.1', 'RDT-1B', 'Abot-M0', 'DM0', 'Xiaomi-Robotics-0', 'VLA-JEPA', 'JEPA-VLA', 'Pose-VLA', 'pi-StepNFT',
-            'QuantVLA', 'Fast-ThinkAct', 'ATA', 'SRPO', 'LingBot-VA', 'RynnVLA-002', 'X-VLA', 'SaiVLA-0', 'Atomic VLA', 'FutureVLA', 'MergeVLA', 'GST-VLA', 'ReViP', 'DiT4DiT', 'Cosmos Policy', 'SimVLA', 'CORAL', 'HiF-VLA', 'AVA-VLA', 'VLA-RFT', 'Mantis', 'ROCKET', 'Dual-CoT VLA', 'VP-VLA', 'GR00T', 'DFM-VLA', 'MMaDA-VLA', 'StreamingVLA', '3D-CAVLA', 'FocusVLA'
+            'QuantVLA', 'Fast-ThinkAct', 'ATA', 'SRPO', 'LingBot-VA', 'RynnVLA-002', 'X-VLA', 'SaiVLA-0', 'Atomic VLA', 'FutureVLA', 'MergeVLA', 'GST-VLA', 'ReViP', 'DiT4DiT', 'Cosmos Policy', 'SimVLA', 'CORAL', 'HiF-VLA', 'AVA-VLA', 'VLA-RFT', 'Mantis', 'ROCKET', 'Dual-CoT VLA', 'VP-VLA', 'GR00T', 'DFM-VLA', 'MMaDA-VLA', 'StreamingVLA', '3D-CAVLA', 'FocusVLA', 'GeoPredict', 'TAG', 'A1', 'pi0.5'
         ];
         const redImportant = ['Wishing everyone a happy Lunar New Year!', '祝大家新年快乐！', 'Searching models is available now!', '模型搜索功能已上线！'];
 
