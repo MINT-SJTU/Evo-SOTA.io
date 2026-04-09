@@ -1,11 +1,11 @@
 {
   "libero": {
-    "total_models": 109,
-    "standard_opensource_count": 68,
-    "standard_closed_count": 23,
+    "total_models": 112,
+    "standard_opensource_count": 69,
+    "standard_closed_count": 25,
     "non_standard_count": 18,
     "model_type_count": {
-      "sft": 59,
+      "sft": 60,
       "rl": 9
     },
     "primary_metric": "Average Success Rate (%)",
@@ -92,66 +92,66 @@
     ]
   },
   "libero_plus": {
-    "total_models": 20,
-    "standard_opensource_count": 17,
-    "standard_closed_count": 2,
+    "total_models": 22,
+    "standard_opensource_count": 18,
+    "standard_closed_count": 3,
     "non_standard_count": 1,
     "model_type_count": {
-      "sft": 15,
+      "sft": 16,
       "rl": 2
     },
     "primary_metric": "Total Success Rate (%)",
     "top_5": [
       {
         "name": "ACoT-VLA",
-        "score": 84.1,
+        "score": 86.6,
         "rank": 1
       },
       {
-        "name": "ROCKET",
-        "score": 81.7,
+        "name": "pi0.5",
+        "score": 85.7,
         "rank": 2
+      },
+      {
+        "name": "ROCKET-VLA",
+        "score": 81.7,
+        "rank": 3
       },
       {
         "name": "ABot-M0",
         "score": 80.5,
-        "rank": 3
+        "rank": 4
       },
       {
         "name": "VLA-JEPA",
         "score": 79.5,
-        "rank": 4
-      },
-      {
-        "name": "DeepThinkVLA",
-        "score": 79.0,
         "rank": 5
       }
     ],
     "top_5_sft": [
       {
         "name": "ACoT-VLA",
-        "score": 84.1,
+        "score": 86.6,
         "rank": 1
       },
       {
-        "name": "ROCKET",
-        "score": 81.7,
+        "name": "pi0.5",
+        "score": 85.7,
         "rank": 2
+      },
+      {
+        "name": "ROCKET-VLA",
+        "score": 81.7,
+        "rank": 3
       },
       {
         "name": "ABot-M0",
         "score": 80.5,
-        "rank": 3
+        "rank": 4
       },
       {
         "name": "VLA-JEPA",
         "score": 79.5,
-        "rank": 4
-      },
-      {
-        "name": "DeepThinkVLA",
-        "score": 79.0,
         "rank": 5
       }
     ],
@@ -241,66 +241,66 @@
     ]
   },
   "robochallenge": {
-    "total_models": 14,
-    "standard_opensource_count": 14,
+    "total_models": 15,
+    "standard_opensource_count": 15,
     "standard_closed_count": 0,
     "non_standard_count": 0,
     "model_type_count": {
-      "sft": 14,
+      "sft": 15,
       "rl": 0
     },
     "primary_metric": "Score",
     "top_5": [
       {
         "name": "DM0",
-        "score": 72.25,
+        "score": 62.0,
         "rank": 1
       },
       {
         "name": "Giga-Brain-0.1",
-        "score": 68.34,
+        "score": 51.67,
         "rank": 2
       },
       {
         "name": "Spirit v1.5",
-        "score": 66.09,
+        "score": 50.33,
         "rank": 3
       },
       {
         "name": "pi0.5",
-        "score": 61.84,
+        "score": 42.67,
         "rank": 4
       },
       {
-        "name": "wall-oss-v0.1",
-        "score": 55.3,
+        "name": "DM0 (generalist)",
+        "score": 37.33,
         "rank": 5
       }
     ],
     "top_5_sft": [
       {
         "name": "DM0",
-        "score": 72.25,
+        "score": 62.0,
         "rank": 1
       },
       {
         "name": "Giga-Brain-0.1",
-        "score": 68.34,
+        "score": 51.67,
         "rank": 2
       },
       {
         "name": "Spirit v1.5",
-        "score": 66.09,
+        "score": 50.33,
         "rank": 3
       },
       {
         "name": "pi0.5",
-        "score": 61.84,
+        "score": 42.67,
         "rank": 4
       },
       {
-        "name": "wall-oss-v0.1",
-        "score": 55.3,
+        "name": "DM0 (generalist)",
+        "score": 37.33,
         "rank": 5
       }
     ],

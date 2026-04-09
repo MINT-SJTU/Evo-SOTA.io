@@ -9,22 +9,44 @@
       "is_opensource": true,
       "opensource_url": "https://github.com/AgibotTech/ACoT-VLA",
       "is_rl": false,
-      "camera": 91.2,
-      "robot": 62.5,
-      "language": 80.3,
-      "light": 95.1,
-      "background": 91.5,
-      "noise": 88.3,
-      "layout": 84.9,
-      "total": 84.1,
+      "camera": 72.6,
+      "robot": 82.6,
+      "language": 87.5,
+      "light": 97.7,
+      "background": 96.5,
+      "noise": 87.8,
+      "layout": 88.1,
+      "total": 86.6,
       "source": "original",
       "is_standard": true,
       "note": "",
       "rank": 1
     },
     {
-      "name": "ROCKET",
-      "base_name": "ROCKET",
+      "name": "pi0.5",
+      "base_name": "pi0.5",
+      "setting": "",
+      "paper_url": null,
+      "pub_date": "2025-04",
+      "is_opensource": true,
+      "opensource_url": null,
+      "is_rl": false,
+      "camera": 75.8,
+      "robot": 79.4,
+      "language": 83.3,
+      "light": 95.5,
+      "background": 95.0,
+      "noise": 89.6,
+      "layout": 87.0,
+      "total": 85.7,
+      "source": "from ACoT-VLA",
+      "is_standard": true,
+      "note": "",
+      "rank": 2
+    },
+    {
+      "name": "ROCKET-VLA",
+      "base_name": "ROCKET-VLA",
       "setting": "",
       "paper_url": "https://arxiv.org/abs/2602.17951",
       "pub_date": "2026-02",
@@ -42,7 +64,7 @@
       "source": "original",
       "is_standard": true,
       "note": "",
-      "rank": 2
+      "rank": 3
     },
     {
       "name": "ABot-M0",
@@ -64,7 +86,7 @@
       "source": "original",
       "is_standard": true,
       "note": "",
-      "rank": 3
+      "rank": 4
     },
     {
       "name": "VLA-JEPA",
@@ -86,7 +108,7 @@
       "source": "original",
       "is_standard": true,
       "note": "",
-      "rank": 4
+      "rank": 5
     },
     {
       "name": "DeepThinkVLA",
@@ -108,7 +130,7 @@
       "source": "original",
       "is_standard": true,
       "note": "",
-      "rank": 5
+      "rank": 6
     },
     {
       "name": "MergeVLA",
@@ -130,7 +152,7 @@
       "source": "original",
       "is_standard": true,
       "note": "",
-      "rank": 6
+      "rank": 7
     },
     {
       "name": "OpenVLA-OFT",
@@ -152,7 +174,7 @@
       "source": "from Libero-plus",
       "is_standard": true,
       "note": "",
-      "rank": 7
+      "rank": 8
     },
     {
       "name": "RIPT-VLA",
@@ -174,7 +196,7 @@
       "source": "from Libero-plus",
       "is_standard": true,
       "note": "",
-      "rank": 8
+      "rank": 9
     },
     {
       "name": "OpenVLA-OFT (mix-sft)",
@@ -196,7 +218,7 @@
       "source": "from Libero-plus",
       "is_standard": true,
       "note": "",
-      "rank": 9
+      "rank": 10
     },
     {
       "name": "pi0-FAST",
@@ -218,7 +240,7 @@
       "source": "from Libero-plus",
       "is_standard": true,
       "note": "",
-      "rank": 10
+      "rank": 11
     },
     {
       "name": "SRPO",
@@ -240,7 +262,7 @@
       "source": "original",
       "is_standard": true,
       "note": "",
-      "rank": 11
+      "rank": 12
     },
     {
       "name": "OpenVLA-OFT (without wrist input)",
@@ -262,7 +284,7 @@
       "source": "from Libero-plus",
       "is_standard": true,
       "note": "",
-      "rank": 12
+      "rank": 13
     },
     {
       "name": "pi0",
@@ -284,7 +306,7 @@
       "source": "from Libero-plus",
       "is_standard": true,
       "note": "",
-      "rank": 13
+      "rank": 14
     },
     {
       "name": "UniVLA",
@@ -306,7 +328,7 @@
       "source": "from Libero-plus",
       "is_standard": true,
       "note": "",
-      "rank": 14
+      "rank": 15
     },
     {
       "name": "NORA",
@@ -328,7 +350,7 @@
       "source": "from Libero-plus",
       "is_standard": true,
       "note": "",
-      "rank": 15
+      "rank": 16
     },
     {
       "name": "WorldVLA",
@@ -350,7 +372,7 @@
       "source": "from Libero-plus",
       "is_standard": true,
       "note": "",
-      "rank": 16
+      "rank": 17
     },
     {
       "name": "OpenVLA",
@@ -372,10 +394,32 @@
       "source": "from Libero-plus",
       "is_standard": true,
       "note": "",
-      "rank": 17
+      "rank": 18
     }
   ],
   "standard_closed": [
+    {
+      "name": "TAG",
+      "base_name": "TAG",
+      "setting": "",
+      "paper_url": "https://arxiv.org/abs/2603.24584",
+      "pub_date": "2026-03",
+      "is_opensource": false,
+      "opensource_url": null,
+      "is_rl": false,
+      "camera": 77.5,
+      "robot": 80.5,
+      "language": 81.5,
+      "light": 98.0,
+      "background": 97.2,
+      "noise": 89.0,
+      "layout": 87.0,
+      "total": 87.24,
+      "source": "original",
+      "is_standard": true,
+      "note": "",
+      "rank": 1
+    },
     {
       "name": "FutureVLA",
       "base_name": "FutureVLA",
@@ -396,7 +440,7 @@
       "source": "original",
       "is_standard": true,
       "note": "",
-      "rank": 1
+      "rank": 2
     },
     {
       "name": "AVA-VLA",
@@ -418,7 +462,7 @@
       "source": "original",
       "is_standard": true,
       "note": "one policy per suite",
-      "rank": 2
+      "rank": 3
     }
   ],
   "non_standard": [

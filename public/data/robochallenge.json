@@ -65,22 +65,6 @@
       "rank": 4
     },
     {
-      "name": "wall-oss-v0.1",
-      "base_name": "wall-oss-v0.1",
-      "setting": "",
-      "paper_url": "https://arxiv.org/abs/2509.11766",
-      "pub_date": "2025-09",
-      "is_opensource": true,
-      "opensource_url": "https://github.com/X-Square-Robot/wall-x",
-      "is_rl": false,
-      "score": 55.3,
-      "success_rate": 35.33,
-      "source": "from RoboChallenge",
-      "is_standard": true,
-      "note": "",
-      "rank": 5
-    },
-    {
       "name": "DM0 (generalist)",
       "base_name": "DM0",
       "setting": "generalist",
@@ -94,7 +78,39 @@
       "source": "original",
       "is_standard": true,
       "note": "",
+      "rank": 5
+    },
+    {
+      "name": "wall-oss-v0.1",
+      "base_name": "wall-oss-v0.1",
+      "setting": "",
+      "paper_url": "https://arxiv.org/abs/2509.11766",
+      "pub_date": "2025-09",
+      "is_opensource": true,
+      "opensource_url": "https://github.com/X-Square-Robot/wall-x",
+      "is_rl": false,
+      "score": 55.3,
+      "success_rate": 35.33,
+      "source": "from RoboChallenge",
+      "is_standard": true,
+      "note": "",
       "rank": 6
+    },
+    {
+      "name": "A1",
+      "base_name": "A1",
+      "setting": "",
+      "paper_url": "https://arxiv.org/abs/2604.05672",
+      "pub_date": "2026-04",
+      "is_opensource": true,
+      "opensource_url": "https://github.com/ATeam-Research/A1",
+      "is_rl": false,
+      "score": null,
+      "success_rate": 29.0,
+      "source": "original",
+      "is_standard": true,
+      "note": "",
+      "rank": 7
     },
     {
       "name": "pi0",
@@ -110,7 +126,7 @@
       "source": "from RoboChallenge",
       "is_standard": true,
       "note": "",
-      "rank": 7
+      "rank": 8
     },
     {
       "name": "X-VLA",
@@ -123,22 +139,6 @@
       "is_rl": false,
       "score": 34.75,
       "success_rate": 21.33,
-      "source": "from RoboChallenge",
-      "is_standard": true,
-      "note": "",
-      "rank": 8
-    },
-    {
-      "name": "GR00T",
-      "base_name": "GR00T",
-      "setting": "",
-      "paper_url": "https://arxiv.org/abs/2503.14734",
-      "pub_date": "2025-03",
-      "is_opensource": true,
-      "opensource_url": "https://github.com/NVIDIA/Isaac-GR00T",
-      "is_rl": false,
-      "score": 31.64,
-      "success_rate": 14.33,
       "source": "from RoboChallenge",
       "is_standard": true,
       "note": "",
@@ -177,6 +177,22 @@
       "rank": 11
     },
     {
+      "name": "GR00T",
+      "base_name": "GR00T",
+      "setting": "",
+      "paper_url": "https://arxiv.org/abs/2503.14734",
+      "pub_date": "2025-03",
+      "is_opensource": true,
+      "opensource_url": "https://github.com/NVIDIA/Isaac-GR00T",
+      "is_rl": false,
+      "score": 31.64,
+      "success_rate": 14.33,
+      "source": "from RoboChallenge",
+      "is_standard": true,
+      "note": "",
+      "rank": 12
+    },
+    {
       "name": "CogACT",
       "base_name": "CogACT",
       "setting": "",
@@ -190,7 +206,7 @@
       "source": "from RoboChallenge",
       "is_standard": true,
       "note": "",
-      "rank": 12
+      "rank": 13
     },
     {
       "name": "pi0 (generalist)",
@@ -206,7 +222,7 @@
       "source": "from RoboChallenge",
       "is_standard": true,
       "note": "",
-      "rank": 13
+      "rank": 14
     },
     {
       "name": "OpenVLA-OFT",
@@ -222,7 +238,7 @@
       "source": "from RoboChallenge",
       "is_standard": true,
       "note": "",
-      "rank": 14
+      "rank": 15
     }
   ],
   "standard_closed": [],
