@@ -4,7 +4,7 @@
       "name": "ABot-M0",
       "base_name": "ABot-M0",
       "setting": "",
-      "paper_url": "https://github.com/amap-cvlab/ABot-Manipulation/blob/main/assets/ABot-M0_Technical_Report.pdf",
+      "paper_url": "https://arxiv.org/abs/2602.11236",
       "pub_date": "2026-02",
       "is_opensource": true,
       "opensource_url": "https://github.com/amap-cvlab/ABot-Manipulation",
@@ -123,6 +123,21 @@
   ],
   "standard_closed": [
     {
+      "name": "StarVLA-alpha (generalist)",
+      "base_name": "StarVLA-alpha",
+      "setting": "generalist",
+      "paper_url": "https://arxiv.org/abs/2604.11757v1",
+      "pub_date": "2026-04",
+      "is_opensource": false,
+      "opensource_url": null,
+      "is_rl": false,
+      "avg_success_rate": 57.3,
+      "source": "original",
+      "is_standard": true,
+      "note": "",
+      "rank": 1
+    },
+    {
       "name": "Dual-CoT VLA",
       "base_name": "Dual-CoT VLA",
       "setting": "",
@@ -135,7 +150,7 @@
       "source": "original",
       "is_standard": true,
       "note": "",
-      "rank": 1
+      "rank": 2
     },
     {
       "name": "VP-VLA",
@@ -150,7 +165,7 @@
       "source": "original",
       "is_standard": true,
       "note": "",
-      "rank": 2
+      "rank": 3
     },
     {
       "name": "DiT4DiT",
@@ -165,7 +180,7 @@
       "source": "original",
       "is_standard": true,
       "note": "",
-      "rank": 3
+      "rank": 4
     }
   ],
   "non_standard": []

@@ -42,6 +42,134 @@
     }
   },
   {
+    "name": "StarVLA-alpha",
+    "paper_url": "https://arxiv.org/abs/2604.11757v1",
+    "pub_date": "2026-04",
+    "is_opensource": false,
+    "opensource_url": null,
+    "is_rl": false,
+    "settings": [
+      "generalist"
+    ],
+    "benchmarks": {
+      "libero": [
+        {
+          "setting": "generalist",
+          "score": 97.8,
+          "is_standard": true,
+          "note": "",
+          "data": {
+            "policy_setting": 1,
+            "spatial": 98.7,
+            "object": 99.7,
+            "goal": 98.6,
+            "long": 94.2,
+            "libero_90": null,
+            "average": 97.8
+          }
+        }
+      ],
+      "libero_plus": [
+        {
+          "setting": "generalist",
+          "score": 79.7,
+          "is_standard": true,
+          "note": "",
+          "data": {
+            "camera": 52.5,
+            "robot": 64.3,
+            "language": 86.2,
+            "light": 97.8,
+            "background": 98.1,
+            "noise": 80.2,
+            "layout": 79.1,
+            "total": 79.7
+          }
+        }
+      ],
+      "robochallenge": [
+        {
+          "setting": "generalist",
+          "score": 33.6,
+          "is_standard": false,
+          "note": "",
+          "data": {
+            "score": 54.5,
+            "success_rate": 33.6
+          }
+        }
+      ],
+      "robocasa": [
+        {
+          "setting": "generalist",
+          "score": 57.3,
+          "is_standard": true,
+          "note": "",
+          "data": {
+            "avg_success_rate": 57.3
+          }
+        }
+      ]
+    }
+  },
+  {
+    "name": "ProGAL-VLA",
+    "paper_url": "https://arxiv.org/abs/2604.09824v1",
+    "pub_date": "2026-04",
+    "is_opensource": false,
+    "opensource_url": null,
+    "is_rl": false,
+    "settings": [],
+    "benchmarks": {
+      "libero_plus": [
+        {
+          "setting": "default",
+          "score": 85.5,
+          "is_standard": true,
+          "note": "",
+          "data": {
+            "camera": 93.2,
+            "robot": 71.5,
+            "language": 93.6,
+            "light": 86.8,
+            "background": 92.3,
+            "noise": 74.8,
+            "layout": 86.7,
+            "total": 85.5
+          }
+        }
+      ]
+    }
+  },
+  {
+    "name": "AAC",
+    "paper_url": "https://arxiv.org/abs/2604.04161v2",
+    "pub_date": "2026-04",
+    "is_opensource": false,
+    "opensource_url": null,
+    "is_rl": false,
+    "settings": [],
+    "benchmarks": {
+      "libero": [
+        {
+          "setting": "default",
+          "score": 95.0,
+          "is_standard": true,
+          "note": "",
+          "data": {
+            "policy_setting": 1,
+            "spatial": 94.4,
+            "object": 92.8,
+            "goal": 98.6,
+            "long": 94.2,
+            "libero_90": null,
+            "average": 95.0
+          }
+        }
+      ]
+    }
+  },
+  {
     "name": "pi-StepNFT",
     "paper_url": "https://arxiv.org/abs/2603.02083v1",
     "pub_date": "2026-03",
@@ -686,7 +814,7 @@
   },
   {
     "name": "ABot-M0",
-    "paper_url": "https://github.com/amap-cvlab/ABot-Manipulation/blob/main/assets/ABot-M0_Technical_Report.pdf",
+    "paper_url": "https://arxiv.org/abs/2602.11236",
     "pub_date": "2026-02",
     "is_opensource": true,
     "opensource_url": "https://github.com/amap-cvlab/ABot-Manipulation",
@@ -2187,6 +2315,90 @@
             "average": 91.1
           },
           "rank": 53
+        }
+      ]
+    }
+  },
+  {
+    "name": "HAMLET",
+    "paper_url": "https://arxiv.org/abs/2510.00695v3",
+    "pub_date": "2025-10",
+    "is_opensource": false,
+    "opensource_url": null,
+    "is_rl": false,
+    "settings": [],
+    "benchmarks": {
+      "libero": [
+        {
+          "setting": "default",
+          "score": 97.6,
+          "is_standard": true,
+          "note": "",
+          "data": {
+            "policy_setting": 1,
+            "spatial": 99.0,
+            "object": 100.0,
+            "goal": 99.2,
+            "long": 92.2,
+            "libero_90": null,
+            "average": 97.6
+          }
+        }
+      ]
+    }
+  },
+  {
+    "name": "Dejavu",
+    "paper_url": "https://arxiv.org/abs/2510.10181v3",
+    "pub_date": "2025-10",
+    "is_opensource": false,
+    "opensource_url": null,
+    "is_rl": false,
+    "settings": [],
+    "benchmarks": {
+      "libero": [
+        {
+          "setting": "default",
+          "score": 97.2,
+          "is_standard": true,
+          "note": "",
+          "data": {
+            "policy_setting": 0,
+            "spatial": 98.2,
+            "object": 98.2,
+            "goal": 97.6,
+            "long": 94.6,
+            "libero_90": null,
+            "average": 97.2
+          }
+        }
+      ]
+    }
+  },
+  {
+    "name": "RESample",
+    "paper_url": "https://arxiv.org/abs/2510.17640v3",
+    "pub_date": "2025-10",
+    "is_opensource": false,
+    "opensource_url": null,
+    "is_rl": false,
+    "settings": [],
+    "benchmarks": {
+      "libero": [
+        {
+          "setting": "default",
+          "score": 92.9,
+          "is_standard": true,
+          "note": "",
+          "data": {
+            "policy_setting": 2,
+            "spatial": 96.4,
+            "object": 96.4,
+            "goal": 91.4,
+            "long": 87.4,
+            "libero_90": null,
+            "average": 92.9
+          }
         }
       ]
     }

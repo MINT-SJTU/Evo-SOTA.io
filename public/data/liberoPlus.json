@@ -70,7 +70,7 @@
       "name": "ABot-M0",
       "base_name": "ABot-M0",
       "setting": "",
-      "paper_url": "https://github.com/amap-cvlab/ABot-Manipulation/blob/main/assets/ABot-M0_Technical_Report.pdf",
+      "paper_url": "https://arxiv.org/abs/2602.11236",
       "pub_date": "2026-02",
       "is_opensource": true,
       "opensource_url": "https://github.com/amap-cvlab/ABot-Manipulation",
@@ -421,6 +421,28 @@
       "rank": 1
     },
     {
+      "name": "ProGAL-VLA",
+      "base_name": "ProGAL-VLA",
+      "setting": "",
+      "paper_url": "https://arxiv.org/abs/2604.09824v1",
+      "pub_date": "2026-04",
+      "is_opensource": false,
+      "opensource_url": null,
+      "is_rl": false,
+      "camera": 93.2,
+      "robot": 71.5,
+      "language": 93.6,
+      "light": 86.8,
+      "background": 92.3,
+      "noise": 74.8,
+      "layout": 86.7,
+      "total": 85.5,
+      "source": "original",
+      "is_standard": true,
+      "note": "",
+      "rank": 2
+    },
+    {
       "name": "FutureVLA",
       "base_name": "FutureVLA",
       "setting": "",
@@ -440,7 +462,29 @@
       "source": "original",
       "is_standard": true,
       "note": "",
-      "rank": 2
+      "rank": 3
+    },
+    {
+      "name": "StarVLA-alpha (generalist)",
+      "base_name": "StarVLA-alpha",
+      "setting": "generalist",
+      "paper_url": "https://arxiv.org/abs/2604.11757v1",
+      "pub_date": "2026-04",
+      "is_opensource": false,
+      "opensource_url": null,
+      "is_rl": false,
+      "camera": 52.5,
+      "robot": 64.3,
+      "language": 86.2,
+      "light": 97.8,
+      "background": 98.1,
+      "noise": 80.2,
+      "layout": 79.1,
+      "total": 79.7,
+      "source": "original",
+      "is_standard": true,
+      "note": "",
+      "rank": 4
     },
     {
       "name": "AVA-VLA",
@@ -462,7 +506,7 @@
       "source": "original",
       "is_standard": true,
       "note": "one policy per suite",
-      "rank": 3
+      "rank": 5
     }
   ],
   "non_standard": [

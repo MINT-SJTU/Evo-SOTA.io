@@ -151,7 +151,7 @@
       "name": "ABot-M0",
       "base_name": "ABot-M0",
       "setting": "",
-      "paper_url": "https://github.com/amap-cvlab/ABot-Manipulation/blob/main/assets/ABot-M0_Technical_Report.pdf",
+      "paper_url": "https://arxiv.org/abs/2602.11236",
       "pub_date": "2026-02",
       "is_opensource": true,
       "opensource_url": "https://github.com/amap-cvlab/ABot-Manipulation",
@@ -1578,6 +1578,69 @@
       "rank": 6
     },
     {
+      "name": "StarVLA-alpha (generalist)",
+      "base_name": "StarVLA-alpha",
+      "setting": "generalist",
+      "paper_url": "https://arxiv.org/abs/2604.11757v1",
+      "pub_date": "2026-04",
+      "is_opensource": false,
+      "opensource_url": null,
+      "is_rl": false,
+      "policy_setting": 1,
+      "spatial": 98.7,
+      "object": 99.7,
+      "goal": 98.6,
+      "long": 94.2,
+      "libero_90": null,
+      "average": 97.8,
+      "source": "original",
+      "is_standard": true,
+      "note": "",
+      "rank": 7
+    },
+    {
+      "name": "HAMLET",
+      "base_name": "HAMLET",
+      "setting": "",
+      "paper_url": "https://arxiv.org/abs/2510.00695v3",
+      "pub_date": "2025-10",
+      "is_opensource": false,
+      "opensource_url": null,
+      "is_rl": false,
+      "policy_setting": 1,
+      "spatial": 99.0,
+      "object": 100.0,
+      "goal": 99.2,
+      "long": 92.2,
+      "libero_90": null,
+      "average": 97.6,
+      "source": "original",
+      "is_standard": true,
+      "note": "",
+      "rank": 8
+    },
+    {
+      "name": "Dejavu",
+      "base_name": "Dejavu",
+      "setting": "",
+      "paper_url": "https://arxiv.org/abs/2510.10181v3",
+      "pub_date": "2025-10",
+      "is_opensource": false,
+      "opensource_url": null,
+      "is_rl": false,
+      "policy_setting": 0,
+      "spatial": 98.2,
+      "object": 98.2,
+      "goal": 97.6,
+      "long": 94.6,
+      "libero_90": null,
+      "average": 97.2,
+      "source": "original",
+      "is_standard": true,
+      "note": "",
+      "rank": 9
+    },
+    {
       "name": "StreamingVLA",
       "base_name": "StreamingVLA",
       "setting": "",
@@ -1596,7 +1659,7 @@
       "source": "original",
       "is_standard": true,
       "note": "",
-      "rank": 7
+      "rank": 10
     },
     {
       "name": "ReViP",
@@ -1617,7 +1680,7 @@
       "source": "original",
       "is_standard": true,
       "note": "",
-      "rank": 8
+      "rank": 11
     },
     {
       "name": "GeoPredict",
@@ -1638,7 +1701,7 @@
       "source": "original",
       "is_standard": true,
       "note": "",
-      "rank": 9
+      "rank": 12
     },
     {
       "name": "dVLA",
@@ -1659,7 +1722,7 @@
       "source": "original",
       "is_standard": true,
       "note": "",
-      "rank": 10
+      "rank": 13
     },
     {
       "name": "JEPA-VLA",
@@ -1680,7 +1743,7 @@
       "source": "original",
       "is_standard": true,
       "note": "",
-      "rank": 11
+      "rank": 14
     },
     {
       "name": "GST-VLA",
@@ -1701,7 +1764,7 @@
       "source": "original",
       "is_standard": true,
       "note": "",
-      "rank": 12
+      "rank": 15
     },
     {
       "name": "Pose-VLA",
@@ -1722,7 +1785,7 @@
       "source": "original",
       "is_standard": true,
       "note": "",
-      "rank": 13
+      "rank": 16
     },
     {
       "name": "DFM-VLA",
@@ -1743,7 +1806,28 @@
       "source": "original",
       "is_standard": true,
       "note": "",
-      "rank": 14
+      "rank": 17
+    },
+    {
+      "name": "AAC",
+      "base_name": "AAC",
+      "setting": "",
+      "paper_url": "https://arxiv.org/abs/2604.04161v2",
+      "pub_date": "2026-04",
+      "is_opensource": false,
+      "opensource_url": null,
+      "is_rl": false,
+      "policy_setting": 1,
+      "spatial": 94.4,
+      "object": 92.8,
+      "goal": 98.6,
+      "long": 94.2,
+      "libero_90": null,
+      "average": 95.0,
+      "source": "original",
+      "is_standard": true,
+      "note": "",
+      "rank": 18
     },
     {
       "name": "DepthVLA",
@@ -1764,7 +1848,7 @@
       "source": "original",
       "is_standard": true,
       "note": "",
-      "rank": 15
+      "rank": 19
     },
     {
       "name": "PD-VLA",
@@ -1785,7 +1869,28 @@
       "source": "From AVA-VLA",
       "is_standard": true,
       "note": "",
-      "rank": 16
+      "rank": 20
+    },
+    {
+      "name": "RESample",
+      "base_name": "RESample",
+      "setting": "",
+      "paper_url": "https://arxiv.org/abs/2510.17640v3",
+      "pub_date": "2025-10",
+      "is_opensource": false,
+      "opensource_url": null,
+      "is_rl": false,
+      "policy_setting": 2,
+      "spatial": 96.4,
+      "object": 96.4,
+      "goal": 91.4,
+      "long": 87.4,
+      "libero_90": null,
+      "average": 92.9,
+      "source": "original",
+      "is_standard": true,
+      "note": "",
+      "rank": 21
     },
     {
       "name": "Fast-ThinkAct",
@@ -1806,7 +1911,7 @@
       "source": "original",
       "is_standard": true,
       "note": "",
-      "rank": 17
+      "rank": 22
     },
     {
       "name": "ATA",
@@ -1827,7 +1932,7 @@
       "source": "original",
       "is_standard": true,
       "note": "",
-      "rank": 18
+      "rank": 23
     },
     {
       "name": "FPC-VLA",
@@ -1848,7 +1953,7 @@
       "source": "original",
       "is_standard": true,
       "note": "",
-      "rank": 19
+      "rank": 24
     },
     {
       "name": "InSpire",
@@ -1869,7 +1974,7 @@
       "source": "original",
       "is_standard": true,
       "note": "",
-      "rank": 20
+      "rank": 25
     },
     {
       "name": "ThinkAct",
@@ -1890,7 +1995,7 @@
       "source": "original",
       "is_standard": true,
       "note": "",
-      "rank": 21
+      "rank": 26
     },
     {
       "name": "Eva-VLA",
@@ -1911,7 +2016,7 @@
       "source": "original",
       "is_standard": true,
       "note": "都只使用了各自数据集微调",
-      "rank": 22
+      "rank": 27
     },
     {
       "name": "CoT-VLA",
@@ -1932,7 +2037,7 @@
       "source": "original",
       "is_standard": true,
       "note": "",
-      "rank": 23
+      "rank": 28
     },
     {
       "name": "CoA-VLA",
@@ -1953,7 +2058,7 @@
       "source": "original",
       "is_standard": true,
       "note": "",
-      "rank": 24
+      "rank": 29
     },
     {
       "name": "TriVLA",
@@ -1974,7 +2079,7 @@
       "source": "original",
       "is_standard": true,
       "note": "",
-      "rank": 25
+      "rank": 30
     }
   ],
   "non_standard": [
