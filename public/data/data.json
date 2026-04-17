@@ -243,8 +243,8 @@
   "robochallenge": {
     "total_models": 16,
     "standard_opensource_count": 15,
-    "standard_closed_count": 1,
-    "non_standard_count": 0,
+    "standard_closed_count": 0,
+    "non_standard_count": 1,
     "model_type_count": {
       "sft": 15,
       "rl": 0

@@ -241,7 +241,8 @@
       "rank": 15
     }
   ],
-  "standard_closed": [
+  "standard_closed": [],
+  "non_standard": [
     {
       "name": "StarVLA-alpha (generalist)",
       "base_name": "StarVLA-alpha",
@@ -254,10 +255,9 @@
       "score": 54.5,
       "success_rate": 33.6,
       "source": "original",
-      "is_standard": true,
+      "is_standard": false,
       "note": "",
       "rank": 1
     }
-  ],
-  "non_standard": []
+  ]
 }

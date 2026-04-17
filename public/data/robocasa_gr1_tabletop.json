@@ -4,7 +4,7 @@
       "name": "ABot-M0",
       "base_name": "ABot-M0",
       "setting": "",
-      "paper_url": "https://github.com/amap-cvlab/ABot-Manipulation/blob/main/assets/ABot-M0_Technical_Report.pdf",
+      "paper_url": "https://arxiv.org/abs/2602.11236",
       "pub_date": "2026-02",
       "is_opensource": true,
       "opensource_url": "https://github.com/amap-cvlab/ABot-Manipulation",
