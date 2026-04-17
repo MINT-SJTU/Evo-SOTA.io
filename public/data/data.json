@@ -1,8 +1,8 @@
 {
   "libero": {
-    "total_models": 112,
+    "total_models": 117,
     "standard_opensource_count": 69,
-    "standard_closed_count": 25,
+    "standard_closed_count": 30,
     "non_standard_count": 18,
     "model_type_count": {
       "sft": 60,
@@ -92,9 +92,9 @@
     ]
   },
   "libero_plus": {
-    "total_models": 22,
+    "total_models": 24,
     "standard_opensource_count": 18,
-    "standard_closed_count": 3,
+    "standard_closed_count": 5,
     "non_standard_count": 1,
     "model_type_count": {
       "sft": 16,
@@ -241,9 +241,9 @@
     ]
   },
   "robochallenge": {
-    "total_models": 15,
+    "total_models": 16,
     "standard_opensource_count": 15,
-    "standard_closed_count": 0,
+    "standard_closed_count": 1,
     "non_standard_count": 0,
     "model_type_count": {
       "sft": 15,
@@ -307,9 +307,9 @@
     "top_5_rl": []
   },
   "robocasa": {
-    "total_models": 11,
+    "total_models": 12,
     "standard_opensource_count": 8,
-    "standard_closed_count": 3,
+    "standard_closed_count": 4,
     "non_standard_count": 0,
     "model_type_count": {
       "sft": 8,

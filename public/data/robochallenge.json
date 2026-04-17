@@ -241,6 +241,23 @@
       "rank": 15
     }
   ],
-  "standard_closed": [],
+  "standard_closed": [
+    {
+      "name": "StarVLA-alpha (generalist)",
+      "base_name": "StarVLA-alpha",
+      "setting": "generalist",
+      "paper_url": "https://arxiv.org/abs/2604.11757v1",
+      "pub_date": "2026-04",
+      "is_opensource": false,
+      "opensource_url": null,
+      "is_rl": false,
+      "score": 54.5,
+      "success_rate": 33.6,
+      "source": "original",
+      "is_standard": true,
+      "note": "",
+      "rank": 1
+    }
+  ],
   "non_standard": []
 }
