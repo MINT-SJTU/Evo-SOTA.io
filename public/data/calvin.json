@@ -712,7 +712,7 @@
         "name": "Dita",
         "base_name": "Dita",
         "setting": "",
-        "paper_url": "https://arxiv.org/abs/2410.15959v4",
+        "paper_url": "https://arxiv.org/abs/2410.15959",
         "pub_date": "2025-03",
         "is_opensource": true,
         "opensource_url": "https://github.com/RoboDita/Dita",

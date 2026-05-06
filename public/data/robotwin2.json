@@ -1,0 +1,103 @@
+{
+  "standard_opensource": [
+    {
+      "name": "HoloBrain-0",
+      "base_name": "HoloBrain-0",
+      "setting": "",
+      "paper_url": "https://arxiv.org/abs/2602.12062",
+      "pub_date": "2026-02",
+      "is_opensource": true,
+      "opensource_url": "https://github.com/HorizonRobotics/RoboOrchardLab/tree/master/projects/holobrain",
+      "is_rl": false,
+      "easy": 91.9,
+      "hard": 92.3,
+      "source": "original",
+      "is_standard": true,
+      "note": "",
+      "rank": 1
+    },
+    {
+      "name": "Fast-WAM",
+      "base_name": "Fast-WAM",
+      "setting": "",
+      "paper_url": "https://arxiv.org/abs/2603.16666",
+      "pub_date": "2026-03",
+      "is_opensource": true,
+      "opensource_url": "https://github.com/yuantianyuan01/FastWAM",
+      "is_rl": false,
+      "easy": 91.9,
+      "hard": 91.8,
+      "source": "original",
+      "is_standard": true,
+      "note": "",
+      "rank": 2
+    },
+    {
+      "name": "LingBot-VA",
+      "base_name": "LingBot-VA",
+      "setting": "",
+      "paper_url": "https://arxiv.org/abs/2601.21998",
+      "pub_date": "2026-01",
+      "is_opensource": true,
+      "opensource_url": "https://github.com/Robbyant/lingbot-va",
+      "is_rl": false,
+      "easy": 92.9,
+      "hard": 91.6,
+      "source": "original",
+      "is_standard": true,
+      "note": "",
+      "rank": 3
+    },
+    {
+      "name": "InternVLA-A1",
+      "base_name": "InternVLA-A1",
+      "setting": "",
+      "paper_url": "https://arxiv.org/abs/2601.02456",
+      "pub_date": "2026-01",
+      "is_opensource": true,
+      "opensource_url": "https://github.com/InternRobotics/InternVLA-A1",
+      "is_rl": false,
+      "easy": 89.4,
+      "hard": 89.6,
+      "source": "original",
+      "is_standard": true,
+      "note": "",
+      "rank": 4
+    },
+    {
+      "name": "StarVLA-alpha",
+      "base_name": "StarVLA-alpha",
+      "setting": "",
+      "paper_url": "https://arxiv.org/abs/2604.11757",
+      "pub_date": "2026-04",
+      "is_opensource": true,
+      "opensource_url": "https://github.com/starVLA/starVLA",
+      "is_rl": false,
+      "easy": 88.2,
+      "hard": 88.3,
+      "source": "original",
+      "is_standard": true,
+      "note": "",
+      "rank": 5
+    }
+  ],
+  "standard_closed": [
+    {
+      "name": "AIM",
+      "base_name": "AIM",
+      "setting": "",
+      "paper_url": "https://arxiv.org/abs/2604.11135",
+      "pub_date": "2026-04",
+      "is_opensource": false,
+      "opensource_url": null,
+      "is_rl": true,
+      "easy": 94.0,
+      "hard": 92.1,
+      "source": "original",
+      "is_standard": true,
+      "note": "",
+      "rank": 1
+    }
+  ],
+  "non_standard": []
+}

@@ -89,6 +89,28 @@
       "rank": 4
     },
     {
+      "name": "StarVLA-alpha",
+      "base_name": "StarVLA-alpha",
+      "setting": "",
+      "paper_url": "https://arxiv.org/abs/2604.11757",
+      "pub_date": "2026-04",
+      "is_opensource": true,
+      "opensource_url": "https://github.com/starVLA/starVLA",
+      "is_rl": false,
+      "camera": 52.5,
+      "robot": 64.3,
+      "language": 86.2,
+      "light": 97.8,
+      "background": 98.1,
+      "noise": 80.2,
+      "layout": 79.1,
+      "total": 79.7,
+      "source": "original",
+      "is_standard": true,
+      "note": "",
+      "rank": 5
+    },
+    {
       "name": "VLA-JEPA",
       "base_name": "VLA-JEPA",
       "setting": "",
@@ -108,7 +130,7 @@
       "source": "original",
       "is_standard": true,
       "note": "",
-      "rank": 5
+      "rank": 6
     },
     {
       "name": "DeepThinkVLA",
@@ -130,7 +152,29 @@
       "source": "original",
       "is_standard": true,
       "note": "",
-      "rank": 6
+      "rank": 7
+    },
+    {
+      "name": "HoloBrain-0",
+      "base_name": "HoloBrain-0",
+      "setting": "",
+      "paper_url": "https://arxiv.org/abs/2602.12062",
+      "pub_date": "2026-02",
+      "is_opensource": true,
+      "opensource_url": "https://github.com/HorizonRobotics/RoboOrchardLab/tree/master/projects/holobrain",
+      "is_rl": false,
+      "camera": 65.5,
+      "robot": 58.2,
+      "language": 78.7,
+      "light": 88.1,
+      "background": 90.3,
+      "noise": 66.9,
+      "layout": 79.5,
+      "total": 74.0,
+      "source": "original",
+      "is_standard": true,
+      "note": "",
+      "rank": 8
     },
     {
       "name": "MergeVLA",
@@ -152,7 +196,7 @@
       "source": "original",
       "is_standard": true,
       "note": "",
-      "rank": 7
+      "rank": 9
     },
     {
       "name": "OpenVLA-OFT",
@@ -174,7 +218,7 @@
       "source": "from Libero-plus",
       "is_standard": true,
       "note": "",
-      "rank": 8
+      "rank": 10
     },
     {
       "name": "RIPT-VLA",
@@ -196,7 +240,7 @@
       "source": "from Libero-plus",
       "is_standard": true,
       "note": "",
-      "rank": 9
+      "rank": 11
     },
     {
       "name": "OpenVLA-OFT (mix-sft)",
@@ -218,7 +262,7 @@
       "source": "from Libero-plus",
       "is_standard": true,
       "note": "",
-      "rank": 10
+      "rank": 12
     },
     {
       "name": "pi0-FAST",
@@ -240,7 +284,7 @@
       "source": "from Libero-plus",
       "is_standard": true,
       "note": "",
-      "rank": 11
+      "rank": 13
     },
     {
       "name": "SRPO",
@@ -262,7 +306,7 @@
       "source": "original",
       "is_standard": true,
       "note": "",
-      "rank": 12
+      "rank": 14
     },
     {
       "name": "OpenVLA-OFT (without wrist input)",
@@ -284,13 +328,13 @@
       "source": "from Libero-plus",
       "is_standard": true,
       "note": "",
-      "rank": 13
+      "rank": 15
     },
     {
       "name": "pi0",
       "base_name": "pi0",
       "setting": "",
-      "paper_url": "https://arxiv.org/html/2410.24164v1",
+      "paper_url": "https://arxiv.org/html/2410.24164",
       "pub_date": "2024-10",
       "is_opensource": true,
       "opensource_url": "https://github.com/Physical-Intelligence/openpi",
@@ -306,7 +350,7 @@
       "source": "from Libero-plus",
       "is_standard": true,
       "note": "",
-      "rank": 14
+      "rank": 16
     },
     {
       "name": "UniVLA",
@@ -328,7 +372,7 @@
       "source": "from Libero-plus",
       "is_standard": true,
       "note": "",
-      "rank": 15
+      "rank": 17
     },
     {
       "name": "NORA",
@@ -350,7 +394,7 @@
       "source": "from Libero-plus",
       "is_standard": true,
       "note": "",
-      "rank": 16
+      "rank": 18
     },
     {
       "name": "WorldVLA",
@@ -372,7 +416,7 @@
       "source": "from Libero-plus",
       "is_standard": true,
       "note": "",
-      "rank": 17
+      "rank": 19
     },
     {
       "name": "OpenVLA",
@@ -394,7 +438,7 @@
       "source": "from Libero-plus",
       "is_standard": true,
       "note": "",
-      "rank": 18
+      "rank": 20
     }
   ],
   "standard_closed": [
@@ -424,7 +468,7 @@
       "name": "ProGAL-VLA",
       "base_name": "ProGAL-VLA",
       "setting": "",
-      "paper_url": "https://arxiv.org/abs/2604.09824v1",
+      "paper_url": "https://arxiv.org/abs/2604.09824",
       "pub_date": "2026-04",
       "is_opensource": false,
       "opensource_url": null,
@@ -465,28 +509,6 @@
       "rank": 3
     },
     {
-      "name": "StarVLA-alpha (generalist)",
-      "base_name": "StarVLA-alpha",
-      "setting": "generalist",
-      "paper_url": "https://arxiv.org/abs/2604.11757v1",
-      "pub_date": "2026-04",
-      "is_opensource": false,
-      "opensource_url": null,
-      "is_rl": false,
-      "camera": 52.5,
-      "robot": 64.3,
-      "language": 86.2,
-      "light": 97.8,
-      "background": 98.1,
-      "noise": 80.2,
-      "layout": 79.1,
-      "total": 79.7,
-      "source": "original",
-      "is_standard": true,
-      "note": "",
-      "rank": 4
-    },
-    {
       "name": "AVA-VLA",
       "base_name": "AVA-VLA",
       "setting": "",
@@ -506,7 +528,7 @@
       "source": "original",
       "is_standard": true,
       "note": "one policy per suite",
-      "rank": 5
+      "rank": 4
     }
   ],
   "non_standard": [

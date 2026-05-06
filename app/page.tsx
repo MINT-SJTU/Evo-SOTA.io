@@ -84,6 +84,13 @@ interface SummaryData {
         top_5_sft: { name: string; score: number; rank: number }[];
         top_5_rl: { name: string; score: number; rank: number }[];
     };
+    robotwin: {
+        total_models: number;
+        standard_opensource_count: number;
+        top_5: { name: string; score: number; rank: number }[];
+        top_5_sft: { name: string; score: number; rank: number }[];
+        top_5_rl: { name: string; score: number; rank: number }[];
+    };
 }
 
 interface NewsItem {
@@ -119,7 +126,7 @@ export default function Home() {
     // 格式化新闻内容：榜单用粗体+蓝色，模型用斜体+紫色
     const formatNewsContent = (content: string) => {
         // 榜单列表（需要粗体和蓝色）
-        const benchmarks = ['RoboChallenge', 'RoboCasa-GR1-Tabletop', 'LIBERO Plus', 'LIBERO', 'Meta-World', 'CALVIN', 'Libero Plus', 'Libero', 'Calvin', 'Adroit', 'DexArt', 'Bi-DexHands'];
+        const benchmarks = ['RoboTwin 2.0', 'RoboChallenge', 'RoboCasa-GR1-Tabletop', 'LIBERO Plus', 'LIBERO', 'Meta-World', 'CALVIN', 'Libero Plus', 'Libero', 'Calvin', 'Adroit', 'DexArt', 'Bi-DexHands'];
         // 模型列表（需要斜体和紫色）
         const models = [
             'DeepThinkVLA', 'Dadu-Corki', 'RoboTron Mani', 'CronusVLA', 'InstructVLA', 'InternVLA-M1', 'ACoT-VLA',
@@ -214,8 +221,17 @@ export default function Home() {
         },
     ];
 
-    // 第二行: libero plus, robochallenge, robocasa
+    // 第二行: robotwin2, libero plus, robochallenge, robocasa
     const secondRowBenchmarks = [
+        {
+            id: 'robotwin2',
+            name: t.benchmarkDesc.robotwin?.name || 'RoboTwin 2.0',
+            description: t.benchmarkDesc.robotwin?.description || 'Scalable data generator and benchmark for robust bimanual robotic manipulation',
+            metric: t.benchmarkDesc.robotwin?.metric || 'Hard Success Rate (%)',
+            modelCount: summaryData?.robotwin?.standard_opensource_count || 0,
+            topModels: getTopModels('robotwin'),
+            color: 'amber',
+        },
         {
             id: 'liberoplus',
             name: t.benchmarkDesc.liberoPlus.name,
@@ -287,6 +303,13 @@ export default function Home() {
             text: 'text-rose-600',
             badge: 'bg-rose-100 text-rose-800',
             button: 'bg-rose-600 hover:bg-rose-700',
+        },
+        amber: {
+            bg: 'bg-amber-50',
+            border: 'border-amber-200',
+            text: 'text-amber-600',
+            badge: 'bg-amber-100 text-amber-800',
+            button: 'bg-amber-600 hover:bg-amber-700',
         },
     };
 
@@ -370,7 +393,7 @@ export default function Home() {
 
             {/* Benchmark Cards */}
             <section className="py-16 px-4 sm:px-6 lg:px-8">
-                <div className="max-w-6xl mx-auto">
+                <div className="max-w-7xl mx-auto">
                     <div className="flex items-center justify-between mb-8">
                         <h2 className="text-2xl font-bold text-slate-800">
                             {t.nav.benchmarks}
@@ -394,13 +417,13 @@ export default function Home() {
                     </div>
 
                     {/* 第一行: LIBERO, MetaWorld, CALVIN */}
-                    <div className="flex justify-center gap-5 mb-5 flex-wrap">
+                    <div className="flex justify-center gap-5 mb-5">
                         {firstRowBenchmarks.map((benchmark) => {
                             const colors = colorClasses[benchmark.color as keyof typeof colorClasses];
                             return (
                                 <div
                                     key={benchmark.id}
-                                    className={`w-80 rounded-xl border-2 ${colors.border} ${colors.bg} overflow-hidden card-hover`}
+                                    className={`w-[calc(25%_-_15px)] flex-none rounded-xl border-2 ${colors.border} ${colors.bg} overflow-hidden card-hover`}
                                 >
                                     {/* Card Header */}
                                     <div className="p-6 border-b border-slate-200 bg-white">
@@ -470,14 +493,14 @@ export default function Home() {
                         })}
                     </div>
 
-                    {/* 第二行: LIBERO Plus, RoboChallenge, RoboCasa-GR1_tabletop */}
-                    <div className="flex justify-center gap-5 flex-wrap">
+                    {/* 第二行: RoboTwin 2.0, LIBERO Plus, RoboChallenge, RoboCasa-GR1_tabletop */}
+                    <div className="grid grid-cols-2 xl:grid-cols-4 gap-5">
                         {secondRowBenchmarks.map((benchmark) => {
                             const colors = colorClasses[benchmark.color as keyof typeof colorClasses];
                             return (
                                 <div
                                     key={benchmark.id}
-                                    className={`w-80 rounded-xl border-2 ${colors.border} ${colors.bg} overflow-hidden card-hover`}
+                                    className={`rounded-xl border-2 ${colors.border} ${colors.bg} overflow-hidden card-hover`}
                                 >
                                     {/* Card Header */}
                                     <div className="p-6 border-b border-slate-200 bg-white">
