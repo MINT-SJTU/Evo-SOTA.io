@@ -1,5 +1,103 @@
 [
   {
+    "name": "IVLR",
+    "paper_url": "https://arxiv.org/abs/2605.00438",
+    "pub_date": "2026-05",
+    "is_opensource": false,
+    "opensource_url": null,
+    "is_rl": false,
+    "settings": [],
+    "benchmarks": {
+      "libero": [
+        {
+          "setting": "default",
+          "score": 95.5,
+          "is_standard": true,
+          "note": "",
+          "data": {
+            "policy_setting": 0,
+            "spatial": 97.8,
+            "object": 95.8,
+            "goal": 97.0,
+            "long": 92.4,
+            "libero_90": null,
+            "average": 95.5
+          }
+        }
+      ]
+    }
+  },
+  {
+    "name": "LatentBridge",
+    "paper_url": "https://arxiv.org/abs/2605.02739",
+    "pub_date": "2026-05",
+    "is_opensource": false,
+    "opensource_url": null,
+    "is_rl": false,
+    "settings": [],
+    "benchmarks": {
+      "libero": [
+        {
+          "setting": "default",
+          "score": 96.92,
+          "is_standard": true,
+          "note": "",
+          "data": {
+            "policy_setting": 0,
+            "spatial": 99.0,
+            "object": 97.67,
+            "goal": 97.33,
+            "long": 93.67,
+            "libero_90": null,
+            "average": 96.92
+          }
+        }
+      ],
+      "robocasa": [
+        {
+          "setting": "default",
+          "score": 63.16,
+          "is_standard": true,
+          "note": "",
+          "data": {
+            "avg_success_rate": 63.16
+          }
+        }
+      ]
+    }
+  },
+  {
+    "name": "MolmoAct2",
+    "paper_url": "https://arxiv.org/abs/2605.02881",
+    "pub_date": "2026-05",
+    "is_opensource": true,
+    "opensource_url": "https://github.com/allenai/molmoact2",
+    "is_rl": false,
+    "settings": [
+      "think"
+    ],
+    "benchmarks": {
+      "libero": [
+        {
+          "setting": "think",
+          "score": 98.1,
+          "is_standard": true,
+          "note": "",
+          "data": {
+            "policy_setting": 2,
+            "spatial": 98.8,
+            "object": 99.8,
+            "goal": 98.5,
+            "long": 95.4,
+            "libero_90": null,
+            "average": 98.1
+          },
+          "rank": 22
+        }
+      ]
+    }
+  },
+  {
     "name": "A1",
     "paper_url": "https://arxiv.org/abs/2604.05672",
     "pub_date": "2026-04",
@@ -23,7 +121,7 @@
             "libero_90": null,
             "average": 96.6
           },
-          "rank": 38
+          "rank": 41
         }
       ],
       "robochallenge": [
@@ -65,7 +163,7 @@
             "libero_90": null,
             "average": 97.8
           },
-          "rank": 23
+          "rank": 26
         }
       ],
       "libero_plus": [
@@ -84,7 +182,7 @@
             "layout": 79.1,
             "total": 79.7
           },
-          "rank": 5
+          "rank": 6
         }
       ],
       "robochallenge": [
@@ -108,7 +206,7 @@
           "data": {
             "avg_success_rate": 57.3
           },
-          "rank": 2
+          "rank": 3
         }
       ],
       "robotwin": [
@@ -207,6 +305,485 @@
     }
   },
   {
+    "name": "AnchorRefine",
+    "paper_url": "https://arxiv.org/abs/2604.17787",
+    "pub_date": "2026-04",
+    "is_opensource": false,
+    "opensource_url": null,
+    "is_rl": false,
+    "settings": [],
+    "benchmarks": {
+      "calvin_abc_d": [
+        {
+          "setting": "default",
+          "score": 4.4,
+          "is_standard": true,
+          "note": "",
+          "data": {
+            "inst1": 0.973,
+            "inst2": 0.931,
+            "inst3": 0.891,
+            "inst4": 0.837,
+            "inst5": 0.765,
+            "avg_len": 4.4
+          }
+        }
+      ]
+    }
+  },
+  {
+    "name": "ST-pi",
+    "paper_url": "https://arxiv.org/abs/2604.17880",
+    "pub_date": "2026-04",
+    "is_opensource": false,
+    "opensource_url": null,
+    "is_rl": false,
+    "settings": [],
+    "benchmarks": {
+      "libero": [
+        {
+          "setting": "default",
+          "score": 97.3,
+          "is_standard": true,
+          "note": "",
+          "data": {
+            "policy_setting": 0,
+            "spatial": 98.4,
+            "object": 98.3,
+            "goal": 96.9,
+            "long": 94.3,
+            "libero_90": null,
+            "average": 97.3
+          }
+        }
+      ]
+    }
+  },
+  {
+    "name": "CorridorVLA",
+    "paper_url": "https://arxiv.org/abs/2604.21241",
+    "pub_date": "2026-04",
+    "is_opensource": false,
+    "opensource_url": null,
+    "is_rl": false,
+    "settings": [],
+    "benchmarks": {
+      "libero": [
+        {
+          "setting": "default",
+          "score": 90.95,
+          "is_standard": true,
+          "note": "",
+          "data": {
+            "policy_setting": 1,
+            "spatial": 92.0,
+            "object": 95.8,
+            "goal": 90.8,
+            "long": 85.2,
+            "libero_90": null,
+            "average": 90.95
+          }
+        }
+      ],
+      "libero_plus": [
+        {
+          "setting": "default",
+          "score": 83.21,
+          "is_standard": false,
+          "note": "",
+          "data": {
+            "camera": null,
+            "robot": null,
+            "language": null,
+            "light": null,
+            "background": null,
+            "noise": null,
+            "layout": null,
+            "total": 83.21
+          }
+        }
+      ]
+    }
+  },
+  {
+    "name": "JoyAI-RA 0.1",
+    "paper_url": "https://arxiv.org/abs/2604.20100",
+    "pub_date": "2026-04",
+    "is_opensource": false,
+    "opensource_url": null,
+    "is_rl": false,
+    "settings": [],
+    "benchmarks": {
+      "robocasa": [
+        {
+          "setting": "default",
+          "score": 63.2,
+          "is_standard": true,
+          "note": "",
+          "data": {
+            "avg_success_rate": 63.2
+          }
+        }
+      ],
+      "robotwin": [
+        {
+          "setting": "default",
+          "score": 89.28,
+          "is_standard": true,
+          "note": "",
+          "data": {
+            "easy": 90.48,
+            "hard": 89.28
+          }
+        }
+      ]
+    }
+  },
+  {
+    "name": "LoHo-Manip",
+    "paper_url": "https://arxiv.org/abs/2604.21924",
+    "pub_date": "2026-04",
+    "is_opensource": false,
+    "opensource_url": null,
+    "is_rl": false,
+    "settings": [],
+    "benchmarks": {
+      "libero": [
+        {
+          "setting": "default",
+          "score": 97.5,
+          "is_standard": true,
+          "note": "",
+          "data": {
+            "policy_setting": 0,
+            "spatial": 98.0,
+            "object": 98.6,
+            "goal": 98.0,
+            "long": 95.2,
+            "libero_90": null,
+            "average": 97.5
+          }
+        }
+      ]
+    }
+  },
+  {
+    "name": "OmniVLA-RL",
+    "paper_url": "https://arxiv.org/abs/2604.17706",
+    "pub_date": "2026-04",
+    "is_opensource": false,
+    "opensource_url": null,
+    "is_rl": true,
+    "settings": [],
+    "benchmarks": {
+      "libero": [
+        {
+          "setting": "default",
+          "score": 97.6,
+          "is_standard": true,
+          "note": "",
+          "data": {
+            "policy_setting": 0,
+            "spatial": 99.2,
+            "object": 99.2,
+            "goal": 98.5,
+            "long": 93.5,
+            "libero_90": null,
+            "average": 97.6
+          }
+        }
+      ]
+    }
+  },
+  {
+    "name": "PokeVLA",
+    "paper_url": "https://arxiv.org/abs/2604.20834",
+    "pub_date": "2026-04",
+    "is_opensource": false,
+    "opensource_url": null,
+    "is_rl": false,
+    "settings": [],
+    "benchmarks": {
+      "libero": [
+        {
+          "setting": "default",
+          "score": 98.2,
+          "is_standard": true,
+          "note": "",
+          "data": {
+            "policy_setting": 2,
+            "spatial": 99.6,
+            "object": 99.6,
+            "goal": 98.4,
+            "long": 95.2,
+            "libero_90": null,
+            "average": 98.2
+          }
+        }
+      ],
+      "libero_plus": [
+        {
+          "setting": "default",
+          "score": 83.5,
+          "is_standard": true,
+          "note": "",
+          "data": {
+            "camera": 98.2,
+            "robot": 52.9,
+            "language": 71.4,
+            "light": 99.0,
+            "background": 99.3,
+            "noise": 94.0,
+            "layout": 77.9,
+            "total": 83.5
+          }
+        }
+      ]
+    }
+  },
+  {
+    "name": "M^2-VLA",
+    "paper_url": "https://arxiv.org/abs/2604.24182",
+    "pub_date": "2026-04",
+    "is_opensource": false,
+    "opensource_url": null,
+    "is_rl": false,
+    "settings": [],
+    "benchmarks": {
+      "libero": [
+        {
+          "setting": "default",
+          "score": 95.3,
+          "is_standard": true,
+          "note": "",
+          "data": {
+            "policy_setting": 0,
+            "spatial": 97.8,
+            "object": 99.0,
+            "goal": 97.2,
+            "long": 87.0,
+            "libero_90": null,
+            "average": 95.3
+          }
+        }
+      ]
+    }
+  },
+  {
+    "name": "Libra-VLA",
+    "paper_url": "https://arxiv.org/abs/2604.24921",
+    "pub_date": "2026-04",
+    "is_opensource": false,
+    "opensource_url": null,
+    "is_rl": false,
+    "settings": [],
+    "benchmarks": {
+      "libero": [
+        {
+          "setting": "default",
+          "score": 97.2,
+          "is_standard": true,
+          "note": "",
+          "data": {
+            "policy_setting": 0,
+            "spatial": 98.6,
+            "object": 99.4,
+            "goal": 98.0,
+            "long": 92.8,
+            "libero_90": null,
+            "average": 97.2
+          }
+        }
+      ],
+      "libero_plus": [
+        {
+          "setting": "default",
+          "score": 79.5,
+          "is_standard": true,
+          "note": "zero-shot transfer",
+          "data": {
+            "camera": 68.9,
+            "robot": 48.8,
+            "language": 92.7,
+            "light": 97.9,
+            "background": 93.4,
+            "noise": 86.3,
+            "layout": 77.5,
+            "total": 79.5
+          }
+        }
+      ]
+    }
+  },
+  {
+    "name": "CF-VLA",
+    "paper_url": "https://arxiv.org/abs/2604.24622",
+    "pub_date": "2026-04",
+    "is_opensource": true,
+    "opensource_url": "https://github.com/EmbodiedAI-RoboTron/CF-VLA",
+    "is_rl": false,
+    "settings": [],
+    "benchmarks": {
+      "libero": [
+        {
+          "setting": "default",
+          "score": 95.8,
+          "is_standard": true,
+          "note": "",
+          "data": {
+            "policy_setting": 0,
+            "spatial": 98.4,
+            "object": 99.0,
+            "goal": 95.0,
+            "long": 90.8,
+            "libero_90": null,
+            "average": 95.8
+          },
+          "rank": 46
+        }
+      ],
+      "calvin_d_d": [
+        {
+          "setting": "default",
+          "score": 3.67,
+          "is_standard": true,
+          "note": "",
+          "data": {
+            "inst1": 91.1,
+            "inst2": 80.2,
+            "inst3": 71.8,
+            "inst4": 66.2,
+            "inst5": 57.3,
+            "avg_len": 3.67
+          },
+          "rank": 4
+        }
+      ]
+    }
+  },
+  {
+    "name": "PRTS",
+    "paper_url": "https://arxiv.org/abs/2604.27472",
+    "pub_date": "2026-04",
+    "is_opensource": true,
+    "opensource_url": "https://github.com/TeleHuman/PRTS",
+    "is_rl": true,
+    "settings": [],
+    "benchmarks": {
+      "libero": [
+        {
+          "setting": "default",
+          "score": 98.4,
+          "is_standard": true,
+          "note": "",
+          "data": {
+            "policy_setting": 1,
+            "spatial": 98.8,
+            "object": 99.8,
+            "goal": 98.4,
+            "long": 96.6,
+            "libero_90": null,
+            "average": 98.4
+          },
+          "rank": 16
+        }
+      ],
+      "libero_plus": [
+        {
+          "setting": "default",
+          "score": 81.4,
+          "is_standard": true,
+          "note": "",
+          "data": {
+            "camera": 59.5,
+            "robot": 72.4,
+            "language": 89.6,
+            "light": 96.5,
+            "background": 96.7,
+            "noise": 81.3,
+            "layout": 83.3,
+            "total": 81.4
+          },
+          "rank": 4
+        }
+      ]
+    }
+  },
+  {
+    "name": "LaST-R1",
+    "paper_url": "https://arxiv.org/abs/2604.28192",
+    "pub_date": "2026-04",
+    "is_opensource": false,
+    "opensource_url": null,
+    "is_rl": true,
+    "settings": [],
+    "benchmarks": {
+      "libero": [
+        {
+          "setting": "default",
+          "score": 99.8,
+          "is_standard": true,
+          "note": "",
+          "data": {
+            "policy_setting": 2,
+            "spatial": 99.8,
+            "object": 100.0,
+            "goal": 100.0,
+            "long": 99.4,
+            "libero_90": null,
+            "average": 99.8
+          }
+        }
+      ]
+    }
+  },
+  {
+    "name": "MotuBrain",
+    "paper_url": "https://arxiv.org/abs/2604.27792",
+    "pub_date": "2026-04",
+    "is_opensource": false,
+    "opensource_url": null,
+    "is_rl": false,
+    "settings": [],
+    "benchmarks": {
+      "robotwin": [
+        {
+          "setting": "default",
+          "score": 96.08,
+          "is_standard": true,
+          "note": "",
+          "data": {
+            "easy": 95.8,
+            "hard": 96.08
+          }
+        }
+      ]
+    }
+  },
+  {
+    "name": "STARRY",
+    "paper_url": "https://arxiv.org/abs/2604.26848",
+    "pub_date": "2026-04",
+    "is_opensource": false,
+    "opensource_url": null,
+    "is_rl": false,
+    "settings": [],
+    "benchmarks": {
+      "robotwin": [
+        {
+          "setting": "default",
+          "score": 93.3,
+          "is_standard": true,
+          "note": "",
+          "data": {
+            "easy": 93.82,
+            "hard": 93.3
+          }
+        }
+      ]
+    }
+  },
+  {
     "name": "pi-StepNFT",
     "paper_url": "https://arxiv.org/abs/2603.02083",
     "pub_date": "2026-03",
@@ -230,7 +807,7 @@
             "libero_90": null,
             "average": 94.0
           },
-          "rank": 53
+          "rank": 57
         }
       ]
     }
@@ -316,7 +893,7 @@
             "libero_90": null,
             "average": 97.8
           },
-          "rank": 22
+          "rank": 25
         }
       ],
       "calvin_abc_d": [
@@ -477,8 +1054,8 @@
     "name": "DiT4DiT",
     "paper_url": "https://arxiv.org/abs/2603.10448",
     "pub_date": "2026-03",
-    "is_opensource": false,
-    "opensource_url": null,
+    "is_opensource": true,
+    "opensource_url": "https://github.com/Mondo-Robotics/DiT4DiT",
     "is_rl": false,
     "settings": [],
     "benchmarks": {
@@ -489,14 +1066,15 @@
           "is_standard": true,
           "note": "",
           "data": {
-            "policy_setting": 0,
+            "policy_setting": 1,
             "spatial": 98.4,
             "object": 99.6,
             "goal": 98.6,
             "long": 97.6,
             "libero_90": null,
             "average": 98.6
-          }
+          },
+          "rank": 9
         }
       ],
       "robocasa": [
@@ -507,7 +1085,8 @@
           "note": "",
           "data": {
             "avg_success_rate": 50.8
-          }
+          },
+          "rank": 6
         }
       ]
     }
@@ -670,7 +1249,7 @@
             "libero_90": null,
             "average": 98.0
           },
-          "rank": 21
+          "rank": 24
         }
       ],
       "calvin_abc_d": [
@@ -818,20 +1397,71 @@
             "libero_90": null,
             "average": 97.6
           },
-          "rank": 25
+          "rank": 28
         }
       ],
       "robotwin": [
         {
           "setting": "default",
-          "score": 91.8,
+          "score": 91.78,
           "is_standard": true,
           "note": "",
           "data": {
-            "easy": 91.9,
-            "hard": 91.8
+            "easy": 91.88,
+            "hard": 91.78
           },
           "rank": 2
+        }
+      ]
+    }
+  },
+  {
+    "name": "GeCO",
+    "paper_url": "https://arxiv.org/abs/2603.17834",
+    "pub_date": "2026-03",
+    "is_opensource": false,
+    "opensource_url": null,
+    "is_rl": false,
+    "settings": [],
+    "benchmarks": {
+      "libero": [
+        {
+          "setting": "default",
+          "score": 93.5,
+          "is_standard": true,
+          "note": "",
+          "data": {
+            "policy_setting": 2,
+            "spatial": 95.2,
+            "object": 95.8,
+            "goal": 99.0,
+            "long": 83.8,
+            "libero_90": null,
+            "average": 93.5
+          }
+        }
+      ]
+    }
+  },
+  {
+    "name": "DIAL",
+    "paper_url": "https://arxiv.org/abs/2603.29844",
+    "pub_date": "2026-03",
+    "is_opensource": true,
+    "opensource_url": "https://github.com/xpeng-robotics/DIAL",
+    "is_rl": false,
+    "settings": [],
+    "benchmarks": {
+      "robocasa": [
+        {
+          "setting": "default",
+          "score": 70.2,
+          "is_standard": true,
+          "note": "",
+          "data": {
+            "avg_success_rate": 70.2
+          },
+          "rank": 1
         }
       ]
     }
@@ -862,7 +1492,7 @@
             "libero_90": null,
             "average": 94.1
           },
-          "rank": 52
+          "rank": 56
         }
       ],
       "robochallenge": [
@@ -934,7 +1564,7 @@
             "layout": 82.6,
             "total": 80.5
           },
-          "rank": 4
+          "rank": 5
         }
       ],
       "robocasa": [
@@ -946,7 +1576,20 @@
           "data": {
             "avg_success_rate": 58.3
           },
-          "rank": 1
+          "rank": 2
+        }
+      ],
+      "robotwin": [
+        {
+          "setting": "default",
+          "score": 85.08,
+          "is_standard": true,
+          "note": "",
+          "data": {
+            "easy": 86.06,
+            "hard": 85.08
+          },
+          "rank": 8
         }
       ]
     }
@@ -1038,7 +1681,7 @@
             "libero_90": null,
             "average": 97.2
           },
-          "rank": 30
+          "rank": 33
         }
       ],
       "libero_plus": [
@@ -1057,7 +1700,7 @@
             "layout": 85.1,
             "total": 79.5
           },
-          "rank": 6
+          "rank": 7
         }
       ]
     }
@@ -1115,6 +1758,18 @@
             "average": 96.0
           }
         }
+      ],
+      "robotwin": [
+        {
+          "setting": "default",
+          "score": 79.1,
+          "is_standard": true,
+          "note": "",
+          "data": {
+            "easy": 79.91,
+            "hard": 79.1
+          }
+        }
       ]
     }
   },
@@ -1142,7 +1797,7 @@
             "libero_90": null,
             "average": 97.6
           },
-          "rank": 24
+          "rank": 27
         }
       ]
     }
@@ -1171,7 +1826,7 @@
             "libero_90": null,
             "average": 98.6
           },
-          "rank": 9
+          "rank": 10
         }
       ]
     }
@@ -1200,7 +1855,7 @@
             "libero_90": null,
             "average": 98.5
           },
-          "rank": 14
+          "rank": 15
         }
       ],
       "libero_plus": [
@@ -1248,7 +1903,7 @@
             "libero_90": null,
             "average": 97.4
           },
-          "rank": 29
+          "rank": 32
         }
       ],
       "libero_plus": [
@@ -1267,7 +1922,7 @@
             "layout": 79.5,
             "total": 74.0
           },
-          "rank": 8
+          "rank": 9
         }
       ],
       "robotwin": [
@@ -1281,6 +1936,69 @@
             "hard": 92.3
           },
           "rank": 1
+        }
+      ]
+    }
+  },
+  {
+    "name": "HALO",
+    "paper_url": "https://arxiv.org/abs/2602.21157",
+    "pub_date": "2026-02",
+    "is_opensource": false,
+    "opensource_url": null,
+    "is_rl": false,
+    "settings": [],
+    "benchmarks": {
+      "robotwin": [
+        {
+          "setting": "default",
+          "score": 26.4,
+          "is_standard": true,
+          "note": "",
+          "data": {
+            "easy": 80.5,
+            "hard": 26.4
+          }
+        }
+      ]
+    }
+  },
+  {
+    "name": "StreamVLA",
+    "paper_url": "https://arxiv.org/abs/2602.01100",
+    "pub_date": "2026-02",
+    "is_opensource": false,
+    "opensource_url": null,
+    "is_rl": false,
+    "settings": [],
+    "benchmarks": {
+      "libero": [
+        {
+          "setting": "default",
+          "score": 98.5,
+          "is_standard": true,
+          "note": "",
+          "data": {
+            "policy_setting": 0,
+            "spatial": 99.2,
+            "object": 99.4,
+            "goal": 98.6,
+            "long": 96.6,
+            "libero_90": null,
+            "average": 98.5
+          }
+        }
+      ],
+      "robotwin": [
+        {
+          "setting": "default",
+          "score": 37.2,
+          "is_standard": true,
+          "note": "",
+          "data": {
+            "easy": 71.3,
+            "hard": 37.2
+          }
         }
       ]
     }
@@ -1333,7 +2051,7 @@
             "libero_90": null,
             "average": 98.5
           },
-          "rank": 11
+          "rank": 12
         }
       ],
       "libero_plus": [
@@ -1406,7 +2124,7 @@
           "data": {
             "avg_success_rate": 52.6
           },
-          "rank": 4
+          "rank": 5
         }
       ]
     }
@@ -1429,7 +2147,7 @@
           "data": {
             "avg_success_rate": 54.6
           },
-          "rank": 3
+          "rank": 4
         }
       ]
     }
@@ -1515,18 +2233,18 @@
             "libero_90": null,
             "average": 98.5
           },
-          "rank": 12
+          "rank": 13
         }
       ],
       "robotwin": [
         {
           "setting": "default",
-          "score": 91.6,
+          "score": 91.55,
           "is_standard": true,
           "note": "",
           "data": {
-            "easy": 92.9,
-            "hard": 91.6
+            "easy": 92.93,
+            "hard": 91.55
           },
           "rank": 3
         }
@@ -1585,7 +2303,7 @@
             "libero_90": null,
             "average": 98.5
           },
-          "rank": 13
+          "rank": 14
         }
       ]
     }
@@ -1615,6 +2333,30 @@
     }
   },
   {
+    "name": "LingBot-VLA",
+    "paper_url": "https://arxiv.org/abs/2601.18692",
+    "pub_date": "2026-01",
+    "is_opensource": true,
+    "opensource_url": "https://github.com/robbyant/lingbot-vla",
+    "is_rl": false,
+    "settings": [],
+    "benchmarks": {
+      "robotwin": [
+        {
+          "setting": "default",
+          "score": 86.68,
+          "is_standard": true,
+          "note": "",
+          "data": {
+            "easy": 88.56,
+            "hard": 86.68
+          },
+          "rank": 7
+        }
+      ]
+    }
+  },
+  {
     "name": "GR00T-N1.6",
     "paper_url": "https://research.nvidia.com/labs/gear/gr00t-n1_6/",
     "pub_date": "2025-12",
@@ -1632,7 +2374,7 @@
           "data": {
             "avg_success_rate": 47.6
           },
-          "rank": 7
+          "rank": 9
         }
       ]
     }
@@ -1660,7 +2402,7 @@
           "data": {
             "avg_success_rate": 47.8
           },
-          "rank": 6
+          "rank": 8
         },
         {
           "setting": "Qwen3PI",
@@ -1670,7 +2412,7 @@
           "data": {
             "avg_success_rate": 43.9
           },
-          "rank": 8
+          "rank": 10
         },
         {
           "setting": "Qwen3OFT",
@@ -1680,7 +2422,7 @@
           "data": {
             "avg_success_rate": 48.8
           },
-          "rank": 5
+          "rank": 7
         },
         {
           "setting": "Qwen3FAST",
@@ -1690,7 +2432,7 @@
           "data": {
             "avg_success_rate": 39.0
           },
-          "rank": 9
+          "rank": 11
         }
       ]
     }
@@ -1752,6 +2494,30 @@
     }
   },
   {
+    "name": "Motus",
+    "paper_url": "https://arxiv.org/abs/2512.13030",
+    "pub_date": "2025-12",
+    "is_opensource": true,
+    "opensource_url": "https://github.com/thu-ml/Motus",
+    "is_rl": true,
+    "settings": [],
+    "benchmarks": {
+      "robotwin": [
+        {
+          "setting": "default",
+          "score": 87.02,
+          "is_standard": true,
+          "note": "",
+          "data": {
+            "easy": 88.66,
+            "hard": 87.02
+          },
+          "rank": 6
+        }
+      ]
+    }
+  },
+  {
     "name": "Evo-1",
     "paper_url": "https://arxiv.org/abs/2511.04555",
     "pub_date": "2025-11",
@@ -1775,7 +2541,7 @@
             "libero_90": null,
             "average": 94.8
           },
-          "rank": 47
+          "rank": 51
         }
       ],
       "metaworld": [
@@ -1926,7 +2692,7 @@
             "libero_90": null,
             "average": 97.0
           },
-          "rank": 33
+          "rank": 36
         }
       ],
       "libero_plus": [
@@ -1945,7 +2711,7 @@
             "layout": 79.9,
             "total": 79.0
           },
-          "rank": 7
+          "rank": 8
         }
       ]
     }
@@ -1991,7 +2757,7 @@
             "libero_90": null,
             "average": 95.0
           },
-          "rank": 46
+          "rank": 50
         }
       ]
     }
@@ -2067,7 +2833,7 @@
             "layout": 72.4,
             "total": 59.6
           },
-          "rank": 14
+          "rank": 15
         }
       ]
     }
@@ -2096,7 +2862,7 @@
             "libero_90": null,
             "average": 97.4
           },
-          "rank": 28
+          "rank": 31
         }
       ]
     }
@@ -2125,7 +2891,7 @@
             "libero_90": null,
             "average": 96.7
           },
-          "rank": 36
+          "rank": 39
         }
       ],
       "libero_plus": [
@@ -2144,7 +2910,7 @@
             "layout": 73.7,
             "total": 72.4
           },
-          "rank": 9
+          "rank": 10
         }
       ]
     }
@@ -2173,7 +2939,7 @@
             "libero_90": null,
             "average": 96.7
           },
-          "rank": 37
+          "rank": 40
         }
       ]
     }
@@ -2202,7 +2968,7 @@
             "libero_90": null,
             "average": 94.7
           },
-          "rank": 49
+          "rank": 53
         }
       ]
     }
@@ -2231,7 +2997,7 @@
             "libero_90": null,
             "average": 98.1
           },
-          "rank": 17
+          "rank": 19
         }
       ],
       "robochallenge": [
@@ -2245,6 +3011,19 @@
             "success_rate": 21.33
           },
           "rank": 9
+        }
+      ],
+      "robotwin": [
+        {
+          "setting": "default",
+          "score": 69.0,
+          "is_standard": true,
+          "note": "",
+          "data": {
+            "easy": 70.0,
+            "hard": 69.0
+          },
+          "rank": 10
         }
       ],
       "calvin_abc_d": [
@@ -2318,7 +3097,7 @@
             "libero_90": null,
             "average": 95.9
           },
-          "rank": 41
+          "rank": 44
         }
       ]
     }
@@ -2347,7 +3126,7 @@
             "libero_90": null,
             "average": 97.0
           },
-          "rank": 32
+          "rank": 35
         }
       ]
     }
@@ -2376,7 +3155,7 @@
             "libero_90": null,
             "average": 98.3
           },
-          "rank": 15
+          "rank": 17
         }
       ],
       "metaworld": [
@@ -2438,7 +3217,7 @@
             "libero_90": 98.6,
             "average": 98.1
           },
-          "rank": 18
+          "rank": 20
         }
       ]
     }
@@ -2491,7 +3270,7 @@
             "libero_90": null,
             "average": 91.1
           },
-          "rank": 56
+          "rank": 60
         }
       ]
     }
@@ -2581,90 +3360,6 @@
     }
   },
   {
-    "name": "HAMLET",
-    "paper_url": "https://arxiv.org/abs/2510.00695v3",
-    "pub_date": "2025-10",
-    "is_opensource": false,
-    "opensource_url": null,
-    "is_rl": false,
-    "settings": [],
-    "benchmarks": {
-      "libero": [
-        {
-          "setting": "default",
-          "score": 97.6,
-          "is_standard": true,
-          "note": "",
-          "data": {
-            "policy_setting": 1,
-            "spatial": 99.0,
-            "object": 100.0,
-            "goal": 99.2,
-            "long": 92.2,
-            "libero_90": null,
-            "average": 97.6
-          }
-        }
-      ]
-    }
-  },
-  {
-    "name": "Dejavu",
-    "paper_url": "https://arxiv.org/abs/2510.10181v3",
-    "pub_date": "2025-10",
-    "is_opensource": false,
-    "opensource_url": null,
-    "is_rl": false,
-    "settings": [],
-    "benchmarks": {
-      "libero": [
-        {
-          "setting": "default",
-          "score": 97.2,
-          "is_standard": true,
-          "note": "",
-          "data": {
-            "policy_setting": 0,
-            "spatial": 98.2,
-            "object": 98.2,
-            "goal": 97.6,
-            "long": 94.6,
-            "libero_90": null,
-            "average": 97.2
-          }
-        }
-      ]
-    }
-  },
-  {
-    "name": "RESample",
-    "paper_url": "https://arxiv.org/abs/2510.17640v3",
-    "pub_date": "2025-10",
-    "is_opensource": false,
-    "opensource_url": null,
-    "is_rl": false,
-    "settings": [],
-    "benchmarks": {
-      "libero": [
-        {
-          "setting": "default",
-          "score": 92.9,
-          "is_standard": true,
-          "note": "",
-          "data": {
-            "policy_setting": 2,
-            "spatial": 96.4,
-            "object": 96.4,
-            "goal": 91.4,
-            "long": 87.4,
-            "libero_90": null,
-            "average": 92.9
-          }
-        }
-      ]
-    }
-  },
-  {
     "name": "Flower VLA",
     "paper_url": "https://arxiv.org/pdf/2509.04996",
     "pub_date": "2025-09",
@@ -2688,7 +3383,7 @@
             "libero_90": 94.7,
             "average": 96.9
           },
-          "rank": 35
+          "rank": 38
         }
       ],
       "calvin_abcd_d": [
@@ -2825,7 +3520,7 @@
             "libero_90": null,
             "average": 98.5
           },
-          "rank": 10
+          "rank": 11
         }
       ],
       "calvin_abc_d": [
@@ -2951,7 +3646,7 @@
             "libero_90": null,
             "average": 74.0
           },
-          "rank": 71
+          "rank": 75
         }
       ]
     }
@@ -2980,7 +3675,7 @@
             "libero_90": 95.6,
             "average": 96.5
           },
-          "rank": 39
+          "rank": 42
         }
       ]
     }
@@ -3009,7 +3704,7 @@
             "libero_90": null,
             "average": 86.6
           },
-          "rank": 60
+          "rank": 64
         }
       ]
     }
@@ -3038,7 +3733,7 @@
             "libero_90": null,
             "average": 96.3
           },
-          "rank": 40
+          "rank": 43
         }
       ]
     }
@@ -3095,7 +3790,7 @@
             "libero_90": null,
             "average": 98.2
           },
-          "rank": 16
+          "rank": 18
         }
       ]
     }
@@ -3134,7 +3829,7 @@
             "libero_90": null,
             "average": 98.0
           },
-          "rank": 20
+          "rank": 23
         }
       ]
     }
@@ -3250,7 +3945,7 @@
             "libero_90": null,
             "average": 92.6
           },
-          "rank": 55
+          "rank": 59
         }
       ],
       "calvin_abc_d": [
@@ -3306,7 +4001,7 @@
             "libero_90": null,
             "average": 95.8
           },
-          "rank": 42
+          "rank": 45
         }
       ]
     }
@@ -3335,7 +4030,7 @@
             "libero_90": null,
             "average": 88.8
           },
-          "rank": 57
+          "rank": 61
         }
       ],
       "metaworld": [
@@ -3380,7 +4075,7 @@
             "libero_90": null,
             "average": 88.6
           },
-          "rank": 58
+          "rank": 62
         }
       ]
     }
@@ -3409,7 +4104,7 @@
             "libero_90": null,
             "average": 95.5
           },
-          "rank": 43
+          "rank": 47
         }
       ],
       "calvin_abcd_d": [
@@ -3472,7 +4167,7 @@
             "libero_90": null,
             "average": 81.8
           },
-          "rank": 63
+          "rank": 67
         }
       ],
       "libero_plus": [
@@ -3491,7 +4186,7 @@
             "layout": 38.0,
             "total": 25.0
           },
-          "rank": 19
+          "rank": 20
         }
       ]
     }
@@ -3520,7 +4215,7 @@
             "libero_90": null,
             "average": 94.8
           },
-          "rank": 48
+          "rank": 52
         }
       ]
     }
@@ -3604,7 +4299,7 @@
             "libero_90": 96.0,
             "average": 94.3
           },
-          "rank": 50
+          "rank": 54
         }
       ]
     }
@@ -3633,7 +4328,7 @@
             "libero_90": null,
             "average": 81.0
           },
-          "rank": 64
+          "rank": 68
         }
       ]
     }
@@ -3690,7 +4385,7 @@
             "libero_90": null,
             "average": 95.2
           },
-          "rank": 45
+          "rank": 49
         }
       ],
       "libero_plus": [
@@ -3709,7 +4404,7 @@
             "layout": 31.9,
             "total": 43.9
           },
-          "rank": 17
+          "rank": 18
         }
       ]
     }
@@ -3820,7 +4515,7 @@
             "libero_90": null,
             "average": 97.5
           },
-          "rank": 26
+          "rank": 29
         }
       ],
       "libero_plus": [
@@ -3839,7 +4534,7 @@
             "layout": 74.2,
             "total": 68.4
           },
-          "rank": 11
+          "rank": 12
         }
       ]
     }
@@ -3868,17 +4563,17 @@
             "libero_90": null,
             "average": 98.1
           },
-          "rank": 19
+          "rank": 21
         }
       ]
     }
   },
   {
     "name": "pi0.5",
-    "paper_url": null,
+    "paper_url": "https://arxiv.org/abs/2504.16054",
     "pub_date": "2025-04",
     "is_opensource": true,
-    "opensource_url": null,
+    "opensource_url": "https://github.com/Physical-Intelligence/openpi",
     "is_rl": false,
     "settings": [
       "generalist"
@@ -3899,7 +4594,7 @@
             "libero_90": null,
             "average": 96.9
           },
-          "rank": 34
+          "rank": 37
         }
       ],
       "libero_plus": [
@@ -3944,6 +4639,19 @@
           },
           "rank": 10
         }
+      ],
+      "robotwin": [
+        {
+          "setting": "default",
+          "score": 76.76,
+          "is_standard": true,
+          "note": "",
+          "data": {
+            "easy": 82.74,
+            "hard": 76.76
+          },
+          "rank": 9
+        }
       ]
     }
   },
@@ -3971,7 +4679,7 @@
             "libero_90": null,
             "average": 87.9
           },
-          "rank": 59
+          "rank": 63
         }
       ],
       "libero_plus": [
@@ -3990,7 +4698,7 @@
             "layout": 62.1,
             "total": 39.0
           },
-          "rank": 18
+          "rank": 19
         }
       ]
     }
@@ -4019,7 +4727,7 @@
             "libero_90": null,
             "average": 93.9
           },
-          "rank": 54
+          "rank": 58
         }
       ]
     }
@@ -4169,6 +4877,19 @@
           },
           "rank": 11
         }
+      ],
+      "robotwin": [
+        {
+          "setting": "default",
+          "score": 13.72,
+          "is_standard": true,
+          "note": "",
+          "data": {
+            "easy": 34.5,
+            "hard": 13.72
+          },
+          "rank": 12
+        }
       ]
     }
   },
@@ -4196,7 +4917,7 @@
             "libero_90": null,
             "average": 82.4
           },
-          "rank": 62
+          "rank": 66
         }
       ],
       "calvin_abc_d": [
@@ -4247,7 +4968,7 @@
             "libero_90": null,
             "average": 95.3
           },
-          "rank": 44
+          "rank": 48
         },
         {
           "setting": "wrist & third-person images",
@@ -4263,7 +4984,7 @@
             "libero_90": null,
             "average": 97.1
           },
-          "rank": 31
+          "rank": 34
         }
       ],
       "libero_plus": [
@@ -4282,7 +5003,7 @@
             "layout": 74.2,
             "total": 69.6
           },
-          "rank": 10
+          "rank": 11
         },
         {
           "setting": "mix-sft",
@@ -4299,7 +5020,7 @@
             "layout": 68.7,
             "total": 67.9
           },
-          "rank": 12
+          "rank": 13
         },
         {
           "setting": "without wrist input",
@@ -4316,7 +5037,7 @@
             "layout": 69.9,
             "total": 55.8
           },
-          "rank": 15
+          "rank": 16
         }
       ],
       "robochallenge": [
@@ -4358,7 +5079,7 @@
             "libero_90": null,
             "average": 97.4
           },
-          "rank": 27
+          "rank": 30
         }
       ]
     }
@@ -4387,7 +5108,7 @@
             "libero_90": null,
             "average": 85.5
           },
-          "rank": 61
+          "rank": 65
         }
       ],
       "libero_plus": [
@@ -4406,7 +5127,7 @@
             "layout": 68.8,
             "total": 61.6
           },
-          "rank": 13
+          "rank": 14
         }
       ]
     }
@@ -4480,7 +5201,7 @@
             "libero_90": 73.0,
             "average": 74.0
           },
-          "rank": 70
+          "rank": 74
         }
       ]
     }
@@ -4509,7 +5230,7 @@
             "libero_90": null,
             "average": 78.1
           },
-          "rank": 66
+          "rank": 70
         }
       ]
     }
@@ -4564,7 +5285,7 @@
             "libero_90": null,
             "average": 74.8
           },
-          "rank": 69
+          "rank": 73
         }
       ]
     }
@@ -4810,7 +5531,7 @@
             "libero_90": null,
             "average": 80.2
           },
-          "rank": 65
+          "rank": 69
         }
       ]
     }
@@ -4893,7 +5614,7 @@
             "libero_90": null,
             "average": 94.2
           },
-          "rank": 51
+          "rank": 55
         }
       ],
       "libero_plus": [
@@ -4912,7 +5633,7 @@
             "layout": 68.9,
             "total": 53.6
           },
-          "rank": 16
+          "rank": 17
         }
       ],
       "metaworld": [
@@ -4953,6 +5674,19 @@
             "success_rate": 9.0
           },
           "rank": 14
+        }
+      ],
+      "robotwin": [
+        {
+          "setting": "default",
+          "score": 16.34,
+          "is_standard": true,
+          "note": "",
+          "data": {
+            "easy": 46.42,
+            "hard": 16.34
+          },
+          "rank": 11
         }
       ]
     }
@@ -5035,7 +5769,7 @@
             "inst5": 0.408,
             "avg_len": 3.18
           },
-          "rank": 5
+          "rank": 6
         }
       ]
     }
@@ -5253,7 +5987,7 @@
             "inst5": 0.458,
             "avg_len": 3.42
           },
-          "rank": 4
+          "rank": 5
         }
       ]
     }
@@ -5282,7 +6016,7 @@
             "libero_90": null,
             "average": 76.5
           },
-          "rank": 67
+          "rank": 71
         }
       ],
       "libero_plus": [
@@ -5301,7 +6035,7 @@
             "layout": 28.5,
             "total": 15.6
           },
-          "rank": 20
+          "rank": 21
         }
       ]
     }
@@ -5427,7 +6161,7 @@
             "libero_90": null,
             "average": 75.1
           },
-          "rank": 68
+          "rank": 72
         }
       ]
     }
@@ -5577,7 +6311,7 @@
             "inst5": 0.192,
             "avg_len": 2.12
           },
-          "rank": 11
+          "rank": 12
         }
       ]
     }
@@ -5691,7 +6425,7 @@
             "inst5": 0.353,
             "avg_len": 2.98
           },
-          "rank": 6
+          "rank": 7
         }
       ]
     }
@@ -5773,7 +6507,7 @@
             "inst5": 0.356,
             "avg_len": 2.97
           },
-          "rank": 7
+          "rank": 8
         }
       ]
     }
@@ -5846,7 +6580,7 @@
             "inst5": 0.286,
             "avg_len": 2.67
           },
-          "rank": 9
+          "rank": 10
         }
       ]
     }
@@ -5875,7 +6609,7 @@
             "libero_90": null,
             "average": 72.4
           },
-          "rank": 72
+          "rank": 76
         }
       ],
       "metaworld": [
@@ -5892,6 +6626,19 @@
             "average": 10.5
           },
           "rank": 7
+        }
+      ],
+      "robotwin": [
+        {
+          "setting": "default",
+          "score": 0.64,
+          "is_standard": true,
+          "note": "",
+          "data": {
+            "easy": 28.04,
+            "hard": 0.64
+          },
+          "rank": 13
         }
       ],
       "calvin_abc_d": [
@@ -6008,7 +6755,7 @@
             "inst5": 0.322,
             "avg_len": 2.88
           },
-          "rank": 8
+          "rank": 9
         }
       ]
     }
@@ -6070,7 +6817,7 @@
             "inst5": 0.283,
             "avg_len": 2.64
           },
-          "rank": 10
+          "rank": 11
         }
       ]
     }

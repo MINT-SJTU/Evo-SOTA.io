@@ -125,15 +125,20 @@ export default function Home() {
 
     // 格式化新闻内容：榜单用粗体+蓝色，模型用斜体+紫色
     const formatNewsContent = (content: string) => {
+        const escapeRegExp = (value: string) => value.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
+
         // 榜单列表（需要粗体和蓝色）
         const benchmarks = ['RoboTwin 2.0', 'RoboChallenge', 'RoboCasa-GR1-Tabletop', 'LIBERO Plus', 'LIBERO', 'Meta-World', 'CALVIN', 'Libero Plus', 'Libero', 'Calvin', 'Adroit', 'DexArt', 'Bi-DexHands'];
         // 模型列表（需要斜体和紫色）
         const models = [
+            'AIM', 'Fast-WAM', 'HoloBrain-0', 'InternVLA-A1', 'AnchorRefine', 'ST-pi', 'CorridorVLA', 'JoyAI-RA 0.1',
+            'LingBot-VLA', 'LoHo-Manip', 'OmniVLA-RL', 'PokeVLA', 'GeCO', 'M^2-VLA', 'Libra-VLA', 'DIAL', 'CF-VLA',
+            'PRTS', 'LaST-R1', 'Motus', 'IVLR', 'MotuBrain', 'STARRY', 'HALO', 'LatentBridge', 'MolmoAct2', 'StreamVLA',
             'DeepThinkVLA', 'Dadu-Corki', 'RoboTron Mani', 'CronusVLA', 'InstructVLA', 'InternVLA-M1', 'ACoT-VLA',
             'OpenVLA', 'Pi0', 'RIPT', 'NORA-1.5', 'Being-H0.5', 'EO-1', 'DreamVLA', 'Rlinf-VLA', 'pi-RL', 'UnifoLM-VLA-0',
             'Giga-Brain-0.1', 'RDT-1B', 'Abot-M0', 'DM0', 'Xiaomi-Robotics-0', 'VLA-JEPA', 'JEPA-VLA', 'Pose-VLA', 'pi-StepNFT',
-            'QuantVLA', 'Fast-ThinkAct', 'ATA', 'SRPO', 'LingBot-VA', 'RynnVLA-002', 'X-VLA', 'SaiVLA-0', 'Atomic VLA', 'FutureVLA', 
-            'MergeVLA', 'GST-VLA', 'ReViP', 'DiT4DiT', 'Cosmos Policy', 'SimVLA', 'CORAL', 'HiF-VLA', 'AVA-VLA', 'VLA-RFT', 'Mantis', 
+            'QuantVLA', 'Fast-ThinkAct', 'ATA', 'SRPO', 'LingBot-VA', 'RynnVLA-002', 'X-VLA', 'SaiVLA-0', 'Atomic VLA', 'FutureVLA',
+            'MergeVLA', 'GST-VLA', 'ReViP', 'DiT4DiT', 'Cosmos Policy', 'SimVLA', 'CORAL', 'HiF-VLA', 'AVA-VLA', 'VLA-RFT', 'Mantis',
             'ROCKET', 'Dual-CoT VLA', 'VP-VLA', 'GR00T', 'DFM-VLA', 'MMaDA-VLA', 'StreamingVLA', '3D-CAVLA', 'FocusVLA', 'GeoPredict', 'TAG', 'A1', 'pi0.5',
             'HAMLET', 'StarVLA-alpha', 'Dejavu', 'AAC', 'RESample', 'ProGAL-VLA'
         ];
@@ -143,7 +148,7 @@ export default function Home() {
 
         // 先处理榜单
         benchmarks.forEach(benchmark => {
-            const regex = new RegExp(`(${benchmark})`, 'g');
+            const regex = new RegExp(`(${escapeRegExp(benchmark)})`, 'g');
             formattedContent = formattedContent.replace(
                 regex,
                 '<span class="font-bold text-amber-700">$1</span>'
@@ -152,7 +157,7 @@ export default function Home() {
 
         // 再处理模型
         models.forEach(model => {
-            const regex = new RegExp(`(${model})`, 'g');
+            const regex = new RegExp(`(${escapeRegExp(model)})`, 'g');
             formattedContent = formattedContent.replace(
                 regex,
                 '<span class="italic text-amber-700">$1</span>'
@@ -160,7 +165,7 @@ export default function Home() {
         });
 
         redImportant.forEach(festival => {
-            const regex = new RegExp(`(${festival})`, 'g');
+            const regex = new RegExp(`(${escapeRegExp(festival)})`, 'g');
             formattedContent = formattedContent.replace(
                 regex,
                 '<span class="font-bold text-red-700">$1</span>'
@@ -169,6 +174,7 @@ export default function Home() {
 
         return formattedContent;
     };
+
 
     // 格式化分数：根据不同 benchmark 使用不同小数位数
     // CALVIN, RoboChallenge: 两位小数

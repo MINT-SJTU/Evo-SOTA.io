@@ -1,6 +1,11 @@
 {
     "news": [
         {
+            "date": "🗓️ 2026-05-06: ",
+            "content_en": "🚀 Major update: New Leaderboard: RoboTwin 2.0 leaderboard added and related models updated. New models: Add Fast-WAM, HoloBrain-0, InternVLA-A1, ST-pi, CorridorVLA, LoHo-Manip, OmniVLA-RL, PokeVLA, GeCO, M^2-VLA, Libra-VLA, CF-VLA, PRTS, LaST-R1, IVLR, LatentBridge, MolmoAct2, StreamVLA to LIBERO; Add HoloBrain-0, PokeVLA, Libra-VLA, PRTS to LIBERO Plus; Add AnchorRefine, CF-VLA to CALVIN; Add JoyAI-RA 0.1, DIAL, LatentBridge to Robocasa-GR1-Tabletop",
+            "content_zh": "🚀 重大更新：新增榜单：增加了 RoboTwin 2.0榜单以及更新了相关模型。新增模型：增加 Fast-WAM, HoloBrain-0, InternVLA-A1, ST-pi, CorridorVLA, LoHo-Manip, OmniVLA-RL, PokeVLA, GeCO, M^2-VLA, Libra-VLA, CF-VLA, PRTS, LaST-R1, IVLR, LatentBridge, MolmoAct2, StreamVLA 到 LIBERO; 增加 HoloBrain-0, PokeVLA, Libra-VLA, PRTS 到 LIBERO Plus; 增加 AnchorRefine, CF-VLA 到 CALVIN; 增加 JoyAI-RA 0.1, DIAL, LatentBridge 到 Robocasa-GR1-Tabletop"
+        },
+        {
             "date": "🗓️ 2026-04-17: ",
             "content_en": "New models: Add HAMLET, StarVLA-alpha, Dejavu, AAC, RESample to LIBERO, StarVLA-alpha, ProGAL-VLA to LIBERO Plus, StarVLA-alpha to RoboCasa-GR1-Tabletop.",
             "content_zh": "新增模型：增加 HAMLET, StarVLA-alpha, Dejavu, AAC, RESample 到 LIBERO, StarVLA-alpha, ProGAL-VLA 到 LIBERO Plus, StarVLA-alpha 到 RoboCasa-GR1-Tabletop"
