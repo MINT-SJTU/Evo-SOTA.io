@@ -36,6 +36,7 @@ const BENCHMARK_KEYS = [
     'calvin_d_d',
     'robochallenge',
     'robocasa',
+    'robotwin',
 ] as const;
 
 const BENCHMARK_HREFS: Record<string, string> = {
@@ -47,6 +48,7 @@ const BENCHMARK_HREFS: Record<string, string> = {
     calvin_d_d: '/benchmarks/calvin',
     robochallenge: '/benchmarks/robochallenge',
     robocasa: '/benchmarks/robocasa_gr1_tabletop',
+    robotwin: '/benchmarks/robotwin2',
 };
 
 // 用于子指标的人类可读标签
@@ -59,6 +61,7 @@ const DATA_LABELS: Record<string, Record<string, string>> = {
     calvin_d_d: { inst1: 'Inst1', inst2: 'Inst2', inst3: 'Inst3', inst4: 'Inst4', inst5: 'Inst5', avg_len: 'Avg. Len.' },
     robochallenge: { score: 'Score', success_rate: 'Success Rate' },
     robocasa: { avg_success_rate: 'Avg. Success Rate' },
+    robotwin: { easy: 'Easy', hard: 'Hard' },
 };
 
 // 模糊匹配

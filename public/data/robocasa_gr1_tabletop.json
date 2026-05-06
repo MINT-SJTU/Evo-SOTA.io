@@ -4,7 +4,7 @@
       "name": "ABot-M0",
       "base_name": "ABot-M0",
       "setting": "",
-      "paper_url": "https://github.com/amap-cvlab/ABot-Manipulation/blob/main/assets/ABot-M0_Technical_Report.pdf",
+      "paper_url": "https://arxiv.org/abs/2602.11236",
       "pub_date": "2026-02",
       "is_opensource": true,
       "opensource_url": "https://github.com/amap-cvlab/ABot-Manipulation",
@@ -14,6 +14,21 @@
       "is_standard": true,
       "note": "",
       "rank": 1
+    },
+    {
+      "name": "StarVLA-alpha",
+      "base_name": "StarVLA-alpha",
+      "setting": "",
+      "paper_url": "https://arxiv.org/abs/2604.11757",
+      "pub_date": "2026-04",
+      "is_opensource": true,
+      "opensource_url": "https://github.com/starVLA/starVLA",
+      "is_rl": false,
+      "avg_success_rate": 57.3,
+      "source": "original",
+      "is_standard": true,
+      "note": "",
+      "rank": 2
     },
     {
       "name": "TwinBrainVLA",
@@ -28,7 +43,7 @@
       "source": "original",
       "is_standard": true,
       "note": "",
-      "rank": 2
+      "rank": 3
     },
     {
       "name": "Langforce",
@@ -43,7 +58,7 @@
       "source": "original",
       "is_standard": true,
       "note": "",
-      "rank": 3
+      "rank": 4
     },
     {
       "name": "StarVLA (Qwen3OFT)",
@@ -58,7 +73,7 @@
       "source": "original",
       "is_standard": true,
       "note": "",
-      "rank": 4
+      "rank": 5
     },
     {
       "name": "StarVLA (Qwen3GR00T)",
@@ -73,7 +88,7 @@
       "source": "original",
       "is_standard": true,
       "note": "",
-      "rank": 5
+      "rank": 6
     },
     {
       "name": "GR00T-N1.6",
@@ -88,7 +103,7 @@
       "source": "from StarVLA",
       "is_standard": true,
       "note": "",
-      "rank": 6
+      "rank": 7
     },
     {
       "name": "StarVLA (Qwen3PI)",
@@ -103,7 +118,7 @@
       "source": "original",
       "is_standard": true,
       "note": "",
-      "rank": 7
+      "rank": 8
     },
     {
       "name": "StarVLA (Qwen3FAST)",
@@ -118,7 +133,7 @@
       "source": "original",
       "is_standard": true,
       "note": "",
-      "rank": 8
+      "rank": 9
     }
   ],
   "standard_closed": [

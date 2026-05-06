@@ -27,6 +27,7 @@ export default function Navbar() {
     };
 
     const vlaBenchmarks = [
+        { name: 'RoboTwin 2.0', href: '/benchmarks/robotwin2' },
         { name: 'LIBERO Plus', href: '/benchmarks/liberoplus' },
         { name: 'LIBERO', href: '/benchmarks/libero' },
         { name: 'Meta-World', href: '/benchmarks/metaworld' },

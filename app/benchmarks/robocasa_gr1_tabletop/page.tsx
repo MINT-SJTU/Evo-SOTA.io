@@ -32,6 +32,7 @@ export default function RoboCasaPage() {
     const [loading, setLoading] = useState(true);
     const [expandedRows, setExpandedRows] = useState<Set<string>>(new Set());
     const [showClosedSource, setShowClosedSource] = useState(false);
+    const [showAllMetrics, setShowAllMetrics] = useState(false);  // RoboCasa has single metric, kept for UI consistency
     const [sortBy, setSortBy] = useState<'rank' | 'avg_success_rate' | 'date'>('rank');
     const [sortOrder, setSortOrder] = useState<'asc' | 'desc'>('asc');
     const [modelTypeFilter, setModelTypeFilter] = useState<'all' | 'sft' | 'rl'>('sft');
@@ -58,6 +59,8 @@ export default function RoboCasaPage() {
             paper: 'Paper',
             github: 'Code',
             clickToExpand: 'Click row to expand details',
+            showAllMetrics: 'Show All Metrics',
+            hideMetrics: 'Hide Metrics',
             showAllModels: 'Include All Models',
             openSourceOnly: 'Open-Source Only',
             standardModels: 'Standard Evaluation Models',
@@ -83,6 +86,8 @@ export default function RoboCasaPage() {
             paper: '论文',
             github: '代码',
             clickToExpand: '点击行展开详情',
+            showAllMetrics: '展开所有指标',
+            hideMetrics: '收起指标',
             showAllModels: '显示全部模型',
             openSourceOnly: '仅开源模型',
             standardModels: '标准测试模型',
@@ -233,7 +238,8 @@ export default function RoboCasaPage() {
                                     )}
                                 </div>
                             </th>
-                            <th className="px-4 py-3 text-left text-sm font-semibold text-slate-700">{t.paper}</th>
+                            <th className="px-2 py-3 text-center text-sm font-semibold text-slate-700">{t.paper}</th>
+                            <th className="px-2 py-3 text-center text-sm font-semibold text-slate-700">{t.github}</th>
                         </tr>
                     </thead>
                     <tbody>
@@ -269,7 +275,7 @@ export default function RoboCasaPage() {
                                             </span>
                                         </td>
                                         <td className="px-4 py-3 text-slate-600 text-sm">{model.pub_date || '-'}</td>
-                                        <td className="px-4 py-3">
+                                        <td className="px-2 py-3 text-right">
                                             {model.paper_url && (
                                                 <a
                                                     href={model.paper_url}
@@ -282,10 +288,23 @@ export default function RoboCasaPage() {
                                                 </a>
                                             )}
                                         </td>
+                                        <td className="px-2 py-3 text-right">
+                                            {model.opensource_url && (
+                                                <a
+                                                    href={model.opensource_url}
+                                                    target="_blank"
+                                                    rel="noopener noreferrer"
+                                                    className="text-slate-600 hover:text-slate-800 hover:underline text-sm"
+                                                    onClick={(e) => e.stopPropagation()}
+                                                >
+                                                    📦 {t.github}
+                                                </a>
+                                            )}
+                                        </td>
                                     </tr>
                                     {expandedRows.has(rowKey) && (
                                         <tr key={`${rowKey}-expanded`} className="bg-rose-50 border-b border-slate-200">
-                                            <td colSpan={5} className="px-4 py-4">
+                                            <td colSpan={6} className="px-4 py-4">
                                                 <div className="ml-12 space-y-4">
                                                     <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                                                         <div className="bg-rose-100 rounded-lg p-3 shadow-sm">

@@ -1,11 +1,11 @@
 {
   "libero": {
-    "total_models": 112,
-    "standard_opensource_count": 69,
-    "standard_closed_count": 25,
+    "total_models": 119,
+    "standard_opensource_count": 72,
+    "standard_closed_count": 29,
     "non_standard_count": 18,
     "model_type_count": {
-      "sft": 60,
+      "sft": 63,
       "rl": 9
     },
     "primary_metric": "Average Success Rate (%)",
@@ -92,12 +92,12 @@
     ]
   },
   "libero_plus": {
-    "total_models": 22,
-    "standard_opensource_count": 18,
-    "standard_closed_count": 3,
+    "total_models": 25,
+    "standard_opensource_count": 20,
+    "standard_closed_count": 4,
     "non_standard_count": 1,
     "model_type_count": {
-      "sft": 16,
+      "sft": 18,
       "rl": 2
     },
     "primary_metric": "Total Success Rate (%)",
@@ -123,8 +123,8 @@
         "rank": 4
       },
       {
-        "name": "VLA-JEPA",
-        "score": 79.5,
+        "name": "StarVLA-alpha",
+        "score": 79.7,
         "rank": 5
       }
     ],
@@ -150,8 +150,8 @@
         "rank": 4
       },
       {
-        "name": "VLA-JEPA",
-        "score": 79.5,
+        "name": "StarVLA-alpha",
+        "score": 79.7,
         "rank": 5
       }
     ],
@@ -241,10 +241,10 @@
     ]
   },
   "robochallenge": {
-    "total_models": 15,
+    "total_models": 16,
     "standard_opensource_count": 15,
     "standard_closed_count": 0,
-    "non_standard_count": 0,
+    "non_standard_count": 1,
     "model_type_count": {
       "sft": 15,
       "rl": 0
@@ -307,12 +307,12 @@
     "top_5_rl": []
   },
   "robocasa": {
-    "total_models": 11,
-    "standard_opensource_count": 8,
+    "total_models": 12,
+    "standard_opensource_count": 9,
     "standard_closed_count": 3,
     "non_standard_count": 0,
     "model_type_count": {
-      "sft": 8,
+      "sft": 9,
       "rl": 0
     },
     "primary_metric": "Average Success Rate (%)",
@@ -323,23 +323,23 @@
         "rank": 1
       },
       {
+        "name": "StarVLA-alpha",
+        "score": 57.3,
+        "rank": 2
+      },
+      {
         "name": "TwinBrainVLA",
         "score": 54.6,
-        "rank": 2
+        "rank": 3
       },
       {
         "name": "Langforce",
         "score": 52.6,
-        "rank": 3
+        "rank": 4
       },
       {
         "name": "StarVLA (Qwen3OFT)",
         "score": 48.8,
-        "rank": 4
-      },
-      {
-        "name": "StarVLA (Qwen3GR00T)",
-        "score": 47.8,
         "rank": 5
       }
     ],
@@ -350,23 +350,89 @@
         "rank": 1
       },
       {
+        "name": "StarVLA-alpha",
+        "score": 57.3,
+        "rank": 2
+      },
+      {
         "name": "TwinBrainVLA",
         "score": 54.6,
-        "rank": 2
+        "rank": 3
       },
       {
         "name": "Langforce",
         "score": 52.6,
-        "rank": 3
+        "rank": 4
       },
       {
         "name": "StarVLA (Qwen3OFT)",
         "score": 48.8,
+        "rank": 5
+      }
+    ],
+    "top_5_rl": []
+  },
+  "robotwin": {
+    "total_models": 6,
+    "standard_opensource_count": 5,
+    "standard_closed_count": 1,
+    "non_standard_count": 0,
+    "model_type_count": {
+      "sft": 5,
+      "rl": 0
+    },
+    "primary_metric": "Hard Success Rate (%)",
+    "top_5": [
+      {
+        "name": "HoloBrain-0",
+        "score": 92.3,
+        "rank": 1
+      },
+      {
+        "name": "Fast-WAM",
+        "score": 91.8,
+        "rank": 2
+      },
+      {
+        "name": "LingBot-VA",
+        "score": 91.6,
+        "rank": 3
+      },
+      {
+        "name": "InternVLA-A1",
+        "score": 89.6,
         "rank": 4
       },
       {
-        "name": "StarVLA (Qwen3GR00T)",
-        "score": 47.8,
+        "name": "StarVLA-alpha",
+        "score": 88.3,
+        "rank": 5
+      }
+    ],
+    "top_5_sft": [
+      {
+        "name": "HoloBrain-0",
+        "score": 92.3,
+        "rank": 1
+      },
+      {
+        "name": "Fast-WAM",
+        "score": 91.8,
+        "rank": 2
+      },
+      {
+        "name": "LingBot-VA",
+        "score": 91.6,
+        "rank": 3
+      },
+      {
+        "name": "InternVLA-A1",
+        "score": 89.6,
+        "rank": 4
+      },
+      {
+        "name": "StarVLA-alpha",
+        "score": 88.3,
         "rank": 5
       }
     ],

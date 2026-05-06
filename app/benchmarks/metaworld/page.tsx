@@ -253,7 +253,8 @@ export default function MetaWorldPage() {
                                     )}
                                 </div>
                             </th>
-                            <th className="px-4 py-3 text-left text-sm font-semibold text-slate-700">{t.paper}</th>
+                            <th className="px-2 py-3 text-center text-sm font-semibold text-slate-700">{t.paper}</th>
+                            <th className="px-2 py-3 text-center text-sm font-semibold text-slate-700">{t.github}</th>
                         </tr>
                     </thead>
                     <tbody>
@@ -298,7 +299,7 @@ export default function MetaWorldPage() {
                                             </>
                                         )}
                                         <td className="px-4 py-3 text-slate-600 text-sm">{model.pub_date || '-'}</td>
-                                        <td className="px-4 py-3">
+                                        <td className="px-2 py-3 text-right">
                                             {model.paper_url && (
                                                 <a
                                                     href={model.paper_url}
@@ -311,11 +312,24 @@ export default function MetaWorldPage() {
                                                 </a>
                                             )}
                                         </td>
+                                        <td className="px-2 py-3 text-right">
+                                            {model.opensource_url && (
+                                                <a
+                                                    href={model.opensource_url}
+                                                    target="_blank"
+                                                    rel="noopener noreferrer"
+                                                    className="text-slate-600 hover:text-slate-800 hover:underline text-sm"
+                                                    onClick={(e) => e.stopPropagation()}
+                                                >
+                                                    📦 {t.github}
+                                                </a>
+                                            )}
+                                        </td>
                                     </tr>
                                     {/* Expanded Details Row */}
                                     {expandedRows.has(rowKey) && (
                                         <tr key={`${rowKey}-expanded`} className="bg-purple-50 border-b border-slate-200">
-                                            <td colSpan={showAllMetrics ? 9 : 5} className="px-4 py-4">
+                                            <td colSpan={showAllMetrics ? 10 : 6} className="px-4 py-4">
                                                 <div className="ml-12 space-y-4">
                                                     {/* Sub-metrics */}
                                                     {!showAllMetrics && (

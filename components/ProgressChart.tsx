@@ -72,6 +72,15 @@ interface RoboCasaModel {
     is_opensource?: boolean;
 }
 
+interface RobotwinModel {
+    name: string;
+    pub_date: string | null;
+    easy: number | null;
+    hard: number | null;
+    paper_url?: string | null;
+    is_opensource?: boolean;
+}
+
 // 新的分类数据结构
 interface CategorizedData<T> {
     standard_opensource: T[];
@@ -115,7 +124,8 @@ const CustomTooltip = ({ active, payload }: { active?: boolean; payload?: Array<
                             data.benchmark === 'CALVIN' ? 'text-emerald-600' :
                                 data.benchmark === 'RoboChallenge' ? 'text-teal-600' :
                                     data.benchmark === 'RoboCasa-GR1-Tabletop' ? 'text-rose-600' :
-                                        'text-purple-600'
+                                        data.benchmark === 'RoboTwin 2.0' ? 'text-amber-600' :
+                                            'text-purple-600'
                         }`}>
                         {data.benchmark}
                     </span>
@@ -135,7 +145,8 @@ export default function ProgressChart() {
     const [metaworldData, setMetaworldData] = useState<DataPoint[]>([]);
     const [robochallengeData, setRobochallengeData] = useState<DataPoint[]>([]);
     const [robocasaData, setRobocasaData] = useState<DataPoint[]>([]);
-    const [selectedBenchmarks, setSelectedBenchmarks] = useState<string[]>(['LIBERO', 'LIBERO Plus', 'Meta-World', 'CALVIN', 'RoboChallenge', 'RoboCasa-GR1-Tabletop']);
+    const [robotwinData, setRobotwinData] = useState<DataPoint[]>([]);
+    const [selectedBenchmarks, setSelectedBenchmarks] = useState<string[]>(['LIBERO', 'LIBERO Plus', 'Meta-World', 'CALVIN', 'RoboChallenge', 'RoboCasa-GR1-Tabletop', 'RoboTwin 2.0']);
     const [showTopOnly, setShowTopOnly] = useState(false);
     const [showOpenSourceOnly, setShowOpenSourceOnly] = useState(false);
 
@@ -157,13 +168,14 @@ export default function ProgressChart() {
         // 加载数据
         const loadData = async () => {
             try {
-                const [liberoRes, liberoPlusRes, calvinRes, metaworldRes, robochallengeRes, robocasaRes] = await Promise.all([
+                const [liberoRes, liberoPlusRes, calvinRes, metaworldRes, robochallengeRes, robocasaRes, robotwinRes] = await Promise.all([
                     fetch(`/data/libero.json`),
                     fetch(`/data/liberoPlus.json`),
                     fetch(`/data/calvin.json`),
                     fetch(`/data/metaworld.json`),
                     fetch(`/data/robochallenge.json`),
-                    fetch(`/data/robocasa_gr1_tabletop.json`)
+                    fetch(`/data/robocasa_gr1_tabletop.json`),
+                    fetch(`/data/robotwin2.json`)
                 ]);
 
                 const libero: CategorizedData<LiberoModel> = await liberoRes.json();
@@ -172,6 +184,7 @@ export default function ProgressChart() {
                 const metaworld: CategorizedData<MetaworldModel> = await metaworldRes.json();
                 const robochallenge: CategorizedData<RoboChallengeModel> = await robochallengeRes.json();
                 const robocasa: CategorizedData<RoboCasaModel> = await robocasaRes.json();
+                const robotwin: CategorizedData<RobotwinModel> = await robotwinRes.json();
 
                 // 只使用标准模型数据（standard_opensource + standard_closed）
                 const standardLibero = [
@@ -293,6 +306,24 @@ export default function ProgressChart() {
                 setMetaworldData(metaworldPoints);
                 setRobochallengeData(robochallengePoints);
                 setRobocasaData(robocasaPoints);
+
+                // 处理 RoboTwin 2.0 数据
+                const standardRobotwin = [
+                    ...(robotwin.standard_opensource || []).map(m => ({ ...m, is_opensource: true })),
+                    ...(robotwin.standard_closed || []).map(m => ({ ...m, is_opensource: false }))
+                ];
+                const robotwinPoints: DataPoint[] = standardRobotwin
+                    .filter(m => m.hard !== null && m.pub_date)
+                    .map(m => ({
+                        name: m.name,
+                        date: parseDate(m.pub_date!),
+                        dateStr: formatDate(m.pub_date!),
+                        score: m.hard!,
+                        benchmark: 'RoboTwin 2.0',
+                        paper_url: m.paper_url || undefined,
+                        is_opensource: m.is_opensource
+                    }));
+                setRobotwinData(robotwinPoints);
             } catch (error) {
                 console.error('Error loading data:', error);
             }
@@ -324,7 +355,7 @@ export default function ProgressChart() {
     }, [showTopOnly, showOpenSourceOnly]);
 
     // 计算X轴范围
-    const allDates = [...liberoData, ...liberoPlusData, ...calvinData, ...metaworldData, ...robochallengeData, ...robocasaData].map(d => d.date);
+    const allDates = [...liberoData, ...liberoPlusData, ...calvinData, ...metaworldData, ...robochallengeData, ...robocasaData, ...robotwinData].map(d => d.date);
     const minDate = allDates.length ? Math.min(...allDates) : new Date(2023, 0, 1).getTime();
     const maxDate = allDates.length ? Math.max(...allDates) : new Date(2025, 11, 1).getTime();
 
@@ -359,7 +390,8 @@ export default function ProgressChart() {
             metaworldDesc: 'Meta-World: Success Rate (%)',
             robochallengeDesc: 'RoboChallenge: Score',
             robocasaDesc: 'RoboCasa-GR1-Tabletop: Success Rate (%)',
-            note: 'Note: CALVIN uses a different metric scale (0-5 tasks) compared to LIBERO, LIBERO Plus, Meta-World and RoboCasa-GR1-Tabletop (0-100%)',
+            robotwinDesc: 'RoboTwin 2.0: Hard Success Rate (%)',
+            note: 'Note: CALVIN uses a different metric scale (0-5 tasks) compared to LIBERO, LIBERO Plus, Meta-World, RoboCasa-GR1-Tabletop and RoboTwin 2.0 (0-100%)',
         },
         zh: {
             title: 'VLA 发展历程',
@@ -372,7 +404,8 @@ export default function ProgressChart() {
             metaworldDesc: 'Meta-World: 成功率 (%)',
             robochallengeDesc: 'RoboChallenge: 分数',
             robocasaDesc: 'RoboCasa-GR1-Tabletop: 成功率 (%)',
-            note: '注：CALVIN 使用不同的指标尺度 (0-5 任务数)，与 LIBERO、LIBERO Plus，Meta-World 和 RoboCasa-GR1-Tabletop (0-100%) 不同',
+            robotwinDesc: 'RoboTwin 2.0: Hard 成功率 (%)',
+            note: '注：CALVIN 使用不同的指标尺度 (0-5 任务数)，与 LIBERO、LIBERO Plus，Meta-World、RoboCasa-GR1-Tabletop 和 RoboTwin 2.0 (0-100%) 不同',
         }
     };
 
@@ -447,6 +480,15 @@ export default function ProgressChart() {
                         >
                             RoboCasa-GR1-Tabletop
                         </button>
+                        <button
+                            onClick={() => toggleBenchmark('RoboTwin 2.0')}
+                            className={`px-4 py-2 rounded-lg font-medium transition-all ${selectedBenchmarks.includes('RoboTwin 2.0')
+                                ? 'bg-amber-600 text-white shadow-md'
+                                : 'bg-white text-amber-600 border border-amber-200 hover:bg-amber-50'
+                                }`}
+                        >
+                            RoboTwin 2.0
+                        </button>
                     </div>
                     <label className="flex items-center gap-2 cursor-pointer">
                         <input
@@ -477,6 +519,7 @@ export default function ProgressChart() {
                     if (selectedBenchmarks.includes('CALVIN')) activeCharts.push('CALVIN');
                     if (selectedBenchmarks.includes('RoboChallenge')) activeCharts.push('RoboChallenge');
                     if (selectedBenchmarks.includes('RoboCasa-GR1-Tabletop')) activeCharts.push('RoboCasa-GR1-Tabletop');
+                    if (selectedBenchmarks.includes('RoboTwin 2.0')) activeCharts.push('RoboTwin 2.0');
                     const chartCount = activeCharts.length;
 
                     // 根据图表数量决定布局
@@ -494,7 +537,7 @@ export default function ProgressChart() {
                     const renderChart = (benchmark: string, index: number) => {
                         // 对于3张图的情况，第3张图需要居中显示
                         // 对于5张图的情况，第5张图需要居中显示
-                        const isLastInOdd = (chartCount === 3 && index === 2) || (chartCount === 5 && index === 4);
+                        const isLastInOdd = (chartCount === 3 && index === 2) || (chartCount === 5 && index === 4) || (chartCount === 7 && index === 6);
                         const chartWrapperClass = isLastInOdd
                             ? 'md:col-span-2 flex justify-center'
                             : '';
@@ -842,6 +885,63 @@ export default function ProgressChart() {
                                                     name="RoboCasa-GR1-Tabletop"
                                                     data={getDisplayData(robocasaData)}
                                                     fill="#f43f5e"
+                                                    fillOpacity={0.7}
+                                                />
+                                            </ScatterChart>
+                                        </ResponsiveContainer>
+                                    </div>
+                                </div>
+                            );
+                        }
+                        if (benchmark === 'RoboTwin 2.0') {
+                            return (
+                                <div key="robotwin" className={chartWrapperClass} style={chartStyle}>
+                                    <div className={`bg-white rounded-xl p-6 shadow-sm border border-slate-200 ${chartClass}`}>
+                                        <h3 className="text-lg font-semibold text-slate-700 mb-4">
+                                            {t.robotwinDesc}
+                                        </h3>
+                                        <ResponsiveContainer width="100%" height={350}>
+                                            <ScatterChart margin={{ top: 20, right: 20, bottom: 20, left: 10 }}>
+                                                <CartesianGrid strokeDasharray="3 3" stroke="#e2e8f0" />
+                                                <XAxis
+                                                    type="number"
+                                                    dataKey="date"
+                                                    domain={[minDate, maxDate]}
+                                                    tickFormatter={formatXAxis}
+                                                    tick={{ fill: '#64748b', fontSize: 12 }}
+                                                    axisLine={{ stroke: '#cbd5e1' }}
+                                                />
+                                                <YAxis
+                                                    type="number"
+                                                    dataKey="score"
+                                                    domain={[0, 100]}
+                                                    tick={{ fill: '#64748b', fontSize: 12 }}
+                                                    axisLine={{ stroke: '#cbd5e1' }}
+                                                    label={{
+                                                        value: 'Hard Success Rate (%)',
+                                                        angle: -90,
+                                                        position: 'insideLeft',
+                                                        style: { fill: '#64748b', fontSize: 12 }
+                                                    }}
+                                                />
+                                                <Tooltip content={<CustomTooltip />} />
+                                                <Legend />
+                                                <ReferenceLine
+                                                    x={new Date(2024, 0, 1).getTime()}
+                                                    stroke="#94a3b8"
+                                                    strokeDasharray="5 5"
+                                                    label={{ value: '2024', fill: '#94a3b8', fontSize: 10 }}
+                                                />
+                                                <ReferenceLine
+                                                    x={new Date(2025, 0, 1).getTime()}
+                                                    stroke="#94a3b8"
+                                                    strokeDasharray="5 5"
+                                                    label={{ value: '2025', fill: '#94a3b8', fontSize: 10 }}
+                                                />
+                                                <Scatter
+                                                    name="RoboTwin 2.0"
+                                                    data={getDisplayData(robotwinData)}
+                                                    fill="#d97706"
                                                     fillOpacity={0.7}
                                                 />
                                             </ScatterChart>
