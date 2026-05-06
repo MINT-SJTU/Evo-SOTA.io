@@ -2581,6 +2581,90 @@
     }
   },
   {
+    "name": "HAMLET",
+    "paper_url": "https://arxiv.org/abs/2510.00695v3",
+    "pub_date": "2025-10",
+    "is_opensource": false,
+    "opensource_url": null,
+    "is_rl": false,
+    "settings": [],
+    "benchmarks": {
+      "libero": [
+        {
+          "setting": "default",
+          "score": 97.6,
+          "is_standard": true,
+          "note": "",
+          "data": {
+            "policy_setting": 1,
+            "spatial": 99.0,
+            "object": 100.0,
+            "goal": 99.2,
+            "long": 92.2,
+            "libero_90": null,
+            "average": 97.6
+          }
+        }
+      ]
+    }
+  },
+  {
+    "name": "Dejavu",
+    "paper_url": "https://arxiv.org/abs/2510.10181v3",
+    "pub_date": "2025-10",
+    "is_opensource": false,
+    "opensource_url": null,
+    "is_rl": false,
+    "settings": [],
+    "benchmarks": {
+      "libero": [
+        {
+          "setting": "default",
+          "score": 97.2,
+          "is_standard": true,
+          "note": "",
+          "data": {
+            "policy_setting": 0,
+            "spatial": 98.2,
+            "object": 98.2,
+            "goal": 97.6,
+            "long": 94.6,
+            "libero_90": null,
+            "average": 97.2
+          }
+        }
+      ]
+    }
+  },
+  {
+    "name": "RESample",
+    "paper_url": "https://arxiv.org/abs/2510.17640v3",
+    "pub_date": "2025-10",
+    "is_opensource": false,
+    "opensource_url": null,
+    "is_rl": false,
+    "settings": [],
+    "benchmarks": {
+      "libero": [
+        {
+          "setting": "default",
+          "score": 92.9,
+          "is_standard": true,
+          "note": "",
+          "data": {
+            "policy_setting": 2,
+            "spatial": 96.4,
+            "object": 96.4,
+            "goal": 91.4,
+            "long": 87.4,
+            "libero_90": null,
+            "average": 92.9
+          }
+        }
+      ]
+    }
+  },
+  {
     "name": "Flower VLA",
     "paper_url": "https://arxiv.org/pdf/2509.04996",
     "pub_date": "2025-09",
