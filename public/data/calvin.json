@@ -712,7 +712,7 @@
         "name": "Dita",
         "base_name": "Dita",
         "setting": "",
-        "paper_url": "https://arxiv.org/abs/2410.15959v4",
+        "paper_url": "https://arxiv.org/abs/2410.15959",
         "pub_date": "2025-03",
         "is_opensource": true,
         "opensource_url": "https://github.com/RoboDita/Dita",
@@ -1031,6 +1031,26 @@
         "rank": 1
       },
       {
+        "name": "AnchorRefine",
+        "base_name": "AnchorRefine",
+        "setting": "",
+        "paper_url": "https://arxiv.org/abs/2604.17787",
+        "pub_date": "2026-04",
+        "is_opensource": false,
+        "opensource_url": null,
+        "is_rl": false,
+        "is_standard": true,
+        "note": "",
+        "inst1": 0.973,
+        "inst2": 0.931,
+        "inst3": 0.891,
+        "inst4": 0.837,
+        "inst5": 0.765,
+        "avg_len": 4.4,
+        "source": "original",
+        "rank": 2
+      },
+      {
         "name": "TriVLA",
         "base_name": "TriVLA",
         "setting": "",
@@ -1048,7 +1068,7 @@
         "inst5": 0.818,
         "avg_len": 4.37,
         "source": "original",
-        "rank": 2
+        "rank": 3
       },
       {
         "name": "OE-VLA",
@@ -1068,7 +1088,7 @@
         "inst5": 0.334,
         "avg_len": 2.99,
         "source": "original",
-        "rank": 3
+        "rank": 4
       },
       {
         "name": "UniPi",
@@ -1088,7 +1108,7 @@
         "inst5": 0.04,
         "avg_len": 0.92,
         "source": "from VPP & SuSIE",
-        "rank": 4
+        "rank": 5
       },
       {
         "name": "MCIL",
@@ -1108,7 +1128,7 @@
         "inst5": 0.0,
         "avg_len": 0.31,
         "source": "from RoboDual",
-        "rank": 5
+        "rank": 6
       }
     ],
     "non_standard": [
@@ -1277,6 +1297,26 @@
         "rank": 3
       },
       {
+        "name": "CF-VLA",
+        "base_name": "CF-VLA",
+        "setting": "",
+        "paper_url": "https://arxiv.org/abs/2604.24622",
+        "pub_date": "2026-04",
+        "is_opensource": true,
+        "opensource_url": "https://github.com/EmbodiedAI-RoboTron/CF-VLA",
+        "is_rl": false,
+        "is_standard": true,
+        "note": "",
+        "inst1": 91.1,
+        "inst2": 80.2,
+        "inst3": 71.8,
+        "inst4": 66.2,
+        "inst5": 57.3,
+        "avg_len": 3.67,
+        "source": "original",
+        "rank": 4
+      },
+      {
         "name": "DaDu-Corki-SW",
         "base_name": "DaDu-Corki-SW",
         "setting": "",
@@ -1294,7 +1334,7 @@
         "inst5": 0.458,
         "avg_len": 3.42,
         "source": "original",
-        "rank": 4
+        "rank": 5
       },
       {
         "name": "TaKSIE",
@@ -1314,7 +1354,7 @@
         "inst5": 0.408,
         "avg_len": 3.18,
         "source": "original",
-        "rank": 5
+        "rank": 6
       },
       {
         "name": "MT-ACT",
@@ -1334,7 +1374,7 @@
         "inst5": 0.353,
         "avg_len": 2.98,
         "source": "from MDT",
-        "rank": 6
+        "rank": 7
       },
       {
         "name": "Distill-D",
@@ -1354,7 +1394,7 @@
         "inst5": 0.356,
         "avg_len": 2.97,
         "source": "from MDT",
-        "rank": 7
+        "rank": 8
       },
       {
         "name": "LCD",
@@ -1374,7 +1414,7 @@
         "inst5": 0.322,
         "avg_len": 2.88,
         "source": "original",
-        "rank": 8
+        "rank": 9
       },
       {
         "name": "SPIL",
@@ -1394,7 +1434,7 @@
         "inst5": 0.286,
         "avg_len": 2.67,
         "source": "original",
-        "rank": 9
+        "rank": 10
       },
       {
         "name": "HULC",
@@ -1414,7 +1454,7 @@
         "inst5": 0.283,
         "avg_len": 2.64,
         "source": "original",
-        "rank": 10
+        "rank": 11
       },
       {
         "name": "RoboFlamingo",
@@ -1434,7 +1474,7 @@
         "inst5": 0.192,
         "avg_len": 2.12,
         "source": "original",
-        "rank": 11
+        "rank": 12
       }
     ],
     "standard_closed": [

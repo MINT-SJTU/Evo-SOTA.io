@@ -1,6 +1,21 @@
 {
   "standard_opensource": [
     {
+      "name": "DIAL",
+      "base_name": "DIAL",
+      "setting": "",
+      "paper_url": "https://arxiv.org/abs/2603.29844",
+      "pub_date": "2026-03",
+      "is_opensource": true,
+      "opensource_url": "https://github.com/xpeng-robotics/DIAL",
+      "is_rl": false,
+      "avg_success_rate": 70.2,
+      "source": "original",
+      "is_standard": true,
+      "note": "",
+      "rank": 1
+    },
+    {
       "name": "ABot-M0",
       "base_name": "ABot-M0",
       "setting": "",
@@ -13,7 +28,22 @@
       "source": "original",
       "is_standard": true,
       "note": "",
-      "rank": 1
+      "rank": 2
+    },
+    {
+      "name": "StarVLA-alpha",
+      "base_name": "StarVLA-alpha",
+      "setting": "",
+      "paper_url": "https://arxiv.org/abs/2604.11757",
+      "pub_date": "2026-04",
+      "is_opensource": true,
+      "opensource_url": "https://github.com/starVLA/starVLA",
+      "is_rl": false,
+      "avg_success_rate": 57.3,
+      "source": "original",
+      "is_standard": true,
+      "note": "",
+      "rank": 3
     },
     {
       "name": "TwinBrainVLA",
@@ -28,7 +58,7 @@
       "source": "original",
       "is_standard": true,
       "note": "",
-      "rank": 2
+      "rank": 4
     },
     {
       "name": "Langforce",
@@ -43,7 +73,22 @@
       "source": "original",
       "is_standard": true,
       "note": "",
-      "rank": 3
+      "rank": 5
+    },
+    {
+      "name": "DiT4DiT",
+      "base_name": "DiT4DiT",
+      "setting": "",
+      "paper_url": "https://arxiv.org/abs/2603.10448",
+      "pub_date": "2026-03",
+      "is_opensource": true,
+      "opensource_url": "https://github.com/Mondo-Robotics/DiT4DiT",
+      "is_rl": false,
+      "avg_success_rate": 50.8,
+      "source": "original",
+      "is_standard": true,
+      "note": "",
+      "rank": 6
     },
     {
       "name": "StarVLA (Qwen3OFT)",
@@ -58,7 +103,7 @@
       "source": "original",
       "is_standard": true,
       "note": "",
-      "rank": 4
+      "rank": 7
     },
     {
       "name": "StarVLA (Qwen3GR00T)",
@@ -73,7 +118,7 @@
       "source": "original",
       "is_standard": true,
       "note": "",
-      "rank": 5
+      "rank": 8
     },
     {
       "name": "GR00T-N1.6",
@@ -88,7 +133,7 @@
       "source": "from StarVLA",
       "is_standard": true,
       "note": "",
-      "rank": 6
+      "rank": 9
     },
     {
       "name": "StarVLA (Qwen3PI)",
@@ -103,7 +148,7 @@
       "source": "original",
       "is_standard": true,
       "note": "",
-      "rank": 7
+      "rank": 10
     },
     {
       "name": "StarVLA (Qwen3FAST)",
@@ -118,24 +163,39 @@
       "source": "original",
       "is_standard": true,
       "note": "",
-      "rank": 8
+      "rank": 11
     }
   ],
   "standard_closed": [
     {
-      "name": "StarVLA-alpha (generalist)",
-      "base_name": "StarVLA-alpha",
-      "setting": "generalist",
-      "paper_url": "https://arxiv.org/abs/2604.11757v1",
+      "name": "JoyAI-RA 0.1",
+      "base_name": "JoyAI-RA 0.1",
+      "setting": "",
+      "paper_url": "https://arxiv.org/abs/2604.20100",
       "pub_date": "2026-04",
       "is_opensource": false,
       "opensource_url": null,
       "is_rl": false,
-      "avg_success_rate": 57.3,
+      "avg_success_rate": 63.2,
       "source": "original",
       "is_standard": true,
       "note": "",
       "rank": 1
+    },
+    {
+      "name": "LatentBridge",
+      "base_name": "LatentBridge",
+      "setting": "",
+      "paper_url": "https://arxiv.org/abs/2605.02739",
+      "pub_date": "2026-05",
+      "is_opensource": false,
+      "opensource_url": null,
+      "is_rl": false,
+      "avg_success_rate": 63.16,
+      "source": "original",
+      "is_standard": true,
+      "note": "",
+      "rank": 2
     },
     {
       "name": "Dual-CoT VLA",
@@ -150,7 +210,7 @@
       "source": "original",
       "is_standard": true,
       "note": "",
-      "rank": 2
+      "rank": 3
     },
     {
       "name": "VP-VLA",
@@ -162,21 +222,6 @@
       "opensource_url": null,
       "is_rl": false,
       "avg_success_rate": 53.8,
-      "source": "original",
-      "is_standard": true,
-      "note": "",
-      "rank": 3
-    },
-    {
-      "name": "DiT4DiT",
-      "base_name": "DiT4DiT",
-      "setting": "",
-      "paper_url": "https://arxiv.org/abs/2603.10448",
-      "pub_date": "2026-03",
-      "is_opensource": false,
-      "opensource_url": null,
-      "is_rl": false,
-      "avg_success_rate": 50.8,
       "source": "original",
       "is_standard": true,
       "note": "",

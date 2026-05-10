@@ -1,12 +1,12 @@
 {
   "libero": {
-    "total_models": 117,
-    "standard_opensource_count": 69,
-    "standard_closed_count": 30,
+    "total_models": 134,
+    "standard_opensource_count": 76,
+    "standard_closed_count": 40,
     "non_standard_count": 18,
     "model_type_count": {
-      "sft": 60,
-      "rl": 9
+      "sft": 66,
+      "rl": 10
     },
     "primary_metric": "Average Success Rate (%)",
     "top_5": [
@@ -75,30 +75,30 @@
         "rank": 2
       },
       {
-        "name": "pi-RL",
-        "score": 98.3,
+        "name": "PRTS",
+        "score": 98.4,
         "rank": 3
       },
       {
-        "name": "RLinf-VLA",
-        "score": 98.1,
+        "name": "pi-RL",
+        "score": 98.3,
         "rank": 4
       },
       {
-        "name": "3D-CAVLA",
+        "name": "RLinf-VLA",
         "score": 98.1,
         "rank": 5
       }
     ]
   },
   "libero_plus": {
-    "total_models": 24,
-    "standard_opensource_count": 18,
-    "standard_closed_count": 5,
-    "non_standard_count": 1,
+    "total_models": 29,
+    "standard_opensource_count": 21,
+    "standard_closed_count": 6,
+    "non_standard_count": 2,
     "model_type_count": {
-      "sft": 16,
-      "rl": 2
+      "sft": 18,
+      "rl": 3
     },
     "primary_metric": "Total Success Rate (%)",
     "top_5": [
@@ -118,13 +118,13 @@
         "rank": 3
       },
       {
-        "name": "ABot-M0",
-        "score": 80.5,
+        "name": "PRTS",
+        "score": 81.4,
         "rank": 4
       },
       {
-        "name": "VLA-JEPA",
-        "score": 79.5,
+        "name": "ABot-M0",
+        "score": 80.5,
         "rank": 5
       }
     ],
@@ -150,21 +150,26 @@
         "rank": 4
       },
       {
-        "name": "VLA-JEPA",
-        "score": 79.5,
+        "name": "StarVLA-alpha",
+        "score": 79.7,
         "rank": 5
       }
     ],
     "top_5_rl": [
       {
+        "name": "PRTS",
+        "score": 81.4,
+        "rank": 1
+      },
+      {
         "name": "RIPT-VLA",
         "score": 68.4,
-        "rank": 1
+        "rank": 2
       },
       {
         "name": "SRPO",
         "score": 59.6,
-        "rank": 2
+        "rank": 3
       }
     ]
   },
@@ -307,75 +312,147 @@
     "top_5_rl": []
   },
   "robocasa": {
-    "total_models": 12,
-    "standard_opensource_count": 8,
+    "total_models": 15,
+    "standard_opensource_count": 11,
     "standard_closed_count": 4,
     "non_standard_count": 0,
     "model_type_count": {
-      "sft": 8,
+      "sft": 11,
       "rl": 0
     },
     "primary_metric": "Average Success Rate (%)",
     "top_5": [
       {
+        "name": "DIAL",
+        "score": 70.2,
+        "rank": 1
+      },
+      {
         "name": "ABot-M0",
         "score": 58.3,
-        "rank": 1
+        "rank": 2
+      },
+      {
+        "name": "StarVLA-alpha",
+        "score": 57.3,
+        "rank": 3
       },
       {
         "name": "TwinBrainVLA",
         "score": 54.6,
-        "rank": 2
+        "rank": 4
       },
       {
         "name": "Langforce",
         "score": 52.6,
-        "rank": 3
-      },
-      {
-        "name": "StarVLA (Qwen3OFT)",
-        "score": 48.8,
-        "rank": 4
-      },
-      {
-        "name": "StarVLA (Qwen3GR00T)",
-        "score": 47.8,
         "rank": 5
       }
     ],
     "top_5_sft": [
       {
+        "name": "DIAL",
+        "score": 70.2,
+        "rank": 1
+      },
+      {
         "name": "ABot-M0",
         "score": 58.3,
-        "rank": 1
+        "rank": 2
+      },
+      {
+        "name": "StarVLA-alpha",
+        "score": 57.3,
+        "rank": 3
       },
       {
         "name": "TwinBrainVLA",
         "score": 54.6,
-        "rank": 2
+        "rank": 4
       },
       {
         "name": "Langforce",
         "score": 52.6,
-        "rank": 3
-      },
-      {
-        "name": "StarVLA (Qwen3OFT)",
-        "score": 48.8,
-        "rank": 4
-      },
-      {
-        "name": "StarVLA (Qwen3GR00T)",
-        "score": 47.8,
         "rank": 5
       }
     ],
     "top_5_rl": []
   },
+  "robotwin": {
+    "total_models": 20,
+    "standard_opensource_count": 13,
+    "standard_closed_count": 7,
+    "non_standard_count": 0,
+    "model_type_count": {
+      "sft": 12,
+      "rl": 1
+    },
+    "primary_metric": "Hard Success Rate (%)",
+    "top_5": [
+      {
+        "name": "HoloBrain-0",
+        "score": 92.3,
+        "rank": 1
+      },
+      {
+        "name": "Fast-WAM",
+        "score": 91.78,
+        "rank": 2
+      },
+      {
+        "name": "LingBot-VA",
+        "score": 91.55,
+        "rank": 3
+      },
+      {
+        "name": "InternVLA-A1",
+        "score": 89.6,
+        "rank": 4
+      },
+      {
+        "name": "StarVLA-alpha",
+        "score": 88.3,
+        "rank": 5
+      }
+    ],
+    "top_5_sft": [
+      {
+        "name": "HoloBrain-0",
+        "score": 92.3,
+        "rank": 1
+      },
+      {
+        "name": "Fast-WAM",
+        "score": 91.78,
+        "rank": 2
+      },
+      {
+        "name": "LingBot-VA",
+        "score": 91.55,
+        "rank": 3
+      },
+      {
+        "name": "InternVLA-A1",
+        "score": 89.6,
+        "rank": 4
+      },
+      {
+        "name": "StarVLA-alpha",
+        "score": 88.3,
+        "rank": 5
+      }
+    ],
+    "top_5_rl": [
+      {
+        "name": "Motus",
+        "score": 87.02,
+        "rank": 1
+      }
+    ]
+  },
   "calvin": {
-    "total_models": 42,
+    "total_models": 43,
     "standard_opensource_count": 32,
-    "standard_closed_count": 5,
+    "standard_closed_count": 6,
     "non_standard_count": 5,
     "model_type_count": {
       "sft": 31,
@@ -446,8 +523,8 @@
     ],
     "settings": {
       "abcd_d": 18,
-      "abc_d": 42,
-      "d_d": 12
+      "abc_d": 43,
+      "d_d": 13
     }
   }
 }

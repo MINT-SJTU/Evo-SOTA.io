@@ -34,6 +34,7 @@ export default function RoboChallengePage() {
     const [loading, setLoading] = useState(true);
     const [expandedRows, setExpandedRows] = useState<Set<string>>(new Set());
     const [showClosedSource, setShowClosedSource] = useState(false);
+    const [showAllMetrics, setShowAllMetrics] = useState(false);
     const [sortBy, setSortBy] = useState<'rank' | 'score' | 'success_rate' | 'date'>('rank');
     const [sortOrder, setSortOrder] = useState<'asc' | 'desc'>('asc');
     const [modelTypeFilter, setModelTypeFilter] = useState<'all' | 'sft' | 'rl'>('sft');
@@ -61,6 +62,8 @@ export default function RoboChallengePage() {
             paper: 'Paper',
             github: 'Code',
             clickToExpand: 'Click row to expand details',
+            showAllMetrics: 'Show All Metrics',
+            hideMetrics: 'Hide Metrics',
             showAllModels: 'Include All Models',
             openSourceOnly: 'Open-Source Only',
             standardModels: 'Standard Evaluation Models',
@@ -88,6 +91,8 @@ export default function RoboChallengePage() {
             paper: '论文',
             github: '代码',
             clickToExpand: '点击行展开详情',
+            showAllMetrics: '展开所有指标',
+            hideMetrics: '收起指标',
             showAllModels: '显示全部模型',
             openSourceOnly: '仅开源模型',
             standardModels: '标准测试模型',
@@ -232,12 +237,14 @@ export default function RoboChallengePage() {
                                 className="px-4 py-3 text-left text-sm font-semibold text-slate-700 cursor-pointer hover:bg-slate-100"
                                 onClick={() => handleSort('success_rate')}
                             >
-                                <div className="flex items-center gap-1">
-                                    {t.successRate}
-                                    {sortBy === 'success_rate' && (
-                                        <span className="text-teal-600">{sortOrder === 'desc' ? '↓' : '↑'}</span>
-                                    )}
-                                </div>
+                                {showAllMetrics && (
+                                    <div className="flex items-center gap-1">
+                                        {t.successRate}
+                                        {sortBy === 'success_rate' && (
+                                            <span className="text-teal-600">{sortOrder === 'desc' ? '↓' : '↑'}</span>
+                                        )}
+                                    </div>
+                                )}
                             </th>
                             <th
                                 className="px-4 py-3 text-left text-sm font-semibold text-slate-700 cursor-pointer hover:bg-slate-100"
@@ -250,7 +257,8 @@ export default function RoboChallengePage() {
                                     )}
                                 </div>
                             </th>
-                            <th className="px-4 py-3 text-left text-sm font-semibold text-slate-700">{t.paper}</th>
+                            <th className="px-2 py-3 text-center text-sm font-semibold text-slate-700">{t.paper}</th>
+                            <th className="px-2 py-3 text-center text-sm font-semibold text-slate-700">{t.github}</th>
                         </tr>
                     </thead>
                     <tbody>
@@ -286,12 +294,14 @@ export default function RoboChallengePage() {
                                             </span>
                                         </td>
                                         <td className="px-4 py-3">
-                                            <span className="font-mono text-lg font-semibold text-slate-700">
-                                                {model.success_rate !== null ? `${formatValue(model.success_rate)}%` : '-'}
-                                            </span>
+                                            {showAllMetrics && (
+                                                <span className="font-mono text-lg font-semibold text-slate-700">
+                                                    {model.success_rate !== null ? `${formatValue(model.success_rate)}%` : '-'}
+                                                </span>
+                                            )}
                                         </td>
                                         <td className="px-4 py-3 text-slate-600 text-sm">{model.pub_date || '-'}</td>
-                                        <td className="px-4 py-3">
+                                        <td className="px-2 py-3 text-right">
                                             {model.paper_url && (
                                                 <a
                                                     href={model.paper_url}
@@ -304,10 +314,23 @@ export default function RoboChallengePage() {
                                                 </a>
                                             )}
                                         </td>
+                                        <td className="px-2 py-3 text-right">
+                                            {model.opensource_url && (
+                                                <a
+                                                    href={model.opensource_url}
+                                                    target="_blank"
+                                                    rel="noopener noreferrer"
+                                                    className="text-slate-600 hover:text-slate-800 hover:underline text-sm"
+                                                    onClick={(e) => e.stopPropagation()}
+                                                >
+                                                    📦 {t.github}
+                                                </a>
+                                            )}
+                                        </td>
                                     </tr>
                                     {expandedRows.has(rowKey) && (
                                         <tr key={`${rowKey}-expanded`} className="bg-teal-50 border-b border-slate-200">
-                                            <td colSpan={6} className="px-4 py-4">
+                                            <td colSpan={showAllMetrics ? 7 : 6} className="px-4 py-4">
                                                 <div className="ml-12 space-y-4">
                                                     <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
                                                         <div className="bg-teal-100 rounded-lg p-3 shadow-sm">
@@ -407,6 +430,15 @@ export default function RoboChallengePage() {
             <div className="max-w-7xl mx-auto px-4 py-6">
                 <div className="flex flex-wrap items-center justify-between gap-4 mb-6">
                     <div className="flex flex-wrap items-center gap-4">
+                        <button
+                            onClick={() => setShowAllMetrics(!showAllMetrics)}
+                            className={`px-4 py-2 rounded-lg font-medium transition-all ${showAllMetrics
+                                ? 'bg-teal-600 text-white'
+                                : 'bg-white text-teal-600 border border-teal-200 hover:bg-teal-50'
+                                }`}
+                        >
+                            {showAllMetrics ? t.hideMetrics : t.showAllMetrics}
+                        </button>
                         <button
                             onClick={() => setShowClosedSource(!showClosedSource)}
                             className={`px-4 py-2 rounded-lg font-medium transition-all ${showClosedSource
