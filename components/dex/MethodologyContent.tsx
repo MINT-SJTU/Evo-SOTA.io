@@ -182,11 +182,15 @@ export default function MethodologyContent({ benchmarks }: { benchmarks: Benchma
 
         <div className="mt-12">
           <h2 className="text-2xl font-bold text-slate-800 mb-6 text-center">{texts.supportedBenchmarks}</h2>
-          <div className="grid md:grid-cols-3 gap-4">
+          <div className="grid sm:grid-cols-2 xl:grid-cols-4 gap-4">
             {benchmarks.map((benchmark) => {
               const accent = benchmark.color || "#94a3b8";
               const linkUrl = benchmark.links[0]?.url;
               const localizedDescription = t.dex.benchmarkDescriptions[benchmark.id] || benchmark.description;
+              const localizedMetric =
+                texts.supportedBenchmarkMetrics[benchmark.id] ||
+                benchmark.columns.find((column) => column.id === benchmark.meanColumnId)?.label ||
+                texts.supportedBenchmarkMetric;
               return (
                 <a
                   key={benchmark.id}
@@ -200,7 +204,9 @@ export default function MethodologyContent({ benchmarks }: { benchmarks: Benchma
                   }}
                 >
                   <h3 className="font-semibold" style={{ color: accent }}>{benchmark.name}</h3>
-                  <p className="text-sm mt-1" style={{ color: accent }}>{texts.supportedBenchmarkMetric}</p>
+                  <p className="text-sm mt-1" style={{ color: accent }}>
+                    {localizedMetric}
+                  </p>
                   <p className="text-xs text-slate-700 mt-2">{localizedDescription}</p>
                 </a>
               );

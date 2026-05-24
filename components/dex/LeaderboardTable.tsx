@@ -1,6 +1,6 @@
 "use client";
 
-import { useMemo, useState } from "react";
+import { Fragment, useMemo, useState } from "react";
 import { Benchmark, MethodRow } from "@/types/dex/leaderboard";
 import { toHsla, shiftHslLightness } from "@/lib/dex/colors";
 import { useLanguage } from "@/lib/LanguageContext";
@@ -79,6 +79,8 @@ export default function LeaderboardTable({
   const headerGradient = `linear-gradient(90deg, ${accent}, ${shiftHslLightness(accent, -10)})`;
 
   const detailColumns = benchmark.columns.filter((col) => col.kind === "score" && col.id !== benchmark.meanColumnId);
+  const primaryMetricLabel =
+    benchmark.columns.find((col) => col.id === benchmark.meanColumnId)?.label || t.dex.leaderboardTable.mean;
 
   const displayTitle = title || `${benchmark.name} ${t.dex.leaderboardTable.leaderboardSuffix}`;
 
@@ -159,7 +161,7 @@ export default function LeaderboardTable({
               <tr className="border-b border-slate-200" style={{ background: toHsla(accent, 0.1) }}>
                 <th className="px-4 py-3 text-left text-sm font-semibold text-slate-700">{t.dex.leaderboardTable.rank}</th>
                 <th className="px-4 py-3 text-left text-sm font-semibold text-slate-700">{t.dex.leaderboardTable.model}</th>
-                <th className="px-4 py-3 text-left text-sm font-semibold text-slate-700">{t.dex.leaderboardTable.mean}</th>
+                <th className="px-4 py-3 text-left text-sm font-semibold text-slate-700">{primaryMetricLabel}</th>
                 <th className="px-4 py-3 text-left text-sm font-semibold text-slate-700">{t.dex.leaderboardTable.date}</th>
                 {showAllMetrics &&
                   detailColumns.map((col) => (
@@ -183,9 +185,8 @@ export default function LeaderboardTable({
                 const rank = row.ranks?.[benchmark.id] ?? index + 1;
                 const isExpanded = expandedRows.has(row.id);
                 return (
-                  <>
+                  <Fragment key={row.id}>
                     <tr
-                      key={row.id}
                       className={`border-b border-slate-100 hover:bg-slate-50 cursor-pointer transition-colors ${
                         isExpanded ? "bg-slate-50" : ""
                       }`}
@@ -317,7 +318,7 @@ export default function LeaderboardTable({
                           </td>
                         </tr>
                       )}
-                    </>
+                    </Fragment>
                   );
                 })
               )}

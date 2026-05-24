@@ -8,7 +8,8 @@ export function generateStaticParams() {
   return [
     { slug: "adroit" },
     { slug: "dexart" },
-    { slug: "bidexhands" }
+    { slug: "bidexhands" },
+    { slug: "dexgraspnet" }
   ];
 }
 

@@ -14,7 +14,7 @@ export default function HomePage() {
   return (
     <div>
       <Hero />
-      <UpdatesSection updates={data.updates} />
+      <UpdatesSection />
       <StatsOverview benchmarks={data.benchmarks} methods={data.methods} />
       <BenchmarkCards benchmarks={data.benchmarks} methods={data.methods} />
       <ProgressChart data={data} />

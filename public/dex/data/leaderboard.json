@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-02-02T12:05:24.871Z",
+  "generatedAt": "2026-05-24T05:24:41.920Z",
   "benchmarks": [
     {
       "id": "adroit",
@@ -257,6 +257,60 @@
           "url": "https://arxiv.org/abs/2206.08686v2"
         }
       ]
+    },
+    {
+      "id": "dexgraspnet",
+      "name": "DexGraspNet",
+      "description": "A large-scale dexterous grasping benchmark for evaluating stable and diverse grasps on general objects.",
+      "meanColumnId": "graspSuccessRate",
+      "columns": [
+        {
+          "id": "graspSuccessRate",
+          "label": "Suc.1 (GSR)",
+          "kind": "score"
+        },
+        {
+          "id": "penetration",
+          "label": "Pen.",
+          "kind": "score"
+        },
+        {
+          "id": "diversity",
+          "label": "Div.",
+          "kind": "score"
+        },
+        {
+          "id": "successAtSix",
+          "label": "Suc.6",
+          "kind": "score"
+        },
+        {
+          "id": "setting",
+          "label": "Setting",
+          "kind": "meta"
+        },
+        {
+          "id": "source",
+          "label": "Source",
+          "kind": "meta"
+        },
+        {
+          "id": "proof",
+          "label": "Proof",
+          "kind": "meta"
+        }
+      ],
+      "color": "hsl(346, 70%, 55%)",
+      "links": [
+        {
+          "label": "Code",
+          "url": "https://github.com/PKU-EPIC/DexGraspNet"
+        },
+        {
+          "label": "Paper",
+          "url": "https://arxiv.org/abs/2210.02697"
+        }
+      ]
     }
   ],
   "methods": [
@@ -275,8 +329,8 @@
       },
       "isOpenSource": true,
       "ranks": {
-        "adroit": 3,
-        "dexart": 3
+        "adroit": 4,
+        "dexart": 4
       },
       "benchmarks": {
         "adroit": {
@@ -287,11 +341,11 @@
             "hammer": "100",
             "relocate": null,
             "setting": "10 demos",
-            "source": "Origin",
+            "source": "Original",
             "proof": null
           },
           "setting": "10 demos",
-          "source": "Origin",
+          "source": "Original",
           "proof": null
         },
         "dexart": {
@@ -302,11 +356,11 @@
             "bucket": "35.3",
             "meanSucc": "63.2",
             "setting": "100 demos",
-            "source": "Origin",
+            "source": "Original",
             "proof": null
           },
           "setting": "100 demos",
-          "source": "Origin",
+          "source": "Original",
           "proof": null
         },
         "bidexhands": {
@@ -339,6 +393,20 @@
           "setting": null,
           "source": null,
           "proof": null
+        },
+        "dexgraspnet": {
+          "values": {
+            "graspSuccessRate": null,
+            "penetration": null,
+            "diversity": null,
+            "successAtSix": null,
+            "setting": null,
+            "source": null,
+            "proof": null
+          },
+          "setting": null,
+          "source": null,
+          "proof": null
         }
       }
     },
@@ -353,7 +421,7 @@
       },
       "isOpenSource": false,
       "ranks": {
-        "adroit": 4
+        "adroit": 6
       },
       "benchmarks": {
         "adroit": {
@@ -364,11 +432,11 @@
             "hammer": "100",
             "relocate": null,
             "setting": "10 demos",
-            "source": "Origin",
+            "source": "Original",
             "proof": null
           },
           "setting": "10 demos",
-          "source": "Origin",
+          "source": "Original",
           "proof": null
         },
         "dexart": {
@@ -416,6 +484,20 @@
           "setting": null,
           "source": null,
           "proof": null
+        },
+        "dexgraspnet": {
+          "values": {
+            "graspSuccessRate": null,
+            "penetration": null,
+            "diversity": null,
+            "successAtSix": null,
+            "setting": null,
+            "source": null,
+            "proof": null
+          },
+          "setting": null,
+          "source": null,
+          "proof": null
         }
       }
     },
@@ -434,8 +516,8 @@
       },
       "isOpenSource": true,
       "ranks": {
-        "adroit": 6,
-        "dexart": 2,
+        "adroit": 11,
+        "dexart": 3,
         "bidexhands": 1
       },
       "benchmarks": {
@@ -447,11 +529,11 @@
             "hammer": "100",
             "relocate": null,
             "setting": "10 demos",
-            "source": "Origin",
+            "source": "Original",
             "proof": null
           },
           "setting": "10 demos",
-          "source": "Origin",
+          "source": "Original",
           "proof": null
         },
         "dexart": {
@@ -462,11 +544,11 @@
             "bucket": "46",
             "meanSucc": "68.5",
             "setting": "100 demos",
-            "source": "Origin",
+            "source": "Original",
             "proof": null
           },
           "setting": "100 demos",
-          "source": "Origin",
+          "source": "Original",
           "proof": null
         },
         "bidexhands": {
@@ -493,11 +575,25 @@
             "twoCatchUnderarm": null,
             "meanSucc": "70.2",
             "setting": "1*",
-            "source": "Origin",
+            "source": "Original",
             "proof": null
           },
           "setting": "1*",
-          "source": "Origin",
+          "source": "Original",
+          "proof": null
+        },
+        "dexgraspnet": {
+          "values": {
+            "graspSuccessRate": null,
+            "penetration": null,
+            "diversity": null,
+            "successAtSix": null,
+            "setting": null,
+            "source": null,
+            "proof": null
+          },
+          "setting": null,
+          "source": null,
           "proof": null
         }
       }
@@ -517,7 +613,7 @@
       },
       "isOpenSource": true,
       "ranks": {
-        "adroit": 1
+        "adroit": 2
       },
       "benchmarks": {
         "adroit": {
@@ -528,11 +624,11 @@
             "hammer": "90",
             "relocate": "96.7",
             "setting": null,
-            "source": "Origin",
+            "source": "Original",
             "proof": null
           },
           "setting": null,
-          "source": "Origin",
+          "source": "Original",
           "proof": null
         },
         "dexart": {
@@ -580,6 +676,20 @@
           "setting": null,
           "source": null,
           "proof": null
+        },
+        "dexgraspnet": {
+          "values": {
+            "graspSuccessRate": null,
+            "penetration": null,
+            "diversity": null,
+            "successAtSix": null,
+            "setting": null,
+            "source": null,
+            "proof": null
+          },
+          "setting": null,
+          "source": null,
+          "proof": null
         }
       }
     },
@@ -598,8 +708,8 @@
       },
       "isOpenSource": true,
       "ranks": {
-        "adroit": 7,
-        "dexart": 11,
+        "adroit": 12,
+        "dexart": 14,
         "bidexhands": 2
       },
       "benchmarks": {
@@ -663,6 +773,20 @@
           "setting": "1*",
           "source": "Reproduced by DP3",
           "proof": null
+        },
+        "dexgraspnet": {
+          "values": {
+            "graspSuccessRate": null,
+            "penetration": null,
+            "diversity": null,
+            "successAtSix": null,
+            "setting": null,
+            "source": null,
+            "proof": null
+          },
+          "setting": null,
+          "source": null,
+          "proof": null
         }
       }
     },
@@ -681,8 +805,8 @@
       },
       "isOpenSource": true,
       "ranks": {
-        "adroit": 8,
-        "dexart": 10
+        "adroit": 17,
+        "dexart": 12
       },
       "benchmarks": {
         "adroit": {
@@ -745,6 +869,20 @@
           "setting": null,
           "source": null,
           "proof": null
+        },
+        "dexgraspnet": {
+          "values": {
+            "graspSuccessRate": null,
+            "penetration": null,
+            "diversity": null,
+            "successAtSix": null,
+            "setting": null,
+            "source": null,
+            "proof": null
+          },
+          "setting": null,
+          "source": null,
+          "proof": null
         }
       }
     },
@@ -763,8 +901,8 @@
       },
       "isOpenSource": true,
       "ranks": {
-        "adroit": 5,
-        "dexart": 7
+        "adroit": 7,
+        "dexart": 9
       },
       "benchmarks": {
         "adroit": {
@@ -775,11 +913,11 @@
             "hammer": "100",
             "relocate": null,
             "setting": null,
-            "source": "Origin",
+            "source": "Original",
             "proof": null
           },
           "setting": null,
-          "source": "Origin",
+          "source": "Original",
           "proof": null
         },
         "dexart": {
@@ -790,11 +928,11 @@
             "bucket": "25",
             "meanSucc": "54.3",
             "setting": "“use the same parameters and observation input as 3D DiffusionPolicy for the 3D tasks\"，但expert demo 不同",
-            "source": "Origin",
+            "source": "Original",
             "proof": null
           },
           "setting": "“use the same parameters and observation input as 3D DiffusionPolicy for the 3D tasks\"，但expert demo 不同",
-          "source": "Origin",
+          "source": "Original",
           "proof": null
         },
         "bidexhands": {
@@ -820,6 +958,20 @@
             "pushBlock": null,
             "twoCatchUnderarm": null,
             "meanSucc": null,
+            "setting": null,
+            "source": null,
+            "proof": null
+          },
+          "setting": null,
+          "source": null,
+          "proof": null
+        },
+        "dexgraspnet": {
+          "values": {
+            "graspSuccessRate": null,
+            "penetration": null,
+            "diversity": null,
+            "successAtSix": null,
             "setting": null,
             "source": null,
             "proof": null
@@ -871,11 +1023,11 @@
             "bucket": "90",
             "meanSucc": "82.5",
             "setting": "100 demos",
-            "source": "Origin",
+            "source": "Original",
             "proof": null
           },
           "setting": "100 demos",
-          "source": "Origin",
+          "source": "Original",
           "proof": null
         },
         "bidexhands": {
@@ -908,52 +1060,69 @@
           "setting": null,
           "source": null,
           "proof": null
+        },
+        "dexgraspnet": {
+          "values": {
+            "graspSuccessRate": null,
+            "penetration": null,
+            "diversity": null,
+            "successAtSix": null,
+            "setting": null,
+            "source": null,
+            "proof": null
+          },
+          "setting": null,
+          "source": null,
+          "proof": null
         }
       }
     },
     {
-      "id": "bridgepolicy",
-      "shortName": "BridgePolicy",
-      "title": "Sample from What You See: Visuomotor Policy Learning via Diffusion Bridge with Observation-Embedded Stochastic Differential Equation",
-      "time": "2025.12",
+      "id": "vla-os-a-i-h",
+      "shortName": "VLA-OS（-A/I/H）",
+      "title": "VLA-OS: Structuring and Dissecting Planning Representations and Paradigms in Vision-Language-Action Models",
+      "time": "2025.06",
       "paper": {
         "label": "Paper",
-        "url": "https://arxiv.org/pdf/2512.07212"
+        "url": "https://arxiv.org/pdf/2506.17561"
       },
-      "isOpenSource": false,
+      "project": {
+        "label": "Code",
+        "url": "https://nus-lins-lab.github.io/vlaos/"
+      },
+      "isOpenSource": true,
       "ranks": {
-        "adroit": 2,
-        "dexart": 4
+        "dexart": 15
       },
       "benchmarks": {
         "adroit": {
           "values": {
-            "meanSucc": "80.7",
-            "pen": "58",
-            "door": "84",
-            "hammer": "100",
+            "meanSucc": null,
+            "pen": null,
+            "door": null,
+            "hammer": null,
             "relocate": null,
             "setting": null,
-            "source": "Origin",
+            "source": null,
             "proof": null
           },
           "setting": null,
-          "source": "Origin",
+          "source": null,
           "proof": null
         },
         "dexart": {
           "values": {
-            "laptop": "88",
-            "faucet": "44",
-            "toilet": "76",
-            "bucket": "32",
-            "meanSucc": "60",
+            "laptop": null,
+            "faucet": null,
+            "toilet": null,
+            "bucket": null,
+            "meanSucc": "VLA-OS-I: 49.0",
             "setting": "100 demos",
-            "source": "Origin",
+            "source": "Original",
             "proof": null
           },
           "setting": "100 demos",
-          "source": "Origin",
+          "source": "Original",
           "proof": null
         },
         "bidexhands": {
@@ -979,6 +1148,112 @@
             "pushBlock": null,
             "twoCatchUnderarm": null,
             "meanSucc": null,
+            "setting": null,
+            "source": null,
+            "proof": null
+          },
+          "setting": null,
+          "source": null,
+          "proof": null
+        },
+        "dexgraspnet": {
+          "values": {
+            "graspSuccessRate": null,
+            "penetration": null,
+            "diversity": null,
+            "successAtSix": null,
+            "setting": null,
+            "source": null,
+            "proof": null
+          },
+          "setting": null,
+          "source": null,
+          "proof": null
+        }
+      }
+    },
+    {
+      "id": "bridgepolicy",
+      "shortName": "BridgePolicy",
+      "title": "Sample from What You See: Visuomotor Policy Learning via Diffusion Bridge with Observation-Embedded Stochastic Differential Equation",
+      "time": "2025.12",
+      "paper": {
+        "label": "Paper",
+        "url": "https://arxiv.org/pdf/2512.07212"
+      },
+      "isOpenSource": false,
+      "ranks": {
+        "adroit": 3,
+        "dexart": 5
+      },
+      "benchmarks": {
+        "adroit": {
+          "values": {
+            "meanSucc": "80.7",
+            "pen": "58",
+            "door": "84",
+            "hammer": "100",
+            "relocate": null,
+            "setting": null,
+            "source": "Original",
+            "proof": null
+          },
+          "setting": null,
+          "source": "Original",
+          "proof": null
+        },
+        "dexart": {
+          "values": {
+            "laptop": "88",
+            "faucet": "44",
+            "toilet": "76",
+            "bucket": "32",
+            "meanSucc": "60",
+            "setting": "100 demos",
+            "source": "Original",
+            "proof": null
+          },
+          "setting": "100 demos",
+          "source": "Original",
+          "proof": null
+        },
+        "bidexhands": {
+          "values": {
+            "handover": null,
+            "doorCloseInward": null,
+            "doorCloseOutward": null,
+            "doorOpenInward": null,
+            "doorOpenOutward": null,
+            "scissors": null,
+            "swingCup": null,
+            "switch": null,
+            "kettle": null,
+            "liftUnderarm": null,
+            "pen": null,
+            "bottleCap": null,
+            "catchAbreast": null,
+            "catchOver2UnderArm": null,
+            "catchUnderarm": null,
+            "reOrientation": null,
+            "graspAndPlace": null,
+            "blockStack": null,
+            "pushBlock": null,
+            "twoCatchUnderarm": null,
+            "meanSucc": null,
+            "setting": null,
+            "source": null,
+            "proof": null
+          },
+          "setting": null,
+          "source": null,
+          "proof": null
+        },
+        "dexgraspnet": {
+          "values": {
+            "graspSuccessRate": null,
+            "penetration": null,
+            "diversity": null,
+            "successAtSix": null,
             "setting": null,
             "source": null,
             "proof": null
@@ -1004,12 +1279,13 @@
       },
       "isOpenSource": true,
       "ranks": {
-        "dexart": 8
+        "adroit": 10,
+        "dexart": 10
       },
       "benchmarks": {
         "adroit": {
           "values": {
-            "meanSucc": null,
+            "meanSucc": "70.3",
             "pen": "53",
             "door": "58",
             "hammer": "100",
@@ -1067,6 +1343,20 @@
           "setting": null,
           "source": null,
           "proof": null
+        },
+        "dexgraspnet": {
+          "values": {
+            "graspSuccessRate": null,
+            "penetration": null,
+            "diversity": null,
+            "successAtSix": null,
+            "setting": null,
+            "source": null,
+            "proof": null
+          },
+          "setting": null,
+          "source": null,
+          "proof": null
         }
       }
     },
@@ -1085,22 +1375,23 @@
       },
       "isOpenSource": true,
       "ranks": {
-        "dexart": 6
+        "adroit": 8,
+        "dexart": 7
       },
       "benchmarks": {
         "adroit": {
           "values": {
-            "meanSucc": null,
+            "meanSucc": "74",
             "pen": "49",
             "door": "73",
             "hammer": "100",
             "relocate": null,
             "setting": null,
-            "source": "Origin",
+            "source": "Original",
             "proof": null
           },
           "setting": null,
-          "source": "Origin",
+          "source": "Original",
           "proof": null
         },
         "dexart": {
@@ -1111,11 +1402,11 @@
             "bucket": "31",
             "meanSucc": "56",
             "setting": "10 demos",
-            "source": "Origin",
+            "source": "Original",
             "proof": null
           },
           "setting": "10 demos",
-          "source": "Origin",
+          "source": "Original",
           "proof": null
         },
         "bidexhands": {
@@ -1148,6 +1439,20 @@
           "setting": null,
           "source": null,
           "proof": null
+        },
+        "dexgraspnet": {
+          "values": {
+            "graspSuccessRate": null,
+            "penetration": null,
+            "diversity": null,
+            "successAtSix": null,
+            "setting": null,
+            "source": null,
+            "proof": null
+          },
+          "setting": null,
+          "source": null,
+          "proof": null
         }
       }
     },
@@ -1166,12 +1471,13 @@
       },
       "isOpenSource": true,
       "ranks": {
-        "dexart": 5
+        "adroit": 9,
+        "dexart": 6
       },
       "benchmarks": {
         "adroit": {
           "values": {
-            "meanSucc": null,
+            "meanSucc": "72.3",
             "pen": "49",
             "door": "68",
             "hammer": "100",
@@ -1229,6 +1535,20 @@
           "setting": null,
           "source": null,
           "proof": null
+        },
+        "dexgraspnet": {
+          "values": {
+            "graspSuccessRate": null,
+            "penetration": null,
+            "diversity": null,
+            "successAtSix": null,
+            "setting": null,
+            "source": null,
+            "proof": null
+          },
+          "setting": null,
+          "source": null,
+          "proof": null
         }
       }
     },
@@ -1247,22 +1567,23 @@
       },
       "isOpenSource": true,
       "ranks": {
-        "dexart": 9
+        "adroit": 14,
+        "dexart": 11
       },
       "benchmarks": {
         "adroit": {
           "values": {
-            "meanSucc": null,
+            "meanSucc": "52.3",
             "pen": "41",
             "door": "68.3",
             "hammer": "100",
             "relocate": null,
             "setting": null,
-            "source": "Origin",
+            "source": "Original",
             "proof": null
           },
           "setting": null,
-          "source": "Origin",
+          "source": "Original",
           "proof": null
         },
         "dexart": {
@@ -1273,11 +1594,11 @@
             "bucket": "27",
             "meanSucc": "54",
             "setting": "100 demos",
-            "source": "Origin",
+            "source": "Original",
             "proof": null
           },
           "setting": "100 demos",
-          "source": "Origin",
+          "source": "Original",
           "proof": null
         },
         "bidexhands": {
@@ -1310,6 +1631,20 @@
           "setting": null,
           "source": null,
           "proof": null
+        },
+        "dexgraspnet": {
+          "values": {
+            "graspSuccessRate": null,
+            "penetration": null,
+            "diversity": null,
+            "successAtSix": null,
+            "setting": null,
+            "source": null,
+            "proof": null
+          },
+          "setting": null,
+          "source": null,
+          "proof": null
         }
       }
     },
@@ -1317,7 +1652,7 @@
       "id": "progresscounts",
       "shortName": "ProgressCounts",
       "title": "Automated Rewards via LLM-Generated Progress Functions",
-      "time": "2024.1",
+      "time": "2024.01",
       "paper": {
         "label": "Paper",
         "url": "https://arxiv.org/abs/2410.09187"
@@ -1385,11 +1720,25 @@
             "twoCatchUnderarm": "3",
             "meanSucc": "59.3",
             "setting": "1*",
-            "source": "Origin",
+            "source": "Original",
             "proof": null
           },
           "setting": "1*",
-          "source": "Origin",
+          "source": "Original",
+          "proof": null
+        },
+        "dexgraspnet": {
+          "values": {
+            "graspSuccessRate": null,
+            "penetration": null,
+            "diversity": null,
+            "successAtSix": null,
+            "setting": null,
+            "source": null,
+            "proof": null
+          },
+          "setting": null,
+          "source": null,
           "proof": null
         }
       }
@@ -1398,7 +1747,7 @@
       "id": "eureka",
       "shortName": "Eureka",
       "title": "Eureka: Human-Level Reward Design via Coding Large Language Models",
-      "time": "2023.1",
+      "time": "2023.01",
       "paper": {
         "label": "Paper",
         "url": "https://arxiv.org/abs/2310.12931"
@@ -1466,11 +1815,1623 @@
             "twoCatchUnderarm": "0",
             "meanSucc": "55.7",
             "setting": "1*",
-            "source": "Origin",
+            "source": "Original",
             "proof": null
           },
           "setting": "1*",
-          "source": "Origin",
+          "source": "Original",
+          "proof": null
+        },
+        "dexgraspnet": {
+          "values": {
+            "graspSuccessRate": null,
+            "penetration": null,
+            "diversity": null,
+            "successAtSix": null,
+            "setting": null,
+            "source": null,
+            "proof": null
+          },
+          "setting": null,
+          "source": null,
+          "proof": null
+        }
+      }
+    },
+    {
+      "id": "gdp",
+      "shortName": "GDP",
+      "title": "Two-Steps Diffusion Policy for Robotic Manipulation via Genetic Denoising",
+      "time": "2025.01",
+      "paper": {
+        "label": "Paper",
+        "url": "https://arxiv.org/abs/2510.21991"
+      },
+      "isOpenSource": false,
+      "ranks": {
+        "adroit": 1
+      },
+      "benchmarks": {
+        "adroit": {
+          "values": {
+            "meanSucc": "97.2",
+            "pen": "91",
+            "door": "100",
+            "hammer": "100",
+            "relocate": "98",
+            "setting": null,
+            "source": "Original",
+            "proof": null
+          },
+          "setting": null,
+          "source": "Original",
+          "proof": null
+        },
+        "dexart": {
+          "values": {
+            "laptop": null,
+            "faucet": null,
+            "toilet": null,
+            "bucket": null,
+            "meanSucc": null,
+            "setting": null,
+            "source": null,
+            "proof": null
+          },
+          "setting": null,
+          "source": null,
+          "proof": null
+        },
+        "bidexhands": {
+          "values": {
+            "handover": null,
+            "doorCloseInward": null,
+            "doorCloseOutward": null,
+            "doorOpenInward": null,
+            "doorOpenOutward": null,
+            "scissors": null,
+            "swingCup": null,
+            "switch": null,
+            "kettle": null,
+            "liftUnderarm": null,
+            "pen": null,
+            "bottleCap": null,
+            "catchAbreast": null,
+            "catchOver2UnderArm": null,
+            "catchUnderarm": null,
+            "reOrientation": null,
+            "graspAndPlace": null,
+            "blockStack": null,
+            "pushBlock": null,
+            "twoCatchUnderarm": null,
+            "meanSucc": null,
+            "setting": null,
+            "source": null,
+            "proof": null
+          },
+          "setting": null,
+          "source": null,
+          "proof": null
+        },
+        "dexgraspnet": {
+          "values": {
+            "graspSuccessRate": null,
+            "penetration": null,
+            "diversity": null,
+            "successAtSix": null,
+            "setting": null,
+            "source": null,
+            "proof": null
+          },
+          "setting": null,
+          "source": null,
+          "proof": null
+        }
+      }
+    },
+    {
+      "id": "rnr-dp",
+      "shortName": "RNR-DP",
+      "title": "Responsive Noise-Relaying Diffusion Policy: Responsive and Efficient Visuomotor Control",
+      "time": "2025.02",
+      "paper": {
+        "label": "Paper",
+        "url": "https://arxiv.org/abs/2502.12724"
+      },
+      "project": {
+        "label": "Code",
+        "url": "https://rnr-dp.github.io/"
+      },
+      "isOpenSource": true,
+      "ranks": {
+        "adroit": 13
+      },
+      "benchmarks": {
+        "adroit": {
+          "values": {
+            "meanSucc": "57.4",
+            "pen": "59.4",
+            "door": "62.9",
+            "hammer": "48.7",
+            "relocate": "58.5",
+            "setting": "State obs; 1000 eps, 10 seeds",
+            "source": "Original",
+            "proof": "Tables 4 & 5"
+          },
+          "setting": "State obs; 1000 eps, 10 seeds",
+          "source": "Original",
+          "proof": "Tables 4 & 5"
+        },
+        "dexart": {
+          "values": {
+            "laptop": null,
+            "faucet": null,
+            "toilet": null,
+            "bucket": null,
+            "meanSucc": null,
+            "setting": null,
+            "source": null,
+            "proof": null
+          },
+          "setting": null,
+          "source": null,
+          "proof": null
+        },
+        "bidexhands": {
+          "values": {
+            "handover": null,
+            "doorCloseInward": null,
+            "doorCloseOutward": null,
+            "doorOpenInward": null,
+            "doorOpenOutward": null,
+            "scissors": null,
+            "swingCup": null,
+            "switch": null,
+            "kettle": null,
+            "liftUnderarm": null,
+            "pen": null,
+            "bottleCap": null,
+            "catchAbreast": null,
+            "catchOver2UnderArm": null,
+            "catchUnderarm": null,
+            "reOrientation": null,
+            "graspAndPlace": null,
+            "blockStack": null,
+            "pushBlock": null,
+            "twoCatchUnderarm": null,
+            "meanSucc": null,
+            "setting": null,
+            "source": null,
+            "proof": null
+          },
+          "setting": null,
+          "source": null,
+          "proof": null
+        },
+        "dexgraspnet": {
+          "values": {
+            "graspSuccessRate": null,
+            "penetration": null,
+            "diversity": null,
+            "successAtSix": null,
+            "setting": null,
+            "source": null,
+            "proof": null
+          },
+          "setting": null,
+          "source": null,
+          "proof": null
+        }
+      }
+    },
+    {
+      "id": "ddg",
+      "shortName": "DDG",
+      "title": "Deep differentiable grasp planner for high-dof grippers",
+      "time": "2020.01",
+      "paper": {
+        "label": "Paper",
+        "url": "https://arxiv.org/abs/2002.01530"
+      },
+      "isOpenSource": false,
+      "ranks": {
+        "dexgraspnet": 10
+      },
+      "benchmarks": {
+        "adroit": {
+          "values": {
+            "meanSucc": null,
+            "pen": null,
+            "door": null,
+            "hammer": null,
+            "relocate": null,
+            "setting": null,
+            "source": null,
+            "proof": null
+          },
+          "setting": null,
+          "source": null,
+          "proof": null
+        },
+        "dexart": {
+          "values": {
+            "laptop": null,
+            "faucet": null,
+            "toilet": null,
+            "bucket": null,
+            "meanSucc": null,
+            "setting": null,
+            "source": null,
+            "proof": null
+          },
+          "setting": null,
+          "source": null,
+          "proof": null
+        },
+        "bidexhands": {
+          "values": {
+            "handover": null,
+            "doorCloseInward": null,
+            "doorCloseOutward": null,
+            "doorOpenInward": null,
+            "doorOpenOutward": null,
+            "scissors": null,
+            "swingCup": null,
+            "switch": null,
+            "kettle": null,
+            "liftUnderarm": null,
+            "pen": null,
+            "bottleCap": null,
+            "catchAbreast": null,
+            "catchOver2UnderArm": null,
+            "catchUnderarm": null,
+            "reOrientation": null,
+            "graspAndPlace": null,
+            "blockStack": null,
+            "pushBlock": null,
+            "twoCatchUnderarm": null,
+            "meanSucc": null,
+            "setting": null,
+            "source": null,
+            "proof": null
+          },
+          "setting": null,
+          "source": null,
+          "proof": null
+        },
+        "dexgraspnet": {
+          "values": {
+            "graspSuccessRate": "67.5",
+            "penetration": "0.173",
+            "diversity": null,
+            "successAtSix": null,
+            "setting": null,
+            "source": "Reported by DexGraspNet",
+            "proof": null
+          },
+          "setting": null,
+          "source": "Reported by DexGraspNet",
+          "proof": null
+        }
+      }
+    },
+    {
+      "id": "grasptta",
+      "shortName": "GraspTTA",
+      "title": "Hand-object contact consistency reasoning for human grasps generation",
+      "time": "2021.04",
+      "paper": {
+        "label": "Paper",
+        "url": "https://arxiv.org/abs/2104.03304"
+      },
+      "project": {
+        "label": "Code",
+        "url": "https://hwjiang1510.github.io/GraspTTA/"
+      },
+      "isOpenSource": true,
+      "ranks": {
+        "dexgraspnet": 12
+      },
+      "benchmarks": {
+        "adroit": {
+          "values": {
+            "meanSucc": null,
+            "pen": null,
+            "door": null,
+            "hammer": null,
+            "relocate": null,
+            "setting": null,
+            "source": null,
+            "proof": null
+          },
+          "setting": null,
+          "source": null,
+          "proof": null
+        },
+        "dexart": {
+          "values": {
+            "laptop": null,
+            "faucet": null,
+            "toilet": null,
+            "bucket": null,
+            "meanSucc": null,
+            "setting": null,
+            "source": null,
+            "proof": null
+          },
+          "setting": null,
+          "source": null,
+          "proof": null
+        },
+        "bidexhands": {
+          "values": {
+            "handover": null,
+            "doorCloseInward": null,
+            "doorCloseOutward": null,
+            "doorOpenInward": null,
+            "doorOpenOutward": null,
+            "scissors": null,
+            "swingCup": null,
+            "switch": null,
+            "kettle": null,
+            "liftUnderarm": null,
+            "pen": null,
+            "bottleCap": null,
+            "catchAbreast": null,
+            "catchOver2UnderArm": null,
+            "catchUnderarm": null,
+            "reOrientation": null,
+            "graspAndPlace": null,
+            "blockStack": null,
+            "pushBlock": null,
+            "twoCatchUnderarm": null,
+            "meanSucc": null,
+            "setting": null,
+            "source": null,
+            "proof": null
+          },
+          "setting": null,
+          "source": null,
+          "proof": null
+        },
+        "dexgraspnet": {
+          "values": {
+            "graspSuccessRate": "24.5",
+            "penetration": "0.678",
+            "diversity": "0.13",
+            "successAtSix": "18.6",
+            "setting": null,
+            "source": "Reported by EFF-Grasp",
+            "proof": null
+          },
+          "setting": null,
+          "source": "Reported by EFF-Grasp",
+          "proof": null
+        }
+      }
+    },
+    {
+      "id": "unidexgrasp",
+      "shortName": "UniDexGrasp",
+      "title": "UniDexGrasp: Universal Robotic Dexterous Grasping via Learning Diverse Proposal Generation and Goal-Conditioned Policy",
+      "time": "2023.03",
+      "paper": {
+        "label": "Paper",
+        "url": "https://arxiv.org/abs/2303.00938"
+      },
+      "project": {
+        "label": "Code",
+        "url": "https://pku-epic.github.io/UniDexGrasp/"
+      },
+      "isOpenSource": true,
+      "ranks": {
+        "dexgraspnet": 9
+      },
+      "benchmarks": {
+        "adroit": {
+          "values": {
+            "meanSucc": null,
+            "pen": null,
+            "door": null,
+            "hammer": null,
+            "relocate": null,
+            "setting": null,
+            "source": null,
+            "proof": null
+          },
+          "setting": null,
+          "source": null,
+          "proof": null
+        },
+        "dexart": {
+          "values": {
+            "laptop": null,
+            "faucet": null,
+            "toilet": null,
+            "bucket": null,
+            "meanSucc": null,
+            "setting": null,
+            "source": null,
+            "proof": null
+          },
+          "setting": null,
+          "source": null,
+          "proof": null
+        },
+        "bidexhands": {
+          "values": {
+            "handover": null,
+            "doorCloseInward": null,
+            "doorCloseOutward": null,
+            "doorOpenInward": null,
+            "doorOpenOutward": null,
+            "scissors": null,
+            "swingCup": null,
+            "switch": null,
+            "kettle": null,
+            "liftUnderarm": null,
+            "pen": null,
+            "bottleCap": null,
+            "catchAbreast": null,
+            "catchOver2UnderArm": null,
+            "catchUnderarm": null,
+            "reOrientation": null,
+            "graspAndPlace": null,
+            "blockStack": null,
+            "pushBlock": null,
+            "twoCatchUnderarm": null,
+            "meanSucc": null,
+            "setting": null,
+            "source": null,
+            "proof": null
+          },
+          "setting": null,
+          "source": null,
+          "proof": null
+        },
+        "dexgraspnet": {
+          "values": {
+            "graspSuccessRate": "70.1",
+            "penetration": "31.9",
+            "diversity": "0.14",
+            "successAtSix": "33.9",
+            "setting": null,
+            "source": "Reported by EFF-Grasp",
+            "proof": null
+          },
+          "setting": null,
+          "source": "Reported by EFF-Grasp",
+          "proof": null
+        }
+      }
+    },
+    {
+      "id": "scenediffuser",
+      "shortName": "SceneDiffuser",
+      "title": "Diffusion-based generation, optimization, and planning in 3d scenes",
+      "time": "2023.01",
+      "paper": {
+        "label": "Paper",
+        "url": "https://arxiv.org/abs/2301.06015"
+      },
+      "project": {
+        "label": "Code",
+        "url": "https://scenediffuser.github.io/"
+      },
+      "isOpenSource": true,
+      "ranks": {
+        "dexgraspnet": 11
+      },
+      "benchmarks": {
+        "adroit": {
+          "values": {
+            "meanSucc": null,
+            "pen": null,
+            "door": null,
+            "hammer": null,
+            "relocate": null,
+            "setting": null,
+            "source": null,
+            "proof": null
+          },
+          "setting": null,
+          "source": null,
+          "proof": null
+        },
+        "dexart": {
+          "values": {
+            "laptop": null,
+            "faucet": null,
+            "toilet": null,
+            "bucket": null,
+            "meanSucc": null,
+            "setting": null,
+            "source": null,
+            "proof": null
+          },
+          "setting": null,
+          "source": null,
+          "proof": null
+        },
+        "bidexhands": {
+          "values": {
+            "handover": null,
+            "doorCloseInward": null,
+            "doorCloseOutward": null,
+            "doorOpenInward": null,
+            "doorOpenOutward": null,
+            "scissors": null,
+            "swingCup": null,
+            "switch": null,
+            "kettle": null,
+            "liftUnderarm": null,
+            "pen": null,
+            "bottleCap": null,
+            "catchAbreast": null,
+            "catchOver2UnderArm": null,
+            "catchUnderarm": null,
+            "reOrientation": null,
+            "graspAndPlace": null,
+            "blockStack": null,
+            "pushBlock": null,
+            "twoCatchUnderarm": null,
+            "meanSucc": null,
+            "setting": null,
+            "source": null,
+            "proof": null
+          },
+          "setting": null,
+          "source": null,
+          "proof": null
+        },
+        "dexgraspnet": {
+          "values": {
+            "graspSuccessRate": "66.9",
+            "penetration": "31",
+            "diversity": "0.15",
+            "successAtSix": "26.6",
+            "setting": null,
+            "source": "Reported by EFF-Grasp",
+            "proof": null
+          },
+          "setting": null,
+          "source": "Reported by EFF-Grasp",
+          "proof": null
+        }
+      }
+    },
+    {
+      "id": "ugg",
+      "shortName": "UGG",
+      "title": "UGG: Unified Generative Grasping",
+      "time": "2023.11",
+      "paper": {
+        "label": "Paper",
+        "url": "https://arxiv.org/abs/2311.16917"
+      },
+      "project": {
+        "label": "Code",
+        "url": "https://jiaxin-lu.github.io/ugg/"
+      },
+      "isOpenSource": true,
+      "ranks": {
+        "dexgraspnet": 8
+      },
+      "benchmarks": {
+        "adroit": {
+          "values": {
+            "meanSucc": null,
+            "pen": null,
+            "door": null,
+            "hammer": null,
+            "relocate": null,
+            "setting": null,
+            "source": null,
+            "proof": null
+          },
+          "setting": null,
+          "source": null,
+          "proof": null
+        },
+        "dexart": {
+          "values": {
+            "laptop": null,
+            "faucet": null,
+            "toilet": null,
+            "bucket": null,
+            "meanSucc": null,
+            "setting": null,
+            "source": null,
+            "proof": null
+          },
+          "setting": null,
+          "source": null,
+          "proof": null
+        },
+        "bidexhands": {
+          "values": {
+            "handover": null,
+            "doorCloseInward": null,
+            "doorCloseOutward": null,
+            "doorOpenInward": null,
+            "doorOpenOutward": null,
+            "scissors": null,
+            "swingCup": null,
+            "switch": null,
+            "kettle": null,
+            "liftUnderarm": null,
+            "pen": null,
+            "bottleCap": null,
+            "catchAbreast": null,
+            "catchOver2UnderArm": null,
+            "catchUnderarm": null,
+            "reOrientation": null,
+            "graspAndPlace": null,
+            "blockStack": null,
+            "pushBlock": null,
+            "twoCatchUnderarm": null,
+            "meanSucc": null,
+            "setting": null,
+            "source": null,
+            "proof": null
+          },
+          "setting": null,
+          "source": null,
+          "proof": null
+        },
+        "dexgraspnet": {
+          "values": {
+            "graspSuccessRate": "79",
+            "penetration": "25.2",
+            "diversity": "0.14",
+            "successAtSix": "46.9",
+            "setting": null,
+            "source": "Reported by EFF-Grasp",
+            "proof": null
+          },
+          "setting": null,
+          "source": "Reported by EFF-Grasp",
+          "proof": null
+        }
+      }
+    },
+    {
+      "id": "dexgrasp-anything",
+      "shortName": "DexGrasp Anything",
+      "title": "DexGrasp Anything: Towards Universal Robotic Dexterous Grasping with Physics Awareness",
+      "time": "2025.03",
+      "paper": {
+        "label": "Paper",
+        "url": "https://arxiv.org/abs/2503.08257"
+      },
+      "project": {
+        "label": "Code",
+        "url": "https://dexgraspanything.github.io/"
+      },
+      "isOpenSource": true,
+      "ranks": {
+        "dexgraspnet": 3
+      },
+      "benchmarks": {
+        "adroit": {
+          "values": {
+            "meanSucc": null,
+            "pen": null,
+            "door": null,
+            "hammer": null,
+            "relocate": null,
+            "setting": null,
+            "source": null,
+            "proof": null
+          },
+          "setting": null,
+          "source": null,
+          "proof": null
+        },
+        "dexart": {
+          "values": {
+            "laptop": null,
+            "faucet": null,
+            "toilet": null,
+            "bucket": null,
+            "meanSucc": null,
+            "setting": null,
+            "source": null,
+            "proof": null
+          },
+          "setting": null,
+          "source": null,
+          "proof": null
+        },
+        "bidexhands": {
+          "values": {
+            "handover": null,
+            "doorCloseInward": null,
+            "doorCloseOutward": null,
+            "doorOpenInward": null,
+            "doorOpenOutward": null,
+            "scissors": null,
+            "swingCup": null,
+            "switch": null,
+            "kettle": null,
+            "liftUnderarm": null,
+            "pen": null,
+            "bottleCap": null,
+            "catchAbreast": null,
+            "catchOver2UnderArm": null,
+            "catchUnderarm": null,
+            "reOrientation": null,
+            "graspAndPlace": null,
+            "blockStack": null,
+            "pushBlock": null,
+            "twoCatchUnderarm": null,
+            "meanSucc": null,
+            "setting": null,
+            "source": null,
+            "proof": null
+          },
+          "setting": null,
+          "source": null,
+          "proof": null
+        },
+        "dexgraspnet": {
+          "values": {
+            "graspSuccessRate": "90.4",
+            "penetration": "21.5",
+            "diversity": "0.22",
+            "successAtSix": "53.6",
+            "setting": null,
+            "source": "Original",
+            "proof": null
+          },
+          "setting": null,
+          "source": "Original",
+          "proof": null
+        }
+      }
+    },
+    {
+      "id": "eff-grasp",
+      "shortName": "EFF-Grasp",
+      "title": "EFF-Grasp: Energy-Field Flow Matching for Physics-Aware Dexterous Grasp Generation",
+      "time": "2026.03",
+      "paper": {
+        "label": "Paper",
+        "url": "https://arxiv.org/abs/2603.16151"
+      },
+      "isOpenSource": false,
+      "ranks": {
+        "dexgraspnet": 2
+      },
+      "benchmarks": {
+        "adroit": {
+          "values": {
+            "meanSucc": null,
+            "pen": null,
+            "door": null,
+            "hammer": null,
+            "relocate": null,
+            "setting": null,
+            "source": null,
+            "proof": null
+          },
+          "setting": null,
+          "source": null,
+          "proof": null
+        },
+        "dexart": {
+          "values": {
+            "laptop": null,
+            "faucet": null,
+            "toilet": null,
+            "bucket": null,
+            "meanSucc": null,
+            "setting": null,
+            "source": null,
+            "proof": null
+          },
+          "setting": null,
+          "source": null,
+          "proof": null
+        },
+        "bidexhands": {
+          "values": {
+            "handover": null,
+            "doorCloseInward": null,
+            "doorCloseOutward": null,
+            "doorOpenInward": null,
+            "doorOpenOutward": null,
+            "scissors": null,
+            "swingCup": null,
+            "switch": null,
+            "kettle": null,
+            "liftUnderarm": null,
+            "pen": null,
+            "bottleCap": null,
+            "catchAbreast": null,
+            "catchOver2UnderArm": null,
+            "catchUnderarm": null,
+            "reOrientation": null,
+            "graspAndPlace": null,
+            "blockStack": null,
+            "pushBlock": null,
+            "twoCatchUnderarm": null,
+            "meanSucc": null,
+            "setting": null,
+            "source": null,
+            "proof": null
+          },
+          "setting": null,
+          "source": null,
+          "proof": null
+        },
+        "dexgraspnet": {
+          "values": {
+            "graspSuccessRate": "91.2",
+            "penetration": "20.7",
+            "diversity": "0.16",
+            "successAtSix": "67.2",
+            "setting": null,
+            "source": "Original",
+            "proof": null
+          },
+          "setting": null,
+          "source": "Original",
+          "proof": null
+        }
+      }
+    },
+    {
+      "id": "ffhnet",
+      "shortName": "FFHNet",
+      "title": "FFHNet: Generating Multi-Fingered Robotic Grasps for Unknown Objects in Real-time",
+      "time": "2022.05",
+      "paper": {
+        "label": "Website",
+        "url": "https://ieeexplore.ieee.org/document/9811666"
+      },
+      "project": {
+        "label": "Code",
+        "url": "https://github.com/qqianfeng/FFHNet"
+      },
+      "isOpenSource": true,
+      "ranks": {
+        "dexgraspnet": 7
+      },
+      "benchmarks": {
+        "adroit": {
+          "values": {
+            "meanSucc": null,
+            "pen": null,
+            "door": null,
+            "hammer": null,
+            "relocate": null,
+            "setting": null,
+            "source": null,
+            "proof": null
+          },
+          "setting": null,
+          "source": null,
+          "proof": null
+        },
+        "dexart": {
+          "values": {
+            "laptop": null,
+            "faucet": null,
+            "toilet": null,
+            "bucket": null,
+            "meanSucc": null,
+            "setting": null,
+            "source": null,
+            "proof": null
+          },
+          "setting": null,
+          "source": null,
+          "proof": null
+        },
+        "bidexhands": {
+          "values": {
+            "handover": null,
+            "doorCloseInward": null,
+            "doorCloseOutward": null,
+            "doorOpenInward": null,
+            "doorOpenOutward": null,
+            "scissors": null,
+            "swingCup": null,
+            "switch": null,
+            "kettle": null,
+            "liftUnderarm": null,
+            "pen": null,
+            "bottleCap": null,
+            "catchAbreast": null,
+            "catchOver2UnderArm": null,
+            "catchUnderarm": null,
+            "reOrientation": null,
+            "graspAndPlace": null,
+            "blockStack": null,
+            "pushBlock": null,
+            "twoCatchUnderarm": null,
+            "meanSucc": null,
+            "setting": null,
+            "source": null,
+            "proof": null
+          },
+          "setting": null,
+          "source": null,
+          "proof": null
+        },
+        "dexgraspnet": {
+          "values": {
+            "graspSuccessRate": "82.16",
+            "penetration": null,
+            "diversity": null,
+            "successAtSix": null,
+            "setting": null,
+            "source": "Reported by DexDiffuser",
+            "proof": null
+          },
+          "setting": null,
+          "source": "Reported by DexDiffuser",
+          "proof": null
+        }
+      }
+    },
+    {
+      "id": "dexdiffuser",
+      "shortName": "DexDiffuser",
+      "title": "DexDiffuser: Generating Dexterous Grasps with Diffusion Models",
+      "time": "2024.02",
+      "paper": {
+        "label": "Paper",
+        "url": "https://arxiv.org/abs/2402.02989"
+      },
+      "project": {
+        "label": "Code",
+        "url": "https://yulihn.github.io/DexDiffuser_page/"
+      },
+      "isOpenSource": true,
+      "ranks": {
+        "dexgraspnet": 6
+      },
+      "benchmarks": {
+        "adroit": {
+          "values": {
+            "meanSucc": null,
+            "pen": null,
+            "door": null,
+            "hammer": null,
+            "relocate": null,
+            "setting": null,
+            "source": null,
+            "proof": null
+          },
+          "setting": null,
+          "source": null,
+          "proof": null
+        },
+        "dexart": {
+          "values": {
+            "laptop": null,
+            "faucet": null,
+            "toilet": null,
+            "bucket": null,
+            "meanSucc": null,
+            "setting": null,
+            "source": null,
+            "proof": null
+          },
+          "setting": null,
+          "source": null,
+          "proof": null
+        },
+        "bidexhands": {
+          "values": {
+            "handover": null,
+            "doorCloseInward": null,
+            "doorCloseOutward": null,
+            "doorOpenInward": null,
+            "doorOpenOutward": null,
+            "scissors": null,
+            "swingCup": null,
+            "switch": null,
+            "kettle": null,
+            "liftUnderarm": null,
+            "pen": null,
+            "bottleCap": null,
+            "catchAbreast": null,
+            "catchOver2UnderArm": null,
+            "catchUnderarm": null,
+            "reOrientation": null,
+            "graspAndPlace": null,
+            "blockStack": null,
+            "pushBlock": null,
+            "twoCatchUnderarm": null,
+            "meanSucc": null,
+            "setting": null,
+            "source": null,
+            "proof": null
+          },
+          "setting": null,
+          "source": null,
+          "proof": null
+        },
+        "dexgraspnet": {
+          "values": {
+            "graspSuccessRate": "82.94",
+            "penetration": null,
+            "diversity": null,
+            "successAtSix": null,
+            "setting": "DexS-BPS-EGD-ESR-1",
+            "source": "Original",
+            "proof": null
+          },
+          "setting": "DexS-BPS-EGD-ESR-1",
+          "source": "Original",
+          "proof": null
+        }
+      }
+    },
+    {
+      "id": "second-grasp",
+      "shortName": "SECOND-Grasp",
+      "title": "SECOND-Grasp: Semantic Contact-guided Dexterous Grasping",
+      "time": "2026.05",
+      "paper": {
+        "label": "Paper",
+        "url": "https://arxiv.org/abs/2605.13117v1"
+      },
+      "isOpenSource": false,
+      "ranks": {
+        "dexgraspnet": 1
+      },
+      "benchmarks": {
+        "adroit": {
+          "values": {
+            "meanSucc": null,
+            "pen": null,
+            "door": null,
+            "hammer": null,
+            "relocate": null,
+            "setting": null,
+            "source": null,
+            "proof": null
+          },
+          "setting": null,
+          "source": null,
+          "proof": null
+        },
+        "dexart": {
+          "values": {
+            "laptop": null,
+            "faucet": null,
+            "toilet": null,
+            "bucket": null,
+            "meanSucc": null,
+            "setting": null,
+            "source": null,
+            "proof": null
+          },
+          "setting": null,
+          "source": null,
+          "proof": null
+        },
+        "bidexhands": {
+          "values": {
+            "handover": null,
+            "doorCloseInward": null,
+            "doorCloseOutward": null,
+            "doorOpenInward": null,
+            "doorOpenOutward": null,
+            "scissors": null,
+            "swingCup": null,
+            "switch": null,
+            "kettle": null,
+            "liftUnderarm": null,
+            "pen": null,
+            "bottleCap": null,
+            "catchAbreast": null,
+            "catchOver2UnderArm": null,
+            "catchUnderarm": null,
+            "reOrientation": null,
+            "graspAndPlace": null,
+            "blockStack": null,
+            "pushBlock": null,
+            "twoCatchUnderarm": null,
+            "meanSucc": null,
+            "setting": null,
+            "source": null,
+            "proof": null
+          },
+          "setting": null,
+          "source": null,
+          "proof": null
+        },
+        "dexgraspnet": {
+          "values": {
+            "graspSuccessRate": "94.9",
+            "penetration": null,
+            "diversity": null,
+            "successAtSix": null,
+            "setting": "Vision Based",
+            "source": "Original",
+            "proof": null
+          },
+          "setting": "Vision Based",
+          "source": "Original",
+          "proof": null
+        }
+      }
+    },
+    {
+      "id": "unigrasptransformer",
+      "shortName": "UniGraspTransformer",
+      "title": "UniGraspTransformer: Simplified Policy Distillation for Scalable Dexterous Robotic Grasping",
+      "time": "2024.12",
+      "paper": {
+        "label": "Paper",
+        "url": "https://arxiv.org/abs/2412.02699"
+      },
+      "project": {
+        "label": "Code",
+        "url": "https://dexhand.github.io/UniGraspTransformer/"
+      },
+      "isOpenSource": true,
+      "ranks": {
+        "dexgraspnet": 5
+      },
+      "benchmarks": {
+        "adroit": {
+          "values": {
+            "meanSucc": null,
+            "pen": null,
+            "door": null,
+            "hammer": null,
+            "relocate": null,
+            "setting": null,
+            "source": null,
+            "proof": null
+          },
+          "setting": null,
+          "source": null,
+          "proof": null
+        },
+        "dexart": {
+          "values": {
+            "laptop": null,
+            "faucet": null,
+            "toilet": null,
+            "bucket": null,
+            "meanSucc": null,
+            "setting": null,
+            "source": null,
+            "proof": null
+          },
+          "setting": null,
+          "source": null,
+          "proof": null
+        },
+        "bidexhands": {
+          "values": {
+            "handover": null,
+            "doorCloseInward": null,
+            "doorCloseOutward": null,
+            "doorOpenInward": null,
+            "doorOpenOutward": null,
+            "scissors": null,
+            "swingCup": null,
+            "switch": null,
+            "kettle": null,
+            "liftUnderarm": null,
+            "pen": null,
+            "bottleCap": null,
+            "catchAbreast": null,
+            "catchOver2UnderArm": null,
+            "catchUnderarm": null,
+            "reOrientation": null,
+            "graspAndPlace": null,
+            "blockStack": null,
+            "pushBlock": null,
+            "twoCatchUnderarm": null,
+            "meanSucc": null,
+            "setting": null,
+            "source": null,
+            "proof": null
+          },
+          "setting": null,
+          "source": null,
+          "proof": null
+        },
+        "dexgraspnet": {
+          "values": {
+            "graspSuccessRate": "86.8",
+            "penetration": null,
+            "diversity": null,
+            "successAtSix": null,
+            "setting": "Vision Based",
+            "source": "Original",
+            "proof": null
+          },
+          "setting": "Vision Based",
+          "source": "Original",
+          "proof": null
+        }
+      }
+    },
+    {
+      "id": "demograsp",
+      "shortName": "DemoGrasp",
+      "title": "DemoGrasp: Universal Dexterous Grasping from a Single Demonstration",
+      "time": "2025.09",
+      "paper": {
+        "label": "Paper",
+        "url": "https://arxiv.org/abs/2509.22149"
+      },
+      "project": {
+        "label": "Code",
+        "url": "https://beingbeyond.github.io/DemoGrasp/"
+      },
+      "isOpenSource": true,
+      "ranks": {
+        "dexgraspnet": 4
+      },
+      "benchmarks": {
+        "adroit": {
+          "values": {
+            "meanSucc": null,
+            "pen": null,
+            "door": null,
+            "hammer": null,
+            "relocate": null,
+            "setting": null,
+            "source": null,
+            "proof": null
+          },
+          "setting": null,
+          "source": null,
+          "proof": null
+        },
+        "dexart": {
+          "values": {
+            "laptop": null,
+            "faucet": null,
+            "toilet": null,
+            "bucket": null,
+            "meanSucc": null,
+            "setting": null,
+            "source": null,
+            "proof": null
+          },
+          "setting": null,
+          "source": null,
+          "proof": null
+        },
+        "bidexhands": {
+          "values": {
+            "handover": null,
+            "doorCloseInward": null,
+            "doorCloseOutward": null,
+            "doorOpenInward": null,
+            "doorOpenOutward": null,
+            "scissors": null,
+            "swingCup": null,
+            "switch": null,
+            "kettle": null,
+            "liftUnderarm": null,
+            "pen": null,
+            "bottleCap": null,
+            "catchAbreast": null,
+            "catchOver2UnderArm": null,
+            "catchUnderarm": null,
+            "reOrientation": null,
+            "graspAndPlace": null,
+            "blockStack": null,
+            "pushBlock": null,
+            "twoCatchUnderarm": null,
+            "meanSucc": null,
+            "setting": null,
+            "source": null,
+            "proof": null
+          },
+          "setting": null,
+          "source": null,
+          "proof": null
+        },
+        "dexgraspnet": {
+          "values": {
+            "graspSuccessRate": "90.1",
+            "penetration": null,
+            "diversity": null,
+            "successAtSix": null,
+            "setting": "Vision Based",
+            "source": "Original",
+            "proof": null
+          },
+          "setting": "Vision Based",
+          "source": "Original",
+          "proof": null
+        }
+      }
+    },
+    {
+      "id": "sat",
+      "shortName": "SAT",
+      "title": "Structural Action Transformer for 3D Dexterous Manipulation",
+      "time": "2026.03",
+      "paper": {
+        "label": "Paper",
+        "url": "https://arxiv.org/abs/2603.03960"
+      },
+      "isOpenSource": false,
+      "ranks": {
+        "adroit": 5,
+        "dexart": 2
+      },
+      "benchmarks": {
+        "adroit": {
+          "values": {
+            "meanSucc": "75",
+            "pen": null,
+            "door": null,
+            "hammer": null,
+            "relocate": null,
+            "setting": null,
+            "source": "Original",
+            "proof": null
+          },
+          "setting": null,
+          "source": "Original",
+          "proof": null
+        },
+        "dexart": {
+          "values": {
+            "laptop": null,
+            "faucet": null,
+            "toilet": null,
+            "bucket": null,
+            "meanSucc": "73",
+            "setting": null,
+            "source": "Original",
+            "proof": null
+          },
+          "setting": null,
+          "source": "Original",
+          "proof": null
+        },
+        "bidexhands": {
+          "values": {
+            "handover": null,
+            "doorCloseInward": null,
+            "doorCloseOutward": null,
+            "doorOpenInward": null,
+            "doorOpenOutward": null,
+            "scissors": null,
+            "swingCup": null,
+            "switch": null,
+            "kettle": null,
+            "liftUnderarm": null,
+            "pen": null,
+            "bottleCap": null,
+            "catchAbreast": null,
+            "catchOver2UnderArm": null,
+            "catchUnderarm": null,
+            "reOrientation": null,
+            "graspAndPlace": null,
+            "blockStack": null,
+            "pushBlock": null,
+            "twoCatchUnderarm": null,
+            "meanSucc": null,
+            "setting": null,
+            "source": null,
+            "proof": null
+          },
+          "setting": null,
+          "source": null,
+          "proof": null
+        },
+        "dexgraspnet": {
+          "values": {
+            "graspSuccessRate": null,
+            "penetration": null,
+            "diversity": null,
+            "successAtSix": null,
+            "setting": null,
+            "source": null,
+            "proof": null
+          },
+          "setting": null,
+          "source": null,
+          "proof": null
+        }
+      }
+    },
+    {
+      "id": "hpt",
+      "shortName": "HPT",
+      "title": "Scaling Proprioceptive-Visual Learning with Heterogeneous Pre-trained Transformers",
+      "time": "2024.09",
+      "paper": {
+        "label": "Paper",
+        "url": "https://arxiv.org/abs/2509.01819"
+      },
+      "project": {
+        "label": "Code",
+        "url": "https://maniflow-policy.github.io/"
+      },
+      "isOpenSource": true,
+      "ranks": {
+        "adroit": 16,
+        "dexart": 13
+      },
+      "benchmarks": {
+        "adroit": {
+          "values": {
+            "meanSucc": "45",
+            "pen": null,
+            "door": null,
+            "hammer": null,
+            "relocate": null,
+            "setting": null,
+            "source": "Reproduced by SAT",
+            "proof": null
+          },
+          "setting": null,
+          "source": "Reproduced by SAT",
+          "proof": null
+        },
+        "dexart": {
+          "values": {
+            "laptop": null,
+            "faucet": null,
+            "toilet": null,
+            "bucket": null,
+            "meanSucc": "53",
+            "setting": null,
+            "source": "Reproduced by SAT",
+            "proof": null
+          },
+          "setting": null,
+          "source": "Reproduced by SAT",
+          "proof": null
+        },
+        "bidexhands": {
+          "values": {
+            "handover": null,
+            "doorCloseInward": null,
+            "doorCloseOutward": null,
+            "doorOpenInward": null,
+            "doorOpenOutward": null,
+            "scissors": null,
+            "swingCup": null,
+            "switch": null,
+            "kettle": null,
+            "liftUnderarm": null,
+            "pen": null,
+            "bottleCap": null,
+            "catchAbreast": null,
+            "catchOver2UnderArm": null,
+            "catchUnderarm": null,
+            "reOrientation": null,
+            "graspAndPlace": null,
+            "blockStack": null,
+            "pushBlock": null,
+            "twoCatchUnderarm": null,
+            "meanSucc": null,
+            "setting": null,
+            "source": null,
+            "proof": null
+          },
+          "setting": null,
+          "source": null,
+          "proof": null
+        },
+        "dexgraspnet": {
+          "values": {
+            "graspSuccessRate": null,
+            "penetration": null,
+            "diversity": null,
+            "successAtSix": null,
+            "setting": null,
+            "source": null,
+            "proof": null
+          },
+          "setting": null,
+          "source": null,
+          "proof": null
+        }
+      }
+    },
+    {
+      "id": "uniact",
+      "shortName": "UniAct",
+      "title": "Universal Actions for Enhanced Embodied Foundation Models",
+      "time": "2025.01",
+      "paper": {
+        "label": "Paper",
+        "url": "https://arxiv.org/abs/2501.10105"
+      },
+      "project": {
+        "label": "Code",
+        "url": "https://2toinf.github.io/UniAct/"
+      },
+      "isOpenSource": true,
+      "ranks": {
+        "adroit": 15,
+        "dexart": 8
+      },
+      "benchmarks": {
+        "adroit": {
+          "values": {
+            "meanSucc": "49",
+            "pen": null,
+            "door": null,
+            "hammer": null,
+            "relocate": null,
+            "setting": null,
+            "source": "Reproduced by SAT",
+            "proof": null
+          },
+          "setting": null,
+          "source": "Reproduced by SAT",
+          "proof": null
+        },
+        "dexart": {
+          "values": {
+            "laptop": null,
+            "faucet": null,
+            "toilet": null,
+            "bucket": null,
+            "meanSucc": "55",
+            "setting": null,
+            "source": "Reproduced by SAT",
+            "proof": null
+          },
+          "setting": null,
+          "source": "Reproduced by SAT",
+          "proof": null
+        },
+        "bidexhands": {
+          "values": {
+            "handover": null,
+            "doorCloseInward": null,
+            "doorCloseOutward": null,
+            "doorOpenInward": null,
+            "doorOpenOutward": null,
+            "scissors": null,
+            "swingCup": null,
+            "switch": null,
+            "kettle": null,
+            "liftUnderarm": null,
+            "pen": null,
+            "bottleCap": null,
+            "catchAbreast": null,
+            "catchOver2UnderArm": null,
+            "catchUnderarm": null,
+            "reOrientation": null,
+            "graspAndPlace": null,
+            "blockStack": null,
+            "pushBlock": null,
+            "twoCatchUnderarm": null,
+            "meanSucc": null,
+            "setting": null,
+            "source": null,
+            "proof": null
+          },
+          "setting": null,
+          "source": null,
+          "proof": null
+        },
+        "dexgraspnet": {
+          "values": {
+            "graspSuccessRate": null,
+            "penetration": null,
+            "diversity": null,
+            "successAtSix": null,
+            "setting": null,
+            "source": null,
+            "proof": null
+          },
+          "setting": null,
+          "source": null,
           "proof": null
         }
       }
@@ -1478,24 +3439,12 @@
   ],
   "updates": [
     {
-      "date": "2025.12",
-      "text": "ISS Policy: ISS Policy : Scalable Diffusion Policy with Implicit Scene Supervision"
+      "date": "2026-05-24",
+      "text": "Added the DexGraspNet leaderboard and updated the associated model results. You can now search Dex manipulation models by name."
     },
     {
-      "date": "2025.12",
-      "text": "BridgePolicy: Sample from What You See: Visuomotor Policy Learning via Diffusion Bridge with Observation-Embedded Stochastic Differential Equation"
-    },
-    {
-      "date": "2025.09",
-      "text": "ManiFlow: ManiFlow: A General Robot Manipulation Policy via Consistency Flow Training"
-    },
-    {
-      "date": "2025.07",
-      "text": "DP4: Spatial-Temporal Aware Visuomotor Diffusion Policy Learning"
-    },
-    {
-      "date": "2025.06",
-      "text": "FreqPolicy: FreqPolicy: Frequency Autoregressive Visuomotor Policy with Continuous Tokens"
+      "date": "2026-02-09",
+      "text": "Launched the Dexterous Manipulation SOTA Leaderboard."
     }
   ]
 }
