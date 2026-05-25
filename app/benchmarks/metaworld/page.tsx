@@ -276,7 +276,7 @@ export default function MetaWorldPage() {
                                         </td>
                                         <td className="px-4 py-3">
                                             <div className="flex items-center gap-2">
-                                                <span className="font-medium text-slate-800">{model.name}</span>
+                                                <Link href={`/models/${encodeURIComponent(model.name)}`} className="font-medium text-slate-800 hover:text-primary-600 hover:underline" onClick={e => e.stopPropagation()}>{model.name}</Link>
                                                 {model.is_opensource && (
                                                     <span className="px-1.5 py-0.5 bg-green-100 text-green-700 text-xs rounded">
                                                         {t.opensource}
