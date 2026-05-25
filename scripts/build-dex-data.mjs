@@ -5,6 +5,7 @@ import XLSX from "xlsx";
 const workbookPath = path.resolve("assets/dex/raw/Dexterous Manipulation SOTA Leaderboard.xlsx");
 const outputPath = path.resolve("public/dex/data/leaderboard.json");
 const colorMapPath = path.resolve("public/dex/data/benchmark-colors.json");
+const modelsSearchPath = path.resolve("public/dex/data/models_search.json");
 
 if (!fs.existsSync(workbookPath)) {
     console.warn(`⚠️  Excel file not found: ${workbookPath}`);
@@ -39,10 +40,20 @@ const slugify = (value) =>
 const getCell = (addr) => {
     const cell = sheet[addr];
     if (!cell) return { value: null, link: undefined };
+    const value = normalizeCellValue(cell.v);
     return {
-        value: normalizeCellValue(cell.v),
-        link: cell.l?.Target
+        value,
+        link: cell.l?.Target || extractUrl(value)
     };
+};
+
+const extractUrl = (value) => {
+    if (!value) return undefined;
+    const httpMatch = value.match(/https?:\/\/[^\s)]+/i);
+    if (httpMatch) return httpMatch[0].replace(/[.,;]+$/, "");
+    const arxivMatch = value.match(/arxiv\s*:\s*(\d{4}\.\d+(?:v\d+)?)/i);
+    if (arxivMatch) return `https://arxiv.org/abs/${arxivMatch[1]}`;
+    return undefined;
 };
 
 const labelFromUrl = (url) => {
@@ -51,6 +62,26 @@ const labelFromUrl = (url) => {
     if (url.includes("github")) return "Code";
     if (url.includes("google.com/drive")) return "Assets";
     return "Website";
+};
+
+const normalizeSource = (value) => {
+    if (!value) return null;
+    if (/^origin$/i.test(value)) return "Original";
+    const reportedBy = /^by\s+(.+)$/i.exec(value);
+    if (reportedBy) return `Reported by ${reportedBy[1]}`;
+    return value;
+};
+
+const getTimeValue = (addr) => {
+    const cell = sheet[addr];
+    if (!cell) return "";
+    if (typeof cell.v === "number" && cell.v > 30000) {
+        const parsed = XLSX.SSF.parse_date_code(cell.v);
+        if (parsed) return `${parsed.y}.${String(parsed.m).padStart(2, "0")}`;
+    }
+    const value = normalizeCellValue(cell.v) || "";
+    const match = /^(\d{4})\.(\d{1,2})$/.exec(value);
+    return match ? `${match[1]}.${match[2].padStart(2, "0")}` : value;
 };
 
 const seedFromString = (value) => {
@@ -119,10 +150,11 @@ const parseBenchmarkLinks = () => {
     const mapping = {
         adroit: ["F2", "J2"],
         dexart: ["N2", "R2"],
-        bidexhands: ["V2", "AH2"]
+        bidexhands: ["V2", "AH2"],
+        dexgraspnet: ["AT2", "AX2"]
     };
 
-    const out = { adroit: [], dexart: [], bidexhands: [] };
+    const out = { adroit: [], dexart: [], bidexhands: [], dexgraspnet: [] };
     Object.entries(mapping).forEach(([key, cells]) => {
         cells.forEach((addr) => {
             const cell = getCell(addr);
@@ -198,6 +230,21 @@ const benchmarks = [
             { id: "source", label: "Source", col: "AR", kind: "meta" },
             { id: "proof", label: "Proof", col: "AS", kind: "meta" }
         ]
+    },
+    {
+        id: "dexgraspnet",
+        name: "DexGraspNet",
+        description: "A large-scale dexterous grasping benchmark for evaluating stable and diverse grasps on general objects.",
+        meanColumnId: "graspSuccessRate",
+        columns: [
+            { id: "graspSuccessRate", label: "Suc.1 (GSR)", col: "AT", kind: "score" },
+            { id: "penetration", label: "Pen.", col: "AU", kind: "score" },
+            { id: "diversity", label: "Div.", col: "AV", kind: "score" },
+            { id: "successAtSix", label: "Suc.6", col: "AW", kind: "score" },
+            { id: "setting", label: "Setting", col: "AX", kind: "meta" },
+            { id: "source", label: "Source", col: "AY", kind: "meta" },
+            { id: "proof", label: "Proof", col: "AZ", kind: "meta" }
+        ]
     }
 ];
 
@@ -210,7 +257,7 @@ for (let row = 4; row <= 200; row += 1) {
     if (!shortNameCell.value) continue;
 
     const title = getCell(`B${row}`).value || "";
-    const time = getCell(`C${row}`).value || "";
+    const time = getTimeValue(`C${row}`);
     const paperCell = getCell(`D${row}`);
     const projectCell = getCell(`E${row}`);
 
@@ -219,7 +266,7 @@ for (let row = 4; row <= 200; row += 1) {
         const values = {};
         benchmark.columns.forEach((column) => {
             const cell = getCell(`${column.col}${row}`);
-            values[column.id] = cell.value;
+            values[column.id] = column.id === "source" ? normalizeSource(cell.value) : cell.value;
         });
 
         benchmarksData[benchmark.id] = {
@@ -247,20 +294,16 @@ for (let row = 4; row <= 200; row += 1) {
     });
 }
 
-const parseTimeScore = (time) => {
-    if (!time) return 0;
-    const match = /^(\d{4})\.(\d{1,2})/.exec(time);
-    if (!match) return 0;
-    return parseInt(match[1], 10) * 100 + parseInt(match[2], 10);
-};
-
-const updates = [...methods]
-    .sort((a, b) => parseTimeScore(b.time) - parseTimeScore(a.time))
-    .slice(0, 5)
-    .map((entry) => ({
-        date: entry.time,
-        text: `${entry.shortName}: ${entry.title}`
-    }));
+const updates = [
+    {
+        date: "2026-05-24",
+        text: "Added the DexGraspNet leaderboard and updated the associated model results. You can now search Dex manipulation models by name."
+    },
+    {
+        date: "2026-02-09",
+        text: "Launched the Dexterous Manipulation SOTA Leaderboard."
+    }
+];
 
 const data = {
     generatedAt: new Date().toISOString(),
@@ -306,5 +349,28 @@ fs.writeFileSync(
         2
     )
 );
+
+const searchModels = methods.map((method) => ({
+    id: method.id,
+    name: method.shortName,
+    title: method.title,
+    time: method.time,
+    paper: method.paper,
+    project: method.project,
+    isOpenSource: method.isOpenSource,
+    benchmarks: benchmarks.reduce((results, benchmark) => {
+        const score = parseScore(method.benchmarks?.[benchmark.id]?.values?.[benchmark.meanColumnId]);
+        if (score === null) return results;
+        results[benchmark.id] = {
+            name: benchmark.name,
+            score,
+            rank: method.ranks[benchmark.id],
+            source: method.benchmarks[benchmark.id].source || null
+        };
+        return results;
+    }, {})
+}));
+
+fs.writeFileSync(modelsSearchPath, JSON.stringify(searchModels, null, 2));
 
 console.log(`Wrote ${methods.length} methods to ${outputPath}`);

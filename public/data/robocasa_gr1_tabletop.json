@@ -16,6 +16,36 @@
       "rank": 1
     },
     {
+      "name": "FrameSkip",
+      "base_name": "FrameSkip",
+      "setting": "",
+      "paper_url": "https://arxiv.org/abs/2605.13757",
+      "pub_date": "2026-05",
+      "is_opensource": true,
+      "opensource_url": "https://github.com/ZGC-EmbodyAI/FrameSkip",
+      "is_rl": false,
+      "avg_success_rate": 59.5,
+      "source": "original",
+      "is_standard": true,
+      "note": "",
+      "rank": 2
+    },
+    {
+      "name": "RLDX-1",
+      "base_name": "RLDX-1",
+      "setting": "",
+      "paper_url": "https://arxiv.org/abs/2605.03269",
+      "pub_date": "2026-05",
+      "is_opensource": true,
+      "opensource_url": "https://github.com/RLWRLD/RLDX-1",
+      "is_rl": false,
+      "avg_success_rate": 58.7,
+      "source": "original",
+      "is_standard": true,
+      "note": "",
+      "rank": 3
+    },
+    {
       "name": "ABot-M0",
       "base_name": "ABot-M0",
       "setting": "",
@@ -28,7 +58,7 @@
       "source": "original",
       "is_standard": true,
       "note": "",
-      "rank": 2
+      "rank": 4
     },
     {
       "name": "StarVLA-alpha",
@@ -43,13 +73,13 @@
       "source": "original",
       "is_standard": true,
       "note": "",
-      "rank": 3
+      "rank": 5
     },
     {
       "name": "TwinBrainVLA",
       "base_name": "TwinBrainVLA",
       "setting": "",
-      "paper_url": "https://arxiv.org/html/2601.14133v1",
+      "paper_url": "https://arxiv.org/abs/2601.14133",
       "pub_date": "2026-01",
       "is_opensource": true,
       "opensource_url": "https://github.com/ZGC-EmbodyAI/TwinBrainVLA",
@@ -58,13 +88,13 @@
       "source": "original",
       "is_standard": true,
       "note": "",
-      "rank": 4
+      "rank": 6
     },
     {
       "name": "Langforce",
       "base_name": "Langforce",
       "setting": "",
-      "paper_url": "https://arxiv.org/html/2601.15197v4",
+      "paper_url": "https://arxiv.org/abs/2601.15197",
       "pub_date": "2026-01",
       "is_opensource": true,
       "opensource_url": "https://github.com/ZGC-EmbodyAI/LangForce",
@@ -73,7 +103,7 @@
       "source": "original",
       "is_standard": true,
       "note": "",
-      "rank": 5
+      "rank": 7
     },
     {
       "name": "DiT4DiT",
@@ -88,13 +118,13 @@
       "source": "original",
       "is_standard": true,
       "note": "",
-      "rank": 6
+      "rank": 8
     },
     {
       "name": "StarVLA (Qwen3OFT)",
       "base_name": "StarVLA",
       "setting": "Qwen3OFT",
-      "paper_url": "https://github.com/starVLA/starVLA",
+      "paper_url": "https://arxiv.org/abs/2604.05014",
       "pub_date": "2025-12",
       "is_opensource": true,
       "opensource_url": "https://github.com/starVLA/starVLA",
@@ -103,13 +133,13 @@
       "source": "original",
       "is_standard": true,
       "note": "",
-      "rank": 7
+      "rank": 9
     },
     {
       "name": "StarVLA (Qwen3GR00T)",
       "base_name": "StarVLA",
       "setting": "Qwen3GR00T",
-      "paper_url": "https://github.com/starVLA/starVLA",
+      "paper_url": "https://arxiv.org/abs/2604.05014",
       "pub_date": "2025-12",
       "is_opensource": true,
       "opensource_url": "https://github.com/starVLA/starVLA",
@@ -118,7 +148,7 @@
       "source": "original",
       "is_standard": true,
       "note": "",
-      "rank": 8
+      "rank": 10
     },
     {
       "name": "GR00T-N1.6",
@@ -133,13 +163,13 @@
       "source": "from StarVLA",
       "is_standard": true,
       "note": "",
-      "rank": 9
+      "rank": 11
     },
     {
       "name": "StarVLA (Qwen3PI)",
       "base_name": "StarVLA",
       "setting": "Qwen3PI",
-      "paper_url": "https://github.com/starVLA/starVLA",
+      "paper_url": "https://arxiv.org/abs/2604.05014",
       "pub_date": "2025-12",
       "is_opensource": true,
       "opensource_url": "https://github.com/starVLA/starVLA",
@@ -148,13 +178,13 @@
       "source": "original",
       "is_standard": true,
       "note": "",
-      "rank": 10
+      "rank": 12
     },
     {
       "name": "StarVLA (Qwen3FAST)",
       "base_name": "StarVLA",
       "setting": "Qwen3FAST",
-      "paper_url": "https://github.com/starVLA/starVLA",
+      "paper_url": "https://arxiv.org/abs/2604.05014",
       "pub_date": "2025-12",
       "is_opensource": true,
       "opensource_url": "https://github.com/starVLA/starVLA",
@@ -163,10 +193,25 @@
       "source": "original",
       "is_standard": true,
       "note": "",
-      "rank": 11
+      "rank": 13
     }
   ],
   "standard_closed": [
+    {
+      "name": "PhysBrain 1.0",
+      "base_name": "PhysBrain 1.0",
+      "setting": "",
+      "paper_url": "https://arxiv.org/abs/2605.15298",
+      "pub_date": "2026-05",
+      "is_opensource": false,
+      "opensource_url": null,
+      "is_rl": false,
+      "avg_success_rate": 64.5,
+      "source": "original",
+      "is_standard": true,
+      "note": "",
+      "rank": 1
+    },
     {
       "name": "JoyAI-RA 0.1",
       "base_name": "JoyAI-RA 0.1",
@@ -180,7 +225,7 @@
       "source": "original",
       "is_standard": true,
       "note": "",
-      "rank": 1
+      "rank": 2
     },
     {
       "name": "LatentBridge",
@@ -195,7 +240,7 @@
       "source": "original",
       "is_standard": true,
       "note": "",
-      "rank": 2
+      "rank": 3
     },
     {
       "name": "Dual-CoT VLA",
@@ -210,7 +255,7 @@
       "source": "original",
       "is_standard": true,
       "note": "",
-      "rank": 3
+      "rank": 4
     },
     {
       "name": "VP-VLA",
@@ -225,7 +270,7 @@
       "source": "original",
       "is_standard": true,
       "note": "",
-      "rank": 4
+      "rank": 5
     }
   ],
   "non_standard": []

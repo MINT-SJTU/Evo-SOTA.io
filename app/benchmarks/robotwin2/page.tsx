@@ -60,6 +60,7 @@ export default function RobotwinPage() {
             paper: 'Paper',
             github: 'Code',
             clickToExpand: 'Click row to expand details',
+            clickModelName: 'Click model name to view detailed model information',
             showAllModels: 'Include All Models',
             openSourceOnly: 'Open-Source Only',
             standardModels: 'Standard Evaluation Models',
@@ -86,6 +87,7 @@ export default function RobotwinPage() {
             paper: '论文',
             github: '代码',
             clickToExpand: '点击行展开详情',
+            clickModelName: '点击模型名称查看详细模型信息',
             showAllModels: '显示全部模型',
             openSourceOnly: '仅开源模型',
             standardModels: '标准测试模型',
@@ -268,7 +270,7 @@ export default function RobotwinPage() {
                                         </td>
                                         <td className="px-4 py-3">
                                             <div className="flex items-center gap-2">
-                                                <span className="font-medium text-slate-800">{model.name}</span>
+                                                <Link href={`/models/${encodeURIComponent(model.name)}`} className="font-medium text-slate-800 hover:text-primary-600 hover:underline" onClick={e => e.stopPropagation()}>{model.name}</Link>
                                                 {model.is_opensource && (
                                                     <span className="px-1.5 py-0.5 bg-green-100 text-green-700 text-xs rounded">
                                                         {t.opensource}
@@ -473,7 +475,10 @@ export default function RobotwinPage() {
                     </div>
                 </div>
 
-                <p className="text-sm text-slate-500 mb-4">{t.clickToExpand}</p>
+                <div className="flex flex-wrap gap-x-5 gap-y-0.5 mb-4 text-sm text-slate-500">
+                    <span>💡 {t.clickToExpand}</span>
+                    <span>🔗 {t.clickModelName}</span>
+                </div>
 
                 {/* Standard Models heading + Easy/Hard toggle on same line */}
                 <div className="flex flex-wrap items-center justify-between gap-4 mb-4">

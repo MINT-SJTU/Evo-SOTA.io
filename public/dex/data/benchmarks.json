@@ -13,5 +13,10 @@
     "id": "bidexhands",
     "name": "Bi-DexHands",
     "href": "/dex/benchmarks/bidexhands"
+  },
+  {
+    "id": "dexgraspnet",
+    "name": "DexGraspNet",
+    "href": "/dex/benchmarks/dexgraspnet"
   }
 ]

@@ -2,6 +2,7 @@
 
 import Link from "next/link";
 import { useLanguage } from "@/lib/LanguageContext";
+import SearchBar from "@/components/dex/SearchBar";
 
 export default function Hero() {
   const { t } = useLanguage();
@@ -31,6 +32,9 @@ export default function Hero() {
           >
             {t.common.learnMore}
           </Link>
+        </div>
+        <div className="max-w-xl mx-auto mb-6">
+          <SearchBar />
         </div>
         <div className="mt-4">
           <a

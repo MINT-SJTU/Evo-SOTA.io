@@ -1,6 +1,11 @@
 {
     "news": [
         {
+            "date": "🗓️ 2026-05-25: ",
+            "content_en": "🚀 Major update: New Feature: Model detail pages are now available! Click or search model name to view. New models: Add ALAM, ConsisVLA-4D, OA-WAM, LoopVLA, PriorVLA, Multi-view-VLA, RotVLA, GTA-VLA, FrameSkip, Evo-depth, PhysBrain 1.0, DyGRO-VLA, GaussianDream, VLANeXt, PointACT, BehaviorVLA, GridS to LIBERO; OA-WAM, VLA-GSE, LoopVLA, Multi-view-VLA, GuidedVLA, Evo-depth, RoVLA, VLANeXt, GridS to LIBERO Plus; ALAM, Evo-depth to Meta-World; BehaviorVLA to CALVIN; RLDX-1, FrameSkip, PhysBrain 1.0 to Robocasa-GR1-Tabletop; Multi-view-VLA, RotVLA, RoVLA to RoboTwin 2.0",
+            "content_zh": "🚀 重大更新: 新增功能: 模型详情页现已上线! 点击或搜索模型名称即可查看详情。新增模型: 增加 ALAM, ConsisVLA-4D, OA-WAM, LoopVLA, PriorVLA, Multi-view-VLA, RotVLA, GTA-VLA, FrameSkip, Evo-depth, PhysBrain 1.0, DyGRO-VLA, GaussianDream, VLANeXt, PointACT, BehaviorVLA, GridS 到 LIBERO; OA-WAM, VLA-GSE, LoopVLA, Multi-view-VLA, GuidedVLA, Evo-depth, RoVLA, VLANeXt, GridS 到 LIBERO Plus; ALAM, Evo-depth 到 Metaworld; BehaviorVLA 到 CALVIN; RLDX-1, FrameSkip, PhysBrain 1.0 到 Robocasa-GR1-Tabletop; Multi-view-VLA, RotVLA, RoVLA 到 RoboTwin 2.0"
+        },
+        {
             "date": "🗓️ 2026-05-06: ",
             "content_en": "🚀 Major update: New Leaderboard: RoboTwin 2.0 leaderboard added and related models updated. New models: Add Fast-WAM, HoloBrain-0, InternVLA-A1, ST-pi, CorridorVLA, LoHo-Manip, OmniVLA-RL, PokeVLA, GeCO, M^2-VLA, Libra-VLA, CF-VLA, PRTS, LaST-R1, IVLR, LatentBridge, MolmoAct2, StreamVLA to LIBERO; Add HoloBrain-0, PokeVLA, Libra-VLA, PRTS to LIBERO Plus; Add AnchorRefine, CF-VLA to CALVIN; Add JoyAI-RA 0.1, DIAL, LatentBridge to Robocasa-GR1-Tabletop",
             "content_zh": "🚀 重大更新：新增榜单：增加了 RoboTwin 2.0榜单以及更新了相关模型。新增模型：增加 Fast-WAM, HoloBrain-0, InternVLA-A1, ST-pi, CorridorVLA, LoHo-Manip, OmniVLA-RL, PokeVLA, GeCO, M^2-VLA, Libra-VLA, CF-VLA, PRTS, LaST-R1, IVLR, LatentBridge, MolmoAct2, StreamVLA 到 LIBERO; 增加 HoloBrain-0, PokeVLA, Libra-VLA, PRTS 到 LIBERO Plus; 增加 AnchorRefine, CF-VLA 到 CALVIN; 增加 JoyAI-RA 0.1, DIAL, LatentBridge 到 Robocasa-GR1-Tabletop"

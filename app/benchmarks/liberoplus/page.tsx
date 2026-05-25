@@ -69,6 +69,7 @@ export default function LiberoPlusPage() {
             paper: 'Paper',
             github: 'Code',
             clickToExpand: 'Click row to expand details',
+            clickModelName: 'Click model name to view detailed model information',
             metrics: 'Robustness Metrics',
             showAllModels: 'Include All Models',
             openSourceOnly: 'Open-Source Only',
@@ -98,6 +99,7 @@ export default function LiberoPlusPage() {
             paper: '论文',
             github: '代码',
             clickToExpand: '点击行展开详情',
+            clickModelName: '点击模型名称查看详细模型信息',
             metrics: '鲁棒性指标',
             showAllModels: '显示全部模型',
             openSourceOnly: '仅开源模型',
@@ -282,7 +284,7 @@ export default function LiberoPlusPage() {
                                         </td>
                                         <td className="px-4 py-3">
                                             <div className="flex items-center gap-2">
-                                                <span className="font-medium text-slate-800">{model.name}</span>
+                                                <Link href={`/models/${encodeURIComponent(model.name)}`} className="font-medium text-slate-800 hover:text-primary-600 hover:underline" onClick={e => e.stopPropagation()}>{model.name}</Link>
                                                 {model.is_opensource && (
                                                     <span className="px-1.5 py-0.5 bg-green-100 text-green-700 text-xs rounded">
                                                         {t.opensource}
@@ -543,11 +545,19 @@ export default function LiberoPlusPage() {
                 </div>
 
                 {/* Hint */}
-                <div className="text-sm text-slate-500 mb-4 flex items-center gap-1">
-                    <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
-                    </svg>
-                    {t.clickToExpand}
+                <div className="flex flex-col gap-1 mb-4 text-sm text-slate-500">
+                    <div className="flex items-center gap-1">
+                        <svg className="w-4 h-4 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+                        </svg>
+                        💡 {t.clickToExpand}
+                    </div>
+                    <div className="flex items-center gap-1">
+                        <svg className="w-4 h-4 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+                        </svg>
+                        🔗 {t.clickModelName}
+                    </div>
                 </div>
 
                 {/* Standard Models Section */}

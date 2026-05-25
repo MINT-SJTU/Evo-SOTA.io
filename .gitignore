@@ -43,3 +43,10 @@ next-env.d.ts
 
 # Local raw assets
 assets/
+!assets/
+assets/*
+!assets/dex/
+assets/dex/*
+!assets/dex/raw/
+assets/dex/raw/*
+!assets/dex/raw/Dexterous Manipulation SOTA Leaderboard.xlsx

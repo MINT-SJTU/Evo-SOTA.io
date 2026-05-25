@@ -61,18 +61,21 @@ export default function BenchmarkCards({
       <div className="max-w-6xl mx-auto">
         <h2 className="text-2xl font-bold text-slate-800 mb-8 text-center">{t.dex.benchmarkCards.title}</h2>
 
-        <div className="flex justify-center gap-5 flex-wrap">
+        <div className="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-4 gap-5">
           {benchmarks.map((benchmark) => {
             const top = getTopMethods(benchmark, methods);
             const modelCount = countModels(benchmark, methods);
             const accent = benchmark.color || "#3b82f6";
             const badgeBg = toHsla(accent, 0.2);
             const localizedDescription = t.dex.benchmarkDescriptions[benchmark.id] || benchmark.description;
+            const primaryMetric =
+              benchmark.columns.find((column) => column.id === benchmark.meanColumnId)?.label ||
+              t.dex.benchmarkCards.primaryMetricValue;
 
             return (
               <div
                 key={benchmark.id}
-                className="w-80 rounded-xl border-2 overflow-hidden card-hover"
+                className="rounded-xl border-2 overflow-hidden card-hover flex flex-col"
                 style={{ borderColor: accent, backgroundColor: toHsla(accent, 0.08) }}
               >
                 <div className="p-6 border-b border-slate-200 bg-white">
@@ -88,10 +91,10 @@ export default function BenchmarkCards({
                     </span>
                   </div>
                   <p className="text-sm text-slate-600 line-clamp-2">{localizedDescription}</p>
-                  <p className="text-xs text-slate-500 mt-2">{t.dex.benchmarkCards.primaryMetric}: {t.dex.benchmarkCards.primaryMetricValue}</p>
+                  <p className="text-xs text-slate-500 mt-2">{t.dex.benchmarkCards.primaryMetric}: {primaryMetric}</p>
                 </div>
 
-                <div className="p-4">
+                <div className="p-4 flex-1">
                   <h4 className="text-sm font-semibold text-slate-700 mb-3">{t.dex.benchmarkCards.topPerformers}</h4>
                   <div className="space-y-2">
                     {top.length ? (

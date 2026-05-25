@@ -4,6 +4,7 @@ import { useState, useEffect, useRef, useCallback, Suspense } from 'react';
 import { useSearchParams, useRouter } from 'next/navigation';
 import Link from 'next/link';
 import { useLanguage } from '@/lib/LanguageContext';
+import { LatexText } from '@/components/LatexText';
 
 // ─── 类型定义 ────────────────────────────────────────────────
 interface BenchmarkEntry {
@@ -24,6 +25,10 @@ interface ModelEntry {
     is_rl: boolean;
     settings: string[];
     benchmarks: Record<string, BenchmarkEntry[]>;
+    paper_arxiv_id: string | null;
+    paper_title: string | null;
+    paper_authors: string[] | null;
+    paper_abstract: string | null;
 }
 
 // ─── 常量 ────────────────────────────────────────────────────
@@ -117,6 +122,8 @@ interface ModelCardProps {
 function ModelCard({ model, isExpanded, onToggle, benchmarkName, locale, msOpenSource, msPaper, msCode, msNoBenchmarks, msBenchmarkResults }: ModelCardProps) {
     const hasBenchmarks = BENCHMARK_KEYS.some(k => (model.benchmarks[k]?.length ?? 0) > 0);
     const benchmarkCount = BENCHMARK_KEYS.filter(k => (model.benchmarks[k]?.length ?? 0) > 0).length;
+    const [abstractExpanded, setAbstractExpanded] = useState(false);
+    const zh = locale === 'zh';
 
     // 问题1 修复：使用普通 div + onClick，避免 button 的默认提交行为导致滚动重置
     const handleToggle = (e: React.MouseEvent) => {
@@ -137,7 +144,13 @@ function ModelCard({ model, isExpanded, onToggle, benchmarkName, locale, msOpenS
             >
                 <div className="flex-1 min-w-0">
                     <div className="flex flex-wrap items-center gap-2 mb-1.5">
-                        <h3 className="text-base font-bold text-slate-900 truncate">{model.name}</h3>
+                        <Link
+                            href={`/models/${encodeURIComponent(model.name)}`}
+                            onClick={(e) => e.stopPropagation()}
+                            className="text-base font-bold text-slate-900 hover:text-primary-600 truncate transition-colors"
+                        >
+                            {model.name}
+                        </Link>
                         {model.is_rl ? (
                             <span className="px-2 py-0.5 bg-orange-100 text-orange-700 text-xs rounded-full font-semibold flex-shrink-0">RL</span>
                         ) : (
@@ -210,7 +223,54 @@ function ModelCard({ model, isExpanded, onToggle, benchmarkName, locale, msOpenS
 
             {/* 展开详情 */}
             {isExpanded && (
-                <div className="border-t border-slate-100 px-5 py-4">
+                <div className="border-t border-slate-100 px-5 py-4 space-y-4">
+
+                    {/* 论文信息（仅有 paper_title 时显示） */}
+                    {model.paper_title && (
+                        <div className="bg-slate-50 rounded-lg p-3 border border-slate-100">
+                            <h4 className="text-xs font-semibold text-slate-600 mb-2 flex items-center gap-1">
+                                <span>📑</span>
+                                {zh ? '论文信息' : 'Paper Info'}
+                            </h4>
+                            <p className="text-sm font-semibold text-slate-800 leading-snug mb-1.5">
+                                <LatexText text={model.paper_title} />
+                            </p>
+                            {model.paper_authors && model.paper_authors.length > 0 && (
+                                <p className="text-xs text-slate-500 mb-2 leading-relaxed">
+                                    <span className="font-medium">{zh ? '作者：' : 'Authors: '}</span>
+                                    {model.paper_authors.join(', ')}
+                                </p>
+                            )}
+                            {model.paper_abstract && (
+                                <div>
+                                    <div className={`text-xs text-slate-600 leading-relaxed ${!abstractExpanded ? 'line-clamp-3' : ''}`}>
+                                        <LatexText text={model.paper_abstract} />
+                                    </div>
+                                    <button
+                                        onClick={(e) => { e.stopPropagation(); setAbstractExpanded(!abstractExpanded); }}
+                                        className="mt-1 text-xs text-primary-600 hover:text-primary-800 font-medium transition-colors"
+                                    >
+                                        {abstractExpanded ? (zh ? '收起' : 'Show less') : (zh ? '展开摘要' : 'Show abstract')}
+                                    </button>
+                                </div>
+                            )}
+                            {model.paper_arxiv_id && (
+                                <a
+                                    href={`https://arxiv.org/abs/${model.paper_arxiv_id}`}
+                                    target="_blank"
+                                    rel="noopener noreferrer"
+                                    onClick={(e) => e.stopPropagation()}
+                                    className="inline-flex items-center gap-1 mt-2 text-xs text-primary-600 hover:text-primary-800 font-medium transition-colors"
+                                >
+                                    <svg className="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
+                                    </svg>
+                                    arxiv.org/abs/{model.paper_arxiv_id}
+                                </a>
+                            )}
+                        </div>
+                    )}
+
                     {!hasBenchmarks ? (
                         <p className="text-sm text-slate-400 text-center py-4">{msNoBenchmarks}</p>
                     ) : (

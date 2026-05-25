@@ -20,6 +20,25 @@
       "rank": 1
     },
     {
+      "name": "Evo-depth",
+      "base_name": "Evo-depth",
+      "setting": "",
+      "paper_url": "https://arxiv.org/abs/2605.14950",
+      "pub_date": "2026-05",
+      "is_opensource": true,
+      "opensource_url": "https://github.com/MINT-SJTU/Evo-Depth",
+      "is_rl": false,
+      "easy": 83.1,
+      "medium": 84.7,
+      "hard": 87.3,
+      "very_hard": 82.4,
+      "average": 84.4,
+      "source": "original",
+      "is_standard": true,
+      "note": "",
+      "rank": 2
+    },
+    {
       "name": "Evo-1",
       "base_name": "Evo-1",
       "setting": "",
@@ -36,13 +55,13 @@
       "source": "original",
       "is_standard": true,
       "note": "",
-      "rank": 2
+      "rank": 3
     },
     {
       "name": "RoboTron Mani",
       "base_name": "RoboTron Mani",
       "setting": "",
-      "paper_url": "https://arxiv.org/pdf/2412.07215",
+      "paper_url": "https://arxiv.org/abs/2412.07215",
       "pub_date": "2025-11",
       "is_opensource": true,
       "opensource_url": "https://github.com/EmbodiedAI-RoboTron/RoboTron-Mani",
@@ -55,7 +74,7 @@
       "source": "original",
       "is_standard": true,
       "note": "RoboTron-Mani 采用了自定义的数据生成协议， 而不是标准的训练数据， 但是介于很多别的论文也干了。原文：“ To address the lack of training data for simulation learning, we adopt the scripted policies from Yu et al. [68] and introduce Gaussian noise N(0, 0.1) to the generated actions at each step, resulting in a total of 22,500 trajectories, with each task producing 500 successful trajectories. ”",
-      "rank": 3
+      "rank": 4
     },
     {
       "name": "SmolVLA",
@@ -74,13 +93,13 @@
       "source": "original",
       "is_standard": true,
       "note": "",
-      "rank": 4
+      "rank": 5
     },
     {
       "name": "pi0",
       "base_name": "pi0",
       "setting": "",
-      "paper_url": "https://arxiv.org/html/2410.24164",
+      "paper_url": "https://arxiv.org/abs/2410.24164",
       "pub_date": "2024-10",
       "is_opensource": true,
       "opensource_url": "https://github.com/Physical-Intelligence/openpi",
@@ -93,13 +112,13 @@
       "source": "from smolVLA",
       "is_standard": true,
       "note": "不清楚具体实验设置，因此无法判断来自于是同一个权重还是四个权重",
-      "rank": 5
+      "rank": 6
     },
     {
       "name": "TinyVLA-H",
       "base_name": "TinyVLA-H",
       "setting": "",
-      "paper_url": "https://arxiv.org/html/2409.12514v1",
+      "paper_url": "https://arxiv.org/abs/2409.12514",
       "pub_date": "2024-09",
       "is_opensource": true,
       "opensource_url": "https://github.com/liyaxuanliyaxuan/TinyVLA",
@@ -112,13 +131,13 @@
       "source": "original",
       "is_standard": true,
       "note": "",
-      "rank": 6
+      "rank": 7
     },
     {
       "name": "Diffusion Policy",
       "base_name": "Diffusion Policy",
       "setting": "",
-      "paper_url": "https://arxiv.org/pdf/2303.04137",
+      "paper_url": "https://arxiv.org/abs/2303.04137",
       "pub_date": "2023-03",
       "is_opensource": true,
       "opensource_url": "https://github.com/real-stanford/diffusion_policy",
@@ -131,16 +150,36 @@
       "source": "from TinyVLA",
       "is_standard": true,
       "note": "",
-      "rank": 7
+      "rank": 8
     }
   ],
-  "standard_closed": [],
+  "standard_closed": [
+    {
+      "name": "ALAM",
+      "base_name": "ALAM",
+      "setting": "",
+      "paper_url": "https://arxiv.org/abs/2605.10819",
+      "pub_date": "2026-05",
+      "is_opensource": false,
+      "opensource_url": null,
+      "is_rl": false,
+      "easy": 89.3,
+      "medium": 83.6,
+      "hard": 85.0,
+      "very_hard": 82.0,
+      "average": 85.0,
+      "source": "original",
+      "is_standard": true,
+      "note": "",
+      "rank": 1
+    }
+  ],
   "non_standard": [
     {
       "name": "MPI",
       "base_name": "MPI",
       "setting": "",
-      "paper_url": "https://arxiv.org/pdf/2406.00439",
+      "paper_url": "https://arxiv.org/abs/2406.00439",
       "pub_date": "2024-06",
       "is_opensource": true,
       "opensource_url": "https://github.com/OpenDriveLab/MPI",
@@ -159,7 +198,7 @@
       "name": "iRe-VLA",
       "base_name": "iRe-VLA",
       "setting": "",
-      "paper_url": "https://arxiv.org/pdf/2501.16664",
+      "paper_url": "https://arxiv.org/abs/2501.16664",
       "pub_date": "2025-01",
       "is_opensource": false,
       "opensource_url": null,
@@ -254,7 +293,7 @@
       "name": "AVDC",
       "base_name": "AVDC",
       "setting": "",
-      "paper_url": "https://flow-diffusion.github.io/AVDC.pdf",
+      "paper_url": "https://arxiv.org/abs/2310.08576",
       "pub_date": "2023-10",
       "is_opensource": true,
       "opensource_url": "https://github.com/flow-diffusion/AVDC",

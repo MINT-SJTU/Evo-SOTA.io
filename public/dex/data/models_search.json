@@ -1,0 +1,823 @@
+[
+  {
+    "id": "maniflow",
+    "name": "ManiFlow",
+    "title": "ManiFlow: A General Robot Manipulation Policy via Consistency Flow Training",
+    "time": "2025.09",
+    "paper": {
+      "label": "Paper",
+      "url": "https://arxiv.org/pdf/2509.01819"
+    },
+    "project": {
+      "label": "Code",
+      "url": "https://maniflow-policy.github.io/"
+    },
+    "isOpenSource": true,
+    "benchmarks": {
+      "adroit": {
+        "name": "Adroit",
+        "score": 78.6,
+        "rank": 4,
+        "source": "Original"
+      },
+      "dexart": {
+        "name": "DexArt",
+        "score": 63.2,
+        "rank": 4,
+        "source": "Original"
+      }
+    }
+  },
+  {
+    "id": "iss-policy",
+    "name": "ISS Policy",
+    "title": "ISS Policy : Scalable Diffusion Policy with Implicit Scene Supervision",
+    "time": "2025.12",
+    "paper": {
+      "label": "Paper",
+      "url": "https://arxiv.org/pdf/2512.15020v1"
+    },
+    "isOpenSource": false,
+    "benchmarks": {
+      "adroit": {
+        "name": "Adroit",
+        "score": 74.8,
+        "rank": 6,
+        "source": "Original"
+      }
+    }
+  },
+  {
+    "id": "dp3",
+    "name": "DP3",
+    "title": "3D Diffusion Policy: Generalizable Visuomotor Policy Learning via Simple 3D Representations",
+    "time": "2024.03",
+    "paper": {
+      "label": "Paper",
+      "url": "https://arxiv.org/pdf/2403.03954"
+    },
+    "project": {
+      "label": "Code",
+      "url": "https://3d-diffusion-policy.github.io/"
+    },
+    "isOpenSource": true,
+    "benchmarks": {
+      "adroit": {
+        "name": "Adroit",
+        "score": 68.3,
+        "rank": 11,
+        "source": "Original"
+      },
+      "dexart": {
+        "name": "DexArt",
+        "score": 68.5,
+        "rank": 3,
+        "source": "Original"
+      },
+      "bidexhands": {
+        "name": "Bi-DexHands",
+        "score": 70.2,
+        "rank": 1,
+        "source": "Original"
+      }
+    }
+  },
+  {
+    "id": "dexhanddiff",
+    "name": "DexHandDiff",
+    "title": "DexHandDiff: Interaction-aware Diffusion Planning for Adaptive Dexterous Manipulation",
+    "time": "2024.11",
+    "paper": {
+      "label": "Paper",
+      "url": "https://arxiv.org/abs/2411.18562"
+    },
+    "project": {
+      "label": "Code",
+      "url": "https://dexdiffuser.github.io/"
+    },
+    "isOpenSource": true,
+    "benchmarks": {
+      "adroit": {
+        "name": "Adroit",
+        "score": 92.5,
+        "rank": 2,
+        "source": "Original"
+      }
+    }
+  },
+  {
+    "id": "diffusion-policy",
+    "name": "Diffusion Policy",
+    "title": "Diffusion Policy: Visuomotor Policy Learning via Action Diffusion",
+    "time": "2023.03",
+    "paper": {
+      "label": "Paper",
+      "url": "https://arxiv.org/pdf/2303.04137"
+    },
+    "project": {
+      "label": "Code",
+      "url": "https://github.com/real-stanford/diffusion_policy"
+    },
+    "isOpenSource": true,
+    "benchmarks": {
+      "adroit": {
+        "name": "Adroit",
+        "score": 62.3,
+        "rank": 12,
+        "source": "Reproduced by DP3"
+      },
+      "dexart": {
+        "name": "DexArt",
+        "score": 49,
+        "rank": 14,
+        "source": "Reproduced by DP3"
+      },
+      "bidexhands": {
+        "name": "Bi-DexHands",
+        "score": 61.3,
+        "rank": 2,
+        "source": "Reproduced by DP3"
+      }
+    }
+  },
+  {
+    "id": "flow-matching",
+    "name": "Flow Matching",
+    "title": "Affordance-based Robot Manipulation with Flow Matching",
+    "time": "2024.09",
+    "paper": {
+      "label": "Paper",
+      "url": "https://arxiv.org/pdf/2409.01083"
+    },
+    "project": {
+      "label": "Code",
+      "url": "https://hri-eu.github.io/flow-matching-policy/"
+    },
+    "isOpenSource": true,
+    "benchmarks": {
+      "adroit": {
+        "name": "Adroit",
+        "score": 39,
+        "rank": 17,
+        "source": "Reproduced by ManiFlow"
+      },
+      "dexart": {
+        "name": "DexArt",
+        "score": 53.3,
+        "rank": 12,
+        "source": "Reproduced by ManiFlow"
+      }
+    }
+  },
+  {
+    "id": "freqpolicy",
+    "name": "FreqPolicy",
+    "title": "FreqPolicy: Frequency Autoregressive Visuomotor Policy with Continuous Tokens",
+    "time": "2025.06",
+    "paper": {
+      "label": "Paper",
+      "url": "https://arxiv.org/pdf/2506.01583"
+    },
+    "project": {
+      "label": "Code",
+      "url": "https://freq-policy.github.io/"
+    },
+    "isOpenSource": true,
+    "benchmarks": {
+      "adroit": {
+        "name": "Adroit",
+        "score": 74.7,
+        "rank": 7,
+        "source": "Original"
+      },
+      "dexart": {
+        "name": "DexArt",
+        "score": 54.3,
+        "rank": 9,
+        "source": "Original"
+      }
+    }
+  },
+  {
+    "id": "dp4",
+    "name": "DP4",
+    "title": "Spatial-Temporal Aware Visuomotor Diffusion Policy Learning",
+    "time": "2025.07",
+    "paper": {
+      "label": "Paper",
+      "url": "https://arxiv.org/pdf/2507.06710"
+    },
+    "project": {
+      "label": "Code",
+      "url": "https://zhenyangliu.github.io/DP4/"
+    },
+    "isOpenSource": true,
+    "benchmarks": {
+      "dexart": {
+        "name": "DexArt",
+        "score": 82.5,
+        "rank": 1,
+        "source": "Original"
+      }
+    }
+  },
+  {
+    "id": "vla-os-a-i-h",
+    "name": "VLA-OS（-A/I/H）",
+    "title": "VLA-OS: Structuring and Dissecting Planning Representations and Paradigms in Vision-Language-Action Models",
+    "time": "2025.06",
+    "paper": {
+      "label": "Paper",
+      "url": "https://arxiv.org/pdf/2506.17561"
+    },
+    "project": {
+      "label": "Code",
+      "url": "https://nus-lins-lab.github.io/vlaos/"
+    },
+    "isOpenSource": true,
+    "benchmarks": {
+      "dexart": {
+        "name": "DexArt",
+        "score": 49,
+        "rank": 15,
+        "source": "Original"
+      }
+    }
+  },
+  {
+    "id": "bridgepolicy",
+    "name": "BridgePolicy",
+    "title": "Sample from What You See: Visuomotor Policy Learning via Diffusion Bridge with Observation-Embedded Stochastic Differential Equation",
+    "time": "2025.12",
+    "paper": {
+      "label": "Paper",
+      "url": "https://arxiv.org/pdf/2512.07212"
+    },
+    "isOpenSource": false,
+    "benchmarks": {
+      "adroit": {
+        "name": "Adroit",
+        "score": 80.7,
+        "rank": 3,
+        "source": "Original"
+      },
+      "dexart": {
+        "name": "DexArt",
+        "score": 60,
+        "rank": 5,
+        "source": "Original"
+      }
+    }
+  },
+  {
+    "id": "flowpolicy",
+    "name": "FlowPolicy",
+    "title": "FlowPolicy: Enabling Fast and Robust 3D Flow-based Policy via Consistency Flow Matching for Robot Manipulation",
+    "time": "2024.12",
+    "paper": {
+      "label": "Paper",
+      "url": "https://arxiv.org/pdf/2412.04987"
+    },
+    "project": {
+      "label": "Code",
+      "url": "https://github.com/zql-kk/FlowPolicy"
+    },
+    "isOpenSource": true,
+    "benchmarks": {
+      "adroit": {
+        "name": "Adroit",
+        "score": 70.3,
+        "rank": 10,
+        "source": "Reproduced by BridgePolicy"
+      },
+      "dexart": {
+        "name": "DexArt",
+        "score": 54,
+        "rank": 10,
+        "source": "Reproduced by BridgePolicy"
+      }
+    }
+  },
+  {
+    "id": "sdm-policy",
+    "name": "SDM Policy",
+    "title": "Score and Distribution Matching Policy: Advanced Accelerated Visuomotor Policies via Matched Distillation",
+    "time": "2024.12",
+    "paper": {
+      "label": "Paper",
+      "url": "https://arxiv.org/pdf/2412.09265"
+    },
+    "project": {
+      "label": "Code",
+      "url": "https://sdm-policy.github.io/"
+    },
+    "isOpenSource": true,
+    "benchmarks": {
+      "adroit": {
+        "name": "Adroit",
+        "score": 74,
+        "rank": 8,
+        "source": "Original"
+      },
+      "dexart": {
+        "name": "DexArt",
+        "score": 56,
+        "rank": 7,
+        "source": "Original"
+      }
+    }
+  },
+  {
+    "id": "manicm",
+    "name": "ManiCM",
+    "title": "ManiCM: Real-time 3D Diffusion Policy via Consistency Model for Robotic Manipulation",
+    "time": "2024.06",
+    "paper": {
+      "label": "Paper",
+      "url": "https://arxiv.org/pdf/2406.01586"
+    },
+    "project": {
+      "label": "Code",
+      "url": "https://manicm-fast.github.io/"
+    },
+    "isOpenSource": true,
+    "benchmarks": {
+      "adroit": {
+        "name": "Adroit",
+        "score": 72.3,
+        "rank": 9,
+        "source": "Reproduced by SDM"
+      },
+      "dexart": {
+        "name": "DexArt",
+        "score": 56.8,
+        "rank": 6,
+        "source": "Reproduced by SDM"
+      }
+    }
+  },
+  {
+    "id": "mambapolicy",
+    "name": "MambaPolicy",
+    "title": "MambaPolicy: Towards Efficient 3D Diffusion Policy with Hybrid Selective State Models",
+    "time": "2024.09",
+    "paper": {
+      "label": "Paper",
+      "url": "https://arxiv.org/pdf/2409.07163"
+    },
+    "project": {
+      "label": "Code",
+      "url": "https://sagecao1125.github.io/mamba_policy/"
+    },
+    "isOpenSource": true,
+    "benchmarks": {
+      "adroit": {
+        "name": "Adroit",
+        "score": 52.3,
+        "rank": 14,
+        "source": "Original"
+      },
+      "dexart": {
+        "name": "DexArt",
+        "score": 54,
+        "rank": 11,
+        "source": "Original"
+      }
+    }
+  },
+  {
+    "id": "progresscounts",
+    "name": "ProgressCounts",
+    "title": "Automated Rewards via LLM-Generated Progress Functions",
+    "time": "2024.01",
+    "paper": {
+      "label": "Paper",
+      "url": "https://arxiv.org/abs/2410.09187"
+    },
+    "project": {
+      "label": "Assets",
+      "url": "https://drive.google.com/drive/folders/1G88Je0K4BuexWhE8ZLgoM0WM6vHcBrvt"
+    },
+    "isOpenSource": true,
+    "benchmarks": {
+      "bidexhands": {
+        "name": "Bi-DexHands",
+        "score": 59.3,
+        "rank": 3,
+        "source": "Original"
+      }
+    }
+  },
+  {
+    "id": "eureka",
+    "name": "Eureka",
+    "title": "Eureka: Human-Level Reward Design via Coding Large Language Models",
+    "time": "2023.01",
+    "paper": {
+      "label": "Paper",
+      "url": "https://arxiv.org/abs/2310.12931"
+    },
+    "project": {
+      "label": "Code",
+      "url": "https://github.com/eureka-research/Eureka"
+    },
+    "isOpenSource": true,
+    "benchmarks": {
+      "bidexhands": {
+        "name": "Bi-DexHands",
+        "score": 55.7,
+        "rank": 4,
+        "source": "Original"
+      }
+    }
+  },
+  {
+    "id": "gdp",
+    "name": "GDP",
+    "title": "Two-Steps Diffusion Policy for Robotic Manipulation via Genetic Denoising",
+    "time": "2025.01",
+    "paper": {
+      "label": "Paper",
+      "url": "https://arxiv.org/abs/2510.21991"
+    },
+    "isOpenSource": false,
+    "benchmarks": {
+      "adroit": {
+        "name": "Adroit",
+        "score": 97.2,
+        "rank": 1,
+        "source": "Original"
+      }
+    }
+  },
+  {
+    "id": "rnr-dp",
+    "name": "RNR-DP",
+    "title": "Responsive Noise-Relaying Diffusion Policy: Responsive and Efficient Visuomotor Control",
+    "time": "2025.02",
+    "paper": {
+      "label": "Paper",
+      "url": "https://arxiv.org/abs/2502.12724"
+    },
+    "project": {
+      "label": "Code",
+      "url": "https://rnr-dp.github.io/"
+    },
+    "isOpenSource": true,
+    "benchmarks": {
+      "adroit": {
+        "name": "Adroit",
+        "score": 57.4,
+        "rank": 13,
+        "source": "Original"
+      }
+    }
+  },
+  {
+    "id": "ddg",
+    "name": "DDG",
+    "title": "Deep differentiable grasp planner for high-dof grippers",
+    "time": "2020.01",
+    "paper": {
+      "label": "Paper",
+      "url": "https://arxiv.org/abs/2002.01530"
+    },
+    "isOpenSource": false,
+    "benchmarks": {
+      "dexgraspnet": {
+        "name": "DexGraspNet",
+        "score": 67.5,
+        "rank": 10,
+        "source": "Reported by DexGraspNet"
+      }
+    }
+  },
+  {
+    "id": "grasptta",
+    "name": "GraspTTA",
+    "title": "Hand-object contact consistency reasoning for human grasps generation",
+    "time": "2021.04",
+    "paper": {
+      "label": "Paper",
+      "url": "https://arxiv.org/abs/2104.03304"
+    },
+    "project": {
+      "label": "Code",
+      "url": "https://hwjiang1510.github.io/GraspTTA/"
+    },
+    "isOpenSource": true,
+    "benchmarks": {
+      "dexgraspnet": {
+        "name": "DexGraspNet",
+        "score": 24.5,
+        "rank": 12,
+        "source": "Reported by EFF-Grasp"
+      }
+    }
+  },
+  {
+    "id": "unidexgrasp",
+    "name": "UniDexGrasp",
+    "title": "UniDexGrasp: Universal Robotic Dexterous Grasping via Learning Diverse Proposal Generation and Goal-Conditioned Policy",
+    "time": "2023.03",
+    "paper": {
+      "label": "Paper",
+      "url": "https://arxiv.org/abs/2303.00938"
+    },
+    "project": {
+      "label": "Code",
+      "url": "https://pku-epic.github.io/UniDexGrasp/"
+    },
+    "isOpenSource": true,
+    "benchmarks": {
+      "dexgraspnet": {
+        "name": "DexGraspNet",
+        "score": 70.1,
+        "rank": 9,
+        "source": "Reported by EFF-Grasp"
+      }
+    }
+  },
+  {
+    "id": "scenediffuser",
+    "name": "SceneDiffuser",
+    "title": "Diffusion-based generation, optimization, and planning in 3d scenes",
+    "time": "2023.01",
+    "paper": {
+      "label": "Paper",
+      "url": "https://arxiv.org/abs/2301.06015"
+    },
+    "project": {
+      "label": "Code",
+      "url": "https://scenediffuser.github.io/"
+    },
+    "isOpenSource": true,
+    "benchmarks": {
+      "dexgraspnet": {
+        "name": "DexGraspNet",
+        "score": 66.9,
+        "rank": 11,
+        "source": "Reported by EFF-Grasp"
+      }
+    }
+  },
+  {
+    "id": "ugg",
+    "name": "UGG",
+    "title": "UGG: Unified Generative Grasping",
+    "time": "2023.11",
+    "paper": {
+      "label": "Paper",
+      "url": "https://arxiv.org/abs/2311.16917"
+    },
+    "project": {
+      "label": "Code",
+      "url": "https://jiaxin-lu.github.io/ugg/"
+    },
+    "isOpenSource": true,
+    "benchmarks": {
+      "dexgraspnet": {
+        "name": "DexGraspNet",
+        "score": 79,
+        "rank": 8,
+        "source": "Reported by EFF-Grasp"
+      }
+    }
+  },
+  {
+    "id": "dexgrasp-anything",
+    "name": "DexGrasp Anything",
+    "title": "DexGrasp Anything: Towards Universal Robotic Dexterous Grasping with Physics Awareness",
+    "time": "2025.03",
+    "paper": {
+      "label": "Paper",
+      "url": "https://arxiv.org/abs/2503.08257"
+    },
+    "project": {
+      "label": "Code",
+      "url": "https://dexgraspanything.github.io/"
+    },
+    "isOpenSource": true,
+    "benchmarks": {
+      "dexgraspnet": {
+        "name": "DexGraspNet",
+        "score": 90.4,
+        "rank": 3,
+        "source": "Original"
+      }
+    }
+  },
+  {
+    "id": "eff-grasp",
+    "name": "EFF-Grasp",
+    "title": "EFF-Grasp: Energy-Field Flow Matching for Physics-Aware Dexterous Grasp Generation",
+    "time": "2026.03",
+    "paper": {
+      "label": "Paper",
+      "url": "https://arxiv.org/abs/2603.16151"
+    },
+    "isOpenSource": false,
+    "benchmarks": {
+      "dexgraspnet": {
+        "name": "DexGraspNet",
+        "score": 91.2,
+        "rank": 2,
+        "source": "Original"
+      }
+    }
+  },
+  {
+    "id": "ffhnet",
+    "name": "FFHNet",
+    "title": "FFHNet: Generating Multi-Fingered Robotic Grasps for Unknown Objects in Real-time",
+    "time": "2022.05",
+    "paper": {
+      "label": "Website",
+      "url": "https://ieeexplore.ieee.org/document/9811666"
+    },
+    "project": {
+      "label": "Code",
+      "url": "https://github.com/qqianfeng/FFHNet"
+    },
+    "isOpenSource": true,
+    "benchmarks": {
+      "dexgraspnet": {
+        "name": "DexGraspNet",
+        "score": 82.16,
+        "rank": 7,
+        "source": "Reported by DexDiffuser"
+      }
+    }
+  },
+  {
+    "id": "dexdiffuser",
+    "name": "DexDiffuser",
+    "title": "DexDiffuser: Generating Dexterous Grasps with Diffusion Models",
+    "time": "2024.02",
+    "paper": {
+      "label": "Paper",
+      "url": "https://arxiv.org/abs/2402.02989"
+    },
+    "project": {
+      "label": "Code",
+      "url": "https://yulihn.github.io/DexDiffuser_page/"
+    },
+    "isOpenSource": true,
+    "benchmarks": {
+      "dexgraspnet": {
+        "name": "DexGraspNet",
+        "score": 82.94,
+        "rank": 6,
+        "source": "Original"
+      }
+    }
+  },
+  {
+    "id": "second-grasp",
+    "name": "SECOND-Grasp",
+    "title": "SECOND-Grasp: Semantic Contact-guided Dexterous Grasping",
+    "time": "2026.05",
+    "paper": {
+      "label": "Paper",
+      "url": "https://arxiv.org/abs/2605.13117v1"
+    },
+    "isOpenSource": false,
+    "benchmarks": {
+      "dexgraspnet": {
+        "name": "DexGraspNet",
+        "score": 94.9,
+        "rank": 1,
+        "source": "Original"
+      }
+    }
+  },
+  {
+    "id": "unigrasptransformer",
+    "name": "UniGraspTransformer",
+    "title": "UniGraspTransformer: Simplified Policy Distillation for Scalable Dexterous Robotic Grasping",
+    "time": "2024.12",
+    "paper": {
+      "label": "Paper",
+      "url": "https://arxiv.org/abs/2412.02699"
+    },
+    "project": {
+      "label": "Code",
+      "url": "https://dexhand.github.io/UniGraspTransformer/"
+    },
+    "isOpenSource": true,
+    "benchmarks": {
+      "dexgraspnet": {
+        "name": "DexGraspNet",
+        "score": 86.8,
+        "rank": 5,
+        "source": "Original"
+      }
+    }
+  },
+  {
+    "id": "demograsp",
+    "name": "DemoGrasp",
+    "title": "DemoGrasp: Universal Dexterous Grasping from a Single Demonstration",
+    "time": "2025.09",
+    "paper": {
+      "label": "Paper",
+      "url": "https://arxiv.org/abs/2509.22149"
+    },
+    "project": {
+      "label": "Code",
+      "url": "https://beingbeyond.github.io/DemoGrasp/"
+    },
+    "isOpenSource": true,
+    "benchmarks": {
+      "dexgraspnet": {
+        "name": "DexGraspNet",
+        "score": 90.1,
+        "rank": 4,
+        "source": "Original"
+      }
+    }
+  },
+  {
+    "id": "sat",
+    "name": "SAT",
+    "title": "Structural Action Transformer for 3D Dexterous Manipulation",
+    "time": "2026.03",
+    "paper": {
+      "label": "Paper",
+      "url": "https://arxiv.org/abs/2603.03960"
+    },
+    "isOpenSource": false,
+    "benchmarks": {
+      "adroit": {
+        "name": "Adroit",
+        "score": 75,
+        "rank": 5,
+        "source": "Original"
+      },
+      "dexart": {
+        "name": "DexArt",
+        "score": 73,
+        "rank": 2,
+        "source": "Original"
+      }
+    }
+  },
+  {
+    "id": "hpt",
+    "name": "HPT",
+    "title": "Scaling Proprioceptive-Visual Learning with Heterogeneous Pre-trained Transformers",
+    "time": "2024.09",
+    "paper": {
+      "label": "Paper",
+      "url": "https://arxiv.org/abs/2509.01819"
+    },
+    "project": {
+      "label": "Code",
+      "url": "https://maniflow-policy.github.io/"
+    },
+    "isOpenSource": true,
+    "benchmarks": {
+      "adroit": {
+        "name": "Adroit",
+        "score": 45,
+        "rank": 16,
+        "source": "Reproduced by SAT"
+      },
+      "dexart": {
+        "name": "DexArt",
+        "score": 53,
+        "rank": 13,
+        "source": "Reproduced by SAT"
+      }
+    }
+  },
+  {
+    "id": "uniact",
+    "name": "UniAct",
+    "title": "Universal Actions for Enhanced Embodied Foundation Models",
+    "time": "2025.01",
+    "paper": {
+      "label": "Paper",
+      "url": "https://arxiv.org/abs/2501.10105"
+    },
+    "project": {
+      "label": "Code",
+      "url": "https://2toinf.github.io/UniAct/"
+    },
+    "isOpenSource": true,
+    "benchmarks": {
+      "adroit": {
+        "name": "Adroit",
+        "score": 49,
+        "rank": 15,
+        "source": "Reproduced by SAT"
+      },
+      "dexart": {
+        "name": "DexArt",
+        "score": 55,
+        "rank": 8,
+        "source": "Reproduced by SAT"
+      }
+    }
+  }
+]
