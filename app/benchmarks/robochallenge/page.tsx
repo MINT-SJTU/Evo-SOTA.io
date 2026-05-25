@@ -62,6 +62,7 @@ export default function RoboChallengePage() {
             paper: 'Paper',
             github: 'Code',
             clickToExpand: 'Click row to expand details',
+            clickModelName: 'Click model name to view detailed model information',
             showAllMetrics: 'Show All Metrics',
             hideMetrics: 'Hide Metrics',
             showAllModels: 'Include All Models',
@@ -91,6 +92,7 @@ export default function RoboChallengePage() {
             paper: '论文',
             github: '代码',
             clickToExpand: '点击行展开详情',
+            clickModelName: '点击模型名称查看详细模型信息',
             showAllMetrics: '展开所有指标',
             hideMetrics: '收起指标',
             showAllModels: '显示全部模型',
@@ -484,7 +486,10 @@ export default function RoboChallengePage() {
                     </div>
                 </div>
 
-                <p className="text-sm text-slate-500 mb-4">{t.clickToExpand}</p>
+                <div className="flex flex-wrap gap-x-5 gap-y-0.5 mb-4 text-sm text-slate-500">
+                    <span>💡 {t.clickToExpand}</span>
+                    <span>🔗 {t.clickModelName}</span>
+                </div>
 
                 <h2 className="text-xl font-bold text-slate-800 mb-4">{t.standardModels}</h2>
                 {displayData.length > 0 ? (

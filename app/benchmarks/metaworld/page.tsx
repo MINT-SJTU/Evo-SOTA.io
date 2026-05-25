@@ -64,6 +64,7 @@ export default function MetaWorldPage() {
             paper: 'Paper',
             github: 'Code',
             clickToExpand: 'Click row to expand details',
+            clickModelName: 'Click model name to view detailed model information',
             metrics: 'Sub-metrics (by difficulty)',
             showAllModels: 'Include All Models',
             openSourceOnly: 'Open-Source Only',
@@ -92,6 +93,7 @@ export default function MetaWorldPage() {
             paper: '论文',
             github: '代码',
             clickToExpand: '点击行展开详情',
+            clickModelName: '点击模型名称查看详细模型信息',
             metrics: '分项指标（按难度）',
             showAllModels: '显示全部模型',
             openSourceOnly: '仅开源模型',
@@ -513,7 +515,10 @@ export default function MetaWorldPage() {
                         </div>
                     </div>
                 </div>
-                <p className="text-sm text-slate-500 mb-4">{t.clickToExpand}</p>
+                <div className="flex flex-wrap gap-x-5 gap-y-0.5 mb-4 text-sm text-slate-500">
+                    <span>💡 {t.clickToExpand}</span>
+                    <span>🔗 {t.clickModelName}</span>
+                </div>
 
                 {/* Main Table */}
                 <h2 className="text-xl font-bold text-slate-800 mb-4">{t.standardModels}</h2>
