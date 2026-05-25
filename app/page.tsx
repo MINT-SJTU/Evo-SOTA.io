@@ -128,7 +128,7 @@ export default function Home() {
         const escapeRegExp = (value: string) => value.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
 
         // 榜单列表（需要粗体和蓝色）
-        const benchmarks = ['RoboTwin 2.0', 'RoboChallenge', 'RoboCasa-GR1-Tabletop', 'LIBERO Plus', 'LIBERO', 'Meta-World', 'CALVIN', 'Libero Plus', 'Libero', 'Calvin', 'Adroit', 'DexArt', 'Bi-DexHands'];
+        const benchmarks = ['RoboTwin 2.0', 'RoboChallenge', 'RoboCasa-GR1-Tabletop', 'LIBERO Plus', 'LIBERO', 'Meta-World', 'CALVIN', 'Libero Plus', 'Libero', 'Calvin', 'Adroit', 'DexArt', 'Bi-DexHands', 'DexGraspNet'];
         // 模型列表（需要斜体和紫色）
         const models = [
             'AIM', 'Fast-WAM', 'HoloBrain-0', 'InternVLA-A1', 'AnchorRefine', 'ST-pi', 'CorridorVLA', 'JoyAI-RA 0.1',
@@ -140,9 +140,12 @@ export default function Home() {
             'QuantVLA', 'Fast-ThinkAct', 'ATA', 'SRPO', 'LingBot-VA', 'RynnVLA-002', 'X-VLA', 'SaiVLA-0', 'Atomic VLA', 'FutureVLA',
             'MergeVLA', 'GST-VLA', 'ReViP', 'DiT4DiT', 'Cosmos Policy', 'SimVLA', 'CORAL', 'HiF-VLA', 'AVA-VLA', 'VLA-RFT', 'Mantis',
             'ROCKET', 'Dual-CoT VLA', 'VP-VLA', 'GR00T', 'DFM-VLA', 'MMaDA-VLA', 'StreamingVLA', '3D-CAVLA', 'FocusVLA', 'GeoPredict', 'TAG', 'A1', 'pi0.5',
-            'HAMLET', 'StarVLA-alpha', 'Dejavu', 'AAC', 'RESample', 'ProGAL-VLA'
+            'HAMLET', 'StarVLA-alpha', 'Dejavu', 'AAC', 'RESample', 'ProGAL-VLA',
+            'ALAM', 'RLDX-1', 'ConsisVLA-4D', 'OA-WAM', 'VLA-GSE', 'LoopVLA', 'PriorVLA', 'Multi-view-VLA', 'GuidedVLA',
+            'RotVLA', 'GTA-VLA', 'FrameSkip', 'Evo-depth', 'PhysBrain 1.0', 'DyGRO-VLA', 'RoVLA', 'GaussianDream',
+            'VLANeXt', 'PointACT', 'BehaviorVLA', 'GridS',
         ];
-        const redImportant = ['Wishing everyone a happy Lunar New Year!', '祝大家新年快乐！', 'Searching models is available now!', '模型搜索功能已上线！'];
+        const redImportant = ['Wishing everyone a happy Lunar New Year!', '祝大家新年快乐！', 'Searching models is available now!', '模型搜索功能已上线！', 'Model detail pages are now available!', '模型详情页现已上线!'];
 
         let formattedContent = content;
 
@@ -369,15 +372,51 @@ export default function Home() {
                 </div>
             </section>
 
+            {/* Evo-Studio 引流 Banner */}
+            {/* <div className="bg-gradient-to-r from-violet-50 via-purple-50 to-indigo-50 border-y border-purple-200 py-3 px-4 sm:px-6 lg:px-8">
+                <div className="max-w-7xl mx-auto flex items-center justify-center gap-2 text-sm">
+                    <span className="text-lg">🚀</span>
+                    <span className="text-purple-900">
+                        {locale === 'zh' ? (
+                            <>
+                                欢迎尝试我们的具身全流程工作平台{' '}
+                                <a
+                                    href="https://studio.evomind-tech.com/"
+                                    target="_blank"
+                                    rel="noopener noreferrer"
+                                    className="font-bold text-purple-700 hover:text-purple-900 underline underline-offset-2"
+                                >
+                                    Evo-Studio
+                                </a>
+                                ，让具身科研更简单！
+                            </>
+                        ) : (
+                            <>
+                                Welcome to try our embodied all-in-one platform{' '}
+                                <a
+                                    href="https://studio.evomind-tech.com/"
+                                    target="_blank"
+                                    rel="noopener noreferrer"
+                                    className="font-bold text-purple-700 hover:text-purple-900 underline underline-offset-2"
+                                >
+                                    Evo-Studio
+                                </a>
+                                , making embodied research easier!
+                            </>
+                        )}
+                    </span>
+                </div>
+            </div> */}
+
             {/* Update News - 浅黄色背景，从 JSON 文件读取 */}
             <div className="bg-amber-50 border-y border-amber-200 py-4 px-4 sm:px-6 lg:px-8">
                 <div className="max-w-7xl mx-auto">
                     <div className="flex items-start gap-4">
                         <span className="text-xs font-bold text-amber-800 whitespace-nowrap flex items-center gap-1 pt-0.5">
-                            📢 {locale === 'zh' ? '最近更新' : 'Latest Updates'}
+                            📢 {locale === 'zh' ? '最近更新' : 'Updates'}
                         </span>
                         <div className="flex flex-col gap-1 text-xs">
-                            {newsData.slice(0, 5).map((news, index) => {
+                            {newsData.slice(0, 3).map((news, index) => {
                                 const content = locale === 'zh' ? news.content_zh : news.content_en;
                                 const formattedContent = formatNewsContent(content);
                                 return (
@@ -473,9 +512,13 @@ export default function Home() {
                                                         >
                                                             {model.rank}
                                                         </span>
-                                                        <span className="font-medium text-slate-800 text-sm">
+                                                        <Link
+                                                            href={`/models/${encodeURIComponent(model.name)}`}
+                                                            className="font-medium text-slate-800 hover:text-primary-600 text-sm transition-colors"
+                                                            onClick={(e) => e.stopPropagation()}
+                                                        >
                                                             {model.name}
-                                                        </span>
+                                                        </Link>
                                                     </div>
                                                     <span className={`font-semibold text-sm ${colors.text}`}>
                                                         {formatScore(model.score, benchmark.id)}
@@ -550,9 +593,13 @@ export default function Home() {
                                                         >
                                                             {model.rank}
                                                         </span>
-                                                        <span className="font-medium text-slate-800 text-sm">
+                                                        <Link
+                                                            href={`/models/${encodeURIComponent(model.name)}`}
+                                                            className="font-medium text-slate-800 hover:text-primary-600 text-sm transition-colors"
+                                                            onClick={(e) => e.stopPropagation()}
+                                                        >
                                                             {model.name}
-                                                        </span>
+                                                        </Link>
                                                     </div>
                                                     <span className={`font-semibold text-sm ${colors.text}`}>
                                                         {formatScore(model.score, benchmark.id)}
