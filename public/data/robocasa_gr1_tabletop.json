@@ -76,6 +76,21 @@
       "rank": 5
     },
     {
+      "name": "LDA-1B",
+      "base_name": "LDA-1B",
+      "setting": "",
+      "paper_url": "https://arxiv.org/abs/2602.12215",
+      "pub_date": "2026-02",
+      "is_opensource": true,
+      "opensource_url": "https://github.com/jiangranlv/LDA-1B",
+      "is_rl": false,
+      "avg_success_rate": 55.4,
+      "source": "original",
+      "is_standard": true,
+      "note": "",
+      "rank": 6
+    },
+    {
       "name": "TwinBrainVLA",
       "base_name": "TwinBrainVLA",
       "setting": "",
@@ -88,7 +103,7 @@
       "source": "original",
       "is_standard": true,
       "note": "",
-      "rank": 6
+      "rank": 7
     },
     {
       "name": "Langforce",
@@ -103,7 +118,7 @@
       "source": "original",
       "is_standard": true,
       "note": "",
-      "rank": 7
+      "rank": 8
     },
     {
       "name": "DiT4DiT",
@@ -118,7 +133,7 @@
       "source": "original",
       "is_standard": true,
       "note": "",
-      "rank": 8
+      "rank": 9
     },
     {
       "name": "StarVLA (Qwen3OFT)",
@@ -133,7 +148,7 @@
       "source": "original",
       "is_standard": true,
       "note": "",
-      "rank": 9
+      "rank": 10
     },
     {
       "name": "StarVLA (Qwen3GR00T)",
@@ -148,7 +163,7 @@
       "source": "original",
       "is_standard": true,
       "note": "",
-      "rank": 10
+      "rank": 11
     },
     {
       "name": "GR00T-N1.6",
@@ -163,7 +178,7 @@
       "source": "from StarVLA",
       "is_standard": true,
       "note": "",
-      "rank": 11
+      "rank": 12
     },
     {
       "name": "StarVLA (Qwen3PI)",
@@ -178,7 +193,7 @@
       "source": "original",
       "is_standard": true,
       "note": "",
-      "rank": 12
+      "rank": 13
     },
     {
       "name": "StarVLA (Qwen3FAST)",
@@ -193,7 +208,7 @@
       "source": "original",
       "is_standard": true,
       "note": "",
-      "rank": 13
+      "rank": 14
     }
   ],
   "standard_closed": [

@@ -1119,13 +1119,14 @@
       "Zijian Zhang",
       "Yuqing Jiang",
       "Qian Cheng",
+      "Xiaofan Li",
       "Si Liu",
       "Ding Zhao",
       "Ping Luo",
       "Weitao Zhou",
       "Haibao Yu"
     ],
-    "paper_abstract": "Vision-language-action (VLA) policies have advanced language-conditioned robotic manipulation by transferring semantic priors from pretrained vision-language models to action generation. Yet, standard action-imitation training often provides limited explicit supervision for 3D geometry, dense visual structure, and short-horizon environment evolution, which are critical for physically precise manipulation. We introduce \\textbf{GaussianDream}, a feed-forward 3D Gaussian world-model plug-in that turns robot trajectories into structured spatial-temporal supervision. The key idea is to couple current Gaussian reconstruction with horizon-conditioned future Gaussian prediction during training, forcing a compact spatio-temporal prefix to be decodable into renderable 3D Gaussian states. This enables dense RGB rendering, depth, and pseudo 3D scene-flow supervision without requiring test-time Gaussian decoding. At inference, GaussianDream discards all auxiliary decoding heads and retains only the learned prefix to condition action generation, avoiding rendering, video rollout, or additional planning during closed-loop control. Experiments on LIBERO, RoboCasa Human-50, and real-robot tasks demonstrate strong and highly competitive performance, achieving \\textbf{98.4\\%} average success on LIBERO, \\textbf{52.6\\%} on RoboCasa Human-50, and \\textbf{50.0\\%} in real-world evaluation."
+    "paper_abstract": "Vision-language-action (VLA) policies have advanced language-conditioned robotic manipulation by transferring semantic priors from pretrained vision-language models to action generation. However, standard action-imitation learning often lacks sufficient modeling of explicit 3D spatial information, dense geometric supervision, and future environment evolution, all critical for precise robotic interaction. To address this, we propose \\textbf{GaussianDream}, a feed-forward 3D Gaussian world-model plug-in. Specifically, we introduce learnable GaussianDream Queries in the encoder, enabling the model to capture current-frame 3D spatial structure and short-horizon future evolution. During training, the latent GaussianDream prefix is processed by a static reconstruction head and a future prediction head to produce current 3D Gaussian scene states and future Gaussian evolution states. The current branch is supervised by RGB rendering and depth, while the future branch uses future RGB, depth, and pseudo 3D scene-flow signals. During inference, GaussianDream discards all auxiliary heads and retains only the learned prefix to condition action generation, without test-time Gaussian reconstruction or future prediction. Experimental results demonstrate that GaussianDream achieves state-of-the-art performance across multiple robotic manipulation benchmarks, reaching \\textbf{98.4\\%} on LIBERO, \\textbf{54.8\\%} on RoboCasa Human-50, and \\textbf{50.0\\%} on real-robot tasks. Compared with existing 3D-enhanced VLA methods, GaussianDream achieves strong accuracy while providing higher inference efficiency than video-based world-model approaches."
   },
   {
     "name": "VLANeXt",
@@ -2765,7 +2766,7 @@
           "data": {
             "avg_success_rate": 50.8
           },
-          "rank": 8
+          "rank": 9
         }
       ]
     },
@@ -4009,6 +4010,57 @@
     "paper_abstract": "Long-horizon robotic manipulation requires bridging the gap between high-level planning (System 2) and low-level control (System 1). Current Vision-Language-Action (VLA) models often entangle these processes, performing redundant multimodal reasoning at every timestep, which leads to high latency and goal instability. To address this, we present StreamVLA, a dual-system architecture that unifies textual task decomposition, visual goal imagination, and continuous action generation within a single parameter-efficient backbone. We introduce a \"Lock-and-Gated\" mechanism to intelligently modulate computation: only when a sub-task transition is detected, the model triggers slow thinking to generate a textual instruction and imagines the specific visual completion state, rather than generic future frames. Crucially, this completion state serves as a time-invariant goal anchor, making the policy robust to execution speed variations. During steady execution, these high-level intents are locked to condition a Flow Matching action head, allowing the model to bypass expensive autoregressive decoding for 72% of timesteps. This hierarchical abstraction ensures sub-goal focus while significantly reducing inference latency. Extensive evaluations demonstrate that StreamVLA achieves state-of-the-art performance, with a 98.5% success rate on the LIBERO benchmark and robust recovery in real-world interference scenarios, achieving a 48% reduction in latency compared to full-reasoning baselines."
   },
   {
+    "name": "LDA-1B",
+    "paper_url": "https://arxiv.org/abs/2602.12215",
+    "pub_date": "2026-02",
+    "is_opensource": true,
+    "opensource_url": "https://github.com/jiangranlv/LDA-1B",
+    "is_rl": false,
+    "settings": [],
+    "benchmarks": {
+      "robocasa": [
+        {
+          "setting": "default",
+          "score": 55.4,
+          "is_standard": true,
+          "note": "",
+          "data": {
+            "avg_success_rate": 55.4
+          },
+          "rank": 6
+        }
+      ]
+    },
+    "paper_arxiv_id": "2602.12215",
+    "paper_title": "LDA-1B: Scaling Latent Dynamics Action Model via Universal Embodied Data Ingestion",
+    "paper_authors": [
+      "Jiangran Lyu",
+      "Kai Liu",
+      "Xuheng Zhang",
+      "Haoran Liao",
+      "Yusen Feng",
+      "Wenxuan Zhu",
+      "Tingrui Shen",
+      "Jiayi Chen",
+      "Jiazhao Zhang",
+      "Yifei Dong",
+      "Wenbo Cui",
+      "Senmao Qi",
+      "Shuo Wang",
+      "Yixin Zheng",
+      "Mi Yan",
+      "Xuesong Shi",
+      "Haoran Li",
+      "Dongbin Zhao",
+      "Ming-Yu Liu",
+      "Zhizheng Zhang",
+      "Li Yi",
+      "Yizhou Wang",
+      "He Wang"
+    ],
+    "paper_abstract": "Recent robot foundation models largely rely on large-scale behavior cloning, which imitates expert actions but discards transferable dynamics knowledge embedded in heterogeneous embodied data. While the Unified World Model (UWM) formulation has the potential to leverage such diverse data, existing instantiations struggle to scale to foundation-level due to coarse data usage and fragmented datasets. We introduce LDA-1B, a robot foundation model that scales through universal embodied data ingestion by jointly learning dynamics, policy, and visual forecasting, assigning distinct roles to data of varying quality. To support this regime at scale, we assemble and standardize EI-30k, an embodied interaction dataset comprising over 30k hours of human and robot trajectories in a unified format. Scalable dynamics learning over such heterogeneous data is enabled by prediction in a structured DINO latent space, which avoids redundant pixel-space appearance modeling. Complementing this representation, LDA-1B employs a multi-modal diffusion transformer to handle asynchronous vision and action streams, enabling stable training at the 1B-parameter scale. Experiments in simulation and the real world show LDA-1B outperforms prior methods (e.g., $π_{0.5}$) by up to 21\\%, 48\\%, and 23\\% on contact-rich, dexterous, and long-horizon tasks, respectively. Notably, LDA-1B enables data-efficient fine-tuning, gaining 10\\% by leveraging 30\\% low-quality trajectories typically harmful and discarded."
+  },
+  {
     "name": "Spirit v1.5",
     "paper_url": "https://www.spirit-ai.com/en/blog/spirit-v1-5",
     "pub_date": "2026-01",
@@ -4162,7 +4214,7 @@
           "data": {
             "avg_success_rate": 52.6
           },
-          "rank": 7
+          "rank": 8
         }
       ]
     },
@@ -4199,7 +4251,7 @@
           "data": {
             "avg_success_rate": 54.6
           },
-          "rank": 6
+          "rank": 7
         }
       ]
     },
@@ -4582,7 +4634,7 @@
           "data": {
             "avg_success_rate": 47.6
           },
-          "rank": 11
+          "rank": 12
         }
       ]
     },
@@ -4614,7 +4666,7 @@
           "data": {
             "avg_success_rate": 47.8
           },
-          "rank": 10
+          "rank": 11
         },
         {
           "setting": "Qwen3PI",
@@ -4624,7 +4676,7 @@
           "data": {
             "avg_success_rate": 43.9
           },
-          "rank": 12
+          "rank": 13
         },
         {
           "setting": "Qwen3OFT",
@@ -4634,7 +4686,7 @@
           "data": {
             "avg_success_rate": 48.8
           },
-          "rank": 9
+          "rank": 10
         },
         {
           "setting": "Qwen3FAST",
@@ -4644,7 +4696,7 @@
           "data": {
             "avg_success_rate": 39.0
           },
-          "rank": 13
+          "rank": 14
         }
       ]
     },
@@ -5246,6 +5298,7 @@
       "Kehan Li",
       "Hangjie Yuan",
       "Chaohui Yu",
+      "Bohan Hou",
       "Yuming Jiang",
       "Jiayan Guo",
       "Xin Li",
@@ -6561,15 +6614,15 @@
       "Tianshuo Yang",
       "Chengyue Wu",
       "Sitong Mao",
-      "Tian Nian",
       "Liuao Pei",
+      "Tian Nian",
       "Shunbo Zhou",
       "Xiaokang Yang",
       "Jiangmiao Pang",
       "Yao Mu",
       "Ping Luo"
     ],
-    "paper_abstract": "Vision-Language-Action (VLA) models adapt large vision-language backbones to map images and instructions into robot actions. However, prevailing VLAs either generate actions auto-regressively in a fixed left-to-right order or attach separate MLP or diffusion heads outside the backbone, leading to fragmented information pathways and specialized training requirements that hinder a unified, scalable architecture. We present Discrete Diffusion VLA, a unified-transformer policy that models discretized action chunks with discrete diffusion. The design retains diffusion's progressive refinement paradigm while remaining natively compatible with the discrete token interface of VLMs. Our method achieves an adaptive decoding order that resolves easy action elements before harder ones and uses secondary re-masking to revisit uncertain predictions across refinement rounds, which improves consistency and enables robust error correction. This unified decoder preserves pre-trained vision-language priors, supports parallel decoding, breaks the autoregressive bottleneck, and reduces the number of function evaluations. Discrete Diffusion VLA achieves 96.3% avg. success rates on LIBERO, 71.2% visual matching on SimplerEnv-Fractal and 54.2% overall on SimplerEnv-Bridge. We also provide ablation study on vision-language ability retention on LIBERO-OOD (Out-of-Distribution) benchmark, with our method improving over autoregressive, MLP decoder and continuous diffusion baselines. These findings indicate that discrete-diffusion VLA supports precise action modeling and consistent training, laying groundwork for scaling VLA to larger models and datasets. Our code is available at https://github.com/Liang-ZX/DiscreteDiffusionVLA/tree/libero."
+    "paper_abstract": "Vision-Language-Action (VLA) models adapt large vision-language backbones to map images and instructions into robot actions. However, prevailing VLAs either generate actions autoregressively in a fixed left-to-right order with poor performance or attach separate diffusion heads outside the backbone that fragments information pathways and hinders unified, scalable architectures. Instead, we present Discrete Diffusion VLA that discretizes action chunks and models them with discrete diffusion pattern retaining progressive refinement inside the unified transformer backbone. Our method achieves an adaptive decoding order that resolves high-confidence action elements before harder ones and employs secondary re-masking to revisit uncertain predictions, enabling robust error correction. This design preserves pretrained vision-language priors, supports parallel decoding, and improves the efficiency. Discrete Diffusion VLA achieves 96.4% avg. success on LIBERO, 71.2% visual matching on SimplerEnv-Fractal, and 54.2% overall on SimplerEnv-Bridge. On out-of-distribution tests of LIBERO-Goal, our method exhibits only 0.8% language degradation versus 8.0% of parallel decoding, and 20.4% vision degradation versus 29.0% for continuous diffusion, demonstrating well retention of pretrained vision-language capabilities. We also conduct two real-robot evaluations on AgileX Cobot Magic platform to show the method's effectiveness."
   },
   {
     "name": "DexVLA",
