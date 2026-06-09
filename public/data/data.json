@@ -312,12 +312,12 @@
     "top_5_rl": []
   },
   "robocasa": {
-    "total_models": 18,
-    "standard_opensource_count": 13,
+    "total_models": 19,
+    "standard_opensource_count": 14,
     "standard_closed_count": 5,
     "non_standard_count": 0,
     "model_type_count": {
-      "sft": 13,
+      "sft": 14,
       "rl": 0
     },
     "primary_metric": "Average Success Rate (%)",
