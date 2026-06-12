@@ -258,6 +258,21 @@
       "rank": 3
     },
     {
+      "name": "Qwen-VLA (generalist)",
+      "base_name": "Qwen-VLA",
+      "setting": "generalist",
+      "paper_url": "https://arxiv.org/abs/2605.30280",
+      "pub_date": "2026-06",
+      "is_opensource": false,
+      "opensource_url": null,
+      "is_rl": true,
+      "avg_success_rate": 56.7,
+      "source": "original",
+      "is_standard": true,
+      "note": "",
+      "rank": 4
+    },
+    {
       "name": "Dual-CoT VLA",
       "base_name": "Dual-CoT VLA",
       "setting": "",
@@ -270,7 +285,7 @@
       "source": "original",
       "is_standard": true,
       "note": "",
-      "rank": 4
+      "rank": 5
     },
     {
       "name": "VP-VLA",
@@ -285,7 +300,7 @@
       "source": "original",
       "is_standard": true,
       "note": "",
-      "rank": 5
+      "rank": 6
     }
   ],
   "non_standard": []
