@@ -1,38 +1,38 @@
 {
   "libero": {
-    "total_models": 151,
-    "standard_opensource_count": 83,
-    "standard_closed_count": 50,
+    "total_models": 169,
+    "standard_opensource_count": 91,
+    "standard_closed_count": 60,
     "non_standard_count": 18,
     "model_type_count": {
-      "sft": 73,
-      "rl": 10
+      "sft": 80,
+      "rl": 11
     },
     "primary_metric": "Average Success Rate (%)",
     "top_5": [
       {
+        "name": "LaST-R1",
+        "score": 99.8,
+        "rank": 1
+      },
+      {
         "name": "CORAL",
         "score": 99.3,
-        "rank": 1
+        "rank": 2
       },
       {
         "name": "SRPO",
         "score": 99.2,
-        "rank": 2
+        "rank": 3
       },
       {
         "name": "SimpleVLA-RL",
         "score": 99.1,
-        "rank": 3
+        "rank": 4
       },
       {
         "name": "SaiVLA-0",
         "score": 99.0,
-        "rank": 4
-      },
-      {
-        "name": "Being-H0.5 (Specialist)",
-        "score": 98.9,
         "rank": 5
       }
     ],
@@ -65,39 +65,39 @@
     ],
     "top_5_rl": [
       {
+        "name": "LaST-R1",
+        "score": 99.8,
+        "rank": 1
+      },
+      {
         "name": "SRPO",
         "score": 99.2,
-        "rank": 1
+        "rank": 2
       },
       {
         "name": "SimpleVLA-RL",
         "score": 99.1,
-        "rank": 2
+        "rank": 3
       },
       {
         "name": "PRTS",
         "score": 98.4,
-        "rank": 3
+        "rank": 4
       },
       {
         "name": "pi-RL",
         "score": 98.3,
-        "rank": 4
-      },
-      {
-        "name": "RLinf-VLA",
-        "score": 98.1,
         "rank": 5
       }
     ]
   },
   "libero_plus": {
-    "total_models": 38,
-    "standard_opensource_count": 27,
-    "standard_closed_count": 9,
+    "total_models": 44,
+    "standard_opensource_count": 30,
+    "standard_closed_count": 12,
     "non_standard_count": 2,
     "model_type_count": {
-      "sft": 24,
+      "sft": 27,
       "rl": 3
     },
     "primary_metric": "Total Success Rate (%)",
@@ -118,13 +118,13 @@
         "rank": 3
       },
       {
-        "name": "VLANeXt",
-        "score": 83.9,
+        "name": "WorldPilot",
+        "score": 84.4,
         "rank": 4
       },
       {
-        "name": "GridS",
-        "score": 82.1,
+        "name": "VLANeXt",
+        "score": 83.9,
         "rank": 5
       }
     ],
@@ -145,13 +145,13 @@
         "rank": 3
       },
       {
-        "name": "VLANeXt",
-        "score": 83.9,
+        "name": "WorldPilot",
+        "score": 84.4,
         "rank": 4
       },
       {
-        "name": "GridS",
-        "score": 82.1,
+        "name": "VLANeXt",
+        "score": 83.9,
         "rank": 5
       }
     ],
@@ -174,12 +174,12 @@
     ]
   },
   "metaworld": {
-    "total_models": 17,
-    "standard_opensource_count": 8,
-    "standard_closed_count": 1,
-    "non_standard_count": 8,
+    "total_models": 20,
+    "standard_opensource_count": 10,
+    "standard_closed_count": 3,
+    "non_standard_count": 7,
     "model_type_count": {
-      "sft": 7,
+      "sft": 9,
       "rl": 1
     },
     "primary_metric": "Average Success Rate (%)",
@@ -205,8 +205,8 @@
         "rank": 4
       },
       {
-        "name": "SmolVLA",
-        "score": 68.2,
+        "name": "PAD",
+        "score": 72.7,
         "rank": 5
       }
     ],
@@ -227,13 +227,13 @@
         "rank": 3
       },
       {
-        "name": "SmolVLA",
-        "score": 68.2,
+        "name": "PAD",
+        "score": 72.7,
         "rank": 4
       },
       {
-        "name": "pi0",
-        "score": 47.9,
+        "name": "SmolVLA",
+        "score": 68.2,
         "rank": 5
       }
     ],
@@ -312,9 +312,9 @@
     "top_5_rl": []
   },
   "robocasa": {
-    "total_models": 19,
+    "total_models": 20,
     "standard_opensource_count": 14,
-    "standard_closed_count": 5,
+    "standard_closed_count": 6,
     "non_standard_count": 0,
     "model_type_count": {
       "sft": 14,
@@ -378,12 +378,12 @@
     "top_5_rl": []
   },
   "robotwin": {
-    "total_models": 23,
-    "standard_opensource_count": 15,
-    "standard_closed_count": 8,
+    "total_models": 27,
+    "standard_opensource_count": 16,
+    "standard_closed_count": 11,
     "non_standard_count": 0,
     "model_type_count": {
-      "sft": 14,
+      "sft": 15,
       "rl": 1
     },
     "primary_metric": "Hard Success Rate (%)",
@@ -394,23 +394,23 @@
         "rank": 1
       },
       {
+        "name": "AttenA+",
+        "score": 91.86,
+        "rank": 2
+      },
+      {
         "name": "Fast-WAM",
         "score": 91.78,
-        "rank": 2
+        "rank": 3
       },
       {
         "name": "LingBot-VA",
         "score": 91.55,
-        "rank": 3
+        "rank": 4
       },
       {
         "name": "InternVLA-A1",
         "score": 89.6,
-        "rank": 4
-      },
-      {
-        "name": "StarVLA-alpha",
-        "score": 88.3,
         "rank": 5
       }
     ],
@@ -421,23 +421,23 @@
         "rank": 1
       },
       {
+        "name": "AttenA+",
+        "score": 91.86,
+        "rank": 2
+      },
+      {
         "name": "Fast-WAM",
         "score": 91.78,
-        "rank": 2
+        "rank": 3
       },
       {
         "name": "LingBot-VA",
         "score": 91.55,
-        "rank": 3
+        "rank": 4
       },
       {
         "name": "InternVLA-A1",
         "score": 89.6,
-        "rank": 4
-      },
-      {
-        "name": "StarVLA-alpha",
-        "score": 88.3,
         "rank": 5
       }
     ],
@@ -450,12 +450,12 @@
     ]
   },
   "calvin": {
-    "total_models": 44,
-    "standard_opensource_count": 32,
-    "standard_closed_count": 7,
+    "total_models": 48,
+    "standard_opensource_count": 35,
+    "standard_closed_count": 8,
     "non_standard_count": 5,
     "model_type_count": {
-      "sft": 31,
+      "sft": 34,
       "rl": 1
     },
     "primary_metric": "Average Length (Avg. Len.)",
@@ -509,8 +509,8 @@
         "rank": 4
       },
       {
-        "name": "DreamVLA",
-        "score": 4.44,
+        "name": "HARP-VLA",
+        "score": 4.48,
         "rank": 5
       }
     ],
@@ -522,8 +522,8 @@
       }
     ],
     "settings": {
-      "abcd_d": 18,
-      "abc_d": 44,
+      "abcd_d": 19,
+      "abc_d": 48,
       "d_d": 13
     }
   }

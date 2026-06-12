@@ -1,6 +1,11 @@
 {
     "news": [
         {
+            "date": "🗓️ 2026-06-12: ",
+            "content_en": "New models: Add GEAR-VLA, ActionMap, QDepth-VLA, VeriSpace, MemoryVLA++, MotionVLA, TBD-VLA, RhinoVLA, LARA, AffordanceVLA, WLA-0, 3DThinkVLA, GeoAlign, Qwen-VLA, AttenA+, BehaviorVLA, ELAN4D, GaussianDream, NIAF to LIBERO; WorldPilot, GEAR-VLA, TBD-VLA, ERVLA, 3DThinkVLA, GeoAlign, Qwen-VLA to LIBERO Plus; OneWM-VLA to Meta-World; MemoryVLA++, AffordanceVLA, BehaviorVLA, HARP-VLA, NIAF to CALVIN; LDA-1B, Qwen-VLA to Robocasa-GR1-Tabletop; GEAR-VLA, WLA-0, Qwen-VLA, AttenA+ to RoboTwin 2.0",
+            "content_zh": "新增模型: 增加 GEAR-VLA, ActionMap, QDepth-VLA, VeriSpace, MemoryVLA++, MotionVLA, TBD-VLA, RhinoVLA, LARA, AffordanceVLA, WLA-0, 3DThinkVLA, GeoAlign, Qwen-VLA, AttenA+, BehaviorVLA, ELAN4D, GaussianDream, NIAF 到 LIBERO; WorldPilot, GEAR-VLA, TBD-VLA, ERVLA, 3DThinkVLA, GeoAlign, Qwen-VLA 到 LIBERO Plus; OneWM-VLA 到 Metaworld; MemoryVLA++, AffordanceVLA, BehaviorVLA, HARP-VLA, NIAF 到 CALVIN; LDA-1B, Qwen-VLA 到 Robocasa-GR1-Tabletop; GEAR-VLA, WLA-0, Qwen-VLA, AttenA+ 到 RoboTwin 2.0"
+        },
+        {
             "date": "🗓️ 2026-05-25: ",
             "content_en": "🚀 Major update: New Feature: Model detail pages are now available! Click or search model name to view. New models: Add ALAM, ConsisVLA-4D, OA-WAM, LoopVLA, PriorVLA, Multi-view-VLA, RotVLA, GTA-VLA, FrameSkip, Evo-depth, PhysBrain 1.0, DyGRO-VLA, GaussianDream, VLANeXt, PointACT, BehaviorVLA, GridS to LIBERO; OA-WAM, VLA-GSE, LoopVLA, Multi-view-VLA, GuidedVLA, Evo-depth, RoVLA, VLANeXt, GridS to LIBERO Plus; ALAM, Evo-depth to Meta-World; BehaviorVLA to CALVIN; RLDX-1, FrameSkip, PhysBrain 1.0 to Robocasa-GR1-Tabletop; Multi-view-VLA, RotVLA, RoVLA to RoboTwin 2.0",
             "content_zh": "🚀 重大更新: 新增功能: 模型详情页现已上线! 点击或搜索模型名称即可查看详情。新增模型: 增加 ALAM, ConsisVLA-4D, OA-WAM, LoopVLA, PriorVLA, Multi-view-VLA, RotVLA, GTA-VLA, FrameSkip, Evo-depth, PhysBrain 1.0, DyGRO-VLA, GaussianDream, VLANeXt, PointACT, BehaviorVLA, GridS 到 LIBERO; OA-WAM, VLA-GSE, LoopVLA, Multi-view-VLA, GuidedVLA, Evo-depth, RoVLA, VLANeXt, GridS 到 LIBERO Plus; ALAM, Evo-depth 到 Metaworld; BehaviorVLA 到 CALVIN; RLDX-1, FrameSkip, PhysBrain 1.0 到 Robocasa-GR1-Tabletop; Multi-view-VLA, RotVLA, RoVLA 到 RoboTwin 2.0"

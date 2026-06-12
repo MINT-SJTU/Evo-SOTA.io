@@ -77,6 +77,25 @@
       "rank": 4
     },
     {
+      "name": "PAD",
+      "base_name": "PAD",
+      "setting": "",
+      "paper_url": "https://arxiv.org/abs/2411.18179",
+      "pub_date": "2024-11",
+      "is_opensource": true,
+      "opensource_url": "https://github.com/Robert-gyj/Prediction_with_Action",
+      "is_rl": false,
+      "easy": 81.8,
+      "medium": 65.1,
+      "hard": 56.7,
+      "very_hard": 87.2,
+      "average": 72.7,
+      "source": "original",
+      "is_standard": true,
+      "note": "",
+      "rank": 5
+    },
+    {
       "name": "SmolVLA",
       "base_name": "SmolVLA",
       "setting": "",
@@ -93,7 +112,26 @@
       "source": "original",
       "is_standard": true,
       "note": "",
-      "rank": 5
+      "rank": 6
+    },
+    {
+      "name": "GR-1",
+      "base_name": "GR-1",
+      "setting": "",
+      "paper_url": "https://arxiv.org/abs/2312.13139",
+      "pub_date": "2023-12",
+      "is_opensource": true,
+      "opensource_url": "https://github.com/bytedance/GR-1",
+      "is_rl": false,
+      "easy": 76.6,
+      "medium": 35.3,
+      "hard": 46.0,
+      "very_hard": 44.0,
+      "average": 50.5,
+      "source": "From ALAM",
+      "is_standard": true,
+      "note": "",
+      "rank": 7
     },
     {
       "name": "pi0",
@@ -112,7 +150,7 @@
       "source": "from smolVLA",
       "is_standard": true,
       "note": "不清楚具体实验设置，因此无法判断来自于是同一个权重还是四个权重",
-      "rank": 6
+      "rank": 8
     },
     {
       "name": "TinyVLA-H",
@@ -131,7 +169,7 @@
       "source": "original",
       "is_standard": true,
       "note": "",
-      "rank": 7
+      "rank": 9
     },
     {
       "name": "Diffusion Policy",
@@ -150,7 +188,7 @@
       "source": "from TinyVLA",
       "is_standard": true,
       "note": "",
-      "rank": 8
+      "rank": 10
     }
   ],
   "standard_closed": [
@@ -172,6 +210,44 @@
       "is_standard": true,
       "note": "",
       "rank": 1
+    },
+    {
+      "name": "OneWM-VLA",
+      "base_name": "OneWM-VLA",
+      "setting": "",
+      "paper_url": "https://arxiv.org/abs/2605.07931",
+      "pub_date": "2026-05",
+      "is_opensource": false,
+      "opensource_url": null,
+      "is_rl": false,
+      "easy": 79.29,
+      "medium": 41.82,
+      "hard": 64.0,
+      "very_hard": 60.0,
+      "average": 61.28,
+      "source": "original",
+      "is_standard": true,
+      "note": "",
+      "rank": 2
+    },
+    {
+      "name": "RT-2",
+      "base_name": "RT-2",
+      "setting": "",
+      "paper_url": "https://arxiv.org/abs/2307.15818",
+      "pub_date": "2023-07",
+      "is_opensource": false,
+      "opensource_url": null,
+      "is_rl": false,
+      "easy": 75.5,
+      "medium": 35.3,
+      "hard": 30.7,
+      "very_hard": 15.2,
+      "average": 39.2,
+      "source": "from ALAM",
+      "is_standard": true,
+      "note": "",
+      "rank": 3
     }
   ],
   "non_standard": [
@@ -271,25 +347,6 @@
       "rank": 5
     },
     {
-      "name": "GR-1",
-      "base_name": "GR-1",
-      "setting": "",
-      "paper_url": "https://arxiv.org/abs/2312.13139",
-      "pub_date": "2023-12",
-      "is_opensource": true,
-      "opensource_url": "https://github.com/bytedance/GR-1",
-      "is_rl": false,
-      "easy": 72.5,
-      "medium": 32.7,
-      "hard": 45.1,
-      "very_hard": null,
-      "average": 57.4,
-      "source": "From VPP",
-      "is_standard": false,
-      "note": "测试时将Hard和VeryHard统一为Hard了",
-      "rank": 6
-    },
-    {
       "name": "AVDC",
       "base_name": "AVDC",
       "setting": "",
@@ -306,7 +363,7 @@
       "source": "original",
       "is_standard": false,
       "note": "11个任务，混合不同难度",
-      "rank": 7
+      "rank": 6
     },
     {
       "name": "SuSIE",
@@ -325,7 +382,7 @@
       "source": "from VPP",
       "is_standard": false,
       "note": "测试时将Hard和VeryHard统一为Hard了",
-      "rank": 8
+      "rank": 7
     }
   ]
 }
