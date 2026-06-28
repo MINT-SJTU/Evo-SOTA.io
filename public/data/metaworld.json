@@ -1,6 +1,25 @@
 {
   "standard_opensource": [
     {
+      "name": "LA4VLA-1B",
+      "base_name": "LA4VLA-1B",
+      "setting": "",
+      "paper_url": "https://arxiv.org/abs/2606.27295",
+      "pub_date": "2026-06",
+      "is_opensource": true,
+      "opensource_url": "https://github.com/MINT-SJTU/LA4VLA",
+      "is_rl": false,
+      "easy": 88.9,
+      "medium": 94.5,
+      "hard": 66.7,
+      "very_hard": 100.0,
+      "average": 87.53,
+      "source": "original",
+      "is_standard": true,
+      "note": "",
+      "rank": 1
+    },
+    {
       "name": "pi-RL",
       "base_name": "pi-RL",
       "setting": "",
@@ -17,7 +36,7 @@
       "source": "original",
       "is_standard": true,
       "note": "",
-      "rank": 1
+      "rank": 2
     },
     {
       "name": "Evo-depth",
@@ -36,7 +55,7 @@
       "source": "original",
       "is_standard": true,
       "note": "",
-      "rank": 2
+      "rank": 3
     },
     {
       "name": "Evo-1",
@@ -55,7 +74,7 @@
       "source": "original",
       "is_standard": true,
       "note": "",
-      "rank": 3
+      "rank": 4
     },
     {
       "name": "RoboTron Mani",
@@ -74,7 +93,7 @@
       "source": "original",
       "is_standard": true,
       "note": "RoboTron-Mani 采用了自定义的数据生成协议， 而不是标准的训练数据， 但是介于很多别的论文也干了。原文：“ To address the lack of training data for simulation learning, we adopt the scripted policies from Yu et al. [68] and introduce Gaussian noise N(0, 0.1) to the generated actions at each step, resulting in a total of 22,500 trajectories, with each task producing 500 successful trajectories. ”",
-      "rank": 4
+      "rank": 5
     },
     {
       "name": "PAD",
@@ -93,7 +112,7 @@
       "source": "original",
       "is_standard": true,
       "note": "",
-      "rank": 5
+      "rank": 6
     },
     {
       "name": "SmolVLA",
@@ -112,7 +131,7 @@
       "source": "original",
       "is_standard": true,
       "note": "",
-      "rank": 6
+      "rank": 7
     },
     {
       "name": "GR-1",
@@ -131,7 +150,7 @@
       "source": "From ALAM",
       "is_standard": true,
       "note": "",
-      "rank": 7
+      "rank": 8
     },
     {
       "name": "pi0",
@@ -150,7 +169,7 @@
       "source": "from smolVLA",
       "is_standard": true,
       "note": "不清楚具体实验设置，因此无法判断来自于是同一个权重还是四个权重",
-      "rank": 8
+      "rank": 9
     },
     {
       "name": "TinyVLA-H",
@@ -169,7 +188,7 @@
       "source": "original",
       "is_standard": true,
       "note": "",
-      "rank": 9
+      "rank": 10
     },
     {
       "name": "Diffusion Policy",
@@ -188,7 +207,7 @@
       "source": "from TinyVLA",
       "is_standard": true,
       "note": "",
-      "rank": 10
+      "rank": 11
     }
   ],
   "standard_closed": [
