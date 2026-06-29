@@ -312,66 +312,66 @@
     "top_5_rl": []
   },
   "robocasa": {
-    "total_models": 20,
-    "standard_opensource_count": 14,
+    "total_models": 21,
+    "standard_opensource_count": 15,
     "standard_closed_count": 6,
     "non_standard_count": 0,
     "model_type_count": {
-      "sft": 14,
+      "sft": 15,
       "rl": 0
     },
     "primary_metric": "Average Success Rate (%)",
     "top_5": [
       {
+        "name": "WALA",
+        "score": 75.2,
+        "rank": 1
+      },
+      {
         "name": "DIAL",
         "score": 70.2,
-        "rank": 1
+        "rank": 2
       },
       {
         "name": "FrameSkip",
         "score": 59.5,
-        "rank": 2
+        "rank": 3
       },
       {
         "name": "RLDX-1",
         "score": 58.7,
-        "rank": 3
+        "rank": 4
       },
       {
         "name": "ABot-M0",
         "score": 58.3,
-        "rank": 4
-      },
-      {
-        "name": "StarVLA-alpha",
-        "score": 57.3,
         "rank": 5
       }
     ],
     "top_5_sft": [
       {
+        "name": "WALA",
+        "score": 75.2,
+        "rank": 1
+      },
+      {
         "name": "DIAL",
         "score": 70.2,
-        "rank": 1
+        "rank": 2
       },
       {
         "name": "FrameSkip",
         "score": 59.5,
-        "rank": 2
+        "rank": 3
       },
       {
         "name": "RLDX-1",
         "score": 58.7,
-        "rank": 3
+        "rank": 4
       },
       {
         "name": "ABot-M0",
         "score": 58.3,
-        "rank": 4
-      },
-      {
-        "name": "StarVLA-alpha",
-        "score": 57.3,
         "rank": 5
       }
     ],

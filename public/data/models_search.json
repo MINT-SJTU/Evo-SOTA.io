@@ -893,7 +893,34 @@
       "Gen Li",
       "Bo Zhao"
     ],
-    "paper_abstract": "Vision-Language-Action (VLA) models are commonly pretrained on robot demonstrations by jointly mapping visual observations and language instructions to actions. However, dense visual-action supervision can dominate the comparatively sparse language-action signal. As a result, policies may rely on visual shortcuts rather than learn how language conditions action execution, making them sensitive to visual variations. To address this limitation, we propose LA4VLA, a language-action pretraining framework that enables policies to acquire language-conditioned action priors without visual observations. These priors capture reusable manipulation skills shared across tasks and scenes, reducing reliance on scene-specific visual cues. Specifically, LA4VLA decomposes expert demonstration trajectories into atomic action segments and pairs each segment with a corresponding low-level action description. This yields LA4-33K, a dataset of 33K Language-Action (LA) episodes derived entirely from existing demonstrations without additional robot data collection. We further develop LA4VLA-1B, a lightweight 1B-parameter VLA model, and investigate three paradigms for incorporating language-action supervision into VLA learning: LA-only pretraining, sequential LA-to-VLA pretraining, and mixed LA-VLA pretraining. Across simulation and real-world tasks, LA-pretrained policies consistently outperform matched VLA-pretrained counterparts, while combining LA and VLA supervision leads to further gains. In particular, mixed LA-VLA pretraining improves the average success rate of LA4VLA-1B over the no-pretraining baseline by up to 17.8 and 45.0 percentage points in simulation and real-world tasks, respectively. These results establish LA4VLA as an effective and complementary pretraining strategy for building stronger and more robust VLA policies."
+    "paper_abstract": "Vision-Language-Action (VLA) models are commonly pretrained on robot demonstrations by jointly mapping visual observations and language instructions to actions. However, dense visual-action supervision can dominate the comparatively sparse language-action signal. As a result, policies may rely on visual shortcuts rather than learn how language conditions action execution, making them sensitive to visual variations. To address this limitation, we propose LA4VLA, a language-action pretraining framework that enables policies to acquire language-conditioned action priors without visual observations. These priors capture reusable manipulation skills shared across tasks and scenes, reducing reliance on scene-specific visual cues. Specifically, LA4VLA decomposes expert demonstration trajectories into atomic action segments and pairs each segment with a corresponding low-level action description. This yields LA-33K, a dataset of 33K Language-Action (LA) episodes derived entirely from existing demonstrations without additional robot data collection. We further develop LA4VLA-1B, a lightweight 1B-parameter VLA model, and investigate three paradigms for incorporating language-action supervision into VLA learning: LA-only pretraining, sequential LA-to-VLA pretraining, and mixed LA-VLA pretraining. Across simulation and real-world tasks, LA-pretrained policies consistently outperform matched VLA-pretrained counterparts, while combining LA and VLA supervision leads to further gains. In particular, mixed LA-VLA pretraining improves the average success rate of LA4VLA-1B over the no-pretraining baseline by up to 17.8 and 45.0 percentage points in simulation and real-world tasks, respectively. These results establish LA4VLA as an effective and complementary pretraining strategy for building stronger and more robust VLA policies."
+  },
+  {
+    "name": "WALA",
+    "paper_url": null,
+    "pub_date": "2026-06",
+    "is_opensource": true,
+    "opensource_url": "https://github.com/liujiahao2077/WALA",
+    "is_rl": false,
+    "settings": [],
+    "benchmarks": {
+      "robocasa": [
+        {
+          "setting": "default",
+          "score": 75.2,
+          "is_standard": true,
+          "note": "",
+          "data": {
+            "avg_success_rate": 75.2
+          },
+          "rank": 1
+        }
+      ]
+    },
+    "paper_arxiv_id": null,
+    "paper_title": null,
+    "paper_authors": null,
+    "paper_abstract": null
   },
   {
     "name": "IVLR",
@@ -1141,7 +1168,7 @@
           "data": {
             "avg_success_rate": 58.7
           },
-          "rank": 3
+          "rank": 4
         }
       ]
     },
@@ -1725,7 +1752,7 @@
           "data": {
             "avg_success_rate": 59.5
           },
-          "rank": 2
+          "rank": 3
         }
       ]
     },
@@ -2668,7 +2695,7 @@
           "data": {
             "avg_success_rate": 57.3
           },
-          "rank": 5
+          "rank": 6
         }
       ],
       "robotwin": [
@@ -3956,7 +3983,7 @@
           "data": {
             "avg_success_rate": 50.8
           },
-          "rank": 9
+          "rank": 10
         }
       ]
     },
@@ -4472,7 +4499,7 @@
           "data": {
             "avg_success_rate": 70.2
           },
-          "rank": 1
+          "rank": 2
         }
       ]
     },
@@ -4602,7 +4629,7 @@
           "data": {
             "avg_success_rate": 58.3
           },
-          "rank": 4
+          "rank": 5
         }
       ],
       "robotwin": [
@@ -5217,7 +5244,7 @@
           "data": {
             "avg_success_rate": 55.4
           },
-          "rank": 6
+          "rank": 7
         }
       ]
     },
@@ -5404,7 +5431,7 @@
           "data": {
             "avg_success_rate": 52.6
           },
-          "rank": 8
+          "rank": 9
         }
       ]
     },
@@ -5441,7 +5468,7 @@
           "data": {
             "avg_success_rate": 54.6
           },
-          "rank": 7
+          "rank": 8
         }
       ]
     },
@@ -5824,7 +5851,7 @@
           "data": {
             "avg_success_rate": 47.6
           },
-          "rank": 12
+          "rank": 13
         }
       ]
     },
@@ -5856,7 +5883,7 @@
           "data": {
             "avg_success_rate": 47.8
           },
-          "rank": 11
+          "rank": 12
         },
         {
           "setting": "Qwen3PI",
@@ -5866,7 +5893,7 @@
           "data": {
             "avg_success_rate": 43.9
           },
-          "rank": 13
+          "rank": 14
         },
         {
           "setting": "Qwen3OFT",
@@ -5876,7 +5903,7 @@
           "data": {
             "avg_success_rate": 48.8
           },
-          "rank": 10
+          "rank": 11
         },
         {
           "setting": "Qwen3FAST",
@@ -5886,7 +5913,7 @@
           "data": {
             "avg_success_rate": 39.0
           },
-          "rank": 14
+          "rank": 15
         }
       ]
     },
