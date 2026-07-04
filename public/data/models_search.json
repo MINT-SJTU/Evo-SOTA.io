@@ -1,5 +1,92 @@
 [
   {
+    "name": "Abot-M0.5",
+    "paper_url": "https://arxiv.org/abs/2607.00678",
+    "pub_date": "2026-07",
+    "is_opensource": true,
+    "opensource_url": "https://github.com/amap-cvlab/ABot-Manipulation",
+    "is_rl": false,
+    "settings": [],
+    "benchmarks": {
+      "libero": [
+        {
+          "setting": "default",
+          "score": 99.4,
+          "is_standard": true,
+          "note": "",
+          "data": {
+            "policy_setting": 1,
+            "spatial": 100.0,
+            "object": 99.8,
+            "goal": 99.4,
+            "long": 98.4,
+            "libero_90": null,
+            "average": 99.4
+          },
+          "rank": 2
+        }
+      ],
+      "libero_plus": [
+        {
+          "setting": "default",
+          "score": 83.4,
+          "is_standard": true,
+          "note": "",
+          "data": {
+            "camera": 70.5,
+            "robot": 87.4,
+            "language": 88.6,
+            "light": 94.0,
+            "background": 89.7,
+            "noise": 75.5,
+            "layout": 85.2,
+            "total": 83.4
+          },
+          "rank": 7
+        }
+      ],
+      "robotwin": [
+        {
+          "setting": "default",
+          "score": 94.2,
+          "is_standard": true,
+          "note": "",
+          "data": {
+            "easy": 94.0,
+            "hard": 94.2
+          },
+          "rank": 1
+        }
+      ]
+    },
+    "paper_arxiv_id": "2607.00678",
+    "paper_title": "ABot-M0.5: Unified Mobility-and-Manipulation World Action Model",
+    "paper_authors": [
+      "Ronghan Chen",
+      "Yandan Yang",
+      "Zuojin Tang",
+      "Dongjie Huo",
+      "Tong Lin",
+      "Haoning Wu",
+      "Haoyun Liu",
+      "Yuzhi Chen",
+      "Lulu Zheng",
+      "Botai Yuan",
+      "Tianlun Li",
+      "Mingxin Wang",
+      "Dekang Qi",
+      "Bin Hu",
+      "Wei Mei",
+      "Yuze Xuan",
+      "Haolong Yang",
+      "Yanqing Zhu",
+      "Mu Xu",
+      "Zhiheng Ma",
+      "Xinyuan Chang"
+    ],
+    "paper_abstract": "Mobile manipulation is a key capability for general-purpose robots, yet remains challenging for current embodied learning methods. VLA policies are typically reactive and lack explicit world modeling, while existing World Action Models (WAMs) are still poorly aligned with the structure of mobile manipulation: they operate on coarse video chunks, model entangled navigation-manipulation actions, and train inverse dynamics under supervision that does not match autoregressive inference. As a result, they often miss fine-grained contact dynamics, suffer from action-distribution conflicts, and accumulate errors over long-horizon rollouts. We propose ABot-M0.5, a new WAM built on the insight that mobile manipulation requires alignment at three levels: temporal granularity, action space, and train-test consistency. To align temporal granularity, we introduce intermediate latent actions that capture local visual state transitions and serve as an bridging action space between video latents and embodiment-specific controls. To align action space, we design a dual-level Mixture-of-Transformers architecture that disentangles both modality representations and heterogeneous action subspaces such as base movement and arm manipulation. To align inference conditions, we propose the dream-forcing training strategy that progressively trains inverse dynamics on model-predicted videos, improving train-test alignment and robustness during autoregressive prediction. Experiments on challenging mobile and fine-grained manipulation benchmarks demonstrate that ABot-M0.5 achieves state-of-the-art performance in both long-horizon task success and finegrained control accuracy. These results highlight the critical importance of granularity-aligned, action-disentangled, and inference-consistent world-action modeling."
+  },
+  {
     "name": "WorldPilot",
     "paper_url": "https://arxiv.org/abs/2606.12403",
     "pub_date": "2026-06",
@@ -142,7 +229,7 @@
             "libero_90": null,
             "average": 98.5
           },
-          "rank": 19
+          "rank": 20
         }
       ]
     },
@@ -224,7 +311,7 @@
             "libero_90": null,
             "average": 98.4
           },
-          "rank": 22
+          "rank": 23
         }
       ],
       "calvin_abc_d": [
@@ -324,7 +411,7 @@
             "libero_90": null,
             "average": 97.7
           },
-          "rank": 36
+          "rank": 37
         }
       ],
       "libero_plus": [
@@ -350,7 +437,7 @@
     "paper_arxiv_id": "2606.07383",
     "paper_title": "RhinoVLA Technical Report",
     "paper_authors": [
-      "Huixi Intelligence",
+      "Huixi Technology",
       ":",
       "Chen Zhang",
       "Chenyang Zhou",
@@ -399,7 +486,7 @@
     "paper_arxiv_id": "2606.07383",
     "paper_title": "RhinoVLA Technical Report",
     "paper_authors": [
-      "Huixi Intelligence",
+      "Huixi Technology",
       ":",
       "Chen Zhang",
       "Chenyang Zhou",
@@ -480,7 +567,7 @@
             "libero_90": null,
             "average": 95.8
           },
-          "rank": 60
+          "rank": 61
         }
       ],
       "calvin_abc_d": [
@@ -853,7 +940,7 @@
             "libero_90": null,
             "average": 96.28
           },
-          "rank": 56
+          "rank": 57
         }
       ],
       "metaworld": [
@@ -1049,7 +1136,7 @@
             "libero_90": null,
             "average": 98.1
           },
-          "rank": 28
+          "rank": 29
         }
       ]
     },
@@ -1270,7 +1357,7 @@
             "libero_90": null,
             "average": 98.1
           },
-          "rank": 29
+          "rank": 30
         }
       ]
     },
@@ -1372,7 +1459,7 @@
             "layout": 82.6,
             "total": 81.2
           },
-          "rank": 11
+          "rank": 12
         }
       ]
     },
@@ -1511,7 +1598,7 @@
             "libero_90": null,
             "average": 98.6
           },
-          "rank": 12
+          "rank": 13
         }
       ],
       "libero_plus": [
@@ -1543,7 +1630,7 @@
             "easy": 85.18,
             "hard": 86.06
           },
-          "rank": 9
+          "rank": 10
         }
       ]
     },
@@ -1590,7 +1677,7 @@
             "layout": 79.9,
             "total": 75.4
           },
-          "rank": 16
+          "rank": 17
         }
       ]
     },
@@ -1697,7 +1784,7 @@
             "libero_90": null,
             "average": 98.6
           },
-          "rank": 13
+          "rank": 14
         }
       ]
     },
@@ -1740,7 +1827,7 @@
             "libero_90": null,
             "average": 97.4
           },
-          "rank": 43
+          "rank": 44
         }
       ],
       "robocasa": [
@@ -1797,7 +1884,7 @@
             "libero_90": null,
             "average": 95.4
           },
-          "rank": 62
+          "rank": 63
         }
       ],
       "libero_plus": [
@@ -1816,7 +1903,7 @@
             "layout": 69.6,
             "total": 69.6
           },
-          "rank": 20
+          "rank": 21
         }
       ],
       "metaworld": [
@@ -1981,7 +2068,7 @@
             "layout": 74.1,
             "total": 82.0
           },
-          "rank": 8
+          "rank": 9
         }
       ],
       "robotwin": [
@@ -1994,7 +2081,7 @@
             "easy": 48.2,
             "hard": 50.0
           },
-          "rank": 13
+          "rank": 14
         }
       ]
     },
@@ -2034,7 +2121,7 @@
             "libero_90": null,
             "average": 98.4
           },
-          "rank": 21
+          "rank": 22
         }
       ]
     },
@@ -2077,7 +2164,7 @@
             "libero_90": null,
             "average": 97.4
           },
-          "rank": 44
+          "rank": 45
         }
       ],
       "libero_plus": [
@@ -2231,7 +2318,7 @@
             "libero_90": null,
             "average": 97.7
           },
-          "rank": 35
+          "rank": 36
         }
       ],
       "libero_plus": [
@@ -2250,7 +2337,7 @@
             "layout": 82.5,
             "total": 82.1
           },
-          "rank": 7
+          "rank": 8
         }
       ]
     },
@@ -2291,7 +2378,7 @@
             "libero_90": null,
             "average": 97.95
           },
-          "rank": 32
+          "rank": 33
         }
       ],
       "robotwin": [
@@ -2304,7 +2391,7 @@
             "easy": 93.06,
             "hard": 91.86
           },
-          "rank": 2
+          "rank": 3
         }
       ]
     },
@@ -2582,7 +2669,7 @@
             "libero_90": null,
             "average": 96.6
           },
-          "rank": 53
+          "rank": 54
         }
       ],
       "robochallenge": [
@@ -2652,7 +2739,7 @@
             "libero_90": null,
             "average": 97.8
           },
-          "rank": 34
+          "rank": 35
         }
       ],
       "libero_plus": [
@@ -2671,7 +2758,7 @@
             "layout": 79.1,
             "total": 79.7
           },
-          "rank": 13
+          "rank": 14
         }
       ],
       "robochallenge": [
@@ -2708,7 +2795,7 @@
             "easy": 88.2,
             "hard": 88.3
           },
-          "rank": 6
+          "rank": 7
         }
       ]
     },
@@ -3351,7 +3438,7 @@
             "libero_90": null,
             "average": 95.8
           },
-          "rank": 59
+          "rank": 60
         }
       ],
       "calvin_d_d": [
@@ -3413,7 +3500,7 @@
             "libero_90": null,
             "average": 98.4
           },
-          "rank": 20
+          "rank": 21
         }
       ],
       "libero_plus": [
@@ -3432,7 +3519,7 @@
             "layout": 83.3,
             "total": 81.4
           },
-          "rank": 10
+          "rank": 11
         }
       ]
     },
@@ -3611,7 +3698,7 @@
             "libero_90": null,
             "average": 94.0
           },
-          "rank": 73
+          "rank": 74
         }
       ]
     },
@@ -3699,7 +3786,7 @@
             "libero_90": null,
             "average": 99.0
           },
-          "rank": 5
+          "rank": 6
         }
       ]
     },
@@ -3737,7 +3824,7 @@
             "libero_90": null,
             "average": 97.8
           },
-          "rank": 33
+          "rank": 34
         }
       ],
       "calvin_abc_d": [
@@ -3971,7 +4058,7 @@
             "libero_90": null,
             "average": 98.6
           },
-          "rank": 10
+          "rank": 11
         }
       ],
       "robocasa": [
@@ -4024,7 +4111,7 @@
             "libero_90": null,
             "average": 99.3
           },
-          "rank": 2
+          "rank": 3
         }
       ]
     },
@@ -4210,7 +4297,7 @@
             "libero_90": null,
             "average": 98.0
           },
-          "rank": 31
+          "rank": 32
         }
       ],
       "calvin_abc_d": [
@@ -4415,7 +4502,7 @@
             "libero_90": null,
             "average": 97.6
           },
-          "rank": 38
+          "rank": 39
         }
       ],
       "robotwin": [
@@ -4428,7 +4515,7 @@
             "easy": 91.88,
             "hard": 91.78
           },
-          "rank": 3
+          "rank": 4
         }
       ]
     },
@@ -4541,7 +4628,7 @@
             "libero_90": null,
             "average": 94.1
           },
-          "rank": 72
+          "rank": 73
         }
       ],
       "robochallenge": [
@@ -4598,7 +4685,7 @@
             "libero_90": null,
             "average": 98.6
           },
-          "rank": 9
+          "rank": 10
         }
       ],
       "libero_plus": [
@@ -4617,7 +4704,7 @@
             "layout": 82.6,
             "total": 80.5
           },
-          "rank": 12
+          "rank": 13
         }
       ],
       "robocasa": [
@@ -4642,7 +4729,7 @@
             "easy": 86.06,
             "hard": 85.08
           },
-          "rank": 10
+          "rank": 11
         }
       ]
     },
@@ -4690,7 +4777,7 @@
             "libero_90": null,
             "average": 98.7
           },
-          "rank": 8
+          "rank": 9
         }
       ],
       "calvin_abcd_d": [
@@ -4781,7 +4868,7 @@
             "libero_90": null,
             "average": 97.2
           },
-          "rank": 45
+          "rank": 46
         }
       ],
       "libero_plus": [
@@ -4800,7 +4887,7 @@
             "layout": 85.1,
             "total": 79.5
           },
-          "rank": 14
+          "rank": 15
         }
       ]
     },
@@ -4936,7 +5023,7 @@
             "libero_90": null,
             "average": 97.6
           },
-          "rank": 37
+          "rank": 38
         }
       ]
     },
@@ -4978,7 +5065,7 @@
             "libero_90": null,
             "average": 98.6
           },
-          "rank": 11
+          "rank": 12
         }
       ]
     },
@@ -5017,7 +5104,7 @@
             "libero_90": null,
             "average": 98.5
           },
-          "rank": 18
+          "rank": 19
         }
       ],
       "libero_plus": [
@@ -5036,7 +5123,7 @@
             "layout": 81.2,
             "total": 81.7
           },
-          "rank": 9
+          "rank": 10
         }
       ]
     },
@@ -5079,7 +5166,7 @@
             "libero_90": null,
             "average": 97.4
           },
-          "rank": 42
+          "rank": 43
         }
       ],
       "libero_plus": [
@@ -5098,7 +5185,7 @@
             "layout": 79.5,
             "total": 74.0
           },
-          "rank": 17
+          "rank": 18
         }
       ],
       "robotwin": [
@@ -5111,7 +5198,7 @@
             "easy": 91.9,
             "hard": 92.3
           },
-          "rank": 1
+          "rank": 2
         }
       ]
     },
@@ -5329,7 +5416,7 @@
             "libero_90": null,
             "average": 98.5
           },
-          "rank": 15
+          "rank": 16
         }
       ],
       "libero_plus": [
@@ -5391,7 +5478,7 @@
             "libero_90": null,
             "average": 98.9
           },
-          "rank": 6
+          "rank": 7
         }
       ]
     },
@@ -5513,7 +5600,7 @@
             "libero_90": null,
             "average": 98.7
           },
-          "rank": 7
+          "rank": 8
         }
       ]
     },
@@ -5586,7 +5673,7 @@
             "libero_90": null,
             "average": 98.5
           },
-          "rank": 16
+          "rank": 17
         }
       ],
       "robotwin": [
@@ -5599,7 +5686,7 @@
             "easy": 92.93,
             "hard": 91.55
           },
-          "rank": 4
+          "rank": 5
         }
       ]
     },
@@ -5687,7 +5774,7 @@
             "libero_90": null,
             "average": 98.5
           },
-          "rank": 17
+          "rank": 18
         }
       ]
     },
@@ -5727,7 +5814,7 @@
             "easy": 89.4,
             "hard": 89.6
           },
-          "rank": 5
+          "rank": 6
         }
       ]
     },
@@ -5798,7 +5885,7 @@
             "easy": 88.56,
             "hard": 86.68
           },
-          "rank": 8
+          "rank": 9
         }
       ]
     },
@@ -6026,7 +6113,7 @@
             "easy": 88.66,
             "hard": 87.02
           },
-          "rank": 7
+          "rank": 8
         }
       ]
     },
@@ -6076,7 +6163,7 @@
             "libero_90": null,
             "average": 94.8
           },
-          "rank": 67
+          "rank": 68
         }
       ],
       "metaworld": [
@@ -6273,7 +6360,7 @@
             "libero_90": null,
             "average": 97.0
           },
-          "rank": 48
+          "rank": 49
         }
       ],
       "libero_plus": [
@@ -6292,7 +6379,7 @@
             "layout": 79.9,
             "total": 79.0
           },
-          "rank": 15
+          "rank": 16
         }
       ]
     },
@@ -6350,7 +6437,7 @@
             "libero_90": null,
             "average": 95.0
           },
-          "rank": 65
+          "rank": 66
         }
       ]
     },
@@ -6439,7 +6526,7 @@
             "libero_90": null,
             "average": 99.2
           },
-          "rank": 3
+          "rank": 4
         }
       ],
       "libero_plus": [
@@ -6458,7 +6545,7 @@
             "layout": 72.4,
             "total": 59.6
           },
-          "rank": 24
+          "rank": 25
         }
       ]
     },
@@ -6502,7 +6589,7 @@
             "libero_90": null,
             "average": 97.4
           },
-          "rank": 41
+          "rank": 42
         }
       ]
     },
@@ -6550,7 +6637,7 @@
             "libero_90": null,
             "average": 96.7
           },
-          "rank": 51
+          "rank": 52
         }
       ],
       "libero_plus": [
@@ -6569,7 +6656,7 @@
             "layout": 73.7,
             "total": 72.4
           },
-          "rank": 18
+          "rank": 19
         }
       ]
     },
@@ -6609,7 +6696,7 @@
             "libero_90": null,
             "average": 96.7
           },
-          "rank": 52
+          "rank": 53
         }
       ]
     },
@@ -6653,7 +6740,7 @@
             "libero_90": null,
             "average": 94.7
           },
-          "rank": 69
+          "rank": 70
         }
       ]
     },
@@ -6692,7 +6779,7 @@
             "libero_90": null,
             "average": 98.1
           },
-          "rank": 25
+          "rank": 26
         }
       ],
       "robochallenge": [
@@ -6718,7 +6805,7 @@
             "easy": 70.0,
             "hard": 69.0
           },
-          "rank": 12
+          "rank": 13
         }
       ],
       "calvin_abc_d": [
@@ -6823,7 +6910,7 @@
             "libero_90": null,
             "average": 95.9
           },
-          "rank": 57
+          "rank": 58
         }
       ]
     },
@@ -6886,7 +6973,7 @@
             "libero_90": null,
             "average": 97.0
           },
-          "rank": 47
+          "rank": 48
         }
       ]
     },
@@ -6931,7 +7018,7 @@
             "libero_90": null,
             "average": 98.3
           },
-          "rank": 23
+          "rank": 24
         }
       ],
       "metaworld": [
@@ -7012,7 +7099,7 @@
             "libero_90": 98.6,
             "average": 98.1
           },
-          "rank": 26
+          "rank": 27
         }
       ]
     },
@@ -7120,7 +7207,7 @@
             "libero_90": null,
             "average": 91.1
           },
-          "rank": 76
+          "rank": 77
         }
       ]
     },
@@ -7291,7 +7378,7 @@
             "libero_90": null,
             "average": 94.9
           },
-          "rank": 66
+          "rank": 67
         }
       ]
     },
@@ -7331,7 +7418,7 @@
             "libero_90": 94.7,
             "average": 96.9
           },
-          "rank": 50
+          "rank": 51
         }
       ],
       "calvin_abcd_d": [
@@ -7422,7 +7509,7 @@
             "libero_90": null,
             "average": 99.1
           },
-          "rank": 4
+          "rank": 5
         }
       ]
     },
@@ -7519,7 +7606,7 @@
             "libero_90": null,
             "average": 98.5
           },
-          "rank": 14
+          "rank": 15
         }
       ],
       "calvin_abc_d": [
@@ -7721,7 +7808,7 @@
             "libero_90": null,
             "average": 74.0
           },
-          "rank": 91
+          "rank": 92
         }
       ]
     },
@@ -7762,7 +7849,7 @@
             "libero_90": 95.6,
             "average": 96.5
           },
-          "rank": 54
+          "rank": 55
         }
       ]
     },
@@ -7806,7 +7893,7 @@
             "libero_90": null,
             "average": 86.6
           },
-          "rank": 80
+          "rank": 81
         }
       ]
     },
@@ -7859,7 +7946,7 @@
             "libero_90": null,
             "average": 96.3
           },
-          "rank": 55
+          "rank": 56
         }
       ]
     },
@@ -7944,7 +8031,7 @@
             "libero_90": null,
             "average": 98.2
           },
-          "rank": 24
+          "rank": 25
         }
       ]
     },
@@ -8015,7 +8102,7 @@
             "libero_90": null,
             "average": 98.0
           },
-          "rank": 30
+          "rank": 31
         }
       ]
     },
@@ -8171,7 +8258,7 @@
             "libero_90": null,
             "average": 92.6
           },
-          "rank": 75
+          "rank": 76
         }
       ],
       "calvin_abc_d": [
@@ -8263,7 +8350,7 @@
             "libero_90": null,
             "average": 95.8
           },
-          "rank": 58
+          "rank": 59
         }
       ]
     },
@@ -8307,7 +8394,7 @@
             "libero_90": null,
             "average": 88.8
           },
-          "rank": 77
+          "rank": 78
         }
       ],
       "metaworld": [
@@ -8371,7 +8458,7 @@
             "libero_90": null,
             "average": 88.6
           },
-          "rank": 78
+          "rank": 79
         }
       ]
     },
@@ -8416,7 +8503,7 @@
             "libero_90": null,
             "average": 95.5
           },
-          "rank": 61
+          "rank": 62
         }
       ],
       "calvin_abcd_d": [
@@ -8492,7 +8579,7 @@
             "libero_90": null,
             "average": 81.8
           },
-          "rank": 83
+          "rank": 84
         }
       ],
       "libero_plus": [
@@ -8511,7 +8598,7 @@
             "layout": 38.0,
             "total": 25.0
           },
-          "rank": 29
+          "rank": 30
         }
       ]
     },
@@ -8557,7 +8644,7 @@
             "libero_90": null,
             "average": 94.8
           },
-          "rank": 68
+          "rank": 69
         }
       ]
     },
@@ -8682,7 +8769,7 @@
             "libero_90": 96.0,
             "average": 94.3
           },
-          "rank": 70
+          "rank": 71
         }
       ]
     },
@@ -8715,7 +8802,7 @@
             "libero_90": null,
             "average": 81.0
           },
-          "rank": 84
+          "rank": 85
         }
       ]
     },
@@ -8803,7 +8890,7 @@
             "libero_90": null,
             "average": 95.2
           },
-          "rank": 64
+          "rank": 65
         }
       ],
       "libero_plus": [
@@ -8822,7 +8909,7 @@
             "layout": 31.9,
             "total": 43.9
           },
-          "rank": 27
+          "rank": 28
         }
       ]
     },
@@ -8980,7 +9067,7 @@
             "libero_90": null,
             "average": 97.5
           },
-          "rank": 39
+          "rank": 40
         }
       ],
       "libero_plus": [
@@ -8999,7 +9086,7 @@
             "layout": 74.2,
             "total": 68.4
           },
-          "rank": 21
+          "rank": 22
         }
       ]
     },
@@ -9037,7 +9124,7 @@
             "libero_90": null,
             "average": 98.1
           },
-          "rank": 27
+          "rank": 28
         }
       ]
     },
@@ -9078,7 +9165,7 @@
             "libero_90": null,
             "average": 96.9
           },
-          "rank": 49
+          "rank": 50
         }
       ],
       "libero_plus": [
@@ -9134,7 +9221,7 @@
             "easy": 82.74,
             "hard": 76.76
           },
-          "rank": 11
+          "rank": 12
         }
       ]
     },
@@ -9204,7 +9291,7 @@
             "libero_90": null,
             "average": 87.9
           },
-          "rank": 79
+          "rank": 80
         }
       ],
       "libero_plus": [
@@ -9223,7 +9310,7 @@
             "layout": 62.1,
             "total": 39.0
           },
-          "rank": 28
+          "rank": 29
         }
       ]
     },
@@ -9265,7 +9352,7 @@
             "libero_90": null,
             "average": 93.9
           },
-          "rank": 74
+          "rank": 75
         }
       ]
     },
@@ -9572,7 +9659,7 @@
             "easy": 34.5,
             "hard": 13.72
           },
-          "rank": 15
+          "rank": 16
         }
       ]
     },
@@ -9615,7 +9702,7 @@
             "libero_90": null,
             "average": 82.4
           },
-          "rank": 82
+          "rank": 83
         }
       ],
       "calvin_abc_d": [
@@ -9680,7 +9767,7 @@
             "libero_90": null,
             "average": 95.3
           },
-          "rank": 63
+          "rank": 64
         },
         {
           "setting": "wrist & third-person images",
@@ -9696,7 +9783,7 @@
             "libero_90": null,
             "average": 97.1
           },
-          "rank": 46
+          "rank": 47
         }
       ],
       "libero_plus": [
@@ -9715,7 +9802,7 @@
             "layout": 74.2,
             "total": 69.6
           },
-          "rank": 19
+          "rank": 20
         },
         {
           "setting": "mix-sft",
@@ -9732,7 +9819,7 @@
             "layout": 68.7,
             "total": 67.9
           },
-          "rank": 22
+          "rank": 23
         },
         {
           "setting": "without wrist input",
@@ -9749,7 +9836,7 @@
             "layout": 69.9,
             "total": 55.8
           },
-          "rank": 25
+          "rank": 26
         }
       ],
       "robochallenge": [
@@ -9799,7 +9886,7 @@
             "libero_90": null,
             "average": 97.4
           },
-          "rank": 40
+          "rank": 41
         }
       ]
     },
@@ -9839,7 +9926,7 @@
             "libero_90": null,
             "average": 85.5
           },
-          "rank": 81
+          "rank": 82
         }
       ],
       "libero_plus": [
@@ -9858,7 +9945,7 @@
             "layout": 68.8,
             "total": 61.6
           },
-          "rank": 23
+          "rank": 24
         }
       ]
     },
@@ -9957,7 +10044,7 @@
             "libero_90": 73.0,
             "average": 74.0
           },
-          "rank": 90
+          "rank": 91
         }
       ]
     },
@@ -10001,7 +10088,7 @@
             "libero_90": null,
             "average": 78.1
           },
-          "rank": 86
+          "rank": 87
         }
       ]
     },
@@ -10084,7 +10171,7 @@
             "libero_90": null,
             "average": 74.8
           },
-          "rank": 89
+          "rank": 90
         }
       ]
     },
@@ -10420,7 +10507,7 @@
             "libero_90": null,
             "average": 80.2
           },
-          "rank": 85
+          "rank": 86
         }
       ]
     },
@@ -10592,7 +10679,7 @@
             "libero_90": null,
             "average": 94.2
           },
-          "rank": 71
+          "rank": 72
         }
       ],
       "libero_plus": [
@@ -10611,7 +10698,7 @@
             "layout": 68.9,
             "total": 53.6
           },
-          "rank": 26
+          "rank": 27
         }
       ],
       "metaworld": [
@@ -10664,7 +10751,7 @@
             "easy": 46.42,
             "hard": 16.34
           },
-          "rank": 14
+          "rank": 15
         }
       ]
     },
@@ -11144,7 +11231,7 @@
             "libero_90": null,
             "average": 76.5
           },
-          "rank": 87
+          "rank": 88
         }
       ],
       "libero_plus": [
@@ -11163,7 +11250,7 @@
             "layout": 28.5,
             "total": 15.6
           },
-          "rank": 30
+          "rank": 31
         }
       ]
     },
@@ -11351,7 +11438,7 @@
             "libero_90": null,
             "average": 75.1
           },
-          "rank": 88
+          "rank": 89
         }
       ]
     },
@@ -12022,7 +12109,7 @@
             "libero_90": null,
             "average": 72.4
           },
-          "rank": 92
+          "rank": 93
         }
       ],
       "metaworld": [
@@ -12051,7 +12138,7 @@
             "easy": 28.04,
             "hard": 0.64
           },
-          "rank": 16
+          "rank": 17
         }
       ],
       "calvin_abc_d": [

@@ -1,6 +1,22 @@
 {
   "standard_opensource": [
     {
+      "name": "Abot-M0.5",
+      "base_name": "Abot-M0.5",
+      "setting": "",
+      "paper_url": "https://arxiv.org/abs/2607.00678",
+      "pub_date": "2026-07",
+      "is_opensource": true,
+      "opensource_url": "https://github.com/amap-cvlab/ABot-Manipulation",
+      "is_rl": false,
+      "easy": 94.0,
+      "hard": 94.2,
+      "source": "original",
+      "is_standard": true,
+      "note": "",
+      "rank": 1
+    },
+    {
       "name": "HoloBrain-0",
       "base_name": "HoloBrain-0",
       "setting": "",
@@ -14,7 +30,7 @@
       "source": "original",
       "is_standard": true,
       "note": "",
-      "rank": 1
+      "rank": 2
     },
     {
       "name": "AttenA+",
@@ -30,7 +46,7 @@
       "source": "original",
       "is_standard": true,
       "note": "",
-      "rank": 2
+      "rank": 3
     },
     {
       "name": "Fast-WAM",
@@ -46,7 +62,7 @@
       "source": "original",
       "is_standard": true,
       "note": "",
-      "rank": 3
+      "rank": 4
     },
     {
       "name": "LingBot-VA",
@@ -62,7 +78,7 @@
       "source": "original",
       "is_standard": true,
       "note": "",
-      "rank": 4
+      "rank": 5
     },
     {
       "name": "InternVLA-A1",
@@ -78,7 +94,7 @@
       "source": "original",
       "is_standard": true,
       "note": "",
-      "rank": 5
+      "rank": 6
     },
     {
       "name": "StarVLA-alpha",
@@ -94,7 +110,7 @@
       "source": "original",
       "is_standard": true,
       "note": "",
-      "rank": 6
+      "rank": 7
     },
     {
       "name": "Motus",
@@ -110,7 +126,7 @@
       "source": "original",
       "is_standard": true,
       "note": "",
-      "rank": 7
+      "rank": 8
     },
     {
       "name": "LingBot-VLA",
@@ -126,7 +142,7 @@
       "source": "original",
       "is_standard": true,
       "note": "",
-      "rank": 8
+      "rank": 9
     },
     {
       "name": "Multi-view-VLA",
@@ -142,7 +158,7 @@
       "source": "original",
       "is_standard": true,
       "note": "",
-      "rank": 9
+      "rank": 10
     },
     {
       "name": "ABot-M0",
@@ -158,7 +174,7 @@
       "source": "original",
       "is_standard": true,
       "note": "",
-      "rank": 10
+      "rank": 11
     },
     {
       "name": "pi0.5",
@@ -174,7 +190,7 @@
       "source": "from AIM, LingBotVA/VLA",
       "is_standard": true,
       "note": "",
-      "rank": 11
+      "rank": 12
     },
     {
       "name": "X-VLA",
@@ -190,7 +206,7 @@
       "source": "original",
       "is_standard": true,
       "note": "",
-      "rank": 12
+      "rank": 13
     },
     {
       "name": "RoVLA",
@@ -206,7 +222,7 @@
       "source": "original",
       "is_standard": true,
       "note": "",
-      "rank": 13
+      "rank": 14
     },
     {
       "name": "pi0",
@@ -222,7 +238,7 @@
       "source": "from RoboTwin",
       "is_standard": true,
       "note": "",
-      "rank": 14
+      "rank": 15
     },
     {
       "name": "RDT-1B",
@@ -238,7 +254,7 @@
       "source": "from RoboTwin",
       "is_standard": true,
       "note": "",
-      "rank": 15
+      "rank": 16
     },
     {
       "name": "Diffusion Policy",
@@ -254,7 +270,7 @@
       "source": "from RoboTwin",
       "is_standard": true,
       "note": "",
-      "rank": 16
+      "rank": 17
     }
   ],
   "standard_closed": [
