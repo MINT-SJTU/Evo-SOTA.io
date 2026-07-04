@@ -1,11 +1,11 @@
 {
   "libero": {
-    "total_models": 170,
-    "standard_opensource_count": 92,
+    "total_models": 171,
+    "standard_opensource_count": 93,
     "standard_closed_count": 60,
     "non_standard_count": 18,
     "model_type_count": {
-      "sft": 81,
+      "sft": 82,
       "rl": 11
     },
     "primary_metric": "Average Success Rate (%)",
@@ -16,49 +16,49 @@
         "rank": 1
       },
       {
+        "name": "Abot-M0.5",
+        "score": 99.4,
+        "rank": 2
+      },
+      {
         "name": "CORAL",
         "score": 99.3,
-        "rank": 2
+        "rank": 3
       },
       {
         "name": "SRPO",
         "score": 99.2,
-        "rank": 3
+        "rank": 4
       },
       {
         "name": "SimpleVLA-RL",
         "score": 99.1,
-        "rank": 4
-      },
-      {
-        "name": "SaiVLA-0",
-        "score": 99.0,
         "rank": 5
       }
     ],
     "top_5_sft": [
       {
+        "name": "Abot-M0.5",
+        "score": 99.4,
+        "rank": 1
+      },
+      {
         "name": "CORAL",
         "score": 99.3,
-        "rank": 1
+        "rank": 2
       },
       {
         "name": "SaiVLA-0",
         "score": 99.0,
-        "rank": 2
+        "rank": 3
       },
       {
         "name": "Being-H0.5 (Specialist)",
         "score": 98.9,
-        "rank": 3
-      },
-      {
-        "name": "UnifoLM-VLA-0",
-        "score": 98.7,
         "rank": 4
       },
       {
-        "name": "Xiaomi-Robotics-0",
+        "name": "UnifoLM-VLA-0",
         "score": 98.7,
         "rank": 5
       }
@@ -92,12 +92,12 @@
     ]
   },
   "libero_plus": {
-    "total_models": 44,
-    "standard_opensource_count": 30,
+    "total_models": 45,
+    "standard_opensource_count": 31,
     "standard_closed_count": 12,
     "non_standard_count": 2,
     "model_type_count": {
-      "sft": 27,
+      "sft": 28,
       "rl": 3
     },
     "primary_metric": "Total Success Rate (%)",
@@ -378,66 +378,66 @@
     "top_5_rl": []
   },
   "robotwin": {
-    "total_models": 27,
-    "standard_opensource_count": 16,
+    "total_models": 28,
+    "standard_opensource_count": 17,
     "standard_closed_count": 11,
     "non_standard_count": 0,
     "model_type_count": {
-      "sft": 15,
+      "sft": 16,
       "rl": 1
     },
     "primary_metric": "Hard Success Rate (%)",
     "top_5": [
       {
+        "name": "Abot-M0.5",
+        "score": 94.2,
+        "rank": 1
+      },
+      {
         "name": "HoloBrain-0",
         "score": 92.3,
-        "rank": 1
+        "rank": 2
       },
       {
         "name": "AttenA+",
         "score": 91.86,
-        "rank": 2
+        "rank": 3
       },
       {
         "name": "Fast-WAM",
         "score": 91.78,
-        "rank": 3
+        "rank": 4
       },
       {
         "name": "LingBot-VA",
         "score": 91.55,
-        "rank": 4
-      },
-      {
-        "name": "InternVLA-A1",
-        "score": 89.6,
         "rank": 5
       }
     ],
     "top_5_sft": [
       {
+        "name": "Abot-M0.5",
+        "score": 94.2,
+        "rank": 1
+      },
+      {
         "name": "HoloBrain-0",
         "score": 92.3,
-        "rank": 1
+        "rank": 2
       },
       {
         "name": "AttenA+",
         "score": 91.86,
-        "rank": 2
+        "rank": 3
       },
       {
         "name": "Fast-WAM",
         "score": 91.78,
-        "rank": 3
+        "rank": 4
       },
       {
         "name": "LingBot-VA",
         "score": 91.55,
-        "rank": 4
-      },
-      {
-        "name": "InternVLA-A1",
-        "score": 89.6,
         "rank": 5
       }
     ],
