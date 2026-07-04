@@ -1,6 +1,11 @@
 {
     "news": [
         {
+            "date": "🗓️ 2026-07-04: ",
+            "content_en": "New models: Add LA4VLA-1B, Abot-M0.5 to LIBERO; Abot-M0.5 to LIBERO Plus; LA4VLA-1B to Meta-World; WALA to Robocasa-GR1-Tabletop; Abot-M0.5 to RoboTwin 2.0",
+            "content_zh": "新增模型: 增加 LA4VLA-1B, Abot-M0.5 到 LIBERO; Abot-M0.5 到 LIBERO Plus; LA4VLA-1B 到 Metaworld; WALA 到 Robocasa-GR1-Tabletop; Abot-M0.5 到 RoboTwin 2.0"
+        },
+        {
             "date": "🗓️ 2026-06-12: ",
             "content_en": "New models: Add GEAR-VLA, ActionMap, QDepth-VLA, VeriSpace, MemoryVLA++, MotionVLA, TBD-VLA, RhinoVLA, LARA, AffordanceVLA, WLA-0, 3DThinkVLA, GeoAlign, Qwen-VLA, AttenA+, BehaviorVLA, ELAN4D, GaussianDream, NIAF to LIBERO; WorldPilot, GEAR-VLA, TBD-VLA, ERVLA, 3DThinkVLA, GeoAlign, Qwen-VLA to LIBERO Plus; OneWM-VLA to Meta-World; MemoryVLA++, AffordanceVLA, BehaviorVLA, HARP-VLA, NIAF to CALVIN; LDA-1B, Qwen-VLA to Robocasa-GR1-Tabletop; GEAR-VLA, WLA-0, Qwen-VLA, AttenA+ to RoboTwin 2.0",
             "content_zh": "新增模型: 增加 GEAR-VLA, ActionMap, QDepth-VLA, VeriSpace, MemoryVLA++, MotionVLA, TBD-VLA, RhinoVLA, LARA, AffordanceVLA, WLA-0, 3DThinkVLA, GeoAlign, Qwen-VLA, AttenA+, BehaviorVLA, ELAN4D, GaussianDream, NIAF 到 LIBERO; WorldPilot, GEAR-VLA, TBD-VLA, ERVLA, 3DThinkVLA, GeoAlign, Qwen-VLA 到 LIBERO Plus; OneWM-VLA 到 Metaworld; MemoryVLA++, AffordanceVLA, BehaviorVLA, HARP-VLA, NIAF 到 CALVIN; LDA-1B, Qwen-VLA 到 Robocasa-GR1-Tabletop; GEAR-VLA, WLA-0, Qwen-VLA, AttenA+ 到 RoboTwin 2.0"
