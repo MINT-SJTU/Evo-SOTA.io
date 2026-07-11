@@ -143,7 +143,7 @@ export default function Home() {
             'HAMLET', 'StarVLA-alpha', 'Dejavu', 'AAC', 'RESample', 'ProGAL-VLA',
             'ALAM', 'RLDX-1', 'ConsisVLA-4D', 'OA-WAM', 'VLA-GSE', 'LoopVLA', 'PriorVLA', 'Multi-view-VLA', 'GuidedVLA',
             'RotVLA', 'GTA-VLA', 'FrameSkip', 'Evo-depth', 'PhysBrain 1.0', 'DyGRO-VLA', 'RoVLA', 'GaussianDream',
-            'VLANeXt', 'PointACT', 'BehaviorVLA', 'GridS', 'LDA-1B', 'WorldPilot', 'GEAR-VLA', 'ActionMap', 'QDepth-VLA', 'VeriSpace', 'MemoryVLA++', 'MotionVLA', 'TBD-VLA', 'RhinoVLA', 'LARA', 'AffordanceVLA', 'WLA-0', 'ERVLA', '3DThinkVLA', 'GeoAlign', 'Qwen-VLA', 'GuidedVLA', 'AttenA+', 'BehaviorVLA', 'HARP-VLA', 'ELAN4D', 'GaussianDream', 'NIAF', 'OneWM-VLA', 'LA4VLA-1B', 'WALA', 'Abot-M0.5', 'Abot-M0'
+            'VLANeXt', 'PointACT', 'BehaviorVLA', 'GridS', 'LDA-1B', 'WorldPilot', 'GEAR-VLA', 'ActionMap', 'QDepth-VLA', 'VeriSpace', 'MemoryVLA++', 'MotionVLA', 'TBD-VLA', 'RhinoVLA', 'LARA', 'AffordanceVLA', 'WLA-0', 'ERVLA', '3DThinkVLA', 'GeoAlign', 'Qwen-VLA', 'GuidedVLA', 'AttenA+', 'BehaviorVLA', 'HARP-VLA', 'ELAN4D', 'GaussianDream', 'NIAF', 'OneWM-VLA', 'LA4VLA-1B', 'WALA', 'Abot-M0.5', 'Abot-M0', 'FabriVLA'
         ];
         const redImportant = ['Wishing everyone a happy Lunar New Year!', '祝大家新年快乐！', 'Searching models is available now!', '模型搜索功能已上线！', 'Model detail pages are now available!', '模型详情页现已上线!'];
 

@@ -303,7 +303,7 @@ export default function RoboChallengePage() {
                                             )}
                                         </td>
                                         <td className="px-4 py-3 text-slate-600 text-sm">{model.pub_date || '-'}</td>
-                                        <td className="px-2 py-3 text-right">
+                                        <td className="px-2 py-3 text-center">
                                             {model.paper_url && (
                                                 <a
                                                     href={model.paper_url}
@@ -316,7 +316,7 @@ export default function RoboChallengePage() {
                                                 </a>
                                             )}
                                         </td>
-                                        <td className="px-2 py-3 text-right">
+                                        <td className="px-2 py-3 text-center">
                                             {model.opensource_url && (
                                                 <a
                                                     href={model.opensource_url}

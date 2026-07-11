@@ -1,6 +1,25 @@
 {
   "standard_opensource": [
     {
+      "name": "FabriVLA",
+      "base_name": "FabriVLA",
+      "setting": "",
+      "paper_url": "https://arxiv.org/abs/2607.08575",
+      "pub_date": "2026-07",
+      "is_opensource": true,
+      "opensource_url": "https://github.com/Youi-FabriX/FabriVLA",
+      "is_rl": false,
+      "easy": 95.0,
+      "medium": 88.2,
+      "hard": 86.7,
+      "very_hard": 90.0,
+      "average": 90.0,
+      "source": "original",
+      "is_standard": true,
+      "note": "",
+      "rank": 1
+    },
+    {
       "name": "LA4VLA-1B",
       "base_name": "LA4VLA-1B",
       "setting": "",
@@ -17,7 +36,7 @@
       "source": "original",
       "is_standard": true,
       "note": "",
-      "rank": 1
+      "rank": 2
     },
     {
       "name": "pi-RL",
@@ -36,7 +55,7 @@
       "source": "original",
       "is_standard": true,
       "note": "",
-      "rank": 2
+      "rank": 3
     },
     {
       "name": "Evo-depth",
@@ -55,7 +74,26 @@
       "source": "original",
       "is_standard": true,
       "note": "",
-      "rank": 3
+      "rank": 4
+    },
+    {
+      "name": "pi0.5",
+      "base_name": "pi0.5",
+      "setting": "",
+      "paper_url": "https://arxiv.org/abs/2504.16054",
+      "pub_date": "2025-04",
+      "is_opensource": true,
+      "opensource_url": "https://github.com/Physical-Intelligence/openpi",
+      "is_rl": false,
+      "easy": 86.1,
+      "medium": 78.2,
+      "hard": 80.0,
+      "very_hard": 82.0,
+      "average": 81.6,
+      "source": "from LA4VLA",
+      "is_standard": true,
+      "note": "",
+      "rank": 5
     },
     {
       "name": "Evo-1",
@@ -74,7 +112,7 @@
       "source": "original",
       "is_standard": true,
       "note": "",
-      "rank": 4
+      "rank": 6
     },
     {
       "name": "RoboTron Mani",
@@ -93,7 +131,7 @@
       "source": "original",
       "is_standard": true,
       "note": "RoboTron-Mani 采用了自定义的数据生成协议， 而不是标准的训练数据， 但是介于很多别的论文也干了。原文：“ To address the lack of training data for simulation learning, we adopt the scripted policies from Yu et al. [68] and introduce Gaussian noise N(0, 0.1) to the generated actions at each step, resulting in a total of 22,500 trajectories, with each task producing 500 successful trajectories. ”",
-      "rank": 5
+      "rank": 7
     },
     {
       "name": "PAD",
@@ -112,7 +150,7 @@
       "source": "original",
       "is_standard": true,
       "note": "",
-      "rank": 6
+      "rank": 8
     },
     {
       "name": "SmolVLA",
@@ -131,7 +169,7 @@
       "source": "original",
       "is_standard": true,
       "note": "",
-      "rank": 7
+      "rank": 9
     },
     {
       "name": "GR-1",
@@ -150,7 +188,7 @@
       "source": "From ALAM",
       "is_standard": true,
       "note": "",
-      "rank": 8
+      "rank": 10
     },
     {
       "name": "pi0",
@@ -169,7 +207,7 @@
       "source": "from smolVLA",
       "is_standard": true,
       "note": "不清楚具体实验设置，因此无法判断来自于是同一个权重还是四个权重",
-      "rank": 9
+      "rank": 11
     },
     {
       "name": "TinyVLA-H",
@@ -188,7 +226,7 @@
       "source": "original",
       "is_standard": true,
       "note": "",
-      "rank": 10
+      "rank": 12
     },
     {
       "name": "Diffusion Policy",
@@ -207,7 +245,7 @@
       "source": "from TinyVLA",
       "is_standard": true,
       "note": "",
-      "rank": 11
+      "rank": 13
     }
   ],
   "standard_closed": [
