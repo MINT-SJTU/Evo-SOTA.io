@@ -1,6 +1,11 @@
 {
     "news": [
         {
+            "date": "🗓️ 2026-07-11: ",
+            "content_en": "New models: Add FabriVLA to Meta-World",
+            "content_zh": "新增模型: 增加 FabriVLA 到 Metaworld"
+        },
+        {
             "date": "🗓️ 2026-07-04: ",
             "content_en": "New models: Add LA4VLA-1B, Abot-M0.5 to LIBERO; Abot-M0.5 to LIBERO Plus; LA4VLA-1B to Meta-World; WALA to Robocasa-GR1-Tabletop; Abot-M0.5 to RoboTwin 2.0",
             "content_zh": "新增模型: 增加 LA4VLA-1B, Abot-M0.5 到 LIBERO; Abot-M0.5 到 LIBERO Plus; LA4VLA-1B 到 Metaworld; WALA 到 Robocasa-GR1-Tabletop; Abot-M0.5 到 RoboTwin 2.0"

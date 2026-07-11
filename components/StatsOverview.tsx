@@ -181,6 +181,9 @@ export default function StatsOverview() {
 
     const t = texts[locale];
 
+    const formatLeaderScore = (score: number, decimals: number, suffix = '') =>
+        score > 0 ? `${score.toFixed(decimals)}${suffix}` : '-';
+
     if (!stats) {
         return (
             <section className="py-12 px-4 sm:px-6 lg:px-8">
@@ -265,37 +268,37 @@ export default function StatsOverview() {
                         <div className="bg-gradient-to-br from-amber-500 to-amber-600 text-white rounded-xl p-3 shadow-lg">
                             <div className="text-xs opacity-80 mb-1">RoboTwin 2.0</div>
                             <div className="font-bold text-sm truncate">{stats.topRobotwinSft.name}</div>
-                            <div className="text-lg font-mono mt-1">{stats.topRobotwinSft.score > 0 ? `${stats.topRobotwinSft.score}%` : '-'}</div>
+                            <div className="text-lg font-mono mt-1">{formatLeaderScore(stats.topRobotwinSft.score, 1, '%')}</div>
                         </div>
                         <div className="bg-gradient-to-br from-orange-500 to-orange-600 text-white rounded-xl p-3 shadow-lg">
                             <div className="text-xs opacity-80 mb-1">LIBERO Plus</div>
                             <div className="font-bold text-sm truncate">{stats.topLiberoPlusSft.name}</div>
-                            <div className="text-lg font-mono mt-1">{stats.topLiberoPlusSft.score}%</div>
+                            <div className="text-lg font-mono mt-1">{formatLeaderScore(stats.topLiberoPlusSft.score, 1, '%')}</div>
                         </div>
                         <div className="bg-gradient-to-br from-blue-500 to-blue-600 text-white rounded-xl p-3 shadow-lg">
                             <div className="text-xs opacity-80 mb-1">LIBERO</div>
                             <div className="font-bold text-sm truncate">{stats.topLiberoSft.name}</div>
-                            <div className="text-lg font-mono mt-1">{stats.topLiberoSft.score}%</div>
+                            <div className="text-lg font-mono mt-1">{formatLeaderScore(stats.topLiberoSft.score, 1, '%')}</div>
                         </div>
                         <div className="bg-gradient-to-br from-purple-500 to-purple-600 text-white rounded-xl p-3 shadow-lg">
                             <div className="text-xs opacity-80 mb-1">Meta-World</div>
                             <div className="font-bold text-sm truncate">{stats.topMetaworldSft.name}</div>
-                            <div className="text-lg font-mono mt-1">{stats.topMetaworldSft.score}%</div>
+                            <div className="text-lg font-mono mt-1">{formatLeaderScore(stats.topMetaworldSft.score, 1, '%')}</div>
                         </div>
                         <div className="bg-gradient-to-br from-emerald-500 to-emerald-600 text-white rounded-xl p-3 shadow-lg">
                             <div className="text-xs opacity-80 mb-1">CALVIN (ABC→D)</div>
                             <div className="font-bold text-sm truncate">{stats.topCalvinSft.name}</div>
-                            <div className="text-lg font-mono mt-1">{stats.topCalvinSft.score.toFixed(2)}</div>
+                            <div className="text-lg font-mono mt-1">{formatLeaderScore(stats.topCalvinSft.score, 2)}</div>
                         </div>
                         <div className="bg-gradient-to-br from-teal-500 to-teal-600 text-white rounded-xl p-3 shadow-lg">
                             <div className="text-xs opacity-80 mb-1">RoboChallenge</div>
                             <div className="font-bold text-sm truncate">{stats.topRobochallengeSft.name}</div>
-                            <div className="text-lg font-mono mt-1">{stats.topRobochallengeSft.score}</div>
+                            <div className="text-lg font-mono mt-1">{formatLeaderScore(stats.topRobochallengeSft.score, 2)}</div>
                         </div>
                         <div className="bg-gradient-to-br from-rose-500 to-rose-600 text-white rounded-xl p-3 shadow-lg">
                             <div className="text-xs opacity-80 mb-1">RoboCasa-GR1-Tabletop</div>
                             <div className="font-bold text-sm truncate">{stats.topRobocasaSft.name}</div>
-                            <div className="text-lg font-mono mt-1">{stats.topRobocasaSft.score}%</div>
+                            <div className="text-lg font-mono mt-1">{formatLeaderScore(stats.topRobocasaSft.score, 1, '%')}</div>
                         </div>
                     </div>
                 </div>
@@ -309,37 +312,37 @@ export default function StatsOverview() {
                         <div className="bg-gradient-to-br from-amber-400 to-amber-500 text-white rounded-xl p-3 shadow-lg">
                             <div className="text-xs opacity-80 mb-1">RoboTwin 2.0</div>
                             <div className="font-bold text-sm truncate">{stats.topRobotwinRl.name}</div>
-                            <div className="text-lg font-mono mt-1">{stats.topRobotwinRl.score > 0 ? `${stats.topRobotwinRl.score}%` : '-'}</div>
+                            <div className="text-lg font-mono mt-1">{formatLeaderScore(stats.topRobotwinRl.score, 1, '%')}</div>
                         </div>
                         <div className="bg-gradient-to-br from-orange-400 to-orange-500 text-white rounded-xl p-3 shadow-lg">
                             <div className="text-xs opacity-80 mb-1">LIBERO Plus</div>
                             <div className="font-bold text-sm truncate">{stats.topLiberoPlusRl.name}</div>
-                            <div className="text-lg font-mono mt-1">{stats.topLiberoPlusRl.score > 0 ? `${stats.topLiberoPlusRl.score}%` : '-'}</div>
+                            <div className="text-lg font-mono mt-1">{formatLeaderScore(stats.topLiberoPlusRl.score, 1, '%')}</div>
                         </div>
                         <div className="bg-gradient-to-br from-blue-400 to-blue-500 text-white rounded-xl p-3 shadow-lg">
                             <div className="text-xs opacity-80 mb-1">LIBERO</div>
                             <div className="font-bold text-sm truncate">{stats.topLiberoRl.name}</div>
-                            <div className="text-lg font-mono mt-1">{stats.topLiberoRl.score > 0 ? `${stats.topLiberoRl.score}%` : '-'}</div>
+                            <div className="text-lg font-mono mt-1">{formatLeaderScore(stats.topLiberoRl.score, 1, '%')}</div>
                         </div>
                         <div className="bg-gradient-to-br from-purple-400 to-purple-500 text-white rounded-xl p-3 shadow-lg">
                             <div className="text-xs opacity-80 mb-1">Meta-World</div>
                             <div className="font-bold text-sm truncate">{stats.topMetaworldRl.name}</div>
-                            <div className="text-lg font-mono mt-1">{stats.topMetaworldRl.score > 0 ? `${stats.topMetaworldRl.score}%` : '-'}</div>
+                            <div className="text-lg font-mono mt-1">{formatLeaderScore(stats.topMetaworldRl.score, 1, '%')}</div>
                         </div>
                         <div className="bg-gradient-to-br from-emerald-400 to-emerald-500 text-white rounded-xl p-3 shadow-lg">
                             <div className="text-xs opacity-80 mb-1">CALVIN (ABC→D)</div>
                             <div className="font-bold text-sm truncate">{stats.topCalvinRl.name}</div>
-                            <div className="text-lg font-mono mt-1">{stats.topCalvinRl.score > 0 ? stats.topCalvinRl.score.toFixed(2) : '-'}</div>
+                            <div className="text-lg font-mono mt-1">{formatLeaderScore(stats.topCalvinRl.score, 2)}</div>
                         </div>
                         <div className="bg-gradient-to-br from-teal-400 to-teal-500 text-white rounded-xl p-3 shadow-lg">
                             <div className="text-xs opacity-80 mb-1">RoboChallenge</div>
                             <div className="font-bold text-sm truncate">{stats.topRobochallengeRl.name}</div>
-                            <div className="text-lg font-mono mt-1">{stats.topRobochallengeRl.score > 0 ? stats.topRobochallengeRl.score : '-'}</div>
+                            <div className="text-lg font-mono mt-1">{formatLeaderScore(stats.topRobochallengeRl.score, 2)}</div>
                         </div>
                         <div className="bg-gradient-to-br from-rose-400 to-rose-500 text-white rounded-xl p-3 shadow-lg">
                             <div className="text-xs opacity-80 mb-1">RoboCasa-GR1-Tabletop</div>
                             <div className="font-bold text-sm truncate">{stats.topRobocasaRl.name}</div>
-                            <div className="text-lg font-mono mt-1">{stats.topRobocasaRl.score > 0 ? `${stats.topRobocasaRl.score}%` : '-'}</div>
+                            <div className="text-lg font-mono mt-1">{formatLeaderScore(stats.topRobocasaRl.score, 1, '%')}</div>
                         </div>
                     </div>
                 </div>

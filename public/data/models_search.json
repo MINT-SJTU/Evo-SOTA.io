@@ -87,6 +87,46 @@
     "paper_abstract": "Mobile manipulation is a key capability for general-purpose robots, yet remains challenging for current embodied learning methods. VLA policies are typically reactive and lack explicit world modeling, while existing World Action Models (WAMs) are still poorly aligned with the structure of mobile manipulation: they operate on coarse video chunks, model entangled navigation-manipulation actions, and train inverse dynamics under supervision that does not match autoregressive inference. As a result, they often miss fine-grained contact dynamics, suffer from action-distribution conflicts, and accumulate errors over long-horizon rollouts. We propose ABot-M0.5, a new WAM built on the insight that mobile manipulation requires alignment at three levels: temporal granularity, action space, and train-test consistency. To align temporal granularity, we introduce intermediate latent actions that capture local visual state transitions and serve as an bridging action space between video latents and embodiment-specific controls. To align action space, we design a dual-level Mixture-of-Transformers architecture that disentangles both modality representations and heterogeneous action subspaces such as base movement and arm manipulation. To align inference conditions, we propose the dream-forcing training strategy that progressively trains inverse dynamics on model-predicted videos, improving train-test alignment and robustness during autoregressive prediction. Experiments on challenging mobile and fine-grained manipulation benchmarks demonstrate that ABot-M0.5 achieves state-of-the-art performance in both long-horizon task success and finegrained control accuracy. These results highlight the critical importance of granularity-aligned, action-disentangled, and inference-consistent world-action modeling."
   },
   {
+    "name": "FabriVLA",
+    "paper_url": "https://arxiv.org/abs/2607.08575",
+    "pub_date": "2026-07",
+    "is_opensource": true,
+    "opensource_url": "https://github.com/Youi-FabriX/FabriVLA",
+    "is_rl": false,
+    "settings": [],
+    "benchmarks": {
+      "metaworld": [
+        {
+          "setting": "default",
+          "score": 90.0,
+          "is_standard": true,
+          "note": "",
+          "data": {
+            "easy": 95.0,
+            "medium": 88.2,
+            "hard": 86.7,
+            "very_hard": 90.0,
+            "average": 90.0
+          },
+          "rank": 1
+        }
+      ]
+    },
+    "paper_arxiv_id": "2607.08575",
+    "paper_title": "FabriVLA: A Lightweight Vision-Language-Action Model for Precise Multi-Task Manipulation",
+    "paper_authors": [
+      "Shiyuan Yang",
+      "Borong Zhang",
+      "Jizheng Zhang",
+      "Zhijia Tao",
+      "Junfei Guo",
+      "Donglai Ran",
+      "Xu Bian",
+      "Qingbiao Li"
+    ],
+    "paper_abstract": "We present FabriVLA, a lightweight Vision-Language-Action model for Precise Multi-Task Manipulation. FabriVLA combines an InternVL3.5 vision-language backbone with a flow-matching action head featuring gated self-attention across action tokens and shallow VLM layer fusion for enriched spatial context. The model is trained via single stage joint optimization from a pretrained VLM and randomly initialized action head. On the Meta-World MT50 benchmark spanning 50 diverse manipulation tasks, FabriVLA achieves a tier-average success rate of 90.0%, demonstrating that a compact VLA built on a 1B scale VLM can achieve strong performance without relying on multi billion parameter VLA backbones."
+  },
+  {
     "name": "WorldPilot",
     "paper_url": "https://arxiv.org/abs/2606.12403",
     "pub_date": "2026-06",
@@ -956,7 +996,7 @@
             "very_hard": 100.0,
             "average": 87.53
           },
-          "rank": 1
+          "rank": 2
         }
       ]
     },
@@ -1919,7 +1959,7 @@
             "very_hard": 82.4,
             "average": 84.4
           },
-          "rank": 3
+          "rank": 4
         }
       ]
     },
@@ -3059,7 +3099,7 @@
       "Jin Zhang",
       "Jianqiang Li"
     ],
-    "paper_abstract": "Vision--Language--Action (VLA) models often use intermediate representations to connect multimodal inputs with continuous control, yet spatial guidance is often injected implicitly through latent features. We propose $CorridorVLA$, which predicts sparse spatial anchors as incremental physical changes (e.g., $Δ$-positions) and uses them to impose an explicit tolerance region in the training objective for action generation. The anchors define a corridor that guides a flow-matching action head: trajectories whose implied spatial evolution falls outside it receive corrective gradients, while minor deviations from contacts and execution noise are permitted. On the more challenging LIBERO-Plus benchmark, CorridorVLA yields consistent gains across both SmolVLA and GR00T, improving success rate by $3.4\\%$--$12.4\\%$ over the corresponding baselines; notably, our GR00T-Corr variant reaches a success rate of $83.21\\%$. These results indicate that action-aligned physical cues can provide direct and interpretable constraints for generative action policies, complementing spatial guidance encoded in visual or latent forms. Code is available at https://github.com/corridorVLA."
+    "paper_abstract": "Vision--Language--Action (VLA) models often use intermediate representations to connect multimodal inputs with continuous control, yet spatial guidance is often injected implicitly through latent features. We propose CorridorVLA, which predicts sparse spatial anchors as incremental physical changes (e.g., end-effector $Δ$-positions) and uses them to impose an explicit tolerance region in the training objective for action generation. The anchors define a tolerance corridor that guides a flow-matching action head: trajectories whose implied spatial evolution falls outside the corridor receive corrective gradients, while trajectories within the corridor are refined by a consistency objective. CorridorVLA improves SmolVLA by 4.45 percentage points on LIBERO and improves SmolVLA and GR00T by 12.37 and 7.98 percentage points, respectively, on the more challenging LIBERO-Plus benchmark. Notably, under the same single-policy 4-in-1 setting, where one policy is jointly trained and evaluated across all task suites, GR00T-Corr achieves an 83.21% success rate. These results indicate that action-aligned physical cues can provide direct and interpretable constraints for generative action policies, complementing spatial guidance encoded in visual or latent forms. Code and released model checkpoints are available at https://github.com/lidc54/corridorVLA and https://huggingface.co/lidc/CorridorVLA."
   },
   {
     "name": "JoyAI-RA 0.1",
@@ -4986,7 +5026,7 @@
       ]
     },
     "paper_arxiv_id": "2602.19710",
-    "paper_title": "Universal Pose Pretraining for Generalizable Vision-Language-Action Policies",
+    "paper_title": "PoseVLA: Universal Pose Pretraining for Generalizable Vision-Language-Action Policies",
     "paper_authors": [
       "Haitao Lin",
       "Hanyang Yu",
@@ -6179,7 +6219,7 @@
             "very_hard": 79.2,
             "average": 80.6
           },
-          "rank": 4
+          "rank": 6
         }
       ]
     },
@@ -6301,7 +6341,7 @@
             "very_hard": 81.0,
             "average": 77.7
           },
-          "rank": 5
+          "rank": 7
         }
       ],
       "calvin_abcd_d": [
@@ -7034,7 +7074,7 @@
             "very_hard": 92.0,
             "average": 85.8
           },
-          "rank": 2
+          "rank": 3
         }
       ],
       "calvin_abc_d": [
@@ -8410,7 +8450,7 @@
             "very_hard": 64.0,
             "average": 68.2
           },
-          "rank": 7
+          "rank": 9
         }
       ]
     },
@@ -9185,6 +9225,22 @@
             "total": 85.7
           },
           "rank": 2
+        }
+      ],
+      "metaworld": [
+        {
+          "setting": "default",
+          "score": 81.6,
+          "is_standard": true,
+          "note": "",
+          "data": {
+            "easy": 86.1,
+            "medium": 78.2,
+            "hard": 80.0,
+            "very_hard": 82.0,
+            "average": 81.6
+          },
+          "rank": 5
         }
       ],
       "robochallenge": [
@@ -10636,7 +10692,7 @@
             "very_hard": 87.2,
             "average": 72.7
           },
-          "rank": 6
+          "rank": 8
         }
       ]
     },
@@ -10714,7 +10770,7 @@
             "very_hard": 30.0,
             "average": 47.9
           },
-          "rank": 9
+          "rank": 11
         }
       ],
       "robochallenge": [
@@ -10971,7 +11027,7 @@
             "very_hard": 15.8,
             "average": 31.6
           },
-          "rank": 10
+          "rank": 12
         }
       ]
     },
@@ -11525,7 +11581,7 @@
             "very_hard": 44.0,
             "average": 50.5
           },
-          "rank": 8
+          "rank": 10
         }
       ],
       "calvin_abcd_d": [
@@ -12125,7 +12181,7 @@
             "very_hard": 6.1,
             "average": 10.5
           },
-          "rank": 11
+          "rank": 13
         }
       ],
       "robotwin": [
