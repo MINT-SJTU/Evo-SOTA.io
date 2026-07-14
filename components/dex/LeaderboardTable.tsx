@@ -220,9 +220,6 @@ export default function LeaderboardTable({
                         <td className="px-4 py-3">
                           <div className="font-medium text-slate-800">{row.shortName}</div>
                           <div className="text-xs text-slate-500">{row.title}</div>
-                          {meta?.source && meta.source !== "original" && (
-                            <div className="text-xs text-slate-500">{meta.source}</div>
-                          )}
                           <div className="mt-2 flex gap-3 text-xs">
                             {row.paper && (
                               <a href={row.paper.url} target="_blank" rel="noreferrer" className="text-primary-600">
@@ -308,7 +305,7 @@ export default function LeaderboardTable({
                                   </a>
                                 )}
                               </div>
-                              {meta?.source && meta.source !== "original" && (
+                              {meta?.source && meta.source.toLowerCase() !== "original" && (
                                 <div className="bg-amber-50 border border-amber-200 rounded-lg p-3">
                                   <span className="text-sm font-medium text-amber-800">{t.dex.leaderboardTable.source}: </span>
                                   <span className="text-sm text-amber-700">{meta.source}</span>
