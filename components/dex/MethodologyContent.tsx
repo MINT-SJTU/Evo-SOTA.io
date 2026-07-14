@@ -12,6 +12,7 @@ export default function MethodologyContent({ benchmarks }: { benchmarks: Benchma
     {
       title: texts.dataSource,
       description: texts.dataSourceDesc,
+      details: undefined,
       icon: (
         <svg className="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
           <path
@@ -26,6 +27,7 @@ export default function MethodologyContent({ benchmarks }: { benchmarks: Benchma
     {
       title: texts.rankingRules,
       description: texts.rankingRulesDesc,
+      details: texts.metricDefinitions,
       icon: (
         <svg className="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
           <path
@@ -40,6 +42,7 @@ export default function MethodologyContent({ benchmarks }: { benchmarks: Benchma
     {
       title: texts.limitations,
       description: texts.limitationsDesc,
+      details: undefined,
       icon: (
         <svg className="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
           <path
@@ -103,6 +106,27 @@ export default function MethodologyContent({ benchmarks }: { benchmarks: Benchma
                 <div>
                   <h2 className="text-xl font-semibold text-slate-800 mb-2">{section.title}</h2>
                   <p className="text-slate-600 leading-relaxed">{section.description}</p>
+                  {section.details && (
+                    <dl className="mt-5 grid gap-3 sm:grid-cols-2">
+                      {section.details.map((metric) => (
+                        <div key={metric.label} className="rounded-lg border border-slate-200 bg-slate-50 p-3">
+                          <div className="flex items-start justify-between gap-3">
+                            <dt className="font-semibold text-slate-800">{metric.label}</dt>
+                            <span
+                              className={`shrink-0 rounded-full px-2 py-0.5 text-xs font-medium ${
+                                metric.better === "higher"
+                                  ? "bg-emerald-100 text-emerald-700"
+                                  : "bg-blue-100 text-blue-700"
+                              }`}
+                            >
+                              {metric.direction}
+                            </span>
+                          </div>
+                          <dd className="mt-2 text-sm leading-relaxed text-slate-600">{metric.description}</dd>
+                        </div>
+                      ))}
+                    </dl>
+                  )}
                 </div>
               </div>
             </div>
@@ -182,7 +206,7 @@ export default function MethodologyContent({ benchmarks }: { benchmarks: Benchma
 
         <div className="mt-12">
           <h2 className="text-2xl font-bold text-slate-800 mb-6 text-center">{texts.supportedBenchmarks}</h2>
-          <div className="grid sm:grid-cols-2 xl:grid-cols-4 gap-4">
+          <div className="grid sm:grid-cols-2 xl:grid-cols-3 gap-4">
             {benchmarks.map((benchmark) => {
               const accent = benchmark.color || "#94a3b8";
               const linkUrl = benchmark.links[0]?.url;

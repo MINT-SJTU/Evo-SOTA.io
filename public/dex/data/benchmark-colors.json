@@ -2,5 +2,7 @@
   "adroit": "hsl(329, 70%, 55%)",
   "dexart": "hsl(307, 70%, 55%)",
   "bidexhands": "hsl(265, 70%, 55%)",
-  "dexgraspnet": "hsl(346, 70%, 55%)"
+  "dexgraspnet": "hsl(346, 70%, 55%)",
+  "dexgraspanything": "hsl(18, 70%, 55%)",
+  "dexonomy": "hsl(300, 70%, 55%)"
 }

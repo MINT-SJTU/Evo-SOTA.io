@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-07-11T06:00:00.523Z",
+  "generatedAt": "2026-07-14T11:49:53.833Z",
   "benchmarks": [
     {
       "id": "adroit",
@@ -311,6 +311,109 @@
           "url": "https://arxiv.org/abs/2210.02697"
         }
       ]
+    },
+    {
+      "id": "dexgraspanything",
+      "name": "DexGrasp Anything",
+      "description": "A physics-aware benchmark for universal dexterous grasp generation across diverse objects.",
+      "meanColumnId": "graspSuccessRateAvg",
+      "columns": [
+        {
+          "id": "graspSuccessRateAvg",
+          "label": "GSR. (avg)",
+          "kind": "score"
+        },
+        {
+          "id": "penetrationAvg",
+          "label": "Pen. (avg)",
+          "kind": "score"
+        },
+        {
+          "id": "setting",
+          "label": "Setting",
+          "kind": "meta"
+        },
+        {
+          "id": "source",
+          "label": "Source",
+          "kind": "meta"
+        },
+        {
+          "id": "proof",
+          "label": "Proof",
+          "kind": "meta"
+        }
+      ],
+      "color": "hsl(18, 70%, 55%)",
+      "links": [
+        {
+          "label": "Website",
+          "url": "https://dexgraspanything.github.io/"
+        },
+        {
+          "label": "Paper",
+          "url": "https://arxiv.org/abs/2503.08257"
+        }
+      ]
+    },
+    {
+      "id": "dexonomy",
+      "name": "Dexonomy",
+      "description": "A grasp-taxonomy benchmark evaluating the quality and coverage of diverse dexterous grasp types.",
+      "meanColumnId": "graspSuccessRate",
+      "columns": [
+        {
+          "id": "graspSuccessRate",
+          "label": "GSR",
+          "kind": "score"
+        },
+        {
+          "id": "objectSuccessRate",
+          "label": "OSR",
+          "kind": "score"
+        },
+        {
+          "id": "categoryDiversityCoverage",
+          "label": "CDC",
+          "kind": "score"
+        },
+        {
+          "id": "penetrationDepth",
+          "label": "PD",
+          "kind": "score"
+        },
+        {
+          "id": "diversity",
+          "label": "Div.",
+          "kind": "score"
+        },
+        {
+          "id": "setting",
+          "label": "Setting",
+          "kind": "meta"
+        },
+        {
+          "id": "source",
+          "label": "Source",
+          "kind": "meta"
+        },
+        {
+          "id": "proof",
+          "label": "Proof",
+          "kind": "meta"
+        }
+      ],
+      "color": "hsl(300, 70%, 55%)",
+      "links": [
+        {
+          "label": "Website",
+          "url": "https://pku-epic.github.io/Dexonomy/"
+        },
+        {
+          "label": "Paper",
+          "url": "https://arxiv.org/abs/2504.18829"
+        }
+      ]
     }
   ],
   "methods": [
@@ -324,13 +427,13 @@
         "url": "https://arxiv.org/pdf/2509.01819"
       },
       "project": {
-        "label": "Code",
+        "label": "Website",
         "url": "https://maniflow-policy.github.io/"
       },
       "isOpenSource": true,
       "ranks": {
-        "adroit": 4,
-        "dexart": 4
+        "adroit": 8,
+        "dexart": 7
       },
       "benchmarks": {
         "adroit": {
@@ -407,6 +510,33 @@
           "setting": null,
           "source": null,
           "proof": null
+        },
+        "dexgraspanything": {
+          "values": {
+            "graspSuccessRateAvg": null,
+            "penetrationAvg": null,
+            "setting": null,
+            "source": null,
+            "proof": null
+          },
+          "setting": null,
+          "source": null,
+          "proof": null
+        },
+        "dexonomy": {
+          "values": {
+            "graspSuccessRate": null,
+            "objectSuccessRate": null,
+            "categoryDiversityCoverage": null,
+            "penetrationDepth": null,
+            "diversity": null,
+            "setting": null,
+            "source": null,
+            "proof": null
+          },
+          "setting": null,
+          "source": null,
+          "proof": null
         }
       }
     },
@@ -421,7 +551,7 @@
       },
       "isOpenSource": false,
       "ranks": {
-        "adroit": 6
+        "adroit": 12
       },
       "benchmarks": {
         "adroit": {
@@ -498,6 +628,33 @@
           "setting": null,
           "source": null,
           "proof": null
+        },
+        "dexgraspanything": {
+          "values": {
+            "graspSuccessRateAvg": null,
+            "penetrationAvg": null,
+            "setting": null,
+            "source": null,
+            "proof": null
+          },
+          "setting": null,
+          "source": null,
+          "proof": null
+        },
+        "dexonomy": {
+          "values": {
+            "graspSuccessRate": null,
+            "objectSuccessRate": null,
+            "categoryDiversityCoverage": null,
+            "penetrationDepth": null,
+            "diversity": null,
+            "setting": null,
+            "source": null,
+            "proof": null
+          },
+          "setting": null,
+          "source": null,
+          "proof": null
         }
       }
     },
@@ -511,13 +668,13 @@
         "url": "https://arxiv.org/pdf/2403.03954"
       },
       "project": {
-        "label": "Code",
+        "label": "Website",
         "url": "https://3d-diffusion-policy.github.io/"
       },
       "isOpenSource": true,
       "ranks": {
-        "adroit": 11,
-        "dexart": 3,
+        "adroit": 18,
+        "dexart": 5,
         "bidexhands": 1
       },
       "benchmarks": {
@@ -595,6 +752,33 @@
           "setting": null,
           "source": null,
           "proof": null
+        },
+        "dexgraspanything": {
+          "values": {
+            "graspSuccessRateAvg": null,
+            "penetrationAvg": null,
+            "setting": null,
+            "source": null,
+            "proof": null
+          },
+          "setting": null,
+          "source": null,
+          "proof": null
+        },
+        "dexonomy": {
+          "values": {
+            "graspSuccessRate": null,
+            "objectSuccessRate": null,
+            "categoryDiversityCoverage": null,
+            "penetrationDepth": null,
+            "diversity": null,
+            "setting": null,
+            "source": null,
+            "proof": null
+          },
+          "setting": null,
+          "source": null,
+          "proof": null
         }
       }
     },
@@ -608,12 +792,12 @@
         "url": "https://arxiv.org/abs/2411.18562"
       },
       "project": {
-        "label": "Code",
+        "label": "Website",
         "url": "https://dexdiffuser.github.io/"
       },
       "isOpenSource": true,
       "ranks": {
-        "adroit": 2
+        "adroit": 3
       },
       "benchmarks": {
         "adroit": {
@@ -690,6 +874,33 @@
           "setting": null,
           "source": null,
           "proof": null
+        },
+        "dexgraspanything": {
+          "values": {
+            "graspSuccessRateAvg": null,
+            "penetrationAvg": null,
+            "setting": null,
+            "source": null,
+            "proof": null
+          },
+          "setting": null,
+          "source": null,
+          "proof": null
+        },
+        "dexonomy": {
+          "values": {
+            "graspSuccessRate": null,
+            "objectSuccessRate": null,
+            "categoryDiversityCoverage": null,
+            "penetrationDepth": null,
+            "diversity": null,
+            "setting": null,
+            "source": null,
+            "proof": null
+          },
+          "setting": null,
+          "source": null,
+          "proof": null
         }
       }
     },
@@ -708,8 +919,8 @@
       },
       "isOpenSource": true,
       "ranks": {
-        "adroit": 12,
-        "dexart": 14,
+        "adroit": 19,
+        "dexart": 19,
         "bidexhands": 2
       },
       "benchmarks": {
@@ -787,6 +998,33 @@
           "setting": null,
           "source": null,
           "proof": null
+        },
+        "dexgraspanything": {
+          "values": {
+            "graspSuccessRateAvg": null,
+            "penetrationAvg": null,
+            "setting": null,
+            "source": null,
+            "proof": null
+          },
+          "setting": null,
+          "source": null,
+          "proof": null
+        },
+        "dexonomy": {
+          "values": {
+            "graspSuccessRate": null,
+            "objectSuccessRate": null,
+            "categoryDiversityCoverage": null,
+            "penetrationDepth": null,
+            "diversity": null,
+            "setting": null,
+            "source": null,
+            "proof": null
+          },
+          "setting": null,
+          "source": null,
+          "proof": null
         }
       }
     },
@@ -800,13 +1038,13 @@
         "url": "https://arxiv.org/pdf/2409.01083"
       },
       "project": {
-        "label": "Code",
+        "label": "Website",
         "url": "https://hri-eu.github.io/flow-matching-policy/"
       },
       "isOpenSource": true,
       "ranks": {
-        "adroit": 17,
-        "dexart": 12
+        "adroit": 24,
+        "dexart": 17
       },
       "benchmarks": {
         "adroit": {
@@ -883,6 +1121,33 @@
           "setting": null,
           "source": null,
           "proof": null
+        },
+        "dexgraspanything": {
+          "values": {
+            "graspSuccessRateAvg": null,
+            "penetrationAvg": null,
+            "setting": null,
+            "source": null,
+            "proof": null
+          },
+          "setting": null,
+          "source": null,
+          "proof": null
+        },
+        "dexonomy": {
+          "values": {
+            "graspSuccessRate": null,
+            "objectSuccessRate": null,
+            "categoryDiversityCoverage": null,
+            "penetrationDepth": null,
+            "diversity": null,
+            "setting": null,
+            "source": null,
+            "proof": null
+          },
+          "setting": null,
+          "source": null,
+          "proof": null
         }
       }
     },
@@ -896,13 +1161,13 @@
         "url": "https://arxiv.org/pdf/2506.01583"
       },
       "project": {
-        "label": "Code",
+        "label": "Website",
         "url": "https://freq-policy.github.io/"
       },
       "isOpenSource": true,
       "ranks": {
-        "adroit": 7,
-        "dexart": 9
+        "adroit": 13,
+        "dexart": 14
       },
       "benchmarks": {
         "adroit": {
@@ -979,6 +1244,33 @@
           "setting": null,
           "source": null,
           "proof": null
+        },
+        "dexgraspanything": {
+          "values": {
+            "graspSuccessRateAvg": null,
+            "penetrationAvg": null,
+            "setting": null,
+            "source": null,
+            "proof": null
+          },
+          "setting": null,
+          "source": null,
+          "proof": null
+        },
+        "dexonomy": {
+          "values": {
+            "graspSuccessRate": null,
+            "objectSuccessRate": null,
+            "categoryDiversityCoverage": null,
+            "penetrationDepth": null,
+            "diversity": null,
+            "setting": null,
+            "source": null,
+            "proof": null
+          },
+          "setting": null,
+          "source": null,
+          "proof": null
         }
       }
     },
@@ -992,12 +1284,12 @@
         "url": "https://arxiv.org/pdf/2507.06710"
       },
       "project": {
-        "label": "Code",
+        "label": "Website",
         "url": "https://zhenyangliu.github.io/DP4/"
       },
       "isOpenSource": true,
       "ranks": {
-        "dexart": 1
+        "dexart": 2
       },
       "benchmarks": {
         "adroit": {
@@ -1074,6 +1366,33 @@
           "setting": null,
           "source": null,
           "proof": null
+        },
+        "dexgraspanything": {
+          "values": {
+            "graspSuccessRateAvg": null,
+            "penetrationAvg": null,
+            "setting": null,
+            "source": null,
+            "proof": null
+          },
+          "setting": null,
+          "source": null,
+          "proof": null
+        },
+        "dexonomy": {
+          "values": {
+            "graspSuccessRate": null,
+            "objectSuccessRate": null,
+            "categoryDiversityCoverage": null,
+            "penetrationDepth": null,
+            "diversity": null,
+            "setting": null,
+            "source": null,
+            "proof": null
+          },
+          "setting": null,
+          "source": null,
+          "proof": null
         }
       }
     },
@@ -1087,12 +1406,12 @@
         "url": "https://arxiv.org/pdf/2506.17561"
       },
       "project": {
-        "label": "Code",
+        "label": "Website",
         "url": "https://nus-lins-lab.github.io/vlaos/"
       },
       "isOpenSource": true,
       "ranks": {
-        "dexart": 15
+        "dexart": 20
       },
       "benchmarks": {
         "adroit": {
@@ -1169,6 +1488,33 @@
           "setting": null,
           "source": null,
           "proof": null
+        },
+        "dexgraspanything": {
+          "values": {
+            "graspSuccessRateAvg": null,
+            "penetrationAvg": null,
+            "setting": null,
+            "source": null,
+            "proof": null
+          },
+          "setting": null,
+          "source": null,
+          "proof": null
+        },
+        "dexonomy": {
+          "values": {
+            "graspSuccessRate": null,
+            "objectSuccessRate": null,
+            "categoryDiversityCoverage": null,
+            "penetrationDepth": null,
+            "diversity": null,
+            "setting": null,
+            "source": null,
+            "proof": null
+          },
+          "setting": null,
+          "source": null,
+          "proof": null
         }
       }
     },
@@ -1183,8 +1529,8 @@
       },
       "isOpenSource": false,
       "ranks": {
-        "adroit": 3,
-        "dexart": 5
+        "adroit": 6,
+        "dexart": 9
       },
       "benchmarks": {
         "adroit": {
@@ -1261,6 +1607,33 @@
           "setting": null,
           "source": null,
           "proof": null
+        },
+        "dexgraspanything": {
+          "values": {
+            "graspSuccessRateAvg": null,
+            "penetrationAvg": null,
+            "setting": null,
+            "source": null,
+            "proof": null
+          },
+          "setting": null,
+          "source": null,
+          "proof": null
+        },
+        "dexonomy": {
+          "values": {
+            "graspSuccessRate": null,
+            "objectSuccessRate": null,
+            "categoryDiversityCoverage": null,
+            "penetrationDepth": null,
+            "diversity": null,
+            "setting": null,
+            "source": null,
+            "proof": null
+          },
+          "setting": null,
+          "source": null,
+          "proof": null
         }
       }
     },
@@ -1279,8 +1652,8 @@
       },
       "isOpenSource": true,
       "ranks": {
-        "adroit": 10,
-        "dexart": 10
+        "adroit": 17,
+        "dexart": 15
       },
       "benchmarks": {
         "adroit": {
@@ -1357,6 +1730,33 @@
           "setting": null,
           "source": null,
           "proof": null
+        },
+        "dexgraspanything": {
+          "values": {
+            "graspSuccessRateAvg": null,
+            "penetrationAvg": null,
+            "setting": null,
+            "source": null,
+            "proof": null
+          },
+          "setting": null,
+          "source": null,
+          "proof": null
+        },
+        "dexonomy": {
+          "values": {
+            "graspSuccessRate": null,
+            "objectSuccessRate": null,
+            "categoryDiversityCoverage": null,
+            "penetrationDepth": null,
+            "diversity": null,
+            "setting": null,
+            "source": null,
+            "proof": null
+          },
+          "setting": null,
+          "source": null,
+          "proof": null
         }
       }
     },
@@ -1370,13 +1770,13 @@
         "url": "https://arxiv.org/pdf/2412.09265"
       },
       "project": {
-        "label": "Code",
+        "label": "Website",
         "url": "https://sdm-policy.github.io/"
       },
       "isOpenSource": true,
       "ranks": {
-        "adroit": 8,
-        "dexart": 7
+        "adroit": 14,
+        "dexart": 12
       },
       "benchmarks": {
         "adroit": {
@@ -1453,6 +1853,33 @@
           "setting": null,
           "source": null,
           "proof": null
+        },
+        "dexgraspanything": {
+          "values": {
+            "graspSuccessRateAvg": null,
+            "penetrationAvg": null,
+            "setting": null,
+            "source": null,
+            "proof": null
+          },
+          "setting": null,
+          "source": null,
+          "proof": null
+        },
+        "dexonomy": {
+          "values": {
+            "graspSuccessRate": null,
+            "objectSuccessRate": null,
+            "categoryDiversityCoverage": null,
+            "penetrationDepth": null,
+            "diversity": null,
+            "setting": null,
+            "source": null,
+            "proof": null
+          },
+          "setting": null,
+          "source": null,
+          "proof": null
         }
       }
     },
@@ -1466,13 +1893,13 @@
         "url": "https://arxiv.org/pdf/2406.01586"
       },
       "project": {
-        "label": "Code",
+        "label": "Website",
         "url": "https://manicm-fast.github.io/"
       },
       "isOpenSource": true,
       "ranks": {
-        "adroit": 9,
-        "dexart": 6
+        "adroit": 15,
+        "dexart": 11
       },
       "benchmarks": {
         "adroit": {
@@ -1549,6 +1976,33 @@
           "setting": null,
           "source": null,
           "proof": null
+        },
+        "dexgraspanything": {
+          "values": {
+            "graspSuccessRateAvg": null,
+            "penetrationAvg": null,
+            "setting": null,
+            "source": null,
+            "proof": null
+          },
+          "setting": null,
+          "source": null,
+          "proof": null
+        },
+        "dexonomy": {
+          "values": {
+            "graspSuccessRate": null,
+            "objectSuccessRate": null,
+            "categoryDiversityCoverage": null,
+            "penetrationDepth": null,
+            "diversity": null,
+            "setting": null,
+            "source": null,
+            "proof": null
+          },
+          "setting": null,
+          "source": null,
+          "proof": null
         }
       }
     },
@@ -1562,13 +2016,13 @@
         "url": "https://arxiv.org/pdf/2409.07163"
       },
       "project": {
-        "label": "Code",
+        "label": "Website",
         "url": "https://sagecao1125.github.io/mamba_policy/"
       },
       "isOpenSource": true,
       "ranks": {
-        "adroit": 14,
-        "dexart": 11
+        "adroit": 21,
+        "dexart": 16
       },
       "benchmarks": {
         "adroit": {
@@ -1638,6 +2092,33 @@
             "penetration": null,
             "diversity": null,
             "successAtSix": null,
+            "setting": null,
+            "source": null,
+            "proof": null
+          },
+          "setting": null,
+          "source": null,
+          "proof": null
+        },
+        "dexgraspanything": {
+          "values": {
+            "graspSuccessRateAvg": null,
+            "penetrationAvg": null,
+            "setting": null,
+            "source": null,
+            "proof": null
+          },
+          "setting": null,
+          "source": null,
+          "proof": null
+        },
+        "dexonomy": {
+          "values": {
+            "graspSuccessRate": null,
+            "objectSuccessRate": null,
+            "categoryDiversityCoverage": null,
+            "penetrationDepth": null,
+            "diversity": null,
             "setting": null,
             "source": null,
             "proof": null
@@ -1740,6 +2221,33 @@
           "setting": null,
           "source": null,
           "proof": null
+        },
+        "dexgraspanything": {
+          "values": {
+            "graspSuccessRateAvg": null,
+            "penetrationAvg": null,
+            "setting": null,
+            "source": null,
+            "proof": null
+          },
+          "setting": null,
+          "source": null,
+          "proof": null
+        },
+        "dexonomy": {
+          "values": {
+            "graspSuccessRate": null,
+            "objectSuccessRate": null,
+            "categoryDiversityCoverage": null,
+            "penetrationDepth": null,
+            "diversity": null,
+            "setting": null,
+            "source": null,
+            "proof": null
+          },
+          "setting": null,
+          "source": null,
+          "proof": null
         }
       }
     },
@@ -1828,6 +2336,33 @@
             "penetration": null,
             "diversity": null,
             "successAtSix": null,
+            "setting": null,
+            "source": null,
+            "proof": null
+          },
+          "setting": null,
+          "source": null,
+          "proof": null
+        },
+        "dexgraspanything": {
+          "values": {
+            "graspSuccessRateAvg": null,
+            "penetrationAvg": null,
+            "setting": null,
+            "source": null,
+            "proof": null
+          },
+          "setting": null,
+          "source": null,
+          "proof": null
+        },
+        "dexonomy": {
+          "values": {
+            "graspSuccessRate": null,
+            "objectSuccessRate": null,
+            "categoryDiversityCoverage": null,
+            "penetrationDepth": null,
+            "diversity": null,
             "setting": null,
             "source": null,
             "proof": null
@@ -1926,6 +2461,33 @@
           "setting": null,
           "source": null,
           "proof": null
+        },
+        "dexgraspanything": {
+          "values": {
+            "graspSuccessRateAvg": null,
+            "penetrationAvg": null,
+            "setting": null,
+            "source": null,
+            "proof": null
+          },
+          "setting": null,
+          "source": null,
+          "proof": null
+        },
+        "dexonomy": {
+          "values": {
+            "graspSuccessRate": null,
+            "objectSuccessRate": null,
+            "categoryDiversityCoverage": null,
+            "penetrationDepth": null,
+            "diversity": null,
+            "setting": null,
+            "source": null,
+            "proof": null
+          },
+          "setting": null,
+          "source": null,
+          "proof": null
         }
       }
     },
@@ -1939,12 +2501,12 @@
         "url": "https://arxiv.org/abs/2502.12724"
       },
       "project": {
-        "label": "Code",
+        "label": "Website",
         "url": "https://rnr-dp.github.io/"
       },
       "isOpenSource": true,
       "ranks": {
-        "adroit": 13
+        "adroit": 20
       },
       "benchmarks": {
         "adroit": {
@@ -2014,6 +2576,33 @@
             "penetration": null,
             "diversity": null,
             "successAtSix": null,
+            "setting": null,
+            "source": null,
+            "proof": null
+          },
+          "setting": null,
+          "source": null,
+          "proof": null
+        },
+        "dexgraspanything": {
+          "values": {
+            "graspSuccessRateAvg": null,
+            "penetrationAvg": null,
+            "setting": null,
+            "source": null,
+            "proof": null
+          },
+          "setting": null,
+          "source": null,
+          "proof": null
+        },
+        "dexonomy": {
+          "values": {
+            "graspSuccessRate": null,
+            "objectSuccessRate": null,
+            "categoryDiversityCoverage": null,
+            "penetrationDepth": null,
+            "diversity": null,
             "setting": null,
             "source": null,
             "proof": null
@@ -2112,6 +2701,33 @@
           "setting": null,
           "source": "Reported by DexGraspNet",
           "proof": null
+        },
+        "dexgraspanything": {
+          "values": {
+            "graspSuccessRateAvg": null,
+            "penetrationAvg": null,
+            "setting": null,
+            "source": null,
+            "proof": null
+          },
+          "setting": null,
+          "source": null,
+          "proof": null
+        },
+        "dexonomy": {
+          "values": {
+            "graspSuccessRate": null,
+            "objectSuccessRate": null,
+            "categoryDiversityCoverage": null,
+            "penetrationDepth": null,
+            "diversity": null,
+            "setting": null,
+            "source": null,
+            "proof": null
+          },
+          "setting": null,
+          "source": null,
+          "proof": null
         }
       }
     },
@@ -2125,12 +2741,13 @@
         "url": "https://arxiv.org/abs/2104.03304"
       },
       "project": {
-        "label": "Code",
+        "label": "Website",
         "url": "https://hwjiang1510.github.io/GraspTTA/"
       },
       "isOpenSource": true,
       "ranks": {
-        "dexgraspnet": 12
+        "dexgraspnet": 12,
+        "dexgraspanything": 6
       },
       "benchmarks": {
         "adroit": {
@@ -2207,6 +2824,33 @@
           "setting": null,
           "source": "Reported by EFF-Grasp",
           "proof": null
+        },
+        "dexgraspanything": {
+          "values": {
+            "graspSuccessRateAvg": "19.5",
+            "penetrationAvg": "31.2",
+            "setting": null,
+            "source": "Reproduced by KPGrasp",
+            "proof": null
+          },
+          "setting": null,
+          "source": "Reproduced by KPGrasp",
+          "proof": null
+        },
+        "dexonomy": {
+          "values": {
+            "graspSuccessRate": null,
+            "objectSuccessRate": null,
+            "categoryDiversityCoverage": null,
+            "penetrationDepth": null,
+            "diversity": null,
+            "setting": null,
+            "source": null,
+            "proof": null
+          },
+          "setting": null,
+          "source": null,
+          "proof": null
         }
       }
     },
@@ -2220,12 +2864,14 @@
         "url": "https://arxiv.org/abs/2303.00938"
       },
       "project": {
-        "label": "Code",
+        "label": "Website",
         "url": "https://pku-epic.github.io/UniDexGrasp/"
       },
       "isOpenSource": true,
       "ranks": {
-        "dexgraspnet": 9
+        "dexgraspnet": 9,
+        "dexgraspanything": 5,
+        "dexonomy": 3
       },
       "benchmarks": {
         "adroit": {
@@ -2302,6 +2948,33 @@
           "setting": null,
           "source": "Reported by EFF-Grasp",
           "proof": null
+        },
+        "dexgraspanything": {
+          "values": {
+            "graspSuccessRateAvg": "25.4",
+            "penetrationAvg": "29.3",
+            "setting": null,
+            "source": "Reproduced by KPGrasp",
+            "proof": null
+          },
+          "setting": null,
+          "source": "Reproduced by KPGrasp",
+          "proof": null
+        },
+        "dexonomy": {
+          "values": {
+            "graspSuccessRate": "24.5",
+            "objectSuccessRate": "73.2",
+            "categoryDiversityCoverage": "15.6",
+            "penetrationDepth": "11.6",
+            "diversity": "28",
+            "setting": null,
+            "source": "Reproduced by KPGrasp",
+            "proof": null
+          },
+          "setting": null,
+          "source": "Reproduced by KPGrasp",
+          "proof": null
         }
       }
     },
@@ -2315,12 +2988,13 @@
         "url": "https://arxiv.org/abs/2301.06015"
       },
       "project": {
-        "label": "Code",
+        "label": "Website",
         "url": "https://scenediffuser.github.io/"
       },
       "isOpenSource": true,
       "ranks": {
-        "dexgraspnet": 11
+        "dexgraspnet": 11,
+        "dexgraspanything": 4
       },
       "benchmarks": {
         "adroit": {
@@ -2397,6 +3071,33 @@
           "setting": null,
           "source": "Reported by EFF-Grasp",
           "proof": null
+        },
+        "dexgraspanything": {
+          "values": {
+            "graspSuccessRateAvg": "37.1",
+            "penetrationAvg": "30.8",
+            "setting": null,
+            "source": "Reproduced by KPGrasp",
+            "proof": null
+          },
+          "setting": null,
+          "source": "Reproduced by KPGrasp",
+          "proof": null
+        },
+        "dexonomy": {
+          "values": {
+            "graspSuccessRate": null,
+            "objectSuccessRate": null,
+            "categoryDiversityCoverage": null,
+            "penetrationDepth": null,
+            "diversity": null,
+            "setting": null,
+            "source": null,
+            "proof": null
+          },
+          "setting": null,
+          "source": null,
+          "proof": null
         }
       }
     },
@@ -2410,12 +3111,13 @@
         "url": "https://arxiv.org/abs/2311.16917"
       },
       "project": {
-        "label": "Code",
+        "label": "Website",
         "url": "https://jiaxin-lu.github.io/ugg/"
       },
       "isOpenSource": true,
       "ranks": {
-        "dexgraspnet": 8
+        "dexgraspnet": 8,
+        "dexgraspanything": 3
       },
       "benchmarks": {
         "adroit": {
@@ -2492,6 +3194,33 @@
           "setting": null,
           "source": "Reported by EFF-Grasp",
           "proof": null
+        },
+        "dexgraspanything": {
+          "values": {
+            "graspSuccessRateAvg": "44.7",
+            "penetrationAvg": "25.5",
+            "setting": null,
+            "source": "Reproduced by KPGrasp",
+            "proof": null
+          },
+          "setting": null,
+          "source": "Reproduced by KPGrasp",
+          "proof": null
+        },
+        "dexonomy": {
+          "values": {
+            "graspSuccessRate": null,
+            "objectSuccessRate": null,
+            "categoryDiversityCoverage": null,
+            "penetrationDepth": null,
+            "diversity": null,
+            "setting": null,
+            "source": null,
+            "proof": null
+          },
+          "setting": null,
+          "source": null,
+          "proof": null
         }
       }
     },
@@ -2505,12 +3234,14 @@
         "url": "https://arxiv.org/abs/2503.08257"
       },
       "project": {
-        "label": "Code",
+        "label": "Website",
         "url": "https://dexgraspanything.github.io/"
       },
       "isOpenSource": true,
       "ranks": {
-        "dexgraspnet": 3
+        "dexgraspnet": 3,
+        "dexgraspanything": 2,
+        "dexonomy": 4
       },
       "benchmarks": {
         "adroit": {
@@ -2586,6 +3317,33 @@
           },
           "setting": null,
           "source": "Original",
+          "proof": null
+        },
+        "dexgraspanything": {
+          "values": {
+            "graspSuccessRateAvg": "58.5",
+            "penetrationAvg": "21.2",
+            "setting": null,
+            "source": "Reproduced by KPGrasp",
+            "proof": null
+          },
+          "setting": null,
+          "source": "Reproduced by KPGrasp",
+          "proof": null
+        },
+        "dexonomy": {
+          "values": {
+            "graspSuccessRate": "21.8",
+            "objectSuccessRate": "72.2",
+            "categoryDiversityCoverage": "11",
+            "penetrationDepth": "14.2",
+            "diversity": "23.3",
+            "setting": null,
+            "source": "Reproduced by KPGrasp",
+            "proof": null
+          },
+          "setting": null,
+          "source": "Reproduced by KPGrasp",
           "proof": null
         }
       }
@@ -2677,6 +3435,33 @@
           },
           "setting": null,
           "source": "Original",
+          "proof": null
+        },
+        "dexgraspanything": {
+          "values": {
+            "graspSuccessRateAvg": null,
+            "penetrationAvg": null,
+            "setting": null,
+            "source": null,
+            "proof": null
+          },
+          "setting": null,
+          "source": null,
+          "proof": null
+        },
+        "dexonomy": {
+          "values": {
+            "graspSuccessRate": null,
+            "objectSuccessRate": null,
+            "categoryDiversityCoverage": null,
+            "penetrationDepth": null,
+            "diversity": null,
+            "setting": null,
+            "source": null,
+            "proof": null
+          },
+          "setting": null,
+          "source": null,
           "proof": null
         }
       }
@@ -2773,6 +3558,33 @@
           "setting": null,
           "source": "Reported by DexDiffuser",
           "proof": null
+        },
+        "dexgraspanything": {
+          "values": {
+            "graspSuccessRateAvg": null,
+            "penetrationAvg": null,
+            "setting": null,
+            "source": null,
+            "proof": null
+          },
+          "setting": null,
+          "source": null,
+          "proof": null
+        },
+        "dexonomy": {
+          "values": {
+            "graspSuccessRate": null,
+            "objectSuccessRate": null,
+            "categoryDiversityCoverage": null,
+            "penetrationDepth": null,
+            "diversity": null,
+            "setting": null,
+            "source": null,
+            "proof": null
+          },
+          "setting": null,
+          "source": null,
+          "proof": null
         }
       }
     },
@@ -2786,7 +3598,7 @@
         "url": "https://arxiv.org/abs/2402.02989"
       },
       "project": {
-        "label": "Code",
+        "label": "Website",
         "url": "https://yulihn.github.io/DexDiffuser_page/"
       },
       "isOpenSource": true,
@@ -2867,6 +3679,33 @@
           },
           "setting": "DexS-BPS-EGD-ESR-1",
           "source": "Original",
+          "proof": null
+        },
+        "dexgraspanything": {
+          "values": {
+            "graspSuccessRateAvg": null,
+            "penetrationAvg": null,
+            "setting": null,
+            "source": null,
+            "proof": null
+          },
+          "setting": null,
+          "source": null,
+          "proof": null
+        },
+        "dexonomy": {
+          "values": {
+            "graspSuccessRate": null,
+            "objectSuccessRate": null,
+            "categoryDiversityCoverage": null,
+            "penetrationDepth": null,
+            "diversity": null,
+            "setting": null,
+            "source": null,
+            "proof": null
+          },
+          "setting": null,
+          "source": null,
           "proof": null
         }
       }
@@ -2959,6 +3798,33 @@
           "setting": "Vision Based",
           "source": "Original",
           "proof": null
+        },
+        "dexgraspanything": {
+          "values": {
+            "graspSuccessRateAvg": null,
+            "penetrationAvg": null,
+            "setting": null,
+            "source": null,
+            "proof": null
+          },
+          "setting": null,
+          "source": null,
+          "proof": null
+        },
+        "dexonomy": {
+          "values": {
+            "graspSuccessRate": null,
+            "objectSuccessRate": null,
+            "categoryDiversityCoverage": null,
+            "penetrationDepth": null,
+            "diversity": null,
+            "setting": null,
+            "source": null,
+            "proof": null
+          },
+          "setting": null,
+          "source": null,
+          "proof": null
         }
       }
     },
@@ -2972,7 +3838,7 @@
         "url": "https://arxiv.org/abs/2412.02699"
       },
       "project": {
-        "label": "Code",
+        "label": "Website",
         "url": "https://dexhand.github.io/UniGraspTransformer/"
       },
       "isOpenSource": true,
@@ -3054,6 +3920,33 @@
           "setting": "Vision Based",
           "source": "Original",
           "proof": null
+        },
+        "dexgraspanything": {
+          "values": {
+            "graspSuccessRateAvg": null,
+            "penetrationAvg": null,
+            "setting": null,
+            "source": null,
+            "proof": null
+          },
+          "setting": null,
+          "source": null,
+          "proof": null
+        },
+        "dexonomy": {
+          "values": {
+            "graspSuccessRate": null,
+            "objectSuccessRate": null,
+            "categoryDiversityCoverage": null,
+            "penetrationDepth": null,
+            "diversity": null,
+            "setting": null,
+            "source": null,
+            "proof": null
+          },
+          "setting": null,
+          "source": null,
+          "proof": null
         }
       }
     },
@@ -3067,7 +3960,7 @@
         "url": "https://arxiv.org/abs/2509.22149"
       },
       "project": {
-        "label": "Code",
+        "label": "Website",
         "url": "https://beingbeyond.github.io/DemoGrasp/"
       },
       "isOpenSource": true,
@@ -3149,6 +4042,33 @@
           "setting": "Vision Based",
           "source": "Original",
           "proof": null
+        },
+        "dexgraspanything": {
+          "values": {
+            "graspSuccessRateAvg": null,
+            "penetrationAvg": null,
+            "setting": null,
+            "source": null,
+            "proof": null
+          },
+          "setting": null,
+          "source": null,
+          "proof": null
+        },
+        "dexonomy": {
+          "values": {
+            "graspSuccessRate": null,
+            "objectSuccessRate": null,
+            "categoryDiversityCoverage": null,
+            "penetrationDepth": null,
+            "diversity": null,
+            "setting": null,
+            "source": null,
+            "proof": null
+          },
+          "setting": null,
+          "source": null,
+          "proof": null
         }
       }
     },
@@ -3163,8 +4083,8 @@
       },
       "isOpenSource": false,
       "ranks": {
-        "adroit": 5,
-        "dexart": 2
+        "adroit": 11,
+        "dexart": 3
       },
       "benchmarks": {
         "adroit": {
@@ -3241,6 +4161,33 @@
           "setting": null,
           "source": null,
           "proof": null
+        },
+        "dexgraspanything": {
+          "values": {
+            "graspSuccessRateAvg": null,
+            "penetrationAvg": null,
+            "setting": null,
+            "source": null,
+            "proof": null
+          },
+          "setting": null,
+          "source": null,
+          "proof": null
+        },
+        "dexonomy": {
+          "values": {
+            "graspSuccessRate": null,
+            "objectSuccessRate": null,
+            "categoryDiversityCoverage": null,
+            "penetrationDepth": null,
+            "diversity": null,
+            "setting": null,
+            "source": null,
+            "proof": null
+          },
+          "setting": null,
+          "source": null,
+          "proof": null
         }
       }
     },
@@ -3254,13 +4201,13 @@
         "url": "https://arxiv.org/abs/2509.01819"
       },
       "project": {
-        "label": "Code",
+        "label": "Website",
         "url": "https://maniflow-policy.github.io/"
       },
       "isOpenSource": true,
       "ranks": {
-        "adroit": 16,
-        "dexart": 13
+        "adroit": 23,
+        "dexart": 18
       },
       "benchmarks": {
         "adroit": {
@@ -3337,6 +4284,33 @@
           "setting": null,
           "source": null,
           "proof": null
+        },
+        "dexgraspanything": {
+          "values": {
+            "graspSuccessRateAvg": null,
+            "penetrationAvg": null,
+            "setting": null,
+            "source": null,
+            "proof": null
+          },
+          "setting": null,
+          "source": null,
+          "proof": null
+        },
+        "dexonomy": {
+          "values": {
+            "graspSuccessRate": null,
+            "objectSuccessRate": null,
+            "categoryDiversityCoverage": null,
+            "penetrationDepth": null,
+            "diversity": null,
+            "setting": null,
+            "source": null,
+            "proof": null
+          },
+          "setting": null,
+          "source": null,
+          "proof": null
         }
       }
     },
@@ -3350,13 +4324,13 @@
         "url": "https://arxiv.org/abs/2501.10105"
       },
       "project": {
-        "label": "Code",
+        "label": "Website",
         "url": "https://2toinf.github.io/UniAct/"
       },
       "isOpenSource": true,
       "ranks": {
-        "adroit": 15,
-        "dexart": 8
+        "adroit": 22,
+        "dexart": 13
       },
       "benchmarks": {
         "adroit": {
@@ -3433,11 +4407,1249 @@
           "setting": null,
           "source": null,
           "proof": null
+        },
+        "dexgraspanything": {
+          "values": {
+            "graspSuccessRateAvg": null,
+            "penetrationAvg": null,
+            "setting": null,
+            "source": null,
+            "proof": null
+          },
+          "setting": null,
+          "source": null,
+          "proof": null
+        },
+        "dexonomy": {
+          "values": {
+            "graspSuccessRate": null,
+            "objectSuccessRate": null,
+            "categoryDiversityCoverage": null,
+            "penetrationDepth": null,
+            "diversity": null,
+            "setting": null,
+            "source": null,
+            "proof": null
+          },
+          "setting": null,
+          "source": null,
+          "proof": null
+        }
+      }
+    },
+    {
+      "id": "act",
+      "shortName": "ACT",
+      "title": "Learning Fine-Grained Bimanual Manipulation with Low-Cost Hardware",
+      "time": "2023.04",
+      "paper": {
+        "label": "Paper",
+        "url": "https://arxiv.org/abs/2304.13705"
+      },
+      "isOpenSource": false,
+      "ranks": {
+        "adroit": 7,
+        "dexart": 1
+      },
+      "benchmarks": {
+        "adroit": {
+          "values": {
+            "meanSucc": "78.95",
+            "pen": "85",
+            "door": "44.7",
+            "hammer": "96.7",
+            "relocate": "89.4",
+            "setting": "Optimized by K-UBM",
+            "source": "Reproduced by K-UBM",
+            "proof": null
+          },
+          "setting": "Optimized by K-UBM",
+          "source": "Reproduced by K-UBM",
+          "proof": null
+        },
+        "dexart": {
+          "values": {
+            "laptop": "92",
+            "faucet": null,
+            "toilet": "78.7",
+            "bucket": "83.3",
+            "meanSucc": "84.67",
+            "setting": "Optimized by K-UBM",
+            "source": "Reproduced by K-UBM",
+            "proof": null
+          },
+          "setting": "Optimized by K-UBM",
+          "source": "Reproduced by K-UBM",
+          "proof": null
+        },
+        "bidexhands": {
+          "values": {
+            "handover": null,
+            "doorCloseInward": null,
+            "doorCloseOutward": null,
+            "doorOpenInward": null,
+            "doorOpenOutward": null,
+            "scissors": null,
+            "swingCup": null,
+            "switch": null,
+            "kettle": null,
+            "liftUnderarm": null,
+            "pen": null,
+            "bottleCap": null,
+            "catchAbreast": null,
+            "catchOver2UnderArm": null,
+            "catchUnderarm": null,
+            "reOrientation": null,
+            "graspAndPlace": null,
+            "blockStack": null,
+            "pushBlock": null,
+            "twoCatchUnderarm": null,
+            "meanSucc": null,
+            "setting": null,
+            "source": null,
+            "proof": null
+          },
+          "setting": null,
+          "source": null,
+          "proof": null
+        },
+        "dexgraspnet": {
+          "values": {
+            "graspSuccessRate": null,
+            "penetration": null,
+            "diversity": null,
+            "successAtSix": null,
+            "setting": null,
+            "source": null,
+            "proof": null
+          },
+          "setting": null,
+          "source": null,
+          "proof": null
+        },
+        "dexgraspanything": {
+          "values": {
+            "graspSuccessRateAvg": null,
+            "penetrationAvg": null,
+            "setting": null,
+            "source": null,
+            "proof": null
+          },
+          "setting": null,
+          "source": null,
+          "proof": null
+        },
+        "dexonomy": {
+          "values": {
+            "graspSuccessRate": null,
+            "objectSuccessRate": null,
+            "categoryDiversityCoverage": null,
+            "penetrationDepth": null,
+            "diversity": null,
+            "setting": null,
+            "source": null,
+            "proof": null
+          },
+          "setting": null,
+          "source": null,
+          "proof": null
+        }
+      }
+    },
+    {
+      "id": "kodex",
+      "shortName": "KODex",
+      "title": "On the Utility of Koopman Operator Theory in Learning Dexterous Manipulation Skills",
+      "time": "2023.03",
+      "paper": {
+        "label": "Paper",
+        "url": "https://arxiv.org/abs/2303.13446"
+      },
+      "project": {
+        "label": "Code",
+        "url": "https://github.com/GT-STAR-Lab/KODex"
+      },
+      "isOpenSource": true,
+      "ranks": {
+        "adroit": 4,
+        "dexart": 21
+      },
+      "benchmarks": {
+        "adroit": {
+          "values": {
+            "meanSucc": "86.5",
+            "pen": "62",
+            "door": "96",
+            "hammer": "100",
+            "relocate": "88",
+            "setting": null,
+            "source": "Original",
+            "proof": null
+          },
+          "setting": null,
+          "source": "Original",
+          "proof": null
+        },
+        "dexart": {
+          "values": {
+            "laptop": "33.3",
+            "faucet": null,
+            "toilet": "3.4",
+            "bucket": "80",
+            "meanSucc": "38.9",
+            "setting": "Optimized by K-UBM",
+            "source": "Reproduced by K-UBM",
+            "proof": null
+          },
+          "setting": "Optimized by K-UBM",
+          "source": "Reproduced by K-UBM",
+          "proof": null
+        },
+        "bidexhands": {
+          "values": {
+            "handover": null,
+            "doorCloseInward": null,
+            "doorCloseOutward": null,
+            "doorOpenInward": null,
+            "doorOpenOutward": null,
+            "scissors": null,
+            "swingCup": null,
+            "switch": null,
+            "kettle": null,
+            "liftUnderarm": null,
+            "pen": null,
+            "bottleCap": null,
+            "catchAbreast": null,
+            "catchOver2UnderArm": null,
+            "catchUnderarm": null,
+            "reOrientation": null,
+            "graspAndPlace": null,
+            "blockStack": null,
+            "pushBlock": null,
+            "twoCatchUnderarm": null,
+            "meanSucc": null,
+            "setting": null,
+            "source": null,
+            "proof": null
+          },
+          "setting": null,
+          "source": null,
+          "proof": null
+        },
+        "dexgraspnet": {
+          "values": {
+            "graspSuccessRate": null,
+            "penetration": null,
+            "diversity": null,
+            "successAtSix": null,
+            "setting": null,
+            "source": null,
+            "proof": null
+          },
+          "setting": null,
+          "source": null,
+          "proof": null
+        },
+        "dexgraspanything": {
+          "values": {
+            "graspSuccessRateAvg": null,
+            "penetrationAvg": null,
+            "setting": null,
+            "source": null,
+            "proof": null
+          },
+          "setting": null,
+          "source": null,
+          "proof": null
+        },
+        "dexonomy": {
+          "values": {
+            "graspSuccessRate": null,
+            "objectSuccessRate": null,
+            "categoryDiversityCoverage": null,
+            "penetrationDepth": null,
+            "diversity": null,
+            "setting": null,
+            "source": null,
+            "proof": null
+          },
+          "setting": null,
+          "source": null,
+          "proof": null
+        }
+      }
+    },
+    {
+      "id": "korol",
+      "shortName": "KOROL",
+      "title": "KOROL: Learning Visualizable Object Feature with Koopman Operator Rollout for Manipulation",
+      "time": "2024.07",
+      "paper": {
+        "label": "Paper",
+        "url": "https://arxiv.org/abs/2407.00548"
+      },
+      "project": {
+        "label": "Code",
+        "url": "https://github.com/hychen-naza/KOROL"
+      },
+      "isOpenSource": true,
+      "ranks": {
+        "adroit": 2,
+        "dexart": 6
+      },
+      "benchmarks": {
+        "adroit": {
+          "values": {
+            "meanSucc": "96.6",
+            "pen": "100",
+            "door": "99.9",
+            "hammer": "100",
+            "relocate": "86.4",
+            "setting": null,
+            "source": "Original",
+            "proof": null
+          },
+          "setting": null,
+          "source": "Original",
+          "proof": null
+        },
+        "dexart": {
+          "values": {
+            "laptop": "71.3",
+            "faucet": null,
+            "toilet": "53.1",
+            "bucket": "78.7",
+            "meanSucc": "67.7",
+            "setting": "Optimized by K-UBM",
+            "source": "Reproduced by K-UBM",
+            "proof": null
+          },
+          "setting": "Optimized by K-UBM",
+          "source": "Reproduced by K-UBM",
+          "proof": null
+        },
+        "bidexhands": {
+          "values": {
+            "handover": null,
+            "doorCloseInward": null,
+            "doorCloseOutward": null,
+            "doorOpenInward": null,
+            "doorOpenOutward": null,
+            "scissors": null,
+            "swingCup": null,
+            "switch": null,
+            "kettle": null,
+            "liftUnderarm": null,
+            "pen": null,
+            "bottleCap": null,
+            "catchAbreast": null,
+            "catchOver2UnderArm": null,
+            "catchUnderarm": null,
+            "reOrientation": null,
+            "graspAndPlace": null,
+            "blockStack": null,
+            "pushBlock": null,
+            "twoCatchUnderarm": null,
+            "meanSucc": null,
+            "setting": null,
+            "source": null,
+            "proof": null
+          },
+          "setting": null,
+          "source": null,
+          "proof": null
+        },
+        "dexgraspnet": {
+          "values": {
+            "graspSuccessRate": null,
+            "penetration": null,
+            "diversity": null,
+            "successAtSix": null,
+            "setting": null,
+            "source": null,
+            "proof": null
+          },
+          "setting": null,
+          "source": null,
+          "proof": null
+        },
+        "dexgraspanything": {
+          "values": {
+            "graspSuccessRateAvg": null,
+            "penetrationAvg": null,
+            "setting": null,
+            "source": null,
+            "proof": null
+          },
+          "setting": null,
+          "source": null,
+          "proof": null
+        },
+        "dexonomy": {
+          "values": {
+            "graspSuccessRate": null,
+            "objectSuccessRate": null,
+            "categoryDiversityCoverage": null,
+            "penetrationDepth": null,
+            "diversity": null,
+            "setting": null,
+            "source": null,
+            "proof": null
+          },
+          "setting": null,
+          "source": null,
+          "proof": null
+        }
+      }
+    },
+    {
+      "id": "k-ubm",
+      "shortName": "K-UBM",
+      "title": "Going with the Flow: Koopman Behavioral Models as Pseudo Planners for Visuo-Motor Dexterity",
+      "time": "2026.02",
+      "paper": {
+        "label": "Paper",
+        "url": "https://arxiv.org/abs/2602.07413"
+      },
+      "project": {
+        "label": "Code",
+        "url": "https://github.com/GT-STAR-Lab/K-UBM"
+      },
+      "isOpenSource": true,
+      "ranks": {
+        "adroit": 9,
+        "dexart": 4
+      },
+      "benchmarks": {
+        "adroit": {
+          "values": {
+            "meanSucc": "76.875",
+            "pen": "92.5",
+            "door": "57",
+            "hammer": "89",
+            "relocate": "69",
+            "setting": null,
+            "source": "Original",
+            "proof": null
+          },
+          "setting": null,
+          "source": "Original",
+          "proof": null
+        },
+        "dexart": {
+          "values": {
+            "laptop": "58",
+            "faucet": null,
+            "toilet": "76",
+            "bucket": "76.5",
+            "meanSucc": "70.17",
+            "setting": null,
+            "source": "Original",
+            "proof": null
+          },
+          "setting": null,
+          "source": "Original",
+          "proof": null
+        },
+        "bidexhands": {
+          "values": {
+            "handover": null,
+            "doorCloseInward": null,
+            "doorCloseOutward": null,
+            "doorOpenInward": null,
+            "doorOpenOutward": null,
+            "scissors": null,
+            "swingCup": null,
+            "switch": null,
+            "kettle": null,
+            "liftUnderarm": null,
+            "pen": null,
+            "bottleCap": null,
+            "catchAbreast": null,
+            "catchOver2UnderArm": null,
+            "catchUnderarm": null,
+            "reOrientation": null,
+            "graspAndPlace": null,
+            "blockStack": null,
+            "pushBlock": null,
+            "twoCatchUnderarm": null,
+            "meanSucc": null,
+            "setting": null,
+            "source": null,
+            "proof": null
+          },
+          "setting": null,
+          "source": null,
+          "proof": null
+        },
+        "dexgraspnet": {
+          "values": {
+            "graspSuccessRate": null,
+            "penetration": null,
+            "diversity": null,
+            "successAtSix": null,
+            "setting": null,
+            "source": null,
+            "proof": null
+          },
+          "setting": null,
+          "source": null,
+          "proof": null
+        },
+        "dexgraspanything": {
+          "values": {
+            "graspSuccessRateAvg": null,
+            "penetrationAvg": null,
+            "setting": null,
+            "source": null,
+            "proof": null
+          },
+          "setting": null,
+          "source": null,
+          "proof": null
+        },
+        "dexonomy": {
+          "values": {
+            "graspSuccessRate": null,
+            "objectSuccessRate": null,
+            "categoryDiversityCoverage": null,
+            "penetrationDepth": null,
+            "diversity": null,
+            "setting": null,
+            "source": null,
+            "proof": null
+          },
+          "setting": null,
+          "source": null,
+          "proof": null
+        }
+      }
+    },
+    {
+      "id": "dexonomy",
+      "shortName": "Dexonomy",
+      "title": "Dexonomy: Synthesizing All Dexterous Grasp Types in a Grasp Taxonomy",
+      "time": "2025.04",
+      "paper": {
+        "label": "Paper",
+        "url": "https://arxiv.org/abs/2504.18829"
+      },
+      "project": {
+        "label": "Code",
+        "url": "https://github.com/JYChen18/Dexonomy"
+      },
+      "isOpenSource": true,
+      "ranks": {
+        "dexonomy": 2
+      },
+      "benchmarks": {
+        "adroit": {
+          "values": {
+            "meanSucc": null,
+            "pen": null,
+            "door": null,
+            "hammer": null,
+            "relocate": null,
+            "setting": null,
+            "source": null,
+            "proof": null
+          },
+          "setting": null,
+          "source": null,
+          "proof": null
+        },
+        "dexart": {
+          "values": {
+            "laptop": null,
+            "faucet": null,
+            "toilet": null,
+            "bucket": null,
+            "meanSucc": null,
+            "setting": null,
+            "source": null,
+            "proof": null
+          },
+          "setting": null,
+          "source": null,
+          "proof": null
+        },
+        "bidexhands": {
+          "values": {
+            "handover": null,
+            "doorCloseInward": null,
+            "doorCloseOutward": null,
+            "doorOpenInward": null,
+            "doorOpenOutward": null,
+            "scissors": null,
+            "swingCup": null,
+            "switch": null,
+            "kettle": null,
+            "liftUnderarm": null,
+            "pen": null,
+            "bottleCap": null,
+            "catchAbreast": null,
+            "catchOver2UnderArm": null,
+            "catchUnderarm": null,
+            "reOrientation": null,
+            "graspAndPlace": null,
+            "blockStack": null,
+            "pushBlock": null,
+            "twoCatchUnderarm": null,
+            "meanSucc": null,
+            "setting": null,
+            "source": null,
+            "proof": null
+          },
+          "setting": null,
+          "source": null,
+          "proof": null
+        },
+        "dexgraspnet": {
+          "values": {
+            "graspSuccessRate": null,
+            "penetration": null,
+            "diversity": null,
+            "successAtSix": null,
+            "setting": null,
+            "source": null,
+            "proof": null
+          },
+          "setting": null,
+          "source": null,
+          "proof": null
+        },
+        "dexgraspanything": {
+          "values": {
+            "graspSuccessRateAvg": null,
+            "penetrationAvg": null,
+            "setting": null,
+            "source": null,
+            "proof": null
+          },
+          "setting": null,
+          "source": null,
+          "proof": null
+        },
+        "dexonomy": {
+          "values": {
+            "graspSuccessRate": "63.9",
+            "objectSuccessRate": "91.3",
+            "categoryDiversityCoverage": "13.9",
+            "penetrationDepth": "8.6",
+            "diversity": "25.7",
+            "setting": "with classifier",
+            "source": "Reproduced by KPGrasp",
+            "proof": null
+          },
+          "setting": "with classifier",
+          "source": "Reproduced by KPGrasp",
+          "proof": null
+        }
+      }
+    },
+    {
+      "id": "kpgrasp",
+      "shortName": "KPGrasp",
+      "title": "KPGrasp: Scalable Keypoint Flow Matching for Dexterous Grasp Generation",
+      "time": "2026.06",
+      "paper": {
+        "label": "Paper",
+        "url": "https://arxiv.org/abs/2606.09314"
+      },
+      "isOpenSource": false,
+      "ranks": {
+        "dexgraspanything": 1,
+        "dexonomy": 1
+      },
+      "benchmarks": {
+        "adroit": {
+          "values": {
+            "meanSucc": null,
+            "pen": null,
+            "door": null,
+            "hammer": null,
+            "relocate": null,
+            "setting": null,
+            "source": null,
+            "proof": null
+          },
+          "setting": null,
+          "source": null,
+          "proof": null
+        },
+        "dexart": {
+          "values": {
+            "laptop": null,
+            "faucet": null,
+            "toilet": null,
+            "bucket": null,
+            "meanSucc": null,
+            "setting": null,
+            "source": null,
+            "proof": null
+          },
+          "setting": null,
+          "source": null,
+          "proof": null
+        },
+        "bidexhands": {
+          "values": {
+            "handover": null,
+            "doorCloseInward": null,
+            "doorCloseOutward": null,
+            "doorOpenInward": null,
+            "doorOpenOutward": null,
+            "scissors": null,
+            "swingCup": null,
+            "switch": null,
+            "kettle": null,
+            "liftUnderarm": null,
+            "pen": null,
+            "bottleCap": null,
+            "catchAbreast": null,
+            "catchOver2UnderArm": null,
+            "catchUnderarm": null,
+            "reOrientation": null,
+            "graspAndPlace": null,
+            "blockStack": null,
+            "pushBlock": null,
+            "twoCatchUnderarm": null,
+            "meanSucc": null,
+            "setting": null,
+            "source": null,
+            "proof": null
+          },
+          "setting": null,
+          "source": null,
+          "proof": null
+        },
+        "dexgraspnet": {
+          "values": {
+            "graspSuccessRate": null,
+            "penetration": null,
+            "diversity": null,
+            "successAtSix": null,
+            "setting": null,
+            "source": null,
+            "proof": null
+          },
+          "setting": null,
+          "source": null,
+          "proof": null
+        },
+        "dexgraspanything": {
+          "values": {
+            "graspSuccessRateAvg": "63.8",
+            "penetrationAvg": "12.9",
+            "setting": null,
+            "source": "Original",
+            "proof": null
+          },
+          "setting": null,
+          "source": "Original",
+          "proof": null
+        },
+        "dexonomy": {
+          "values": {
+            "graspSuccessRate": "76.3",
+            "objectSuccessRate": "97.3",
+            "categoryDiversityCoverage": "5.6",
+            "penetrationDepth": "2.4",
+            "diversity": "23.3",
+            "setting": null,
+            "source": "Original",
+            "proof": null
+          },
+          "setting": null,
+          "source": "Original",
+          "proof": null
+        }
+      }
+    },
+    {
+      "id": "kan-we-flow",
+      "shortName": "KAN-We-Flow",
+      "title": "KAN We Flow? Advancing Robotic Manipulation with 3D Flow Matching via KAN & RWKV",
+      "time": "2026.02",
+      "paper": {
+        "label": "Paper",
+        "url": "https://arxiv.org/abs/2602.01115"
+      },
+      "isOpenSource": false,
+      "ranks": {
+        "adroit": 5,
+        "dexart": 8
+      },
+      "benchmarks": {
+        "adroit": {
+          "values": {
+            "meanSucc": "83.67",
+            "pen": "68",
+            "door": "83",
+            "hammer": "100",
+            "relocate": null,
+            "setting": null,
+            "source": "Original",
+            "proof": null
+          },
+          "setting": null,
+          "source": "Original",
+          "proof": null
+        },
+        "dexart": {
+          "values": {
+            "laptop": "85",
+            "faucet": "42.5",
+            "toilet": "82",
+            "bucket": "35",
+            "meanSucc": "61.125",
+            "setting": null,
+            "source": "Original",
+            "proof": null
+          },
+          "setting": null,
+          "source": "Original",
+          "proof": null
+        },
+        "bidexhands": {
+          "values": {
+            "handover": null,
+            "doorCloseInward": null,
+            "doorCloseOutward": null,
+            "doorOpenInward": null,
+            "doorOpenOutward": null,
+            "scissors": null,
+            "swingCup": null,
+            "switch": null,
+            "kettle": null,
+            "liftUnderarm": null,
+            "pen": null,
+            "bottleCap": null,
+            "catchAbreast": null,
+            "catchOver2UnderArm": null,
+            "catchUnderarm": null,
+            "reOrientation": null,
+            "graspAndPlace": null,
+            "blockStack": null,
+            "pushBlock": null,
+            "twoCatchUnderarm": null,
+            "meanSucc": null,
+            "setting": null,
+            "source": null,
+            "proof": null
+          },
+          "setting": null,
+          "source": null,
+          "proof": null
+        },
+        "dexgraspnet": {
+          "values": {
+            "graspSuccessRate": null,
+            "penetration": null,
+            "diversity": null,
+            "successAtSix": null,
+            "setting": null,
+            "source": null,
+            "proof": null
+          },
+          "setting": null,
+          "source": null,
+          "proof": null
+        },
+        "dexgraspanything": {
+          "values": {
+            "graspSuccessRateAvg": null,
+            "penetrationAvg": null,
+            "setting": null,
+            "source": null,
+            "proof": null
+          },
+          "setting": null,
+          "source": null,
+          "proof": null
+        },
+        "dexonomy": {
+          "values": {
+            "graspSuccessRate": null,
+            "objectSuccessRate": null,
+            "categoryDiversityCoverage": null,
+            "penetrationDepth": null,
+            "diversity": null,
+            "setting": null,
+            "source": null,
+            "proof": null
+          },
+          "setting": null,
+          "source": null,
+          "proof": null
+        }
+      }
+    },
+    {
+      "id": "x-dp3",
+      "shortName": "X-DP3",
+      "title": "X-Imitator: Spatial-Aware Imitation Learning via Bidirectional Action-Pose Interaction",
+      "time": "2026.05",
+      "paper": {
+        "label": "Paper",
+        "url": "https://arxiv.org/abs/2605.12162"
+      },
+      "isOpenSource": false,
+      "ranks": {
+        "adroit": 16,
+        "dexart": 10
+      },
+      "benchmarks": {
+        "adroit": {
+          "values": {
+            "meanSucc": "71.17",
+            "pen": "45.3",
+            "door": "68.5",
+            "hammer": "99.7",
+            "relocate": null,
+            "setting": null,
+            "source": "Original",
+            "proof": null
+          },
+          "setting": null,
+          "source": "Original",
+          "proof": null
+        },
+        "dexart": {
+          "values": {
+            "laptop": "74.7",
+            "faucet": "40.6",
+            "toilet": "64.4",
+            "bucket": "58.2",
+            "meanSucc": "59.475",
+            "setting": null,
+            "source": "Original",
+            "proof": null
+          },
+          "setting": null,
+          "source": "Original",
+          "proof": null
+        },
+        "bidexhands": {
+          "values": {
+            "handover": null,
+            "doorCloseInward": null,
+            "doorCloseOutward": null,
+            "doorOpenInward": null,
+            "doorOpenOutward": null,
+            "scissors": null,
+            "swingCup": null,
+            "switch": null,
+            "kettle": null,
+            "liftUnderarm": null,
+            "pen": null,
+            "bottleCap": null,
+            "catchAbreast": null,
+            "catchOver2UnderArm": null,
+            "catchUnderarm": null,
+            "reOrientation": null,
+            "graspAndPlace": null,
+            "blockStack": null,
+            "pushBlock": null,
+            "twoCatchUnderarm": null,
+            "meanSucc": null,
+            "setting": null,
+            "source": null,
+            "proof": null
+          },
+          "setting": null,
+          "source": null,
+          "proof": null
+        },
+        "dexgraspnet": {
+          "values": {
+            "graspSuccessRate": null,
+            "penetration": null,
+            "diversity": null,
+            "successAtSix": null,
+            "setting": null,
+            "source": null,
+            "proof": null
+          },
+          "setting": null,
+          "source": null,
+          "proof": null
+        },
+        "dexgraspanything": {
+          "values": {
+            "graspSuccessRateAvg": null,
+            "penetrationAvg": null,
+            "setting": null,
+            "source": null,
+            "proof": null
+          },
+          "setting": null,
+          "source": null,
+          "proof": null
+        },
+        "dexonomy": {
+          "values": {
+            "graspSuccessRate": null,
+            "objectSuccessRate": null,
+            "categoryDiversityCoverage": null,
+            "penetrationDepth": null,
+            "diversity": null,
+            "setting": null,
+            "source": null,
+            "proof": null
+          },
+          "setting": null,
+          "source": null,
+          "proof": null
+        }
+      }
+    },
+    {
+      "id": "mp1",
+      "shortName": "MP1",
+      "title": "MP1: MeanFlow Tames Policy Learning in 1-step for Robotic Manipulation",
+      "time": "2025.07",
+      "paper": {
+        "label": "Paper",
+        "url": "https://arxiv.org/abs/2507.10543"
+      },
+      "project": {
+        "label": "Code",
+        "url": "https://github.com/LogSSim/MP1"
+      },
+      "isOpenSource": true,
+      "ranks": {
+        "adroit": 10
+      },
+      "benchmarks": {
+        "adroit": {
+          "values": {
+            "meanSucc": "75.67",
+            "pen": "58",
+            "door": "69",
+            "hammer": "100",
+            "relocate": null,
+            "setting": null,
+            "source": "Reproduced by KAN-We-Flow",
+            "proof": null
+          },
+          "setting": null,
+          "source": "Reproduced by KAN-We-Flow",
+          "proof": null
+        },
+        "dexart": {
+          "values": {
+            "laptop": null,
+            "faucet": null,
+            "toilet": null,
+            "bucket": null,
+            "meanSucc": null,
+            "setting": null,
+            "source": null,
+            "proof": null
+          },
+          "setting": null,
+          "source": null,
+          "proof": null
+        },
+        "bidexhands": {
+          "values": {
+            "handover": null,
+            "doorCloseInward": null,
+            "doorCloseOutward": null,
+            "doorOpenInward": null,
+            "doorOpenOutward": null,
+            "scissors": null,
+            "swingCup": null,
+            "switch": null,
+            "kettle": null,
+            "liftUnderarm": null,
+            "pen": null,
+            "bottleCap": null,
+            "catchAbreast": null,
+            "catchOver2UnderArm": null,
+            "catchUnderarm": null,
+            "reOrientation": null,
+            "graspAndPlace": null,
+            "blockStack": null,
+            "pushBlock": null,
+            "twoCatchUnderarm": null,
+            "meanSucc": null,
+            "setting": null,
+            "source": null,
+            "proof": null
+          },
+          "setting": null,
+          "source": null,
+          "proof": null
+        },
+        "dexgraspnet": {
+          "values": {
+            "graspSuccessRate": null,
+            "penetration": null,
+            "diversity": null,
+            "successAtSix": null,
+            "setting": null,
+            "source": null,
+            "proof": null
+          },
+          "setting": null,
+          "source": null,
+          "proof": null
+        },
+        "dexgraspanything": {
+          "values": {
+            "graspSuccessRateAvg": null,
+            "penetrationAvg": null,
+            "setting": null,
+            "source": null,
+            "proof": null
+          },
+          "setting": null,
+          "source": null,
+          "proof": null
+        },
+        "dexonomy": {
+          "values": {
+            "graspSuccessRate": null,
+            "objectSuccessRate": null,
+            "categoryDiversityCoverage": null,
+            "penetrationDepth": null,
+            "diversity": null,
+            "setting": null,
+            "source": null,
+            "proof": null
+          },
+          "setting": null,
+          "source": null,
+          "proof": null
+        }
+      }
+    },
+    {
+      "id": "adaflow",
+      "shortName": "AdaFlow",
+      "title": "AdaFlow: Imitation Learning with Variance-Adaptive Flow-Based Policies",
+      "time": "2024.02",
+      "paper": {
+        "label": "Paper",
+        "url": "https://arxiv.org/abs/2402.04292"
+      },
+      "isOpenSource": false,
+      "ranks": {
+        "adroit": 25
+      },
+      "benchmarks": {
+        "adroit": {
+          "values": {
+            "meanSucc": "30",
+            "pen": "18",
+            "door": "27",
+            "hammer": "45",
+            "relocate": null,
+            "setting": null,
+            "source": "Reproduced by KAN-We-Flow",
+            "proof": null
+          },
+          "setting": null,
+          "source": "Reproduced by KAN-We-Flow",
+          "proof": null
+        },
+        "dexart": {
+          "values": {
+            "laptop": null,
+            "faucet": null,
+            "toilet": null,
+            "bucket": null,
+            "meanSucc": null,
+            "setting": null,
+            "source": null,
+            "proof": null
+          },
+          "setting": null,
+          "source": null,
+          "proof": null
+        },
+        "bidexhands": {
+          "values": {
+            "handover": null,
+            "doorCloseInward": null,
+            "doorCloseOutward": null,
+            "doorOpenInward": null,
+            "doorOpenOutward": null,
+            "scissors": null,
+            "swingCup": null,
+            "switch": null,
+            "kettle": null,
+            "liftUnderarm": null,
+            "pen": null,
+            "bottleCap": null,
+            "catchAbreast": null,
+            "catchOver2UnderArm": null,
+            "catchUnderarm": null,
+            "reOrientation": null,
+            "graspAndPlace": null,
+            "blockStack": null,
+            "pushBlock": null,
+            "twoCatchUnderarm": null,
+            "meanSucc": null,
+            "setting": null,
+            "source": null,
+            "proof": null
+          },
+          "setting": null,
+          "source": null,
+          "proof": null
+        },
+        "dexgraspnet": {
+          "values": {
+            "graspSuccessRate": null,
+            "penetration": null,
+            "diversity": null,
+            "successAtSix": null,
+            "setting": null,
+            "source": null,
+            "proof": null
+          },
+          "setting": null,
+          "source": null,
+          "proof": null
+        },
+        "dexgraspanything": {
+          "values": {
+            "graspSuccessRateAvg": null,
+            "penetrationAvg": null,
+            "setting": null,
+            "source": null,
+            "proof": null
+          },
+          "setting": null,
+          "source": null,
+          "proof": null
+        },
+        "dexonomy": {
+          "values": {
+            "graspSuccessRate": null,
+            "objectSuccessRate": null,
+            "categoryDiversityCoverage": null,
+            "penetrationDepth": null,
+            "diversity": null,
+            "setting": null,
+            "source": null,
+            "proof": null
+          },
+          "setting": null,
+          "source": null,
+          "proof": null
         }
       }
     }
   ],
   "updates": [
+    {
+      "date": "2026-07-14",
+      "text": "🚀 Major update: New Leaderboards: DexGrasp Anything and Dexonomy leaderboards added, with available results for existing models included. New models: Add ACT, KODex, KOROL, K-UBM, KAN-We-Flow, and X-DP3 to Adroit and DexArt; Add MP1 and AdaFlow to Adroit; Add the Dexonomy model to Dexonomy; Add KPGrasp to DexGrasp Anything and Dexonomy. Results on the existing leaderboards for previously tracked models are unchanged."
+    },
     {
       "date": "2026-05-24",
       "text": "Added the DexGraspNet leaderboard and updated the associated model results. You can now search Dex manipulation models by name."

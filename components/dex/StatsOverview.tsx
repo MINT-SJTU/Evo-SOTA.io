@@ -107,7 +107,7 @@ export default function StatsOverview({
 
         <div className="mt-8">
           <h3 className="text-lg font-semibold text-slate-700 mb-4 text-center">🏆 {t.dex.stats.currentLeaders}</h3>
-          <div className="grid sm:grid-cols-2 xl:grid-cols-4 gap-4">
+          <div className="grid sm:grid-cols-2 xl:grid-cols-3 gap-4">
             {leaderCards.map((item) => (
               <div
                 key={item.name}

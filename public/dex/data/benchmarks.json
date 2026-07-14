@@ -18,5 +18,15 @@
     "id": "dexgraspnet",
     "name": "DexGraspNet",
     "href": "/dex/benchmarks/dexgraspnet"
+  },
+  {
+    "id": "dexgraspanything",
+    "name": "DexGrasp Anything",
+    "href": "/dex/benchmarks/dexgraspanything"
+  },
+  {
+    "id": "dexonomy",
+    "name": "Dexonomy",
+    "href": "/dex/benchmarks/dexonomy"
   }
 ]
