@@ -61,7 +61,7 @@ export default function BenchmarkCards({
       <div className="max-w-6xl mx-auto">
         <h2 className="text-2xl font-bold text-slate-800 mb-8 text-center">{t.dex.benchmarkCards.title}</h2>
 
-        <div className="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-4 gap-5">
+        <div className="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-3 gap-5">
           {benchmarks.map((benchmark) => {
             const top = getTopMethods(benchmark, methods);
             const modelCount = countModels(benchmark, methods);

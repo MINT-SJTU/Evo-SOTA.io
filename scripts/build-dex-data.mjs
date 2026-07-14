@@ -59,7 +59,7 @@ const extractUrl = (value) => {
 const labelFromUrl = (url) => {
     if (!url) return "Link";
     if (url.includes("arxiv")) return "Paper";
-    if (url.includes("github")) return "Code";
+    if (url.toLowerCase().startsWith("https://github.com/") || url.toLowerCase().startsWith("http://github.com/")) return "Code";
     if (url.includes("google.com/drive")) return "Assets";
     return "Website";
 };
@@ -151,10 +151,19 @@ const parseBenchmarkLinks = () => {
         adroit: ["F2", "J2"],
         dexart: ["N2", "R2"],
         bidexhands: ["V2", "AH2"],
-        dexgraspnet: ["AT2", "AX2"]
+        dexgraspnet: ["AT2", "AX2"],
+        dexgraspanything: ["BA2", "BC2"],
+        dexonomy: ["BF2", "BJ2"]
     };
 
-    const out = { adroit: [], dexart: [], bidexhands: [], dexgraspnet: [] };
+    const out = {
+        adroit: [],
+        dexart: [],
+        bidexhands: [],
+        dexgraspnet: [],
+        dexgraspanything: [],
+        dexonomy: []
+    };
     Object.entries(mapping).forEach(([key, cells]) => {
         cells.forEach((addr) => {
             const cell = getCell(addr);
@@ -245,6 +254,35 @@ const benchmarks = [
             { id: "source", label: "Source", col: "AY", kind: "meta" },
             { id: "proof", label: "Proof", col: "AZ", kind: "meta" }
         ]
+    },
+    {
+        id: "dexgraspanything",
+        name: "DexGrasp Anything",
+        description: "A physics-aware benchmark for universal dexterous grasp generation across diverse objects.",
+        meanColumnId: "graspSuccessRateAvg",
+        columns: [
+            { id: "graspSuccessRateAvg", label: "GSR. (avg)", col: "BA", kind: "score" },
+            { id: "penetrationAvg", label: "Pen. (avg)", col: "BB", kind: "score" },
+            { id: "setting", label: "Setting", col: "BC", kind: "meta" },
+            { id: "source", label: "Source", col: "BD", kind: "meta" },
+            { id: "proof", label: "Proof", col: "BE", kind: "meta" }
+        ]
+    },
+    {
+        id: "dexonomy",
+        name: "Dexonomy",
+        description: "A grasp-taxonomy benchmark evaluating the quality and coverage of diverse dexterous grasp types.",
+        meanColumnId: "graspSuccessRate",
+        columns: [
+            { id: "graspSuccessRate", label: "GSR", col: "BF", kind: "score" },
+            { id: "objectSuccessRate", label: "OSR", col: "BG", kind: "score" },
+            { id: "categoryDiversityCoverage", label: "CDC", col: "BH", kind: "score" },
+            { id: "penetrationDepth", label: "PD", col: "BI", kind: "score" },
+            { id: "diversity", label: "Div.", col: "BJ", kind: "score" },
+            { id: "setting", label: "Setting", col: "BK", kind: "meta" },
+            { id: "source", label: "Source", col: "BL", kind: "meta" },
+            { id: "proof", label: "Proof", col: "BM", kind: "meta" }
+        ]
     }
 ];
 
@@ -295,6 +333,10 @@ for (let row = 4; row <= 200; row += 1) {
 }
 
 const updates = [
+    {
+        date: "2026-07-14",
+        text: "🚀 Major update: New Leaderboards: DexGrasp Anything and Dexonomy leaderboards added, with available results for existing models included. New models: Add ACT, KODex, KOROL, K-UBM, KAN-We-Flow, and X-DP3 to Adroit and DexArt; Add MP1 and AdaFlow to Adroit; Add the Dexonomy model to Dexonomy; Add KPGrasp to DexGrasp Anything and Dexonomy. Results on the existing leaderboards for previously tracked models are unchanged."
+    },
     {
         date: "2026-05-24",
         text: "Added the DexGraspNet leaderboard and updated the associated model results. You can now search Dex manipulation models by name."

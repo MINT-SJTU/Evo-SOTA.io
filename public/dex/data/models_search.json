@@ -9,7 +9,7 @@
       "url": "https://arxiv.org/pdf/2509.01819"
     },
     "project": {
-      "label": "Code",
+      "label": "Website",
       "url": "https://maniflow-policy.github.io/"
     },
     "isOpenSource": true,
@@ -17,13 +17,13 @@
       "adroit": {
         "name": "Adroit",
         "score": 78.6,
-        "rank": 4,
+        "rank": 8,
         "source": "Original"
       },
       "dexart": {
         "name": "DexArt",
         "score": 63.2,
-        "rank": 4,
+        "rank": 7,
         "source": "Original"
       }
     }
@@ -42,7 +42,7 @@
       "adroit": {
         "name": "Adroit",
         "score": 74.8,
-        "rank": 6,
+        "rank": 12,
         "source": "Original"
       }
     }
@@ -57,7 +57,7 @@
       "url": "https://arxiv.org/pdf/2403.03954"
     },
     "project": {
-      "label": "Code",
+      "label": "Website",
       "url": "https://3d-diffusion-policy.github.io/"
     },
     "isOpenSource": true,
@@ -65,13 +65,13 @@
       "adroit": {
         "name": "Adroit",
         "score": 68.3,
-        "rank": 11,
+        "rank": 18,
         "source": "Original"
       },
       "dexart": {
         "name": "DexArt",
         "score": 68.5,
-        "rank": 3,
+        "rank": 5,
         "source": "Original"
       },
       "bidexhands": {
@@ -92,7 +92,7 @@
       "url": "https://arxiv.org/abs/2411.18562"
     },
     "project": {
-      "label": "Code",
+      "label": "Website",
       "url": "https://dexdiffuser.github.io/"
     },
     "isOpenSource": true,
@@ -100,7 +100,7 @@
       "adroit": {
         "name": "Adroit",
         "score": 92.5,
-        "rank": 2,
+        "rank": 3,
         "source": "Original"
       }
     }
@@ -123,13 +123,13 @@
       "adroit": {
         "name": "Adroit",
         "score": 62.3,
-        "rank": 12,
+        "rank": 19,
         "source": "Reproduced by DP3"
       },
       "dexart": {
         "name": "DexArt",
         "score": 49,
-        "rank": 14,
+        "rank": 19,
         "source": "Reproduced by DP3"
       },
       "bidexhands": {
@@ -150,7 +150,7 @@
       "url": "https://arxiv.org/pdf/2409.01083"
     },
     "project": {
-      "label": "Code",
+      "label": "Website",
       "url": "https://hri-eu.github.io/flow-matching-policy/"
     },
     "isOpenSource": true,
@@ -158,13 +158,13 @@
       "adroit": {
         "name": "Adroit",
         "score": 39,
-        "rank": 17,
+        "rank": 24,
         "source": "Reproduced by ManiFlow"
       },
       "dexart": {
         "name": "DexArt",
         "score": 53.3,
-        "rank": 12,
+        "rank": 17,
         "source": "Reproduced by ManiFlow"
       }
     }
@@ -179,7 +179,7 @@
       "url": "https://arxiv.org/pdf/2506.01583"
     },
     "project": {
-      "label": "Code",
+      "label": "Website",
       "url": "https://freq-policy.github.io/"
     },
     "isOpenSource": true,
@@ -187,13 +187,13 @@
       "adroit": {
         "name": "Adroit",
         "score": 74.7,
-        "rank": 7,
+        "rank": 13,
         "source": "Original"
       },
       "dexart": {
         "name": "DexArt",
         "score": 54.3,
-        "rank": 9,
+        "rank": 14,
         "source": "Original"
       }
     }
@@ -208,7 +208,7 @@
       "url": "https://arxiv.org/pdf/2507.06710"
     },
     "project": {
-      "label": "Code",
+      "label": "Website",
       "url": "https://zhenyangliu.github.io/DP4/"
     },
     "isOpenSource": true,
@@ -216,7 +216,7 @@
       "dexart": {
         "name": "DexArt",
         "score": 82.5,
-        "rank": 1,
+        "rank": 2,
         "source": "Original"
       }
     }
@@ -231,7 +231,7 @@
       "url": "https://arxiv.org/pdf/2506.17561"
     },
     "project": {
-      "label": "Code",
+      "label": "Website",
       "url": "https://nus-lins-lab.github.io/vlaos/"
     },
     "isOpenSource": true,
@@ -239,7 +239,7 @@
       "dexart": {
         "name": "DexArt",
         "score": 49,
-        "rank": 15,
+        "rank": 20,
         "source": "Original"
       }
     }
@@ -258,13 +258,13 @@
       "adroit": {
         "name": "Adroit",
         "score": 80.7,
-        "rank": 3,
+        "rank": 6,
         "source": "Original"
       },
       "dexart": {
         "name": "DexArt",
         "score": 60,
-        "rank": 5,
+        "rank": 9,
         "source": "Original"
       }
     }
@@ -287,13 +287,13 @@
       "adroit": {
         "name": "Adroit",
         "score": 70.3,
-        "rank": 10,
+        "rank": 17,
         "source": "Reproduced by BridgePolicy"
       },
       "dexart": {
         "name": "DexArt",
         "score": 54,
-        "rank": 10,
+        "rank": 15,
         "source": "Reproduced by BridgePolicy"
       }
     }
@@ -308,7 +308,7 @@
       "url": "https://arxiv.org/pdf/2412.09265"
     },
     "project": {
-      "label": "Code",
+      "label": "Website",
       "url": "https://sdm-policy.github.io/"
     },
     "isOpenSource": true,
@@ -316,13 +316,13 @@
       "adroit": {
         "name": "Adroit",
         "score": 74,
-        "rank": 8,
+        "rank": 14,
         "source": "Original"
       },
       "dexart": {
         "name": "DexArt",
         "score": 56,
-        "rank": 7,
+        "rank": 12,
         "source": "Original"
       }
     }
@@ -337,7 +337,7 @@
       "url": "https://arxiv.org/pdf/2406.01586"
     },
     "project": {
-      "label": "Code",
+      "label": "Website",
       "url": "https://manicm-fast.github.io/"
     },
     "isOpenSource": true,
@@ -345,13 +345,13 @@
       "adroit": {
         "name": "Adroit",
         "score": 72.3,
-        "rank": 9,
+        "rank": 15,
         "source": "Reproduced by SDM"
       },
       "dexart": {
         "name": "DexArt",
         "score": 56.8,
-        "rank": 6,
+        "rank": 11,
         "source": "Reproduced by SDM"
       }
     }
@@ -366,7 +366,7 @@
       "url": "https://arxiv.org/pdf/2409.07163"
     },
     "project": {
-      "label": "Code",
+      "label": "Website",
       "url": "https://sagecao1125.github.io/mamba_policy/"
     },
     "isOpenSource": true,
@@ -374,13 +374,13 @@
       "adroit": {
         "name": "Adroit",
         "score": 52.3,
-        "rank": 14,
+        "rank": 21,
         "source": "Original"
       },
       "dexart": {
         "name": "DexArt",
         "score": 54,
-        "rank": 11,
+        "rank": 16,
         "source": "Original"
       }
     }
@@ -460,7 +460,7 @@
       "url": "https://arxiv.org/abs/2502.12724"
     },
     "project": {
-      "label": "Code",
+      "label": "Website",
       "url": "https://rnr-dp.github.io/"
     },
     "isOpenSource": true,
@@ -468,7 +468,7 @@
       "adroit": {
         "name": "Adroit",
         "score": 57.4,
-        "rank": 13,
+        "rank": 20,
         "source": "Original"
       }
     }
@@ -502,7 +502,7 @@
       "url": "https://arxiv.org/abs/2104.03304"
     },
     "project": {
-      "label": "Code",
+      "label": "Website",
       "url": "https://hwjiang1510.github.io/GraspTTA/"
     },
     "isOpenSource": true,
@@ -512,6 +512,12 @@
         "score": 24.5,
         "rank": 12,
         "source": "Reported by EFF-Grasp"
+      },
+      "dexgraspanything": {
+        "name": "DexGrasp Anything",
+        "score": 19.5,
+        "rank": 6,
+        "source": "Reproduced by KPGrasp"
       }
     }
   },
@@ -525,7 +531,7 @@
       "url": "https://arxiv.org/abs/2303.00938"
     },
     "project": {
-      "label": "Code",
+      "label": "Website",
       "url": "https://pku-epic.github.io/UniDexGrasp/"
     },
     "isOpenSource": true,
@@ -535,6 +541,18 @@
         "score": 70.1,
         "rank": 9,
         "source": "Reported by EFF-Grasp"
+      },
+      "dexgraspanything": {
+        "name": "DexGrasp Anything",
+        "score": 25.4,
+        "rank": 5,
+        "source": "Reproduced by KPGrasp"
+      },
+      "dexonomy": {
+        "name": "Dexonomy",
+        "score": 24.5,
+        "rank": 3,
+        "source": "Reproduced by KPGrasp"
       }
     }
   },
@@ -548,7 +566,7 @@
       "url": "https://arxiv.org/abs/2301.06015"
     },
     "project": {
-      "label": "Code",
+      "label": "Website",
       "url": "https://scenediffuser.github.io/"
     },
     "isOpenSource": true,
@@ -558,6 +576,12 @@
         "score": 66.9,
         "rank": 11,
         "source": "Reported by EFF-Grasp"
+      },
+      "dexgraspanything": {
+        "name": "DexGrasp Anything",
+        "score": 37.1,
+        "rank": 4,
+        "source": "Reproduced by KPGrasp"
       }
     }
   },
@@ -571,7 +595,7 @@
       "url": "https://arxiv.org/abs/2311.16917"
     },
     "project": {
-      "label": "Code",
+      "label": "Website",
       "url": "https://jiaxin-lu.github.io/ugg/"
     },
     "isOpenSource": true,
@@ -581,6 +605,12 @@
         "score": 79,
         "rank": 8,
         "source": "Reported by EFF-Grasp"
+      },
+      "dexgraspanything": {
+        "name": "DexGrasp Anything",
+        "score": 44.7,
+        "rank": 3,
+        "source": "Reproduced by KPGrasp"
       }
     }
   },
@@ -594,7 +624,7 @@
       "url": "https://arxiv.org/abs/2503.08257"
     },
     "project": {
-      "label": "Code",
+      "label": "Website",
       "url": "https://dexgraspanything.github.io/"
     },
     "isOpenSource": true,
@@ -604,6 +634,18 @@
         "score": 90.4,
         "rank": 3,
         "source": "Original"
+      },
+      "dexgraspanything": {
+        "name": "DexGrasp Anything",
+        "score": 58.5,
+        "rank": 2,
+        "source": "Reproduced by KPGrasp"
+      },
+      "dexonomy": {
+        "name": "Dexonomy",
+        "score": 21.8,
+        "rank": 4,
+        "source": "Reproduced by KPGrasp"
       }
     }
   },
@@ -659,7 +701,7 @@
       "url": "https://arxiv.org/abs/2402.02989"
     },
     "project": {
-      "label": "Code",
+      "label": "Website",
       "url": "https://yulihn.github.io/DexDiffuser_page/"
     },
     "isOpenSource": true,
@@ -701,7 +743,7 @@
       "url": "https://arxiv.org/abs/2412.02699"
     },
     "project": {
-      "label": "Code",
+      "label": "Website",
       "url": "https://dexhand.github.io/UniGraspTransformer/"
     },
     "isOpenSource": true,
@@ -724,7 +766,7 @@
       "url": "https://arxiv.org/abs/2509.22149"
     },
     "project": {
-      "label": "Code",
+      "label": "Website",
       "url": "https://beingbeyond.github.io/DemoGrasp/"
     },
     "isOpenSource": true,
@@ -751,13 +793,13 @@
       "adroit": {
         "name": "Adroit",
         "score": 75,
-        "rank": 5,
+        "rank": 11,
         "source": "Original"
       },
       "dexart": {
         "name": "DexArt",
         "score": 73,
-        "rank": 2,
+        "rank": 3,
         "source": "Original"
       }
     }
@@ -772,7 +814,7 @@
       "url": "https://arxiv.org/abs/2509.01819"
     },
     "project": {
-      "label": "Code",
+      "label": "Website",
       "url": "https://maniflow-policy.github.io/"
     },
     "isOpenSource": true,
@@ -780,13 +822,13 @@
       "adroit": {
         "name": "Adroit",
         "score": 45,
-        "rank": 16,
+        "rank": 23,
         "source": "Reproduced by SAT"
       },
       "dexart": {
         "name": "DexArt",
         "score": 53,
-        "rank": 13,
+        "rank": 18,
         "source": "Reproduced by SAT"
       }
     }
@@ -801,7 +843,7 @@
       "url": "https://arxiv.org/abs/2501.10105"
     },
     "project": {
-      "label": "Code",
+      "label": "Website",
       "url": "https://2toinf.github.io/UniAct/"
     },
     "isOpenSource": true,
@@ -809,14 +851,266 @@
       "adroit": {
         "name": "Adroit",
         "score": 49,
-        "rank": 15,
+        "rank": 22,
         "source": "Reproduced by SAT"
       },
       "dexart": {
         "name": "DexArt",
         "score": 55,
-        "rank": 8,
+        "rank": 13,
         "source": "Reproduced by SAT"
+      }
+    }
+  },
+  {
+    "id": "act",
+    "name": "ACT",
+    "title": "Learning Fine-Grained Bimanual Manipulation with Low-Cost Hardware",
+    "time": "2023.04",
+    "paper": {
+      "label": "Paper",
+      "url": "https://arxiv.org/abs/2304.13705"
+    },
+    "isOpenSource": false,
+    "benchmarks": {
+      "adroit": {
+        "name": "Adroit",
+        "score": 78.95,
+        "rank": 7,
+        "source": "Reproduced by K-UBM"
+      },
+      "dexart": {
+        "name": "DexArt",
+        "score": 84.67,
+        "rank": 1,
+        "source": "Reproduced by K-UBM"
+      }
+    }
+  },
+  {
+    "id": "kodex",
+    "name": "KODex",
+    "title": "On the Utility of Koopman Operator Theory in Learning Dexterous Manipulation Skills",
+    "time": "2023.03",
+    "paper": {
+      "label": "Paper",
+      "url": "https://arxiv.org/abs/2303.13446"
+    },
+    "project": {
+      "label": "Code",
+      "url": "https://github.com/GT-STAR-Lab/KODex"
+    },
+    "isOpenSource": true,
+    "benchmarks": {
+      "adroit": {
+        "name": "Adroit",
+        "score": 86.5,
+        "rank": 4,
+        "source": "Original"
+      },
+      "dexart": {
+        "name": "DexArt",
+        "score": 38.9,
+        "rank": 21,
+        "source": "Reproduced by K-UBM"
+      }
+    }
+  },
+  {
+    "id": "korol",
+    "name": "KOROL",
+    "title": "KOROL: Learning Visualizable Object Feature with Koopman Operator Rollout for Manipulation",
+    "time": "2024.07",
+    "paper": {
+      "label": "Paper",
+      "url": "https://arxiv.org/abs/2407.00548"
+    },
+    "project": {
+      "label": "Code",
+      "url": "https://github.com/hychen-naza/KOROL"
+    },
+    "isOpenSource": true,
+    "benchmarks": {
+      "adroit": {
+        "name": "Adroit",
+        "score": 96.6,
+        "rank": 2,
+        "source": "Original"
+      },
+      "dexart": {
+        "name": "DexArt",
+        "score": 67.7,
+        "rank": 6,
+        "source": "Reproduced by K-UBM"
+      }
+    }
+  },
+  {
+    "id": "k-ubm",
+    "name": "K-UBM",
+    "title": "Going with the Flow: Koopman Behavioral Models as Pseudo Planners for Visuo-Motor Dexterity",
+    "time": "2026.02",
+    "paper": {
+      "label": "Paper",
+      "url": "https://arxiv.org/abs/2602.07413"
+    },
+    "project": {
+      "label": "Code",
+      "url": "https://github.com/GT-STAR-Lab/K-UBM"
+    },
+    "isOpenSource": true,
+    "benchmarks": {
+      "adroit": {
+        "name": "Adroit",
+        "score": 76.875,
+        "rank": 9,
+        "source": "Original"
+      },
+      "dexart": {
+        "name": "DexArt",
+        "score": 70.17,
+        "rank": 4,
+        "source": "Original"
+      }
+    }
+  },
+  {
+    "id": "dexonomy",
+    "name": "Dexonomy",
+    "title": "Dexonomy: Synthesizing All Dexterous Grasp Types in a Grasp Taxonomy",
+    "time": "2025.04",
+    "paper": {
+      "label": "Paper",
+      "url": "https://arxiv.org/abs/2504.18829"
+    },
+    "project": {
+      "label": "Code",
+      "url": "https://github.com/JYChen18/Dexonomy"
+    },
+    "isOpenSource": true,
+    "benchmarks": {
+      "dexonomy": {
+        "name": "Dexonomy",
+        "score": 63.9,
+        "rank": 2,
+        "source": "Reproduced by KPGrasp"
+      }
+    }
+  },
+  {
+    "id": "kpgrasp",
+    "name": "KPGrasp",
+    "title": "KPGrasp: Scalable Keypoint Flow Matching for Dexterous Grasp Generation",
+    "time": "2026.06",
+    "paper": {
+      "label": "Paper",
+      "url": "https://arxiv.org/abs/2606.09314"
+    },
+    "isOpenSource": false,
+    "benchmarks": {
+      "dexgraspanything": {
+        "name": "DexGrasp Anything",
+        "score": 63.8,
+        "rank": 1,
+        "source": "Original"
+      },
+      "dexonomy": {
+        "name": "Dexonomy",
+        "score": 76.3,
+        "rank": 1,
+        "source": "Original"
+      }
+    }
+  },
+  {
+    "id": "kan-we-flow",
+    "name": "KAN-We-Flow",
+    "title": "KAN We Flow? Advancing Robotic Manipulation with 3D Flow Matching via KAN & RWKV",
+    "time": "2026.02",
+    "paper": {
+      "label": "Paper",
+      "url": "https://arxiv.org/abs/2602.01115"
+    },
+    "isOpenSource": false,
+    "benchmarks": {
+      "adroit": {
+        "name": "Adroit",
+        "score": 83.67,
+        "rank": 5,
+        "source": "Original"
+      },
+      "dexart": {
+        "name": "DexArt",
+        "score": 61.125,
+        "rank": 8,
+        "source": "Original"
+      }
+    }
+  },
+  {
+    "id": "x-dp3",
+    "name": "X-DP3",
+    "title": "X-Imitator: Spatial-Aware Imitation Learning via Bidirectional Action-Pose Interaction",
+    "time": "2026.05",
+    "paper": {
+      "label": "Paper",
+      "url": "https://arxiv.org/abs/2605.12162"
+    },
+    "isOpenSource": false,
+    "benchmarks": {
+      "adroit": {
+        "name": "Adroit",
+        "score": 71.17,
+        "rank": 16,
+        "source": "Original"
+      },
+      "dexart": {
+        "name": "DexArt",
+        "score": 59.475,
+        "rank": 10,
+        "source": "Original"
+      }
+    }
+  },
+  {
+    "id": "mp1",
+    "name": "MP1",
+    "title": "MP1: MeanFlow Tames Policy Learning in 1-step for Robotic Manipulation",
+    "time": "2025.07",
+    "paper": {
+      "label": "Paper",
+      "url": "https://arxiv.org/abs/2507.10543"
+    },
+    "project": {
+      "label": "Code",
+      "url": "https://github.com/LogSSim/MP1"
+    },
+    "isOpenSource": true,
+    "benchmarks": {
+      "adroit": {
+        "name": "Adroit",
+        "score": 75.67,
+        "rank": 10,
+        "source": "Reproduced by KAN-We-Flow"
+      }
+    }
+  },
+  {
+    "id": "adaflow",
+    "name": "AdaFlow",
+    "title": "AdaFlow: Imitation Learning with Variance-Adaptive Flow-Based Policies",
+    "time": "2024.02",
+    "paper": {
+      "label": "Paper",
+      "url": "https://arxiv.org/abs/2402.04292"
+    },
+    "isOpenSource": false,
+    "benchmarks": {
+      "adroit": {
+        "name": "Adroit",
+        "score": 30,
+        "rank": 25,
+        "source": "Reproduced by KAN-We-Flow"
       }
     }
   }

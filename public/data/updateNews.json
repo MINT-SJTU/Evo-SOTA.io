@@ -1,6 +1,11 @@
 {
     "news": [
         {
+            "date": "🗓️ 2026-07-14: ",
+            "content_en": "The dexterous hand leaderboard has been updated. Click the Dex button for details!",
+            "content_zh": "灵巧手榜单已更新。点击右上方 Dex 按钮查看详情！"
+        },
+        {
             "date": "🗓️ 2026-07-11: ",
             "content_en": "New models: Add FabriVLA to Meta-World",
             "content_zh": "新增模型: 增加 FabriVLA 到 Metaworld"

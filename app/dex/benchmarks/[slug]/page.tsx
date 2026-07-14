@@ -5,12 +5,9 @@ import { loadDexLeaderboardData } from "@/lib/dex/leaderboard";
 import { notFound } from "next/navigation";
 
 export function generateStaticParams() {
-  return [
-    { slug: "adroit" },
-    { slug: "dexart" },
-    { slug: "bidexhands" },
-    { slug: "dexgraspnet" }
-  ];
+  return loadDexLeaderboardData().benchmarks.map((benchmark) => ({
+    slug: benchmark.id
+  }));
 }
 
 export default function BenchmarkDetailPage({ params }: { params: { slug: string } }) {

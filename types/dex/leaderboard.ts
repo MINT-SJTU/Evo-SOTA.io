@@ -7,7 +7,7 @@ export type BenchmarkColumn = {
 };
 
 export type Benchmark = {
-  id: "adroit" | "dexart" | "bidexhands" | "dexgraspnet";
+  id: "adroit" | "dexart" | "bidexhands" | "dexgraspnet" | "dexgraspanything" | "dexonomy";
   name: string;
   description: string;
   columns: BenchmarkColumn[];
