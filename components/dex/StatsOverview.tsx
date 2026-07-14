@@ -107,16 +107,16 @@ export default function StatsOverview({
 
         <div className="mt-8">
           <h3 className="text-lg font-semibold text-slate-700 mb-4 text-center">🏆 {t.dex.stats.currentLeaders}</h3>
-          <div className="grid sm:grid-cols-2 xl:grid-cols-3 gap-4">
+          <div className="mx-auto grid max-w-5xl sm:grid-cols-2 xl:grid-cols-3 gap-4">
             {leaderCards.map((item) => (
               <div
                 key={item.name}
-                className="text-white rounded-xl p-4 shadow-lg"
+                className="text-white rounded-xl p-3 shadow-lg"
                 style={{ background: item.color || undefined }}
               >
                 <div className="text-xs opacity-80 mb-1">{item.name}</div>
-                <div className="font-bold text-lg truncate">{item.leader.name}</div>
-                <div className="text-2xl font-mono mt-1">{item.leader.score}%</div>
+                <div className="font-bold text-base truncate">{item.leader.name}</div>
+                <div className="text-xl font-mono mt-1">{item.leader.score}%</div>
               </div>
             ))}
           </div>

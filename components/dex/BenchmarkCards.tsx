@@ -58,10 +58,10 @@ export default function BenchmarkCards({
 
   return (
     <section className="py-16 px-4 sm:px-6 lg:px-8" id="benchmarks">
-      <div className="max-w-6xl mx-auto">
+      <div className="max-w-5xl mx-auto">
         <h2 className="text-2xl font-bold text-slate-800 mb-8 text-center">{t.dex.benchmarkCards.title}</h2>
 
-        <div className="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-3 gap-5">
+        <div className="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-3 gap-4">
           {benchmarks.map((benchmark) => {
             const top = getTopMethods(benchmark, methods);
             const modelCount = countModels(benchmark, methods);
@@ -78,7 +78,7 @@ export default function BenchmarkCards({
                 className="rounded-xl border-2 overflow-hidden card-hover flex flex-col"
                 style={{ borderColor: accent, backgroundColor: toHsla(accent, 0.08) }}
               >
-                <div className="p-6 border-b border-slate-200 bg-white">
+                <div className="p-5 border-b border-slate-200 bg-white">
                   <div className="flex items-center justify-between mb-2">
                     <h3 className="text-xl font-bold" style={{ color: accent }}>
                       {benchmark.name}
@@ -94,14 +94,14 @@ export default function BenchmarkCards({
                   <p className="text-xs text-slate-500 mt-2">{t.dex.benchmarkCards.primaryMetric}: {primaryMetric}</p>
                 </div>
 
-                <div className="p-4 flex-1">
-                  <h4 className="text-sm font-semibold text-slate-700 mb-3">{t.dex.benchmarkCards.topPerformers}</h4>
-                  <div className="space-y-2">
+                <div className="p-3 flex-1">
+                  <h4 className="text-sm font-semibold text-slate-700 mb-2">{t.dex.benchmarkCards.topPerformers}</h4>
+                  <div className="space-y-1.5">
                     {top.length ? (
                       top.map((item, rankIdx) => (
                         <div
                           key={item.method.id}
-                          className="flex items-center justify-between bg-white rounded-lg px-3 py-2 shadow-sm"
+                          className="flex items-center justify-between bg-white rounded-lg px-3 py-1.5 shadow-sm"
                         >
                           <div className="flex items-center space-x-3">
                             <span
@@ -130,7 +130,7 @@ export default function BenchmarkCards({
                   </div>
                 </div>
 
-                <div className="p-4 pt-0">
+                <div className="p-3 pt-0">
                   <Link
                     href={`/dex/benchmarks/${benchmark.id}`}
                     className="block w-full text-center py-2 rounded-lg text-white font-medium transition-colors"
