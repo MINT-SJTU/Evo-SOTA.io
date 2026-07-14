@@ -153,6 +153,25 @@
       "rank": 8
     },
     {
+      "name": "StarVLA_QwenPIv3 (LA_pretrain)",
+      "base_name": "StarVLA_QwenPIv3",
+      "setting": "LA_pretrain",
+      "paper_url": "https://arxiv.org/abs/2606.27295",
+      "pub_date": "2026-06",
+      "is_opensource": true,
+      "opensource_url": "https://github.com/starVLA/starVLA",
+      "is_rl": false,
+      "easy": 84.6,
+      "medium": 67.3,
+      "hard": 51.7,
+      "very_hard": 80.0,
+      "average": 70.9,
+      "source": "original",
+      "is_standard": true,
+      "note": "",
+      "rank": 9
+    },
+    {
       "name": "SmolVLA",
       "base_name": "SmolVLA",
       "setting": "",
@@ -169,7 +188,26 @@
       "source": "original",
       "is_standard": true,
       "note": "",
-      "rank": 9
+      "rank": 10
+    },
+    {
+      "name": "StarVLA_QwenPIv3",
+      "base_name": "StarVLA_QwenPIv3",
+      "setting": "",
+      "paper_url": "https://arxiv.org/abs/2606.27295",
+      "pub_date": "2026-06",
+      "is_opensource": true,
+      "opensource_url": "https://github.com/starVLA/starVLA",
+      "is_rl": false,
+      "easy": 85.7,
+      "medium": 60.0,
+      "hard": 46.7,
+      "very_hard": 44.0,
+      "average": 59.1,
+      "source": "original",
+      "is_standard": true,
+      "note": "",
+      "rank": 11
     },
     {
       "name": "GR-1",
@@ -188,7 +226,7 @@
       "source": "From ALAM",
       "is_standard": true,
       "note": "",
-      "rank": 10
+      "rank": 12
     },
     {
       "name": "pi0",
@@ -207,7 +245,7 @@
       "source": "from smolVLA",
       "is_standard": true,
       "note": "不清楚具体实验设置，因此无法判断来自于是同一个权重还是四个权重",
-      "rank": 11
+      "rank": 13
     },
     {
       "name": "TinyVLA-H",
@@ -226,7 +264,7 @@
       "source": "original",
       "is_standard": true,
       "note": "",
-      "rank": 12
+      "rank": 14
     },
     {
       "name": "Diffusion Policy",
@@ -245,7 +283,7 @@
       "source": "from TinyVLA",
       "is_standard": true,
       "note": "",
-      "rank": 13
+      "rank": 15
     }
   ],
   "standard_closed": [

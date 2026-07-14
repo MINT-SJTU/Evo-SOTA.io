@@ -174,12 +174,12 @@
     ]
   },
   "metaworld": {
-    "total_models": 23,
-    "standard_opensource_count": 13,
+    "total_models": 25,
+    "standard_opensource_count": 15,
     "standard_closed_count": 3,
     "non_standard_count": 7,
     "model_type_count": {
-      "sft": 12,
+      "sft": 14,
       "rl": 1
     },
     "primary_metric": "Average Success Rate (%)",
