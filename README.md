@@ -20,6 +20,7 @@ A comprehensive leaderboard tracking the state-of-the-art (SOTA) performance of:
 | **CALVIN**                | Long-horizon language-conditioned tasks (ABC→D, ABCD→D, D→D settings)                             | Average Completed Tasks (0-5) |
 | **RoboChallenge**         | Real-world robotic manipulation benchmark with diverse household tasks                            | Score                         |
 | **RoboCasa-GR1-Tabletop** | Household tabletop manipulation tasks in realistic environments using GR1 robot                   | Average Success Rate (%)      |
+| **RoboCasa365**           | Generalist robot policy evaluation on atomic and composite household manipulation tasks           | Average Success Rate (%)      |
 | **RoboTwin 2.0**          | Scalable data generator and benchmark with strong domain randomization for bimanual manipulation  | Hard Success Rate (%)         |
 
 ### Dexterous Manipulation Models
@@ -93,6 +94,7 @@ Evo-SOTA.io/
 │   │   ├── metaworld/
 │   │   ├── robochallenge/
 │   │   ├── robocasa_gr1_tabletop/
+│   │   ├── robocasa365/
 │   │   └── robotwin2/
 │   └── dex/               # Dexterous Manipulation section
 │       ├── page.tsx       # Dex Homepage
@@ -109,6 +111,7 @@ Evo-SOTA.io/
 │   ├── metaworld.json
 │   ├── robochallenge.json
 │   ├── robocasa_gr1_tabletop.json
+│   ├── robocasa365.json
 │   ├── robotwin2.json
 │   └── DataProcess.py     # CSV to JSON converter
 ├── lib/                   # Utilities & i18n
@@ -162,7 +165,7 @@ Contributions are welcome! If you'd like to:
 ## 🙏 Acknowledgments
 
 - Thanks to all researchers who contributed to the VLA and dexterous manipulation fields
-- VLA Benchmark creators: LIBERO, LIBERO Plus, CALVIN, Meta-World, RoboChallenge, RoboCasa-GR1-Tabletop, RoboTwin 2.0 teams
+- VLA Benchmark creators: LIBERO, LIBERO Plus, CALVIN, Meta-World, RoboChallenge, RoboCasa-GR1-Tabletop, RoboCasa365, RoboTwin 2.0 teams
 - Dexterous Manipulation benchmark creators: Adroit, DexArt, Bi-DexHands teams
 - [https://github.com/EvanNotFound/vercount](https://github.com/EvanNotFound/vercount) for visitor statistics
 
