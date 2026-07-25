@@ -1,12 +1,12 @@
 {
   "libero": {
-    "total_models": 171,
-    "standard_opensource_count": 93,
-    "standard_closed_count": 60,
+    "total_models": 196,
+    "standard_opensource_count": 105,
+    "standard_closed_count": 73,
     "non_standard_count": 18,
     "model_type_count": {
-      "sft": 82,
-      "rl": 11
+      "sft": 93,
+      "rl": 12
     },
     "primary_metric": "Average Success Rate (%)",
     "top_5": [
@@ -58,8 +58,8 @@
         "rank": 4
       },
       {
-        "name": "UnifoLM-VLA-0",
-        "score": 98.7,
+        "name": "WLA-0",
+        "score": 98.9,
         "rank": 5
       }
     ],
@@ -92,12 +92,12 @@
     ]
   },
   "libero_plus": {
-    "total_models": 45,
-    "standard_opensource_count": 31,
-    "standard_closed_count": 12,
+    "total_models": 52,
+    "standard_opensource_count": 32,
+    "standard_closed_count": 18,
     "non_standard_count": 2,
     "model_type_count": {
-      "sft": 28,
+      "sft": 29,
       "rl": 3
     },
     "primary_metric": "Total Success Rate (%)",
@@ -118,13 +118,13 @@
         "rank": 3
       },
       {
-        "name": "WorldPilot",
-        "score": 84.4,
+        "name": "InternVLA-A1.5",
+        "score": 84.8,
         "rank": 4
       },
       {
-        "name": "VLANeXt",
-        "score": 83.9,
+        "name": "WorldPilot",
+        "score": 84.4,
         "rank": 5
       }
     ],
@@ -145,13 +145,13 @@
         "rank": 3
       },
       {
-        "name": "WorldPilot",
-        "score": 84.4,
+        "name": "InternVLA-A1.5",
+        "score": 84.8,
         "rank": 4
       },
       {
-        "name": "VLANeXt",
-        "score": 83.9,
+        "name": "WorldPilot",
+        "score": 84.4,
         "rank": 5
       }
     ],
@@ -174,12 +174,12 @@
     ]
   },
   "metaworld": {
-    "total_models": 25,
-    "standard_opensource_count": 15,
-    "standard_closed_count": 3,
+    "total_models": 29,
+    "standard_opensource_count": 17,
+    "standard_closed_count": 5,
     "non_standard_count": 7,
     "model_type_count": {
-      "sft": 14,
+      "sft": 16,
       "rl": 1
     },
     "primary_metric": "Average Success Rate (%)",
@@ -190,23 +190,23 @@
         "rank": 1
       },
       {
+        "name": "SUREFlow",
+        "score": 88.32,
+        "rank": 2
+      },
+      {
         "name": "LA4VLA-1B",
         "score": 87.53,
-        "rank": 2
+        "rank": 3
       },
       {
         "name": "pi-RL",
         "score": 85.8,
-        "rank": 3
+        "rank": 4
       },
       {
         "name": "Evo-depth",
         "score": 84.4,
-        "rank": 4
-      },
-      {
-        "name": "pi0.5",
-        "score": 81.6,
         "rank": 5
       }
     ],
@@ -217,23 +217,23 @@
         "rank": 1
       },
       {
+        "name": "SUREFlow",
+        "score": 88.32,
+        "rank": 2
+      },
+      {
         "name": "LA4VLA-1B",
         "score": 87.53,
-        "rank": 2
+        "rank": 3
       },
       {
         "name": "Evo-depth",
         "score": 84.4,
-        "rank": 3
+        "rank": 4
       },
       {
         "name": "pi0.5",
         "score": 81.6,
-        "rank": 4
-      },
-      {
-        "name": "Evo-1",
-        "score": 80.6,
         "rank": 5
       }
     ],
@@ -312,9 +312,9 @@
     "top_5_rl": []
   },
   "robocasa": {
-    "total_models": 21,
+    "total_models": 24,
     "standard_opensource_count": 15,
-    "standard_closed_count": 6,
+    "standard_closed_count": 9,
     "non_standard_count": 0,
     "model_type_count": {
       "sft": 15,
@@ -378,12 +378,12 @@
     "top_5_rl": []
   },
   "robotwin": {
-    "total_models": 28,
-    "standard_opensource_count": 17,
-    "standard_closed_count": 11,
+    "total_models": 40,
+    "standard_opensource_count": 24,
+    "standard_closed_count": 16,
     "non_standard_count": 0,
     "model_type_count": {
-      "sft": 16,
+      "sft": 23,
       "rl": 1
     },
     "primary_metric": "Hard Success Rate (%)",
@@ -394,23 +394,23 @@
         "rank": 1
       },
       {
+        "name": "InternVLA-A1.5",
+        "score": 93.0,
+        "rank": 2
+      },
+      {
         "name": "HoloBrain-0",
         "score": 92.3,
-        "rank": 2
+        "rank": 3
       },
       {
         "name": "AttenA+",
         "score": 91.86,
-        "rank": 3
+        "rank": 4
       },
       {
         "name": "Fast-WAM",
         "score": 91.78,
-        "rank": 4
-      },
-      {
-        "name": "LingBot-VA",
-        "score": 91.55,
         "rank": 5
       }
     ],
@@ -421,23 +421,23 @@
         "rank": 1
       },
       {
+        "name": "InternVLA-A1.5",
+        "score": 93.0,
+        "rank": 2
+      },
+      {
         "name": "HoloBrain-0",
         "score": 92.3,
-        "rank": 2
+        "rank": 3
       },
       {
         "name": "AttenA+",
         "score": 91.86,
-        "rank": 3
+        "rank": 4
       },
       {
         "name": "Fast-WAM",
         "score": 91.78,
-        "rank": 4
-      },
-      {
-        "name": "LingBot-VA",
-        "score": 91.55,
         "rank": 5
       }
     ],
@@ -449,13 +449,79 @@
       }
     ]
   },
+  "robocasa365": {
+    "total_models": 11,
+    "standard_opensource_count": 9,
+    "standard_closed_count": 2,
+    "non_standard_count": 0,
+    "model_type_count": {
+      "sft": 9,
+      "rl": 0
+    },
+    "primary_metric": "Average Success Rate (%)",
+    "top_5": [
+      {
+        "name": "Abot-M0.5",
+        "score": 46.6,
+        "rank": 1
+      },
+      {
+        "name": "WorldDreamer",
+        "score": 35.3,
+        "rank": 2
+      },
+      {
+        "name": "RLDX-1",
+        "score": 32.1,
+        "rank": 3
+      },
+      {
+        "name": "GR00T-N1.5",
+        "score": 23.9,
+        "rank": 4
+      },
+      {
+        "name": "GR00T-N1.6",
+        "score": 21.9,
+        "rank": 5
+      }
+    ],
+    "top_5_sft": [
+      {
+        "name": "Abot-M0.5",
+        "score": 46.6,
+        "rank": 1
+      },
+      {
+        "name": "WorldDreamer",
+        "score": 35.3,
+        "rank": 2
+      },
+      {
+        "name": "RLDX-1",
+        "score": 32.1,
+        "rank": 3
+      },
+      {
+        "name": "GR00T-N1.5",
+        "score": 23.9,
+        "rank": 4
+      },
+      {
+        "name": "GR00T-N1.6",
+        "score": 21.9,
+        "rank": 5
+      }
+    ],
+    "top_5_rl": []
+  },
   "calvin": {
-    "total_models": 48,
-    "standard_opensource_count": 35,
-    "standard_closed_count": 8,
+    "total_models": 50,
+    "standard_opensource_count": 36,
+    "standard_closed_count": 9,
     "non_standard_count": 5,
     "model_type_count": {
-      "sft": 34,
+      "sft": 35,
       "rl": 1
     },
     "primary_metric": "Average Length (Avg. Len.)",
@@ -522,9 +588,10 @@
       }
     ],
     "settings": {
-      "abcd_d": 19,
-      "abc_d": 48,
-      "d_d": 13
+      "abcd_d": 22,
+      "abc_d": 50,
+      "d_d": 14
     }
-  }
+  },
+  "total_unique_models": 275
 }

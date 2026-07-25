@@ -185,7 +185,7 @@
       "base_name": "GR00T-N1.6",
       "setting": "",
       "paper_url": "https://research.nvidia.com/labs/gear/gr00t-n1_6/",
-      "pub_date": "2025-12",
+      "pub_date": "2026-04",
       "is_opensource": true,
       "opensource_url": "https://github.com/NVIDIA/Isaac-GR00T",
       "is_rl": false,
@@ -228,6 +228,21 @@
   ],
   "standard_closed": [
     {
+      "name": "ACE-Ego-0",
+      "base_name": "ACE-Ego-0",
+      "setting": "",
+      "paper_url": "https://arxiv.org/abs/2606.17200",
+      "pub_date": "2026-06",
+      "is_opensource": false,
+      "opensource_url": null,
+      "is_rl": false,
+      "avg_success_rate": 72.8,
+      "source": "original",
+      "is_standard": true,
+      "note": "",
+      "rank": 1
+    },
+    {
       "name": "PhysBrain 1.0",
       "base_name": "PhysBrain 1.0",
       "setting": "",
@@ -240,7 +255,7 @@
       "source": "original",
       "is_standard": true,
       "note": "",
-      "rank": 1
+      "rank": 2
     },
     {
       "name": "JoyAI-RA 0.1",
@@ -255,7 +270,7 @@
       "source": "original",
       "is_standard": true,
       "note": "",
-      "rank": 2
+      "rank": 3
     },
     {
       "name": "LatentBridge",
@@ -270,7 +285,22 @@
       "source": "original",
       "is_standard": true,
       "note": "",
-      "rank": 3
+      "rank": 4
+    },
+    {
+      "name": "FoMoVLA",
+      "base_name": "FoMoVLA",
+      "setting": "",
+      "paper_url": "https://arxiv.org/abs/2607.14739",
+      "pub_date": "2026-07",
+      "is_opensource": false,
+      "opensource_url": null,
+      "is_rl": false,
+      "avg_success_rate": 56.9,
+      "source": "original",
+      "is_standard": true,
+      "note": "",
+      "rank": 5
     },
     {
       "name": "Qwen-VLA (generalist)",
@@ -285,7 +315,22 @@
       "source": "original",
       "is_standard": true,
       "note": "",
-      "rank": 4
+      "rank": 6
+    },
+    {
+      "name": "CoRE-VLA",
+      "base_name": "CoRE-VLA",
+      "setting": "",
+      "paper_url": "https://arxiv.org/abs/2607.03693",
+      "pub_date": "2026-07",
+      "is_opensource": false,
+      "opensource_url": null,
+      "is_rl": false,
+      "avg_success_rate": 56.5,
+      "source": "original",
+      "is_standard": true,
+      "note": "",
+      "rank": 7
     },
     {
       "name": "Dual-CoT VLA",
@@ -300,7 +345,7 @@
       "source": "original",
       "is_standard": true,
       "note": "",
-      "rank": 5
+      "rank": 8
     },
     {
       "name": "VP-VLA",
@@ -315,7 +360,7 @@
       "source": "original",
       "is_standard": true,
       "note": "",
-      "rank": 6
+      "rank": 9
     }
   ],
   "non_standard": []

@@ -1,164 +1,121 @@
 'use client';
 
-import { useState, useEffect } from 'react';
+import { useEffect, useState } from 'react';
 import { useLanguage } from '@/lib/LanguageContext';
+
+type Model = Record<string, unknown> & {
+    name: string;
+    is_rl?: boolean;
+};
+
+interface Leader {
+    name: string;
+    score: number;
+}
+
+interface BenchmarkStat {
+    id: string;
+    name: string;
+    count: number;
+    sft: Leader;
+    rl: Leader;
+    decimals: number;
+    suffix: string;
+    badge: string;
+    sftGradient: string;
+    rlGradient: string;
+}
 
 interface StatsData {
     totalModels: number;
-    liberoModels: number;
-    liberoPlusModels: number;
-    calvinModels: number;
-    metaworldModels: number;
-    robochallengeModels: number;
-    robocasaModels: number;
-    robotwinModels: number;
-    latestYear: string;
-    // SFT Leaders
-    topLiberoSft: { name: string; score: number };
-    topLiberoPlusSft: { name: string; score: number };
-    topCalvinSft: { name: string; score: number };
-    topMetaworldSft: { name: string; score: number };
-    topRobochallengeSft: { name: string; score: number };
-    topRobocasaSft: { name: string; score: number };
-    topRobotwinSft: { name: string; score: number };
-    // RL Leaders
-    topLiberoRl: { name: string; score: number };
-    topLiberoPlusRl: { name: string; score: number };
-    topCalvinRl: { name: string; score: number };
-    topMetaworldRl: { name: string; score: number };
-    topRobochallengeRl: { name: string; score: number };
-    topRobocasaRl: { name: string; score: number };
-    topRobotwinRl: { name: string; score: number };
+    benchmarks: BenchmarkStat[];
 }
+
+const benchmarkConfigs = [
+    { id: 'robotwin', name: 'RoboTwin 2.0', path: '/data/robotwin2.json', metric: 'hard', gradient: 'amber', decimals: 1, suffix: '%' },
+    { id: 'libero_plus', name: 'LIBERO Plus', path: '/data/liberoPlus.json', metric: 'total', gradient: 'orange', decimals: 1, suffix: '%' },
+    { id: 'libero', name: 'LIBERO', path: '/data/libero.json', metric: 'average', gradient: 'blue', decimals: 1, suffix: '%' },
+    { id: 'metaworld', name: 'Meta-World', path: '/data/metaworld.json', metric: 'average', gradient: 'purple', decimals: 1, suffix: '%' },
+    { id: 'calvin', name: 'CALVIN (ABC→D)', path: '/data/calvin.json', metric: 'avg_len', gradient: 'emerald', decimals: 2, suffix: '' },
+    { id: 'robochallenge', name: 'RoboChallenge', path: '/data/robochallenge.json', metric: 'score', gradient: 'teal', decimals: 2, suffix: '' },
+    { id: 'robocasa365', name: 'RoboCasa365', path: '/data/robocasa365.json', metric: 'average', gradient: 'cyan', decimals: 1, suffix: '%' },
+    { id: 'robocasa', name: 'RoboCasa-GR1-Tabletop', path: '/data/robocasa_gr1_tabletop.json', metric: 'avg_success_rate', gradient: 'rose', decimals: 1, suffix: '%' },
+] as const;
+
+const colorClasses: Record<string, { badge: string; sft: string; rl: string }> = {
+    amber: { badge: 'bg-amber-100 text-amber-700', sft: 'from-amber-500 to-amber-600', rl: 'from-amber-400 to-amber-500' },
+    orange: { badge: 'bg-orange-100 text-orange-700', sft: 'from-orange-500 to-orange-600', rl: 'from-orange-400 to-orange-500' },
+    blue: { badge: 'bg-blue-100 text-blue-700', sft: 'from-blue-500 to-blue-600', rl: 'from-blue-400 to-blue-500' },
+    purple: { badge: 'bg-purple-100 text-purple-700', sft: 'from-purple-500 to-purple-600', rl: 'from-purple-400 to-purple-500' },
+    emerald: { badge: 'bg-emerald-100 text-emerald-700', sft: 'from-emerald-500 to-emerald-600', rl: 'from-emerald-400 to-emerald-500' },
+    teal: { badge: 'bg-teal-100 text-teal-700', sft: 'from-teal-500 to-teal-600', rl: 'from-teal-400 to-teal-500' },
+    cyan: { badge: 'bg-cyan-100 text-cyan-700', sft: 'from-cyan-500 to-cyan-600', rl: 'from-cyan-400 to-cyan-500' },
+    rose: { badge: 'bg-rose-100 text-rose-700', sft: 'from-rose-500 to-rose-600', rl: 'from-rose-400 to-rose-500' },
+};
 
 export default function StatsOverview() {
     const { locale } = useLanguage();
     const [stats, setStats] = useState<StatsData | null>(null);
-    const [animatedValues, setAnimatedValues] = useState({
-        totalModels: 0,
-        liberoModels: 0,
-        liberoPlusModels: 0,
-        calvinModels: 0,
-        metaworldModels: 0,
-        robochallengeModels: 0,
-        robocasaModels: 0,
-        robotwinModels: 0,
-    });
+    const [animationProgress, setAnimationProgress] = useState(0);
 
     useEffect(() => {
         const loadStats = async () => {
             try {
-                const [liberoRes, liberoPlusRes, calvinRes, metaworldRes, robochallengeRes, robocasaRes, robotwinRes] = await Promise.all([
-                    fetch(`/data/libero.json`),
-                    fetch(`/data/liberoPlus.json`),
-                    fetch(`/data/calvin.json`),
-                    fetch(`/data/metaworld.json`),
-                    fetch(`/data/robochallenge.json`),
-                    fetch(`/data/robocasa_gr1_tabletop.json`),
-                    fetch(`/data/robotwin2.json`)
+                const [summaryResponse, ...responses] = await Promise.all([
+                    fetch('/data/data.json'),
+                    ...benchmarkConfigs.map(config => fetch(config.path)),
                 ]);
+                const summary = await summaryResponse.json();
+                const datasets = await Promise.all(responses.map(response => response.json()));
 
-                const libero = await liberoRes.json();
-                const liberoPlus = await liberoPlusRes.json();
-                const calvin = await calvinRes.json();
-                const metaworld = await metaworldRes.json();
-                const robochallenge = await robochallengeRes.json();
-                const robocasa = await robocasaRes.json();
-                const robotwin = await robotwinRes.json();
-
-                // 计算统计数据 - 使用标准开源模型数量
-                const liberoCount = libero.standard_opensource?.length || 0;
-                const liberoPlusCount = (liberoPlus.standard_opensource?.length || 0) + (liberoPlus.standard_opensource_mixsft?.length || 0);
-                const calvinCount = calvin.abc_d?.standard_opensource?.length || 0;
-                const metaworldCount = metaworld.standard_opensource?.length || 0;
-                const robochallengeCount = robochallenge.standard_opensource?.length || 0;
-                const robocasaCount = robocasa.standard_opensource?.length || 0;
-                const robotwinCount = robotwin.standard_opensource?.length || 0;
-
-                // 辅助函数：获取 SFT 和 RL 模型的 top 1
-                const getTopByType = (models: any[], scoreKey: string) => {
-                    const sftModels = models?.filter((m: any) => !m.is_rl) || [];
-                    const rlModels = models?.filter((m: any) => m.is_rl) || [];
-                    return {
-                        sft: sftModels[0] || null,
-                        rl: rlModels[0] || null
+                const benchmarks = benchmarkConfigs.map((config, index): BenchmarkStat => {
+                    const raw = config.id === 'calvin' ? datasets[index].abc_d : datasets[index];
+                    const models: Model[] = raw.standard_opensource || [];
+                    const getLeader = (isRl: boolean): Leader => {
+                        const model = models.find(item => Boolean(item.is_rl) === isRl);
+                        const score = model?.[config.metric];
+                        return {
+                            name: model?.name || 'N/A',
+                            score: typeof score === 'number' ? score : 0,
+                        };
                     };
-                };
+                    const colors = colorClasses[config.gradient];
+                    return {
+                        id: config.id,
+                        name: config.name,
+                        count: models.length,
+                        sft: getLeader(false),
+                        rl: getLeader(true),
+                        decimals: config.decimals,
+                        suffix: config.suffix,
+                        badge: colors.badge,
+                        sftGradient: colors.sft,
+                        rlGradient: colors.rl,
+                    };
+                });
 
-                // 获取各 benchmark 的 SFT 和 RL top 1
-                const liberoTop = getTopByType(libero.standard_opensource, 'average');
-                const liberoPlusTop = getTopByType(liberoPlus.standard_opensource, 'total');
-                const calvinTop = getTopByType(calvin.abc_d?.standard_opensource, 'avg_len');
-                const metaworldTop = getTopByType(metaworld.standard_opensource, 'average');
-                const robochallengeTop = getTopByType(robochallenge.standard_opensource, 'score');
-                const robocasaTop = getTopByType(robocasa.standard_opensource, 'avg_success_rate');
-                const robotwinTop = getTopByType(robotwin.standard_opensource, 'hard');
-
-                const newStats: StatsData = {
-                    totalModels: liberoCount + liberoPlusCount + calvinCount + metaworldCount + robochallengeCount + robocasaCount + robotwinCount,
-                    liberoModels: liberoCount,
-                    liberoPlusModels: liberoPlusCount,
-                    calvinModels: calvinCount,
-                    metaworldModels: metaworldCount,
-                    robochallengeModels: robochallengeCount,
-                    robocasaModels: robocasaCount,
-                    robotwinModels: robotwinCount,
-                    latestYear: '2025',
-                    // SFT Leaders
-                    topLiberoSft: { name: liberoTop.sft?.name || 'N/A', score: liberoTop.sft?.average || 0 },
-                    topLiberoPlusSft: { name: liberoPlusTop.sft?.name || 'N/A', score: liberoPlusTop.sft?.total || 0 },
-                    topCalvinSft: { name: calvinTop.sft?.name || 'N/A', score: calvinTop.sft?.avg_len || 0 },
-                    topMetaworldSft: { name: metaworldTop.sft?.name || 'N/A', score: metaworldTop.sft?.average || 0 },
-                    topRobochallengeSft: { name: robochallengeTop.sft?.name || 'N/A', score: robochallengeTop.sft?.score || 0 },
-                    topRobocasaSft: { name: robocasaTop.sft?.name || 'N/A', score: robocasaTop.sft?.avg_success_rate || 0 },
-                    topRobotwinSft: { name: robotwinTop.sft?.name || 'N/A', score: robotwinTop.sft?.hard || 0 },
-                    // RL Leaders
-                    topLiberoRl: { name: liberoTop.rl?.name || 'N/A', score: liberoTop.rl?.average || 0 },
-                    topLiberoPlusRl: { name: liberoPlusTop.rl?.name || 'N/A', score: liberoPlusTop.rl?.total || 0 },
-                    topCalvinRl: { name: calvinTop.rl?.name || 'N/A', score: calvinTop.rl?.avg_len || 0 },
-                    topMetaworldRl: { name: metaworldTop.rl?.name || 'N/A', score: metaworldTop.rl?.average || 0 },
-                    topRobochallengeRl: { name: robochallengeTop.rl?.name || 'N/A', score: robochallengeTop.rl?.score || 0 },
-                    topRobocasaRl: { name: robocasaTop.rl?.name || 'N/A', score: robocasaTop.rl?.avg_success_rate || 0 },
-                    topRobotwinRl: { name: robotwinTop.rl?.name || 'N/A', score: robotwinTop.rl?.hard || 0 },
-                };
-
-                setStats(newStats);
-
-                // 数字动画效果
-                const duration = 1500;
-                const steps = 60;
-                const stepDuration = duration / steps;
-
-                let currentStep = 0;
-                const interval = setInterval(() => {
-                    currentStep++;
-                    const progress = currentStep / steps;
-                    const easeOut = 1 - Math.pow(1 - progress, 3);
-
-                    setAnimatedValues({
-                        totalModels: Math.round(newStats.totalModels * easeOut),
-                        liberoModels: Math.round(newStats.liberoModels * easeOut),
-                        liberoPlusModels: Math.round(newStats.liberoPlusModels * easeOut),
-                        calvinModels: Math.round(newStats.calvinModels * easeOut),
-                        metaworldModels: Math.round(newStats.metaworldModels * easeOut),
-                        robochallengeModels: Math.round(newStats.robochallengeModels * easeOut),
-                        robocasaModels: Math.round(newStats.robocasaModels * easeOut),
-                        robotwinModels: Math.round(newStats.robotwinModels * easeOut),
-                    });
-
-                    if (currentStep >= steps) {
-                        clearInterval(interval);
-                    }
-                }, stepDuration);
-
-                return () => clearInterval(interval);
+                setStats({
+                    totalModels: summary.total_unique_models || 0,
+                    benchmarks,
+                });
             } catch (error) {
                 console.error('Error loading stats:', error);
             }
         };
-
         loadStats();
     }, []);
+
+    useEffect(() => {
+        if (!stats) return;
+        let frame = 0;
+        const totalFrames = 60;
+        const timer = setInterval(() => {
+            frame += 1;
+            setAnimationProgress(1 - Math.pow(1 - frame / totalFrames, 3));
+            if (frame >= totalFrames) clearInterval(timer);
+        }, 25);
+        return () => clearInterval(timer);
+    }, [stats]);
 
     const texts = {
         en: {
@@ -174,177 +131,82 @@ export default function StatsOverview() {
             benchmarks: '基准测试',
             covering: '涵盖',
             yearsOfProgress: '年 VLA 发展历程',
-            currentLeadersSft: '当前领先模型 (SFT only)',
-            currentLeadersRl: '当前领先模型 (RL)',
+            currentLeadersSft: '当前领先模型（仅 SFT）',
+            currentLeadersRl: '当前领先模型（RL）',
         }
     };
-
     const t = texts[locale];
-
-    const formatLeaderScore = (score: number, decimals: number, suffix = '') =>
-        score > 0 ? `${score.toFixed(decimals)}${suffix}` : '-';
 
     if (!stats) {
         return (
             <section className="py-12 px-4 sm:px-6 lg:px-8">
-                <div className="max-w-7xl mx-auto">
-                    <div className="grid grid-cols-2 md:grid-cols-9 gap-6">
-                        {[1, 2, 3].map(i => (
-                            <div key={i} className="md:col-span-2 bg-white rounded-xl p-6 shadow-sm border border-slate-200 animate-pulse">
-                                <div className="h-8 bg-slate-200 rounded w-1/2 mb-2"></div>
-                                <div className="h-4 bg-slate-200 rounded w-3/4"></div>
-                            </div>
-                        ))}
-                        <div className="md:col-span-3 bg-white rounded-xl p-6 shadow-sm border border-slate-200 animate-pulse">
-                            <div className="h-4 bg-slate-200 rounded w-1/3 mb-3"></div>
-                            <div className="h-4 bg-slate-200 rounded w-full mb-2"></div>
-                            <div className="h-4 bg-slate-200 rounded w-3/4"></div>
-                        </div>
-                    </div>
+                <div className="max-w-7xl mx-auto grid grid-cols-2 md:grid-cols-9 gap-6">
+                    {[1, 2, 3].map(i => (
+                        <div key={i} className="md:col-span-2 h-32 bg-white rounded-xl shadow-sm border border-slate-200 animate-pulse" />
+                    ))}
+                    <div className="md:col-span-3 h-32 bg-white rounded-xl shadow-sm border border-slate-200 animate-pulse" />
                 </div>
             </section>
         );
     }
 
+    const animatedTotal = Math.round(stats.totalModels * animationProgress);
+    const formatScore = (leader: Leader, benchmark: BenchmarkStat) =>
+        leader.score > 0 ? `${leader.score.toFixed(benchmark.decimals)}${benchmark.suffix}` : '-';
+
+    const LeaderGrid = ({ type }: { type: 'sft' | 'rl' }) => (
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 xl:grid-cols-8 gap-4">
+            {stats.benchmarks.map(benchmark => {
+                const leader = benchmark[type];
+                return (
+                    <div
+                        key={`${type}-${benchmark.id}`}
+                        className={`min-w-0 bg-gradient-to-br ${type === 'sft' ? benchmark.sftGradient : benchmark.rlGradient} text-white rounded-xl p-3 shadow-lg`}
+                    >
+                        <div className="text-xs opacity-80 mb-1 truncate">{benchmark.name}</div>
+                        <div className="font-bold text-sm truncate">{leader.name}</div>
+                        <div className="text-lg font-mono mt-1">{formatScore(leader, benchmark)}</div>
+                    </div>
+                );
+            })}
+        </div>
+    );
+
     return (
         <section className="py-12 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-slate-50 to-slate-100">
             <div className="max-w-7xl mx-auto">
                 <div className="grid grid-cols-2 md:grid-cols-9 gap-6">
-                    {/* Total Models */}
-                    <div className="md:col-span-2 bg-white rounded-xl p-6 shadow-sm border border-slate-200 hover:shadow-md transition-shadow flex flex-col items-start justify-center">
-                        <div className="text-4xl font-bold text-primary-600 mb-1">
-                            {animatedValues.totalModels}+
-                        </div>
+                    <div className="md:col-span-2 bg-white rounded-xl p-6 shadow-sm border border-slate-200">
+                        <div className="text-4xl font-bold text-primary-600 mb-1">{animatedTotal}</div>
                         <div className="text-slate-600 text-sm">{t.totalModels}</div>
                     </div>
-
-                    {/* Benchmarks */}
-                    <div className="md:col-span-2 bg-white rounded-xl p-6 shadow-sm border border-slate-200 hover:shadow-md transition-shadow flex flex-col items-start justify-center">
-                        <div className="text-4xl font-bold text-purple-600 mb-1">7</div>
+                    <div className="md:col-span-2 bg-white rounded-xl p-6 shadow-sm border border-slate-200">
+                        <div className="text-4xl font-bold text-purple-600 mb-1">8</div>
                         <div className="text-slate-600 text-sm">{t.benchmarks}</div>
                     </div>
-
-                    {/* Years */}
-                    <div className="md:col-span-2 bg-white rounded-xl p-6 shadow-sm border border-slate-200 hover:shadow-md transition-shadow flex flex-col items-start justify-center">
+                    <div className="md:col-span-2 bg-white rounded-xl p-6 shadow-sm border border-slate-200">
                         <div className="text-4xl font-bold text-emerald-600 mb-1">3+</div>
                         <div className="text-slate-600 text-sm">{t.yearsOfProgress}</div>
                     </div>
-
-                    {/* Distribution */}
-                    <div className="md:col-span-3 bg-white rounded-xl p-6 shadow-sm border border-slate-200 hover:shadow-md transition-shadow">
+                    <div className="md:col-span-3 bg-white rounded-xl p-6 shadow-sm border border-slate-200">
                         <div className="text-sm text-slate-600 mb-2">{t.covering}</div>
-                        <div className="flex flex-wrap items-center gap-1" style={{ fontSize: '10px' }}>
-                            <span className="px-1.5 py-0.5 bg-blue-100 text-blue-700 rounded-full font-medium">
-                                LIBERO: {animatedValues.liberoModels}
-                            </span>
-                            <span className="px-1.5 py-0.5 bg-orange-100 text-orange-700 rounded-full font-medium">
-                                LIBERO Plus: {animatedValues.liberoPlusModels}
-                            </span>
-                            <span className="px-1.5 py-0.5 bg-purple-100 text-purple-700 rounded-full font-medium">
-                                Meta-World: {animatedValues.metaworldModels}
-                            </span>
-                            <span className="px-1.5 py-0.5 bg-emerald-100 text-emerald-700 rounded-full font-medium">
-                                CALVIN: {animatedValues.calvinModels}
-                            </span>
-                            <span className="px-1.5 py-0.5 bg-teal-100 text-teal-700 rounded-full font-medium">
-                                RoboChallenge: {animatedValues.robochallengeModels}
-                            </span>
-                            <span className="px-1.5 py-0.5 bg-rose-100 text-rose-700 rounded-full font-medium">
-                                RoboCasa-GR1: {animatedValues.robocasaModels}
-                            </span>
-                            <span className="px-1.5 py-0.5 bg-amber-100 text-amber-700 rounded-full font-medium">
-                                RoboTwin 2.0: {animatedValues.robotwinModels}
-                            </span>
+                        <div className="flex flex-wrap items-center gap-1 text-[10px]">
+                            {stats.benchmarks.map(benchmark => (
+                                <span key={benchmark.id} className={`px-1.5 py-0.5 rounded-full font-medium ${benchmark.badge}`}>
+                                    {benchmark.name.replace(' (ABC→D)', '')}: {Math.round(benchmark.count * animationProgress)}
+                                </span>
+                            ))}
                         </div>
                     </div>
                 </div>
 
-                {/* Current Leaders - SFT */}
                 <div className="mt-8">
-                    <h3 className="text-lg font-semibold text-slate-700 mb-4 text-center">
-                        🏆 {t.currentLeadersSft}
-                    </h3>
-                    <div className="grid md:grid-cols-4 xl:grid-cols-7 gap-4">
-                        <div className="bg-gradient-to-br from-amber-500 to-amber-600 text-white rounded-xl p-3 shadow-lg">
-                            <div className="text-xs opacity-80 mb-1">RoboTwin 2.0</div>
-                            <div className="font-bold text-sm truncate">{stats.topRobotwinSft.name}</div>
-                            <div className="text-lg font-mono mt-1">{formatLeaderScore(stats.topRobotwinSft.score, 1, '%')}</div>
-                        </div>
-                        <div className="bg-gradient-to-br from-orange-500 to-orange-600 text-white rounded-xl p-3 shadow-lg">
-                            <div className="text-xs opacity-80 mb-1">LIBERO Plus</div>
-                            <div className="font-bold text-sm truncate">{stats.topLiberoPlusSft.name}</div>
-                            <div className="text-lg font-mono mt-1">{formatLeaderScore(stats.topLiberoPlusSft.score, 1, '%')}</div>
-                        </div>
-                        <div className="bg-gradient-to-br from-blue-500 to-blue-600 text-white rounded-xl p-3 shadow-lg">
-                            <div className="text-xs opacity-80 mb-1">LIBERO</div>
-                            <div className="font-bold text-sm truncate">{stats.topLiberoSft.name}</div>
-                            <div className="text-lg font-mono mt-1">{formatLeaderScore(stats.topLiberoSft.score, 1, '%')}</div>
-                        </div>
-                        <div className="bg-gradient-to-br from-purple-500 to-purple-600 text-white rounded-xl p-3 shadow-lg">
-                            <div className="text-xs opacity-80 mb-1">Meta-World</div>
-                            <div className="font-bold text-sm truncate">{stats.topMetaworldSft.name}</div>
-                            <div className="text-lg font-mono mt-1">{formatLeaderScore(stats.topMetaworldSft.score, 1, '%')}</div>
-                        </div>
-                        <div className="bg-gradient-to-br from-emerald-500 to-emerald-600 text-white rounded-xl p-3 shadow-lg">
-                            <div className="text-xs opacity-80 mb-1">CALVIN (ABC→D)</div>
-                            <div className="font-bold text-sm truncate">{stats.topCalvinSft.name}</div>
-                            <div className="text-lg font-mono mt-1">{formatLeaderScore(stats.topCalvinSft.score, 2)}</div>
-                        </div>
-                        <div className="bg-gradient-to-br from-teal-500 to-teal-600 text-white rounded-xl p-3 shadow-lg">
-                            <div className="text-xs opacity-80 mb-1">RoboChallenge</div>
-                            <div className="font-bold text-sm truncate">{stats.topRobochallengeSft.name}</div>
-                            <div className="text-lg font-mono mt-1">{formatLeaderScore(stats.topRobochallengeSft.score, 2)}</div>
-                        </div>
-                        <div className="bg-gradient-to-br from-rose-500 to-rose-600 text-white rounded-xl p-3 shadow-lg">
-                            <div className="text-xs opacity-80 mb-1">RoboCasa-GR1-Tabletop</div>
-                            <div className="font-bold text-sm truncate">{stats.topRobocasaSft.name}</div>
-                            <div className="text-lg font-mono mt-1">{formatLeaderScore(stats.topRobocasaSft.score, 1, '%')}</div>
-                        </div>
-                    </div>
+                    <h3 className="text-lg font-semibold text-slate-700 mb-4 text-center">🏆 {t.currentLeadersSft}</h3>
+                    <LeaderGrid type="sft" />
                 </div>
-
-                {/* Current Leaders - RL */}
                 <div className="mt-6">
-                    <h3 className="text-lg font-semibold text-slate-700 mb-4 text-center">
-                        🚀 {t.currentLeadersRl}
-                    </h3>
-                    <div className="grid md:grid-cols-4 xl:grid-cols-7 gap-4">
-                        <div className="bg-gradient-to-br from-amber-400 to-amber-500 text-white rounded-xl p-3 shadow-lg">
-                            <div className="text-xs opacity-80 mb-1">RoboTwin 2.0</div>
-                            <div className="font-bold text-sm truncate">{stats.topRobotwinRl.name}</div>
-                            <div className="text-lg font-mono mt-1">{formatLeaderScore(stats.topRobotwinRl.score, 1, '%')}</div>
-                        </div>
-                        <div className="bg-gradient-to-br from-orange-400 to-orange-500 text-white rounded-xl p-3 shadow-lg">
-                            <div className="text-xs opacity-80 mb-1">LIBERO Plus</div>
-                            <div className="font-bold text-sm truncate">{stats.topLiberoPlusRl.name}</div>
-                            <div className="text-lg font-mono mt-1">{formatLeaderScore(stats.topLiberoPlusRl.score, 1, '%')}</div>
-                        </div>
-                        <div className="bg-gradient-to-br from-blue-400 to-blue-500 text-white rounded-xl p-3 shadow-lg">
-                            <div className="text-xs opacity-80 mb-1">LIBERO</div>
-                            <div className="font-bold text-sm truncate">{stats.topLiberoRl.name}</div>
-                            <div className="text-lg font-mono mt-1">{formatLeaderScore(stats.topLiberoRl.score, 1, '%')}</div>
-                        </div>
-                        <div className="bg-gradient-to-br from-purple-400 to-purple-500 text-white rounded-xl p-3 shadow-lg">
-                            <div className="text-xs opacity-80 mb-1">Meta-World</div>
-                            <div className="font-bold text-sm truncate">{stats.topMetaworldRl.name}</div>
-                            <div className="text-lg font-mono mt-1">{formatLeaderScore(stats.topMetaworldRl.score, 1, '%')}</div>
-                        </div>
-                        <div className="bg-gradient-to-br from-emerald-400 to-emerald-500 text-white rounded-xl p-3 shadow-lg">
-                            <div className="text-xs opacity-80 mb-1">CALVIN (ABC→D)</div>
-                            <div className="font-bold text-sm truncate">{stats.topCalvinRl.name}</div>
-                            <div className="text-lg font-mono mt-1">{formatLeaderScore(stats.topCalvinRl.score, 2)}</div>
-                        </div>
-                        <div className="bg-gradient-to-br from-teal-400 to-teal-500 text-white rounded-xl p-3 shadow-lg">
-                            <div className="text-xs opacity-80 mb-1">RoboChallenge</div>
-                            <div className="font-bold text-sm truncate">{stats.topRobochallengeRl.name}</div>
-                            <div className="text-lg font-mono mt-1">{formatLeaderScore(stats.topRobochallengeRl.score, 2)}</div>
-                        </div>
-                        <div className="bg-gradient-to-br from-rose-400 to-rose-500 text-white rounded-xl p-3 shadow-lg">
-                            <div className="text-xs opacity-80 mb-1">RoboCasa-GR1-Tabletop</div>
-                            <div className="font-bold text-sm truncate">{stats.topRobocasaRl.name}</div>
-                            <div className="text-lg font-mono mt-1">{formatLeaderScore(stats.topRobocasaRl.score, 1, '%')}</div>
-                        </div>
-                    </div>
+                    <h3 className="text-lg font-semibold text-slate-700 mb-4 text-center">🚀 {t.currentLeadersRl}</h3>
+                    <LeaderGrid type="rl" />
                 </div>
             </div>
         </section>

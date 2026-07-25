@@ -33,6 +33,7 @@ export default function Navbar() {
         { name: 'Meta-World', href: '/benchmarks/metaworld' },
         { name: 'CALVIN', href: '/benchmarks/calvin' },
         { name: 'RoboChallenge', href: '/benchmarks/robochallenge' },
+        { name: 'RoboCasa365', href: '/benchmarks/robocasa365' },
         { name: 'RoboCasa-GR1-Tabletop', href: '/benchmarks/robocasa_gr1_tabletop' },
     ];
     const [dexBenchmarks, setDexBenchmarks] = useState<{ name: string; href: string }[]>([]);

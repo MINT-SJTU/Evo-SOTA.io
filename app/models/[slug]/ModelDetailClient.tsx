@@ -41,6 +41,7 @@ const BENCHMARK_KEYS = [
     'robochallenge',
     'robocasa',
     'robotwin',
+    'robocasa365',
 ] as const;
 
 const BENCHMARK_HREFS: Record<string, string> = {
@@ -53,6 +54,7 @@ const BENCHMARK_HREFS: Record<string, string> = {
     robochallenge: '/benchmarks/robochallenge',
     robocasa: '/benchmarks/robocasa_gr1_tabletop',
     robotwin: '/benchmarks/robotwin2',
+    robocasa365: '/benchmarks/robocasa365',
 };
 
 const BENCHMARK_DISPLAY_NAMES: Record<string, string> = {
@@ -65,6 +67,7 @@ const BENCHMARK_DISPLAY_NAMES: Record<string, string> = {
     robochallenge: 'RoboChallenge',
     robocasa: 'RoboCasa-GR1-Tabletop',
     robotwin: 'RoboTwin 2.0',
+    robocasa365: 'RoboCasa365',
 };
 
 const DATA_LABELS: Record<string, Record<string, string>> = {
@@ -77,6 +80,7 @@ const DATA_LABELS: Record<string, Record<string, string>> = {
     robochallenge: { score: 'Score', success_rate: 'Success Rate' },
     robocasa: { avg_success_rate: 'Avg. Success Rate' },
     robotwin: { easy: 'Easy', hard: 'Hard' },
+    robocasa365: { atomic_seen: 'Atomic-Seen', composite_seen: 'Composite-Seen', composite_unseen: 'Composite-Unseen', average: 'Average' },
 };
 
 function formatScore(key: string, score: number): string {
