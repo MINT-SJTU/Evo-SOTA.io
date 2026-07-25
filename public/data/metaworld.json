@@ -20,6 +20,25 @@
       "rank": 1
     },
     {
+      "name": "SUREFlow",
+      "base_name": "SUREFlow",
+      "setting": "",
+      "paper_url": "https://arxiv.org/abs/2607.10504",
+      "pub_date": "2026-07",
+      "is_opensource": true,
+      "opensource_url": "https://github.com/tanvirnwu/SUREFlow_IROS_2026",
+      "is_rl": false,
+      "easy": 97.8,
+      "medium": 93.5,
+      "hard": 86.1,
+      "very_hard": 75.9,
+      "average": 88.32,
+      "source": "original",
+      "is_standard": true,
+      "note": "",
+      "rank": 2
+    },
+    {
       "name": "LA4VLA-1B",
       "base_name": "LA4VLA-1B",
       "setting": "",
@@ -36,7 +55,7 @@
       "source": "original",
       "is_standard": true,
       "note": "",
-      "rank": 2
+      "rank": 3
     },
     {
       "name": "pi-RL",
@@ -55,7 +74,7 @@
       "source": "original",
       "is_standard": true,
       "note": "",
-      "rank": 3
+      "rank": 4
     },
     {
       "name": "Evo-depth",
@@ -74,7 +93,7 @@
       "source": "original",
       "is_standard": true,
       "note": "",
-      "rank": 4
+      "rank": 5
     },
     {
       "name": "pi0.5",
@@ -93,7 +112,7 @@
       "source": "from LA4VLA",
       "is_standard": true,
       "note": "",
-      "rank": 5
+      "rank": 6
     },
     {
       "name": "Evo-1",
@@ -112,7 +131,7 @@
       "source": "original",
       "is_standard": true,
       "note": "",
-      "rank": 6
+      "rank": 7
     },
     {
       "name": "RoboTron Mani",
@@ -131,7 +150,7 @@
       "source": "original",
       "is_standard": true,
       "note": "RoboTron-Mani 采用了自定义的数据生成协议， 而不是标准的训练数据， 但是介于很多别的论文也干了。原文：“ To address the lack of training data for simulation learning, we adopt the scripted policies from Yu et al. [68] and introduce Gaussian noise N(0, 0.1) to the generated actions at each step, resulting in a total of 22,500 trajectories, with each task producing 500 successful trajectories. ”",
-      "rank": 7
+      "rank": 8
     },
     {
       "name": "PAD",
@@ -150,7 +169,7 @@
       "source": "original",
       "is_standard": true,
       "note": "",
-      "rank": 8
+      "rank": 9
     },
     {
       "name": "StarVLA_QwenPIv3 (LA_pretrain)",
@@ -169,7 +188,7 @@
       "source": "original",
       "is_standard": true,
       "note": "",
-      "rank": 9
+      "rank": 10
     },
     {
       "name": "SmolVLA",
@@ -188,7 +207,26 @@
       "source": "original",
       "is_standard": true,
       "note": "",
-      "rank": 10
+      "rank": 11
+    },
+    {
+      "name": "VLA-Corrector",
+      "base_name": "VLA-Corrector",
+      "setting": "",
+      "paper_url": "https://arxiv.org/abs/2607.01804",
+      "pub_date": "2026-07",
+      "is_opensource": true,
+      "opensource_url": "https://github.com/ZJU-OmniAI/vla-corrector",
+      "is_rl": false,
+      "easy": 83.4,
+      "medium": 56.0,
+      "hard": 64.2,
+      "very_hard": 63.0,
+      "average": 66.65,
+      "source": "original",
+      "is_standard": true,
+      "note": "",
+      "rank": 12
     },
     {
       "name": "StarVLA_QwenPIv3",
@@ -207,7 +245,7 @@
       "source": "original",
       "is_standard": true,
       "note": "",
-      "rank": 11
+      "rank": 13
     },
     {
       "name": "GR-1",
@@ -226,7 +264,7 @@
       "source": "From ALAM",
       "is_standard": true,
       "note": "",
-      "rank": 12
+      "rank": 14
     },
     {
       "name": "pi0",
@@ -245,7 +283,7 @@
       "source": "from smolVLA",
       "is_standard": true,
       "note": "不清楚具体实验设置，因此无法判断来自于是同一个权重还是四个权重",
-      "rank": 13
+      "rank": 15
     },
     {
       "name": "TinyVLA-H",
@@ -264,7 +302,7 @@
       "source": "original",
       "is_standard": true,
       "note": "",
-      "rank": 14
+      "rank": 16
     },
     {
       "name": "Diffusion Policy",
@@ -283,7 +321,7 @@
       "source": "from TinyVLA",
       "is_standard": true,
       "note": "",
-      "rank": 15
+      "rank": 17
     }
   ],
   "standard_closed": [
@@ -307,6 +345,44 @@
       "rank": 1
     },
     {
+      "name": "EDAR",
+      "base_name": "EDAR",
+      "setting": "",
+      "paper_url": "https://arxiv.org/abs/2607.11427",
+      "pub_date": "2026-07",
+      "is_opensource": false,
+      "opensource_url": null,
+      "is_rl": false,
+      "easy": 89.3,
+      "medium": 76.4,
+      "hard": 78.3,
+      "very_hard": 78.0,
+      "average": 80.5,
+      "source": "original",
+      "is_standard": true,
+      "note": "",
+      "rank": 2
+    },
+    {
+      "name": "GeoProp",
+      "base_name": "GeoProp",
+      "setting": "",
+      "paper_url": "https://arxiv.org/abs/2607.07101",
+      "pub_date": "2026-07",
+      "is_opensource": false,
+      "opensource_url": null,
+      "is_rl": false,
+      "easy": 82.9,
+      "medium": 67.5,
+      "hard": 59.0,
+      "very_hard": 82.4,
+      "average": 72.95,
+      "source": "original",
+      "is_standard": true,
+      "note": "",
+      "rank": 3
+    },
+    {
       "name": "OneWM-VLA",
       "base_name": "OneWM-VLA",
       "setting": "",
@@ -323,7 +399,7 @@
       "source": "original",
       "is_standard": true,
       "note": "",
-      "rank": 2
+      "rank": 4
     },
     {
       "name": "RT-2",
@@ -342,7 +418,7 @@
       "source": "from ALAM",
       "is_standard": true,
       "note": "",
-      "rank": 3
+      "rank": 5
     }
   ],
   "non_standard": [

@@ -42,6 +42,7 @@ const BENCHMARK_KEYS = [
     'robochallenge',
     'robocasa',
     'robotwin',
+    'robocasa365',
 ] as const;
 
 const BENCHMARK_HREFS: Record<string, string> = {
@@ -54,6 +55,7 @@ const BENCHMARK_HREFS: Record<string, string> = {
     robochallenge: '/benchmarks/robochallenge',
     robocasa: '/benchmarks/robocasa_gr1_tabletop',
     robotwin: '/benchmarks/robotwin2',
+    robocasa365: '/benchmarks/robocasa365',
 };
 
 // 用于子指标的人类可读标签
@@ -67,6 +69,7 @@ const DATA_LABELS: Record<string, Record<string, string>> = {
     robochallenge: { score: 'Score', success_rate: 'Success Rate' },
     robocasa: { avg_success_rate: 'Avg. Success Rate' },
     robotwin: { easy: 'Easy', hard: 'Hard' },
+    robocasa365: { atomic_seen: 'Atomic-Seen', composite_seen: 'Composite-Seen', composite_unseen: 'Composite-Unseen', average: 'Average' },
 };
 
 // 模糊匹配

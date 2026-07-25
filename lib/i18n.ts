@@ -69,6 +69,7 @@ export const translations = {
             robochallenge: 'RoboChallenge',
             robocasa: 'RoboCasa-GR1-Tabletop',
             robotwin: 'RoboTwin 2.0',
+            robocasa365: 'RoboCasa365',
             modelsTotal: 'models in database',
         },
         // Benchmark 页面
@@ -159,6 +160,11 @@ export const translations = {
                 description: 'RoboTwin 2.0 is a Scalable Data Generator and Benchmark with Strong Domain Randomization for Robust Bimanual Robotic Manipulation.',
                 metric: 'Hard Success Rate (%)',
             },
+            robocasa365: {
+                name: 'RoboCasa365',
+                description: 'RoboCasa365 evaluates generalist robot policies on diverse atomic and composite household manipulation tasks, including unseen compositions.',
+                metric: 'Average Success Rate (%)',
+            },
         },
         // Methodology 页面
         methodology: {
@@ -167,7 +173,7 @@ export const translations = {
             dataSource: 'Data Sources',
             dataSourceDesc: 'All benchmark results are collected from published papers and official repositories. We do not re-run experiments.',
             rankingRules: 'Ranking Rules',
-            rankingRulesDesc: 'Models are ranked by their primary metric on each benchmark. For LIBERO and Meta-World, this is the Average Success Rate. For CALVIN, this is the Average Length (Avg. Len.) on the ABC→D setting. For RoboTwin 2.0, this is the Hard Success Rate.',
+            rankingRulesDesc: 'Models are ranked by their primary metric on each benchmark. LIBERO, Meta-World, RoboCasa365, and RoboCasa-GR1-Tabletop use Average Success Rate. CALVIN uses Average Length (Avg. Len.) on the ABC→D setting, RoboChallenge uses Score, and RoboTwin 2.0 uses Hard Success Rate.',
             limitations: 'Known Limitations',
             limitationsDesc: 'Results across different benchmarks are not directly comparable. Different papers may use slightly different evaluation protocols.',
             disclaimer: 'Disclaimer',
@@ -437,6 +443,7 @@ export const translations = {
             robochallenge: 'RoboChallenge',
             robocasa: 'RoboCasa-GR1-Tabletop',
             robotwin: 'RoboTwin 2.0',
+            robocasa365: 'RoboCasa365',
             modelsTotal: '个模型收录在库',
         },
         // Benchmark 页面
@@ -527,6 +534,11 @@ export const translations = {
                 description: 'RoboTwin 2.0 是一个可扩展数据生成器和基准测试，具有强大的域随机化，用于鲁棒公持机器人操作。',
                 metric: 'Hard 成功率 (%)',
             },
+            robocasa365: {
+                name: 'RoboCasa365',
+                description: 'RoboCasa365 通过多样化的原子任务与组合式家庭操作任务（包括未见组合）评估通用机器人策略。',
+                metric: '平均成功率 (%)',
+            },
         },
         // Methodology 页面
         methodology: {
@@ -535,7 +547,7 @@ export const translations = {
             dataSource: '数据来源',
             dataSourceDesc: '所有基准测试结果均来自已发表的论文和官方代码库。我们不重新运行实验。',
             rankingRules: '排名规则',
-            rankingRulesDesc: '模型根据每个基准测试的主要指标进行排名。对于 LIBERO 和 Meta-World，主要指标是平均成功率。对于 CALVIN，主要指标是 ABC→D 设置下的平均长度 (Avg. Len.)。对于 RoboTwin 2.0，主要指标是 Hard 成功率。',
+            rankingRulesDesc: '模型根据每个基准测试的主要指标进行排名。LIBERO、Meta-World、RoboCasa365 和 RoboCasa-GR1-Tabletop 使用平均成功率；CALVIN 使用 ABC→D 设置下的平均长度 (Avg. Len.)；RoboChallenge 使用 Score；RoboTwin 2.0 使用 Hard 成功率。',
             limitations: '已知局限性',
             limitationsDesc: '不同基准测试的结果不能直接比较。不同论文可能使用略有不同的评估协议。',
             disclaimer: '免责声明',

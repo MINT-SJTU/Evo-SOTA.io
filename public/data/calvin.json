@@ -284,6 +284,26 @@
     ],
     "standard_closed": [
       {
+        "name": "EDAR",
+        "base_name": "EDAR",
+        "setting": "",
+        "paper_url": "https://arxiv.org/abs/2607.11427",
+        "pub_date": "2026-07",
+        "is_opensource": false,
+        "opensource_url": null,
+        "is_rl": false,
+        "is_standard": true,
+        "note": "",
+        "inst1": 0.997,
+        "inst2": 0.982,
+        "inst3": 0.96,
+        "inst4": 0.925,
+        "inst5": 0.881,
+        "avg_len": 4.75,
+        "source": "original",
+        "rank": 1
+      },
+      {
         "name": "NIAF",
         "base_name": "NIAF",
         "setting": "",
@@ -301,7 +321,7 @@
         "inst5": 0.839,
         "avg_len": 4.66,
         "source": "original",
-        "rank": 1
+        "rank": 2
       },
       {
         "name": "GR-2",
@@ -321,7 +341,27 @@
         "inst5": 0.859,
         "avg_len": 4.64,
         "source": "original",
-        "rank": 2
+        "rank": 3
+      },
+      {
+        "name": "UniviewVLA",
+        "base_name": "UniviewVLA",
+        "setting": "",
+        "paper_url": "https://arxiv.org/abs/2606.21501",
+        "pub_date": "2026-06",
+        "is_opensource": false,
+        "opensource_url": null,
+        "is_rl": false,
+        "is_standard": true,
+        "note": "",
+        "inst1": 0.983,
+        "inst2": 0.958,
+        "inst3": 0.928,
+        "inst4": 0.893,
+        "inst5": 0.838,
+        "avg_len": 4.6,
+        "source": "original",
+        "rank": 4
       },
       {
         "name": "DFM-VLA",
@@ -341,7 +381,27 @@
         "inst5": 0.78,
         "avg_len": 4.44,
         "source": "original",
-        "rank": 3
+        "rank": 5
+      },
+      {
+        "name": "EquiVLA",
+        "base_name": "EquiVLA",
+        "setting": "",
+        "paper_url": "https://arxiv.org/abs/2606.19784",
+        "pub_date": "2026-06",
+        "is_opensource": false,
+        "opensource_url": null,
+        "is_rl": false,
+        "is_standard": true,
+        "note": "",
+        "inst1": 0.95,
+        "inst2": 0.885,
+        "inst3": 0.811,
+        "inst4": 0.738,
+        "inst5": 0.643,
+        "avg_len": 4.03,
+        "source": "original",
+        "rank": 6
       },
       {
         "name": "PD-VLA",
@@ -361,7 +421,7 @@
         "inst5": 0.505,
         "avg_len": 3.55,
         "source": "original",
-        "rank": 4
+        "rank": 7
       },
       {
         "name": "MCIL",
@@ -381,7 +441,7 @@
         "inst5": 0.0,
         "avg_len": 0.4,
         "source": "from HULC",
-        "rank": 5
+        "rank": 8
       }
     ],
     "non_standard": []
@@ -669,6 +729,26 @@
         "rank": 14
       },
       {
+        "name": "PriGo",
+        "base_name": "PriGo",
+        "setting": "",
+        "paper_url": "https://arxiv.org/abs/2607.07076",
+        "pub_date": "2026-07",
+        "is_opensource": true,
+        "opensource_url": "https://github.com/OTCVCG/PriGo",
+        "is_rl": false,
+        "is_standard": true,
+        "note": "",
+        "inst1": 0.981,
+        "inst2": 0.921,
+        "inst3": 0.876,
+        "inst4": 0.804,
+        "inst5": 0.599,
+        "avg_len": 4.18,
+        "source": "original",
+        "rank": 15
+      },
+      {
         "name": "UP-VLA",
         "base_name": "UP-VLA",
         "setting": "",
@@ -686,7 +766,7 @@
         "inst5": 0.699,
         "avg_len": 4.08,
         "source": "original",
-        "rank": 15
+        "rank": 16
       },
       {
         "name": "GR-MG",
@@ -706,7 +786,7 @@
         "inst5": 0.644,
         "avg_len": 4.04,
         "source": "original",
-        "rank": 16
+        "rank": 17
       },
       {
         "name": "MoDE",
@@ -726,7 +806,7 @@
         "inst5": 0.635,
         "avg_len": 4.01,
         "source": "original",
-        "rank": 17
+        "rank": 18
       },
       {
         "name": "GHIL-Glue",
@@ -746,7 +826,7 @@
         "inst5": 0.498,
         "avg_len": 3.69,
         "source": "original",
-        "rank": 18
+        "rank": 19
       },
       {
         "name": "CEED-VLA",
@@ -766,7 +846,7 @@
         "inst5": null,
         "avg_len": 3.67,
         "source": "original",
-        "rank": 19
+        "rank": 20
       },
       {
         "name": "RoboUniview",
@@ -786,7 +866,7 @@
         "inst5": 0.507,
         "avg_len": 3.65,
         "source": "original",
-        "rank": 20
+        "rank": 21
       },
       {
         "name": "Dita",
@@ -806,7 +886,7 @@
         "inst5": 0.5,
         "avg_len": 3.61,
         "source": "original",
-        "rank": 21
+        "rank": 22
       },
       {
         "name": "CLOVER",
@@ -826,7 +906,7 @@
         "inst5": 0.454,
         "avg_len": 3.53,
         "source": "original",
-        "rank": 22
+        "rank": 23
       },
       {
         "name": "RoboDual",
@@ -846,7 +926,7 @@
         "inst5": 0.488,
         "avg_len": 3.47,
         "source": "original",
-        "rank": 23
+        "rank": 24
       },
       {
         "name": "Vidman",
@@ -866,7 +946,7 @@
         "inst5": 0.467,
         "avg_len": 3.42,
         "source": "original",
-        "rank": 24
+        "rank": 25
       },
       {
         "name": "3D Diffuser Actor",
@@ -886,7 +966,7 @@
         "inst5": 0.412,
         "avg_len": 3.35,
         "source": "original",
-        "rank": 25
+        "rank": 26
       },
       {
         "name": "Moto",
@@ -906,7 +986,7 @@
         "inst5": 0.386,
         "avg_len": 3.1,
         "source": "original",
-        "rank": 26
+        "rank": 27
       },
       {
         "name": "GR-1",
@@ -926,7 +1006,7 @@
         "inst5": 0.401,
         "avg_len": 3.06,
         "source": "original",
-        "rank": 27
+        "rank": 28
       },
       {
         "name": "DeeR-VLA",
@@ -946,7 +1026,7 @@
         "inst5": null,
         "avg_len": 2.9,
         "source": "original",
-        "rank": 28
+        "rank": 29
       },
       {
         "name": "SuSIE",
@@ -966,7 +1046,7 @@
         "inst5": 0.26,
         "avg_len": 2.69,
         "source": "original",
-        "rank": 29
+        "rank": 30
       },
       {
         "name": "RoboFlamingo",
@@ -986,7 +1066,7 @@
         "inst5": 0.235,
         "avg_len": 2.48,
         "source": "original",
-        "rank": 30
+        "rank": 31
       },
       {
         "name": "SPIL",
@@ -1006,7 +1086,7 @@
         "inst5": 0.08,
         "avg_len": 1.71,
         "source": "original",
-        "rank": 31
+        "rank": 32
       },
       {
         "name": "MDT",
@@ -1026,7 +1106,7 @@
         "inst5": 0.091,
         "avg_len": 1.55,
         "source": "from FLOWER & VPP",
-        "rank": 32
+        "rank": 33
       },
       {
         "name": "RT-1",
@@ -1046,7 +1126,7 @@
         "inst5": 0.013,
         "avg_len": 0.9,
         "source": "from VPP & RoboUniview & RoboDual & GR-1",
-        "rank": 33
+        "rank": 34
       },
       {
         "name": "HULC",
@@ -1066,7 +1146,7 @@
         "inst5": 0.011,
         "avg_len": 0.67,
         "source": "original",
-        "rank": 34
+        "rank": 35
       },
       {
         "name": "Diffusion Policy",
@@ -1086,7 +1166,7 @@
         "inst5": 0.0,
         "avg_len": 0.56,
         "source": "from UP-VLA",
-        "rank": 35
+        "rank": 36
       }
     ],
     "standard_closed": [
@@ -1191,6 +1271,26 @@
         "rank": 5
       },
       {
+        "name": "TS-Mask VLA",
+        "base_name": "TS-Mask VLA",
+        "setting": "",
+        "paper_url": "https://arxiv.org/abs/2607.09818",
+        "pub_date": "2026-07",
+        "is_opensource": false,
+        "opensource_url": null,
+        "is_rl": false,
+        "is_standard": true,
+        "note": "",
+        "inst1": 0.974,
+        "inst2": 0.925,
+        "inst3": 0.852,
+        "inst4": 0.77,
+        "inst5": 0.669,
+        "avg_len": 4.19,
+        "source": "original",
+        "rank": 6
+      },
+      {
         "name": "OE-VLA",
         "base_name": "OE-VLA",
         "setting": "",
@@ -1208,7 +1308,7 @@
         "inst5": 0.334,
         "avg_len": 2.99,
         "source": "original",
-        "rank": 6
+        "rank": 7
       },
       {
         "name": "UniPi",
@@ -1228,7 +1328,7 @@
         "inst5": 0.04,
         "avg_len": 0.92,
         "source": "from VPP & SuSIE",
-        "rank": 7
+        "rank": 8
       },
       {
         "name": "MCIL",
@@ -1248,7 +1348,7 @@
         "inst5": 0.0,
         "avg_len": 0.31,
         "source": "from RoboDual",
-        "rank": 8
+        "rank": 9
       }
     ],
     "non_standard": [
@@ -1357,6 +1457,26 @@
   "d_d": {
     "standard_opensource": [
       {
+        "name": "HiMoE-VLA",
+        "base_name": "HiMoE-VLA",
+        "setting": "",
+        "paper_url": "https://arxiv.org/abs/2512.05693",
+        "pub_date": "2025-12",
+        "is_opensource": true,
+        "opensource_url": "https://github.com/ZhiyingDu/HiMoE-VLA",
+        "is_rl": false,
+        "is_standard": true,
+        "note": "",
+        "inst1": 0.979,
+        "inst2": 0.943,
+        "inst3": 0.904,
+        "inst4": 0.859,
+        "inst5": 0.801,
+        "avg_len": 4.49,
+        "source": "original",
+        "rank": 1
+      },
+      {
         "name": "Flower VLA",
         "base_name": "Flower VLA",
         "setting": "",
@@ -1374,7 +1494,7 @@
         "inst5": 0.749,
         "avg_len": 4.35,
         "source": "original",
-        "rank": 1
+        "rank": 2
       },
       {
         "name": "RoboUniview",
@@ -1394,7 +1514,7 @@
         "inst5": 0.563,
         "avg_len": 3.855,
         "source": "original",
-        "rank": 2
+        "rank": 3
       },
       {
         "name": "MDT",
@@ -1414,7 +1534,7 @@
         "inst5": 0.556,
         "avg_len": 3.72,
         "source": "original",
-        "rank": 3
+        "rank": 4
       },
       {
         "name": "CF-VLA",
@@ -1434,7 +1554,7 @@
         "inst5": 57.3,
         "avg_len": 3.67,
         "source": "original",
-        "rank": 4
+        "rank": 5
       },
       {
         "name": "DaDu-Corki-SW",
@@ -1454,7 +1574,7 @@
         "inst5": 0.458,
         "avg_len": 3.42,
         "source": "original",
-        "rank": 5
+        "rank": 6
       },
       {
         "name": "TaKSIE",
@@ -1474,7 +1594,7 @@
         "inst5": 0.408,
         "avg_len": 3.18,
         "source": "original",
-        "rank": 6
+        "rank": 7
       },
       {
         "name": "MT-ACT",
@@ -1494,7 +1614,7 @@
         "inst5": 0.353,
         "avg_len": 2.98,
         "source": "from MDT",
-        "rank": 7
+        "rank": 8
       },
       {
         "name": "Distill-D",
@@ -1514,7 +1634,7 @@
         "inst5": 0.356,
         "avg_len": 2.97,
         "source": "from MDT",
-        "rank": 8
+        "rank": 9
       },
       {
         "name": "LCD",
@@ -1534,7 +1654,7 @@
         "inst5": 0.322,
         "avg_len": 2.88,
         "source": "original",
-        "rank": 9
+        "rank": 10
       },
       {
         "name": "SPIL",
@@ -1554,7 +1674,7 @@
         "inst5": 0.286,
         "avg_len": 2.67,
         "source": "original",
-        "rank": 10
+        "rank": 11
       },
       {
         "name": "HULC",
@@ -1574,7 +1694,7 @@
         "inst5": 0.283,
         "avg_len": 2.64,
         "source": "original",
-        "rank": 11
+        "rank": 12
       },
       {
         "name": "RoboFlamingo",
@@ -1594,7 +1714,7 @@
         "inst5": 0.192,
         "avg_len": 2.12,
         "source": "original",
-        "rank": 12
+        "rank": 13
       }
     ],
     "standard_closed": [

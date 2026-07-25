@@ -12,7 +12,7 @@ export default function MethodologyPage() {
             dataSource: 'Data Sources',
             dataSourceDesc: 'All benchmark results are collected from published papers and official repositories. We do not re-run experiments.',
             rankingRules: 'Ranking Rules',
-            rankingRulesDesc: 'Models are ranked by their primary metric on each benchmark. For LIBERO, Meta-World and RoboCasa-GR1-Tabletop, this is the Average Success Rate. For CALVIN, this is the Average Length (Avg. Len.) on the ABC→D setting. For RoboChallenge, this is the Score. For RoboTwin 2.0, this is the Hard Success Rate.',
+            rankingRulesDesc: 'Models are ranked by their primary metric on each benchmark. LIBERO, Meta-World, RoboCasa365, and RoboCasa-GR1-Tabletop use Average Success Rate. CALVIN uses Average Length (Avg. Len.) on the ABC→D setting, RoboChallenge uses Score, and RoboTwin 2.0 uses Hard Success Rate.',
             limitations: 'Known Limitations',
             limitationsDesc: 'Results across different benchmarks are not directly comparable. Different papers may use slightly different evaluation protocols.',
             disclaimer: 'Disclaimer',
@@ -40,7 +40,7 @@ export default function MethodologyPage() {
             dataSource: '数据来源',
             dataSourceDesc: '所有基准测试结果均来自已发表的论文和官方代码库。我们不重新运行实验。',
             rankingRules: '排名规则',
-            rankingRulesDesc: '模型根据每个基准测试的主要指标进行排名。对于 LIBERO，Meta-World 和 RoboCasa-GR1-Tabletop，主要指标是平均成功率。对于 CALVIN，主要指标是 ABC→D 设置下的平均长度 (Avg. Len.)。对于 RoboChallenge，主要指标是分数 (Score)。对于 RoboTwin 2.0，主要指标是 Hard 成功率。',
+            rankingRulesDesc: '模型根据每个基准测试的主要指标进行排名。LIBERO、Meta-World、RoboCasa365 和 RoboCasa-GR1-Tabletop 使用平均成功率；CALVIN 使用 ABC→D 设置下的平均长度 (Avg. Len.)；RoboChallenge 使用 Score；RoboTwin 2.0 使用 Hard 成功率。',
             limitations: '已知局限性',
             limitationsDesc: '不同基准测试的结果不能直接比较。不同论文可能使用略有不同的评估协议。',
             disclaimer: '免责声明',
@@ -290,13 +290,13 @@ export default function MethodologyPage() {
                     <h2 className="text-2xl font-bold text-slate-800 mb-6 text-center">
                         Supported Benchmarks
                     </h2>
-                    {/* Row 1: 3 centered items, equal width to row 2's 4-col cards */}
-                    <div className="flex justify-center gap-4 mb-4">
+                    {/* Row 1 */}
+                    <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 mb-4">
                         <a
                             href="https://github.com/Lifelong-Robot-Learning/LIBERO"
                             target="_blank"
                             rel="noopener noreferrer"
-                            className="w-[calc(25%_-_12px)] flex-none bg-blue-50 border border-blue-200 rounded-lg p-5 hover:shadow-md transition-shadow flex flex-col"
+                            className="bg-blue-50 border border-blue-200 rounded-lg p-5 hover:shadow-md transition-shadow flex flex-col"
                         >
                             <h3 className="font-semibold text-blue-800 text-lg">LIBERO</h3>
                             <p className="text-sm text-blue-600 mt-1">Average Success Rate (%)</p>
@@ -306,7 +306,7 @@ export default function MethodologyPage() {
                             href="https://github.com/Farama-Foundation/Metaworld"
                             target="_blank"
                             rel="noopener noreferrer"
-                            className="w-[calc(25%_-_12px)] flex-none bg-purple-50 border border-purple-200 rounded-lg p-5 hover:shadow-md transition-shadow flex flex-col"
+                            className="bg-purple-50 border border-purple-200 rounded-lg p-5 hover:shadow-md transition-shadow flex flex-col"
                         >
                             <h3 className="font-semibold text-purple-800 text-lg">Meta-World</h3>
                             <p className="text-sm text-purple-600 mt-1">Average Success Rate (%)</p>
@@ -316,15 +316,25 @@ export default function MethodologyPage() {
                             href="https://github.com/mees/calvin"
                             target="_blank"
                             rel="noopener noreferrer"
-                            className="w-[calc(25%_-_12px)] flex-none bg-emerald-50 border border-emerald-200 rounded-lg p-5 hover:shadow-md transition-shadow flex flex-col"
+                            className="bg-emerald-50 border border-emerald-200 rounded-lg p-5 hover:shadow-md transition-shadow flex flex-col"
                         >
                             <h3 className="font-semibold text-emerald-800 text-lg">CALVIN</h3>
                             <p className="text-sm text-emerald-600 mt-1">Average Length (Mainly ABC→D)</p>
                             <p className="text-xs text-emerald-500 mt-2 flex-grow">Long-horizon manipulation</p>
                         </a>
+                        <a
+                            href="https://robochallenge.ai/home"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="bg-teal-50 border border-teal-200 rounded-lg p-5 hover:shadow-md transition-shadow flex flex-col"
+                        >
+                            <h3 className="font-semibold text-teal-800 text-lg">RoboChallenge</h3>
+                            <p className="text-sm text-teal-600 mt-1">Score</p>
+                            <p className="text-xs text-teal-500 mt-2 flex-grow">Real-world robotic manipulation</p>
+                        </a>
                     </div>
-                    {/* Row 2: 4 items */}
-                    <div className="grid grid-cols-2 lg:grid-cols-4 gap-4">
+                    {/* Row 2 */}
+                    <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
                         <a
                             href="https://github.com/robotwin-Platform/RoboTwin"
                             target="_blank"
@@ -346,16 +356,6 @@ export default function MethodologyPage() {
                             <p className="text-xs text-orange-500 mt-2 flex-grow">Extended LIBERO with 6 categories</p>
                         </a>
                         <a
-                            href="https://robochallenge.ai/home"
-                            target="_blank"
-                            rel="noopener noreferrer"
-                            className="bg-teal-50 border border-teal-200 rounded-lg p-5 hover:shadow-md transition-shadow flex flex-col"
-                        >
-                            <h3 className="font-semibold text-teal-800 text-lg">RoboChallenge</h3>
-                            <p className="text-sm text-teal-600 mt-1">Score</p>
-                            <p className="text-xs text-teal-500 mt-2 flex-grow">Real-world robotic manipulation</p>
-                        </a>
-                        <a
                             href="https://robocasa.ai/"
                             target="_blank"
                             rel="noopener noreferrer"
@@ -364,6 +364,16 @@ export default function MethodologyPage() {
                             <h3 className="font-semibold text-rose-800 text-lg">RoboCasa-GR1-Tabletop</h3>
                             <p className="text-sm text-rose-600 mt-1">Average Success Rate (%)</p>
                             <p className="text-xs text-rose-500 mt-2 flex-grow">Tabletop manipulation tasks</p>
+                        </a>
+                        <a
+                            href="https://robocasa.ai/leaderboard.html"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="bg-cyan-50 border border-cyan-200 rounded-lg p-5 hover:shadow-md transition-shadow flex flex-col"
+                        >
+                            <h3 className="font-semibold text-cyan-800 text-lg">RoboCasa365</h3>
+                            <p className="text-sm text-cyan-600 mt-1">Average Success Rate (%)</p>
+                            <p className="text-xs text-cyan-500 mt-2 flex-grow">Atomic and composite household tasks</p>
                         </a>
                     </div>
                 </div>

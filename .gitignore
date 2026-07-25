@@ -50,3 +50,6 @@ assets/dex/*
 !assets/dex/raw/
 assets/dex/raw/*
 !assets/dex/raw/Dexterous Manipulation SOTA Leaderboard.xlsx
+
+# other temp files
+design.md

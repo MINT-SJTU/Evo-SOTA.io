@@ -91,6 +91,14 @@ interface SummaryData {
         top_5_sft: { name: string; score: number; rank: number }[];
         top_5_rl: { name: string; score: number; rank: number }[];
     };
+    robocasa365: {
+        total_models: number;
+        standard_opensource_count: number;
+        top_5: { name: string; score: number; rank: number }[];
+        top_5_sft: { name: string; score: number; rank: number }[];
+        top_5_rl: { name: string; score: number; rank: number }[];
+    };
+    total_unique_models: number;
 }
 
 interface NewsItem {
@@ -98,6 +106,8 @@ interface NewsItem {
     content_en: string;
     content_zh: string;
 }
+
+type SummaryBenchmark = Exclude<keyof SummaryData, 'total_unique_models'>;
 
 export default function Home() {
     const { t, locale } = useLanguage();
@@ -128,7 +138,7 @@ export default function Home() {
         const escapeRegExp = (value: string) => value.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
 
         // 榜单列表（需要粗体和蓝色）
-        const benchmarks = ['RoboTwin 2.0', 'RoboChallenge', 'RoboCasa-GR1-Tabletop', 'LIBERO Plus', 'LIBERO', 'Meta-World', 'CALVIN', 'Libero Plus', 'Libero', 'Calvin', 'Adroit', 'DexArt', 'Bi-DexHands', 'DexGraspNet'];
+        const benchmarks = ['RoboTwin 2.0', 'RoboChallenge', 'RoboCasa365', 'RoboCasa-GR1-Tabletop', 'LIBERO Plus', 'LIBERO', 'Meta-World', 'CALVIN', 'Libero Plus', 'Libero', 'Calvin', 'Adroit', 'DexArt', 'Bi-DexHands', 'DexGraspNet'];
         // 模型列表（需要斜体和紫色）
         const models = [
             'AIM', 'Fast-WAM', 'HoloBrain-0', 'InternVLA-A1', 'AnchorRefine', 'ST-pi', 'CorridorVLA', 'JoyAI-RA 0.1',
@@ -143,29 +153,35 @@ export default function Home() {
             'HAMLET', 'StarVLA-alpha', 'Dejavu', 'AAC', 'RESample', 'ProGAL-VLA',
             'ALAM', 'RLDX-1', 'ConsisVLA-4D', 'OA-WAM', 'VLA-GSE', 'LoopVLA', 'PriorVLA', 'Multi-view-VLA', 'GuidedVLA',
             'RotVLA', 'GTA-VLA', 'FrameSkip', 'Evo-depth', 'PhysBrain 1.0', 'DyGRO-VLA', 'RoVLA', 'GaussianDream',
-            'VLANeXt', 'PointACT', 'BehaviorVLA', 'GridS', 'LDA-1B', 'WorldPilot', 'GEAR-VLA', 'ActionMap', 'QDepth-VLA', 'VeriSpace', 'MemoryVLA++', 'MotionVLA', 'TBD-VLA', 'RhinoVLA', 'LARA', 'AffordanceVLA', 'WLA-0', 'ERVLA', '3DThinkVLA', 'GeoAlign', 'Qwen-VLA', 'GuidedVLA', 'AttenA+', 'BehaviorVLA', 'HARP-VLA', 'ELAN4D', 'GaussianDream', 'NIAF', 'OneWM-VLA', 'LA4VLA-1B', 'WALA', 'Abot-M0.5', 'Abot-M0', 'FabriVLA', 'StarVLA_QwenPIv3'
+            'VLANeXt', 'PointACT', 'BehaviorVLA', 'GridS', 'LDA-1B', 'WorldPilot', 'GEAR-VLA', 'ActionMap', 'QDepth-VLA', 'VeriSpace', 'MemoryVLA++', 'MotionVLA', 'TBD-VLA', 'RhinoVLA', 'LARA', 'AffordanceVLA', 'WLA-0', 'ERVLA', '3DThinkVLA', 'GeoAlign', 'Qwen-VLA', 'GuidedVLA', 'AttenA+', 'BehaviorVLA', 'HARP-VLA', 'ELAN4D', 'GaussianDream', 'NIAF', 'OneWM-VLA', 'LA4VLA-1B', 'WALA', 'Abot-M0.5', 'Abot-M0', 'FabriVLA', 'StarVLA_QwenPIv3',
+            'KAM-WM', 'PearlVLA', 'VLAFlow', 'InternVLA-A1.5', 'FoMoVLA', 'CLAP', 'IVRA', 'WoVR', 'LaMP', 'LaWAM',
+            'UniviewVLA', 'SSI-policy', 'MIRTH', 'WorldBagel', 'CoRE-VLA', 'CAC-VLA', 'SUREFlow', 'EDAR', 'VistaVLA',
+            'ExToken', 'AC-VLA', 'VLA-Corrector', 'HiMoE-VLA', 'PriGo', 'TS-Mask VLA', 'Qwen-RobotManip', 'GeoProp',
+            'EquiVLA', 'ACE-Ego-0', 'FineVLA', 'SANTS', 'X-Tokenizer', 'RepWAM', 'WAM4D', 'EventVLA', 'GigaWorld-policy'
         ];
         const redImportant = ['Wishing everyone a happy Lunar New Year!', '祝大家新年快乐！', 'Searching models is available now!', '模型搜索功能已上线！', 'Model detail pages are now available!', '模型详情页现已上线!'];
 
         let formattedContent = content;
 
         // 先处理榜单
-        benchmarks.forEach(benchmark => {
-            const regex = new RegExp(`(${escapeRegExp(benchmark)})`, 'g');
-            formattedContent = formattedContent.replace(
-                regex,
-                '<span class="font-bold text-amber-700">$1</span>'
-            );
-        });
+        const benchmarkRegex = new RegExp(
+            `(${[...benchmarks].sort((a, b) => b.length - a.length).map(escapeRegExp).join('|')})`,
+            'g'
+        );
+        formattedContent = formattedContent.replace(
+            benchmarkRegex,
+            '<span class="font-bold text-amber-700">$1</span>'
+        );
 
         // 再处理模型
-        models.forEach(model => {
-            const regex = new RegExp(`(${escapeRegExp(model)})`, 'g');
-            formattedContent = formattedContent.replace(
-                regex,
-                '<span class="italic text-amber-700">$1</span>'
-            );
-        });
+        const modelRegex = new RegExp(
+            `(${[...models].sort((a, b) => b.length - a.length).map(escapeRegExp).join('|')})`,
+            'g'
+        );
+        formattedContent = formattedContent.replace(
+            modelRegex,
+            '<span class="italic text-amber-700">$1</span>'
+        );
 
         redImportant.forEach(festival => {
             const regex = new RegExp(`(${escapeRegExp(festival)})`, 'g');
@@ -190,7 +206,7 @@ export default function Home() {
 
     // 构建 benchmarks 数据 - 顺序: libero plus, libero, metaworld, calvin, robochallenge
     // 根据 includeRlModels 选择数据源
-    const getTopModels = (benchmark: keyof SummaryData) => {
+    const getTopModels = (benchmark: SummaryBenchmark) => {
         if (!summaryData) return [];
         const data = summaryData[benchmark];
         if (includeRlModels) {
@@ -199,7 +215,7 @@ export default function Home() {
         return data.top_5_sft?.map(m => ({ rank: m.rank, name: m.name, score: m.score })) || [];
     };
 
-    // 第一行: libero, metaworld, calvin
+    // 第一行: LIBERO, Meta-World, CALVIN, RoboChallenge
     const firstRowBenchmarks = [
         {
             id: 'libero',
@@ -228,9 +244,18 @@ export default function Home() {
             topModels: getTopModels('calvin'),
             color: 'green',
         },
+        {
+            id: 'robochallenge',
+            name: t.benchmarkDesc.robochallenge.name,
+            description: t.benchmarkDesc.robochallenge.description,
+            metric: t.benchmarkDesc.robochallenge.metric,
+            modelCount: summaryData?.robochallenge.standard_opensource_count || 0,
+            topModels: getTopModels('robochallenge'),
+            color: 'teal',
+        },
     ];
 
-    // 第二行: robotwin2, libero plus, robochallenge, robocasa
+    // 第二行: RoboTwin 2.0, LIBERO Plus, RoboCasa-GR1-Tabletop, RoboCasa365
     const secondRowBenchmarks = [
         {
             id: 'robotwin2',
@@ -251,15 +276,6 @@ export default function Home() {
             color: 'orange',
         },
         {
-            id: 'robochallenge',
-            name: t.benchmarkDesc.robochallenge?.name || 'RoboChallenge',
-            description: t.benchmarkDesc.robochallenge?.description || 'Real-world robotic manipulation benchmark',
-            metric: t.benchmarkDesc.robochallenge?.metric || 'Score',
-            modelCount: summaryData?.robochallenge?.standard_opensource_count || 0,
-            topModels: getTopModels('robochallenge'),
-            color: 'teal',
-        },
-        {
             id: 'robocasa_gr1_tabletop',
             name: t.benchmarkDesc.robocasa?.name || 'RoboCasa-GR1-Tabletop',
             description: t.benchmarkDesc.robocasa?.description || 'Tabletop manipulation tasks benchmark based on RoboCasa',
@@ -267,6 +283,15 @@ export default function Home() {
             modelCount: summaryData?.robocasa?.standard_opensource_count || 0,
             topModels: getTopModels('robocasa'),
             color: 'rose',
+        },
+        {
+            id: 'robocasa365',
+            name: t.benchmarkDesc.robocasa365.name,
+            description: t.benchmarkDesc.robocasa365.description,
+            metric: t.benchmarkDesc.robocasa365.metric,
+            modelCount: summaryData?.robocasa365.standard_opensource_count || 0,
+            topModels: getTopModels('robocasa365'),
+            color: 'cyan',
         },
     ];
 
@@ -319,6 +344,13 @@ export default function Home() {
             text: 'text-amber-600',
             badge: 'bg-amber-100 text-amber-800',
             button: 'bg-amber-600 hover:bg-amber-700',
+        },
+        cyan: {
+            bg: 'bg-cyan-50',
+            border: 'border-cyan-200',
+            text: 'text-cyan-600',
+            badge: 'bg-cyan-100 text-cyan-800',
+            button: 'bg-cyan-600 hover:bg-cyan-700',
         },
     };
 
@@ -461,14 +493,14 @@ export default function Home() {
                         </div>
                     </div>
 
-                    {/* 第一行: LIBERO, MetaWorld, CALVIN */}
-                    <div className="flex justify-center gap-5 mb-5">
+                    {/* 第一行: LIBERO, Meta-World, CALVIN, RoboChallenge */}
+                    <div className="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-4 gap-5 mb-5">
                         {firstRowBenchmarks.map((benchmark) => {
                             const colors = colorClasses[benchmark.color as keyof typeof colorClasses];
                             return (
                                 <div
                                     key={benchmark.id}
-                                    className={`w-[calc(25%_-_15px)] flex-none rounded-xl border-2 ${colors.border} ${colors.bg} overflow-hidden card-hover`}
+                                    className={`min-w-0 rounded-xl border-2 ${colors.border} ${colors.bg} overflow-hidden card-hover`}
                                 >
                                     {/* Card Header */}
                                     <div className="p-6 border-b border-slate-200 bg-white">
@@ -499,7 +531,7 @@ export default function Home() {
                                                     key={model.rank}
                                                     className="flex items-center justify-between bg-white rounded-lg px-3 py-2 shadow-sm"
                                                 >
-                                                    <div className="flex items-center space-x-3">
+                                                    <div className="flex items-center space-x-3 min-w-0">
                                                         <span
                                                             className={`w-6 h-6 rounded-full flex items-center justify-center text-xs font-bold ${model.rank === 1
                                                                 ? 'bg-yellow-100 text-yellow-700'
@@ -514,7 +546,7 @@ export default function Home() {
                                                         </span>
                                                         <Link
                                                             href={`/models/${encodeURIComponent(model.name)}`}
-                                                            className="font-medium text-slate-800 hover:text-primary-600 text-sm transition-colors"
+                                                            className="font-medium text-slate-800 hover:text-primary-600 text-sm transition-colors truncate"
                                                             onClick={(e) => e.stopPropagation()}
                                                         >
                                                             {model.name}
@@ -542,8 +574,8 @@ export default function Home() {
                         })}
                     </div>
 
-                    {/* 第二行: RoboTwin 2.0, LIBERO Plus, RoboChallenge, RoboCasa-GR1_tabletop */}
-                    <div className="grid grid-cols-2 xl:grid-cols-4 gap-5">
+                    {/* 第二行: RoboTwin 2.0, LIBERO Plus, RoboCasa-GR1-Tabletop, RoboCasa365 */}
+                    <div className="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-4 gap-5">
                         {secondRowBenchmarks.map((benchmark) => {
                             const colors = colorClasses[benchmark.color as keyof typeof colorClasses];
                             return (
@@ -580,7 +612,7 @@ export default function Home() {
                                                     key={model.rank}
                                                     className="flex items-center justify-between bg-white rounded-lg px-3 py-2 shadow-sm"
                                                 >
-                                                    <div className="flex items-center space-x-3">
+                                                    <div className="flex items-center space-x-3 min-w-0">
                                                         <span
                                                             className={`w-6 h-6 rounded-full flex items-center justify-center text-xs font-bold ${model.rank === 1
                                                                 ? 'bg-yellow-100 text-yellow-700'
@@ -595,7 +627,7 @@ export default function Home() {
                                                         </span>
                                                         <Link
                                                             href={`/models/${encodeURIComponent(model.name)}`}
-                                                            className="font-medium text-slate-800 hover:text-primary-600 text-sm transition-colors"
+                                                            className="font-medium text-slate-800 hover:text-primary-600 text-sm transition-colors truncate"
                                                             onClick={(e) => e.stopPropagation()}
                                                         >
                                                             {model.name}
