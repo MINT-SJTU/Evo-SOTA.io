@@ -6,6 +6,7 @@ import { useLanguage } from '@/lib/LanguageContext';
 type Model = Record<string, unknown> & {
     name: string;
     is_rl?: boolean;
+    data_scaling?: boolean;
 };
 
 interface Leader {
@@ -70,7 +71,9 @@ export default function StatsOverview() {
 
                 const benchmarks = benchmarkConfigs.map((config, index): BenchmarkStat => {
                     const raw = config.id === 'calvin' ? datasets[index].abc_d : datasets[index];
-                    const models: Model[] = raw.standard_opensource || [];
+                    const models: Model[] = (raw.standard_opensource || []).filter(
+                        (model: Model) => config.id !== 'robotwin' || model.data_scaling === true
+                    );
                     const getLeader = (isRl: boolean): Leader => {
                         const model = models.find(item => Boolean(item.is_rl) === isRl);
                         const score = model?.[config.metric];

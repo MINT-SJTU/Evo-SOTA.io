@@ -14,6 +14,7 @@ interface RobotwinModel {
     is_rl?: boolean;
     easy: number | null;
     hard: number | null;
+    data_scaling: boolean;
     note: string;
     rank: number;
     source: string;
@@ -32,7 +33,8 @@ export default function RobotwinPage() {
     const [loading, setLoading] = useState(true);
     const [expandedRows, setExpandedRows] = useState<Set<string>>(new Set());
     const [showClosedSource, setShowClosedSource] = useState(false);
-    const [evalSetting, setEvalSetting] = useState<'easy' | 'hard'>('hard');
+    const [evaluationSetting, setEvaluationSetting] = useState<'data_scaling' | 'no_data_scaling'>('data_scaling');
+    const [sortingSetting, setSortingSetting] = useState<'easy' | 'hard'>('hard');
     const [sortBy, setSortBy] = useState<'rank' | 'easy' | 'hard' | 'date'>('rank');
     const [sortOrder, setSortOrder] = useState<'asc' | 'desc'>('asc');
     const [modelTypeFilter, setModelTypeFilter] = useState<'all' | 'sft' | 'rl'>('sft');
@@ -41,9 +43,11 @@ export default function RobotwinPage() {
         const params = new URLSearchParams(window.location.search);
         const type = params.get('type');
         const filter = params.get('filter');
+        const setting = params.get('setting');
         if (type === 'rl') setModelTypeFilter('rl');
         else if (type === 'sft') setModelTypeFilter('sft');
         if (filter === 'all') setShowClosedSource(true);
+        if (setting === 'no_data_scaling') setEvaluationSetting('no_data_scaling');
     }, []);
 
     const texts = {
@@ -59,7 +63,6 @@ export default function RobotwinPage() {
             date: 'Date',
             paper: 'Paper',
             github: 'Code',
-            clickToExpand: 'Click row to expand details',
             clickModelName: 'Click model name to view detailed model information',
             showAllModels: 'Include All Models',
             openSourceOnly: 'Open-Source Only',
@@ -71,6 +74,11 @@ export default function RobotwinPage() {
             modelTypeSft: 'SFT Only',
             modelTypeRl: 'RL Only',
             evalSettings: 'Evaluation Setting',
+            dataScaling: 'Data scaling',
+            noDataScaling: 'No data scaling',
+            sortingSettings: 'Sorting Setting',
+            dataScalingNote: 'Data scaling: trained with 50 clean trajectories and 500 random trajectories per task.',
+            noDataScalingNote: 'No data scaling: trained with only 50 clean trajectories per task.',
             evalNoteEasy: 'Easy: clean environment without distractors.',
             evalNoteHard: 'Hard: domain-randomized with clutter, lighting variations, texture changes, and height perturbations.',
         },
@@ -86,7 +94,6 @@ export default function RobotwinPage() {
             date: '日期',
             paper: '论文',
             github: '代码',
-            clickToExpand: '点击行展开详情',
             clickModelName: '点击模型名称查看详细模型信息',
             showAllModels: '显示全部模型',
             openSourceOnly: '仅开源模型',
@@ -97,7 +104,12 @@ export default function RobotwinPage() {
             modelTypeAll: '全部模型',
             modelTypeSft: '仅 SFT',
             modelTypeRl: '仅 RL',
-            evalSettings: '评测设置',
+            evalSettings: '训练设置',
+            dataScaling: 'Data scaling',
+            noDataScaling: 'No data scaling',
+            sortingSettings: '排序设置',
+            dataScalingNote: 'Data scaling：每个任务使用 50 条 clean 轨迹和 500 条 random 轨迹训练。',
+            noDataScalingNote: 'No data scaling：每个任务仅使用 50 条 clean 轨迹训练。',
             evalNoteEasy: 'Easy：干净环境，无干扰物。',
             evalNoteHard: 'Hard：域随机化环境，含杂乱物品、光照变化、纹理变化和高度扰动。',
         }
@@ -175,8 +187,10 @@ export default function RobotwinPage() {
         if (showClosedSource) {
             models = [...models, ...data.standard_closed];
         }
+        const usesDataScaling = evaluationSetting === 'data_scaling';
+        models = models.filter(m => m.data_scaling === usesDataScaling);
         models = applyModelTypeFilter(models);
-        const primaryKey = evalSetting === 'easy' ? 'easy' : 'hard';
+        const primaryKey = sortingSetting === 'easy' ? 'easy' : 'hard';
         models.sort((a, b) => (b[primaryKey] || 0) - (a[primaryKey] || 0));
         return models.map((m, i) => ({ ...m, rank: i + 1 }));
     };
@@ -216,7 +230,7 @@ export default function RobotwinPage() {
                                 {t.model}
                             </th>
                             <th
-                                className={`px-4 py-3 text-left text-sm font-semibold cursor-pointer hover:bg-slate-100 ${evalSetting === 'easy' ? 'text-amber-600' : 'text-slate-700'}`}
+                                className={`px-4 py-3 text-left text-sm font-semibold cursor-pointer hover:bg-slate-100 ${sortingSetting === 'easy' ? 'text-amber-600' : 'text-slate-700'}`}
                                 onClick={() => handleSort('easy')}
                             >
                                 <div className="flex items-center gap-1">
@@ -227,7 +241,7 @@ export default function RobotwinPage() {
                                 </div>
                             </th>
                             <th
-                                className={`px-4 py-3 text-left text-sm font-semibold cursor-pointer hover:bg-slate-100 ${evalSetting === 'hard' ? 'text-amber-600' : 'text-slate-700'}`}
+                                className={`px-4 py-3 text-left text-sm font-semibold cursor-pointer hover:bg-slate-100 ${sortingSetting === 'hard' ? 'text-amber-600' : 'text-slate-700'}`}
                                 onClick={() => handleSort('hard')}
                             >
                                 <div className="flex items-center gap-1">
@@ -254,7 +268,7 @@ export default function RobotwinPage() {
                     </thead>
                     <tbody>
                         {models.map((model, idx) => {
-                            const rowKey = `main-${model.name}-${idx}`;
+                            const rowKey = `main-${model.name}-${model.data_scaling}-${idx}`;
                             return (
                                 <>
                                     <tr
@@ -280,12 +294,12 @@ export default function RobotwinPage() {
                                             <div className="text-xs text-slate-500">{model.source || ''}</div>
                                         </td>
                                         <td className="px-4 py-3">
-                                            <span className={`font-mono text-lg font-semibold ${evalSetting === 'easy' ? 'text-amber-600' : 'text-slate-500'}`}>
+                                            <span className={`font-mono text-lg font-semibold ${sortingSetting === 'easy' ? 'text-amber-600' : 'text-slate-500'}`}>
                                                 {formatValue(model.easy)}
                                             </span>
                                         </td>
                                         <td className="px-4 py-3">
-                                            <span className={`font-mono text-lg font-semibold ${evalSetting === 'hard' ? 'text-amber-600' : 'text-slate-500'}`}>
+                                            <span className={`font-mono text-lg font-semibold ${sortingSetting === 'hard' ? 'text-amber-600' : 'text-slate-500'}`}>
                                                 {formatValue(model.hard)}
                                             </span>
                                         </td>
@@ -476,19 +490,45 @@ export default function RobotwinPage() {
                 </div>
 
                 <div className="flex flex-wrap gap-x-5 gap-y-0.5 mb-4 text-sm text-slate-500">
-                    <span>💡 {t.clickToExpand}</span>
                     <span>🔗 {t.clickModelName}</span>
                 </div>
 
-                {/* Standard Models heading + Easy/Hard toggle on same line */}
+                <div className="flex flex-wrap items-center justify-between gap-4 mb-4">
+                    <span className="text-sm font-medium text-slate-700">{t.evalSettings}</span>
+                    <div className="inline-flex rounded-lg overflow-hidden border border-amber-200">
+                        <button
+                            onClick={() => setEvaluationSetting('data_scaling')}
+                            className={`px-3 py-1.5 text-sm font-medium transition-all ${evaluationSetting === 'data_scaling'
+                                ? 'bg-amber-600 text-white'
+                                : 'bg-white text-amber-600 hover:bg-amber-50'
+                                }`}
+                        >
+                            {t.dataScaling}
+                        </button>
+                        <button
+                            onClick={() => setEvaluationSetting('no_data_scaling')}
+                            className={`px-3 py-1.5 text-sm font-medium transition-all border-l border-amber-200 ${evaluationSetting === 'no_data_scaling'
+                                ? 'bg-amber-600 text-white'
+                                : 'bg-white text-amber-600 hover:bg-amber-50'
+                                }`}
+                        >
+                            {t.noDataScaling}
+                        </button>
+                    </div>
+                </div>
+
                 <div className="flex flex-wrap items-center justify-between gap-4 mb-4">
                     <h2 className="text-xl font-bold text-slate-800">{t.standardModels}</h2>
                     <div className="flex items-center gap-2">
-                        <span className="text-sm text-slate-600">{t.evalSettings}:</span>
+                        <span className="text-sm text-slate-600">{t.sortingSettings}:</span>
                         <div className="inline-flex rounded-lg overflow-hidden border border-amber-200">
                             <button
-                                onClick={() => setEvalSetting('easy')}
-                                className={`px-3 py-1.5 text-sm font-medium transition-all ${evalSetting === 'easy'
+                                onClick={() => {
+                                    setSortingSetting('easy');
+                                    setSortBy('rank');
+                                    setSortOrder('asc');
+                                }}
+                                className={`px-3 py-1.5 text-sm font-medium transition-all ${sortingSetting === 'easy'
                                     ? 'bg-amber-600 text-white'
                                     : 'bg-white text-amber-600 hover:bg-amber-50'
                                     }`}
@@ -496,8 +536,12 @@ export default function RobotwinPage() {
                                 Easy
                             </button>
                             <button
-                                onClick={() => setEvalSetting('hard')}
-                                className={`px-3 py-1.5 text-sm font-medium transition-all border-l border-amber-200 ${evalSetting === 'hard'
+                                onClick={() => {
+                                    setSortingSetting('hard');
+                                    setSortBy('rank');
+                                    setSortOrder('asc');
+                                }}
+                                className={`px-3 py-1.5 text-sm font-medium transition-all border-l border-amber-200 ${sortingSetting === 'hard'
                                     ? 'bg-amber-600 text-white'
                                     : 'bg-white text-amber-600 hover:bg-amber-50'
                                     }`}
@@ -518,6 +562,8 @@ export default function RobotwinPage() {
 
                 <div className="mt-6 p-4 bg-amber-50 border border-amber-200 rounded-lg">
                     <h3 className="text-sm font-semibold text-amber-800 mb-2">{t.evalSettings}</h3>
+                    <p className="text-sm text-amber-700">{t.dataScalingNote}</p>
+                    <p className="text-sm text-amber-700 mb-2">{t.noDataScalingNote}</p>
                     <p className="text-sm text-amber-700">{t.evalNoteEasy}</p>
                     <p className="text-sm text-amber-700">{t.evalNoteHard}</p>
                 </div>

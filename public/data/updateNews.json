@@ -1,6 +1,11 @@
 {
     "news": [
         {
+            "date": "🗓️ 2026-07-26: ",
+            "content_en": "Bug fixed: RoboTwin 2.0 results now distinguish Data scaling and No data scaling. Please refer to the bottom of RoboTwin 2.0 page for specific instructions.",
+            "content_zh": "问题修复: RoboTwin 2.0 成绩现已区分 Data scaling 与 No data scaling。具体说明见 RoboTwin 2.0 榜单页下方"
+        },
+        {
             "date": "🗓️ 2026-07-25: ",
             "content_en": "🚀 Major update: New Leaderboard: RoboCasa365 and related models. New models: Add KAM-WM, PearlVLA, VLAFlow, InternVLA-A1.5, FoMoVLA, CLAP, IVRA, WoVR, LaMP, LaWAM, UniviewVLA, SSI-policy, MIRTH, WorldBagel, CoRE-VLA, CAC-VLA, SUREFlow, EDAR, VistaVLA, ExToken, AC-VLA, VLA-Corrector, HiMoE-VLA, PriGo, TS-Mask VLA to LIBERO; PearlVLA, VLAFlow, InternVLA-A1.5, FoMoVLA, LaMP, CAC-VLA, Qwen-RobotManip to LIBERO Plus; SUREFlow, EDAR, VLA-Corrector, GeoProp to Meta-World; UniviewVLA, EDAR, HiMoE-VLA, EquiVLA, PriGo, TS-Mask VLA to CALVIN; ACE-Ego-0, FoMoVLA, CoRE-VLA to Robocasa-GR1-Tabletop; FineVLA, SANTS, X-Tokenizer, RepWAM, WAM4D, ACE-Ego-0, EventVLA, KAM-WM, InternVLA-A1.5, LaWAM, GigaWorld-policy, Qwen-RobotManip to RoboTwin 2.0",
             "content_zh": "🚀 重大更新：新增榜单：RoboCasa365 及相关模型。新增模型：增加 KAM-WM, PearlVLA, VLAFlow, InternVLA-A1.5, FoMoVLA, CLAP, IVRA, WoVR, LaMP, LaWAM, UniviewVLA, SSI-policy, MIRTH, WorldBagel, CoRE-VLA, CAC-VLA, SUREFlow, EDAR, VistaVLA, ExToken, AC-VLA, VLA-Corrector, HiMoE-VLA, PriGo, TS-Mask VLA 到 LIBERO；PearlVLA, VLAFlow, InternVLA-A1.5, FoMoVLA, LaMP, CAC-VLA, Qwen-RobotManip 到 LIBERO Plus；SUREFlow, EDAR, VLA-Corrector, GeoProp 到 Meta-World；UniviewVLA, EDAR, HiMoE-VLA, EquiVLA, PriGo, TS-Mask VLA 到 CALVIN；ACE-Ego-0, FoMoVLA, CoRE-VLA 到 RoboCasa-GR1-Tabletop；FineVLA, SANTS, X-Tokenizer, RepWAM, WAM4D, ACE-Ego-0, EventVLA, KAM-WM, InternVLA-A1.5, LaWAM, GigaWorld-policy, Qwen-RobotManip 到 RoboTwin 2.0"

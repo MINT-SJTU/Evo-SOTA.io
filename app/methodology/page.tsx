@@ -12,7 +12,7 @@ export default function MethodologyPage() {
             dataSource: 'Data Sources',
             dataSourceDesc: 'All benchmark results are collected from published papers and official repositories. We do not re-run experiments.',
             rankingRules: 'Ranking Rules',
-            rankingRulesDesc: 'Models are ranked by their primary metric on each benchmark. LIBERO, Meta-World, RoboCasa365, and RoboCasa-GR1-Tabletop use Average Success Rate. CALVIN uses Average Length (Avg. Len.) on the ABC→D setting, RoboChallenge uses Score, and RoboTwin 2.0 uses Hard Success Rate.',
+            rankingRulesDesc: 'Models are ranked by their primary metric on each benchmark. LIBERO, Meta-World, RoboCasa365, and RoboCasa-GR1-Tabletop use Average Success Rate. CALVIN uses Average Length (Avg. Len.) on the ABC→D setting, RoboChallenge uses Score, and the main RoboTwin 2.0 ranking uses Hard Success Rate with Data scaling enabled.',
             limitations: 'Known Limitations',
             limitationsDesc: 'Results across different benchmarks are not directly comparable. Different papers may use slightly different evaluation protocols.',
             disclaimer: 'Disclaimer',
@@ -40,7 +40,7 @@ export default function MethodologyPage() {
             dataSource: '数据来源',
             dataSourceDesc: '所有基准测试结果均来自已发表的论文和官方代码库。我们不重新运行实验。',
             rankingRules: '排名规则',
-            rankingRulesDesc: '模型根据每个基准测试的主要指标进行排名。LIBERO、Meta-World、RoboCasa365 和 RoboCasa-GR1-Tabletop 使用平均成功率；CALVIN 使用 ABC→D 设置下的平均长度 (Avg. Len.)；RoboChallenge 使用 Score；RoboTwin 2.0 使用 Hard 成功率。',
+            rankingRulesDesc: '模型根据每个基准测试的主要指标进行排名。LIBERO、Meta-World、RoboCasa365 和 RoboCasa-GR1-Tabletop 使用平均成功率；CALVIN 使用 ABC→D 设置下的平均长度 (Avg. Len.)；RoboChallenge 使用 Score；RoboTwin 2.0 主排名使用启用 Data scaling 时的 Hard 成功率。',
             limitations: '已知局限性',
             limitationsDesc: '不同基准测试的结果不能直接比较。不同论文可能使用略有不同的评估协议。',
             disclaimer: '免责声明',
@@ -342,7 +342,7 @@ export default function MethodologyPage() {
                             className="bg-amber-50 border border-amber-200 rounded-lg p-5 hover:shadow-md transition-shadow flex flex-col"
                         >
                             <h3 className="font-semibold text-amber-800 text-lg">RoboTwin 2.0</h3>
-                            <p className="text-sm text-amber-600 mt-1">Hard Success Rate (%)</p>
+                            <p className="text-sm text-amber-600 mt-1">Hard Success Rate (%) · Data scaling</p>
                             <p className="text-xs text-amber-500 mt-2 flex-grow">Bimanual manipulation with domain randomization</p>
                         </a>
                         <a

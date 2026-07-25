@@ -22,6 +22,7 @@ interface DataPoint {
     benchmark: string;
     paper_url?: string;
     is_opensource?: boolean;
+    trainingSetting?: 'Data scaling' | 'No data scaling';
 }
 
 interface LiberoModel {
@@ -79,6 +80,7 @@ interface RobotwinModel {
     hard: number | null;
     paper_url?: string | null;
     is_opensource?: boolean;
+    data_scaling: boolean;
 }
 
 interface RoboCasa365Model {
@@ -140,6 +142,11 @@ const CustomTooltip = ({ active, payload }: { active?: boolean; payload?: Array<
                     </span>
                     : {data.score.toFixed(2)}
                 </p>
+                {data.trainingSetting && (
+                    <p className="text-sm text-slate-600">
+                        Training setting: <span className="font-medium">{data.trainingSetting}</span>
+                    </p>
+                )}
             </div>
         );
     }
@@ -333,7 +340,8 @@ export default function ProgressChart() {
                         score: m.hard!,
                         benchmark: 'RoboTwin 2.0',
                         paper_url: m.paper_url || undefined,
-                        is_opensource: m.is_opensource
+                        is_opensource: m.is_opensource,
+                        trainingSetting: m.data_scaling ? 'Data scaling' : 'No data scaling'
                     }));
                 setRobotwinData(robotwinPoints);
 
@@ -1037,9 +1045,15 @@ export default function ProgressChart() {
                                                     label={{ value: '2025', fill: '#94a3b8', fontSize: 10 }}
                                                 />
                                                 <Scatter
-                                                    name="RoboTwin 2.0"
-                                                    data={getDisplayData(robotwinData)}
+                                                    name="Data scaling"
+                                                    data={getDisplayData(robotwinData.filter(point => point.trainingSetting === 'Data scaling'))}
                                                     fill="#d97706"
+                                                    fillOpacity={0.7}
+                                                />
+                                                <Scatter
+                                                    name="No data scaling"
+                                                    data={getDisplayData(robotwinData.filter(point => point.trainingSetting === 'No data scaling'))}
+                                                    fill="#64748b"
                                                     fillOpacity={0.7}
                                                 />
                                             </ScatterChart>

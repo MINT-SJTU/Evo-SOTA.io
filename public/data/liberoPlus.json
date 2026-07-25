@@ -529,6 +529,28 @@
       "rank": 24
     },
     {
+      "name": "Evo-1",
+      "base_name": "Evo-1",
+      "setting": "",
+      "paper_url": "https://arxiv.org/abs/2511.04555",
+      "pub_date": "2025-11",
+      "is_opensource": true,
+      "opensource_url": "https://github.com/MINT-SJTU/Evo-1",
+      "is_rl": false,
+      "camera": 44.9,
+      "robot": 49.4,
+      "language": 63.6,
+      "light": 83.1,
+      "background": 85.5,
+      "noise": 70.4,
+      "layout": 62.9,
+      "total": 65.7,
+      "source": "original",
+      "is_standard": true,
+      "note": "",
+      "rank": 25
+    },
+    {
       "name": "pi0-FAST",
       "base_name": "pi0-FAST",
       "setting": "",
@@ -548,7 +570,7 @@
       "source": "from Libero-plus",
       "is_standard": true,
       "note": "",
-      "rank": 25
+      "rank": 26
     },
     {
       "name": "SRPO",
@@ -570,7 +592,7 @@
       "source": "original",
       "is_standard": true,
       "note": "",
-      "rank": 26
+      "rank": 27
     },
     {
       "name": "OpenVLA-OFT (without wrist input)",
@@ -592,7 +614,7 @@
       "source": "from Libero-plus",
       "is_standard": true,
       "note": "",
-      "rank": 27
+      "rank": 28
     },
     {
       "name": "pi0",
@@ -614,7 +636,7 @@
       "source": "from Libero-plus",
       "is_standard": true,
       "note": "",
-      "rank": 28
+      "rank": 29
     },
     {
       "name": "UniVLA",
@@ -636,7 +658,7 @@
       "source": "from Libero-plus",
       "is_standard": true,
       "note": "",
-      "rank": 29
+      "rank": 30
     },
     {
       "name": "NORA",
@@ -658,7 +680,7 @@
       "source": "from Libero-plus",
       "is_standard": true,
       "note": "",
-      "rank": 30
+      "rank": 31
     },
     {
       "name": "WorldVLA",
@@ -680,7 +702,7 @@
       "source": "from Libero-plus",
       "is_standard": true,
       "note": "",
-      "rank": 31
+      "rank": 32
     },
     {
       "name": "OpenVLA",
@@ -702,7 +724,7 @@
       "source": "from Libero-plus",
       "is_standard": true,
       "note": "",
-      "rank": 32
+      "rank": 33
     }
   ],
   "standard_closed": [

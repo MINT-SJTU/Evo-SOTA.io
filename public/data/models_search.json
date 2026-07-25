@@ -99,6 +99,7 @@
             "easy": 94.0,
             "hard": 94.2
           },
+          "data_scaling": true,
           "rank": 1
         }
       ],
@@ -220,7 +221,8 @@
           "data": {
             "easy": 65.7,
             "hard": 22.4
-          }
+          },
+          "data_scaling": false
         }
       ]
     },
@@ -350,6 +352,7 @@
             "easy": 93.3,
             "hard": 93.0
           },
+          "data_scaling": true,
           "rank": 2
         }
       ]
@@ -1296,7 +1299,8 @@
           "data": {
             "easy": 91.06,
             "hard": 89.92
-          }
+          },
+          "data_scaling": true
         }
       ]
     },
@@ -1760,6 +1764,7 @@
             "easy": 92.94,
             "hard": 90.02
           },
+          "data_scaling": true,
           "rank": 7
         }
       ]
@@ -1984,7 +1989,8 @@
           "data": {
             "easy": 86.1,
             "hard": 87.2
-          }
+          },
+          "data_scaling": true
         }
       ]
     },
@@ -2119,7 +2125,8 @@
             "easy": 84.7,
             "hard": 80.9
           },
-          "rank": 18
+          "data_scaling": true,
+          "rank": 19
         }
       ]
     },
@@ -2160,7 +2167,8 @@
           "data": {
             "easy": 89.3,
             "hard": 88.4
-          }
+          },
+          "data_scaling": true
         }
       ]
     },
@@ -2196,7 +2204,8 @@
           "data": {
             "easy": 93.82,
             "hard": 89.86
-          }
+          },
+          "data_scaling": true
         }
       ]
     },
@@ -2248,7 +2257,8 @@
           "data": {
             "easy": 91.12,
             "hard": 90.62
-          }
+          },
+          "data_scaling": true
         }
       ]
     },
@@ -2288,7 +2298,8 @@
             "easy": 83.8,
             "hard": 81.6
           },
-          "rank": 17
+          "data_scaling": true,
+          "rank": 18
         }
       ]
     },
@@ -2401,6 +2412,7 @@
             "easy": 92.64,
             "hard": 89.8
           },
+          "data_scaling": true,
           "rank": 8
         }
       ]
@@ -2642,7 +2654,8 @@
           "data": {
             "easy": 93.7,
             "hard": 94.0
-          }
+          },
+          "data_scaling": true
         }
       ],
       "robocasa365": [
@@ -3325,7 +3338,8 @@
             "easy": 85.18,
             "hard": 86.06
           },
-          "rank": 13
+          "data_scaling": true,
+          "rank": 14
         }
       ]
     },
@@ -3437,7 +3451,8 @@
           "data": {
             "easy": 89.6,
             "hard": 88.5
-          }
+          },
+          "data_scaling": true
         }
       ]
     },
@@ -3776,7 +3791,8 @@
             "easy": 48.2,
             "hard": 50.0
           },
-          "rank": 21
+          "data_scaling": true,
+          "rank": 23
         }
       ]
     },
@@ -4087,6 +4103,7 @@
             "easy": 93.06,
             "hard": 91.86
           },
+          "data_scaling": true,
           "rank": 4
         }
       ]
@@ -4360,7 +4377,8 @@
             "easy": 86.8,
             "hard": 82.5
           },
-          "rank": 16
+          "data_scaling": true,
+          "rank": 17
         }
       ]
     },
@@ -4402,7 +4420,8 @@
           "data": {
             "easy": 94.6,
             "hard": 94.2
-          }
+          },
+          "data_scaling": true
         }
       ]
     },
@@ -4611,7 +4630,8 @@
             "easy": 88.2,
             "hard": 88.3
           },
-          "rank": 10
+          "data_scaling": true,
+          "rank": 11
         }
       ]
     },
@@ -4726,7 +4746,8 @@
           "data": {
             "easy": 94.0,
             "hard": 92.1
-          }
+          },
+          "data_scaling": true
         }
       ]
     },
@@ -4906,7 +4927,8 @@
           "data": {
             "easy": 90.48,
             "hard": 89.28
-          }
+          },
+          "data_scaling": true
         }
       ]
     },
@@ -5424,7 +5446,8 @@
           "data": {
             "easy": 95.8,
             "hard": 96.08
-          }
+          },
+          "data_scaling": true
         }
       ]
     },
@@ -5472,7 +5495,8 @@
           "data": {
             "easy": 93.82,
             "hard": 93.3
-          }
+          },
+          "data_scaling": true
         }
       ]
     },
@@ -6331,6 +6355,7 @@
             "easy": 91.88,
             "hard": 91.78
           },
+          "data_scaling": true,
           "rank": 5
         }
       ]
@@ -6498,7 +6523,8 @@
             "easy": 87.0,
             "hard": 85.0
           },
-          "rank": 15
+          "data_scaling": true,
+          "rank": 16
         }
       ],
       "robocasa365": [
@@ -6674,7 +6700,8 @@
             "easy": 86.06,
             "hard": 85.08
           },
-          "rank": 14
+          "data_scaling": true,
+          "rank": 15
         }
       ]
     },
@@ -6926,7 +6953,8 @@
           "data": {
             "easy": 79.91,
             "hard": 79.1
-          }
+          },
+          "data_scaling": true
         }
       ]
     },
@@ -7143,6 +7171,7 @@
             "easy": 91.9,
             "hard": 92.3
           },
+          "data_scaling": true,
           "rank": 3
         }
       ]
@@ -7186,7 +7215,8 @@
           "data": {
             "easy": 80.5,
             "hard": 26.4
-          }
+          },
+          "data_scaling": false
         }
       ]
     },
@@ -7243,7 +7273,8 @@
           "data": {
             "easy": 71.3,
             "hard": 37.2
-          }
+          },
+          "data_scaling": false
         }
       ]
     },
@@ -7679,6 +7710,7 @@
             "easy": 92.93,
             "hard": 91.55
           },
+          "data_scaling": true,
           "rank": 6
         }
       ]
@@ -7807,6 +7839,7 @@
             "easy": 89.4,
             "hard": 89.6
           },
+          "data_scaling": true,
           "rank": 9
         }
       ]
@@ -7878,7 +7911,8 @@
             "easy": 88.56,
             "hard": 86.68
           },
-          "rank": 12
+          "data_scaling": true,
+          "rank": 13
         }
       ]
     },
@@ -8035,7 +8069,8 @@
       "Qwen3GR00T",
       "Qwen3PI",
       "Qwen3OFT",
-      "Qwen3FAST"
+      "Qwen3FAST",
+      "OFT"
     ],
     "benchmarks": {
       "robocasa": [
@@ -8078,6 +8113,20 @@
             "avg_success_rate": 39.0
           },
           "rank": 15
+        }
+      ],
+      "robotwin": [
+        {
+          "setting": "OFT",
+          "score": 88.32,
+          "is_standard": true,
+          "note": "",
+          "data": {
+            "easy": 88.18,
+            "hard": 88.32
+          },
+          "data_scaling": true,
+          "rank": 10
         }
       ]
     },
@@ -8190,7 +8239,8 @@
             "easy": 88.66,
             "hard": 87.02
           },
-          "rank": 11
+          "data_scaling": true,
+          "rank": 12
         }
       ]
     },
@@ -8302,6 +8352,25 @@
             "average": 94.8
           },
           "rank": 77
+        }
+      ],
+      "libero_plus": [
+        {
+          "setting": "default",
+          "score": 65.7,
+          "is_standard": true,
+          "note": "",
+          "data": {
+            "camera": 44.9,
+            "robot": 49.4,
+            "language": 63.6,
+            "light": 83.1,
+            "background": 85.5,
+            "noise": 70.4,
+            "layout": 62.9,
+            "total": 65.7
+          },
+          "rank": 25
         }
       ],
       "metaworld": [
@@ -8683,7 +8752,7 @@
             "layout": 72.4,
             "total": 59.6
           },
-          "rank": 26
+          "rank": 27
         }
       ]
     },
@@ -8920,30 +8989,30 @@
           "rank": 29
         }
       ],
-      "robochallenge": [
-        {
-          "setting": "default",
-          "score": 21.33,
-          "is_standard": true,
-          "note": "",
-          "data": {
-            "score": 34.75,
-            "success_rate": 21.33
-          },
-          "rank": 9
-        }
-      ],
       "robotwin": [
         {
           "setting": "default",
-          "score": 69.0,
+          "score": 39.0,
           "is_standard": true,
           "note": "",
           "data": {
             "easy": 70.0,
-            "hard": 69.0
+            "hard": 39.0
           },
-          "rank": 20
+          "data_scaling": false,
+          "rank": 1
+        },
+        {
+          "setting": "default",
+          "score": 72.84,
+          "is_standard": true,
+          "note": "",
+          "data": {
+            "easy": 72.8,
+            "hard": 72.84
+          },
+          "data_scaling": true,
+          "rank": 21
         }
       ],
       "calvin_abc_d": [
@@ -8961,6 +9030,19 @@
             "avg_len": 4.43
           },
           "rank": 8
+        }
+      ],
+      "robochallenge": [
+        {
+          "setting": "default",
+          "score": 21.33,
+          "is_standard": true,
+          "note": "",
+          "data": {
+            "score": 34.75,
+            "success_rate": 21.33
+          },
+          "rank": 9
         }
       ]
     },
@@ -10736,7 +10818,7 @@
             "layout": 38.0,
             "total": 25.0
           },
-          "rank": 31
+          "rank": 32
         }
       ]
     },
@@ -11047,7 +11129,7 @@
             "layout": 31.9,
             "total": 43.9
           },
-          "rank": 29
+          "rank": 30
         }
       ]
     },
@@ -11365,19 +11447,6 @@
           "rank": 10
         }
       ],
-      "robotwin": [
-        {
-          "setting": "default",
-          "score": 76.76,
-          "is_standard": true,
-          "note": "",
-          "data": {
-            "easy": 82.74,
-            "hard": 76.76
-          },
-          "rank": 19
-        }
-      ],
       "robocasa365": [
         {
           "setting": "default",
@@ -11391,6 +11460,20 @@
             "average": 16.9
           },
           "rank": 7
+        }
+      ],
+      "robotwin": [
+        {
+          "setting": "default",
+          "score": 76.76,
+          "is_standard": true,
+          "note": "",
+          "data": {
+            "easy": 82.74,
+            "hard": 76.76
+          },
+          "data_scaling": true,
+          "rank": 20
         }
       ]
     },
@@ -11479,7 +11562,7 @@
             "layout": 62.1,
             "total": 39.0
           },
-          "rank": 30
+          "rank": 31
         }
       ]
     },
@@ -11828,7 +11911,8 @@
             "easy": 34.5,
             "hard": 13.72
           },
-          "rank": 23
+          "data_scaling": false,
+          "rank": 3
         }
       ]
     },
@@ -12005,7 +12089,7 @@
             "layout": 69.9,
             "total": 55.8
           },
-          "rank": 27
+          "rank": 28
         }
       ],
       "robochallenge": [
@@ -12114,7 +12198,7 @@
             "layout": 68.8,
             "total": 61.6
           },
-          "rank": 25
+          "rank": 26
         }
       ]
     },
@@ -12867,7 +12951,7 @@
             "layout": 68.9,
             "total": 53.6
           },
-          "rank": 28
+          "rank": 29
         }
       ],
       "metaworld": [
@@ -12910,19 +12994,6 @@
           "rank": 14
         }
       ],
-      "robotwin": [
-        {
-          "setting": "default",
-          "score": 16.34,
-          "is_standard": true,
-          "note": "",
-          "data": {
-            "easy": 46.42,
-            "hard": 16.34
-          },
-          "rank": 22
-        }
-      ],
       "robocasa365": [
         {
           "setting": "default",
@@ -12936,6 +13007,32 @@
             "average": 15.0
           },
           "rank": 8
+        }
+      ],
+      "robotwin": [
+        {
+          "setting": "default",
+          "score": 16.34,
+          "is_standard": true,
+          "note": "",
+          "data": {
+            "easy": 46.42,
+            "hard": 16.34
+          },
+          "data_scaling": false,
+          "rank": 2
+        },
+        {
+          "setting": "default",
+          "score": 58.4,
+          "is_standard": true,
+          "note": "",
+          "data": {
+            "easy": 65.92,
+            "hard": 58.4
+          },
+          "data_scaling": true,
+          "rank": 22
         }
       ]
     },
@@ -13434,7 +13531,7 @@
             "layout": 28.5,
             "total": 15.6
           },
-          "rank": 32
+          "rank": 33
         }
       ]
     },
@@ -14349,19 +14446,6 @@
           "rank": 17
         }
       ],
-      "robotwin": [
-        {
-          "setting": "default",
-          "score": 0.64,
-          "is_standard": true,
-          "note": "",
-          "data": {
-            "easy": 28.04,
-            "hard": 0.64
-          },
-          "rank": 24
-        }
-      ],
       "robocasa365": [
         {
           "setting": "default",
@@ -14392,6 +14476,20 @@
             "avg_len": 0.56
           },
           "rank": 36
+        }
+      ],
+      "robotwin": [
+        {
+          "setting": "default",
+          "score": 0.64,
+          "is_standard": true,
+          "note": "",
+          "data": {
+            "easy": 28.04,
+            "hard": 0.64
+          },
+          "data_scaling": false,
+          "rank": 4
         }
       ]
     },

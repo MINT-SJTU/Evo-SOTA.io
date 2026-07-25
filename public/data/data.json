@@ -92,12 +92,12 @@
     ]
   },
   "libero_plus": {
-    "total_models": 52,
-    "standard_opensource_count": 32,
+    "total_models": 53,
+    "standard_opensource_count": 33,
     "standard_closed_count": 18,
     "non_standard_count": 2,
     "model_type_count": {
-      "sft": 29,
+      "sft": 30,
       "rl": 3
     },
     "primary_metric": "Total Success Rate (%)",
@@ -378,12 +378,12 @@
     "top_5_rl": []
   },
   "robotwin": {
-    "total_models": 40,
-    "standard_opensource_count": 24,
-    "standard_closed_count": 16,
+    "total_models": 36,
+    "standard_opensource_count": 23,
+    "standard_closed_count": 13,
     "non_standard_count": 0,
     "model_type_count": {
-      "sft": 23,
+      "sft": 22,
       "rl": 1
     },
     "primary_metric": "Hard Success Rate (%)",
