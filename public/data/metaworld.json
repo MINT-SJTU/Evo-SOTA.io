@@ -77,6 +77,25 @@
       "rank": 4
     },
     {
+      "name": "CORE",
+      "base_name": "CORE",
+      "setting": "",
+      "paper_url": "https://arxiv.org/abs/2606.29517",
+      "pub_date": "2026-06",
+      "is_opensource": true,
+      "opensource_url": "https://github.com/LogSSim/CORE",
+      "is_rl": false,
+      "easy": 93.1,
+      "medium": 81.9,
+      "hard": 64.0,
+      "very_hard": 81.4,
+      "average": 85.6,
+      "source": "original",
+      "is_standard": true,
+      "note": "",
+      "rank": 5
+    },
+    {
       "name": "Evo-depth",
       "base_name": "Evo-depth",
       "setting": "",
@@ -93,7 +112,7 @@
       "source": "original",
       "is_standard": true,
       "note": "",
-      "rank": 5
+      "rank": 6
     },
     {
       "name": "pi0.5",
@@ -112,7 +131,26 @@
       "source": "from LA4VLA",
       "is_standard": true,
       "note": "",
-      "rank": 6
+      "rank": 7
+    },
+    {
+      "name": "RoMAN-Flow",
+      "base_name": "RoMAN-Flow",
+      "setting": "",
+      "paper_url": "https://arxiv.org/abs/2608.20208",
+      "pub_date": "2026-08",
+      "is_opensource": true,
+      "opensource_url": "https://github.com/konnyaku28/RoMAN-Flow",
+      "is_rl": true,
+      "easy": 80.0,
+      "medium": 74.5,
+      "hard": 90.0,
+      "very_hard": 80.0,
+      "average": 81.1,
+      "source": "original",
+      "is_standard": true,
+      "note": "",
+      "rank": 8
     },
     {
       "name": "Evo-1",
@@ -131,7 +169,7 @@
       "source": "original",
       "is_standard": true,
       "note": "",
-      "rank": 7
+      "rank": 9
     },
     {
       "name": "RoboTron Mani",
@@ -150,7 +188,7 @@
       "source": "original",
       "is_standard": true,
       "note": "RoboTron-Mani 采用了自定义的数据生成协议， 而不是标准的训练数据， 但是介于很多别的论文也干了。原文：“ To address the lack of training data for simulation learning, we adopt the scripted policies from Yu et al. [68] and introduce Gaussian noise N(0, 0.1) to the generated actions at each step, resulting in a total of 22,500 trajectories, with each task producing 500 successful trajectories. ”",
-      "rank": 8
+      "rank": 10
     },
     {
       "name": "PAD",
@@ -169,7 +207,7 @@
       "source": "original",
       "is_standard": true,
       "note": "",
-      "rank": 9
+      "rank": 11
     },
     {
       "name": "StarVLA_QwenPIv3 (LA_pretrain)",
@@ -188,7 +226,7 @@
       "source": "original",
       "is_standard": true,
       "note": "",
-      "rank": 10
+      "rank": 12
     },
     {
       "name": "SmolVLA",
@@ -207,7 +245,7 @@
       "source": "original",
       "is_standard": true,
       "note": "",
-      "rank": 11
+      "rank": 13
     },
     {
       "name": "VLA-Corrector",
@@ -226,7 +264,7 @@
       "source": "original",
       "is_standard": true,
       "note": "",
-      "rank": 12
+      "rank": 14
     },
     {
       "name": "StarVLA_QwenPIv3",
@@ -245,7 +283,7 @@
       "source": "original",
       "is_standard": true,
       "note": "",
-      "rank": 13
+      "rank": 15
     },
     {
       "name": "GR-1",
@@ -264,7 +302,7 @@
       "source": "From ALAM",
       "is_standard": true,
       "note": "",
-      "rank": 14
+      "rank": 16
     },
     {
       "name": "pi0",
@@ -283,7 +321,7 @@
       "source": "from smolVLA",
       "is_standard": true,
       "note": "不清楚具体实验设置，因此无法判断来自于是同一个权重还是四个权重",
-      "rank": 15
+      "rank": 17
     },
     {
       "name": "TinyVLA-H",
@@ -302,7 +340,7 @@
       "source": "original",
       "is_standard": true,
       "note": "",
-      "rank": 16
+      "rank": 18
     },
     {
       "name": "Diffusion Policy",
@@ -321,7 +359,7 @@
       "source": "from TinyVLA",
       "is_standard": true,
       "note": "",
-      "rank": 17
+      "rank": 19
     }
   ],
   "standard_closed": [
@@ -402,6 +440,25 @@
       "rank": 4
     },
     {
+      "name": "GaussVLA",
+      "base_name": "GaussVLA",
+      "setting": "",
+      "paper_url": "https://arxiv.org/abs/2608.24959",
+      "pub_date": "2026-08",
+      "is_opensource": false,
+      "opensource_url": null,
+      "is_rl": false,
+      "easy": 92.7,
+      "medium": 47.9,
+      "hard": 37.3,
+      "very_hard": 41.6,
+      "average": 54.9,
+      "source": "original",
+      "is_standard": true,
+      "note": "",
+      "rank": 5
+    },
+    {
       "name": "RT-2",
       "base_name": "RT-2",
       "setting": "",
@@ -418,7 +475,7 @@
       "source": "from ALAM",
       "is_standard": true,
       "note": "",
-      "rank": 5
+      "rank": 6
     }
   ],
   "non_standard": [

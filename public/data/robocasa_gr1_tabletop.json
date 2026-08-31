@@ -31,6 +31,21 @@
       "rank": 2
     },
     {
+      "name": "UCAG-P",
+      "base_name": "UCAG-P",
+      "setting": "",
+      "paper_url": "https://arxiv.org/abs/2608.26058",
+      "pub_date": "2026-08",
+      "is_opensource": true,
+      "opensource_url": "https://github.com/Public-BOTs/UCAG-P",
+      "is_rl": false,
+      "avg_success_rate": 62.0,
+      "source": "original",
+      "is_standard": true,
+      "note": "",
+      "rank": 3
+    },
+    {
       "name": "FrameSkip",
       "base_name": "FrameSkip",
       "setting": "",
@@ -43,7 +58,7 @@
       "source": "original",
       "is_standard": true,
       "note": "",
-      "rank": 3
+      "rank": 4
     },
     {
       "name": "RLDX-1",
@@ -58,7 +73,7 @@
       "source": "original",
       "is_standard": true,
       "note": "",
-      "rank": 4
+      "rank": 5
     },
     {
       "name": "ABot-M0",
@@ -73,7 +88,7 @@
       "source": "original",
       "is_standard": true,
       "note": "",
-      "rank": 5
+      "rank": 6
     },
     {
       "name": "StarVLA-alpha",
@@ -88,7 +103,7 @@
       "source": "original",
       "is_standard": true,
       "note": "",
-      "rank": 6
+      "rank": 7
     },
     {
       "name": "LDA-1B",
@@ -103,7 +118,7 @@
       "source": "original",
       "is_standard": true,
       "note": "",
-      "rank": 7
+      "rank": 8
     },
     {
       "name": "TwinBrainVLA",
@@ -118,7 +133,7 @@
       "source": "original",
       "is_standard": true,
       "note": "",
-      "rank": 8
+      "rank": 9
     },
     {
       "name": "Langforce",
@@ -133,7 +148,7 @@
       "source": "original",
       "is_standard": true,
       "note": "",
-      "rank": 9
+      "rank": 10
     },
     {
       "name": "DiT4DiT",
@@ -148,7 +163,7 @@
       "source": "original",
       "is_standard": true,
       "note": "",
-      "rank": 10
+      "rank": 11
     },
     {
       "name": "StarVLA (Qwen3OFT)",
@@ -163,7 +178,7 @@
       "source": "original",
       "is_standard": true,
       "note": "",
-      "rank": 11
+      "rank": 12
     },
     {
       "name": "StarVLA (Qwen3GR00T)",
@@ -178,7 +193,7 @@
       "source": "original",
       "is_standard": true,
       "note": "",
-      "rank": 12
+      "rank": 13
     },
     {
       "name": "GR00T-N1.6",
@@ -193,7 +208,7 @@
       "source": "from StarVLA",
       "is_standard": true,
       "note": "",
-      "rank": 13
+      "rank": 14
     },
     {
       "name": "StarVLA (Qwen3PI)",
@@ -208,7 +223,7 @@
       "source": "original",
       "is_standard": true,
       "note": "",
-      "rank": 14
+      "rank": 15
     },
     {
       "name": "StarVLA (Qwen3FAST)",
@@ -223,7 +238,7 @@
       "source": "original",
       "is_standard": true,
       "note": "",
-      "rank": 15
+      "rank": 16
     }
   ],
   "standard_closed": [
@@ -288,6 +303,21 @@
       "rank": 4
     },
     {
+      "name": "DyPES-VLA",
+      "base_name": "DyPES-VLA",
+      "setting": "",
+      "paper_url": "https://arxiv.org/abs/2608.06374",
+      "pub_date": "2026-08",
+      "is_opensource": false,
+      "opensource_url": null,
+      "is_rl": false,
+      "avg_success_rate": 59.25,
+      "source": "original",
+      "is_standard": true,
+      "note": "",
+      "rank": 5
+    },
+    {
       "name": "FoMoVLA",
       "base_name": "FoMoVLA",
       "setting": "",
@@ -300,7 +330,7 @@
       "source": "original",
       "is_standard": true,
       "note": "",
-      "rank": 5
+      "rank": 6
     },
     {
       "name": "Qwen-VLA (generalist)",
@@ -315,7 +345,7 @@
       "source": "original",
       "is_standard": true,
       "note": "",
-      "rank": 6
+      "rank": 7
     },
     {
       "name": "CoRE-VLA",
@@ -330,7 +360,7 @@
       "source": "original",
       "is_standard": true,
       "note": "",
-      "rank": 7
+      "rank": 8
     },
     {
       "name": "Dual-CoT VLA",
@@ -345,7 +375,7 @@
       "source": "original",
       "is_standard": true,
       "note": "",
-      "rank": 8
+      "rank": 9
     },
     {
       "name": "VP-VLA",
@@ -360,7 +390,7 @@
       "source": "original",
       "is_standard": true,
       "note": "",
-      "rank": 9
+      "rank": 10
     }
   ],
   "non_standard": []
