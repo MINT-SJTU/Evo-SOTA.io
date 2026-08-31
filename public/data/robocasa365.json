@@ -165,6 +165,24 @@
   ],
   "standard_closed": [
     {
+      "name": "Riemann-1.0",
+      "base_name": "Riemann-1.0",
+      "setting": "",
+      "paper_url": "https://arxiv.org/abs/2608.27033",
+      "pub_date": "2026-08",
+      "is_opensource": false,
+      "opensource_url": null,
+      "is_rl": false,
+      "atomic_seen": 74.2,
+      "composite_seen": 56.0,
+      "composite_unseen": 56.3,
+      "average": 62.6,
+      "source": "original",
+      "is_standard": true,
+      "note": "",
+      "rank": 1
+    },
+    {
       "name": "Xiaomi-Robotics-1",
       "base_name": "Xiaomi-Robotics-1",
       "setting": "",
@@ -180,7 +198,7 @@
       "source": "original",
       "is_standard": true,
       "note": "",
-      "rank": 1
+      "rank": 2
     },
     {
       "name": "Qwen-RobotManip",
@@ -198,7 +216,7 @@
       "source": "original",
       "is_standard": true,
       "note": "",
-      "rank": 2
+      "rank": 3
     }
   ],
   "non_standard": []

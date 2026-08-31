@@ -1,12 +1,12 @@
 {
   "libero": {
-    "total_models": 196,
-    "standard_opensource_count": 105,
-    "standard_closed_count": 73,
+    "total_models": 218,
+    "standard_opensource_count": 116,
+    "standard_closed_count": 84,
     "non_standard_count": 18,
     "model_type_count": {
-      "sft": 93,
-      "rl": 12
+      "sft": 103,
+      "rl": 13
     },
     "primary_metric": "Average Success Rate (%)",
     "top_5": [
@@ -92,66 +92,66 @@
     ]
   },
   "libero_plus": {
-    "total_models": 52,
-    "standard_opensource_count": 32,
-    "standard_closed_count": 18,
+    "total_models": 64,
+    "standard_opensource_count": 39,
+    "standard_closed_count": 23,
     "non_standard_count": 2,
     "model_type_count": {
-      "sft": 29,
+      "sft": 36,
       "rl": 3
     },
     "primary_metric": "Total Success Rate (%)",
     "top_5": [
       {
+        "name": "FabriMAE",
+        "score": 86.8,
+        "rank": 1
+      },
+      {
         "name": "ACoT-VLA",
         "score": 86.6,
-        "rank": 1
+        "rank": 2
       },
       {
         "name": "pi0.5",
         "score": 85.7,
-        "rank": 2
+        "rank": 3
       },
       {
         "name": "Multi-view-VLA",
         "score": 85.7,
-        "rank": 3
+        "rank": 4
       },
       {
         "name": "InternVLA-A1.5",
         "score": 84.8,
-        "rank": 4
-      },
-      {
-        "name": "WorldPilot",
-        "score": 84.4,
         "rank": 5
       }
     ],
     "top_5_sft": [
       {
+        "name": "FabriMAE",
+        "score": 86.8,
+        "rank": 1
+      },
+      {
         "name": "ACoT-VLA",
         "score": 86.6,
-        "rank": 1
+        "rank": 2
       },
       {
         "name": "pi0.5",
         "score": 85.7,
-        "rank": 2
+        "rank": 3
       },
       {
         "name": "Multi-view-VLA",
         "score": 85.7,
-        "rank": 3
+        "rank": 4
       },
       {
         "name": "InternVLA-A1.5",
         "score": 84.8,
-        "rank": 4
-      },
-      {
-        "name": "WorldPilot",
-        "score": 84.4,
         "rank": 5
       }
     ],
@@ -174,13 +174,13 @@
     ]
   },
   "metaworld": {
-    "total_models": 29,
-    "standard_opensource_count": 17,
-    "standard_closed_count": 5,
+    "total_models": 32,
+    "standard_opensource_count": 19,
+    "standard_closed_count": 6,
     "non_standard_count": 7,
     "model_type_count": {
-      "sft": 16,
-      "rl": 1
+      "sft": 17,
+      "rl": 2
     },
     "primary_metric": "Average Success Rate (%)",
     "top_5": [
@@ -205,8 +205,8 @@
         "rank": 4
       },
       {
-        "name": "Evo-depth",
-        "score": 84.4,
+        "name": "CORE",
+        "score": 85.6,
         "rank": 5
       }
     ],
@@ -227,13 +227,13 @@
         "rank": 3
       },
       {
-        "name": "Evo-depth",
-        "score": 84.4,
+        "name": "CORE",
+        "score": 85.6,
         "rank": 4
       },
       {
-        "name": "pi0.5",
-        "score": 81.6,
+        "name": "Evo-depth",
+        "score": 84.4,
         "rank": 5
       }
     ],
@@ -242,6 +242,11 @@
         "name": "pi-RL",
         "score": 85.8,
         "rank": 1
+      },
+      {
+        "name": "RoMAN-Flow",
+        "score": 81.1,
+        "rank": 2
       }
     ]
   },
@@ -312,12 +317,12 @@
     "top_5_rl": []
   },
   "robocasa": {
-    "total_models": 24,
-    "standard_opensource_count": 15,
-    "standard_closed_count": 9,
+    "total_models": 26,
+    "standard_opensource_count": 16,
+    "standard_closed_count": 10,
     "non_standard_count": 0,
     "model_type_count": {
-      "sft": 15,
+      "sft": 16,
       "rl": 0
     },
     "primary_metric": "Average Success Rate (%)",
@@ -333,18 +338,18 @@
         "rank": 2
       },
       {
+        "name": "UCAG-P",
+        "score": 62.0,
+        "rank": 3
+      },
+      {
         "name": "FrameSkip",
         "score": 59.5,
-        "rank": 3
+        "rank": 4
       },
       {
         "name": "RLDX-1",
         "score": 58.7,
-        "rank": 4
-      },
-      {
-        "name": "ABot-M0",
-        "score": 58.3,
         "rank": 5
       }
     ],
@@ -360,30 +365,30 @@
         "rank": 2
       },
       {
+        "name": "UCAG-P",
+        "score": 62.0,
+        "rank": 3
+      },
+      {
         "name": "FrameSkip",
         "score": 59.5,
-        "rank": 3
+        "rank": 4
       },
       {
         "name": "RLDX-1",
         "score": 58.7,
-        "rank": 4
-      },
-      {
-        "name": "ABot-M0",
-        "score": 58.3,
         "rank": 5
       }
     ],
     "top_5_rl": []
   },
   "robotwin": {
-    "total_models": 40,
-    "standard_opensource_count": 24,
-    "standard_closed_count": 16,
+    "total_models": 52,
+    "standard_opensource_count": 30,
+    "standard_closed_count": 22,
     "non_standard_count": 0,
     "model_type_count": {
-      "sft": 23,
+      "sft": 29,
       "rl": 1
     },
     "primary_metric": "Hard Success Rate (%)",
@@ -399,18 +404,18 @@
         "rank": 2
       },
       {
-        "name": "HoloBrain-0",
-        "score": 92.3,
+        "name": "ST-WAM",
+        "score": 92.48,
         "rank": 3
       },
       {
-        "name": "AttenA+",
-        "score": 91.86,
+        "name": "HoloBrain-0",
+        "score": 92.3,
         "rank": 4
       },
       {
-        "name": "Fast-WAM",
-        "score": 91.78,
+        "name": "Enfold",
+        "score": 92.08,
         "rank": 5
       }
     ],
@@ -426,18 +431,18 @@
         "rank": 2
       },
       {
-        "name": "HoloBrain-0",
-        "score": 92.3,
+        "name": "ST-WAM",
+        "score": 92.48,
         "rank": 3
       },
       {
-        "name": "AttenA+",
-        "score": 91.86,
+        "name": "HoloBrain-0",
+        "score": 92.3,
         "rank": 4
       },
       {
-        "name": "Fast-WAM",
-        "score": 91.78,
+        "name": "Enfold",
+        "score": 92.08,
         "rank": 5
       }
     ],
@@ -450,9 +455,9 @@
     ]
   },
   "robocasa365": {
-    "total_models": 11,
+    "total_models": 12,
     "standard_opensource_count": 9,
-    "standard_closed_count": 2,
+    "standard_closed_count": 3,
     "non_standard_count": 0,
     "model_type_count": {
       "sft": 9,
@@ -516,13 +521,13 @@
     "top_5_rl": []
   },
   "calvin": {
-    "total_models": 50,
-    "standard_opensource_count": 36,
-    "standard_closed_count": 9,
+    "total_models": 53,
+    "standard_opensource_count": 38,
+    "standard_closed_count": 10,
     "non_standard_count": 5,
     "model_type_count": {
-      "sft": 35,
-      "rl": 1
+      "sft": 36,
+      "rl": 2
     },
     "primary_metric": "Average Length (Avg. Len.)",
     "description": "ABC-D Setting (Default)",
@@ -543,13 +548,13 @@
         "rank": 3
       },
       {
-        "name": "Flower VLA",
-        "score": 4.53,
+        "name": "TEMPO",
+        "score": 4.59,
         "rank": 4
       },
       {
-        "name": "VLA-Adapter-pro",
-        "score": 4.5,
+        "name": "SLIM-0.5B",
+        "score": 4.56,
         "rank": 5
       }
     ],
@@ -565,18 +570,18 @@
         "rank": 2
       },
       {
+        "name": "SLIM-0.5B",
+        "score": 4.56,
+        "rank": 3
+      },
+      {
         "name": "Flower VLA",
         "score": 4.53,
-        "rank": 3
+        "rank": 4
       },
       {
         "name": "VLA-Adapter-pro",
         "score": 4.5,
-        "rank": 4
-      },
-      {
-        "name": "HARP-VLA",
-        "score": 4.48,
         "rank": 5
       }
     ],
@@ -585,13 +590,18 @@
         "name": "pi-RL",
         "score": 4.71,
         "rank": 1
+      },
+      {
+        "name": "TEMPO",
+        "score": 4.59,
+        "rank": 2
       }
     ],
     "settings": {
       "abcd_d": 22,
-      "abc_d": 50,
+      "abc_d": 53,
       "d_d": 14
     }
   },
-  "total_unique_models": 275
+  "total_unique_models": 306
 }

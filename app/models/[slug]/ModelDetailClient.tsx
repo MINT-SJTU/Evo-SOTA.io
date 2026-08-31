@@ -12,6 +12,7 @@ interface BenchmarkEntry {
     is_standard: boolean;
     note: string;
     rank?: number;
+    data_scaling?: boolean;
     data: Record<string, number | null>;
 }
 
@@ -317,6 +318,17 @@ export function ModelDetailClient({ slug }: { slug: string }) {
                                                             <span className="text-xs text-slate-500 bg-slate-100 px-1.5 py-0.5 rounded">
                                                                 {entry.setting}
                                                             </span>
+                                                        )}
+                                                        {key === 'robotwin' && (
+                                                            <Link
+                                                                href={`${BENCHMARK_HREFS[key]}?type=${typeParam}&filter=${filterParam}&setting=${entry.data_scaling ? 'data_scaling' : 'no_data_scaling'}#model-row-${encodeURIComponent(model.name)}`}
+                                                                className={`text-xs px-1.5 py-0.5 rounded ${entry.data_scaling
+                                                                    ? 'bg-amber-100 text-amber-700'
+                                                                    : 'bg-slate-200 text-slate-600'
+                                                                    }`}
+                                                            >
+                                                                {entry.data_scaling ? 'Data scaling' : 'No data scaling'}
+                                                            </Link>
                                                         )}
                                                         {entry.rank != null && (
                                                             <span className={`text-xs font-bold px-2 py-0.5 rounded-full ${entry.rank === 1 ? 'bg-yellow-100 text-yellow-700' :
