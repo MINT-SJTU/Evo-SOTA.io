@@ -1,6 +1,24 @@
 {
   "standard_opensource": [
     {
+      "name": "HarnessVLA",
+      "base_name": "HarnessVLA",
+      "setting": "",
+      "paper_url": "https://arxiv.org/abs/2607.08448",
+      "pub_date": "2026-09",
+      "is_opensource": true,
+      "opensource_url": "https://github.com/RLinf/RPent",
+      "is_rl": false,
+      "atomic_seen": 92.2,
+      "composite_seen": 61.3,
+      "composite_unseen": 13.8,
+      "average": 57.2,
+      "source": "original",
+      "is_standard": true,
+      "note": "",
+      "rank": 1
+    },
+    {
       "name": "Abot-M0.5",
       "base_name": "Abot-M0.5",
       "setting": "",
@@ -16,7 +34,7 @@
       "source": "original",
       "is_standard": true,
       "note": "",
-      "rank": 1
+      "rank": 2
     },
     {
       "name": "WorldDreamer",
@@ -34,7 +52,7 @@
       "source": "original",
       "is_standard": true,
       "note": "",
-      "rank": 2
+      "rank": 3
     },
     {
       "name": "RLDX-1",
@@ -52,7 +70,7 @@
       "source": "original",
       "is_standard": true,
       "note": "",
-      "rank": 3
+      "rank": 4
     },
     {
       "name": "GR00T-N1.5",
@@ -70,7 +88,7 @@
       "source": "from RoboCasa365",
       "is_standard": true,
       "note": "",
-      "rank": 4
+      "rank": 5
     },
     {
       "name": "GR00T-N1.6",
@@ -88,7 +106,7 @@
       "source": "from RoboCasa365",
       "is_standard": true,
       "note": "",
-      "rank": 5
+      "rank": 6
     },
     {
       "name": "GigaWorld-policy",
@@ -106,7 +124,7 @@
       "source": "from RoboCasa365",
       "is_standard": true,
       "note": "",
-      "rank": 6
+      "rank": 7
     },
     {
       "name": "pi0.5",
@@ -124,7 +142,7 @@
       "source": "from RoboCasa365",
       "is_standard": true,
       "note": "",
-      "rank": 7
+      "rank": 8
     },
     {
       "name": "pi0",
@@ -142,7 +160,7 @@
       "source": "from RoboCasa365",
       "is_standard": true,
       "note": "",
-      "rank": 8
+      "rank": 9
     },
     {
       "name": "Diffusion Policy",
@@ -160,7 +178,7 @@
       "source": "from RoboCasa365",
       "is_standard": true,
       "note": "",
-      "rank": 9
+      "rank": 10
     }
   ],
   "standard_closed": [
@@ -183,6 +201,24 @@
       "rank": 1
     },
     {
+      "name": "MM-ABC",
+      "base_name": "MM-ABC",
+      "setting": "",
+      "paper_url": "https://arxiv.org/abs/2609.35652",
+      "pub_date": "2026-09",
+      "is_opensource": false,
+      "opensource_url": null,
+      "is_rl": false,
+      "atomic_seen": 78.4,
+      "composite_seen": 52.7,
+      "composite_unseen": 50.3,
+      "average": 61.2,
+      "source": "original",
+      "is_standard": true,
+      "note": "",
+      "rank": 2
+    },
+    {
       "name": "Xiaomi-Robotics-1",
       "base_name": "Xiaomi-Robotics-1",
       "setting": "",
@@ -198,7 +234,7 @@
       "source": "original",
       "is_standard": true,
       "note": "",
-      "rank": 2
+      "rank": 3
     },
     {
       "name": "Qwen-RobotManip",
@@ -216,7 +252,7 @@
       "source": "original",
       "is_standard": true,
       "note": "",
-      "rank": 3
+      "rank": 4
     }
   ],
   "non_standard": []

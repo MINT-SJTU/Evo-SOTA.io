@@ -1331,6 +1331,26 @@
         "rank": 6
       },
       {
+        "name": "AffordanceWAM",
+        "base_name": "AffordanceWAM",
+        "setting": "",
+        "paper_url": "https://arxiv.org/abs/2609.22332",
+        "pub_date": "2026-09",
+        "is_opensource": false,
+        "opensource_url": null,
+        "is_rl": false,
+        "is_standard": true,
+        "note": "",
+        "inst1": 0.961,
+        "inst2": 0.928,
+        "inst3": 0.855,
+        "inst4": 0.778,
+        "inst5": 0.695,
+        "avg_len": 4.22,
+        "source": "original",
+        "rank": 7
+      },
+      {
         "name": "TS-Mask VLA",
         "base_name": "TS-Mask VLA",
         "setting": "",
@@ -1348,7 +1368,7 @@
         "inst5": 0.669,
         "avg_len": 4.19,
         "source": "original",
-        "rank": 7
+        "rank": 8
       },
       {
         "name": "OE-VLA",
@@ -1368,7 +1388,7 @@
         "inst5": 0.334,
         "avg_len": 2.99,
         "source": "original",
-        "rank": 8
+        "rank": 9
       },
       {
         "name": "UniPi",
@@ -1388,7 +1408,7 @@
         "inst5": 0.04,
         "avg_len": 0.92,
         "source": "from VPP & SuSIE",
-        "rank": 9
+        "rank": 10
       },
       {
         "name": "MCIL",
@@ -1408,7 +1428,7 @@
         "inst5": 0.0,
         "avg_len": 0.31,
         "source": "from RoboDual",
-        "rank": 10
+        "rank": 11
       }
     ],
     "non_standard": [

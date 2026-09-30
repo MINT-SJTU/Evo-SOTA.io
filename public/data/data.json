@@ -1,12 +1,12 @@
 {
   "libero": {
-    "total_models": 218,
-    "standard_opensource_count": 116,
-    "standard_closed_count": 84,
+    "total_models": 232,
+    "standard_opensource_count": 123,
+    "standard_closed_count": 91,
     "non_standard_count": 18,
     "model_type_count": {
-      "sft": 103,
-      "rl": 13
+      "sft": 109,
+      "rl": 14
     },
     "primary_metric": "Average Success Rate (%)",
     "top_5": [
@@ -16,23 +16,23 @@
         "rank": 1
       },
       {
+        "name": "HABILIS Brain 0",
+        "score": 99.6,
+        "rank": 2
+      },
+      {
         "name": "Abot-M0.5",
         "score": 99.4,
-        "rank": 2
+        "rank": 3
       },
       {
         "name": "CORAL",
         "score": 99.3,
-        "rank": 3
+        "rank": 4
       },
       {
         "name": "SRPO",
         "score": 99.2,
-        "rank": 4
-      },
-      {
-        "name": "SimpleVLA-RL",
-        "score": 99.1,
         "rank": 5
       }
     ],
@@ -53,12 +53,12 @@
         "rank": 3
       },
       {
-        "name": "Being-H0.5 (Specialist)",
-        "score": 98.9,
+        "name": "ME-U0",
+        "score": 99.0,
         "rank": 4
       },
       {
-        "name": "WLA-0",
+        "name": "Being-H0.5 (Specialist)",
         "score": 98.9,
         "rank": 5
       }
@@ -70,34 +70,34 @@
         "rank": 1
       },
       {
+        "name": "HABILIS Brain 0",
+        "score": 99.6,
+        "rank": 2
+      },
+      {
         "name": "SRPO",
         "score": 99.2,
-        "rank": 2
+        "rank": 3
       },
       {
         "name": "SimpleVLA-RL",
         "score": 99.1,
-        "rank": 3
+        "rank": 4
       },
       {
         "name": "PRTS",
         "score": 98.4,
-        "rank": 4
-      },
-      {
-        "name": "pi-RL",
-        "score": 98.3,
         "rank": 5
       }
     ]
   },
   "libero_plus": {
-    "total_models": 64,
-    "standard_opensource_count": 39,
-    "standard_closed_count": 23,
+    "total_models": 72,
+    "standard_opensource_count": 41,
+    "standard_closed_count": 29,
     "non_standard_count": 2,
     "model_type_count": {
-      "sft": 36,
+      "sft": 38,
       "rl": 3
     },
     "primary_metric": "Total Success Rate (%)",
@@ -317,12 +317,12 @@
     "top_5_rl": []
   },
   "robocasa": {
-    "total_models": 26,
-    "standard_opensource_count": 16,
-    "standard_closed_count": 10,
+    "total_models": 28,
+    "standard_opensource_count": 17,
+    "standard_closed_count": 11,
     "non_standard_count": 0,
     "model_type_count": {
-      "sft": 16,
+      "sft": 17,
       "rl": 0
     },
     "primary_metric": "Average Success Rate (%)",
@@ -383,9 +383,9 @@
     "top_5_rl": []
   },
   "robotwin": {
-    "total_models": 52,
+    "total_models": 53,
     "standard_opensource_count": 30,
-    "standard_closed_count": 22,
+    "standard_closed_count": 23,
     "non_standard_count": 0,
     "model_type_count": {
       "sft": 29,
@@ -455,75 +455,75 @@
     ]
   },
   "robocasa365": {
-    "total_models": 12,
-    "standard_opensource_count": 9,
-    "standard_closed_count": 3,
+    "total_models": 14,
+    "standard_opensource_count": 10,
+    "standard_closed_count": 4,
     "non_standard_count": 0,
     "model_type_count": {
-      "sft": 9,
+      "sft": 10,
       "rl": 0
     },
     "primary_metric": "Average Success Rate (%)",
     "top_5": [
       {
+        "name": "HarnessVLA",
+        "score": 57.2,
+        "rank": 1
+      },
+      {
         "name": "Abot-M0.5",
         "score": 46.6,
-        "rank": 1
+        "rank": 2
       },
       {
         "name": "WorldDreamer",
         "score": 35.3,
-        "rank": 2
+        "rank": 3
       },
       {
         "name": "RLDX-1",
         "score": 32.1,
-        "rank": 3
+        "rank": 4
       },
       {
         "name": "GR00T-N1.5",
         "score": 23.9,
-        "rank": 4
-      },
-      {
-        "name": "GR00T-N1.6",
-        "score": 21.9,
         "rank": 5
       }
     ],
     "top_5_sft": [
       {
+        "name": "HarnessVLA",
+        "score": 57.2,
+        "rank": 1
+      },
+      {
         "name": "Abot-M0.5",
         "score": 46.6,
-        "rank": 1
+        "rank": 2
       },
       {
         "name": "WorldDreamer",
         "score": 35.3,
-        "rank": 2
+        "rank": 3
       },
       {
         "name": "RLDX-1",
         "score": 32.1,
-        "rank": 3
+        "rank": 4
       },
       {
         "name": "GR00T-N1.5",
         "score": 23.9,
-        "rank": 4
-      },
-      {
-        "name": "GR00T-N1.6",
-        "score": 21.9,
         "rank": 5
       }
     ],
     "top_5_rl": []
   },
   "calvin": {
-    "total_models": 53,
+    "total_models": 54,
     "standard_opensource_count": 38,
-    "standard_closed_count": 10,
+    "standard_closed_count": 11,
     "non_standard_count": 5,
     "model_type_count": {
       "sft": 36,
@@ -599,9 +599,9 @@
     ],
     "settings": {
       "abcd_d": 22,
-      "abc_d": 53,
+      "abc_d": 54,
       "d_d": 14
     }
   },
-  "total_unique_models": 306
+  "total_unique_models": 322
 }

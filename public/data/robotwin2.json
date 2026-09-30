@@ -649,6 +649,23 @@
       "rank": 2
     },
     {
+      "name": "FutureDuet",
+      "base_name": "FutureDuet",
+      "setting": "",
+      "paper_url": "https://arxiv.org/abs/2609.34362",
+      "pub_date": "2026-09",
+      "is_opensource": false,
+      "opensource_url": null,
+      "is_rl": false,
+      "data_scaling": true,
+      "easy": 94.2,
+      "hard": 94.1,
+      "source": "original",
+      "is_standard": true,
+      "note": "",
+      "rank": 3
+    },
+    {
       "name": "Qwen-RobotManip",
       "base_name": "Qwen-RobotManip",
       "setting": "",
@@ -663,7 +680,7 @@
       "source": "original",
       "is_standard": true,
       "note": "",
-      "rank": 3
+      "rank": 4
     },
     {
       "name": "Riemann-1.0",
@@ -680,7 +697,7 @@
       "source": "original",
       "is_standard": true,
       "note": "",
-      "rank": 4
+      "rank": 5
     },
     {
       "name": "STARRY",
@@ -697,7 +714,7 @@
       "source": "original",
       "is_standard": true,
       "note": "",
-      "rank": 5
+      "rank": 6
     },
     {
       "name": "SelfWAM",
@@ -714,7 +731,7 @@
       "source": "original",
       "is_standard": true,
       "note": "",
-      "rank": 6
+      "rank": 7
     },
     {
       "name": "G0.5",
@@ -731,7 +748,7 @@
       "source": "original",
       "is_standard": true,
       "note": "",
-      "rank": 7
+      "rank": 8
     },
     {
       "name": "LD4WAM",
@@ -748,7 +765,7 @@
       "source": "original",
       "is_standard": true,
       "note": "",
-      "rank": 8
+      "rank": 9
     },
     {
       "name": "LeapBot-WA",
@@ -765,7 +782,7 @@
       "source": "original",
       "is_standard": true,
       "note": "",
-      "rank": 9
+      "rank": 10
     },
     {
       "name": "AIM",
@@ -782,7 +799,7 @@
       "source": "original",
       "is_standard": true,
       "note": "",
-      "rank": 10
+      "rank": 11
     },
     {
       "name": "QuantWAM",
@@ -799,7 +816,7 @@
       "source": "original",
       "is_standard": true,
       "note": "",
-      "rank": 11
+      "rank": 12
     },
     {
       "name": "ACE-Ego-0",
@@ -816,7 +833,7 @@
       "source": "original",
       "is_standard": true,
       "note": "",
-      "rank": 12
+      "rank": 13
     },
     {
       "name": "GEAR-VLA",
@@ -833,7 +850,7 @@
       "source": "original",
       "is_standard": true,
       "note": "",
-      "rank": 13
+      "rank": 14
     },
     {
       "name": "WAM4D",
@@ -850,7 +867,7 @@
       "source": "original",
       "is_standard": true,
       "note": "",
-      "rank": 14
+      "rank": 15
     },
     {
       "name": "JoyAI-RA 0.1",
@@ -867,7 +884,7 @@
       "source": "original",
       "is_standard": true,
       "note": "",
-      "rank": 15
+      "rank": 16
     },
     {
       "name": "DyPES-VLA",
@@ -884,7 +901,7 @@
       "source": "original",
       "is_standard": true,
       "note": "",
-      "rank": 16
+      "rank": 17
     },
     {
       "name": "StageWAM",
@@ -901,7 +918,7 @@
       "source": "original",
       "is_standard": true,
       "note": "",
-      "rank": 17
+      "rank": 18
     },
     {
       "name": "RotVLA",
@@ -918,7 +935,7 @@
       "source": "original",
       "is_standard": true,
       "note": "",
-      "rank": 18
+      "rank": 19
     },
     {
       "name": "RepWAM",
@@ -935,7 +952,7 @@
       "source": "original",
       "is_standard": true,
       "note": "",
-      "rank": 19
+      "rank": 20
     },
     {
       "name": "Qwen-VLA (generalist)",
@@ -952,7 +969,7 @@
       "source": "original",
       "is_standard": true,
       "note": "",
-      "rank": 20
+      "rank": 21
     },
     {
       "name": "Track4Action",
@@ -969,7 +986,7 @@
       "source": "original",
       "is_standard": true,
       "note": "",
-      "rank": 21
+      "rank": 22
     },
     {
       "name": "Pose-VLA",
@@ -986,7 +1003,7 @@
       "source": "original",
       "is_standard": true,
       "note": "",
-      "rank": 22
+      "rank": 23
     },
     {
       "name": "StreamVLA",
