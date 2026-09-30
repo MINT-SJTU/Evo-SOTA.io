@@ -22,6 +22,27 @@
       "rank": 1
     },
     {
+      "name": "HABILIS Brain 0",
+      "base_name": "HABILIS Brain 0",
+      "setting": "",
+      "paper_url": "https://arxiv.org/abs/2609.25558",
+      "pub_date": "2026-09",
+      "is_opensource": true,
+      "opensource_url": "https://github.com/Tommoro-AI/HABILIS-Brain-0",
+      "is_rl": true,
+      "policy_setting": 1,
+      "spatial": 99.4,
+      "object": 100.0,
+      "goal": 99.4,
+      "long": 99.4,
+      "libero_90": null,
+      "average": 99.6,
+      "source": "original",
+      "is_standard": true,
+      "note": "",
+      "rank": 2
+    },
+    {
       "name": "Abot-M0.5",
       "base_name": "Abot-M0.5",
       "setting": "",
@@ -40,7 +61,7 @@
       "source": "original",
       "is_standard": true,
       "note": "",
-      "rank": 2
+      "rank": 3
     },
     {
       "name": "CORAL",
@@ -61,7 +82,7 @@
       "source": "original",
       "is_standard": true,
       "note": "",
-      "rank": 3
+      "rank": 4
     },
     {
       "name": "SRPO",
@@ -82,7 +103,7 @@
       "source": "original",
       "is_standard": true,
       "note": "",
-      "rank": 4
+      "rank": 5
     },
     {
       "name": "SimpleVLA-RL",
@@ -103,7 +124,7 @@
       "source": "original",
       "is_standard": true,
       "note": "",
-      "rank": 5
+      "rank": 6
     },
     {
       "name": "SaiVLA-0",
@@ -124,7 +145,28 @@
       "source": "original",
       "is_standard": true,
       "note": "",
-      "rank": 6
+      "rank": 7
+    },
+    {
+      "name": "ME-U0",
+      "base_name": "ME-U0",
+      "setting": "",
+      "paper_url": "https://arxiv.org/abs/2609.25627",
+      "pub_date": "2026-09",
+      "is_opensource": true,
+      "opensource_url": "https://github.com/MachEmbodied/ME-U0",
+      "is_rl": false,
+      "policy_setting": 0,
+      "spatial": 98.4,
+      "object": 99.8,
+      "goal": 99.0,
+      "long": 98.6,
+      "libero_90": null,
+      "average": 99.0,
+      "source": "original",
+      "is_standard": true,
+      "note": "",
+      "rank": 8
     },
     {
       "name": "Being-H0.5 (Specialist)",
@@ -145,7 +187,7 @@
       "source": "original",
       "is_standard": true,
       "note": "",
-      "rank": 7
+      "rank": 9
     },
     {
       "name": "WLA-0",
@@ -166,7 +208,7 @@
       "source": "original",
       "is_standard": true,
       "note": "",
-      "rank": 8
+      "rank": 10
     },
     {
       "name": "InternVLA-A1.5",
@@ -187,7 +229,7 @@
       "source": "original",
       "is_standard": true,
       "note": "",
-      "rank": 9
+      "rank": 11
     },
     {
       "name": "DreamWAM",
@@ -208,7 +250,7 @@
       "source": "original",
       "is_standard": true,
       "note": "",
-      "rank": 10
+      "rank": 12
     },
     {
       "name": "UnifoLM-VLA-0",
@@ -229,7 +271,7 @@
       "source": "original",
       "is_standard": true,
       "note": "",
-      "rank": 11
+      "rank": 13
     },
     {
       "name": "Xiaomi-Robotics-0",
@@ -250,7 +292,7 @@
       "source": "original",
       "is_standard": true,
       "note": "",
-      "rank": 12
+      "rank": 14
     },
     {
       "name": "ST-WAM",
@@ -271,7 +313,7 @@
       "source": "original",
       "is_standard": true,
       "note": "",
-      "rank": 13
+      "rank": 15
     },
     {
       "name": "ABot-M0",
@@ -292,7 +334,7 @@
       "source": "original",
       "is_standard": true,
       "note": "",
-      "rank": 14
+      "rank": 16
     },
     {
       "name": "DiT4DiT",
@@ -313,7 +355,7 @@
       "source": "original",
       "is_standard": true,
       "note": "",
-      "rank": 15
+      "rank": 17
     },
     {
       "name": "SimVLA",
@@ -334,7 +376,7 @@
       "source": "original",
       "is_standard": true,
       "note": "",
-      "rank": 16
+      "rank": 18
     },
     {
       "name": "Multi-view-VLA",
@@ -355,7 +397,7 @@
       "source": "original",
       "is_standard": true,
       "note": "",
-      "rank": 17
+      "rank": 19
     },
     {
       "name": "GTA-VLA",
@@ -376,7 +418,7 @@
       "source": "original",
       "is_standard": true,
       "note": "",
-      "rank": 18
+      "rank": 20
     },
     {
       "name": "LaWAM",
@@ -397,7 +439,7 @@
       "source": "original",
       "is_standard": true,
       "note": "",
-      "rank": 19
+      "rank": 21
     },
     {
       "name": "4D-WAM",
@@ -418,7 +460,7 @@
       "source": "original",
       "is_standard": true,
       "note": "",
-      "rank": 20
+      "rank": 22
     },
     {
       "name": "VLA-Adapter-pro",
@@ -439,7 +481,7 @@
       "source": "original",
       "is_standard": true,
       "note": "",
-      "rank": 21
+      "rank": 23
     },
     {
       "name": "ACoT-VLA",
@@ -460,7 +502,7 @@
       "source": "original",
       "is_standard": true,
       "note": "",
-      "rank": 22
+      "rank": 24
     },
     {
       "name": "LingBot-VA",
@@ -481,7 +523,7 @@
       "source": "original",
       "is_standard": true,
       "note": "",
-      "rank": 23
+      "rank": 25
     },
     {
       "name": "Cosmos Policy",
@@ -502,7 +544,7 @@
       "source": "original",
       "is_standard": true,
       "note": "",
-      "rank": 24
+      "rank": 26
     },
     {
       "name": "ROCKET-VLA",
@@ -523,7 +565,7 @@
       "source": "original",
       "is_standard": true,
       "note": "",
-      "rank": 25
+      "rank": 27
     },
     {
       "name": "ActionMap",
@@ -544,7 +586,7 @@
       "source": "original",
       "is_standard": true,
       "note": "",
-      "rank": 26
+      "rank": 28
     },
     {
       "name": "W2-VLA",
@@ -565,7 +607,7 @@
       "source": "original",
       "is_standard": true,
       "note": "",
-      "rank": 27
+      "rank": 29
     },
     {
       "name": "PRTS",
@@ -586,7 +628,7 @@
       "source": "original",
       "is_standard": true,
       "note": "",
-      "rank": 28
+      "rank": 30
     },
     {
       "name": "GaussianDream",
@@ -607,7 +649,7 @@
       "source": "original",
       "is_standard": true,
       "note": "",
-      "rank": 29
+      "rank": 31
     },
     {
       "name": "MemoryVLA++",
@@ -628,7 +670,7 @@
       "source": "original",
       "is_standard": true,
       "note": "",
-      "rank": 30
+      "rank": 32
     },
     {
       "name": "pi-RL",
@@ -649,7 +691,7 @@
       "source": "original",
       "is_standard": true,
       "note": "",
-      "rank": 31
+      "rank": 33
     },
     {
       "name": "UCAG-P",
@@ -670,7 +712,7 @@
       "source": "original",
       "is_standard": true,
       "note": "",
-      "rank": 32
+      "rank": 34
     },
     {
       "name": "EO-1",
@@ -691,7 +733,28 @@
       "source": "original",
       "is_standard": true,
       "note": "",
-      "rank": 33
+      "rank": 35
+    },
+    {
+      "name": "EffVLA",
+      "base_name": "EffVLA",
+      "setting": "",
+      "paper_url": "https://arxiv.org/abs/2609.13984",
+      "pub_date": "2026-09",
+      "is_opensource": true,
+      "opensource_url": "https://github.com/MindVLA-Team/EFFVLA",
+      "is_rl": false,
+      "policy_setting": 0,
+      "spatial": 98.6,
+      "object": 99.2,
+      "goal": 99.0,
+      "long": 96.0,
+      "libero_90": null,
+      "average": 98.2,
+      "source": "original",
+      "is_standard": true,
+      "note": "",
+      "rank": 36
     },
     {
       "name": "X-VLA",
@@ -712,7 +775,7 @@
       "source": "original",
       "is_standard": true,
       "note": "",
-      "rank": 34
+      "rank": 37
     },
     {
       "name": "RLinf-VLA",
@@ -733,7 +796,7 @@
       "source": "original",
       "is_standard": true,
       "note": "",
-      "rank": 35
+      "rank": 38
     },
     {
       "name": "3D-CAVLA",
@@ -754,7 +817,7 @@
       "source": "original",
       "is_standard": true,
       "note": "",
-      "rank": 36
+      "rank": 39
     },
     {
       "name": "MolmoAct2 (think)",
@@ -775,7 +838,7 @@
       "source": "original",
       "is_standard": true,
       "note": "",
-      "rank": 37
+      "rank": 40
     },
     {
       "name": "ConsisVLA-4D",
@@ -796,7 +859,7 @@
       "source": "original",
       "is_standard": true,
       "note": "",
-      "rank": 38
+      "rank": 41
     },
     {
       "name": "MIRTH",
@@ -817,7 +880,7 @@
       "source": "original",
       "is_standard": true,
       "note": "",
-      "rank": 39
+      "rank": 42
     },
     {
       "name": "VOTE",
@@ -838,7 +901,7 @@
       "source": "original",
       "is_standard": true,
       "note": "",
-      "rank": 40
+      "rank": 43
     },
     {
       "name": "MMaDA-VLA",
@@ -859,7 +922,7 @@
       "source": "original",
       "is_standard": true,
       "note": "",
-      "rank": 41
+      "rank": 44
     },
     {
       "name": "HiMoE-VLA",
@@ -880,7 +943,7 @@
       "source": "original",
       "is_standard": true,
       "note": "",
-      "rank": 42
+      "rank": 45
     },
     {
       "name": "AttenA+",
@@ -901,7 +964,7 @@
       "source": "original",
       "is_standard": true,
       "note": "",
-      "rank": 43
+      "rank": 46
     },
     {
       "name": "FlashVLA",
@@ -922,7 +985,28 @@
       "source": "original",
       "is_standard": true,
       "note": "",
-      "rank": 44
+      "rank": 47
+    },
+    {
+      "name": "THAW-VLA",
+      "base_name": "THAW-VLA",
+      "setting": "",
+      "paper_url": "https://arxiv.org/abs/2609.24682",
+      "pub_date": "2026-09",
+      "is_opensource": true,
+      "opensource_url": "https://github.com/trungdt880/THAW-VLA",
+      "is_rl": false,
+      "policy_setting": 1,
+      "spatial": 99.3,
+      "object": 99.2,
+      "goal": 99.4,
+      "long": 93.8,
+      "libero_90": null,
+      "average": 97.9,
+      "source": "original",
+      "is_standard": true,
+      "note": "",
+      "rank": 48
     },
     {
       "name": "AtomicVLA",
@@ -943,7 +1027,7 @@
       "source": "original",
       "is_standard": true,
       "note": "",
-      "rank": 45
+      "rank": 49
     },
     {
       "name": "StarVLA-alpha",
@@ -964,7 +1048,7 @@
       "source": "original",
       "is_standard": true,
       "note": "",
-      "rank": 46
+      "rank": 50
     },
     {
       "name": "VLA-Corrector",
@@ -985,7 +1069,7 @@
       "source": "original",
       "is_standard": true,
       "note": "",
-      "rank": 47
+      "rank": 51
     },
     {
       "name": "Enfold",
@@ -1006,7 +1090,7 @@
       "source": "original",
       "is_standard": true,
       "note": "",
-      "rank": 48
+      "rank": 52
     },
     {
       "name": "GridS",
@@ -1027,7 +1111,7 @@
       "source": "original",
       "is_standard": true,
       "note": "",
-      "rank": 49
+      "rank": 53
     },
     {
       "name": "TBD-VLA",
@@ -1048,7 +1132,7 @@
       "source": "original",
       "is_standard": true,
       "note": "",
-      "rank": 50
+      "rank": 54
     },
     {
       "name": "QuantVLA",
@@ -1069,7 +1153,7 @@
       "source": "original",
       "is_standard": true,
       "note": "未明确说明是否标准",
-      "rank": 51
+      "rank": 55
     },
     {
       "name": "Fast-WAM",
@@ -1090,7 +1174,7 @@
       "source": "original",
       "is_standard": true,
       "note": "",
-      "rank": 52
+      "rank": 56
     },
     {
       "name": "RIPT-VLA",
@@ -1111,7 +1195,7 @@
       "source": "original",
       "is_standard": true,
       "note": "",
-      "rank": 53
+      "rank": 57
     },
     {
       "name": "SLIM-0.5B",
@@ -1132,7 +1216,7 @@
       "source": "original",
       "is_standard": true,
       "note": "",
-      "rank": 54
+      "rank": 58
     },
     {
       "name": "CoTinyVLA",
@@ -1153,7 +1237,28 @@
       "source": "original",
       "is_standard": true,
       "note": "",
-      "rank": 55
+      "rank": 59
+    },
+    {
+      "name": "WEPVLA",
+      "base_name": "WEPVLA",
+      "setting": "",
+      "paper_url": "https://arxiv.org/abs/2609.34256",
+      "pub_date": "2026-09",
+      "is_opensource": true,
+      "opensource_url": "https://github.com/LiuSong-Scrat/UMR",
+      "is_rl": false,
+      "policy_setting": 1,
+      "spatial": 98.4,
+      "object": 99.8,
+      "goal": 96.8,
+      "long": 95.0,
+      "libero_90": null,
+      "average": 97.5,
+      "source": "original",
+      "is_standard": true,
+      "note": "",
+      "rank": 60
     },
     {
       "name": "VLA-Cache",
@@ -1174,7 +1279,7 @@
       "source": "original",
       "is_standard": true,
       "note": "",
-      "rank": 56
+      "rank": 61
     },
     {
       "name": "RynnVLA-002",
@@ -1195,7 +1300,7 @@
       "source": "original",
       "is_standard": true,
       "note": "",
-      "rank": 57
+      "rank": 62
     },
     {
       "name": "HoloBrain-0",
@@ -1216,7 +1321,7 @@
       "source": "original",
       "is_standard": true,
       "note": "",
-      "rank": 58
+      "rank": 63
     },
     {
       "name": "FrameSkip",
@@ -1237,7 +1342,7 @@
       "source": "original",
       "is_standard": true,
       "note": "",
-      "rank": 59
+      "rank": 64
     },
     {
       "name": "VLANeXt",
@@ -1258,7 +1363,7 @@
       "source": "original",
       "is_standard": true,
       "note": "",
-      "rank": 60
+      "rank": 65
     },
     {
       "name": "VLA-JEPA",
@@ -1279,7 +1384,7 @@
       "source": "original",
       "is_standard": true,
       "note": "",
-      "rank": 61
+      "rank": 66
     },
     {
       "name": "OpenVLA-OFT (wrist & third-person images)",
@@ -1300,7 +1405,7 @@
       "source": "original",
       "is_standard": true,
       "note": "",
-      "rank": 62
+      "rank": 67
     },
     {
       "name": "IVRA",
@@ -1321,7 +1426,7 @@
       "source": "original",
       "is_standard": true,
       "note": "",
-      "rank": 63
+      "rank": 68
     },
     {
       "name": "Lila-WAM",
@@ -1342,7 +1447,7 @@
       "source": "original",
       "is_standard": true,
       "note": "",
-      "rank": 64
+      "rank": 69
     },
     {
       "name": "CronusVLA",
@@ -1363,7 +1468,7 @@
       "source": "original",
       "is_standard": true,
       "note": "",
-      "rank": 65
+      "rank": 70
     },
     {
       "name": "DeepThinkVLA",
@@ -1384,7 +1489,7 @@
       "source": "original",
       "is_standard": true,
       "note": "",
-      "rank": 66
+      "rank": 71
     },
     {
       "name": "pi0.5",
@@ -1405,7 +1510,7 @@
       "source": "from Cosmos Policy & pi-StepNFT",
       "is_standard": true,
       "note": "",
-      "rank": 67
+      "rank": 72
     },
     {
       "name": "Flower VLA",
@@ -1426,7 +1531,7 @@
       "source": "original",
       "is_standard": true,
       "note": "",
-      "rank": 68
+      "rank": 73
     },
     {
       "name": "MergeVLA",
@@ -1447,7 +1552,7 @@
       "source": "original",
       "is_standard": true,
       "note": "",
-      "rank": 69
+      "rank": 74
     },
     {
       "name": "Mantis",
@@ -1468,7 +1573,7 @@
       "source": "original",
       "is_standard": true,
       "note": "",
-      "rank": 70
+      "rank": 75
     },
     {
       "name": "A1",
@@ -1489,7 +1594,7 @@
       "source": "original",
       "is_standard": true,
       "note": "",
-      "rank": 71
+      "rank": 76
     },
     {
       "name": "MemoryVLA",
@@ -1510,7 +1615,7 @@
       "source": "original",
       "is_standard": true,
       "note": "",
-      "rank": 72
+      "rank": 77
     },
     {
       "name": "Discrete Diffusion VLA",
@@ -1531,7 +1636,7 @@
       "source": "original",
       "is_standard": true,
       "note": "",
-      "rank": 73
+      "rank": 78
     },
     {
       "name": "LA4VLA-1B",
@@ -1552,7 +1657,7 @@
       "source": "original",
       "is_standard": true,
       "note": "",
-      "rank": 74
+      "rank": 79
     },
     {
       "name": "PointACT",
@@ -1573,7 +1678,7 @@
       "source": "original",
       "is_standard": true,
       "note": "",
-      "rank": 75
+      "rank": 80
     },
     {
       "name": "WoVR",
@@ -1594,7 +1699,28 @@
       "source": "original",
       "is_standard": true,
       "note": "",
-      "rank": 76
+      "rank": 81
+    },
+    {
+      "name": "HarnessVLA",
+      "base_name": "HarnessVLA",
+      "setting": "",
+      "paper_url": "https://arxiv.org/abs/2607.08448",
+      "pub_date": "2026-09",
+      "is_opensource": true,
+      "opensource_url": "https://github.com/RLinf/RPent",
+      "is_rl": false,
+      "policy_setting": 1,
+      "spatial": 97.0,
+      "object": 100.0,
+      "goal": 94.0,
+      "long": 93.0,
+      "libero_90": null,
+      "average": 96.0,
+      "source": "original",
+      "is_standard": true,
+      "note": "",
+      "rank": 82
     },
     {
       "name": "InternVLA-M1",
@@ -1615,7 +1741,7 @@
       "source": "original",
       "is_standard": true,
       "note": "",
-      "rank": 77
+      "rank": 83
     },
     {
       "name": "InstructVLA",
@@ -1636,7 +1762,7 @@
       "source": "original",
       "is_standard": true,
       "note": "",
-      "rank": 78
+      "rank": 84
     },
     {
       "name": "CF-VLA",
@@ -1657,7 +1783,7 @@
       "source": "original",
       "is_standard": true,
       "note": "",
-      "rank": 79
+      "rank": 85
     },
     {
       "name": "AffordanceVLA",
@@ -1678,7 +1804,28 @@
       "source": "original",
       "is_standard": true,
       "note": "",
-      "rank": 80
+      "rank": 86
+    },
+    {
+      "name": "MINERVA-0.5M",
+      "base_name": "MINERVA-0.5M",
+      "setting": "",
+      "paper_url": "https://arxiv.org/abs/2609.03715",
+      "pub_date": "2026-09",
+      "is_opensource": true,
+      "opensource_url": "https://github.com/k1000dai/MINERVA",
+      "is_rl": false,
+      "policy_setting": 1,
+      "spatial": 96.8,
+      "object": 99.6,
+      "goal": 97.4,
+      "long": 89.2,
+      "libero_90": null,
+      "average": 95.75,
+      "source": "original",
+      "is_standard": true,
+      "note": "",
+      "rank": 87
     },
     {
       "name": "UnifiedVLA",
@@ -1699,7 +1846,7 @@
       "source": "original",
       "is_standard": true,
       "note": "",
-      "rank": 81
+      "rank": 88
     },
     {
       "name": "Evo-depth",
@@ -1720,7 +1867,7 @@
       "source": "original",
       "is_standard": true,
       "note": "",
-      "rank": 82
+      "rank": 89
     },
     {
       "name": "OpenVLA-OFT (third-person images)",
@@ -1741,7 +1888,7 @@
       "source": "original",
       "is_standard": true,
       "note": "",
-      "rank": 83
+      "rank": 90
     },
     {
       "name": "RoMAN-Flow",
@@ -1762,7 +1909,7 @@
       "source": "original",
       "is_standard": true,
       "note": "",
-      "rank": 84
+      "rank": 91
     },
     {
       "name": "UniVLA",
@@ -1783,7 +1930,7 @@
       "source": "original",
       "is_standard": true,
       "note": "",
-      "rank": 85
+      "rank": 92
     },
     {
       "name": "NORA-1.5 (DPO)",
@@ -1804,7 +1951,7 @@
       "source": "original",
       "is_standard": true,
       "note": "",
-      "rank": 86
+      "rank": 93
     },
     {
       "name": "QDepth-VLA",
@@ -1825,7 +1972,7 @@
       "source": "original",
       "is_standard": true,
       "note": "",
-      "rank": 87
+      "rank": 94
     },
     {
       "name": "Evo-1",
@@ -1846,7 +1993,7 @@
       "source": "original",
       "is_standard": true,
       "note": "",
-      "rank": 88
+      "rank": 95
     },
     {
       "name": "BitVLA",
@@ -1867,7 +2014,7 @@
       "source": "original",
       "is_standard": true,
       "note": "",
-      "rank": 89
+      "rank": 96
     },
     {
       "name": "VLA-0",
@@ -1888,7 +2035,7 @@
       "source": "original",
       "is_standard": true,
       "note": "",
-      "rank": 90
+      "rank": 97
     },
     {
       "name": "pi0.5-KI",
@@ -1909,7 +2056,7 @@
       "source": "original",
       "is_standard": true,
       "note": "",
-      "rank": 91
+      "rank": 98
     },
     {
       "name": "pi0",
@@ -1930,7 +2077,7 @@
       "source": "from Evo-1 & VLA-0 & pi0.5KI",
       "is_standard": true,
       "note": "",
-      "rank": 92
+      "rank": 99
     },
     {
       "name": "DM0",
@@ -1951,7 +2098,7 @@
       "source": "original",
       "is_standard": true,
       "note": "",
-      "rank": 93
+      "rank": 100
     },
     {
       "name": "pi-StepNFT",
@@ -1972,7 +2119,7 @@
       "source": "original",
       "is_standard": true,
       "note": "",
-      "rank": 94
+      "rank": 101
     },
     {
       "name": "GR00T-N1",
@@ -1993,7 +2140,7 @@
       "source": "from VLA-0",
       "is_standard": true,
       "note": "",
-      "rank": 95
+      "rank": 102
     },
     {
       "name": "DreamVLA",
@@ -2014,7 +2161,7 @@
       "source": "original",
       "is_standard": true,
       "note": "在libero90上预训练并根据每个类型微调",
-      "rank": 96
+      "rank": 103
     },
     {
       "name": "SUREFlow",
@@ -2035,7 +2182,7 @@
       "source": "original",
       "is_standard": true,
       "note": "",
-      "rank": 97
+      "rank": 104
     },
     {
       "name": "PriGo",
@@ -2056,7 +2203,7 @@
       "source": "original",
       "is_standard": true,
       "note": "",
-      "rank": 98
+      "rank": 105
     },
     {
       "name": "VLA-RFT",
@@ -2077,7 +2224,7 @@
       "source": "original",
       "is_standard": true,
       "note": "",
-      "rank": 99
+      "rank": 106
     },
     {
       "name": "RhinoVLA",
@@ -2098,7 +2245,7 @@
       "source": "original",
       "is_standard": true,
       "note": "",
-      "rank": 100
+      "rank": 107
     },
     {
       "name": "SmolVLA",
@@ -2119,7 +2266,7 @@
       "source": "original",
       "is_standard": true,
       "note": "",
-      "rank": 101
+      "rank": 108
     },
     {
       "name": "4D-VLA",
@@ -2140,7 +2287,7 @@
       "source": "original",
       "is_standard": true,
       "note": "",
-      "rank": 102
+      "rank": 109
     },
     {
       "name": "NORA",
@@ -2161,7 +2308,7 @@
       "source": "original",
       "is_standard": true,
       "note": "",
-      "rank": 103
+      "rank": 110
     },
     {
       "name": "MolmoAct",
@@ -2182,7 +2329,7 @@
       "source": "original",
       "is_standard": true,
       "note": "",
-      "rank": 104
+      "rank": 111
     },
     {
       "name": "pi0-FAST",
@@ -2203,7 +2350,7 @@
       "source": "from Evo-1 & pi0.5KI",
       "is_standard": true,
       "note": "",
-      "rank": 105
+      "rank": 112
     },
     {
       "name": "Dita",
@@ -2224,7 +2371,7 @@
       "source": "original",
       "is_standard": true,
       "note": "",
-      "rank": 106
+      "rank": 113
     },
     {
       "name": "WorldVLA",
@@ -2245,7 +2392,7 @@
       "source": "original",
       "is_standard": true,
       "note": "",
-      "rank": 107
+      "rank": 114
     },
     {
       "name": "VLA-RL",
@@ -2266,7 +2413,7 @@
       "source": "original",
       "is_standard": true,
       "note": "",
-      "rank": 108
+      "rank": 115
     },
     {
       "name": "GRAPE",
@@ -2287,7 +2434,7 @@
       "source": "original",
       "is_standard": true,
       "note": "",
-      "rank": 109
+      "rank": 116
     },
     {
       "name": "SpatialVLA",
@@ -2308,7 +2455,7 @@
       "source": "original",
       "is_standard": true,
       "note": "",
-      "rank": 110
+      "rank": 117
     },
     {
       "name": "OpenVLA",
@@ -2329,7 +2476,7 @@
       "source": "from evo-1 & VLA-0 & MolmoAct",
       "is_standard": true,
       "note": "",
-      "rank": 111
+      "rank": 118
     },
     {
       "name": "Octo",
@@ -2350,7 +2497,7 @@
       "source": "from 4D-VLA & VLA-0 & OpenVLA-OFT & MolmoAct",
       "is_standard": true,
       "note": "",
-      "rank": 112
+      "rank": 119
     },
     {
       "name": "TraceVLA",
@@ -2371,7 +2518,7 @@
       "source": "from NORA & MolmoAct & AVA-VLA",
       "is_standard": true,
       "note": "",
-      "rank": 113
+      "rank": 120
     },
     {
       "name": "UniAct",
@@ -2392,7 +2539,7 @@
       "source": "original",
       "is_standard": true,
       "note": "",
-      "rank": 114
+      "rank": 121
     },
     {
       "name": "TTF-VLA",
@@ -2413,7 +2560,7 @@
       "source": "original",
       "is_standard": true,
       "note": "",
-      "rank": 115
+      "rank": 122
     },
     {
       "name": "Diffusion Policy",
@@ -2434,10 +2581,31 @@
       "source": "From 4D-VLA & VLA-0 & OpenVLA-OFT",
       "is_standard": true,
       "note": "",
-      "rank": 116
+      "rank": 123
     }
   ],
   "standard_closed": [
+    {
+      "name": "FutureDuet",
+      "base_name": "FutureDuet",
+      "setting": "",
+      "paper_url": "https://arxiv.org/abs/2609.34362",
+      "pub_date": "2026-09",
+      "is_opensource": false,
+      "opensource_url": null,
+      "is_rl": false,
+      "policy_setting": 0,
+      "spatial": 99.2,
+      "object": 100.0,
+      "goal": 99.0,
+      "long": 98.4,
+      "libero_90": null,
+      "average": 99.2,
+      "source": "original",
+      "is_standard": true,
+      "note": "",
+      "rank": 1
+    },
     {
       "name": "PriorVLA",
       "base_name": "PriorVLA",
@@ -2457,7 +2625,7 @@
       "source": "original",
       "is_standard": true,
       "note": "",
-      "rank": 1
+      "rank": 2
     },
     {
       "name": "VLAFlow",
@@ -2478,7 +2646,28 @@
       "source": "original",
       "is_standard": true,
       "note": "",
-      "rank": 2
+      "rank": 3
+    },
+    {
+      "name": "MM-ABC",
+      "base_name": "MM-ABC",
+      "setting": "",
+      "paper_url": "https://arxiv.org/abs/2609.35652",
+      "pub_date": "2026-09",
+      "is_opensource": false,
+      "opensource_url": null,
+      "is_rl": false,
+      "policy_setting": 0,
+      "spatial": 99.4,
+      "object": 100.0,
+      "goal": 98.6,
+      "long": 98.4,
+      "libero_90": null,
+      "average": 99.1,
+      "source": "original",
+      "is_standard": true,
+      "note": "",
+      "rank": 4
     },
     {
       "name": "GeoAlign",
@@ -2499,7 +2688,7 @@
       "source": "original",
       "is_standard": true,
       "note": "",
-      "rank": 3
+      "rank": 5
     },
     {
       "name": "Riemann-1.0",
@@ -2520,7 +2709,7 @@
       "source": "original",
       "is_standard": true,
       "note": "",
-      "rank": 4
+      "rank": 6
     },
     {
       "name": "G0.5",
@@ -2541,7 +2730,7 @@
       "source": "original",
       "is_standard": true,
       "note": "",
-      "rank": 5
+      "rank": 7
     },
     {
       "name": "Dual-CoT VLA",
@@ -2562,7 +2751,7 @@
       "source": "original",
       "is_standard": true,
       "note": "",
-      "rank": 6
+      "rank": 8
     },
     {
       "name": "PhysBrain 1.0",
@@ -2583,7 +2772,7 @@
       "source": "original",
       "is_standard": true,
       "note": "",
-      "rank": 7
+      "rank": 9
     },
     {
       "name": "FoMoVLA",
@@ -2604,7 +2793,7 @@
       "source": "original",
       "is_standard": true,
       "note": "",
-      "rank": 8
+      "rank": 10
     },
     {
       "name": "ChainVLA",
@@ -2625,7 +2814,7 @@
       "source": "original",
       "is_standard": true,
       "note": "",
-      "rank": 9
+      "rank": 11
     },
     {
       "name": "FocusVLA",
@@ -2646,7 +2835,7 @@
       "source": "original",
       "is_standard": true,
       "note": "",
-      "rank": 10
+      "rank": 12
     },
     {
       "name": "GEAR-VLA",
@@ -2667,7 +2856,7 @@
       "source": "original",
       "is_standard": true,
       "note": "",
-      "rank": 11
+      "rank": 13
     },
     {
       "name": "3DThinkVLA",
@@ -2688,7 +2877,7 @@
       "source": "original",
       "is_standard": true,
       "note": "",
-      "rank": 12
+      "rank": 14
     },
     {
       "name": "PearlVLA",
@@ -2709,7 +2898,7 @@
       "source": "original",
       "is_standard": true,
       "note": "",
-      "rank": 13
+      "rank": 15
     },
     {
       "name": "CoRE-VLA",
@@ -2730,7 +2919,7 @@
       "source": "original",
       "is_standard": true,
       "note": "",
-      "rank": 14
+      "rank": 16
     },
     {
       "name": "StreamVLA",
@@ -2751,7 +2940,7 @@
       "source": "original",
       "is_standard": true,
       "note": "",
-      "rank": 15
+      "rank": 17
     },
     {
       "name": "SG-WAM",
@@ -2772,7 +2961,7 @@
       "source": "original",
       "is_standard": true,
       "note": "",
-      "rank": 16
+      "rank": 18
     },
     {
       "name": "SparkVLA",
@@ -2793,7 +2982,49 @@
       "source": "original",
       "is_standard": true,
       "note": "",
-      "rank": 17
+      "rank": 19
+    },
+    {
+      "name": "GIFT-WAM-IDM",
+      "base_name": "GIFT-WAM-IDM",
+      "setting": "",
+      "paper_url": "https://arxiv.org/abs/2609.04193",
+      "pub_date": "2026-09",
+      "is_opensource": false,
+      "opensource_url": null,
+      "is_rl": false,
+      "policy_setting": 0,
+      "spatial": 99.0,
+      "object": 100.0,
+      "goal": 98.6,
+      "long": 96.4,
+      "libero_90": null,
+      "average": 98.5,
+      "source": "original",
+      "is_standard": true,
+      "note": "",
+      "rank": 20
+    },
+    {
+      "name": "Devol-ONE",
+      "base_name": "Devol-ONE",
+      "setting": "",
+      "paper_url": "https://arxiv.org/abs/2609.32193",
+      "pub_date": "2026-09",
+      "is_opensource": false,
+      "opensource_url": null,
+      "is_rl": false,
+      "policy_setting": 0,
+      "spatial": 98.4,
+      "object": 99.6,
+      "goal": 98.2,
+      "long": 97.0,
+      "libero_90": null,
+      "average": 98.4,
+      "source": "original",
+      "is_standard": true,
+      "note": "",
+      "rank": 21
     },
     {
       "name": "FutureVLA",
@@ -2814,7 +3045,7 @@
       "source": "original",
       "is_standard": true,
       "note": "",
-      "rank": 18
+      "rank": 22
     },
     {
       "name": "LaMP",
@@ -2835,7 +3066,7 @@
       "source": "original",
       "is_standard": true,
       "note": "",
-      "rank": 19
+      "rank": 23
     },
     {
       "name": "CAC-VLA",
@@ -2856,7 +3087,7 @@
       "source": "original",
       "is_standard": true,
       "note": "",
-      "rank": 20
+      "rank": 24
     },
     {
       "name": "PokeVLA",
@@ -2877,7 +3108,7 @@
       "source": "original",
       "is_standard": true,
       "note": "",
-      "rank": 21
+      "rank": 25
     },
     {
       "name": "RotVLA",
@@ -2898,7 +3129,7 @@
       "source": "original",
       "is_standard": true,
       "note": "",
-      "rank": 22
+      "rank": 26
     },
     {
       "name": "ExToken",
@@ -2919,7 +3150,7 @@
       "source": "original",
       "is_standard": true,
       "note": "",
-      "rank": 23
+      "rank": 27
     },
     {
       "name": "ALAM",
@@ -2940,7 +3171,7 @@
       "source": "original",
       "is_standard": true,
       "note": "",
-      "rank": 24
+      "rank": 28
     },
     {
       "name": "OneWM-VLA",
@@ -2961,7 +3192,7 @@
       "source": "original",
       "is_standard": true,
       "note": "",
-      "rank": 25
+      "rank": 29
     },
     {
       "name": "AVA-VLA",
@@ -2982,7 +3213,7 @@
       "source": "original",
       "is_standard": true,
       "note": "",
-      "rank": 26
+      "rank": 30
     },
     {
       "name": "BehaviorVLA",
@@ -3003,7 +3234,7 @@
       "source": "original",
       "is_standard": true,
       "note": "",
-      "rank": 27
+      "rank": 31
     },
     {
       "name": "WorldBagel",
@@ -3024,7 +3255,7 @@
       "source": "original",
       "is_standard": true,
       "note": "",
-      "rank": 28
+      "rank": 32
     },
     {
       "name": "TAG",
@@ -3045,7 +3276,7 @@
       "source": "original",
       "is_standard": true,
       "note": "",
-      "rank": 29
+      "rank": 33
     },
     {
       "name": "Qwen-VLA (generalist)",
@@ -3066,7 +3297,7 @@
       "source": "original",
       "is_standard": true,
       "note": "",
-      "rank": 30
+      "rank": 34
     },
     {
       "name": "NIAF",
@@ -3087,7 +3318,28 @@
       "source": "original",
       "is_standard": true,
       "note": "",
-      "rank": 31
+      "rank": 35
+    },
+    {
+      "name": "FreqFM",
+      "base_name": "FreqFM",
+      "setting": "",
+      "paper_url": "https://arxiv.org/abs/2609.10405",
+      "pub_date": "2026-09",
+      "is_opensource": false,
+      "opensource_url": null,
+      "is_rl": false,
+      "policy_setting": 0,
+      "spatial": 98.6,
+      "object": 99.4,
+      "goal": 97.6,
+      "long": 95.8,
+      "libero_90": null,
+      "average": 97.9,
+      "source": "original",
+      "is_standard": true,
+      "note": "",
+      "rank": 36
     },
     {
       "name": "OA-WAM",
@@ -3108,7 +3360,7 @@
       "source": "original",
       "is_standard": true,
       "note": "",
-      "rank": 32
+      "rank": 37
     },
     {
       "name": "HAMLET",
@@ -3129,7 +3381,7 @@
       "source": "original",
       "is_standard": true,
       "note": "",
-      "rank": 33
+      "rank": 38
     },
     {
       "name": "OmniVLA-RL",
@@ -3150,7 +3402,7 @@
       "source": "original",
       "is_standard": true,
       "note": "",
-      "rank": 34
+      "rank": 39
     },
     {
       "name": "LoHo-Manip",
@@ -3171,7 +3423,7 @@
       "source": "original",
       "is_standard": true,
       "note": "",
-      "rank": 35
+      "rank": 40
     },
     {
       "name": "QuantWAM",
@@ -3192,7 +3444,7 @@
       "source": "original",
       "is_standard": true,
       "note": "",
-      "rank": 36
+      "rank": 41
     },
     {
       "name": "ST-pi",
@@ -3213,7 +3465,7 @@
       "source": "original",
       "is_standard": true,
       "note": "",
-      "rank": 37
+      "rank": 42
     },
     {
       "name": "LeapBot-WA",
@@ -3234,7 +3486,28 @@
       "source": "original",
       "is_standard": true,
       "note": "",
-      "rank": 38
+      "rank": 43
+    },
+    {
+      "name": "Copper-Policy",
+      "base_name": "Copper-Policy",
+      "setting": "",
+      "paper_url": "https://arxiv.org/abs/2609.32779",
+      "pub_date": "2026-09",
+      "is_opensource": false,
+      "opensource_url": null,
+      "is_rl": false,
+      "policy_setting": 0,
+      "spatial": 98.8,
+      "object": 99.4,
+      "goal": 95.6,
+      "long": 95.2,
+      "libero_90": null,
+      "average": 97.3,
+      "source": "original",
+      "is_standard": true,
+      "note": "",
+      "rank": 44
     },
     {
       "name": "Dejavu",
@@ -3255,7 +3528,7 @@
       "source": "original",
       "is_standard": true,
       "note": "",
-      "rank": 39
+      "rank": 45
     },
     {
       "name": "Libra-VLA",
@@ -3276,7 +3549,7 @@
       "source": "original",
       "is_standard": true,
       "note": "",
-      "rank": 40
+      "rank": 46
     },
     {
       "name": "CLAP",
@@ -3297,7 +3570,7 @@
       "source": "original",
       "is_standard": true,
       "note": "",
-      "rank": 41
+      "rank": 47
     },
     {
       "name": "StreamingVLA",
@@ -3318,7 +3591,7 @@
       "source": "original",
       "is_standard": true,
       "note": "",
-      "rank": 42
+      "rank": 48
     },
     {
       "name": "DyGRO-VLA",
@@ -3339,7 +3612,7 @@
       "source": "original",
       "is_standard": true,
       "note": "",
-      "rank": 43
+      "rank": 49
     },
     {
       "name": "EDAR",
@@ -3360,7 +3633,7 @@
       "source": "original",
       "is_standard": true,
       "note": "",
-      "rank": 44
+      "rank": 50
     },
     {
       "name": "GFWM-VLA",
@@ -3381,7 +3654,28 @@
       "source": "original",
       "is_standard": true,
       "note": "",
-      "rank": 45
+      "rank": 51
+    },
+    {
+      "name": "IMLE-VLA",
+      "base_name": "IMLE-VLA",
+      "setting": "",
+      "paper_url": "https://arxiv.org/abs/2609.10915",
+      "pub_date": "2026-09",
+      "is_opensource": false,
+      "opensource_url": null,
+      "is_rl": false,
+      "policy_setting": 1,
+      "spatial": 97.2,
+      "object": 99.0,
+      "goal": 96.2,
+      "long": 95.8,
+      "libero_90": null,
+      "average": 97.1,
+      "source": "original",
+      "is_standard": true,
+      "note": "",
+      "rank": 52
     },
     {
       "name": "ELAN4D",
@@ -3402,7 +3696,7 @@
       "source": "original",
       "is_standard": true,
       "note": "",
-      "rank": 46
+      "rank": 53
     },
     {
       "name": "Track4Action",
@@ -3423,7 +3717,7 @@
       "source": "original",
       "is_standard": true,
       "note": "",
-      "rank": 47
+      "rank": 54
     },
     {
       "name": "LatentBridge",
@@ -3444,7 +3738,7 @@
       "source": "original",
       "is_standard": true,
       "note": "",
-      "rank": 48
+      "rank": 55
     },
     {
       "name": "ReViP",
@@ -3465,7 +3759,7 @@
       "source": "original",
       "is_standard": true,
       "note": "",
-      "rank": 49
+      "rank": 56
     },
     {
       "name": "GeoPredict",
@@ -3486,7 +3780,7 @@
       "source": "original",
       "is_standard": true,
       "note": "",
-      "rank": 50
+      "rank": 57
     },
     {
       "name": "dVLA",
@@ -3507,7 +3801,7 @@
       "source": "original",
       "is_standard": true,
       "note": "",
-      "rank": 51
+      "rank": 58
     },
     {
       "name": "JEPA-VLA",
@@ -3528,7 +3822,7 @@
       "source": "original",
       "is_standard": true,
       "note": "",
-      "rank": 52
+      "rank": 59
     },
     {
       "name": "GST-VLA",
@@ -3549,7 +3843,7 @@
       "source": "original",
       "is_standard": true,
       "note": "",
-      "rank": 53
+      "rank": 60
     },
     {
       "name": "VistaVLA",
@@ -3570,7 +3864,7 @@
       "source": "original",
       "is_standard": true,
       "note": "",
-      "rank": 54
+      "rank": 61
     },
     {
       "name": "Pose-VLA",
@@ -3591,7 +3885,7 @@
       "source": "original",
       "is_standard": true,
       "note": "",
-      "rank": 55
+      "rank": 62
     },
     {
       "name": "LoopVLA",
@@ -3612,7 +3906,7 @@
       "source": "original",
       "is_standard": true,
       "note": "",
-      "rank": 56
+      "rank": 63
     },
     {
       "name": "AC-VLA",
@@ -3633,7 +3927,7 @@
       "source": "original",
       "is_standard": true,
       "note": "",
-      "rank": 57
+      "rank": 64
     },
     {
       "name": "UniviewVLA",
@@ -3654,7 +3948,7 @@
       "source": "original",
       "is_standard": true,
       "note": "",
-      "rank": 58
+      "rank": 65
     },
     {
       "name": "DFM-VLA",
@@ -3675,7 +3969,7 @@
       "source": "original",
       "is_standard": true,
       "note": "",
-      "rank": 59
+      "rank": 66
     },
     {
       "name": "TS-Mask VLA",
@@ -3696,7 +3990,7 @@
       "source": "original",
       "is_standard": true,
       "note": "",
-      "rank": 60
+      "rank": 67
     },
     {
       "name": "LARA",
@@ -3717,7 +4011,7 @@
       "source": "original",
       "is_standard": true,
       "note": "",
-      "rank": 61
+      "rank": 68
     },
     {
       "name": "IVLR",
@@ -3738,7 +4032,7 @@
       "source": "original",
       "is_standard": true,
       "note": "",
-      "rank": 62
+      "rank": 69
     },
     {
       "name": "MotionVLA",
@@ -3759,7 +4053,7 @@
       "source": "original",
       "is_standard": true,
       "note": "",
-      "rank": 63
+      "rank": 70
     },
     {
       "name": "M^2-VLA",
@@ -3780,7 +4074,7 @@
       "source": "original",
       "is_standard": true,
       "note": "",
-      "rank": 64
+      "rank": 71
     },
     {
       "name": "AAC",
@@ -3801,7 +4095,7 @@
       "source": "original",
       "is_standard": true,
       "note": "",
-      "rank": 65
+      "rank": 72
     },
     {
       "name": "DepthVLA",
@@ -3822,7 +4116,7 @@
       "source": "original",
       "is_standard": true,
       "note": "",
-      "rank": 66
+      "rank": 73
     },
     {
       "name": "PD-VLA",
@@ -3843,7 +4137,7 @@
       "source": "From AVA-VLA",
       "is_standard": true,
       "note": "",
-      "rank": 67
+      "rank": 74
     },
     {
       "name": "Mind-VLA",
@@ -3864,7 +4158,7 @@
       "source": "original",
       "is_standard": true,
       "note": "",
-      "rank": 68
+      "rank": 75
     },
     {
       "name": "VeriSpace",
@@ -3885,7 +4179,7 @@
       "source": "original",
       "is_standard": true,
       "note": "",
-      "rank": 69
+      "rank": 76
     },
     {
       "name": "GeCO",
@@ -3906,7 +4200,7 @@
       "source": "original",
       "is_standard": true,
       "note": "",
-      "rank": 70
+      "rank": 77
     },
     {
       "name": "GaussVLA",
@@ -3927,7 +4221,7 @@
       "source": "original",
       "is_standard": true,
       "note": "",
-      "rank": 71
+      "rank": 78
     },
     {
       "name": "RESample",
@@ -3948,7 +4242,7 @@
       "source": "original",
       "is_standard": true,
       "note": "",
-      "rank": 72
+      "rank": 79
     },
     {
       "name": "SSI-policy",
@@ -3969,7 +4263,7 @@
       "source": "original",
       "is_standard": true,
       "note": "",
-      "rank": 73
+      "rank": 80
     },
     {
       "name": "CorridorVLA",
@@ -3990,7 +4284,7 @@
       "source": "original",
       "is_standard": true,
       "note": "",
-      "rank": 74
+      "rank": 81
     },
     {
       "name": "KAM-WM",
@@ -4011,7 +4305,7 @@
       "source": "original",
       "is_standard": true,
       "note": "",
-      "rank": 75
+      "rank": 82
     },
     {
       "name": "Fast-ThinkAct",
@@ -4032,7 +4326,7 @@
       "source": "original",
       "is_standard": true,
       "note": "",
-      "rank": 76
+      "rank": 83
     },
     {
       "name": "ATA",
@@ -4053,7 +4347,7 @@
       "source": "original",
       "is_standard": true,
       "note": "",
-      "rank": 77
+      "rank": 84
     },
     {
       "name": "FPC-VLA",
@@ -4074,7 +4368,7 @@
       "source": "original",
       "is_standard": true,
       "note": "",
-      "rank": 78
+      "rank": 85
     },
     {
       "name": "InSpire",
@@ -4095,7 +4389,7 @@
       "source": "original",
       "is_standard": true,
       "note": "",
-      "rank": 79
+      "rank": 86
     },
     {
       "name": "ThinkAct",
@@ -4116,7 +4410,7 @@
       "source": "original",
       "is_standard": true,
       "note": "",
-      "rank": 80
+      "rank": 87
     },
     {
       "name": "Eva-VLA",
@@ -4137,7 +4431,7 @@
       "source": "original",
       "is_standard": true,
       "note": "都只使用了各自数据集微调",
-      "rank": 81
+      "rank": 88
     },
     {
       "name": "CoT-VLA",
@@ -4158,7 +4452,7 @@
       "source": "original",
       "is_standard": true,
       "note": "",
-      "rank": 82
+      "rank": 89
     },
     {
       "name": "CoA-VLA",
@@ -4179,7 +4473,7 @@
       "source": "original",
       "is_standard": true,
       "note": "",
-      "rank": 83
+      "rank": 90
     },
     {
       "name": "TriVLA",
@@ -4200,7 +4494,7 @@
       "source": "original",
       "is_standard": true,
       "note": "",
-      "rank": 84
+      "rank": 91
     }
   ],
   "non_standard": [
