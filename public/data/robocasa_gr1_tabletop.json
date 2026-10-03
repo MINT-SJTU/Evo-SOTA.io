@@ -1,6 +1,21 @@
 {
   "standard_opensource": [
     {
+      "name": "Light-O1",
+      "base_name": "Light-O1",
+      "setting": "",
+      "paper_url": "https://www.lightorigins.com/blog/light-o1",
+      "pub_date": "2026-09",
+      "is_opensource": true,
+      "opensource_url": "https://github.com/lightorigins/Light-O1",
+      "is_rl": false,
+      "avg_success_rate": 79.3,
+      "source": "original",
+      "is_standard": true,
+      "note": "",
+      "rank": 1
+    },
+    {
       "name": "WALA",
       "base_name": "WALA",
       "setting": "",
@@ -13,7 +28,7 @@
       "source": "original",
       "is_standard": true,
       "note": "",
-      "rank": 1
+      "rank": 2
     },
     {
       "name": "DIAL",
@@ -28,7 +43,7 @@
       "source": "original",
       "is_standard": true,
       "note": "",
-      "rank": 2
+      "rank": 3
     },
     {
       "name": "UCAG-P",
@@ -43,7 +58,7 @@
       "source": "original",
       "is_standard": true,
       "note": "",
-      "rank": 3
+      "rank": 4
     },
     {
       "name": "FrameSkip",
@@ -58,7 +73,7 @@
       "source": "original",
       "is_standard": true,
       "note": "",
-      "rank": 4
+      "rank": 5
     },
     {
       "name": "RLDX-1",
@@ -73,7 +88,7 @@
       "source": "original",
       "is_standard": true,
       "note": "",
-      "rank": 5
+      "rank": 6
     },
     {
       "name": "ABot-M0",
@@ -88,7 +103,7 @@
       "source": "original",
       "is_standard": true,
       "note": "",
-      "rank": 6
+      "rank": 7
     },
     {
       "name": "StarVLA-alpha",
@@ -103,7 +118,7 @@
       "source": "original",
       "is_standard": true,
       "note": "",
-      "rank": 7
+      "rank": 8
     },
     {
       "name": "LDA-1B",
@@ -118,7 +133,7 @@
       "source": "original",
       "is_standard": true,
       "note": "",
-      "rank": 8
+      "rank": 9
     },
     {
       "name": "TwinBrainVLA",
@@ -133,7 +148,7 @@
       "source": "original",
       "is_standard": true,
       "note": "",
-      "rank": 9
+      "rank": 10
     },
     {
       "name": "Langforce",
@@ -148,7 +163,7 @@
       "source": "original",
       "is_standard": true,
       "note": "",
-      "rank": 10
+      "rank": 11
     },
     {
       "name": "DiT4DiT",
@@ -163,7 +178,7 @@
       "source": "original",
       "is_standard": true,
       "note": "",
-      "rank": 11
+      "rank": 12
     },
     {
       "name": "THAW-VLA",
@@ -178,7 +193,7 @@
       "source": "original",
       "is_standard": true,
       "note": "",
-      "rank": 12
+      "rank": 13
     },
     {
       "name": "StarVLA (Qwen3OFT)",
@@ -193,7 +208,7 @@
       "source": "original",
       "is_standard": true,
       "note": "",
-      "rank": 13
+      "rank": 14
     },
     {
       "name": "StarVLA (Qwen3GR00T)",
@@ -208,7 +223,7 @@
       "source": "original",
       "is_standard": true,
       "note": "",
-      "rank": 14
+      "rank": 15
     },
     {
       "name": "GR00T-N1.6",
@@ -223,7 +238,7 @@
       "source": "from StarVLA",
       "is_standard": true,
       "note": "",
-      "rank": 15
+      "rank": 16
     },
     {
       "name": "StarVLA (Qwen3PI)",
@@ -238,7 +253,7 @@
       "source": "original",
       "is_standard": true,
       "note": "",
-      "rank": 16
+      "rank": 17
     },
     {
       "name": "StarVLA (Qwen3FAST)",
@@ -253,7 +268,7 @@
       "source": "original",
       "is_standard": true,
       "note": "",
-      "rank": 17
+      "rank": 18
     }
   ],
   "standard_closed": [

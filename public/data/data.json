@@ -317,66 +317,66 @@
     "top_5_rl": []
   },
   "robocasa": {
-    "total_models": 28,
-    "standard_opensource_count": 17,
+    "total_models": 29,
+    "standard_opensource_count": 18,
     "standard_closed_count": 11,
     "non_standard_count": 0,
     "model_type_count": {
-      "sft": 17,
+      "sft": 18,
       "rl": 0
     },
     "primary_metric": "Average Success Rate (%)",
     "top_5": [
       {
+        "name": "Light-O1",
+        "score": 79.3,
+        "rank": 1
+      },
+      {
         "name": "WALA",
         "score": 75.2,
-        "rank": 1
+        "rank": 2
       },
       {
         "name": "DIAL",
         "score": 70.2,
-        "rank": 2
+        "rank": 3
       },
       {
         "name": "UCAG-P",
         "score": 62.0,
-        "rank": 3
+        "rank": 4
       },
       {
         "name": "FrameSkip",
         "score": 59.5,
-        "rank": 4
-      },
-      {
-        "name": "RLDX-1",
-        "score": 58.7,
         "rank": 5
       }
     ],
     "top_5_sft": [
       {
+        "name": "Light-O1",
+        "score": 79.3,
+        "rank": 1
+      },
+      {
         "name": "WALA",
         "score": 75.2,
-        "rank": 1
+        "rank": 2
       },
       {
         "name": "DIAL",
         "score": 70.2,
-        "rank": 2
+        "rank": 3
       },
       {
         "name": "UCAG-P",
         "score": 62.0,
-        "rank": 3
+        "rank": 4
       },
       {
         "name": "FrameSkip",
         "score": 59.5,
-        "rank": 4
-      },
-      {
-        "name": "RLDX-1",
-        "score": 58.7,
         "rank": 5
       }
     ],
@@ -603,5 +603,5 @@
       "d_d": 14
     }
   },
-  "total_unique_models": 322
+  "total_unique_models": 323
 }

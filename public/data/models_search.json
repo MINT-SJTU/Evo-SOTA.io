@@ -356,7 +356,7 @@
       "Hongyi Cai",
       "Yi Herng Ong",
       "Tingshiuan C. Wu",
-      "Lim Chiew Hui",
+      "Chiew Hui Lim",
       "Hanxia Li",
       "Kehong Guo",
       "Sze Yuan Cheong"
@@ -576,7 +576,7 @@
           "data": {
             "avg_success_rate": 50.5
           },
-          "rank": 12
+          "rank": 13
         }
       ]
     },
@@ -889,6 +889,33 @@
       "Jinqiao Wang"
     ],
     "paper_abstract": "Predicting the next state is a core paradigm of World Models for modeling physical dynamics, emphasizing prediction fidelity. As World Models evolve into World-Action Models (WAMs), existing methods still fix the next state before training as RGB, a single latent feature, or a static combination of predefined targets, thereby constraining action learning to the inductive biases preserved by a particular representation. To address this limitation, we propose CF-WAM, a dynamic next-state prediction framework that samples visual, semantic, geometric, and interaction projections of the same future, standardizes them into a common video form, and supervises a unified WAM across these projections. The action-relevant constraints exposed by these projections accumulate across training steps, forcing WAM to capture the underlying state-transition structure that supports multiple projections of the same action-conditioned future. This dynamic mechanism also provides a natural cross-embodiment dynamics reference frame for Human and Robot learning. By jointly learning across different next-state parameterizations, heterogeneous Human and Robot experience can bypass appearance differences and directly contribute to shared state-transition learning, improving cross-embodiment generalization. Experiments show that CF-WAM improves both training efficiency and final control performance, while translating Human experience effectively into policy gains. CF-WAM achieves state-of-the-art performance on RoboCasa-GR1 with an average success rate of 82.50%, while reaching 82.65% on LIBERO-Plus and up to 84.00% in real-world evaluations."
+  },
+  {
+    "name": "Light-O1",
+    "paper_url": "https://www.lightorigins.com/blog/light-o1",
+    "pub_date": "2026-09",
+    "is_opensource": true,
+    "opensource_url": "https://github.com/lightorigins/Light-O1",
+    "is_rl": false,
+    "settings": [],
+    "benchmarks": {
+      "robocasa": [
+        {
+          "setting": "default",
+          "score": 79.3,
+          "is_standard": true,
+          "note": "",
+          "data": {
+            "avg_success_rate": 79.3
+          },
+          "rank": 1
+        }
+      ]
+    },
+    "paper_arxiv_id": null,
+    "paper_title": null,
+    "paper_authors": null,
+    "paper_abstract": null
   },
   {
     "name": "SelfWAM",
@@ -1728,7 +1755,7 @@
           "data": {
             "avg_success_rate": 62.0
           },
-          "rank": 3
+          "rank": 4
         }
       ],
       "robotwin": [
@@ -2284,14 +2311,11 @@
       ]
     },
     "paper_arxiv_id": "2608.16697",
-    "paper_title": "FabriMAE I Trust Myself? Self-Evaluating VLA Action Generation with Markov Attention Entropy",
+    "paper_title": "MAE I Trust Myself? Self-Evaluating VLA Action Generation with Markov Attention Entropy",
     "paper_authors": [
       "Aniri",
       "Chen Yilin",
       "Jinhe Bi",
-      "Junfei Guo",
-      "Donglai Ran",
-      "Xu Bian",
       "Zengjie Jin",
       "Yujun Wang",
       "Yijun Tian",
@@ -2300,7 +2324,7 @@
       "Tat-Seng Chua",
       "Yunpu Ma"
     ],
-    "paper_abstract": "Vision-Language-Action models (VLAs) integrate visual perception, language instruction, and action generation into end-to-end policies across heterogeneous architectures. However, enabling VLAs to self-evaluate their action generation reliability without external supervision remains a major challenge. Existing methods either rely on expert annotations or estimate uncertainty only from output statistics, largely ignoring internal signals. In this work, we observe that internal visual modality entropy exhibits consistent distinctions between successful and failed tasks across heterogeneous VLAs. Although VLAs' architectures differ in their action generation, we show that they share a common latent action generation abstraction evolving under visual perception, language instruction, and state input, which we formulate as a Conditional Generative Markov Chain. Based on this formulation, we propose MAE (Markov Attention Entropy), a self-evaluation framework that directly converts internal attention signals into architecture-aware reliability scores, and introduce LIBERO-Reflect, a 4,000-episode benchmark combining 2,000 standard episodes and 2,000 challenging episodes across four subsets. Extensive experiments across heterogeneous VLA architectures and diverse scenarios show that MAE consistently outperforms state-of-the-art baselines on AUPR, AUROC, and FPR@95. We further instantiate FabriMAE for verifier-free test-time action selection, showing that MAE-guided multiple sampling improves PI-family robustness on LIBERO-Plus with small observed runtime overhead."
+    "paper_abstract": "Vision-Language-Action models (VLAs) integrate visual perception, language instruction, and action generation into end-to-end policies across heterogeneous architectures. However, enabling VLAs to self-evaluate their action generation reliability without external supervision remains a major challenge. Existing methods either rely on expert annotations or estimate uncertainty only from output statistics, largely ignoring internal signals. In this work, we observe that internal visual modality entropy exhibits consistent distinctions between successful and failed tasks across heterogeneous VLAs. Although VLAs' architectures differ in their action generation, we show that they share a common latent action generation abstraction evolving under visual perception, language instruction, and State Input, which we formulate as a Conditional Generative Markov Chain. Based on this formulation, we propose MAE (Markov Attention Entropy), a self-evaluation framework that directly converts internal attention signals into architecture-aware reliability scores, and introduce LIBERO-Reflect, a 4,000-episode benchmark combining 2,000 standard episodes and 2,000 challenging episodes across four subsets. Extensive experiments across heterogeneous VLA architectures and diverse scenarios show that MAE consistently outperforms state-of-the-art baselines on AUPR, AUROC, and FPR@95."
   },
   {
     "name": "WALA",
@@ -2320,7 +2344,7 @@
           "data": {
             "avg_success_rate": 75.2
           },
-          "rank": 1
+          "rank": 2
         }
       ]
     },
@@ -5597,7 +5621,7 @@
           "data": {
             "avg_success_rate": 58.7
           },
-          "rank": 5
+          "rank": 6
         }
       ],
       "robocasa365": [
@@ -6198,7 +6222,7 @@
           "data": {
             "avg_success_rate": 59.5
           },
-          "rank": 4
+          "rank": 5
         }
       ]
     },
@@ -7106,7 +7130,7 @@
           "data": {
             "avg_success_rate": 47.6
           },
-          "rank": 15
+          "rank": 16
         }
       ],
       "robocasa365": [
@@ -7267,7 +7291,7 @@
           "data": {
             "avg_success_rate": 57.3
           },
-          "rank": 7
+          "rank": 8
         }
       ],
       "robotwin": [
@@ -8563,7 +8587,7 @@
           "data": {
             "avg_success_rate": 50.8
           },
-          "rank": 11
+          "rank": 12
         }
       ]
     },
@@ -9089,7 +9113,7 @@
           "data": {
             "avg_success_rate": 70.2
           },
-          "rank": 2
+          "rank": 3
         }
       ]
     },
@@ -9349,7 +9373,7 @@
           "data": {
             "avg_success_rate": 58.3
           },
-          "rank": 6
+          "rank": 7
         }
       ],
       "robotwin": [
@@ -9969,7 +9993,7 @@
           "data": {
             "avg_success_rate": 55.4
           },
-          "rank": 8
+          "rank": 9
         }
       ]
     },
@@ -10204,7 +10228,7 @@
           "data": {
             "avg_success_rate": 52.6
           },
-          "rank": 10
+          "rank": 11
         }
       ]
     },
@@ -10241,7 +10265,7 @@
           "data": {
             "avg_success_rate": 54.6
           },
-          "rank": 9
+          "rank": 10
         }
       ]
     },
@@ -10744,7 +10768,7 @@
           "data": {
             "avg_success_rate": 47.8
           },
-          "rank": 14
+          "rank": 15
         },
         {
           "setting": "Qwen3PI",
@@ -10754,7 +10778,7 @@
           "data": {
             "avg_success_rate": 43.9
           },
-          "rank": 16
+          "rank": 17
         },
         {
           "setting": "Qwen3OFT",
@@ -10764,7 +10788,7 @@
           "data": {
             "avg_success_rate": 48.8
           },
-          "rank": 13
+          "rank": 14
         },
         {
           "setting": "Qwen3FAST",
@@ -10774,7 +10798,7 @@
           "data": {
             "avg_success_rate": 39.0
           },
-          "rank": 17
+          "rank": 18
         }
       ],
       "robotwin": [
