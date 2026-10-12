@@ -174,66 +174,66 @@
     ]
   },
   "metaworld": {
-    "total_models": 32,
-    "standard_opensource_count": 19,
+    "total_models": 33,
+    "standard_opensource_count": 20,
     "standard_closed_count": 6,
     "non_standard_count": 7,
     "model_type_count": {
-      "sft": 17,
+      "sft": 18,
       "rl": 2
     },
     "primary_metric": "Average Success Rate (%)",
     "top_5": [
       {
+        "name": "Evo-World",
+        "score": 91.1,
+        "rank": 1
+      },
+      {
         "name": "FabriVLA",
         "score": 90.0,
-        "rank": 1
+        "rank": 2
       },
       {
         "name": "SUREFlow",
         "score": 88.32,
-        "rank": 2
+        "rank": 3
       },
       {
         "name": "LA4VLA-1B",
         "score": 87.53,
-        "rank": 3
+        "rank": 4
       },
       {
         "name": "pi-RL",
         "score": 85.8,
-        "rank": 4
-      },
-      {
-        "name": "CORE",
-        "score": 85.6,
         "rank": 5
       }
     ],
     "top_5_sft": [
       {
+        "name": "Evo-World",
+        "score": 91.1,
+        "rank": 1
+      },
+      {
         "name": "FabriVLA",
         "score": 90.0,
-        "rank": 1
+        "rank": 2
       },
       {
         "name": "SUREFlow",
         "score": 88.32,
-        "rank": 2
+        "rank": 3
       },
       {
         "name": "LA4VLA-1B",
         "score": 87.53,
-        "rank": 3
+        "rank": 4
       },
       {
         "name": "CORE",
         "score": 85.6,
-        "rank": 4
-      },
-      {
-        "name": "Evo-depth",
-        "score": 84.4,
         "rank": 5
       }
     ],
@@ -603,5 +603,5 @@
       "d_d": 14
     }
   },
-  "total_unique_models": 323
+  "total_unique_models": 324
 }

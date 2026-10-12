@@ -1,5 +1,44 @@
 [
   {
+    "name": "Evo-World",
+    "paper_url": "https://arxiv.org/abs/2610.12936",
+    "pub_date": "2026-10",
+    "is_opensource": true,
+    "opensource_url": "https://github.com/MINT-SJTU/Evo-World",
+    "is_rl": false,
+    "settings": [],
+    "benchmarks": {
+      "metaworld": [
+        {
+          "setting": "default",
+          "score": 91.1,
+          "is_standard": true,
+          "note": "",
+          "data": {
+            "easy": 93.2,
+            "medium": 89.1,
+            "hard": 88.3,
+            "very_hard": 94.0,
+            "average": 91.1
+          },
+          "rank": 1
+        }
+      ]
+    },
+    "paper_arxiv_id": "2610.12936",
+    "paper_title": "Evo-World: A Lightweight Vision-Language-Action Model with Future Motion Prediction via Optical-Flow Supervision",
+    "paper_authors": [
+      "Zile Zhong",
+      "Yuxin Du",
+      "Tao Lin",
+      "Haoxiao Wang",
+      "Wei Dai",
+      "Binhua Zuo",
+      "Bo Zhao"
+    ],
+    "paper_abstract": "Vision-language-action (VLA) models provide a unified framework for visual understanding, language grounding, and robot control, yet anticipating how the scene will evolve beyond the current observation can provide additional information for control. Action supervision alone does not explicitly encourage such anticipation, while future-image prediction entangles task-relevant motion with largely static appearance. To address these limitations, we introduce Evo-World, a lightweight VLA model that augments policy learning with future motion prediction through optical-flow supervision, thereby providing a task-relevant predictive signal focused on motion rather than appearance. We further design the training procedure to preserve these predictive representations during policy learning, regulating representation diversity while decoupling representation learning from action optimization. Across simulation benchmarks, Evo-World demonstrates strong performance, achieving a tier-averaged success rate of 91.1% on Meta-World MT50 , with a 13.0% relative improvement over the non-predictive baseline. On real-world AgileX robots, Evo-World outperforms the evaluated baselines across single-arm and bimanual manipulation tasks while using only 0.87B parameters and delivering lower GPU memory usage and higher inference efficiency. These results demonstrate that future motion prediction through optical-flow supervision provides an effective and lightweight approach to enhancing the predictive capabilities of VLA models."
+  },
+  {
     "name": "FutureDuet",
     "paper_url": "https://arxiv.org/abs/2609.34362",
     "pub_date": "2026-09",
@@ -1843,7 +1882,7 @@
             "very_hard": 80.0,
             "average": 81.1
           },
-          "rank": 8
+          "rank": 9
         }
       ]
     },
@@ -2242,7 +2281,7 @@
       "Nan Cheng",
       "Wenchao Xu"
     ],
-    "paper_abstract": "Vision-language-action (VLA) models often treat main-view and wrist-view observations as parallel visual inputs, overlooking their distinct roles in robot manipulation. Fine-grained manipulation, however, benefits from anticipating how wrist-local interactions may evolve under the global task context. To address this limitation, we present World-to-Wrist VLA (W2-VLA), a VLA model for fine-grained robot manipulation with task-conditioned future wrist modeling. Given current multi-view observations and a task instruction, W2-VLA contextualizes a set of latent modeling tokens as a compact interface between the vision-language model and the wrist predictor. Conditioned on this interface and the observed wrist history, the predictor forecasts future wrist latents, which are transformed into future-aware context for action prediction. In addition, we introduce W2-CoT, a synthesis pipeline that produces structured annotations describing manipulation progress, physical transition cues, and wrist-local evidence. These annotations provide auxiliary supervision that shapes the task-conditioned latent interface. Experiments on LIBERO, RoboTwin 2.0, and real-world manipulation tasks demonstrate improved fine-grained and contact-sensitive manipulation across both single-arm and bimanual settings, while maintaining action-generation rates above 80 Hz."
+    "paper_abstract": "Vision-language-action (VLA) models often treat main-view and wrist-view observations as parallel visual inputs, overlooking their distinct roles in robot manipulation. Fine-grained manipulation, however, benefits from anticipating how wrist-local interactions may evolve under the global task context. To address this limitation, we present World-to-Wrist VLA (W2-VLA), a VLA model for fine-grained robot manipulation with task-conditioned future wrist modeling. Given current multi-view observations and a task instruction, W2-VLA contextualizes a set of latent modeling tokens as a compact interface between the vision-language model and the wrist predictor. Conditioned on this interface and the observed wrist history, the predictor forecasts future wrist latents, which are transformed into future-aware context for action prediction. In addition, we introduce W2-CoT, a synthesis pipeline that produces structured annotations describing manipulation progress, physical transition cues, and wrist-local evidence. These annotations provide auxiliary supervision that shapes the task-conditioned latent interface. Experiments on LIBERO, LIBERO-Plus, RoboTwin 2.0, and real-world manipulation tasks demonstrate improved fine-grained and contact-sensitive manipulation across single-arm and bimanual settings, while maintaining real-time action generation above $80$~Hz."
   },
   {
     "name": "SparkVLA",
@@ -2492,7 +2531,7 @@
             "very_hard": 90.0,
             "average": 90.0
           },
-          "rank": 1
+          "rank": 2
         }
       ]
     },
@@ -2982,7 +3021,7 @@
             "very_hard": 75.9,
             "average": 88.32
           },
-          "rank": 2
+          "rank": 3
         }
       ]
     },
@@ -3226,7 +3265,7 @@
             "very_hard": 63.0,
             "average": 66.65
           },
-          "rank": 14
+          "rank": 15
         }
       ]
     },
@@ -3801,7 +3840,7 @@
             "very_hard": 44.0,
             "average": 59.1
           },
-          "rank": 15
+          "rank": 16
         },
         {
           "setting": "LA_pretrain",
@@ -3815,7 +3854,7 @@
             "very_hard": 80.0,
             "average": 70.9
           },
-          "rank": 12
+          "rank": 13
         }
       ]
     },
@@ -4576,7 +4615,7 @@
       "Cewu Lu",
       "Yue Gao"
     ],
-    "paper_abstract": "Current Vision--Language--Action (VLA) models often optimize for semantic grounding, whereas executable manipulation requires geometry-aware spatial alignment and dynamic affordance selection. We introduce GeoAlign, a state-guided spatial alignment architecture for VLA policy learning. GeoAlign post-trains an RGB geometry branch with robot-domain RGB-D supervision, yielding RGB-derived Geometry-Enhanced Post-Trained (GEP) features for policy rollout. The robot's proprioceptive state queries the GEP feature grid, producing compact, phase-dependent geometry tokens for action prediction. GeoAlign achieves 99.0% on LIBERO, 85.3% across three SimplerEnv-Fractal tasks, and 78.8% on eight geometry-critical real-world ALOHA tasks, with ablations confirming the value of geometry post-training and proprioceptive-state-guided querying."
+    "paper_abstract": "Current Vision-Language-Action (VLA) models often optimize for semantic grounding, whereas executable manipulation requires geometry-aware spatial alignment. We introduce GeoAlign, a state-guided spatial alignment architecture for VLA policy learning. Offline robot-domain RGB-D supervision post-trains an RGB geometry branch to produce Geometry-Enhanced Post-Trained (GEP) features; the depth head is then discarded, so policy training and rollout use RGB, language, and proprioceptive state. State-generated queries attend to the GEP grid to produce eight compact geometry tokens for action prediction. GeoAlign achieves 99.0% on LIBERO, 85.3% across three SimplerEnv-Fractal task families, and 78.8% on eight real-world ALOHA tasks, with ablations supporting the combined recipe of geometry post-training and state-guided querying on Isaac-GR00T N1.6-3B. Project website: https://chenyizhi123.github.io/geoalign-project/."
   },
   {
     "name": "Qwen-VLA",
@@ -4717,7 +4756,7 @@
             "very_hard": 100.0,
             "average": 87.53
           },
-          "rank": 3
+          "rank": 4
         }
       ]
     },
@@ -5010,7 +5049,7 @@
       "Bochen Yang",
       "Lianlei Shan"
     ],
-    "paper_abstract": "Current Vision-Language-Action (VLA) models face a trade-off between efficient action generation and explicit deliberation. Directly decoding actions from vision-language backbone representations enables low-latency control, whereas explicit reasoning through textual chains, pixel-level subgoals, or action search can improve planning but incurs substantial latency and computational cost. We propose PearlVLA, a VLA framework that moves deliberation into the latent space of a vision-language model (VLM). PearlVLA separates VLM meta-query representations into a fixed visual grounding branch and an iterative latent plan branch. At each refinement round, a plan-conditioned world query probes a lightweight frozen latent world model for an action-free future observation latent, which is fed back to guide plan refinement. A future-guided RefineNet then applies scheduled residual updates to progressively refine a coarse semantic draft into a fine-grained latent action plan. The refined plan after K rounds is then decoded in parallel into an action chunk for low-latency execution. We further introduce Causal Refinement-Grouped Process-Reward RL to optimize the latent refinement process with rewards from longer-horizon imagined futures induced by latent plan edits. Empirical evaluations on the LIBERO benchmark demonstrate that PearlVLA achieves state-of-the-art performance among existing methods."
+    "paper_abstract": "Current Vision-Language-Action (VLA) models face a trade-off between efficient action generation and explicit deliberation. Directly decoding actions from vision-language backbone representations enables low-latency control, whereas textual reasoning, pixel-level subgoals, or world-model evaluation of decoded actions can improve planning but incur substantial latency and computational cost. We propose PearlVLA, a VLA framework that progressively refines a VLM-derived latent plan using feedback from the predicted consequence of each intermediate plan. PearlVLA uses a frozen latent world model (LaWM) pretrained on action-free video. At each refinement round, the current plan produces a continuous latent action code, and the LaWM predicts the corresponding latent visual subgoal. A future-guided plan refiner uses this subgoal to update the plan, so each revision reshapes the next LaWM query. After K rounds, the refined plan is passed once to the host policy's action interface to produce an action chunk. We further introduce Causal Refinement-Grouped Process-Reward RL to optimize latent refinement by comparing rewards from the longer-horizon imagined futures of plan edits made at the same refinement state. Experiments on the LIBERO and RoboCasa benchmarks show that PearlVLA performs competitively against strong existing methods."
   },
   {
     "name": "LaWAM",
@@ -5361,7 +5400,7 @@
             "very_hard": 81.4,
             "average": 85.6
           },
-          "rank": 5
+          "rank": 6
         }
       ]
     },
@@ -6302,7 +6341,7 @@
             "very_hard": 82.4,
             "average": 84.4
           },
-          "rank": 6
+          "rank": 7
         }
       ]
     },
@@ -6832,7 +6871,7 @@
       "Yichen Liu",
       "Jianyu Chen"
     ],
-    "paper_abstract": "Learning generalizable vision-language-action (VLA) models from large-scale human videos is promising but challenging due to cross-embodiment discrepancies in both visual observations and executable actions. While latent action models reduce the action execution gap by learning action abstractions, they still rely on visual features. Thus, misaligned human and robot visual representations can lead to inconsistencies in policy inputs and induce domain-dependent latent actions, hindering effective co-training with human videos. To address this, we propose HARP, a human-robot aligned representation learning framework for more effective VLA pretraining from human videos. Specifically, HARP uses limited paired human-robot demonstrations as cross-embodiment bridges and abundant unpaired human and robot videos as a scalable dynamics supervision data source. It trains a robot-adapted visual encoder and a latent action model with manipulation-centric auxiliary cues and a source-relative pair-discriminative alignment loss, which adapts robot representations toward human semantics while preserving pair-level discrimination. The learned aligned vision encoder and latent action model provide a unified vision and action representation for VLA-style policy learning, where human and robot videos provide vision-language-to-latent-action supervision and a lightweight robot action head grounds latent actions into executable commands. Experiments on feature visualization, simulation, and realworld manipulation show improved human-robot alignment and downstream policy performance, achieving 4.481 average length on CALVIN ABC$\\rightarrow$D and a 7.1\\% realworld success rate gain over the strongest baseline."
+    "paper_abstract": "Learning generalizable vision-language-action (VLA) models from large-scale human videos is promising but challenging due to cross-embodiment discrepancies in both visual observations and executable actions. While latent action models reduce the action execution gap by learning action abstractions, they still rely on visual features. Thus, misaligned human and robot visual representations can lead to inconsistencies in policy inputs and induce domain-dependent latent actions, hindering effective co-training with human videos.To address this, we propose HARP, a human-robot aligned representation learning framework for more effective VLA pretraining from human videos. Specifically, HARP uses paired human-robot demonstrations as cross-embodiment bridges and abundant unpaired human and robot videos as a scalable dynamics supervision data source. It trains a robot-adapted visual encoder and a latent action model with manipulation-centric auxiliary cues and a source-relative pair-discriminative alignment loss, which adapts robot representations toward human semantics while preserving pair-level discrimination. The learned aligned vision encoder and latent action model provide a unified vision and action representation for VLA-style policy learning, where human and robot videos provide vision-language-to-latent-action supervision and a lightweight robot action head grounds latent actions into executable commands. Experiments on feature visualization, simulation, and real-world manipulation show improved human-robot alignment and downstream policy performance, achieving 4.481 average length on CALVIN ABC$\\rightarrow$D and a 7.1 percentage-point improvement in real-world success rate over the strongest evaluated baseline. Code, videos, and demos are available at https://puzhenyuan.github.io/HARP-VLA-website/."
   },
   {
     "name": "ELAN4D",
@@ -11072,7 +11111,7 @@
             "very_hard": 79.2,
             "average": 80.6
           },
-          "rank": 9
+          "rank": 10
         }
       ],
       "robotwin": [
@@ -11208,7 +11247,7 @@
             "very_hard": 81.0,
             "average": 77.7
           },
-          "rank": 10
+          "rank": 11
         }
       ],
       "calvin_abcd_d": [
@@ -11954,7 +11993,7 @@
             "very_hard": 92.0,
             "average": 85.8
           },
-          "rank": 4
+          "rank": 5
         }
       ],
       "calvin_abc_d": [
@@ -13330,7 +13369,7 @@
             "very_hard": 64.0,
             "average": 68.2
           },
-          "rank": 13
+          "rank": 14
         }
       ]
     },
@@ -14120,7 +14159,7 @@
             "very_hard": 82.0,
             "average": 81.6
           },
-          "rank": 7
+          "rank": 8
         }
       ],
       "robochallenge": [
@@ -15589,7 +15628,7 @@
             "very_hard": 87.2,
             "average": 72.7
           },
-          "rank": 11
+          "rank": 12
         }
       ]
     },
@@ -15667,7 +15706,7 @@
             "very_hard": 30.0,
             "average": 47.9
           },
-          "rank": 17
+          "rank": 18
         }
       ],
       "robochallenge": [
@@ -15952,7 +15991,7 @@
             "very_hard": 15.8,
             "average": 31.6
           },
-          "rank": 18
+          "rank": 19
         }
       ]
     },
@@ -16543,7 +16582,7 @@
             "very_hard": 44.0,
             "average": 50.5
           },
-          "rank": 16
+          "rank": 17
         }
       ],
       "calvin_abcd_d": [
@@ -17143,7 +17182,7 @@
             "very_hard": 6.1,
             "average": 10.5
           },
-          "rank": 19
+          "rank": 20
         }
       ],
       "robocasa365": [
