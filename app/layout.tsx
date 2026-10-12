@@ -16,6 +16,18 @@ export const metadata: Metadata = {
     keywords: ['VLA', 'Vision-Language-Action', 'Robotics', 'Benchmark', 'Leaderboard', 'LIBERO', 'CALVIN', 'Meta-World'],
 };
 
+const sotaRedirectScript = `
+(function () {
+    if (window.location.hostname !== 'sota.evomind-tech.com') {
+        return;
+    }
+
+    var target = new URL(window.location.href);
+    target.hostname = 'studio.evomind-tech.com';
+    window.location.replace(target.toString());
+})();
+`;
+
 export default function RootLayout({
     children,
 }: {
@@ -27,6 +39,7 @@ export default function RootLayout({
                 <link rel="icon" href="/logo/EvoMind0.png" />
                 <link rel="shortcut icon" href="/logo/EvoMind0.png" />
                 <link rel="apple-touch-icon" href="/logo/EvoMind0.png" />
+                <script dangerouslySetInnerHTML={{ __html: sotaRedirectScript }} />
             </head>
             <body className={`${inter.variable} font-sans`}>
                 <LanguageProvider>
