@@ -92,66 +92,66 @@
     ]
   },
   "libero_plus": {
-    "total_models": 72,
-    "standard_opensource_count": 41,
+    "total_models": 73,
+    "standard_opensource_count": 42,
     "standard_closed_count": 29,
     "non_standard_count": 2,
     "model_type_count": {
-      "sft": 38,
+      "sft": 39,
       "rl": 3
     },
     "primary_metric": "Total Success Rate (%)",
     "top_5": [
       {
+        "name": "Phoenix-MWA",
+        "score": 94.6,
+        "rank": 1
+      },
+      {
         "name": "FabriMAE",
         "score": 86.8,
-        "rank": 1
+        "rank": 2
       },
       {
         "name": "ACoT-VLA",
         "score": 86.6,
-        "rank": 2
+        "rank": 3
       },
       {
         "name": "pi0.5",
         "score": 85.7,
-        "rank": 3
+        "rank": 4
       },
       {
         "name": "Multi-view-VLA",
         "score": 85.7,
-        "rank": 4
-      },
-      {
-        "name": "InternVLA-A1.5",
-        "score": 84.8,
         "rank": 5
       }
     ],
     "top_5_sft": [
       {
+        "name": "Phoenix-MWA",
+        "score": 94.6,
+        "rank": 1
+      },
+      {
         "name": "FabriMAE",
         "score": 86.8,
-        "rank": 1
+        "rank": 2
       },
       {
         "name": "ACoT-VLA",
         "score": 86.6,
-        "rank": 2
+        "rank": 3
       },
       {
         "name": "pi0.5",
         "score": 85.7,
-        "rank": 3
+        "rank": 4
       },
       {
         "name": "Multi-view-VLA",
         "score": 85.7,
-        "rank": 4
-      },
-      {
-        "name": "InternVLA-A1.5",
-        "score": 84.8,
         "rank": 5
       }
     ],
@@ -317,66 +317,66 @@
     "top_5_rl": []
   },
   "robocasa": {
-    "total_models": 29,
-    "standard_opensource_count": 18,
+    "total_models": 30,
+    "standard_opensource_count": 19,
     "standard_closed_count": 11,
     "non_standard_count": 0,
     "model_type_count": {
-      "sft": 18,
+      "sft": 19,
       "rl": 0
     },
     "primary_metric": "Average Success Rate (%)",
     "top_5": [
       {
+        "name": "Phoenix-MWA",
+        "score": 82.7,
+        "rank": 1
+      },
+      {
         "name": "Light-O1",
         "score": 79.3,
-        "rank": 1
+        "rank": 2
       },
       {
         "name": "WALA",
         "score": 75.2,
-        "rank": 2
+        "rank": 3
       },
       {
         "name": "DIAL",
         "score": 70.2,
-        "rank": 3
+        "rank": 4
       },
       {
         "name": "UCAG-P",
         "score": 62.0,
-        "rank": 4
-      },
-      {
-        "name": "FrameSkip",
-        "score": 59.5,
         "rank": 5
       }
     ],
     "top_5_sft": [
       {
+        "name": "Phoenix-MWA",
+        "score": 82.7,
+        "rank": 1
+      },
+      {
         "name": "Light-O1",
         "score": 79.3,
-        "rank": 1
+        "rank": 2
       },
       {
         "name": "WALA",
         "score": 75.2,
-        "rank": 2
+        "rank": 3
       },
       {
         "name": "DIAL",
         "score": 70.2,
-        "rank": 3
+        "rank": 4
       },
       {
         "name": "UCAG-P",
         "score": 62.0,
-        "rank": 4
-      },
-      {
-        "name": "FrameSkip",
-        "score": 59.5,
         "rank": 5
       }
     ],
@@ -603,5 +603,5 @@
       "d_d": 14
     }
   },
-  "total_unique_models": 324
+  "total_unique_models": 325
 }
