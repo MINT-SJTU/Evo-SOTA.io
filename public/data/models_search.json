@@ -39,6 +39,52 @@
     "paper_abstract": "Vision-language-action (VLA) models provide a unified framework for visual understanding, language grounding, and robot control, yet anticipating how the scene will evolve beyond the current observation can provide additional information for control. Action supervision alone does not explicitly encourage such anticipation, while future-image prediction entangles task-relevant motion with largely static appearance. To address these limitations, we introduce Evo-World, a lightweight VLA model that augments policy learning with future motion prediction through optical-flow supervision, thereby providing a task-relevant predictive signal focused on motion rather than appearance. We further design the training procedure to preserve these predictive representations during policy learning, regulating representation diversity while decoupling representation learning from action optimization. Across simulation benchmarks, Evo-World demonstrates strong performance, achieving a tier-averaged success rate of 91.1% on Meta-World MT50 , with a 13.0% relative improvement over the non-predictive baseline. On real-world AgileX robots, Evo-World outperforms the evaluated baselines across single-arm and bimanual manipulation tasks while using only 0.87B parameters and delivering lower GPU memory usage and higher inference efficiency. These results demonstrate that future motion prediction through optical-flow supervision provides an effective and lightweight approach to enhancing the predictive capabilities of VLA models."
   },
   {
+    "name": "Phoenix-MWA",
+    "paper_url": "https://openphoenix-team.github.io/Phoenix-pages/",
+    "pub_date": "2026-10",
+    "is_opensource": true,
+    "opensource_url": "https://github.com/OpenPhoenix-Team/Phoenix-MWA",
+    "is_rl": false,
+    "settings": [],
+    "benchmarks": {
+      "libero_plus": [
+        {
+          "setting": "default",
+          "score": 94.6,
+          "is_standard": true,
+          "note": "",
+          "data": {
+            "camera": 88.2,
+            "robot": 94.0,
+            "language": 95.5,
+            "light": 99.9,
+            "background": 98.9,
+            "noise": 98.3,
+            "layout": 90.2,
+            "total": 94.6
+          },
+          "rank": 1
+        }
+      ],
+      "robocasa": [
+        {
+          "setting": "default",
+          "score": 82.7,
+          "is_standard": true,
+          "note": "",
+          "data": {
+            "avg_success_rate": 82.7
+          },
+          "rank": 1
+        }
+      ]
+    },
+    "paper_arxiv_id": null,
+    "paper_title": null,
+    "paper_authors": null,
+    "paper_abstract": null
+  },
+  {
     "name": "FutureDuet",
     "paper_url": "https://arxiv.org/abs/2609.34362",
     "pub_date": "2026-09",
@@ -135,7 +181,7 @@
             "layout": 87.0,
             "total": 79.8
           },
-          "rank": 18
+          "rank": 19
         }
       ]
     },
@@ -200,7 +246,7 @@
             "layout": 84.5,
             "total": 82.5
           },
-          "rank": 10
+          "rank": 11
         }
       ]
     },
@@ -615,7 +661,7 @@
           "data": {
             "avg_success_rate": 50.5
           },
-          "rank": 13
+          "rank": 14
         }
       ]
     },
@@ -947,7 +993,7 @@
           "data": {
             "avg_success_rate": 79.3
           },
-          "rank": 1
+          "rank": 2
         }
       ]
     },
@@ -1593,7 +1639,7 @@
             "layout": 79.21,
             "total": 71.01
           },
-          "rank": 28
+          "rank": 29
         }
       ],
       "robotwin": [
@@ -1782,7 +1828,7 @@
             "layout": 74.3,
             "total": 82.0
           },
-          "rank": 13
+          "rank": 14
         }
       ],
       "robocasa": [
@@ -1794,7 +1840,7 @@
           "data": {
             "avg_success_rate": 62.0
           },
-          "rank": 4
+          "rank": 5
         }
       ],
       "robotwin": [
@@ -2085,7 +2131,7 @@
             "layout": 83.21,
             "total": 77.45
           },
-          "rank": 22
+          "rank": 23
         }
       ],
       "calvin_abc_d": [
@@ -2205,7 +2251,7 @@
             "layout": 80.72,
             "total": 75.47
           },
-          "rank": 23
+          "rank": 24
         }
       ]
     },
@@ -2345,7 +2391,7 @@
             "layout": 87.21,
             "total": 86.8
           },
-          "rank": 1
+          "rank": 2
         }
       ]
     },
@@ -2383,7 +2429,7 @@
           "data": {
             "avg_success_rate": 75.2
           },
-          "rank": 2
+          "rank": 3
         }
       ]
     },
@@ -2449,7 +2495,7 @@
             "layout": 85.2,
             "total": 83.4
           },
-          "rank": 9
+          "rank": 10
         }
       ],
       "robotwin": [
@@ -2702,7 +2748,7 @@
             "layout": 85.2,
             "total": 84.8
           },
-          "rank": 5
+          "rank": 6
         }
       ],
       "robotwin": [
@@ -3660,7 +3706,7 @@
             "layout": 74.3,
             "total": 72.8
           },
-          "rank": 26
+          "rank": 27
         }
       ],
       "robotwin": [
@@ -3905,7 +3951,7 @@
             "layout": 80.5,
             "total": 84.4
           },
-          "rank": 6
+          "rank": 7
         }
       ]
     },
@@ -4225,7 +4271,7 @@
             "layout": 84.39,
             "total": 83.49
           },
-          "rank": 8
+          "rank": 9
         }
       ]
     },
@@ -4508,7 +4554,7 @@
       "Xinghang Li",
       "Huaping Liu"
     ],
-    "paper_abstract": "Embodied chain-of-thought (CoT) aims to bridge linguistic reasoning and robotic control, but its effective form and integration strategy remain underexplored. In this paper, we revisit embodied CoT for vision-language-action (VLA) models at large scale. We construct the largest embodied CoT corpus to date, comprising 978,743 trajectories, 226.3M samples, and 2592.5 hours of robot data. Through extensive experiments, we find that effective embodied CoT should ground high-level semantic understanding into concrete action guidance, such as end-effector movement descriptions and image-space trajectories, while high-level reasoning alone brings only marginal gains. We further show that explicit CoT does not scale reliably when used as an autoregressive action prefix, as it suffers from compounding inference errors and unstable reasoning-action coupling. To address these limitations, we propose ERVLA, a VLA model that uses embodied CoT as representation-shaping supervision rather than mandatory test-time reasoning. ERVLA is trained with a reasoning-dropout strategy, enabling the model to absorb rich reasoning traces during training while predicting actions directly without CoT decoding during inference. This design improves scalability with increasing pre-training data and avoids autoregressive instability. ERVLA achieves state-of-the-art performance on LIBERO-Plus with an 86.9% success rate and reaches 53.2% success rate on VLABench, demonstrating strong out-of-distribution generalization. In real-robot experiments, ERVLA further outperforms competitive state-of-the-art baselines, especially on tasks requiring semantic disambiguation and long-horizon execution."
+    "paper_abstract": "Embodied chain-of-thought (CoT) aims to bridge linguistic reasoning with robotic control, yet its effective form and integration remain underexplored. In this paper, we revisit embodied CoT for robotic control at an unprecedented scale. We curate the largest embodied CoT corpus to date, comprising 978,743 trajectories, 226.3M samples, and 2592.5 hours of data. Through extensive experiments, we show that effective CoT must ground high-level semantic understaning in concrete linguistic action guidance -- such as end-effector movement and image-space trajectories -- whereas high-level reasoning alone yields marginal gains. More importantly, we identify that explicit CoT does not scale reliably as an autoregressive action prefix, suffering from compounding errors during inference. To address these challenges, we propose ERVLA, a vision-language-action (VLA) model that effectively leverages linguistic reasoning in generalizable robot manipulation. ERVLA is trained using a CoT-dropout strategy, allowing the model to leverage rich reasoning traces during training while predicting actions directly without CoT during inference to bypass autoregressive instability. This approach enables reliable scaling with increasing pre-training data. ERVLA achieves state-of-the-art results on LIBERO-Plus with an 86.9\\% success rate and reaches 53.2\\% on VLABench, showcasing superior performance in out-of-distribution settings. Furthermore, ERVLA outperforms competitive state-of-the-art baselines in real-robot experiments, especially in handling semantic ambiguity and long-horizon tasks. Code, data, and model checkpoints are available on the project website: https://taoshuaiz.github.io/ERVLA/."
   },
   {
     "name": "3DThinkVLA",
@@ -5660,7 +5706,7 @@
           "data": {
             "avg_success_rate": 58.7
           },
-          "rank": 6
+          "rank": 7
         }
       ],
       "robocasa365": [
@@ -5879,7 +5925,7 @@
             "layout": 82.6,
             "total": 81.2
           },
-          "rank": 16
+          "rank": 17
         }
       ]
     },
@@ -6037,7 +6083,7 @@
             "layout": 78.2,
             "total": 85.7
           },
-          "rank": 4
+          "rank": 5
         }
       ],
       "robotwin": [
@@ -6098,7 +6144,7 @@
             "layout": 79.9,
             "total": 75.4
           },
-          "rank": 24
+          "rank": 25
         }
       ]
     },
@@ -6261,7 +6307,7 @@
           "data": {
             "avg_success_rate": 59.5
           },
-          "rank": 5
+          "rank": 6
         }
       ]
     },
@@ -6325,7 +6371,7 @@
             "layout": 69.6,
             "total": 69.6
           },
-          "rank": 30
+          "rank": 31
         }
       ],
       "metaworld": [
@@ -6490,7 +6536,7 @@
             "layout": 74.1,
             "total": 82.0
           },
-          "rank": 12
+          "rank": 13
         }
       ],
       "robotwin": [
@@ -6606,7 +6652,7 @@
             "layout": 80.8,
             "total": 83.9
           },
-          "rank": 7
+          "rank": 8
         }
       ]
     },
@@ -6761,7 +6807,7 @@
             "layout": 82.5,
             "total": 82.1
           },
-          "rank": 11
+          "rank": 12
         }
       ]
     },
@@ -7169,7 +7215,7 @@
           "data": {
             "avg_success_rate": 47.6
           },
-          "rank": 16
+          "rank": 17
         }
       ],
       "robocasa365": [
@@ -7306,7 +7352,7 @@
             "layout": 79.1,
             "total": 79.7
           },
-          "rank": 19
+          "rank": 20
         }
       ],
       "robochallenge": [
@@ -7330,7 +7376,7 @@
           "data": {
             "avg_success_rate": 57.3
           },
-          "rank": 8
+          "rank": 9
         }
       ],
       "robotwin": [
@@ -8070,7 +8116,7 @@
             "layout": 83.3,
             "total": 81.4
           },
-          "rank": 15
+          "rank": 16
         }
       ]
     },
@@ -8626,7 +8672,7 @@
           "data": {
             "avg_success_rate": 50.8
           },
-          "rank": 12
+          "rank": 13
         }
       ]
     },
@@ -9152,7 +9198,7 @@
           "data": {
             "avg_success_rate": 70.2
           },
-          "rank": 3
+          "rank": 4
         }
       ]
     },
@@ -9400,7 +9446,7 @@
             "layout": 82.6,
             "total": 80.5
           },
-          "rank": 17
+          "rank": 18
         }
       ],
       "robocasa": [
@@ -9412,7 +9458,7 @@
           "data": {
             "avg_success_rate": 58.3
           },
-          "rank": 7
+          "rank": 8
         }
       ],
       "robotwin": [
@@ -9584,7 +9630,7 @@
             "layout": 85.1,
             "total": 79.5
           },
-          "rank": 20
+          "rank": 21
         }
       ]
     },
@@ -9821,7 +9867,7 @@
             "layout": 81.2,
             "total": 81.7
           },
-          "rank": 14
+          "rank": 15
         }
       ]
     },
@@ -9883,7 +9929,7 @@
             "layout": 79.5,
             "total": 74.0
           },
-          "rank": 25
+          "rank": 26
         }
       ],
       "robotwin": [
@@ -10032,7 +10078,7 @@
           "data": {
             "avg_success_rate": 55.4
           },
-          "rank": 9
+          "rank": 10
         }
       ]
     },
@@ -10184,7 +10230,7 @@
             "layout": 88.1,
             "total": 86.6
           },
-          "rank": 2
+          "rank": 3
         }
       ]
     },
@@ -10267,7 +10313,7 @@
           "data": {
             "avg_success_rate": 52.6
           },
-          "rank": 11
+          "rank": 12
         }
       ]
     },
@@ -10304,7 +10350,7 @@
           "data": {
             "avg_success_rate": 54.6
           },
-          "rank": 10
+          "rank": 11
         }
       ]
     },
@@ -10807,7 +10853,7 @@
           "data": {
             "avg_success_rate": 47.8
           },
-          "rank": 15
+          "rank": 16
         },
         {
           "setting": "Qwen3PI",
@@ -10817,7 +10863,7 @@
           "data": {
             "avg_success_rate": 43.9
           },
-          "rank": 17
+          "rank": 18
         },
         {
           "setting": "Qwen3OFT",
@@ -10827,7 +10873,7 @@
           "data": {
             "avg_success_rate": 48.8
           },
-          "rank": 14
+          "rank": 15
         },
         {
           "setting": "Qwen3FAST",
@@ -10837,7 +10883,7 @@
           "data": {
             "avg_success_rate": 39.0
           },
-          "rank": 18
+          "rank": 19
         }
       ],
       "robotwin": [
@@ -11095,7 +11141,7 @@
             "layout": 62.9,
             "total": 65.7
           },
-          "rank": 33
+          "rank": 34
         }
       ],
       "metaworld": [
@@ -11325,7 +11371,7 @@
             "layout": 79.9,
             "total": 79.0
           },
-          "rank": 21
+          "rank": 22
         }
       ]
     },
@@ -11491,7 +11537,7 @@
             "layout": 72.4,
             "total": 59.6
           },
-          "rank": 35
+          "rank": 36
         }
       ]
     },
@@ -11602,7 +11648,7 @@
             "layout": 73.7,
             "total": 72.4
           },
-          "rank": 27
+          "rank": 28
         }
       ]
     },
@@ -13557,7 +13603,7 @@
             "layout": 38.0,
             "total": 25.0
           },
-          "rank": 40
+          "rank": 41
         }
       ]
     },
@@ -13868,7 +13914,7 @@
             "layout": 31.9,
             "total": 43.9
           },
-          "rank": 38
+          "rank": 39
         }
       ]
     },
@@ -14045,7 +14091,7 @@
             "layout": 74.2,
             "total": 68.4
           },
-          "rank": 31
+          "rank": 32
         }
       ]
     },
@@ -14143,7 +14189,7 @@
             "layout": 87.0,
             "total": 85.7
           },
-          "rank": 3
+          "rank": 4
         }
       ],
       "metaworld": [
@@ -14301,7 +14347,7 @@
             "layout": 62.1,
             "total": 39.0
           },
-          "rank": 39
+          "rank": 40
         }
       ]
     },
@@ -14794,7 +14840,7 @@
             "layout": 74.2,
             "total": 69.6
           },
-          "rank": 29
+          "rank": 30
         },
         {
           "setting": "mix-sft",
@@ -14811,7 +14857,7 @@
             "layout": 68.7,
             "total": 67.9
           },
-          "rank": 32
+          "rank": 33
         },
         {
           "setting": "without wrist input",
@@ -14828,7 +14874,7 @@
             "layout": 69.9,
             "total": 55.8
           },
-          "rank": 36
+          "rank": 37
         }
       ],
       "robochallenge": [
@@ -14937,7 +14983,7 @@
             "layout": 68.8,
             "total": 61.6
           },
-          "rank": 34
+          "rank": 35
         }
       ]
     },
@@ -15690,7 +15736,7 @@
             "layout": 68.9,
             "total": 53.6
           },
-          "rank": 37
+          "rank": 38
         }
       ],
       "metaworld": [
@@ -16270,7 +16316,7 @@
             "layout": 28.5,
             "total": 15.6
           },
-          "rank": 41
+          "rank": 42
         }
       ]
     },

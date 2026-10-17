@@ -1,6 +1,28 @@
 {
   "standard_opensource": [
     {
+      "name": "Phoenix-MWA",
+      "base_name": "Phoenix-MWA",
+      "setting": "",
+      "paper_url": "https://openphoenix-team.github.io/Phoenix-pages/",
+      "pub_date": "2026-10",
+      "is_opensource": true,
+      "opensource_url": "https://github.com/OpenPhoenix-Team/Phoenix-MWA",
+      "is_rl": false,
+      "camera": 88.2,
+      "robot": 94.0,
+      "language": 95.5,
+      "light": 99.9,
+      "background": 98.9,
+      "noise": 98.3,
+      "layout": 90.2,
+      "total": 94.6,
+      "source": "original",
+      "is_standard": true,
+      "note": "",
+      "rank": 1
+    },
+    {
       "name": "FabriMAE",
       "base_name": "FabriMAE",
       "setting": "",
@@ -20,7 +42,7 @@
       "source": "original",
       "is_standard": true,
       "note": "",
-      "rank": 1
+      "rank": 2
     },
     {
       "name": "ACoT-VLA",
@@ -42,7 +64,7 @@
       "source": "original",
       "is_standard": true,
       "note": "",
-      "rank": 2
+      "rank": 3
     },
     {
       "name": "pi0.5",
@@ -64,7 +86,7 @@
       "source": "from ACoT-VLA",
       "is_standard": true,
       "note": "",
-      "rank": 3
+      "rank": 4
     },
     {
       "name": "Multi-view-VLA",
@@ -86,7 +108,7 @@
       "source": "original",
       "is_standard": true,
       "note": "",
-      "rank": 4
+      "rank": 5
     },
     {
       "name": "InternVLA-A1.5",
@@ -108,7 +130,7 @@
       "source": "original",
       "is_standard": true,
       "note": "",
-      "rank": 5
+      "rank": 6
     },
     {
       "name": "WorldPilot",
@@ -130,7 +152,7 @@
       "source": "original",
       "is_standard": true,
       "note": "",
-      "rank": 6
+      "rank": 7
     },
     {
       "name": "VLANeXt",
@@ -152,7 +174,7 @@
       "source": "original",
       "is_standard": true,
       "note": "",
-      "rank": 7
+      "rank": 8
     },
     {
       "name": "TBD-VLA",
@@ -174,7 +196,7 @@
       "source": "original",
       "is_standard": true,
       "note": "",
-      "rank": 8
+      "rank": 9
     },
     {
       "name": "Abot-M0.5",
@@ -196,7 +218,7 @@
       "source": "original",
       "is_standard": true,
       "note": "",
-      "rank": 9
+      "rank": 10
     },
     {
       "name": "ME-U0",
@@ -218,7 +240,7 @@
       "source": "original",
       "is_standard": true,
       "note": "",
-      "rank": 10
+      "rank": 11
     },
     {
       "name": "GridS",
@@ -240,7 +262,7 @@
       "source": "original",
       "is_standard": true,
       "note": "",
-      "rank": 11
+      "rank": 12
     },
     {
       "name": "RoVLA",
@@ -262,7 +284,7 @@
       "source": "original",
       "is_standard": true,
       "note": "",
-      "rank": 12
+      "rank": 13
     },
     {
       "name": "UCAG-P",
@@ -284,7 +306,7 @@
       "source": "original",
       "is_standard": true,
       "note": "",
-      "rank": 13
+      "rank": 14
     },
     {
       "name": "ROCKET-VLA",
@@ -306,7 +328,7 @@
       "source": "original",
       "is_standard": true,
       "note": "",
-      "rank": 14
+      "rank": 15
     },
     {
       "name": "PRTS",
@@ -328,7 +350,7 @@
       "source": "original",
       "is_standard": true,
       "note": "",
-      "rank": 15
+      "rank": 16
     },
     {
       "name": "VLA-GSE",
@@ -350,7 +372,7 @@
       "source": "original",
       "is_standard": true,
       "note": "",
-      "rank": 16
+      "rank": 17
     },
     {
       "name": "ABot-M0",
@@ -372,7 +394,7 @@
       "source": "original",
       "is_standard": true,
       "note": "",
-      "rank": 17
+      "rank": 18
     },
     {
       "name": "EffVLA",
@@ -394,7 +416,7 @@
       "source": "original",
       "is_standard": true,
       "note": "",
-      "rank": 18
+      "rank": 19
     },
     {
       "name": "StarVLA-alpha",
@@ -416,7 +438,7 @@
       "source": "original",
       "is_standard": true,
       "note": "",
-      "rank": 19
+      "rank": 20
     },
     {
       "name": "VLA-JEPA",
@@ -438,7 +460,7 @@
       "source": "original",
       "is_standard": true,
       "note": "",
-      "rank": 20
+      "rank": 21
     },
     {
       "name": "DeepThinkVLA",
@@ -460,7 +482,7 @@
       "source": "original",
       "is_standard": true,
       "note": "",
-      "rank": 21
+      "rank": 22
     },
     {
       "name": "SLIM-0.5B",
@@ -482,7 +504,7 @@
       "source": "original",
       "is_standard": true,
       "note": "",
-      "rank": 22
+      "rank": 23
     },
     {
       "name": "DreamWAM",
@@ -504,7 +526,7 @@
       "source": "original",
       "is_standard": true,
       "note": "",
-      "rank": 23
+      "rank": 24
     },
     {
       "name": "GuidedVLA",
@@ -526,7 +548,7 @@
       "source": "original",
       "is_standard": true,
       "note": "",
-      "rank": 24
+      "rank": 25
     },
     {
       "name": "HoloBrain-0",
@@ -548,7 +570,7 @@
       "source": "original",
       "is_standard": true,
       "note": "",
-      "rank": 25
+      "rank": 26
     },
     {
       "name": "ST-WAM",
@@ -570,7 +592,7 @@
       "source": "original",
       "is_standard": true,
       "note": "",
-      "rank": 26
+      "rank": 27
     },
     {
       "name": "MergeVLA",
@@ -592,7 +614,7 @@
       "source": "original",
       "is_standard": true,
       "note": "",
-      "rank": 27
+      "rank": 28
     },
     {
       "name": "4D-WAM",
@@ -614,7 +636,7 @@
       "source": "original",
       "is_standard": true,
       "note": "",
-      "rank": 28
+      "rank": 29
     },
     {
       "name": "OpenVLA-OFT",
@@ -636,7 +658,7 @@
       "source": "from Libero-plus",
       "is_standard": true,
       "note": "",
-      "rank": 29
+      "rank": 30
     },
     {
       "name": "Evo-depth",
@@ -658,7 +680,7 @@
       "source": "original",
       "is_standard": true,
       "note": "",
-      "rank": 30
+      "rank": 31
     },
     {
       "name": "RIPT-VLA",
@@ -680,7 +702,7 @@
       "source": "from Libero-plus",
       "is_standard": true,
       "note": "",
-      "rank": 31
+      "rank": 32
     },
     {
       "name": "OpenVLA-OFT (mix-sft)",
@@ -702,7 +724,7 @@
       "source": "from Libero-plus",
       "is_standard": true,
       "note": "",
-      "rank": 32
+      "rank": 33
     },
     {
       "name": "Evo-1",
@@ -724,7 +746,7 @@
       "source": "original",
       "is_standard": true,
       "note": "",
-      "rank": 33
+      "rank": 34
     },
     {
       "name": "pi0-FAST",
@@ -746,7 +768,7 @@
       "source": "from Libero-plus",
       "is_standard": true,
       "note": "",
-      "rank": 34
+      "rank": 35
     },
     {
       "name": "SRPO",
@@ -768,7 +790,7 @@
       "source": "original",
       "is_standard": true,
       "note": "",
-      "rank": 35
+      "rank": 36
     },
     {
       "name": "OpenVLA-OFT (without wrist input)",
@@ -790,7 +812,7 @@
       "source": "from Libero-plus",
       "is_standard": true,
       "note": "",
-      "rank": 36
+      "rank": 37
     },
     {
       "name": "pi0",
@@ -812,7 +834,7 @@
       "source": "from Libero-plus",
       "is_standard": true,
       "note": "",
-      "rank": 37
+      "rank": 38
     },
     {
       "name": "UniVLA",
@@ -834,7 +856,7 @@
       "source": "from Libero-plus",
       "is_standard": true,
       "note": "",
-      "rank": 38
+      "rank": 39
     },
     {
       "name": "NORA",
@@ -856,7 +878,7 @@
       "source": "from Libero-plus",
       "is_standard": true,
       "note": "",
-      "rank": 39
+      "rank": 40
     },
     {
       "name": "WorldVLA",
@@ -878,7 +900,7 @@
       "source": "from Libero-plus",
       "is_standard": true,
       "note": "",
-      "rank": 40
+      "rank": 41
     },
     {
       "name": "OpenVLA",
@@ -900,7 +922,7 @@
       "source": "from Libero-plus",
       "is_standard": true,
       "note": "",
-      "rank": 41
+      "rank": 42
     }
   ],
   "standard_closed": [
