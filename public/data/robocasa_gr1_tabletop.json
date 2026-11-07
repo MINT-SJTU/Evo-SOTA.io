@@ -31,6 +31,21 @@
       "rank": 2
     },
     {
+      "name": "Long-WAM",
+      "base_name": "Long-WAM",
+      "setting": "",
+      "paper_url": "https://arxiv.org/abs/2610.10528",
+      "pub_date": "2026-10",
+      "is_opensource": true,
+      "opensource_url": "https://github.com/NVlabs/LongLive/tree/main/Long-WAM",
+      "is_rl": false,
+      "avg_success_rate": 78.7,
+      "source": "original",
+      "is_standard": true,
+      "note": "",
+      "rank": 3
+    },
+    {
       "name": "WALA",
       "base_name": "WALA",
       "setting": "",
@@ -43,7 +58,22 @@
       "source": "original",
       "is_standard": true,
       "note": "",
-      "rank": 3
+      "rank": 4
+    },
+    {
+      "name": "EgoForeSight",
+      "base_name": "EgoForeSight",
+      "setting": "",
+      "paper_url": "https://arxiv.org/abs/2610.31845",
+      "pub_date": "2026-10",
+      "is_opensource": true,
+      "opensource_url": "https://github.com/LinShan-Bin/EgoForesight",
+      "is_rl": false,
+      "avg_success_rate": 73.9,
+      "source": "original",
+      "is_standard": true,
+      "note": "",
+      "rank": 5
     },
     {
       "name": "DIAL",
@@ -58,7 +88,7 @@
       "source": "original",
       "is_standard": true,
       "note": "",
-      "rank": 4
+      "rank": 6
     },
     {
       "name": "UCAG-P",
@@ -73,7 +103,22 @@
       "source": "original",
       "is_standard": true,
       "note": "",
-      "rank": 5
+      "rank": 7
+    },
+    {
+      "name": "RESETTLE",
+      "base_name": "RESETTLE",
+      "setting": "",
+      "paper_url": "https://arxiv.org/abs/2610.12185",
+      "pub_date": "2026-10",
+      "is_opensource": true,
+      "opensource_url": "https://github.com/JIA-Lab-research/RESETTLE",
+      "is_rl": false,
+      "avg_success_rate": 60.5,
+      "source": "original",
+      "is_standard": true,
+      "note": "",
+      "rank": 8
     },
     {
       "name": "FrameSkip",
@@ -88,7 +133,7 @@
       "source": "original",
       "is_standard": true,
       "note": "",
-      "rank": 6
+      "rank": 9
     },
     {
       "name": "RLDX-1",
@@ -103,7 +148,7 @@
       "source": "original",
       "is_standard": true,
       "note": "",
-      "rank": 7
+      "rank": 10
     },
     {
       "name": "ABot-M0",
@@ -118,7 +163,7 @@
       "source": "original",
       "is_standard": true,
       "note": "",
-      "rank": 8
+      "rank": 11
     },
     {
       "name": "StarVLA-alpha",
@@ -133,7 +178,7 @@
       "source": "original",
       "is_standard": true,
       "note": "",
-      "rank": 9
+      "rank": 12
     },
     {
       "name": "LDA-1B",
@@ -148,7 +193,7 @@
       "source": "original",
       "is_standard": true,
       "note": "",
-      "rank": 10
+      "rank": 13
     },
     {
       "name": "TwinBrainVLA",
@@ -163,7 +208,7 @@
       "source": "original",
       "is_standard": true,
       "note": "",
-      "rank": 11
+      "rank": 14
     },
     {
       "name": "Langforce",
@@ -178,7 +223,7 @@
       "source": "original",
       "is_standard": true,
       "note": "",
-      "rank": 12
+      "rank": 15
     },
     {
       "name": "DiT4DiT",
@@ -193,7 +238,7 @@
       "source": "original",
       "is_standard": true,
       "note": "",
-      "rank": 13
+      "rank": 16
     },
     {
       "name": "THAW-VLA",
@@ -208,7 +253,7 @@
       "source": "original",
       "is_standard": true,
       "note": "",
-      "rank": 14
+      "rank": 17
     },
     {
       "name": "StarVLA (Qwen3OFT)",
@@ -223,7 +268,7 @@
       "source": "original",
       "is_standard": true,
       "note": "",
-      "rank": 15
+      "rank": 18
     },
     {
       "name": "StarVLA (Qwen3GR00T)",
@@ -238,7 +283,7 @@
       "source": "original",
       "is_standard": true,
       "note": "",
-      "rank": 16
+      "rank": 19
     },
     {
       "name": "GR00T-N1.6",
@@ -253,7 +298,7 @@
       "source": "from StarVLA",
       "is_standard": true,
       "note": "",
-      "rank": 17
+      "rank": 20
     },
     {
       "name": "StarVLA (Qwen3PI)",
@@ -268,7 +313,7 @@
       "source": "original",
       "is_standard": true,
       "note": "",
-      "rank": 18
+      "rank": 21
     },
     {
       "name": "StarVLA (Qwen3FAST)",
@@ -283,10 +328,25 @@
       "source": "original",
       "is_standard": true,
       "note": "",
-      "rank": 19
+      "rank": 22
     }
   ],
   "standard_closed": [
+    {
+      "name": "WorldBridge",
+      "base_name": "WorldBridge",
+      "setting": "",
+      "paper_url": "https://arxiv.org/abs/2610.40748",
+      "pub_date": "2026-10",
+      "is_opensource": false,
+      "opensource_url": null,
+      "is_rl": false,
+      "avg_success_rate": 82.8,
+      "source": "original",
+      "is_standard": true,
+      "note": "",
+      "rank": 1
+    },
     {
       "name": "CF-WAM",
       "base_name": "CF-WAM",
@@ -300,7 +360,7 @@
       "source": "original",
       "is_standard": true,
       "note": "",
-      "rank": 1
+      "rank": 2
     },
     {
       "name": "ACE-Ego-0",
@@ -315,7 +375,7 @@
       "source": "original",
       "is_standard": true,
       "note": "",
-      "rank": 2
+      "rank": 3
     },
     {
       "name": "PhysBrain 1.0",
@@ -330,7 +390,7 @@
       "source": "original",
       "is_standard": true,
       "note": "",
-      "rank": 3
+      "rank": 4
     },
     {
       "name": "JoyAI-RA 0.1",
@@ -345,7 +405,7 @@
       "source": "original",
       "is_standard": true,
       "note": "",
-      "rank": 4
+      "rank": 5
     },
     {
       "name": "LatentBridge",
@@ -360,7 +420,7 @@
       "source": "original",
       "is_standard": true,
       "note": "",
-      "rank": 5
+      "rank": 6
     },
     {
       "name": "DyPES-VLA",
@@ -375,7 +435,7 @@
       "source": "original",
       "is_standard": true,
       "note": "",
-      "rank": 6
+      "rank": 7
     },
     {
       "name": "FoMoVLA",
@@ -390,7 +450,7 @@
       "source": "original",
       "is_standard": true,
       "note": "",
-      "rank": 7
+      "rank": 8
     },
     {
       "name": "Qwen-VLA (generalist)",
@@ -405,7 +465,7 @@
       "source": "original",
       "is_standard": true,
       "note": "",
-      "rank": 8
+      "rank": 9
     },
     {
       "name": "CoRE-VLA",
@@ -420,7 +480,7 @@
       "source": "original",
       "is_standard": true,
       "note": "",
-      "rank": 9
+      "rank": 10
     },
     {
       "name": "Dual-CoT VLA",
@@ -435,7 +495,7 @@
       "source": "original",
       "is_standard": true,
       "note": "",
-      "rank": 10
+      "rank": 11
     },
     {
       "name": "VP-VLA",
@@ -450,7 +510,7 @@
       "source": "original",
       "is_standard": true,
       "note": "",
-      "rank": 11
+      "rank": 12
     }
   ],
   "non_standard": []

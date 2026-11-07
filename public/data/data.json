@@ -1,11 +1,11 @@
 {
   "libero": {
-    "total_models": 232,
-    "standard_opensource_count": 123,
-    "standard_closed_count": 91,
+    "total_models": 249,
+    "standard_opensource_count": 137,
+    "standard_closed_count": 94,
     "non_standard_count": 18,
     "model_type_count": {
-      "sft": 109,
+      "sft": 123,
       "rl": 14
     },
     "primary_metric": "Average Success Rate (%)",
@@ -21,45 +21,45 @@
         "rank": 2
       },
       {
+        "name": "Long-WAM",
+        "score": 99.5,
+        "rank": 3
+      },
+      {
         "name": "Abot-M0.5",
         "score": 99.4,
-        "rank": 3
+        "rank": 4
       },
       {
         "name": "CORAL",
         "score": 99.3,
-        "rank": 4
-      },
-      {
-        "name": "SRPO",
-        "score": 99.2,
         "rank": 5
       }
     ],
     "top_5_sft": [
       {
+        "name": "Long-WAM",
+        "score": 99.5,
+        "rank": 1
+      },
+      {
         "name": "Abot-M0.5",
         "score": 99.4,
-        "rank": 1
+        "rank": 2
       },
       {
         "name": "CORAL",
         "score": 99.3,
-        "rank": 2
+        "rank": 3
       },
       {
         "name": "SaiVLA-0",
         "score": 99.0,
-        "rank": 3
+        "rank": 4
       },
       {
         "name": "ME-U0",
         "score": 99.0,
-        "rank": 4
-      },
-      {
-        "name": "Being-H0.5 (Specialist)",
-        "score": 98.9,
         "rank": 5
       }
     ],
@@ -92,13 +92,13 @@
     ]
   },
   "libero_plus": {
-    "total_models": 73,
-    "standard_opensource_count": 42,
-    "standard_closed_count": 29,
+    "total_models": 94,
+    "standard_opensource_count": 59,
+    "standard_closed_count": 33,
     "non_standard_count": 2,
     "model_type_count": {
-      "sft": 39,
-      "rl": 3
+      "sft": 54,
+      "rl": 5
     },
     "primary_metric": "Total Success Rate (%)",
     "top_5": [
@@ -108,23 +108,23 @@
         "rank": 1
       },
       {
-        "name": "FabriMAE",
-        "score": 86.8,
+        "name": "PICA-WAM",
+        "score": 93.3,
         "rank": 2
       },
       {
-        "name": "ACoT-VLA",
-        "score": 86.6,
+        "name": "R2A",
+        "score": 90.4,
         "rank": 3
       },
       {
-        "name": "pi0.5",
-        "score": 85.7,
+        "name": "REKI",
+        "score": 90.4,
         "rank": 4
       },
       {
-        "name": "Multi-view-VLA",
-        "score": 85.7,
+        "name": "FabriMAE",
+        "score": 86.8,
         "rank": 5
       }
     ],
@@ -135,51 +135,61 @@
         "rank": 1
       },
       {
-        "name": "FabriMAE",
-        "score": 86.8,
+        "name": "PICA-WAM",
+        "score": 93.3,
         "rank": 2
       },
       {
-        "name": "ACoT-VLA",
-        "score": 86.6,
+        "name": "R2A",
+        "score": 90.4,
         "rank": 3
       },
       {
-        "name": "pi0.5",
-        "score": 85.7,
+        "name": "REKI",
+        "score": 90.4,
         "rank": 4
       },
       {
-        "name": "Multi-view-VLA",
-        "score": 85.7,
+        "name": "FabriMAE",
+        "score": 86.8,
         "rank": 5
       }
     ],
     "top_5_rl": [
       {
+        "name": "OmniBrain-0",
+        "score": 84.5,
+        "rank": 1
+      },
+      {
         "name": "PRTS",
         "score": 81.4,
-        "rank": 1
+        "rank": 2
+      },
+      {
+        "name": "AgenticRoboRL",
+        "score": 72.2,
+        "rank": 3
       },
       {
         "name": "RIPT-VLA",
         "score": 68.4,
-        "rank": 2
+        "rank": 4
       },
       {
         "name": "SRPO",
         "score": 59.6,
-        "rank": 3
+        "rank": 5
       }
     ]
   },
   "metaworld": {
-    "total_models": 33,
-    "standard_opensource_count": 20,
+    "total_models": 34,
+    "standard_opensource_count": 21,
     "standard_closed_count": 6,
     "non_standard_count": 7,
     "model_type_count": {
-      "sft": 18,
+      "sft": 19,
       "rl": 2
     },
     "primary_metric": "Average Success Rate (%)",
@@ -317,12 +327,12 @@
     "top_5_rl": []
   },
   "robocasa": {
-    "total_models": 30,
-    "standard_opensource_count": 19,
-    "standard_closed_count": 11,
+    "total_models": 34,
+    "standard_opensource_count": 22,
+    "standard_closed_count": 12,
     "non_standard_count": 0,
     "model_type_count": {
-      "sft": 19,
+      "sft": 22,
       "rl": 0
     },
     "primary_metric": "Average Success Rate (%)",
@@ -338,18 +348,18 @@
         "rank": 2
       },
       {
-        "name": "WALA",
-        "score": 75.2,
+        "name": "Long-WAM",
+        "score": 78.7,
         "rank": 3
       },
       {
-        "name": "DIAL",
-        "score": 70.2,
+        "name": "WALA",
+        "score": 75.2,
         "rank": 4
       },
       {
-        "name": "UCAG-P",
-        "score": 62.0,
+        "name": "EgoForeSight",
+        "score": 73.9,
         "rank": 5
       }
     ],
@@ -365,57 +375,57 @@
         "rank": 2
       },
       {
-        "name": "WALA",
-        "score": 75.2,
+        "name": "Long-WAM",
+        "score": 78.7,
         "rank": 3
       },
       {
-        "name": "DIAL",
-        "score": 70.2,
+        "name": "WALA",
+        "score": 75.2,
         "rank": 4
       },
       {
-        "name": "UCAG-P",
-        "score": 62.0,
+        "name": "EgoForeSight",
+        "score": 73.9,
         "rank": 5
       }
     ],
     "top_5_rl": []
   },
   "robotwin": {
-    "total_models": 53,
-    "standard_opensource_count": 30,
-    "standard_closed_count": 23,
+    "total_models": 76,
+    "standard_opensource_count": 50,
+    "standard_closed_count": 26,
     "non_standard_count": 0,
     "model_type_count": {
-      "sft": 29,
-      "rl": 1
+      "sft": 47,
+      "rl": 3
     },
     "primary_metric": "Hard Success Rate (%)",
     "top_5": [
       {
-        "name": "Abot-M0.5",
-        "score": 94.2,
+        "name": "LoopWAM",
+        "score": 94.4,
         "rank": 1
       },
       {
-        "name": "InternVLA-A1.5",
-        "score": 93.0,
+        "name": "Abot-M0.5",
+        "score": 94.2,
         "rank": 2
       },
       {
-        "name": "ST-WAM",
-        "score": 92.48,
+        "name": "Long-WAM",
+        "score": 94.2,
         "rank": 3
       },
       {
-        "name": "HoloBrain-0",
-        "score": 92.3,
+        "name": "Gnomon-4D",
+        "score": 94.1,
         "rank": 4
       },
       {
-        "name": "Enfold",
-        "score": 92.08,
+        "name": "HiLo-WAM",
+        "score": 93.52,
         "rank": 5
       }
     ],
@@ -426,99 +436,120 @@
         "rank": 1
       },
       {
-        "name": "InternVLA-A1.5",
-        "score": 93.0,
+        "name": "Long-WAM",
+        "score": 94.2,
         "rank": 2
       },
       {
-        "name": "ST-WAM",
-        "score": 92.48,
+        "name": "Gnomon-4D",
+        "score": 94.1,
         "rank": 3
       },
       {
-        "name": "HoloBrain-0",
-        "score": 92.3,
+        "name": "HiLo-WAM",
+        "score": 93.52,
         "rank": 4
       },
       {
-        "name": "Enfold",
-        "score": 92.08,
+        "name": "JAM",
+        "score": 93.28,
         "rank": 5
       }
     ],
     "top_5_rl": [
       {
+        "name": "LoopWAM",
+        "score": 94.4,
+        "rank": 1
+      },
+      {
+        "name": "OmniBrain-0",
+        "score": 88.4,
+        "rank": 2
+      },
+      {
         "name": "Motus",
         "score": 87.02,
-        "rank": 1
+        "rank": 3
       }
     ]
   },
   "robocasa365": {
-    "total_models": 14,
-    "standard_opensource_count": 10,
+    "total_models": 21,
+    "standard_opensource_count": 17,
     "standard_closed_count": 4,
     "non_standard_count": 0,
     "model_type_count": {
-      "sft": 10,
-      "rl": 0
+      "sft": 15,
+      "rl": 2
     },
     "primary_metric": "Average Success Rate (%)",
     "top_5": [
       {
-        "name": "HarnessVLA",
-        "score": 57.2,
+        "name": "MOST-VLA",
+        "score": 72.1,
         "rank": 1
       },
       {
-        "name": "Abot-M0.5",
-        "score": 46.6,
+        "name": "HarnessVLA",
+        "score": 57.2,
         "rank": 2
       },
       {
-        "name": "WorldDreamer",
-        "score": 35.3,
+        "name": "Long-WAM",
+        "score": 54.4,
         "rank": 3
       },
       {
-        "name": "RLDX-1",
-        "score": 32.1,
+        "name": "CausalAlign",
+        "score": 54.2,
         "rank": 4
       },
       {
-        "name": "GR00T-N1.5",
-        "score": 23.9,
+        "name": "LoopWAM",
+        "score": 49.5,
         "rank": 5
       }
     ],
     "top_5_sft": [
       {
+        "name": "MOST-VLA",
+        "score": 72.1,
+        "rank": 1
+      },
+      {
         "name": "HarnessVLA",
         "score": 57.2,
-        "rank": 1
+        "rank": 2
+      },
+      {
+        "name": "Long-WAM",
+        "score": 54.4,
+        "rank": 3
+      },
+      {
+        "name": "CausalAlign",
+        "score": 54.2,
+        "rank": 4
       },
       {
         "name": "Abot-M0.5",
         "score": 46.6,
-        "rank": 2
-      },
-      {
-        "name": "WorldDreamer",
-        "score": 35.3,
-        "rank": 3
-      },
-      {
-        "name": "RLDX-1",
-        "score": 32.1,
-        "rank": 4
-      },
-      {
-        "name": "GR00T-N1.5",
-        "score": 23.9,
         "rank": 5
       }
     ],
-    "top_5_rl": []
+    "top_5_rl": [
+      {
+        "name": "LoopWAM",
+        "score": 49.5,
+        "rank": 1
+      },
+      {
+        "name": "OmniBrain-0",
+        "score": 43.2,
+        "rank": 2
+      }
+    ]
   },
   "calvin": {
     "total_models": 54,
@@ -603,5 +634,5 @@
       "d_d": 14
     }
   },
-  "total_unique_models": 325
+  "total_unique_models": 363
 }

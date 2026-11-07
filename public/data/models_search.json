@@ -1,5 +1,184 @@
 [
   {
+    "name": "Gnomon-4D",
+    "paper_url": "https://arxiv.org/abs/2611.02474",
+    "pub_date": "2026-11",
+    "is_opensource": true,
+    "opensource_url": "https://github.com/Droliven/Gnomon4D",
+    "is_rl": false,
+    "settings": [],
+    "benchmarks": {
+      "robotwin": [
+        {
+          "setting": "default",
+          "score": 94.1,
+          "is_standard": true,
+          "note": "",
+          "data": {
+            "easy": 94.56,
+            "hard": 94.1
+          },
+          "data_scaling": true,
+          "rank": 4
+        }
+      ]
+    },
+    "paper_arxiv_id": "2611.02474",
+    "paper_title": "Gnomon4D: Learning Where and When to Focus for Geometric Motion-Grounded World-Action Modeling",
+    "paper_authors": [
+      "Lingwei Dang",
+      "Yan Zhou",
+      "Juntong Li",
+      "Zhenhao Zhang",
+      "Yiteng Chen",
+      "Xiaoqiang Liu",
+      "Liang An",
+      "Hongwen Zhang",
+      "Wei Min",
+      "Guoxin Zhang",
+      "Pengfei Wan",
+      "Yebin Liu",
+      "Qingyao Wu"
+    ],
+    "paper_abstract": "World-action models (WAMs) predict scene changes to guide robot actions, yet their RGB futures entangle state changes with appearance and lack 3D geometry. Recent WAMs add geometry as a training signal or a control interface, or build native 3D models, but decide what geometry to model rather than how the action should read it. Intuitively, control-relevant cues lie at embodiment--object interactions and their transitions, yet probing existing WAMs reveals that their action attention underweights these interactions in favor of the rest of the embodiment. To focus the action on these interactions, we present Gnomon4D, a WAM that jointly generates future video, robot actions, and GeoDelta, a video-aligned 4D geometric motion field recording the image-plane displacement and depth change of embodiment and object points. With the embodiment and objects in one field, their relative motion, which marks an interaction, can be read off. Guided by this motion and the task, Interaction-Salient Attention (InSAttn) selects where the action reads, and Transition-Anchored Aggregation (TransAgg) selects when, around grasp and release. As GeoDelta encodes surface motion rather than embodiment-specific controls, it serves as a human--robot quasi-action that links action-free pretraining on EgoManip-5000H, which we curate, to robot mid-training on Robot-30H. Gnomon4D leads on RoboTwin~2.0, VLABench, and RoboDojo, and outperforms real-robot baselines, especially under visual shifts. Project page: https://droliven.github.io/Gnomon4D."
+  },
+  {
+    "name": "HiLo-WAM",
+    "paper_url": "https://arxiv.org/pdf/2611.05023",
+    "pub_date": "2026-11",
+    "is_opensource": true,
+    "opensource_url": "https://github.com/xywang227/HiLo-WAM/tree/main",
+    "is_rl": false,
+    "settings": [],
+    "benchmarks": {
+      "robotwin": [
+        {
+          "setting": "default",
+          "score": 93.52,
+          "is_standard": true,
+          "note": "",
+          "data": {
+            "easy": 93.87,
+            "hard": 93.52
+          },
+          "data_scaling": true,
+          "rank": 5
+        }
+      ]
+    },
+    "paper_arxiv_id": "2611.05023",
+    "paper_title": "HiLo-WAM: Decoupling Long-Horizon Task Evolution and Local Dynamics in World Action Models",
+    "paper_authors": [
+      "Xingyu Wang",
+      "Yanjiang Guo",
+      "Zhijing Ding",
+      "Jiaxin Fang",
+      "Zeyu Lai",
+      "Jiayu Dong",
+      "Weikang Wan",
+      "Jianyu Chen",
+      "Yuxiang Gao",
+      "Mengdi Xu"
+    ],
+    "paper_abstract": "World Action Models (WAMs) improve robotic manipulation by jointly modeling visual dynamics and robot actions. However, most existing WAMs model dense short-horizon visual dynamics, capturing local interactions but providing limited long-range task context. Extending prediction horizons increases uncertainty and computation while entangling task-level evolution with fine-grained local dynamics, obscuring their dependencies and distinct roles in action generation. We propose HiLo-WAM, which decouples long-horizon task evolution from local visual dynamics while jointly modeling their interaction with robot actions. A sparse long-horizon visual stream captures historical task context and future evolution, while a dense local dynamics visual stream models short-horizon robot-object interactions. The two streams operate at different temporal scales within a unified dual-DiT architecture and guide actions through structured cross-stream attention. Progressive inference further reduces unnecessary computation through stream-wise partial denoising, joint denoising, and dynamic skipping. Experiments demonstrate strong long-horizon manipulation performance: HiLo-WAM achieves a 93.70% average success rate on RoboTwin 2.0 and a 17.43 progress score on RoboDojo long-horizon tasks, with robust in-domain and OOD performance on the Fourier GR-3 robot. Ablations confirm the complementary contributions of long-horizon task evolution and local interaction dynamics, while temporal-scale analyses highlight the importance of balancing temporal coverage and resolution. Progressive inference further achieves a 2.93x speedup while improving performance."
+  },
+  {
+    "name": "Xiaomi Auto World Model 2.0",
+    "paper_url": "https://arxiv.org/abs/2611.01677",
+    "pub_date": "2026-11",
+    "is_opensource": false,
+    "opensource_url": null,
+    "is_rl": false,
+    "settings": [],
+    "benchmarks": {
+      "libero_plus": [
+        {
+          "setting": "default",
+          "score": 75.0,
+          "is_standard": true,
+          "note": "",
+          "data": {
+            "camera": 39.6,
+            "robot": 74.7,
+            "language": 95.3,
+            "light": 97.5,
+            "background": 71.0,
+            "noise": 71.4,
+            "layout": 81.5,
+            "total": 75.0
+          }
+        }
+      ]
+    },
+    "paper_arxiv_id": "2611.01677",
+    "paper_title": "Xiaomi Auto World Model 2.0: Causal World Models for Real-World Driving and Embodied Intelligence",
+    "paper_authors": [
+      "Zhenxin Zhu",
+      "Zhijian Huang",
+      "Cheng Chi",
+      "Yuru Wang",
+      "Jianhua Wu",
+      "Jiayi Guan",
+      "Yonggang Li",
+      "Mingfei Tu",
+      "JiaKui Hu",
+      "Tao Xu",
+      "Xianqi Wang",
+      "Hao Li",
+      "Yuechuan Pu",
+      "Qizeng Jia",
+      "Ruiling Yang",
+      "Hongxiao Yu",
+      "Xuhan Sheng",
+      "Jian Mao",
+      "Ruiqiang Zhang",
+      "Yu Zhu",
+      "Guang Chen",
+      "Hangjun Ye",
+      "Bing Wang"
+    ],
+    "paper_abstract": "We present Xiaomi Auto World Model 2.0, a unified streaming causal world model for Physical AI. It models and generates causal physical evolution in the real world, and unifies heterogeneous conditioning inputs for view-consistent generation. The architecture integrates View-Temporal Attention (VTA) to capture cross-view spatial dependencies and temporal dynamics, together with Multi-view Rotary Position Encoding (RoPE) to encode positional relationships across views and time. WorldRec 2.0 reconstructs static and dynamic 3D Gaussians from multi-view, multi-temporal observations in a single forward pass and uses their renderings as explicit scene context to preserve geometry and appearance during long-horizon generation. Conditioning inputs are fused through VAE latent concatenation in a shared representation space. We incorporate Gated Linear Attention (GLA) into the temporal layers of VTA for efficient streaming inference, reducing computation and KV-cache memory during multi-view rollouts. A physical-interaction data pipeline covers diverse interactions and long-tailed events. From Pre-train onward, these data are combined with large-scale videos and heterogeneous visual modalities to learn visual, geometric, and dynamic priors. During Mid-train, training across diverse view configurations further improves the model's ability to capture how actions and object states shape subsequent scene evolution. After distillation-based Post-train, we apply the model to closed-loop simulation, closed-loop training, and World Action Model (WAM) applications. These applications generate physically consistent future states and support world-state prediction, policy learning, and action generation for Physical AI."
+  },
+  {
+    "name": "MOST-VLA",
+    "paper_url": "https://arxiv.org/abs/2611.00734",
+    "pub_date": "2026-11",
+    "is_opensource": true,
+    "opensource_url": "https://github.com/Intelligent-Interaction/MOST-vla",
+    "is_rl": false,
+    "settings": [],
+    "benchmarks": {
+      "robocasa365": [
+        {
+          "setting": "default",
+          "score": 72.1,
+          "is_standard": true,
+          "note": "",
+          "data": {
+            "atomic_seen": 81.8,
+            "composite_seen": 68.7,
+            "composite_unseen": 64.7,
+            "average": 72.1
+          },
+          "rank": 1
+        }
+      ]
+    },
+    "paper_arxiv_id": "2611.00734",
+    "paper_title": "MOST: Memory of Object States and Task Progress for Long-Horizon Mobile Manipulation",
+    "paper_authors": [
+      "Diqi He",
+      "Jinbang Guo",
+      "Yijun Shen",
+      "Zhiwei Yu",
+      "Huan Yang",
+      "Dingwen Zhang",
+      "Junwei Han",
+      "Zhongyuan Wang"
+    ],
+    "paper_abstract": "Long-horizon embodied manipulation requires policies to act on information that is no longer visible. Modified objects may leave the field of view, while completed subtasks continue to constrain future actions. Existing approaches extend temporal context through recurrent state updates, test-time training, or storage and retrieval of past observations. As horizons grow, these mechanisms can still leave the policy to infer task state from long, redundant, and viewpoint-dependent visual experience. We argue that long-horizon agents benefit not merely from remembering more, but from remembering task-relevant state changes and progress. We propose Memory of Object States and Task Progress (MOST), a policy-internal memory framework that compresses multi-view observations into temporal tokens. Historical and predictive future tokens are explicitly supervised with object states and subtask progress, structuring memory around what has changed in the world and what has already been accomplished. The resulting memory directly conditions action generation within a single end-to-end policy, without an external planner or retrieval stage. We further introduce RoboCasa-Long, a benchmark of multi-minute, multi-stage mobile manipulation tasks. Across RoboCasa365, RoboCasa-Long, and real-world robot experiments, MOST consistently outperforms Xiaomi-Robotics-1 (XR-1), the previous state-of-the-art model. It raises average success from 65.9% to 72.1% on RoboCasa365, average maximum task progress from 20.83% to 42.22% on RoboCasa-Long, and real-world success from 6.66% to 43.33%. MOST also outperforms a matched visual-history memory variant, showing that effective long-horizon memory depends not only on how much experience is retained, but on whether it preserves decision-relevant progress and world-state changes."
+  },
+  {
     "name": "Evo-World",
     "paper_url": "https://arxiv.org/abs/2610.12936",
     "pub_date": "2026-10",
@@ -85,6 +264,2036 @@
     "paper_abstract": null
   },
   {
+    "name": "RynnVLA-Latent",
+    "paper_url": "https://arxiv.org/abs/2610.34356",
+    "pub_date": "2026-10",
+    "is_opensource": true,
+    "opensource_url": "https://github.com/alibaba-damo-academy/RynnVLA-Latent",
+    "is_rl": false,
+    "settings": [],
+    "benchmarks": {
+      "libero": [
+        {
+          "setting": "default",
+          "score": 98.8,
+          "is_standard": true,
+          "note": "",
+          "data": {
+            "policy_setting": 1,
+            "spatial": 99.4,
+            "object": 99.8,
+            "goal": 98.8,
+            "long": 97.0,
+            "libero_90": null,
+            "average": 98.8
+          },
+          "rank": 16
+        }
+      ],
+      "libero_plus": [
+        {
+          "setting": "default",
+          "score": 84.7,
+          "is_standard": true,
+          "note": "",
+          "data": {
+            "camera": 72.9,
+            "robot": 64.0,
+            "language": 91.7,
+            "light": 97.1,
+            "background": 95.4,
+            "noise": 93.2,
+            "layout": 85.2,
+            "total": 84.7
+          },
+          "rank": 10
+        }
+      ],
+      "robotwin": [
+        {
+          "setting": "default",
+          "score": 88.4,
+          "is_standard": true,
+          "note": "",
+          "data": {
+            "easy": 88.7,
+            "hard": 88.4
+          },
+          "data_scaling": true,
+          "rank": 31
+        }
+      ]
+    },
+    "paper_arxiv_id": "2610.34356",
+    "paper_title": "RynnVLA-Latent: Scaling Robotic Manipulation Foundation Models with 3D-Grounded Latent Actions",
+    "paper_authors": [
+      "Haoyu Zhao",
+      "Xingyue Zhao",
+      "Zhian Su",
+      "Bohan Hou",
+      "Yinzhou Tang",
+      "Fengyi Wang",
+      "Kehan Li",
+      "Yuming Jiang",
+      "Zhenyu Zeng",
+      "Mingxiu Chen",
+      "Deli Zhao",
+      "Siteng Huang",
+      "Xin Li",
+      "Zhongyu Li"
+    ],
+    "paper_abstract": "Scaling vision-language-action (VLA) models is constrained by scarce action-labeled demonstrations and incompatible control spaces across robot embodiments. We present RynnVLA-Latent, a framework that turns heterogeneous interaction videos into scalable supervision for robot policy pretraining. At its core, RynnLAM learns continuous, 3D-grounded latent actions from visual transitions without requiring native robot controls. By combining residual future-feature prediction, camera-compensated 3D-flow supervision, and camera-motion decoupling, RynnLAM encourages representations that capture control-relevant motion rather than appearance changes alone. We apply RynnLAM to 30.1K hours of human, robot, and simulation videos, producing 745.52M latent-action descriptors. RynnVLA-Latent then learns to predict latent-action chunks from visual observations and language through flow matching, before adapting its pretrained backbone and action expert to embodiment-specific robot actions. The resulting 4B policy achieves 98.8% success on LIBERO, 84.7% on LIBERO-Plus without benchmark-specific adaptation, 51.9% average success across five VLABench tracks, and 88.6% average success on the RoboTwin 2.0 bimanual benchmark. It also achieves the highest observed success rates among the compared methods on six real-world manipulation tasks across dexterous-hand and mobile-gripper platforms. Together with representation ablations and data-scaling results, these findings demonstrate the potential of latent-action supervision for scaling robot policy learning beyond native action-labeled data."
+  },
+  {
+    "name": "TurboWAM",
+    "paper_url": "https://arxiv.org/abs/2610.33941",
+    "pub_date": "2026-10",
+    "is_opensource": false,
+    "opensource_url": null,
+    "is_rl": false,
+    "settings": [],
+    "benchmarks": {
+      "libero": [
+        {
+          "setting": "default",
+          "score": 99.0,
+          "is_standard": true,
+          "note": "",
+          "data": {
+            "policy_setting": 0,
+            "spatial": 99.0,
+            "object": 100.0,
+            "goal": 99.6,
+            "long": 97.2,
+            "libero_90": null,
+            "average": 99.0
+          }
+        }
+      ],
+      "libero_plus": [
+        {
+          "setting": "default",
+          "score": 83.3,
+          "is_standard": true,
+          "note": "",
+          "data": {
+            "camera": 81.0,
+            "robot": 74.5,
+            "language": 93.0,
+            "light": 93.2,
+            "background": 65.4,
+            "noise": 89.1,
+            "layout": 83.7,
+            "total": 83.3
+          }
+        }
+      ],
+      "robotwin": [
+        {
+          "setting": "default",
+          "score": 90.5,
+          "is_standard": true,
+          "note": "",
+          "data": {
+            "easy": 90.4,
+            "hard": 90.5
+          },
+          "data_scaling": true
+        }
+      ]
+    },
+    "paper_arxiv_id": "2610.33941",
+    "paper_title": "TurboWAM: Learning What Matters for Fast World Action Models",
+    "paper_authors": [
+      "Guile Wu",
+      "Shuangzhi Li",
+      "Xingxin Chen",
+      "Chengjie Huang",
+      "Sam Hosseini",
+      "Tongtong Cao",
+      "Yingxue Zhang",
+      "Dongfeng Bai"
+    ],
+    "paper_abstract": "World action models have demonstrated promising performance in robot policy learning, yet their high inference latency remains a critical bottleneck for real-world deployment. Recent approaches have sought to improve inference efficiency by eliminating test-time future-frame imagination or accelerating action prediction. However, aggregating representations from all video world model layers can introduce redundant computation, while standard backpropagation may distribute action-supervision gradients unevenly across layers, limiting the effectiveness of world representation learning. In this work, we propose TurboWAM, a fast world action model that learns to efficiently aggregate and optimize world representations for action prediction. Specifically, TurboWAM introduces an efficient world representation aggregation mechanism that restricts aggregation to a bounded range of relevant world model layers identified through layer relevance analysis. Within this bounded range, TurboWAM estimates aggregation weights for different world model layers based on the current action denoising state and combines them with learnable layer-wise weights to fuse world representations. Moreover, TurboWAM employs a world model gradient modulation mechanism that decomposes action-supervision gradients into a layer-shared component and layer-specific residual components, enabling more balanced gradient propagation across world model layers. This mechanism operates exclusively during training and introduces no additional inference computation. Together, these designs enable more efficient world representation learning and low-latency action prediction. Extensive experiments on multiple robot manipulation benchmarks and real-world manipulation tasks show that TurboWAM achieves low inference latency while maintaining competitive task success rates compared with state-of-the-art methods."
+  },
+  {
+    "name": "PDRVLA",
+    "paper_url": "https://arxiv.org/pdf/2610.37381",
+    "pub_date": "2026-10",
+    "is_opensource": false,
+    "opensource_url": null,
+    "is_rl": false,
+    "settings": [],
+    "benchmarks": {
+      "libero": [
+        {
+          "setting": "default",
+          "score": 99.3,
+          "is_standard": true,
+          "note": "",
+          "data": {
+            "policy_setting": 0,
+            "spatial": 100.0,
+            "object": 99.8,
+            "goal": 99.8,
+            "long": 97.6,
+            "libero_90": null,
+            "average": 99.3
+          }
+        }
+      ],
+      "libero_plus": [
+        {
+          "setting": "default",
+          "score": 89.9,
+          "is_standard": true,
+          "note": "",
+          "data": {
+            "camera": 88.2,
+            "robot": 75.2,
+            "language": 90.7,
+            "light": 99.1,
+            "background": 99.4,
+            "noise": 95.6,
+            "layout": 86.5,
+            "total": 89.9
+          }
+        }
+      ],
+      "robotwin": [
+        {
+          "setting": "default",
+          "score": 93.3,
+          "is_standard": true,
+          "note": "",
+          "data": {
+            "easy": 93.9,
+            "hard": 93.3
+          },
+          "data_scaling": true
+        }
+      ]
+    },
+    "paper_arxiv_id": "2610.37381",
+    "paper_title": "PDRVLA: A Vision-Language-Action Model with Physical Dynamics Representations",
+    "paper_authors": [
+      "Hanqing Wang",
+      "Zhaotian Cai",
+      "Ruichuan An",
+      "Bohan Zeng",
+      "Tao Zhang",
+      "Yilin Chen",
+      "Xu Jiang",
+      "Kaiquan Chen",
+      "Chongyang Wu",
+      "Haoran Li",
+      "Fan Yang",
+      "Mingan Lin",
+      "Wentao Zhang",
+      "Zenan Zhou",
+      "Youzheng Wu",
+      "Xiaodong He"
+    ],
+    "paper_abstract": "Vision--Language--Action (VLA) models generate robot actions from visual observations and language instructions, but their understanding of physical dynamics remains limited. Video world models can capture scene dynamics, yet generating future videos introduces high latency into the control loop. We introduce PDRVLA, whose lightweight Physical Dynamics Module extracts physical tokens from vision--language features to condition action generation without online video generation. The module learns through direct prediction of future RGB, depth, and optical-flow features, with auxiliary supervision through a frozen pretrained video world model. Training relies entirely on publicly available data, expanded through human-to-robot synthesis, subtask annotation, and embodied chain-of-thought (ECoT) annotation. Across four simulation benchmarks, PDRVLA achieves success rates of 99.3% on LIBERO, 89.9% on LIBERO-Plus, 93.6% on RoboTwin~2.0, and 81.5% on SimplerEnv. Ablations show improved future prediction with world-model supervision and evaluate how subtask conditioning, future object-pose supervision, and ECoT training affect action success."
+  },
+  {
+    "name": "WorldBridge",
+    "paper_url": "https://arxiv.org/abs/2610.40748",
+    "pub_date": "2026-10",
+    "is_opensource": false,
+    "opensource_url": null,
+    "is_rl": false,
+    "settings": [],
+    "benchmarks": {
+      "robocasa": [
+        {
+          "setting": "default",
+          "score": 82.8,
+          "is_standard": true,
+          "note": "",
+          "data": {
+            "avg_success_rate": 82.8
+          }
+        }
+      ],
+      "robotwin": [
+        {
+          "setting": "default",
+          "score": 96.3,
+          "is_standard": true,
+          "note": "",
+          "data": {
+            "easy": 96.16,
+            "hard": 96.3
+          },
+          "data_scaling": true
+        }
+      ]
+    },
+    "paper_arxiv_id": "2610.40748",
+    "paper_title": "WorldBridge: Bridging Video and Action for Task Generalization in World Action Models",
+    "paper_authors": [
+      "Jun Cen",
+      "Yubo Guo",
+      "Hao Li",
+      "Liangkai Li",
+      "Yaoxu Lyu",
+      "Meng Wei",
+      "Zeqi Xiao",
+      "Sizhe Yang",
+      "Yuqiang Yang",
+      "Yifan Ye",
+      "Shanghang Zhang",
+      "Duo Zheng"
+    ],
+    "paper_abstract": "Achieving the broad task generalization of embodied models in physical environments remains a central challenge in robot learning. We study this challenge in World Action Models (WAMs) through two complementary capabilities: video generalization, which predicts the visual evolution of new tasks, and action generalization, which translates these predictions into executable behavior through a video-to-action bridge. By varying video and action supervision for tasks outside an initial training set, we examine their respective contributions to task transfer. On RoboTwin 2.0, using only in-distribution video-action supervision yields a 25.07% success rate on out-of-distribution tasks. Introducing videos of these tasks without their action labels raises success to 55.90%, while adding just one action-labeled demonstration per task further improves it to 70.70%. These findings suggest that broader video coverage enables task transfer by leveraging existing inverse-dynamics capabilities, while even sparse action supervision further strengthens those capabilities. Guided by this perspective, we introduce WorldBridge, a WAM with separate video and action experts connected through structured attention and trained with joint flow matching. WorldBridge incorporates visual memory at two temporal scales and action forcing, alongside a unified data processing pipeline that standardizes and filters heterogeneous robot trajectories and egocentric hand-derived supervision. Across multiple manipulation benchmarks, WorldBridge achieves state-of-the-art performance among the compared methods, including 96.23% on RoboTwin 2.0 full data setting and 80.9% on clean to random setting, 82.8% on RoboCasa GR1 TableTop, and 57.6% on DOMINO Level-1. Our study highlights the complementary roles of video prediction and action grounding in developing robots that generalize across tasks."
+  },
+  {
+    "name": "JAM",
+    "paper_url": "https://arxiv.org/abs/2610.37219",
+    "pub_date": "2026-10",
+    "is_opensource": true,
+    "opensource_url": "https://github.com/y0urOy/JAM",
+    "is_rl": false,
+    "settings": [],
+    "benchmarks": {
+      "libero": [
+        {
+          "setting": "default",
+          "score": 97.45,
+          "is_standard": true,
+          "note": "",
+          "data": {
+            "policy_setting": 1,
+            "spatial": 98.2,
+            "object": 100.0,
+            "goal": 97.6,
+            "long": 94.0,
+            "libero_90": null,
+            "average": 97.45
+          },
+          "rank": 71
+        }
+      ],
+      "libero_plus": [
+        {
+          "setting": "default",
+          "score": 79.9,
+          "is_standard": true,
+          "note": "",
+          "data": {
+            "camera": 83.8,
+            "robot": 49.2,
+            "language": 84.8,
+            "light": 95.7,
+            "background": 80.1,
+            "noise": 91.9,
+            "layout": 72.3,
+            "total": 79.9
+          },
+          "rank": 28
+        }
+      ],
+      "robotwin": [
+        {
+          "setting": "default",
+          "score": 93.28,
+          "is_standard": true,
+          "note": "",
+          "data": {
+            "easy": 92.88,
+            "hard": 93.28
+          },
+          "data_scaling": true,
+          "rank": 6
+        }
+      ]
+    },
+    "paper_arxiv_id": "2610.37219",
+    "paper_title": "Vision-Language-Action or World-Action? Just Action Models",
+    "paper_authors": [
+      "Yonghao Yu",
+      "Lang Huang",
+      "Runyi Li",
+      "Toshihiko Yamasaki"
+    ],
+    "paper_abstract": "The vision-language-action (VLA) and world-action model (WAM) communities debate whether control policies should inherit pretrained knowledge from vision-language models or from visual generators. The debate, however, bundles three separable choices: backbone initialization, the objective applied to future observations, and whether the machinery for that future loss is kept at inference. A gap between a VLA and a WAM therefore cannot simply be attributed to any one of them. We show that decoupling these choices yields a common framework for both families, which we term Just Action Model (JAM): a pretrained visual backbone with an action expert, trained with an action loss and a foresight loss. The foresight loss trains current-observation features to predict frozen encodings of the recorded future through a prediction head discarded after training, so no visual generation is involved in either training or inference, and the backbone can be chosen freely. We first compare objectives within fixed policy architectures, then evaluate the foresight recipe across backbone families. The resulting JAM policies outperform their matched FastWAM and ImageWAM counterparts on LIBERO and LIBERO-Plus, and achieve similar or slightly higher success rates on RoboTwin. Compared with FastWAM, JAM improves the success rates from 97.0%/55.3%/91.2% to 98.2%/64.5%/91.4%, respectively. With cached foresight targets, JAM reduces estimated online training FLOPs per sample per update by 73% relative to FastWAM. Our results show that future supervision improves control without visual generation or additional inference machinery, and strong foresight performance is attainable with either generator-initialized or vision-language backbones. Project Page: https://y0uroy.github.io/JAM"
+  },
+  {
+    "name": "GAWM",
+    "paper_url": "https://arxiv.org/abs/2610.37091",
+    "pub_date": "2026-10",
+    "is_opensource": true,
+    "opensource_url": "https://github.com/gaoxiang12/ga-wm",
+    "is_rl": false,
+    "settings": [],
+    "benchmarks": {
+      "libero": [
+        {
+          "setting": "default",
+          "score": 95.6,
+          "is_standard": true,
+          "note": "",
+          "data": {
+            "policy_setting": 1,
+            "spatial": 96.2,
+            "object": 99.8,
+            "goal": 95.0,
+            "long": 91.2,
+            "libero_90": null,
+            "average": 95.6
+          },
+          "rank": 100
+        }
+      ],
+      "robotwin": [
+        {
+          "setting": "default",
+          "score": 93.1,
+          "is_standard": true,
+          "note": "",
+          "data": {
+            "easy": 93.94,
+            "hard": 93.1
+          },
+          "data_scaling": true,
+          "rank": 7
+        }
+      ]
+    },
+    "paper_arxiv_id": "2610.37091",
+    "paper_title": "GAWM: A Compact Latent World-Action Model for Multi-Task Robot Manipulation",
+    "paper_authors": [
+      "Yang Liu",
+      "Xiaoli Liu",
+      "Liuzhao Li",
+      "Yuduo Song",
+      "Muyuan Liu",
+      "Xiang Gao"
+    ],
+    "paper_abstract": "World-action models (WAMs) incorporate the prediction of future observations into robot policy learning. However, most WAMs build on billion-parameter vision-language or video-generation backbones, which incur high training cost and inference latency. In this letter, we present GAWM (Geometry-Aware World Model), a compact multi-task WAM that predicts future observations in the latent space of a frozen DINOv3 encoder. GAWM compresses the features of each camera view into a small set of tokens. A lightweight predictor, conditioned on the task rather than on actions, forecasts these tokens at two future horizons. The forecast is supervised with the dense patch features of future frames, which requires it to encode the spatial layout of the future scene. An action decoder directly regresses a chunk of future actions from the current and predicted tokens. With fewer than 100M parameters and no robot or video pretraining, GAWM outperforms billion-parameter WAMs on RoboTwin 2.0 and performs comparably to billion-parameter VLAs on LIBERO. On a dual-arm robot, it achieves lower action-prediction error on held-out demonstrations than a fine-tuned billion-parameter VLA, with substantially lower inference latency. Ablation studies show that the latent world model substantially improves performance when training data or training time is limited. Code is available at https://github.com/gaoxiang12/ga-wm."
+  },
+  {
+    "name": "OSWAM",
+    "paper_url": "https://arxiv.org/abs/2610.35850",
+    "pub_date": "2026-10",
+    "is_opensource": true,
+    "opensource_url": "https://github.com/PolyU-VCLab/OSWAM",
+    "is_rl": false,
+    "settings": [],
+    "benchmarks": {
+      "robotwin": [
+        {
+          "setting": "default",
+          "score": 89.96,
+          "is_standard": true,
+          "note": "",
+          "data": {
+            "easy": 90.04,
+            "hard": 89.96
+          },
+          "data_scaling": true,
+          "rank": 24
+        }
+      ]
+    },
+    "paper_arxiv_id": "2610.35850",
+    "paper_title": "OSWAM: An Effective World Action Model with One-Step Action Generation",
+    "paper_authors": [
+      "Guowen Zhang",
+      "Liyi Chen",
+      "Xu Hu",
+      "Pengfei Wang",
+      "Jingfan Chen",
+      "Chenhang He",
+      "Lei Zhang"
+    ],
+    "paper_abstract": "Direct-policy World Action Models (WAM) have demonstrated the benefits of decoupling action generation from explicit future visual prediction for efficient inference in autonomous driving and embodied control. However, they still require tens of denoising steps to achieve competitive action quality, incurring substantial latency and hindering real-time deployment. Simply reducing the number of denoising steps will collapse the nonlinear multi-step denoising trajectory into coarse updates, substantially degrading action quality. To reduce the denoising steps while enabling real-time action generation, we present an effective world action model with one-step action generation, namely OSWAM, for autonomous driving and embodied control. We argue that it is the absence of structured action priors in random noise initialization that forces direct-policy WAMs to recover coherent action sequences through iterative denoising. Hence, we construct imagination tokens to initialize the diffusion process, providing physical priors and action-conditioned representations. We further introduce privileged information distillation with future conditioning to enhance future-aware action generation. As a result, OSWAM can efficiently and effectively generate high quality actions in just one diffusion step. Our experiments demonstrate that OSWAM achieves comparable or even better results in both autonomous driving and embodied control than direct-policy WAM and Joint-WAM that require tens of steps. It obtains approximately $3\\times$ speedup over direct-policy WAM baselines and supports real-time compiled inference with latency as low as 40ms on an NVIDIA RTX 5090 GPU. The project page is available at https://gwenzhang.github.io/OSWAM/"
+  },
+  {
+    "name": "OmniBrain-0",
+    "paper_url": "https://arxiv.org/abs/2610.36013",
+    "pub_date": "2026-10",
+    "is_opensource": true,
+    "opensource_url": "https://github.com/luo-yc17/OmniBrain-0",
+    "is_rl": true,
+    "settings": [],
+    "benchmarks": {
+      "libero_plus": [
+        {
+          "setting": "default",
+          "score": 84.5,
+          "is_standard": true,
+          "note": "",
+          "data": {
+            "camera": 70.8,
+            "robot": 76.7,
+            "language": 85.0,
+            "light": 94.2,
+            "background": 96.7,
+            "noise": 83.3,
+            "layout": 85.0,
+            "total": 84.5
+          },
+          "rank": 12
+        }
+      ],
+      "robotwin": [
+        {
+          "setting": "default",
+          "score": 88.4,
+          "is_standard": true,
+          "note": "",
+          "data": {
+            "easy": 90.4,
+            "hard": 88.4
+          },
+          "data_scaling": true,
+          "rank": 32
+        }
+      ],
+      "robocasa365": [
+        {
+          "setting": "default",
+          "score": 43.2,
+          "is_standard": true,
+          "note": "",
+          "data": {
+            "atomic_seen": 74.4,
+            "composite_seen": 36.3,
+            "composite_unseen": 15.0,
+            "average": 43.2
+          },
+          "rank": 7
+        }
+      ]
+    },
+    "paper_arxiv_id": "2610.36013",
+    "paper_title": "OmniBrain-0: A Unified Agentic Model for Embodied Intelligence",
+    "paper_authors": [
+      "Xiaomi Embodied Intelligence Team",
+      "Yuechen Luo",
+      "Chong He",
+      "Fang Li",
+      "Shaoqing Xu",
+      "Jingkai Wang",
+      "Menglun Su",
+      "Jiaxin Liu",
+      "Shengyin Jiang",
+      "Zhiyi Lai",
+      "Long Chen",
+      "Longlong Wang",
+      "Liang Hu",
+      "Haochen Liu",
+      "Yuncheng Jiang",
+      "Hongwei Xie",
+      "Jieming Cui",
+      "Hanbing Li",
+      "Junjie Huang",
+      "Zhixiang Duan",
+      "Hexin Zhang",
+      "Weixiang Liang",
+      "Ying Gong",
+      "Yuhan Wang",
+      "Yong Pan",
+      "Pengna Li",
+      "Kangyi Wu",
+      "Ken Deng",
+      "Kun Ma",
+      "Fuxi Wen",
+      "Zhi-xin Yang",
+      "Hangjun Ye"
+    ],
+    "paper_abstract": "General-purpose embodied intelligence requires robots to coordinate diverse skills over long horizons, track task progress, and recover from failures. Specialist policies alone do not ensure task-level reliability, while powerful multimodal agents rely on costly reasoning and external experience that compact models struggle to reproduce. We introduce OmniBrain-0, a lightweight unified embodied agent that coordinates manipulation and navigation through a shared high-level decision model, integrating task understanding, planning, progress tracking, and feedback-driven recovery. Our progressive training framework combines embodied pretraining, domain-specialized agent distillation, and multi-teacher on-policy distillation (MOPD). It distills powerful teachers' interaction experience into manipulation and navigation experts, then consolidates their decision capabilities into OmniBrain-0. Unification therefore occurs within the learned decision model rather than only at the tool interface. We further introduce Rubric-Guided Recursive Self-Improvement (RSI), a data flywheel in which a Meta-Agent turns execution evidence into refined rubrics, step-level reminders, and verified trajectories for domain-expert updates before their reconsolidation into OmniBrain-0 through MOPD. We evaluate OmniBrain-0 on LIBERO-Pro, LIBERO-Plus, RoboCasa365, RoboTwin 2.0, and R2R-CE Val-Unseen, as well as multiple real-world manipulation tasks. OmniBrain-0 combines strong cross-domain task performance with substantially lower inference and execution overhead than its closed-source teacher, demonstrating efficient transfer and consolidation of embodied capabilities into a compact unified agent."
+  },
+  {
+    "name": "GeoMem-VLA",
+    "paper_url": "https://arxiv.org/abs/2610.29866",
+    "pub_date": "2026-10",
+    "is_opensource": true,
+    "opensource_url": "https://github.com/GeoMem-VLA/GeoMem-VLA",
+    "is_rl": false,
+    "settings": [],
+    "benchmarks": {
+      "libero": [
+        {
+          "setting": "default",
+          "score": 98.9,
+          "is_standard": true,
+          "note": "",
+          "data": {
+            "policy_setting": 1,
+            "spatial": 99.6,
+            "object": 99.8,
+            "goal": 99.6,
+            "long": 96.6,
+            "libero_90": null,
+            "average": 98.9
+          },
+          "rank": 15
+        }
+      ],
+      "robotwin": [
+        {
+          "setting": "default",
+          "score": 91.24,
+          "is_standard": true,
+          "note": "",
+          "data": {
+            "easy": 91.1,
+            "hard": 91.24
+          },
+          "data_scaling": true,
+          "rank": 20
+        }
+      ]
+    },
+    "paper_arxiv_id": "2610.29866",
+    "paper_title": "GeoMem-VLA: Internalizing 3D Scene Understanding into Temporal Memory for Vision-Language-Action Models",
+    "paper_authors": [
+      "Qinfan Zhang",
+      "Yifan Luo",
+      "Haoyuan Shi",
+      "Guanlin Liu",
+      "Han Dong",
+      "Haozhe Shan",
+      "Yong Dai",
+      "Xiangcong Ren",
+      "Xiaozhu Ju"
+    ],
+    "paper_abstract": "Geometric structure is essential for robotic manipulation and understanding the 3D world. Most VLA models rely on 2D representations of current observations, while geometry-aware approaches often require additional 3D information. However, geometry inferred independently from individual observations is often discarded rather than accumulated into a persistent task representation. Our key insight is that action generation needs a compact, task-relevant geometric abstraction that can be continuously updated, rather than a complete, renderable 3D reconstruction at every step. We introduce GeoMem-VLA, a VLA framework that internalizes explicit 3D supervision into dedicated geometric tokens and maintains them as temporal memory for action generation, without directly aligning the VLM's native visual embeddings with the teacher feature space. During training, a frozen geometry foundation model supervises learnable GeoPlan tokens through a geometric flow-matching objective over the current scene point map and future end-effector tracks. These tokens are integrated with the memory of observation representations, where historical information is retrieved, adaptively fused with current observations, and consolidated to retain event frames as the task progresses. At inference, the policy retrieves historical representations and fuses them with the current working representation to predict actions, without invoking the 3D teacher or explicitly reconstructing the scene. After benchmark-specific downstream adaptation, GeoMem-VLA achieves 98.9% average success on LIBERO and 91.10% / 91.24% on RoboTwin's clean/randomized settings. Across five real-world tasks, GeoMem-VLA achieves 78.0% average success. These results suggest that internalizing and remembering 3D scene understanding is a promising approach to robot control."
+  },
+  {
+    "name": "RealtimeWAM",
+    "paper_url": "https://arxiv.org/abs/2610.06617",
+    "pub_date": "2026-10",
+    "is_opensource": true,
+    "opensource_url": "https://github.com/ModelTC/LightX2V/tree/main/scripts/realtimewam",
+    "is_rl": false,
+    "settings": [],
+    "benchmarks": {
+      "libero": [
+        {
+          "setting": "default",
+          "score": 99.0,
+          "is_standard": true,
+          "note": "",
+          "data": {
+            "policy_setting": 1,
+            "spatial": 98.8,
+            "object": 99.8,
+            "goal": 99.6,
+            "long": 97.6,
+            "libero_90": null,
+            "average": 99.0
+          },
+          "rank": 10
+        }
+      ],
+      "libero_plus": [
+        {
+          "setting": "default",
+          "score": 73.0,
+          "is_standard": true,
+          "note": "",
+          "data": {
+            "camera": 54.2,
+            "robot": 69.0,
+            "language": 92.5,
+            "light": 94.7,
+            "background": 59.4,
+            "noise": 64.6,
+            "layout": 79.3,
+            "total": 73.0
+          },
+          "rank": 39
+        }
+      ],
+      "robotwin": [
+        {
+          "setting": "default",
+          "score": 92.3,
+          "is_standard": true,
+          "note": "",
+          "data": {
+            "easy": 92.98,
+            "hard": 92.3
+          },
+          "data_scaling": true,
+          "rank": 14
+        }
+      ]
+    },
+    "paper_arxiv_id": "2610.06617",
+    "paper_title": "RealtimeWAM: One-Step Asynchronous World Action Models",
+    "paper_authors": [
+      "Chengtao Lv",
+      "Jinyang Du",
+      "Shuyi Feng",
+      "Yang Yong",
+      "Shiqiao Gu",
+      "Shunzi Yang",
+      "Ruihao Gong",
+      "Shen Ren",
+      "Tianwei Zhang",
+      "Wenya Wang"
+    ],
+    "paper_abstract": "World Action Models (WAMs) incorporate visual representations from video generation backbones to guide action prediction. Recent efficient WAMs adopt Mixture-of-Transformers (MoT) architectures and compute video representations once for reuse by the action expert. However, intra-expert iteration (\\ie, multi-step action denoising) and inter-expert waiting (\\ie, sequential execution of the video and action experts) still limit inference efficiency. To this end, we present RealtimeWAM, an extremely efficient WAM variant with one-step action generation and asynchronous inference, addressing these two bottlenecks. To reduce intra-expert iteration, we propose Teacher-Anchored Consistency Distillation (TACD) to address a local-global error gap: low local consistency error alone does not guarantee accurate final actions. TACD supplements local consistency with explicit supervision from the frozen teacher's multi-step rollout endpoint, enabling accurate one-step action generation. Additionally, we propose Cross-Expert Wavefront Pipelining (CEWP) to eliminate unnecessary expert-level waiting. It overlaps the two experts through block-wise sharing of the video KV cache, synchronizing only immediately before the corresponding action attention consumes it. Extensive experiments across diverse benchmarks (\\eg, LIBERO, LIBERO-Plus and RoboTwin) and model variants (\\eg, Fast-WAM and Faster-WAM) demonstrate the superiority of RealtimeWAM. Notably, RealtimeWAM maintains near-lossless performance (\\ie, $<1\\%$ drop) across these benchmarks while delivering significant end-to-end speedup (\\eg, $\\sim25\\times$ on H100). Our code and checkpoints are available via this \\href{https://github.com/ModelTC/LightX2V/tree/main/scripts/realtimewam}{link}."
+  },
+  {
+    "name": "LoopWAM",
+    "paper_url": "https://arxiv.org/abs/2610.18873",
+    "pub_date": "2026-10",
+    "is_opensource": true,
+    "opensource_url": "https://github.com/loop-wam/LoopWAM",
+    "is_rl": true,
+    "settings": [],
+    "benchmarks": {
+      "robotwin": [
+        {
+          "setting": "default",
+          "score": 94.4,
+          "is_standard": true,
+          "note": "",
+          "data": {
+            "easy": 94.6,
+            "hard": 94.4
+          },
+          "data_scaling": true,
+          "rank": 1
+        }
+      ],
+      "robocasa365": [
+        {
+          "setting": "default",
+          "score": 49.5,
+          "is_standard": true,
+          "note": "",
+          "data": {
+            "atomic_seen": 79.7,
+            "composite_seen": 50.3,
+            "composite_unseen": 14.9,
+            "average": 49.5
+          },
+          "rank": 5
+        }
+      ]
+    },
+    "paper_arxiv_id": "2610.18873",
+    "paper_title": "LoopWAM: Closed-Loop Generalist Policy Improvement from Deployment Rollouts",
+    "paper_authors": [
+      "Wenxuan Guo",
+      "Yingping Liang",
+      "Zhaoguo Wang",
+      "Ziyuan Li",
+      "Angyuan Ma",
+      "Zhenyu Wu",
+      "Chengkun Wang",
+      "Bingyao Yu",
+      "Ze Chen",
+      "Borui Zhang",
+      "Xiuwei Xu",
+      "Meng Zhang",
+      "Erjin Zhou",
+      "Jiwen Lu"
+    ],
+    "paper_abstract": "Scaling expert demonstrations alone does not enable generalist robot policies to improve from deployment. Real-world rollouts contain successes, suboptimal behavior, and failures: imitating every recorded action can reinforce poor behavior, while filtering out failures discards evidence of physical interactions and their consequences. We introduce LoopWAM, a closed-loop world-action model that learns directly from this full quality spectrum, using rollouts from both itself and other deployed policies. Source-dependent noise sampling unifies behavior learning and action-conditioned world modeling, while quality steering and quality-weighted supervision retain full video supervision across qualities and regulate action imitation. Video and action tokens interact throughout parallel denoising, allowing learned consequences to inform action generation directly. On RoboChallenge Table30-V2, three deployment-and-training rounds raise success from 23.67% to 43.33%, a 19.7-percentage-point gain, with a final score of 56.80. LoopWAM also achieves 94.5% average success on RoboTwin 2.0 and 49.5% overall success on RoboCasa365 without additional embodied pretraining, obtaining the best overall results among the compared methods across all three benchmarks. On challenging shirt folding task, two rounds of deployment-driven improvement after single-task post-training raise success from 13.20% to 55.56%. These results demonstrate closed-loop improvement from mixed-quality experience under both multi-task learning and single-task post-training. Project page: https://loop-wam.github.io/"
+  },
+  {
+    "name": "Fast-VLA",
+    "paper_url": "https://arxiv.org/abs/2610.21389",
+    "pub_date": "2026-10",
+    "is_opensource": true,
+    "opensource_url": "https://github.com/Garfield-kh/FastVLA",
+    "is_rl": false,
+    "settings": [],
+    "benchmarks": {
+      "robotwin": [
+        {
+          "setting": "default",
+          "score": 92.4,
+          "is_standard": true,
+          "note": "",
+          "data": {
+            "easy": 92.46,
+            "hard": 92.4
+          },
+          "data_scaling": true,
+          "rank": 12
+        }
+      ]
+    },
+    "paper_arxiv_id": "2610.21389",
+    "paper_title": "Fast-VLA: You Only Think Once for Robot Manipulation",
+    "paper_authors": [
+      "Kehong Gong",
+      "Guanli Hou",
+      "Xiaoxu Zheng",
+      "Qi Wang",
+      "Mingxi Xu",
+      "Anbang Zhai",
+      "Xiaoyu He",
+      "Mingyuan Zhang",
+      "Michael Bi Mi"
+    ],
+    "paper_abstract": "Vision-language-action (VLA) policies commonly place a multi-billion-parameter model inside the feedback loop, repeatedly recomputing task context whenever they predict a new action chunk. Yet task understanding changes far more slowly than the robot state. We introduce Fast-VLA, which invokes a frozen 4B VLM once per episode to contextualize the instruction and initial views as fixed, multi-layer key-value task memory. During execution, a lightweight online actor fuses learned time- and arm-indexed queries with current visual and proprioceptive feedback to form action queries. These queries retrieve task context from the fixed memory and predict action chunks without re-running the foundation model. Fast-VLA achieves 92.46% and 92.40% success on RoboTwin 2.0 Clean and Randomized, and 95.95% and 79.11% on LIBERO and LIBERO-Plus evaluation. Against three continually conditioned baselines on the same hardware, it reduces RoboTwin amortized policy inference time by 10.9-17.1x and requires 1.22 GiB of post-prefill online resident memory. Task-memory swaps further show that the actor relies on episode-matched task memory. These results show that task context can be established once while closed-loop control remains responsive throughout execution. Project page: https://garfield-kh.github.io/FastVLA"
+  },
+  {
+    "name": "RegisterWAM",
+    "paper_url": "https://arxiv.org/abs/2610.17638",
+    "pub_date": "2026-10",
+    "is_opensource": true,
+    "opensource_url": "https://github.com/Z1zyw/RegisterWAM",
+    "is_rl": false,
+    "settings": [],
+    "benchmarks": {
+      "libero_plus": [
+        {
+          "setting": "default",
+          "score": 81.6,
+          "is_standard": true,
+          "note": "",
+          "data": {
+            "camera": 59.2,
+            "robot": 71.9,
+            "language": 93.7,
+            "light": 95.7,
+            "background": 87.9,
+            "noise": 85.1,
+            "layout": 84.3,
+            "total": 81.6
+          },
+          "rank": 23
+        }
+      ],
+      "robotwin": [
+        {
+          "setting": "default",
+          "score": 93.0,
+          "is_standard": true,
+          "note": "",
+          "data": {
+            "easy": 92.9,
+            "hard": 93.0
+          },
+          "data_scaling": true,
+          "rank": 9
+        }
+      ]
+    },
+    "paper_arxiv_id": "2610.17638",
+    "paper_title": "Acting Through Registers",
+    "paper_authors": [
+      "Yiwei Zhang",
+      "Yantai Yang",
+      "Jin Gao",
+      "Jin Lou",
+      "Andong Chen",
+      "Yufei Liu",
+      "Boyang Xing",
+      "Yuchen Zhu",
+      "Weiming Hu",
+      "Zhipeng Zhang"
+    ],
+    "paper_abstract": "World Action Models (WAMs) use generative visual representations to condition robot actions, yet how these representations organize action-relevant information remains poorly understood. We identify persistent high-norm spatial outliers in WAM representations and find that their action relevance persists even after normalization and K/V projection attenuate their extreme magnitude. Motivated by this observation, we introduce RegisterWAM, which adds learnable non-spatial registers to the world model and uses them directly for action conditioning. Registers alone do not fully eliminate spatial outliers; pairing them with observation flow-matching (FM) loss supervision suppresses spatial outliers while concentrating high-norm responses in registers. Beyond this reorganization, observation FM loss supervision also improves action learning without registers, motivating an additional noised-observation FM objective that learns current-scene recovery from corrupted inputs. The resulting model achieves 81.64\\% success on LIBERO-Plus without additional embodied pretraining data or foundation models, reaches 93.0\\% average success on RoboTwin 2.0, and improves real-world manipulation performance."
+  },
+  {
+    "name": "VLA-Delta",
+    "paper_url": "https://arxiv.org/abs/2610.21306",
+    "pub_date": "2026-10",
+    "is_opensource": true,
+    "opensource_url": "https://github.com/ZJU-OmniAI/VLA-Delta",
+    "is_rl": false,
+    "settings": [],
+    "benchmarks": {
+      "libero": [
+        {
+          "setting": "default",
+          "score": 98.4,
+          "is_standard": true,
+          "note": "",
+          "data": {
+            "policy_setting": 1,
+            "spatial": 98.8,
+            "object": 99.8,
+            "goal": 98.6,
+            "long": 96.4,
+            "libero_90": null,
+            "average": 98.4
+          },
+          "rank": 38
+        }
+      ],
+      "robotwin": [
+        {
+          "setting": "default",
+          "score": 89.74,
+          "is_standard": true,
+          "note": "",
+          "data": {
+            "easy": 90.06,
+            "hard": 89.74
+          },
+          "data_scaling": true,
+          "rank": 26
+        }
+      ]
+    },
+    "paper_arxiv_id": "2610.21306",
+    "paper_title": "VLA-$Δ$: Learning Physical State Transition for Vision-Language-Action Models",
+    "paper_authors": [
+      "Qi Lu",
+      "Jiarun Li",
+      "Ce Zhang",
+      "Miao Pan",
+      "Yi Pan",
+      "Xu Wang",
+      "Wenqi Zhang",
+      "Xuhong Zhang"
+    ],
+    "paper_abstract": "Vision-language-action (VLA) models transfer semantic knowledge acquired through vision-language pretraining to robot control, achieving strong performance across various benchmarks. However, most VLAs directly map observations to demonstrated actions without explicit supervision of intermediate physical state changes, making them prone to overfitting observation-action correspondences. Some methods introduce intermediate reasoning or future-state prediction in language, visual, or latent spaces to guide action generation, but do not explicitly supervise the physical state transition itself. We therefore propose VLA-$Δ$, a general framework that uses physical changes between current and future states as explicit learning targets. To support this objective, we construct a large-scale pretraining dataset and derive physical state-transition annotations covering task-relevant semantics and visual motion changes, providing more direct supervision for continuous action generation. During inference, the model generates actions directly from current observations without additional inference overhead. VLA-$Δ$ achieves performance competitive with the state of the art on LIBERO and RoboTwin, and outperforms $π_{0.5}$ in real-robot experiments. Our code is available at https://github.com/ZJU-OmniAI/VLA-Delta"
+  },
+  {
+    "name": "Streaming-WAM",
+    "paper_url": "https://arxiv.org/abs/2610.15585",
+    "pub_date": "2026-10",
+    "is_opensource": true,
+    "opensource_url": "https://github.com/renshaojie233/StreamingWAM",
+    "is_rl": false,
+    "settings": [],
+    "benchmarks": {
+      "libero_plus": [
+        {
+          "setting": "default",
+          "score": 79.4,
+          "is_standard": true,
+          "note": "",
+          "data": {
+            "camera": 61.0,
+            "robot": 79.0,
+            "language": 92.0,
+            "light": 97.8,
+            "background": 64.7,
+            "noise": 78.6,
+            "layout": 83.6,
+            "total": 79.4
+          },
+          "rank": 33
+        }
+      ],
+      "robotwin": [
+        {
+          "setting": "default",
+          "score": 5.1,
+          "is_standard": true,
+          "note": "",
+          "data": {
+            "easy": 84.2,
+            "hard": 5.1
+          },
+          "data_scaling": false,
+          "rank": 7
+        }
+      ]
+    },
+    "paper_arxiv_id": "2610.15585",
+    "paper_title": "StreamingWAM: Streaming World Action Modeling via Chunk-Wise Staircase Flow Matching",
+    "paper_authors": [
+      "Shaojie Ren",
+      "Jingwen Sun",
+      "Zezhi Liu",
+      "Hongjin Chen",
+      "Xin Jin",
+      "Wei Zou",
+      "Zhibo Chen"
+    ],
+    "paper_abstract": "World Action Models (WAMs), often built upon pretrained video-generation world models, have emerged as a promising framework for general-purpose and open-ended robot control. However, their real-world deployment often suffers from discontinuous and jerky execution. Existing methods typically address this issue by either improving inference efficiency or enhancing action continuity across prediction chunks, without jointly addressing both challenges. To bridge this gap, we propose StreamingWAM, a streaming-diffusion framework for WAM-based robot control. StreamingWAM combines a noise ladder for chunk-wise action prediction, a prefix rollout module for cross-chunk continuity, and dense video-history memory for temporally consistent conditioning. Experiments on LIBERO, LIBERO-Plus, RoboTwin 2.0, and real-world robotic tasks demonstrate that StreamingWAM improves action continuity across static and dynamic settings, achieving competitive performance while reducing steady-state replanning latency to 72.9 ms in simulation and 57.3 ms on the real robot. The method also produces smoother action transitions, while the streaming staircase reduces sensitivity to the execution horizon K."
+  },
+  {
+    "name": "FDM",
+    "paper_url": "https://arxiv.org/abs/2610.13117",
+    "pub_date": "2026-10",
+    "is_opensource": true,
+    "opensource_url": "https://github.com/LogosIntelligenceLab/FDM",
+    "is_rl": false,
+    "settings": [],
+    "benchmarks": {
+      "libero": [
+        {
+          "setting": "default",
+          "score": 98.1,
+          "is_standard": true,
+          "note": "",
+          "data": {
+            "policy_setting": 1,
+            "spatial": 98.8,
+            "object": 100.0,
+            "goal": 99.2,
+            "long": 94.2,
+            "libero_90": null,
+            "average": 98.1
+          },
+          "rank": 51
+        }
+      ],
+      "robotwin": [
+        {
+          "setting": "default",
+          "score": 89.62,
+          "is_standard": true,
+          "note": "",
+          "data": {
+            "easy": 88.84,
+            "hard": 89.62
+          },
+          "data_scaling": true,
+          "rank": 27
+        }
+      ]
+    },
+    "paper_arxiv_id": "2610.13117",
+    "paper_title": "Forward Dynamics Models",
+    "paper_authors": [
+      "Zipei Ma",
+      "Junzhe Jiang",
+      "Jiahui Zhang",
+      "Juntong Zhang",
+      "Chun Gu",
+      "Bozhou Zhang",
+      "Jiankang Deng",
+      "Xiatian Zhu",
+      "Li Zhang"
+    ],
+    "paper_abstract": "Vision-language-action (VLA) models and world action models (WAMs) have advanced robotic policy learning by building on pretrained vision-language models (VLMs) and video generative models (VGMs), respectively. Yet VLAs learn without explicit supervision from future world states, while WAMs that condition actions on predicted futures incur extra inference cost and let visual prediction errors propagate into actions. We present Forward Dynamics Models (FDM), a family of robotic action models that couples action and future world-state prediction through an action-to-future paradigm. Future prediction is conditioned on action features, never the reverse: end-to-end training lets ground-truth future states supervise the policy through these features, while prediction errors cannot propagate into actions. At inference, FDM skips future generation entirely, avoiding its computational cost. The paradigm is backbone-agnostic, and we instantiate it with both VLM and VGM backbones. Experiments in simulation and on real robots demonstrate the effectiveness of FDM across both backbone families, achieving a state-of-the-art 99.4% average success rate on LIBERO and absolute gains of up to 13% over VLA and WAM methods on real-world tasks."
+  },
+  {
+    "name": "PLaW-VLA",
+    "paper_url": "https://arxiv.org/abs/2610.12285",
+    "pub_date": "2026-10",
+    "is_opensource": true,
+    "opensource_url": "https://github.com/RainyRobo/PLaW-VLA",
+    "is_rl": false,
+    "settings": [],
+    "benchmarks": {
+      "libero": [
+        {
+          "setting": "default",
+          "score": 97.4,
+          "is_standard": true,
+          "note": "",
+          "data": {
+            "policy_setting": 1,
+            "spatial": 98.9,
+            "object": 99.0,
+            "goal": 97.1,
+            "long": 94.6,
+            "libero_90": null,
+            "average": 97.4
+          },
+          "rank": 77
+        }
+      ],
+      "libero_plus": [
+        {
+          "setting": "default",
+          "score": 72.7,
+          "is_standard": true,
+          "note": "",
+          "data": {
+            "camera": 73.5,
+            "robot": 89.9,
+            "language": 93.1,
+            "light": 93.6,
+            "background": 75.7,
+            "noise": 55.2,
+            "layout": 41.5,
+            "total": 72.7
+          },
+          "rank": 41
+        }
+      ],
+      "robotwin": [
+        {
+          "setting": "default",
+          "score": 83.2,
+          "is_standard": true,
+          "note": "",
+          "data": {
+            "easy": 85.6,
+            "hard": 83.2
+          },
+          "data_scaling": true,
+          "rank": 42
+        }
+      ]
+    },
+    "paper_arxiv_id": "2610.12285",
+    "paper_title": "PLaW-VLA: Predictive Latent World Modeling for Vision-Language-Action Policies",
+    "paper_authors": [
+      "Yu Liu",
+      "Hetian Guo",
+      "Tianlv Huang",
+      "Ziyi Cai",
+      "Wudi Chen",
+      "Hantang Wang",
+      "Qiutong Liu",
+      "Yingzhi Peng",
+      "Wei Han",
+      "Peijun Tang",
+      "Jianan Wang",
+      "Zipei Fan",
+      "Zhiyuan Zha",
+      "Xuan Song"
+    ],
+    "paper_abstract": "Learning to predict how the world evolves can provide vision-language-action (VLA) policies with predictive context for long-horizon control, but its effectiveness depends on what future representation is modeled and how it conditions action generation. We introduce PLaW-VLA, which models task-relevant future states in a pretrained prediction-oriented representation space, reducing the need to predict control-irrelevant visual details. Built on a Mixture-of-Transformers architecture, PLaW-VLA conditions action generation on observation history, current task semantics, and predicted future states through structured causal attention. Experiments show a +11.8 percentage-point (pp) gain over reactive policies on RoboTwin Hard Horizon III and a +1.77 pp gain over reconstruction-oriented latent prediction on zero-shot LIBERO-Plus, supporting improved long-horizon control and generalization under distribution shift, respectively. By avoiding low-level visual reconstruction, PLaW-VLA lowers the burden of future prediction, enabling a lightweight latent world model with parallel future prediction and about 1/19 the inference latency of generative world-action modeling at comparable policy performance."
+  },
+  {
+    "name": "Long-WAM",
+    "paper_url": "https://arxiv.org/abs/2610.10528",
+    "pub_date": "2026-10",
+    "is_opensource": true,
+    "opensource_url": "https://github.com/NVlabs/LongLive/tree/main/Long-WAM",
+    "is_rl": false,
+    "settings": [],
+    "benchmarks": {
+      "libero": [
+        {
+          "setting": "default",
+          "score": 99.5,
+          "is_standard": true,
+          "note": "",
+          "data": {
+            "policy_setting": 1,
+            "spatial": 99.5,
+            "object": 100.0,
+            "goal": 98.0,
+            "long": 99.5,
+            "libero_90": null,
+            "average": 99.5
+          },
+          "rank": 3
+        }
+      ],
+      "robocasa": [
+        {
+          "setting": "default",
+          "score": 78.7,
+          "is_standard": true,
+          "note": "",
+          "data": {
+            "avg_success_rate": 78.7
+          },
+          "rank": 3
+        }
+      ],
+      "robotwin": [
+        {
+          "setting": "default",
+          "score": 94.2,
+          "is_standard": true,
+          "note": "",
+          "data": {
+            "easy": 94.7,
+            "hard": 94.2
+          },
+          "data_scaling": true,
+          "rank": 3
+        }
+      ],
+      "robocasa365": [
+        {
+          "setting": "default",
+          "score": 54.4,
+          "is_standard": true,
+          "note": "",
+          "data": {
+            "atomic_seen": 85.6,
+            "composite_seen": 38.8,
+            "composite_unseen": 35.0,
+            "average": 54.4
+          },
+          "rank": 3
+        }
+      ]
+    },
+    "paper_arxiv_id": "2610.10528",
+    "paper_title": "Long-WAM: Scaling the Context of World-Action Models",
+    "paper_authors": [
+      "Wei Huang",
+      "Bohan Zhang",
+      "Chenzhi Liu",
+      "Isabella Liu",
+      "Shuai Yang",
+      "Weian Mao",
+      "Luozhou Wang",
+      "Yicheng Xiao",
+      "Weifeng Lin",
+      "Qixin Hu",
+      "Bryan Chu",
+      "Sifei Liu",
+      "Linxi Fan",
+      "Xiaojuan Qi",
+      "Song Han",
+      "Yukang Chen"
+    ],
+    "paper_abstract": "Real-time robot control demands enough visual history to infer motion and task progress, but processing that history can delay action. We present Long-WAM, a model-system framework for scaling the context of causal world-action models under real-time control constraints. Our central finding is that access to history is not the same as using it: longer histories pay off far more when the video foundation is pretrained autoregressively (AR). We first learn causal prediction from robot and egocentric videos without action labels, then preserve this history-to-future structure during world-action adaptation. On RoboCasa GR-1, increasing context from 0.0 to 19.2 seconds raises success from 63.3% to 78.7%, whereas a bidirectionally pretrained initialization shows no net gain; robot-domain AR pretraining further raises peak success on GR-1 and LIBERO-Long. Long-WAM also achieves the best results among compared methods on LIBERO-Long, RoboTwin 2.0, and DOMINO. Streaming observation encoding, asynchronous execution, and hardware-specific acceleration enable deployment on RTX 5090, DGX Spark, and Jetson AGX Thor without dropping future prediction; on RTX 5090, each action chunk, including future-video latent prediction, takes 107.4 ms. Real-time deployment on Unitree G1 and YAM supports dynamic and long-horizon manipulation, including 95% success on dynamic cup stacking, where Pi0.5 and Fast-WAM succeed in none of 20 trials. As a memory-informed executor, Long-WAM also complements higher-level planning in composite tasks."
+  },
+  {
+    "name": "Event-aligned WAM",
+    "paper_url": "https://arxiv.org/abs/2610.09427",
+    "pub_date": "2026-10",
+    "is_opensource": true,
+    "opensource_url": "https://github.com/Xiaomeng-Yang/Event-aligned-WAM",
+    "is_rl": false,
+    "settings": [],
+    "benchmarks": {
+      "robotwin": [
+        {
+          "setting": "default",
+          "score": 91.58,
+          "is_standard": true,
+          "note": "",
+          "data": {
+            "easy": 93.02,
+            "hard": 91.58
+          },
+          "data_scaling": true,
+          "rank": 18
+        }
+      ]
+    },
+    "paper_arxiv_id": "2610.09427",
+    "paper_title": "Event-Aligned Visual Action Reasoning for World Action Models",
+    "paper_authors": [
+      "Xiaomeng Yang",
+      "Yushu Wu",
+      "Yi Gao",
+      "Yuhao Lei",
+      "Xuan Zhang",
+      "Pu Zhao",
+      "Yanzhi Wang"
+    ],
+    "paper_abstract": "World-Action Models (WAMs) utilize future visual prediction as an intermediate reasoning process to guide action generation. However, existing WAMs typically structure visual imagination according to predefined temporal intervals, without explicitly accounting for the different roles of task-critical interactions and connecting transitions. We argue that effective visual foresight should align directly with task-relevant interactions and their corresponding reasoning demands. To this end, we introduce an event-aligned visual action reasoning framework that organizes visual-action prediction around interaction events. Through event-aligned visual-action supervision, WAM learns to generate event-aligned visual context in each imagined rollout, placing greater emphasis on critical state changes that inform action generation. This shapes the visual reasoning granularity according to the underlying interaction dynamics, with detailed reasoning around task-critical events and coarser progression through connecting transitions. Furthermore, we introduce an execution validity head that identifies the valid portion of each predicted action sequence, avoiding redundant actions during chunked inference. Experiments demonstrate a 10.26 percentage point improvement in DOMINO success rate over baseline and competitive performance on RoboTwin 2.0. It also transfers from DOMINO Level 1 to Levels 2 and 3 without target-level adaptation."
+  },
+  {
+    "name": "CoRP",
+    "paper_url": "https://arxiv.org/abs/2610.08183",
+    "pub_date": "2026-10",
+    "is_opensource": true,
+    "opensource_url": "https://github.com/corp-policy/CoRP",
+    "is_rl": false,
+    "settings": [],
+    "benchmarks": {
+      "libero": [
+        {
+          "setting": "default",
+          "score": 98.4,
+          "is_standard": true,
+          "note": "",
+          "data": {
+            "policy_setting": 1,
+            "spatial": 98.2,
+            "object": 99.6,
+            "goal": 98.8,
+            "long": 97.0,
+            "libero_90": null,
+            "average": 98.4
+          },
+          "rank": 39
+        }
+      ],
+      "robotwin": [
+        {
+          "setting": "default",
+          "score": 73.4,
+          "is_standard": true,
+          "note": "",
+          "data": {
+            "easy": 75.8,
+            "hard": 73.4
+          },
+          "data_scaling": true,
+          "rank": 47
+        }
+      ]
+    },
+    "paper_arxiv_id": "2610.08183",
+    "paper_title": "Compact Robot Policies Need Fine-Grained Visual Representations",
+    "paper_authors": [
+      "Nanhe Chen",
+      "Runqiu Yang",
+      "Jiawei Tang",
+      "Sichao Liu",
+      "Yuquan Wang"
+    ],
+    "paper_abstract": "Multi-task manipulation policies differ in architecture, scale, and pretrained priors all at once, so published comparisons cannot attribute performance to any single component. We argue that most of it comes from the visual representation, and that parameter scale and generative priors are largely incidental. To test this, we build CoRP (Compressed Representation Policy), a deliberately compact policy (48.9M parameters, no vision-language model and no video-generative prior) that factorizes into a representation extractor and a flow-matching action generator. It reaches 97.0% on LIBERO and 75.78%/73.36% on RoboTwin 2.0 Clean/Randomized, matching systems 40.9-163.6x larger. Holding the action generator fixed, we then vary one extractor property at a time. Pretrained initialization is decisive: a random ViT-S/14 drops to 78.1% and an ImageNet ResNet-34 to 74.5% on LIBERO. Pretraining alone is not enough, as freezing the encoder costs 19.8 points. Compression matters as much: resampling each view to 48 tokens beats passing all patch tokens (97.0% vs 83.2%), and a variational information bottleneck over those tokens is worse than a hard token budget, cutting LIBERO-Goal from 95.8% to 33.0% by suppressing the instruction-dependent token selection the policy relies on. Language conditioning contributes only where the observation leaves the goal ambiguous (LIBERO-Goal: 9.2% to 95.8%), while on RoboTwin 2.0, where observations are unambiguous, removing it slightly improves success. Therefore, we argue that a compact policy works when its representation is pretrained, task-adapted, and compressed. Project page: https://corp-policy.github.io/"
+  },
+  {
+    "name": "ACG-WAM",
+    "paper_url": "https://arxiv.org/abs/2610.06965",
+    "pub_date": "2026-10",
+    "is_opensource": true,
+    "opensource_url": "https://github.com/RoboOpus/ACG-WAM",
+    "is_rl": false,
+    "settings": [],
+    "benchmarks": {
+      "robotwin": [
+        {
+          "setting": "default",
+          "score": 92.68,
+          "is_standard": true,
+          "note": "",
+          "data": {
+            "easy": 93.46,
+            "hard": 92.68
+          },
+          "data_scaling": true,
+          "rank": 10
+        }
+      ]
+    },
+    "paper_arxiv_id": "2610.06965",
+    "paper_title": "ACG-WAM: World-Action Modeling via Action-Conditioned Geometric Latent Prediction",
+    "paper_authors": [
+      "Jiangtao Liu",
+      "Zishang Xiang",
+      "Yage He",
+      "Lingguo Cui",
+      "Baihai Zhang",
+      "Runqi Chai",
+      "Senchun Chai"
+    ],
+    "paper_abstract": "World action models jointly learn visual predictionand robot actions, providing a way to use observations ofscene evolution for policy learning. Their video and actionlosses, however, provide no explicit target for the geometricconsequences of a demonstrated action sequence. Moreover,visual features taken after temporal attention can contain futureobservations, making them unsuitable as the sole current visualinput to an auxiliary predictor. We introduce ACG-WAMand its auxiliary objective, the Action-Conditioned GeometricJoint-Embedding Predictive Architecture (ACG-JEPA), whichpredicts geometric features at several horizons from the currentobservation and intervening actions, using the future slot of afrozen VGGT encoding of each current and future image pairas the target. We apply this supervision from the head and wristcameras to a shared visual embedding before temporal mixing,and remove the teacher and auxiliary modules at inference.On 50 RoboTwin 2.0 tasks, ACG-WAM achieves 93.46%success in clean scenes, with the best randomized success(92.68%) and mean across both settings (93.07%) among thecompared methods; across three tasks on a real robot, itachieves 85.00% success and 91.67% partial completion score,exceeding Motus by 10.00 and 9.17 percentage points, respec-tively. Code:https://github.com/RoboOpus/ACG-WAM.Website:https://RoboOpus.github.io/ACG-WAM."
+  },
+  {
+    "name": "ThinkWorld",
+    "paper_url": "https://arxiv.org/abs/2610.37666",
+    "pub_date": "2026-10",
+    "is_opensource": false,
+    "opensource_url": null,
+    "is_rl": false,
+    "settings": [],
+    "benchmarks": {
+      "libero": [
+        {
+          "setting": "default",
+          "score": 97.3,
+          "is_standard": true,
+          "note": "",
+          "data": {
+            "policy_setting": 0,
+            "spatial": 98.2,
+            "object": 98.8,
+            "goal": 97.8,
+            "long": 94.2,
+            "libero_90": null,
+            "average": 97.3
+          }
+        }
+      ],
+      "libero_plus": [
+        {
+          "setting": "default",
+          "score": 71.7,
+          "is_standard": true,
+          "note": "",
+          "data": {
+            "camera": 46.9,
+            "robot": 70.5,
+            "language": 73.5,
+            "light": 90.7,
+            "background": 90.0,
+            "noise": 62.7,
+            "layout": 79.6,
+            "total": 71.7
+          }
+        }
+      ]
+    },
+    "paper_arxiv_id": "2610.37666",
+    "paper_title": "ThinkWorld: World Imagination Reinforces Chain-of-Dynamics Reasoning",
+    "paper_authors": [
+      "Chaehyun Kim",
+      "Chi-Pin Huang",
+      "Jisoo Kim",
+      "Min-Hung Chen",
+      "Yu-Chiang Frank Wang",
+      "Seungryong Kim",
+      "Fu-En Yang"
+    ],
+    "paper_abstract": "Vision-Language-Action (VLA) models have made substantial progress in robotic manipulation, but their generalization remains constrained by the diversity and coverage of action-labeled robot demonstrations. Human videos provide much broader behavioral and environmental experience, while learning from them faces a fundamental trade-off between scalable data and explicit action grounding. We introduce ThinkWorld, a VLA learning framework that grounds action reasoning in world dynamics and strengthens it through reinforcement learning with world imagination. ThinkWorld represents each action thought as a Chain-of-Dynamics (CoD), a sequence of discrete motion tokens that captures the intermediate dynamics connecting the current world to a future state and serves as a common action representation across embodiments. We first initialize CoD with action-labeled demonstrations, then predict the future induced by each CoD and reinforce those whose predictions better match the observed outcome. This enables videos without action annotations to provide direct supervision from observed state transitions, allowing human and robot experience to refine the same reasoning space. Experiments in simulation and on real robots demonstrate effective human-to-robot transfer and strong generalization to unseen tasks and environments."
+  },
+  {
+    "name": "R2A",
+    "paper_url": "https://arxiv.org/abs/2610.37215",
+    "pub_date": "2026-10",
+    "is_opensource": true,
+    "opensource_url": "https://anonymous.4open.science/r/r2a/README.md",
+    "is_rl": false,
+    "settings": [],
+    "benchmarks": {
+      "libero_plus": [
+        {
+          "setting": "default",
+          "score": 90.4,
+          "is_standard": true,
+          "note": "",
+          "data": {
+            "camera": 78.7,
+            "robot": 97.2,
+            "language": 86.6,
+            "light": 96.3,
+            "background": 97.1,
+            "noise": 89.2,
+            "layout": 87.7,
+            "total": 90.4
+          },
+          "rank": 3
+        }
+      ]
+    },
+    "paper_arxiv_id": "2610.37215",
+    "paper_title": "Retrieve to Act: Motion Primitive Graph Retrieval for Robust VLA Execution",
+    "paper_authors": [
+      "Pham Tri Quang",
+      "Bao-Ngoc Dao",
+      "Minh Duc Nguyen",
+      "Duc-Duy Nguyen",
+      "Hung T. Ho",
+      "Linh Dang Le",
+      "Trong-Bao Ho",
+      "Thien-Loc Ha",
+      "Tan Q. Nguyen",
+      "Tuan Dam",
+      "Vu N. Duong",
+      "Daniel Sonntag",
+      "Ngan Le",
+      "Khoa D. Doan",
+      "Jan Peters",
+      "An Thai Le",
+      "Duy M. H. Nguyen",
+      "Vien Anh Ngo"
+    ],
+    "paper_abstract": "Vision-Language-Action (VLA) policies demonstrate remarkable semantic generalization, yet remain highly vulnerable to out-of-distribution (OOD) visual shifts during execution. While existing test-time methods attempt to suppress spurious visual cues, they fundamentally overlook the rich, uncorrupted kinematic priors embedded in the policy's own training experience. We introduce Retrieve to Act (R2A), a test-time scaling framework that formulates OOD robustness purely as a geometric motion primitive retrieval problem. R2A bypasses fragile visual features by structuring successful training demonstrations into an offline spatiotemporal motion primitive graph. During inference, a query-dependent Graph Neural Network dynamically localizes the robot's ongoing execution within this graph, retrieving structurally compatible future motion primitives. These retrieved geometric priors are then seamlessly harmonized with the frozen VLA's predicted actions via a learned, dimension-wise gating mechanism, adaptively rectifying erroneous spatial trajectories while preserving the policy's local reactivity. Extensive experiments across three state-of-the-art VLA architectures, GR00T N1.7, $π_{0.5}$, and StableVLA, demonstrate that R2A consistently and significantly enhances robustness against diverse contextual perturbations. R2A achieves absolute success rate improvements of up to +12% in simulation benchmarks (LIBERO-Plus, RoboTwin2.0-Plus) and +40% in real-world deployments, without requiring any finetuning of the base policies. Project page: https://retrieve2act.github.io/r2a/"
+  },
+  {
+    "name": "JevVLA",
+    "paper_url": "https://arxiv.org/abs/2610.35010",
+    "pub_date": "2026-10",
+    "is_opensource": true,
+    "opensource_url": "https://github.com/ZJU4EmbodiedAI/JevVLA",
+    "is_rl": false,
+    "settings": [],
+    "benchmarks": {
+      "libero_plus": [
+        {
+          "setting": "default",
+          "score": 80.15,
+          "is_standard": true,
+          "note": "",
+          "data": {
+            "camera": 76.3,
+            "robot": 65.55,
+            "language": 81.33,
+            "light": 87.92,
+            "background": 86.99,
+            "noise": 83.07,
+            "layout": 84.13,
+            "total": 80.15
+          },
+          "rank": 27
+        }
+      ]
+    },
+    "paper_arxiv_id": "2610.35010",
+    "paper_title": "JevVLA: Jev-Inspired Energy-Based Adaptation for Vision-Language-Action Policies",
+    "paper_authors": [
+      "Wei Wang",
+      "Wenqiao Zhang",
+      "Zheqi Lv",
+      "Zheng Dong",
+      "Yingjie Niu",
+      "Jiaqi Zhu",
+      "Jun Xiao",
+      "Chao Li",
+      "Yueting Zhuang"
+    ],
+    "paper_abstract": "Vision-language-action (VLA) policies can select among discrete candidates for pick-and-place manipulation or generate continuous action chunks for motion control. Improving both forms of decision making through a common mechanism while retaining the capabilities of a pretrained policy is an important adaptation problem. Inspired by Jev's structured, probabilistic decision interface, we propose JevVLA, a lightweight energy-based adaptation framework for VLA policies. JevVLA instantiates this inspiration by modeling the relative quality of action proposals: with the base policy frozen, it learns a differentiable scalar energy conditioned on observations, task context, and actions, using execution feedback, expert corrections, or demonstration-derived preferences. JevVLA uses this single learned action preference function in two ways: its values compare discrete candidates, while its action gradients correct continuous actions or guide their generation. Candidate selection and continuous control thus share one trainable decision core. Each benchmark uses independently trained weights and fixed input/output encodings, while retaining the same core network with approximately 80,000 trainable parameters. On the held-out test sets, JevVLA improves task success over the respective matched base-policy controls by 1.28, 2.31, 1.60, 1.52, and 1.28 percentage points on MetaWorld MT50, VIMA, LanguageTable, LIBERO Plus, and CLIPort, respectively. These results support the feasibility of a lightweight, Jev-inspired energy model for adapting both discrete action selection and continuous action guidance. The JevVLA implementation will be open-sourced at https://github.com/ZJU4EmbodiedAI/JevVLA."
+  },
+  {
+    "name": "AgenticRoboRL",
+    "paper_url": "https://arxiv.org/abs/2610.28589",
+    "pub_date": "2026-10",
+    "is_opensource": true,
+    "opensource_url": "https://github.com/xinxinliu-ai/AgenticRoboRL",
+    "is_rl": true,
+    "settings": [],
+    "benchmarks": {
+      "libero_plus": [
+        {
+          "setting": "default",
+          "score": 72.2,
+          "is_standard": true,
+          "note": "",
+          "data": {
+            "camera": 65.8,
+            "robot": 75.2,
+            "language": 73.9,
+            "light": 75.9,
+            "background": 72.0,
+            "noise": 73.0,
+            "layout": 70.6,
+            "total": 72.2
+          },
+          "rank": 43
+        }
+      ]
+    },
+    "paper_arxiv_id": "2610.28589",
+    "paper_title": "AgenticRoboRL: Bringing Coding-Agent Post-Training to Agentic Robotics",
+    "paper_authors": [
+      "Xinxin Liu",
+      "Bingxin Xu",
+      "Wenrui Bao",
+      "Ming Li",
+      "Wentao Bao",
+      "Chen Chen",
+      "Yuzhang Shang"
+    ],
+    "paper_abstract": "Agentic robotics systems combine planners with robot harnesses to perform complex manipulation tasks. Recent work improves these systems through better harnesses and external memory, but relies on powerful closed-source models as planners and does not improve the planners' own capabilities. In contrast, coding agents have improved substantially by post-training the model itself. We therefore investigate whether post-training can also improve robot planners. However, applying it across robot harnesses requires accommodating different execution mechanisms, including VLA skill invocation and control-code generation. To this end, we introduce AgenticRoboRL, a framework for post-training robot planners across different harnesses. The training recipe combines supervised fine-tuning with multi-turn reinforcement learning. To accommodate different execution mechanisms, harness-specific adapters connect recorded planner interactions with task outcomes, enabling a common RL training pipeline while keeping execution components fixed. On LIBERO-PRO, AgenticRoboRL raises the success rate of a 9B-parameter planner from 18.1% to 71.0% without external memory, approaching the 72.1% achieved by Codex (GPT-5.5) with external memory. These results demonstrate post-training as an effective approach for improving robot planners. We will release the framework and trained planner checkpoints."
+  },
+  {
+    "name": "PICA-WAM",
+    "paper_url": "https://arxiv.org/abs/2610.26813",
+    "pub_date": "2026-10",
+    "is_opensource": true,
+    "opensource_url": "https://github.com/YudeZou/PICA-WAM-release",
+    "is_rl": false,
+    "settings": [],
+    "benchmarks": {
+      "libero_plus": [
+        {
+          "setting": "default",
+          "score": 93.3,
+          "is_standard": true,
+          "note": "",
+          "data": {
+            "camera": 86.7,
+            "robot": 91.7,
+            "language": 95.3,
+            "light": 98.0,
+            "background": 99.3,
+            "noise": 96.6,
+            "layout": 88.4,
+            "total": 93.3
+          },
+          "rank": 2
+        }
+      ],
+      "robotwin": [
+        {
+          "setting": "default",
+          "score": 39.6,
+          "is_standard": true,
+          "note": "",
+          "data": {
+            "easy": 88.0,
+            "hard": 39.6
+          },
+          "data_scaling": false,
+          "rank": 1
+        }
+      ]
+    },
+    "paper_arxiv_id": "2610.26813",
+    "paper_title": "PICA-WAM: Visual Perturbation Invariance via Cross-Appearance Self-Alignment in World Action Models",
+    "paper_authors": [
+      "Yude Zou",
+      "Yifei Yao",
+      "Guanbo Jiao",
+      "Jianming Ma",
+      "Guanjie Zheng",
+      "Xing Gao"
+    ],
+    "paper_abstract": "World Action Models (WAMs) jointly predict future video and generate actions, yet remain sensitive to task-irrelevant visual perturbations, i.e., changes in visual appearance that should not affect robot behavior. We identify a gap in conventional WAM training: video prediction encourages representations to preserve appearance information, while action generation does not explicitly enforce invariance to task-irrelevant appearance. Data augmentation exposes WAMs to such perturbations but does not require perturbed and nominal observations to produce consistent action representations, and alignment with external pretrained features does not guarantee the desired invariance. To address this gap, we propose PICA-WAM, a self-supervised training framework that casts perturbation invariance as an auxiliary cross-appearance self-alignment task for WAMs. An exponential-moving-average (EMA) teacher processes the nominal observation to provide a deeper-layer target, while the online WAM processes a perturbed observation and aligns its shallower-layer action representation to this target through a lightweight projection head. Across four strong WAMs evaluated on RoboTwin 2.0, LIBERO-Plus, EBench, and a real robot, PICA-WAM consistently improves robustness under visual perturbations, preserves nominal performance in simulation, and raises the real robot success rate. PICA-WAM further reduces the sensitivity of video features to task-irrelevant appearance and its propagation into actions, as shown by paired layer-wise diagnostics. Code: https://github.com/YudeZou/PICA-WAM-release"
+  },
+  {
+    "name": "VLDA",
+    "paper_url": "https://arxiv.org/abs/2610.25874",
+    "pub_date": "2026-10",
+    "is_opensource": true,
+    "opensource_url": "https://github.com/baidu-baige/LoongForge/tree/master/cookbook/loongforge-vlda",
+    "is_rl": false,
+    "settings": [],
+    "benchmarks": {
+      "libero": [
+        {
+          "setting": "default",
+          "score": 98.5,
+          "is_standard": true,
+          "note": "",
+          "data": {
+            "policy_setting": 1,
+            "spatial": 99.8,
+            "object": 99.6,
+            "goal": 99.4,
+            "long": 95.2,
+            "libero_90": null,
+            "average": 98.5
+          },
+          "rank": 34
+        }
+      ],
+      "libero_plus": [
+        {
+          "setting": "default",
+          "score": 84.5,
+          "is_standard": true,
+          "note": "",
+          "data": {
+            "camera": 72.4,
+            "robot": 75.3,
+            "language": 84.0,
+            "light": 96.0,
+            "background": 95.5,
+            "noise": 89.4,
+            "layout": 85.7,
+            "total": 84.5
+          },
+          "rank": 13
+        }
+      ]
+    },
+    "paper_arxiv_id": "2610.25874",
+    "paper_title": "Vision-Language-Delta-Action: Learning Compact Deltas as Actionable Transition Interfaces for Robotic Manipulation",
+    "paper_authors": [
+      "Lingsen Zhang",
+      "Wei Li",
+      "Jie He",
+      "Henghua Zhang",
+      "Kai Mo",
+      "Shiyong Li",
+      "Yanpeng Wang",
+      "Rui Shao"
+    ],
+    "paper_abstract": "Robotic manipulation is not merely observation-to-action generation, but the realization of task-specified state changes in the physical world. Existing vision-language-action (VLA) methods directly learn observation-to-action mappings, imposing a substantial learning burden due to the gap between semantic understanding and action execution. Although world-action models (WAMs) improve control through future prediction, modeling complete future states wastes capacity on static appearance and action-irrelevant changes. We propose Vision-Language-Delta-Action (VLDA), a paradigm that reformulates full future prediction as compact actionable transition modeling. Its core is a compact Delta variable that captures latent world-state changes, serving as an interface between vision-language understanding and action generation. VLDA learns Delta through a unified objective composed of the Local Transition Filter (LT-Filter) and Global Transition Anchor (GT-Anchor). LT-Filter captures task-relevant manipulation-centric changes while suppressing static reconstruction biases. GT-Anchor provides coarse future-level regularization to preserve the overall direction of state changes. Delta-Driven Action Refinement (DDAR) further grounds Delta in the action manifold and injects it as a structured seed to guide action denoising. We implement VLDA within LoongForge, an open-source training framework for large-scale foundation and embodied models, using its modular and distributed infrastructure for unified two-stage optimization. Experiments show that VLDA improves long-horizon consistency, robustness, and generalization, validating actionable Delta as an alternative to direct action prediction and full future-state modeling."
+  },
+  {
+    "name": "MambaACT",
+    "paper_url": "https://arxiv.org/abs/2610.22951",
+    "pub_date": "2026-10",
+    "is_opensource": true,
+    "opensource_url": "https://github.com/giakhuyendihoc/MambaAct",
+    "is_rl": false,
+    "settings": [],
+    "benchmarks": {
+      "libero": [
+        {
+          "setting": "default",
+          "score": 97.8,
+          "is_standard": true,
+          "note": "",
+          "data": {
+            "policy_setting": 1,
+            "spatial": 98.73,
+            "object": 99.6,
+            "goal": 98.6,
+            "long": 94.27,
+            "libero_90": null,
+            "average": 97.8
+          },
+          "rank": 62
+        }
+      ],
+      "libero_plus": [
+        {
+          "setting": "default",
+          "score": 79.7,
+          "is_standard": true,
+          "note": "",
+          "data": {
+            "camera": 61.5,
+            "robot": 77.6,
+            "language": 79.8,
+            "light": 95.2,
+            "background": 93.2,
+            "noise": 73.5,
+            "layout": 86.4,
+            "total": 79.7
+          },
+          "rank": 31
+        }
+      ]
+    },
+    "paper_arxiv_id": "2610.22951",
+    "paper_title": "MambaAct: Efficient Mamba Action Experts for Flow-Matching Vision-Language-Action Models",
+    "paper_authors": [
+      "Khuyen Pham",
+      "Tran Nguyen Le",
+      "Edoardo Fazzari",
+      "Cesare Stefanini"
+    ],
+    "paper_abstract": "Vision-language-action (VLA) models have shown strong promise for generalist robotic manipulation, but their inference cost remains a major bottleneck for real-time control. This limitation is especially pronounced in flow-matching VLAs such as $π_{0.5}$, where the action expert is evaluated repeatedly during iterative denoising. We introduce MambaAct, an efficient Mamba action expert for flow-matching VLA policies. MambaAct retains the pretrained visual-language prefix encoder of $π_{0.5}$, while replacing its transformer-based action expert with a compact Mamba-based action expert. Within this expert, Mamba serves as the action mixer that models dependencies across the noisy continuous-action sequence. To preserve visual-language conditioning without repeated token-level cross-attention, MambaAct uses a lightweight Context Compressor to map Vision-language model (VLM) prefix tokens into a compact conditioning signal that gates and modulates each Mamba action block. MambaAct uses a $10\\times$ smaller action expert and reduces flow-matching denoising latency by $64.8\\%$ on LIBERO and $58.8\\%$ in real-world deployment, while improving mean LIBERO success by $1.08$ percentage points across three independent fine-tuning seeds and maintaining gains on LIBERO-Plus and real-world benchmarks. Our code and model weights are publicly available at https://github.com/giakhuyendihoc/MambaAct."
+  },
+  {
+    "name": "OneWM",
+    "paper_url": "https://arxiv.org/abs/2610.21095",
+    "pub_date": "2026-10",
+    "is_opensource": true,
+    "opensource_url": "https://github.com/Interactive-Active-AI/OneWM",
+    "is_rl": false,
+    "settings": [],
+    "benchmarks": {
+      "libero": [
+        {
+          "setting": "default",
+          "score": 94.95,
+          "is_standard": true,
+          "note": "",
+          "data": {
+            "policy_setting": 1,
+            "spatial": 96.6,
+            "object": 98.6,
+            "goal": 96.8,
+            "long": 87.8,
+            "libero_90": null,
+            "average": 94.95
+          },
+          "rank": 107
+        }
+      ],
+      "libero_plus": [
+        {
+          "setting": "default",
+          "score": 59.27,
+          "is_standard": true,
+          "note": "",
+          "data": {
+            "camera": 57.34,
+            "robot": 18.39,
+            "language": 79.57,
+            "light": 79.86,
+            "background": 71.08,
+            "noise": 47.81,
+            "layout": 67.08,
+            "total": 59.27
+          },
+          "rank": 53
+        }
+      ],
+      "robocasa365": [
+        {
+          "setting": "default",
+          "score": 36.68,
+          "is_standard": true,
+          "note": "",
+          "data": {
+            "atomic_seen": 68.78,
+            "composite_seen": 30.25,
+            "composite_unseen": 7.0,
+            "average": 36.68
+          },
+          "rank": 9
+        }
+      ]
+    },
+    "paper_arxiv_id": "2610.21095",
+    "paper_title": "Can World and Action Modeling Benefit Each Other under Unified Causal Training?",
+    "paper_authors": [
+      "Yue Su",
+      "Bokai Lin",
+      "Xinkai Wang",
+      "Chubin Zhang",
+      "Xiangnan Wu",
+      "Kuan Zhang",
+      "Weiyang Jin",
+      "Jiwen Yu",
+      "Yiming Li",
+      "Cewu Lu",
+      "Lixin Yang",
+      "Xihui Liu"
+    ],
+    "paper_abstract": "World and action modeling are closely related, yet their reciprocal benefits under unified causal training remain unclear. We introduce OneWM, a simple framework for unified causal training that treats actions as both conditions for world prediction and targets for policy learning within a shared video-action architecture. Using this framework, we investigate whether learning forward dynamics conditioned on specified actions improves action learning, and whether learning to generate actions in turn improves action-conditioned world modeling. We use LIBERO, LIBERO-Plus, and RoboCasa365 as embodied testbeds to evaluate both policy learning and world modeling, complemented by real-world policy experiments. Learning the visual consequences of specified actions improves policy performance and generalization across changing scenes. In turn, action learning improves multi-view world-prediction fidelity under the same architecture. Together, these results answer both questions positively, supporting reciprocal benefits between world modeling and action generation under unified causal training."
+  },
+  {
+    "name": "RESETTLE",
+    "paper_url": "https://arxiv.org/abs/2610.12185",
+    "pub_date": "2026-10",
+    "is_opensource": true,
+    "opensource_url": "https://github.com/JIA-Lab-research/RESETTLE",
+    "is_rl": false,
+    "settings": [],
+    "benchmarks": {
+      "libero_plus": [
+        {
+          "setting": "default",
+          "score": 84.6,
+          "is_standard": true,
+          "note": "",
+          "data": {
+            "camera": 59.9,
+            "robot": 82.4,
+            "language": 94.7,
+            "light": 97.8,
+            "background": 98.6,
+            "noise": 86.9,
+            "layout": 80.1,
+            "total": 84.6
+          },
+          "rank": 11
+        }
+      ],
+      "metaworld": [
+        {
+          "setting": "default",
+          "score": 65.99,
+          "is_standard": true,
+          "note": "",
+          "data": {
+            "easy": 83.57,
+            "medium": 62.73,
+            "hard": 51.67,
+            "very_hard": 66.0,
+            "average": 65.99
+          },
+          "rank": 16
+        }
+      ],
+      "robocasa": [
+        {
+          "setting": "default",
+          "score": 60.5,
+          "is_standard": true,
+          "note": "",
+          "data": {
+            "avg_success_rate": 60.5
+          },
+          "rank": 8
+        }
+      ]
+    },
+    "paper_arxiv_id": "2610.12185",
+    "paper_title": "RESETTLE: Robotic Recovery through Disagreement-Triggered Retrieval and Efficient Corrective Control",
+    "paper_authors": [
+      "Yuxin Chen",
+      "Senqiao Yang",
+      "Zixuan Wang",
+      "Jinhui Ye",
+      "Changsheng Lu",
+      "Pengguang Chen",
+      "Shu Liu",
+      "Zhuotao Tian",
+      "Jiaya Jia"
+    ],
+    "paper_abstract": "Reliable robotic manipulation requires timely intervention to correct emerging deviations and restore progress after execution errors. However, recovery methods based on repeated vision-language reasoning or iterative online optimization can incur substantial latency, delaying intervention. To address these challenges, we introduce RESETTLE(Robotic rEcovery through diSagrEement-Triggered reTrievaL and Efficient Corrective Control), a model-agnostic framework that provides computationally efficient recovery at the action-execution interface of frozen robot policies. RESETTLE triggers recovery when two action proposals independently sampled under identical conditioning persistently disagree. It retrieves a same-task demonstration reference using an adapted V-JEPA encoder and combines a state-servo prior with a guarded visual residual to execute one corrective action without online trajectory optimization or additional vision-language reasoning, then returns control to the base policy. Across six base policies in simulation, RESETTLE achieves up to 8.70%, 6.28%, and 6.83% absolute success-rate gains on LIBERO-Plus, Meta-World, and RoboCasa Tabletop, respectively, with further improvements on four real-world tasks using two policies. In QwenPI-based comparisons, its monitoring-and-recovery computation latency is 74.04%--93.57% lower than VoLoAgent's monitoring-and-planning latency for grasp and place tool calls. It also raises Harness VLA's LIBERO-Pro Swap success from 42% to 50%, demonstrating compatibility with high-level agentic planning. Code available at: https://github.com/JIA-Lab-research/RESETTLE"
+  },
+  {
+    "name": "StairVLA",
+    "paper_url": "https://arxiv.org/abs/2610.07756",
+    "pub_date": "2026-10",
+    "is_opensource": true,
+    "opensource_url": "https://github.com/Dicomsky/StairVLA",
+    "is_rl": false,
+    "settings": [],
+    "benchmarks": {
+      "libero": [
+        {
+          "setting": "default",
+          "score": 98.3,
+          "is_standard": true,
+          "note": "",
+          "data": {
+            "policy_setting": 1,
+            "spatial": 99.6,
+            "object": 99.0,
+            "goal": 96.8,
+            "long": 97.4,
+            "libero_90": null,
+            "average": 98.3
+          },
+          "rank": 42
+        }
+      ],
+      "libero_plus": [
+        {
+          "setting": "default",
+          "score": 70.4,
+          "is_standard": true,
+          "note": "",
+          "data": {
+            "camera": 43.7,
+            "robot": 54.5,
+            "language": 82.5,
+            "light": 93.4,
+            "background": 90.5,
+            "noise": 67.8,
+            "layout": 74.0,
+            "total": 70.4
+          },
+          "rank": 45
+        }
+      ]
+    },
+    "paper_arxiv_id": "2610.07756",
+    "paper_title": "StairVLA: Stage-Aware Hierarchical Action Generation for Vision-Language-Action Models",
+    "paper_authors": [
+      "Shangyuan Yuan",
+      "Xinda Qi",
+      "Yujiang Pu",
+      "Wenliang Guo",
+      "Xiaobo Tan"
+    ],
+    "paper_abstract": "Vision-language-action (VLA) models increasingly rely on diffusion- or flow-matching-based action heads to generate continuous robot actions. These action heads typically process the denoising trajectory in a largely uniform manner. However, we observe that the conditioning focus naturally shifts across denoising stages: early stages combine language instructions and visual observations to establish a coarse action trajectory, whereas later stages place greater emphasis on current visual observations for action alignment. Based on this insight, we introduce StairVLA, a stage-aware hierarchical action generation framework that uses partially denoised actions as a natural interface between coarse long-horizon action generation and local refinement. A high-level VLA performs early denoising to produce a reusable long-horizon partially denoised action trajectory, while a lightweight refiner operates at a higher frequency to refine local action chunks using the latest observations. This design amortizes expensive high-level VLA computation while preserving frequent closed-loop correction. On LIBERO, our GR00T-style instantiation improves average success from 96.5% to 97.8% while reducing amortized inference latency from 115.0 ms to 44.2 ms per action chunk. More broadly, across two VLA backbones, simulation benchmarks, and real-robot tasks, StairVLA consistently reduces inference cost while maintaining strong task performance."
+  },
+  {
+    "name": "EgoForeSight",
+    "paper_url": "https://arxiv.org/abs/2610.31845",
+    "pub_date": "2026-10",
+    "is_opensource": true,
+    "opensource_url": "https://github.com/LinShan-Bin/EgoForesight",
+    "is_rl": false,
+    "settings": [],
+    "benchmarks": {
+      "robocasa": [
+        {
+          "setting": "default",
+          "score": 73.9,
+          "is_standard": true,
+          "note": "",
+          "data": {
+            "avg_success_rate": 73.9
+          },
+          "rank": 5
+        }
+      ]
+    },
+    "paper_arxiv_id": "2610.31845",
+    "paper_title": "EgoForesight: Effectively Scaling Policy Learning with Noisy Egocentric Actions",
+    "paper_authors": [
+      "Chubin Zhang",
+      "Changyuan Wang",
+      "Yirui Wang",
+      "Ao Li",
+      "Shilin Ma",
+      "Yue Su",
+      "Cai Zhou",
+      "Xiuwei Xu",
+      "Tianle Zhang",
+      "Yansong Tang"
+    ],
+    "paper_abstract": "Scaling policy learning requires broad experience and reliable supervision. Robot demonstrations provide high-quality trajectory supervision but are costly to collect. Egocentric videos broaden task and environment coverage, yet motion reconstruction and retargeting introduce noisy action labels. To address this challenge, we introduce EgoForesight, a vision-language-action framework that learns jointly from both sources by reducing the influence of unreliable action labels and exploiting demonstrated outcomes as complementary supervision. A joint vision-action flow couples future visual representation prediction with action generation, unifying reliability-aware action learning with outcome-informed representation transfer. Specifically, reliability-conditioned corruption allocates action supervision across noise levels according to source reliability, while reliability-weighted regression regulates each source's contribution. Complementing this treatment of noisy labels, privileged-future representation distillation draws supervision from demonstrated outcomes. An exponential-moving-average teacher observes the current scene and clean future to encode action-relevant structure from the resulting scene change. Its deeper representations supervise an earlier student layer receiving a corrupted future, providing outcome-informed structure beyond noisy action annotations. Together, these mechanisms support effective scaling with noisy egocentric actions. Over the tested range, EgoForesight exhibits steeper scaling slopes than the baseline, reducing real-world open-loop action MSE by 20.5% and improving RoboCasa few-shot success by 8.1 percentage points at 30,000 hours of pretraining data. After post-training, it also achieves strong absolute performance in both simulated and real-world dexterous manipulation."
+  },
+  {
+    "name": "CausalAlign",
+    "paper_url": "https://arxiv.org/abs/2610.29915",
+    "pub_date": "2026-10",
+    "is_opensource": true,
+    "opensource_url": "https://github.com/PKU-VaLuE-Lab/CausalAlign",
+    "is_rl": false,
+    "settings": [],
+    "benchmarks": {
+      "robocasa365": [
+        {
+          "setting": "default",
+          "score": 54.2,
+          "is_standard": true,
+          "note": "",
+          "data": {
+            "atomic_seen": 78.1,
+            "composite_seen": 40.8,
+            "composite_unseen": 40.6,
+            "average": 54.2
+          },
+          "rank": 4
+        }
+      ]
+    },
+    "paper_arxiv_id": "2610.29915",
+    "paper_title": "CausalAlign: Causal Alignment of Video Generation Models for Consistent Ego-Motion",
+    "paper_authors": [
+      "Kai Zhu",
+      "Yintianrun Zhang",
+      "Shuwei Jiang",
+      "Ruolin Zuo",
+      "Yixin Chen",
+      "Duomin Wang",
+      "Miao Liu",
+      "Yin Li",
+      "Daquan Zhou",
+      "Yiwu Zhong"
+    ],
+    "paper_abstract": "Diffusion-based video generation models (VGMs) can produce visually plausible videos, yet their camera ego-motion often drifts over long horizons. Camera ego-motion determines how the viewpoint changes between frames and is essential for maintaining consistent geometry and trajectories. To address this problem, we propose CausalAlign, a causal alignment framework with two components. First, we diagnose how precise ego motion is represented, used, and retained within VGMs using linear probes and causal interventions, revealing a rise-and-fall pattern during denoising. Second, we strengthen ego-motion state in VGM by aligning the representations at the identified layers to a 3D foundation model through delta-token space. This space encodes the changes between consecutive frames, allowing the alignment to focus on ego-motion dynamics rather than static scene content. With Wan2.2 fine-tuned on DL3DV and RealEstate10K, CausalAlign can largely improve motion accuracy, geometric consistency, and temporal smoothness, while preserving visual quality. For example, it improves geometric consistency by more than 20% relative to the base model. Moreover, with the fine-tuned VGM, CausalAlign improves the success rate of world action models (WAMs) by 10 points on mobile manipulation tasks of RoboCasa365 benchmark. Overall, CausalAlign improves ego-motion consistency in diffusion-based VGMs and yields noticeable gains in embodied models."
+  },
+  {
+    "name": "REKI",
+    "paper_url": "https://arxiv.org/abs/2610.22178",
+    "pub_date": "2026-10",
+    "is_opensource": true,
+    "opensource_url": "https://github.com/kyutai-labs/reki",
+    "is_rl": false,
+    "settings": [],
+    "benchmarks": {
+      "libero_plus": [
+        {
+          "setting": "default",
+          "score": 90.4,
+          "is_standard": true,
+          "note": "",
+          "data": {
+            "camera": 93.2,
+            "robot": 75.6,
+            "language": 88.5,
+            "light": 97.7,
+            "background": 98.4,
+            "noise": 98.6,
+            "layout": 84.7,
+            "total": 90.4
+          },
+          "rank": 4
+        }
+      ],
+      "robotwin": [
+        {
+          "setting": "default",
+          "score": 84.6,
+          "is_standard": true,
+          "note": "",
+          "data": {
+            "easy": 85.9,
+            "hard": 84.6
+          },
+          "data_scaling": true,
+          "rank": 41
+        }
+      ],
+      "robocasa365": [
+        {
+          "setting": "default",
+          "score": 38.4,
+          "is_standard": true,
+          "note": "",
+          "data": {
+            "atomic_seen": 65.8,
+            "composite_seen": 32.0,
+            "composite_unseen": 14.1,
+            "average": 38.4
+          },
+          "rank": 8
+        }
+      ]
+    },
+    "paper_arxiv_id": "2610.22178",
+    "paper_title": "REKI: Registering Knowledge in VLAs",
+    "paper_authors": [
+      "Juliette Marrie",
+      "Paul Pacaud",
+      "Adrien Ramanana Rahary",
+      "Shizhe Chen",
+      "Moritz Böhle"
+    ],
+    "paper_abstract": "We introduce REKI, a 2.4B vision-language-action model (VLA) pretrained exclusively on public data that sets a new Pareto frontier between performance and model size: on LIBERO-Plus, RoboTwin Clean2Rand and RoboCasa365, it is outperformed only by models about twice its size. REKI consists of a vision-language model (VLM) followed by a flow-matching action expert, and is pretrained on a curated mixture of public robot, egocentric human and vision-language data. Additionally, we endow it with a memory that gives the policy access to its recent past at negligible cost: a few register tokens in the action expert summarise the output of the VLM at each frame and persist in the expert's cache. This memory improves success in simulation and on real robots, and makes oscillations between poses about four times rarer. REKI uses a simple model design and training paradigm, and is optimised to be efficient at training and inference. We release the full code across data curation, training, inference and evaluation, deployment, and all pretrained and finetuned model weights: https://github.com/kyutai-labs/reki."
+  },
+  {
     "name": "FutureDuet",
     "paper_url": "https://arxiv.org/abs/2609.34362",
     "pub_date": "2026-09",
@@ -162,7 +2371,7 @@
             "libero_90": null,
             "average": 98.2
           },
-          "rank": 36
+          "rank": 44
         }
       ],
       "libero_plus": [
@@ -181,7 +2390,7 @@
             "layout": 87.0,
             "total": 79.8
           },
-          "rank": 19
+          "rank": 29
         }
       ]
     },
@@ -227,7 +2436,7 @@
             "libero_90": null,
             "average": 99.0
           },
-          "rank": 8
+          "rank": 9
         }
       ],
       "libero_plus": [
@@ -246,7 +2455,7 @@
             "layout": 84.5,
             "total": 82.5
           },
-          "rank": 11
+          "rank": 18
         }
       ]
     },
@@ -546,7 +2755,7 @@
             "libero_90": null,
             "average": 95.75
           },
-          "rank": 87
+          "rank": 99
         }
       ]
     },
@@ -583,7 +2792,7 @@
             "libero_90": null,
             "average": 96.0
           },
-          "rank": 82
+          "rank": 94
         }
       ],
       "robocasa365": [
@@ -598,7 +2807,7 @@
             "composite_unseen": 13.8,
             "average": 57.2
           },
-          "rank": 1
+          "rank": 2
         }
       ]
     },
@@ -649,7 +2858,7 @@
             "libero_90": null,
             "average": 97.9
           },
-          "rank": 48
+          "rank": 57
         }
       ],
       "robocasa": [
@@ -661,7 +2870,7 @@
           "data": {
             "avg_success_rate": 50.5
           },
-          "rank": 14
+          "rank": 17
         }
       ]
     },
@@ -848,7 +3057,7 @@
             "libero_90": null,
             "average": 97.5
           },
-          "rank": 60
+          "rank": 70
         }
       ]
     },
@@ -916,7 +3125,7 @@
       "Xiaojuan Qi",
       "Yingcong Chen"
     ],
-    "paper_abstract": "Generalizable robot manipulation requires predicting how a scene will evolve, identifying where interactions are feasible, and determining how to act. Action-labeled robot videos directly supervise control but are costly and limited in diversity, whereas egocentric human videos capture diverse interactions but lack robot actions and differ in embodiment and appearance. We introduce AffordanceWAM, an affordance-aware generative World Action Model that represents object-centric spatiotemporal affordance through Scalar Affordance and Affordance Heatmap, within the generated future World. This representation grounds visual prediction in task-relevant objects and interaction regions for action generation, and provides shared interaction targets across human and robot videos. Built on a pretrained video diffusion Transformer, AffordanceWAM uses separately parameterized World and Action Experts, coupled through Masked Joint Self-Attention, to jointly predict future RGB observations, Scalar Affordance fields, Affordance Heatmaps, and continuous robot actions under a unified flow-matching objective. Human videos supervise all three future-World streams, whereas robot trajectories additionally provide action supervision, enabling transfer without human action labels or retargeting. Experiments on RoboCasa, CALVIN ABC$\\rightarrow$D, and real-world manipulation demonstrate consistent gains over RGB-only and robot-data-only baselines. Under fixed robot supervision, RoboCasa performance improves monotonically as affordance-annotated human video scales. These results support affordance as an effective interface for both vision-language-action learning and human-to-robot transfer."
+    "paper_abstract": "Generalizable robot manipulation requires predicting how a scene will evolve, identifying where interactions are feasible, and determining how to act. Action-labeled robot videos directly supervise control but are costly and limited in diversity, whereas egocentric human videos capture diverse interactions but lack robot actions and differ in embodiment and appearance. We introduce AffordanceWAM, an affordance-aware generative World Action Model that represents object-centric spatiotemporal affordance through Scalar Affordance and Affordance Heatmap, within the generated future World. This representation grounds visual prediction in task-relevantant objects and interaction regions for action generation, and provides shared interaction targets across human and robot videos. Built on a pretrained video diffusion Transformer, AffordanceWAM uses separately parameterized World and Action Experts, coupled through Masked Joint Self-Attention, to jointly predict future RGB observations, Scalar Affordance fields, Affordance Heatmaps, and continuous robot actions under a unified flow-matching objective. Human videos supervise all three future-World streams, whereas robot trajectories additionally provide action supervision, enabling transfer without human action labels or retargeting. Experiments on RoboCasa, CALVIN ABC$\\rightarrow$D, and real-world manipulation demonstrate consistent gains over RGB-only and robot-data-only baselines. Under fixed robot supervision, RoboCasa performance improves monotonically as affordance-annotated human video scales. These results support affordance as an effective interface for both vision-language-action learning and human-to-robot transfer."
   },
   {
     "name": "CF-WAM",
@@ -1060,7 +3269,7 @@
             "libero_90": null,
             "average": 97.1
           },
-          "rank": 69
+          "rank": 81
         }
       ],
       "robotwin": [
@@ -1074,7 +3283,7 @@
             "hard": 89.04
           },
           "data_scaling": true,
-          "rank": 15
+          "rank": 30
         }
       ]
     },
@@ -1169,7 +3378,7 @@
             "hard": 86.6
           },
           "data_scaling": true,
-          "rank": 20
+          "rank": 37
         }
       ]
     },
@@ -1438,7 +3647,7 @@
             "libero_90": null,
             "average": 97.9
           },
-          "rank": 47
+          "rank": 56
         }
       ],
       "robotwin": [
@@ -1452,7 +3661,7 @@
             "hard": 90.2
           },
           "data_scaling": true,
-          "rank": 10
+          "rank": 22
         }
       ]
     },
@@ -1620,7 +3829,7 @@
             "libero_90": null,
             "average": 98.6
           },
-          "rank": 22
+          "rank": 26
         }
       ],
       "libero_plus": [
@@ -1639,7 +3848,7 @@
             "layout": 79.21,
             "total": 71.01
           },
-          "rank": 29
+          "rank": 44
         }
       ],
       "robotwin": [
@@ -1653,7 +3862,7 @@
             "hard": 90.76
           },
           "data_scaling": true,
-          "rank": 9
+          "rank": 21
         }
       ]
     },
@@ -1809,7 +4018,7 @@
             "libero_90": null,
             "average": 98.3
           },
-          "rank": 34
+          "rank": 41
         }
       ],
       "libero_plus": [
@@ -1828,7 +4037,7 @@
             "layout": 74.3,
             "total": 82.0
           },
-          "rank": 14
+          "rank": 21
         }
       ],
       "robocasa": [
@@ -1840,7 +4049,7 @@
           "data": {
             "avg_success_rate": 62.0
           },
-          "rank": 5
+          "rank": 7
         }
       ],
       "robotwin": [
@@ -1854,7 +4063,7 @@
             "hard": 89.2
           },
           "data_scaling": true,
-          "rank": 14
+          "rank": 29
         }
       ]
     },
@@ -1912,7 +4121,7 @@
             "libero_90": null,
             "average": 95.3
           },
-          "rank": 91
+          "rank": 104
         }
       ],
       "metaworld": [
@@ -2112,7 +4321,7 @@
             "libero_90": null,
             "average": 97.5
           },
-          "rank": 58
+          "rank": 68
         }
       ],
       "libero_plus": [
@@ -2131,7 +4340,7 @@
             "layout": 83.21,
             "total": 77.45
           },
-          "rank": 23
+          "rank": 35
         }
       ],
       "calvin_abc_d": [
@@ -2232,7 +4441,7 @@
             "libero_90": null,
             "average": 98.9
           },
-          "rank": 12
+          "rank": 14
         }
       ],
       "libero_plus": [
@@ -2251,7 +4460,7 @@
             "layout": 80.72,
             "total": 75.47
           },
-          "rank": 24
+          "rank": 36
         }
       ]
     },
@@ -2294,7 +4503,7 @@
             "libero_90": null,
             "average": 98.5
           },
-          "rank": 29
+          "rank": 33
         }
       ],
       "robotwin": [
@@ -2308,7 +4517,7 @@
             "hard": 18.21
           },
           "data_scaling": false,
-          "rank": 2
+          "rank": 3
         }
       ]
     },
@@ -2391,7 +4600,7 @@
             "layout": 87.21,
             "total": 86.8
           },
-          "rank": 2
+          "rank": 5
         }
       ]
     },
@@ -2429,7 +4638,7 @@
           "data": {
             "avg_success_rate": 75.2
           },
-          "rank": 3
+          "rank": 4
         }
       ]
     },
@@ -2476,7 +4685,7 @@
             "libero_90": null,
             "average": 99.4
           },
-          "rank": 3
+          "rank": 4
         }
       ],
       "libero_plus": [
@@ -2495,7 +4704,7 @@
             "layout": 85.2,
             "total": 83.4
           },
-          "rank": 10
+          "rank": 17
         }
       ],
       "robotwin": [
@@ -2509,7 +4718,7 @@
             "hard": 94.2
           },
           "data_scaling": true,
-          "rank": 1
+          "rank": 2
         }
       ],
       "robocasa365": [
@@ -2524,7 +4733,7 @@
             "composite_unseen": 7.9,
             "average": 46.6
           },
-          "rank": 2
+          "rank": 6
         }
       ]
     },
@@ -2729,7 +4938,7 @@
             "libero_90": null,
             "average": 98.9
           },
-          "rank": 11
+          "rank": 13
         }
       ],
       "libero_plus": [
@@ -2748,7 +4957,7 @@
             "layout": 85.2,
             "total": 84.8
           },
-          "rank": 6
+          "rank": 9
         }
       ],
       "robotwin": [
@@ -2762,7 +4971,7 @@
             "hard": 93.0
           },
           "data_scaling": true,
-          "rank": 2
+          "rank": 8
         }
       ]
     },
@@ -3051,7 +5260,7 @@
             "libero_90": null,
             "average": 92.5
           },
-          "rank": 104
+          "rank": 118
         }
       ],
       "metaworld": [
@@ -3295,7 +5504,7 @@
             "libero_90": null,
             "average": 97.8
           },
-          "rank": 51
+          "rank": 60
         }
       ],
       "metaworld": [
@@ -3395,7 +5604,7 @@
             "libero_90": null,
             "average": 92.3
           },
-          "rank": 105
+          "rank": 119
         }
       ],
       "calvin_abc_d": [
@@ -3573,7 +5782,7 @@
             "libero_90": null,
             "average": 97.8
           },
-          "rank": 52
+          "rank": 61
         }
       ],
       "robotwin": [
@@ -3587,7 +5796,7 @@
             "hard": 92.08
           },
           "data_scaling": true,
-          "rank": 5
+          "rank": 15
         }
       ]
     },
@@ -3687,7 +5896,7 @@
             "libero_90": null,
             "average": 98.7
           },
-          "rank": 15
+          "rank": 19
         }
       ],
       "libero_plus": [
@@ -3706,7 +5915,7 @@
             "layout": 74.3,
             "total": 72.8
           },
-          "rank": 27
+          "rank": 40
         }
       ],
       "robotwin": [
@@ -3720,7 +5929,7 @@
             "hard": 92.48
           },
           "data_scaling": true,
-          "rank": 3
+          "rank": 11
         }
       ]
     },
@@ -3844,7 +6053,7 @@
             "libero_90": null,
             "average": 97.5
           },
-          "rank": 59
+          "rank": 69
         }
       ]
     },
@@ -3886,7 +6095,7 @@
             "very_hard": 44.0,
             "average": 59.1
           },
-          "rank": 16
+          "rank": 17
         },
         {
           "setting": "LA_pretrain",
@@ -3951,7 +6160,7 @@
             "layout": 80.5,
             "total": 84.4
           },
-          "rank": 7
+          "rank": 14
         }
       ]
     },
@@ -4070,7 +6279,7 @@
             "libero_90": null,
             "average": 98.5
           },
-          "rank": 28
+          "rank": 32
         }
       ]
     },
@@ -4152,7 +6361,7 @@
             "libero_90": null,
             "average": 98.4
           },
-          "rank": 32
+          "rank": 37
         }
       ],
       "calvin_abc_d": [
@@ -4252,7 +6461,7 @@
             "libero_90": null,
             "average": 97.7
           },
-          "rank": 54
+          "rank": 64
         }
       ],
       "libero_plus": [
@@ -4271,7 +6480,7 @@
             "layout": 84.39,
             "total": 83.49
           },
-          "rank": 9
+          "rank": 16
         }
       ]
     },
@@ -4321,7 +6530,7 @@
             "libero_90": null,
             "average": 90.0
           },
-          "rank": 107
+          "rank": 121
         }
       ]
     },
@@ -4409,7 +6618,7 @@
             "libero_90": null,
             "average": 95.8
           },
-          "rank": 86
+          "rank": 98
         }
       ],
       "calvin_abc_d": [
@@ -4440,6 +6649,8 @@
       "Bowen Ping",
       "Yang Tian",
       "Yue Chen",
+      "Bohan Zhou",
+      "Wenxuan Song",
       "Minghong Cai",
       "Zeying Gong",
       "Ruihai Wu",
@@ -4447,7 +6658,7 @@
       "Junwei Liang",
       "Yingcong Chen"
     ],
-    "paper_abstract": "Vision-Language-Action (VLA) models leverage the rich world knowledge of pretrained vision-language models (VLMs) to enable instruction-following robotic manipulation. However, the structural mismatch between VLM semantic spaces and embodied control policies often hinders the learning of precise perception--action mappings. To address this challenge, we propose \\textbf{AffordanceVLA}, a unified framework that introduces structured affordance forecasting as a task-oriented intermediate representation to establish a more precise and robust perception--action mapping. Specifically, we progressively model manipulation priors through three complementary components: 1) \\textbf{Which2Act} for object-centric grounding via visual latent prediction to suppress distractions; 2) \\textbf{Where2Act} for 2D interaction localization via affordance map estimation; and 3) \\textbf{How2Act} for 3D geometric reasoning to guide manipulation policies. These affordance cues provide spatially grounded, semantically conditioned, and action-coupled intermediate representations, thereby naturally bridging vision, language and action. We integrate these modules into a Mixture-of-Transformer (MoT) architecture with specialized experts and train the model using a three-stage training strategy with a progressive data curriculum. To overcome the scarcity of dense affordance labels in robotic datasets, we also develop a robust automated data augmentation pipeline. Extensive experiments on simulation and real-world demonstrate that AffordanceVLA achieves strong performance across diverse manipulation scenarios."
+    "paper_abstract": "Vision-Language-Action (VLA) models leverage the rich world knowledge of pretrained vision-language models (VLMs) to enable instruction-following robotic manipulation. However, the structural mismatch between VLM semantic spaces and embodied control policies often hinders the learning of precise perception-action mappings. To address this challenge, we propose AffordanceVLA, a scalable, unified framework that introduces structured affordance learning as a task-oriented and object-centric intermediate representation to establish a more precise and robust perception-action mapping. Specifically, we progressively model manipulation priors through three complementary components - Which2Act, Where2Act, and How2Act - which jointly produce spatially grounded, semantically conditioned, and action-coupled intermediate representations, thereby naturally bridging vision, language, and action. We integrate these modules into a Mixture-of-Transformer (MoT) architecture and adopt a three-stage progressive training curriculum that leverages 8.8M affordance-centric grounding and pointing samples, translating scalable vision-language supervision into improved robotic manipulation. To overcome the scarcity of dense affordance labels in robotic datasets, we also develop a robust automated data augmentation pipeline. Extensive experiments on ID & OOD simulation and real-world demonstrate that AffordanceVLA outperforms strong VLA baselines across diverse manipulation scenarios, validating structured affordance learning as a scalable and robust bridge that integrates multi-source vision-language supervision while connecting pretrained VLM semantics to embodied robot control."
   },
   {
     "name": "WLA-0",
@@ -4473,7 +6684,7 @@
             "libero_90": null,
             "average": 98.9
           },
-          "rank": 10
+          "rank": 12
         }
       ],
       "robotwin": [
@@ -4487,7 +6698,7 @@
             "hard": 90.02
           },
           "data_scaling": true,
-          "rank": 11
+          "rank": 23
         }
       ]
     },
@@ -4786,7 +6997,7 @@
             "libero_90": null,
             "average": 96.28
           },
-          "rank": 79
+          "rank": 91
         }
       ],
       "metaworld": [
@@ -4848,7 +7059,7 @@
             "hard": 80.9
           },
           "data_scaling": true,
-          "rank": 26
+          "rank": 45
         }
       ]
     },
@@ -5021,7 +7232,7 @@
             "hard": 81.6
           },
           "data_scaling": true,
-          "rank": 25
+          "rank": 44
         }
       ]
     },
@@ -5121,7 +7332,7 @@
             "libero_90": null,
             "average": 98.6
           },
-          "rank": 21
+          "rank": 25
         }
       ],
       "robotwin": [
@@ -5135,7 +7346,7 @@
             "hard": 89.8
           },
           "data_scaling": true,
-          "rank": 12
+          "rank": 25
         }
       ]
     },
@@ -5282,7 +7493,7 @@
             "libero_90": null,
             "average": 98.1
           },
-          "rank": 42
+          "rank": 50
         }
       ]
     },
@@ -5587,7 +7798,7 @@
             "libero_90": null,
             "average": 98.1
           },
-          "rank": 40
+          "rank": 48
         }
       ]
     },
@@ -5706,7 +7917,7 @@
           "data": {
             "avg_success_rate": 58.7
           },
-          "rank": 7
+          "rank": 10
         }
       ],
       "robocasa365": [
@@ -5721,7 +7932,7 @@
             "composite_unseen": 5.6,
             "average": 32.1
           },
-          "rank": 4
+          "rank": 11
         }
       ]
     },
@@ -5823,7 +8034,7 @@
             "libero_90": null,
             "average": 98.1
           },
-          "rank": 41
+          "rank": 49
         }
       ]
     },
@@ -5925,7 +8136,7 @@
             "layout": 82.6,
             "total": 81.2
           },
-          "rank": 17
+          "rank": 25
         }
       ]
     },
@@ -6064,7 +8275,7 @@
             "libero_90": null,
             "average": 98.6
           },
-          "rank": 19
+          "rank": 23
         }
       ],
       "libero_plus": [
@@ -6083,7 +8294,7 @@
             "layout": 78.2,
             "total": 85.7
           },
-          "rank": 5
+          "rank": 8
         }
       ],
       "robotwin": [
@@ -6097,7 +8308,7 @@
             "hard": 86.06
           },
           "data_scaling": true,
-          "rank": 21
+          "rank": 38
         }
       ]
     },
@@ -6144,7 +8355,7 @@
             "layout": 79.9,
             "total": 75.4
           },
-          "rank": 25
+          "rank": 37
         }
       ]
     },
@@ -6252,7 +8463,7 @@
             "libero_90": null,
             "average": 98.6
           },
-          "rank": 20
+          "rank": 24
         }
       ]
     },
@@ -6295,7 +8506,7 @@
             "libero_90": null,
             "average": 97.4
           },
-          "rank": 64
+          "rank": 75
         }
       ],
       "robocasa": [
@@ -6307,7 +8518,7 @@
           "data": {
             "avg_success_rate": 59.5
           },
-          "rank": 6
+          "rank": 9
         }
       ]
     },
@@ -6352,7 +8563,7 @@
             "libero_90": null,
             "average": 95.4
           },
-          "rank": 89
+          "rank": 102
         }
       ],
       "libero_plus": [
@@ -6371,7 +8582,7 @@
             "layout": 69.6,
             "total": 69.6
           },
-          "rank": 31
+          "rank": 47
         }
       ],
       "metaworld": [
@@ -6536,7 +8747,7 @@
             "layout": 74.1,
             "total": 82.0
           },
-          "rank": 13
+          "rank": 20
         }
       ],
       "robotwin": [
@@ -6550,7 +8761,7 @@
             "hard": 50.0
           },
           "data_scaling": true,
-          "rank": 30
+          "rank": 50
         }
       ]
     },
@@ -6590,7 +8801,7 @@
             "libero_90": null,
             "average": 98.4
           },
-          "rank": 31
+          "rank": 36
         }
       ]
     },
@@ -6633,7 +8844,7 @@
             "libero_90": null,
             "average": 97.4
           },
-          "rank": 65
+          "rank": 76
         }
       ],
       "libero_plus": [
@@ -6652,7 +8863,7 @@
             "layout": 80.8,
             "total": 83.9
           },
-          "rank": 8
+          "rank": 15
         }
       ]
     },
@@ -6695,7 +8906,7 @@
             "libero_90": null,
             "average": 96.0
           },
-          "rank": 80
+          "rank": 92
         }
       ]
     },
@@ -6788,7 +8999,7 @@
             "libero_90": null,
             "average": 97.7
           },
-          "rank": 53
+          "rank": 63
         }
       ],
       "libero_plus": [
@@ -6807,7 +9018,7 @@
             "layout": 82.5,
             "total": 82.1
           },
-          "rank": 12
+          "rank": 19
         }
       ]
     },
@@ -6848,7 +9059,7 @@
             "libero_90": null,
             "average": 97.95
           },
-          "rank": 46
+          "rank": 55
         }
       ],
       "robotwin": [
@@ -6862,7 +9073,7 @@
             "hard": 91.86
           },
           "data_scaling": true,
-          "rank": 6
+          "rank": 16
         }
       ]
     },
@@ -7136,7 +9347,7 @@
             "hard": 82.5
           },
           "data_scaling": true,
-          "rank": 24
+          "rank": 43
         }
       ]
     },
@@ -7215,7 +9426,7 @@
           "data": {
             "avg_success_rate": 47.6
           },
-          "rank": 17
+          "rank": 20
         }
       ],
       "robocasa365": [
@@ -7230,7 +9441,7 @@
             "composite_unseen": 1.7,
             "average": 21.9
           },
-          "rank": 6
+          "rank": 13
         }
       ]
     },
@@ -7263,7 +9474,7 @@
             "libero_90": null,
             "average": 96.6
           },
-          "rank": 76
+          "rank": 88
         }
       ],
       "robochallenge": [
@@ -7333,7 +9544,7 @@
             "libero_90": null,
             "average": 97.8
           },
-          "rank": 50
+          "rank": 59
         }
       ],
       "libero_plus": [
@@ -7352,7 +9563,7 @@
             "layout": 79.1,
             "total": 79.7
           },
-          "rank": 20
+          "rank": 30
         }
       ],
       "robochallenge": [
@@ -7376,7 +9587,7 @@
           "data": {
             "avg_success_rate": 57.3
           },
-          "rank": 9
+          "rank": 12
         }
       ],
       "robotwin": [
@@ -7390,7 +9601,7 @@
             "hard": 88.3
           },
           "data_scaling": true,
-          "rank": 17
+          "rank": 34
         }
       ]
     },
@@ -8035,7 +10246,7 @@
             "libero_90": null,
             "average": 95.8
           },
-          "rank": 85
+          "rank": 97
         }
       ],
       "calvin_d_d": [
@@ -8097,7 +10308,7 @@
             "libero_90": null,
             "average": 98.4
           },
-          "rank": 30
+          "rank": 35
         }
       ],
       "libero_plus": [
@@ -8116,7 +10327,7 @@
             "layout": 83.3,
             "total": 81.4
           },
-          "rank": 16
+          "rank": 24
         }
       ]
     },
@@ -8297,7 +10508,7 @@
             "libero_90": null,
             "average": 94.0
           },
-          "rank": 101
+          "rank": 115
         }
       ]
     },
@@ -8315,7 +10526,7 @@
       "Haifeng Zhang",
       "Jun Wang"
     ],
-    "paper_abstract": "Flow-based vision-language-action (VLA) models excel in embodied control but suffer from intractable likelihoods during multi-step sampling, hindering online reinforcement learning. We propose \\textbf{\\textit{$\\boldsymbolπ$-StepNFT}} (Step-wise Negative-aware Fine-Tuning), a critic-and-likelihood-free framework that requires only a single forward pass per optimization step and eliminates auxiliary value networks. We identify that wider exploration spaces necessitate finer-grained, step-wise guidance for alignment. Empirically, $π$-StepNFT unlocks latent potential on LIBERO with competitive few-shot robustness. Moreover, it achieves superior generalization on ManiSkill, outperforming value-based baselines in OOD scenarios by preventing overfitting to multimodal features. This property offers a scalable solution promising for complex real-world applications."
+    "paper_abstract": "Flow-based vision-language-action (VLA) models have emerged as a powerful paradigm for embodied control, but multi-step denoising makes policy-gradient online reinforcement learning (RL) difficult because the final-action likelihood induced by the sampler is not directly tractable. We identify an exploration--supervision mismatch within the denoising trajectory, where stochastic differential equation (SDE) sampling explores a wider local stochastic transition space while supervision derived from the final denoised output does not directly use the adjacent transitions observed during sampling. We propose $π$-StepNFT (Step-wise Negative-aware Fine-Tuning), a flow-native online RL framework that couples wider stochastic exploration with finer step-wise supervision without computing the final-action likelihood. $π$-StepNFT treats observed SDE transitions as supervision units, using variance-normalized transition errors to rank mirrored positive and negative velocity branches and map rollout feedback to local velocity updates. On LIBERO, starting from shared few-shot SFT initializations, $π$-StepNFT raises average success from 57.6\\% to 92.0\\% for $π_0$ and from 77.1\\% to 94.0\\% for $π_{0.5}$. On ManiSkill, it achieves the highest reported mean success among the evaluated RL baselines on five test-only visual perturbations. Our project homepage is available at https://wangst0181.github.io/pi-StepNFT/."
   },
   {
     "name": "ATA",
@@ -8385,7 +10596,7 @@
             "libero_90": null,
             "average": 99.0
           },
-          "rank": 7
+          "rank": 8
         }
       ]
     },
@@ -8423,7 +10634,7 @@
             "libero_90": null,
             "average": 97.8
           },
-          "rank": 49
+          "rank": 58
         }
       ],
       "calvin_abc_d": [
@@ -8660,7 +10871,7 @@
             "libero_90": null,
             "average": 98.6
           },
-          "rank": 17
+          "rank": 21
         }
       ],
       "robocasa": [
@@ -8672,7 +10883,7 @@
           "data": {
             "avg_success_rate": 50.8
           },
-          "rank": 13
+          "rank": 16
         }
       ]
     },
@@ -8713,7 +10924,7 @@
             "libero_90": null,
             "average": 99.3
           },
-          "rank": 4
+          "rank": 5
         }
       ]
     },
@@ -8908,7 +11119,7 @@
             "libero_90": null,
             "average": 98.0
           },
-          "rank": 44
+          "rank": 53
         }
       ],
       "calvin_abc_d": [
@@ -9113,7 +11324,7 @@
             "libero_90": null,
             "average": 97.6
           },
-          "rank": 56
+          "rank": 66
         }
       ],
       "robotwin": [
@@ -9127,7 +11338,7 @@
             "hard": 91.78
           },
           "data_scaling": true,
-          "rank": 7
+          "rank": 17
         }
       ]
     },
@@ -9198,7 +11409,7 @@
           "data": {
             "avg_success_rate": 70.2
           },
-          "rank": 4
+          "rank": 6
         }
       ]
     },
@@ -9295,7 +11506,7 @@
             "hard": 85.0
           },
           "data_scaling": true,
-          "rank": 23
+          "rank": 40
         }
       ],
       "robocasa365": [
@@ -9310,7 +11521,7 @@
             "composite_unseen": 2.9,
             "average": 20.7
           },
-          "rank": 7
+          "rank": 14
         }
       ]
     },
@@ -9370,7 +11581,7 @@
             "libero_90": null,
             "average": 94.1
           },
-          "rank": 100
+          "rank": 114
         }
       ],
       "robochallenge": [
@@ -9427,7 +11638,7 @@
             "libero_90": null,
             "average": 98.6
           },
-          "rank": 16
+          "rank": 20
         }
       ],
       "libero_plus": [
@@ -9446,7 +11657,7 @@
             "layout": 82.6,
             "total": 80.5
           },
-          "rank": 18
+          "rank": 26
         }
       ],
       "robocasa": [
@@ -9458,7 +11669,7 @@
           "data": {
             "avg_success_rate": 58.3
           },
-          "rank": 8
+          "rank": 11
         }
       ],
       "robotwin": [
@@ -9472,7 +11683,7 @@
             "hard": 85.08
           },
           "data_scaling": true,
-          "rank": 22
+          "rank": 39
         }
       ]
     },
@@ -9520,7 +11731,7 @@
             "libero_90": null,
             "average": 98.7
           },
-          "rank": 14
+          "rank": 18
         }
       ],
       "calvin_abcd_d": [
@@ -9611,7 +11822,7 @@
             "libero_90": null,
             "average": 97.2
           },
-          "rank": 66
+          "rank": 78
         }
       ],
       "libero_plus": [
@@ -9630,7 +11841,7 @@
             "layout": 85.1,
             "total": 79.5
           },
-          "rank": 21
+          "rank": 32
         }
       ]
     },
@@ -9767,7 +11978,7 @@
             "libero_90": null,
             "average": 97.6
           },
-          "rank": 55
+          "rank": 65
         }
       ]
     },
@@ -9809,7 +12020,7 @@
             "libero_90": null,
             "average": 98.6
           },
-          "rank": 18
+          "rank": 22
         }
       ]
     },
@@ -9848,7 +12059,7 @@
             "libero_90": null,
             "average": 98.5
           },
-          "rank": 27
+          "rank": 31
         }
       ],
       "libero_plus": [
@@ -9867,7 +12078,7 @@
             "layout": 81.2,
             "total": 81.7
           },
-          "rank": 15
+          "rank": 22
         }
       ]
     },
@@ -9910,7 +12121,7 @@
             "libero_90": null,
             "average": 97.4
           },
-          "rank": 63
+          "rank": 74
         }
       ],
       "libero_plus": [
@@ -9929,7 +12140,7 @@
             "layout": 79.5,
             "total": 74.0
           },
-          "rank": 26
+          "rank": 38
         }
       ],
       "robotwin": [
@@ -9943,7 +12154,7 @@
             "hard": 92.3
           },
           "data_scaling": true,
-          "rank": 4
+          "rank": 13
         }
       ]
     },
@@ -10078,7 +12289,7 @@
           "data": {
             "avg_success_rate": 55.4
           },
-          "rank": 10
+          "rank": 13
         }
       ]
     },
@@ -10135,7 +12346,7 @@
             "libero_90": null,
             "average": 96.0
           },
-          "rank": 81
+          "rank": 93
         }
       ]
     },
@@ -10154,10 +12365,10 @@
       "Quanlu Zhang",
       "Yu Wang",
       "Haoran Li",
-      "Chao Yu",
-      "Dongbin Zhao"
+      "Dongbin Zhao",
+      "Chao Yu"
     ],
-    "paper_abstract": "Reinforcement learning (RL) promises to unlock capabilities beyond imitation learning for Vision--Language--Action (VLA) models, but its requirement for massive real-world interaction prevents direct deployment on physical robots. Recent work attempts to use learned world models as simulators for policy optimization, yet closed-loop imagined rollouts inevitably suffer from hallucination and long-horizon error accumulation. Such errors not only degrade visual fidelity, but also mislead policy optimization by providing unreliable learning signals. We propose WoVR, a reliable world-model-based RL framework for post-training VLA policies. Instead of assuming a faithful world model, WoVR explicitly regulates how RL interacts with imperfect imagined dynamics. It improves rollout stability through a controllable action-conditioned video world model, reshapes imagined interaction to reduce effective error depth via Keyframe-Initialized Rollouts, and maintains policy--simulator alignment through World Model-Policy co-evolution. Extensive experiments demonstrate that WoVR enables stable long-horizon imagined rollouts and effective policy optimization, achieving superior LIBERO performance and consistent real-world gains across multiple robotic platforms. These results show that world models can serve as practical simulators for RL when hallucination is explicitly controlled. Additional visualization results are available at https://wovr-corl.github.io."
+    "paper_abstract": "Reinforcement learning (RL) promises to unlock capabilities beyond imitation learning for Vision--Language--Action (VLA) models, but its requirement for massive real-world interaction prevents direct deployment on physical robots. Recent work attempts to use learned world models as simulators for policy optimization, yet closed-loop imagined rollouts inevitably suffer from hallucination and long-horizon error accumulation. Such errors not only degrade visual fidelity, but also mislead policy optimization by providing unreliable learning signals. We propose WoVR, a reliable world-model-based RL framework for post-training VLA policies. Instead of assuming a faithful world model, WoVR explicitly regulates how RL interacts with imperfect imagined dynamics. It improves rollout stability through a controllable action-conditioned video world model, reshapes imagined interaction to reduce effective error depth via Keyframe-Initialized Rollouts, and maintains policy--simulator alignment through World Model-Policy co-evolution. Extensive experiments demonstrate that WoVR enables stable long-horizon imagined rollouts and effective policy optimization, achieving superior LIBERO performance and consistent real-world gains across multiple robotic platforms. These results show that world models can serve as practical simulators for RL when hallucination is explicitly controlled. Additional visualization results are available at https://wovr-rlinf.github.io."
   },
   {
     "name": "Spirit v1.5",
@@ -10211,7 +12422,7 @@
             "libero_90": null,
             "average": 98.5
           },
-          "rank": 24
+          "rank": 28
         }
       ],
       "libero_plus": [
@@ -10230,7 +12441,7 @@
             "layout": 88.1,
             "total": 86.6
           },
-          "rank": 3
+          "rank": 6
         }
       ]
     },
@@ -10273,7 +12484,7 @@
             "libero_90": null,
             "average": 98.9
           },
-          "rank": 9
+          "rank": 11
         }
       ]
     },
@@ -10313,7 +12524,7 @@
           "data": {
             "avg_success_rate": 52.6
           },
-          "rank": 12
+          "rank": 15
         }
       ]
     },
@@ -10350,7 +12561,7 @@
           "data": {
             "avg_success_rate": 54.6
           },
-          "rank": 11
+          "rank": 14
         }
       ]
     },
@@ -10395,7 +12606,7 @@
             "libero_90": null,
             "average": 98.7
           },
-          "rank": 13
+          "rank": 17
         }
       ]
     },
@@ -10468,7 +12679,7 @@
             "libero_90": null,
             "average": 98.5
           },
-          "rank": 25
+          "rank": 29
         }
       ],
       "robotwin": [
@@ -10482,7 +12693,7 @@
             "hard": 91.55
           },
           "data_scaling": true,
-          "rank": 8
+          "rank": 19
         }
       ]
     },
@@ -10570,7 +12781,7 @@
             "libero_90": null,
             "average": 98.5
           },
-          "rank": 26
+          "rank": 30
         }
       ]
     },
@@ -10611,7 +12822,7 @@
             "hard": 89.6
           },
           "data_scaling": true,
-          "rank": 13
+          "rank": 28
         }
       ]
     },
@@ -10683,7 +12894,7 @@
             "hard": 86.68
           },
           "data_scaling": true,
-          "rank": 19
+          "rank": 36
         }
       ]
     },
@@ -10783,7 +12994,7 @@
             "libero_90": 96.0,
             "average": 97.1
           },
-          "rank": 68
+          "rank": 80
         }
       ]
     },
@@ -10820,7 +13031,7 @@
             "composite_unseen": 2.7,
             "average": 23.9
           },
-          "rank": 5
+          "rank": 12
         }
       ]
     },
@@ -10853,7 +13064,7 @@
           "data": {
             "avg_success_rate": 47.8
           },
-          "rank": 16
+          "rank": 19
         },
         {
           "setting": "Qwen3PI",
@@ -10863,7 +13074,7 @@
           "data": {
             "avg_success_rate": 43.9
           },
-          "rank": 18
+          "rank": 21
         },
         {
           "setting": "Qwen3OFT",
@@ -10873,7 +13084,7 @@
           "data": {
             "avg_success_rate": 48.8
           },
-          "rank": 15
+          "rank": 18
         },
         {
           "setting": "Qwen3FAST",
@@ -10883,7 +13094,7 @@
           "data": {
             "avg_success_rate": 39.0
           },
-          "rank": 19
+          "rank": 22
         }
       ],
       "robotwin": [
@@ -10897,7 +13108,7 @@
             "hard": 88.32
           },
           "data_scaling": true,
-          "rank": 16
+          "rank": 33
         }
       ]
     },
@@ -11011,7 +13222,7 @@
             "hard": 87.02
           },
           "data_scaling": true,
-          "rank": 18
+          "rank": 35
         }
       ]
     },
@@ -11061,7 +13272,7 @@
             "libero_90": null,
             "average": 98.0
           },
-          "rank": 45
+          "rank": 54
         }
       ],
       "calvin_d_d": [
@@ -11122,7 +13333,7 @@
             "libero_90": null,
             "average": 94.8
           },
-          "rank": 95
+          "rank": 109
         }
       ],
       "libero_plus": [
@@ -11141,7 +13352,7 @@
             "layout": 62.9,
             "total": 65.7
           },
-          "rank": 34
+          "rank": 50
         }
       ],
       "metaworld": [
@@ -11171,7 +13382,7 @@
             "hard": 12.5
           },
           "data_scaling": false,
-          "rank": 5
+          "rank": 6
         }
       ]
     },
@@ -11352,7 +13563,7 @@
             "libero_90": null,
             "average": 97.0
           },
-          "rank": 71
+          "rank": 83
         }
       ],
       "libero_plus": [
@@ -11371,7 +13582,7 @@
             "layout": 79.9,
             "total": 79.0
           },
-          "rank": 22
+          "rank": 34
         }
       ]
     },
@@ -11429,7 +13640,7 @@
             "libero_90": null,
             "average": 95.0
           },
-          "rank": 93
+          "rank": 106
         }
       ]
     },
@@ -11518,7 +13729,7 @@
             "libero_90": null,
             "average": 99.2
           },
-          "rank": 5
+          "rank": 6
         }
       ],
       "libero_plus": [
@@ -11537,7 +13748,7 @@
             "layout": 72.4,
             "total": 59.6
           },
-          "rank": 36
+          "rank": 52
         }
       ]
     },
@@ -11581,7 +13792,7 @@
             "libero_90": null,
             "average": 97.4
           },
-          "rank": 62
+          "rank": 73
         }
       ]
     },
@@ -11629,7 +13840,7 @@
             "libero_90": null,
             "average": 96.7
           },
-          "rank": 74
+          "rank": 86
         }
       ],
       "libero_plus": [
@@ -11648,7 +13859,7 @@
             "layout": 73.7,
             "total": 72.4
           },
-          "rank": 28
+          "rank": 42
         }
       ]
     },
@@ -11688,7 +13899,7 @@
             "libero_90": null,
             "average": 96.7
           },
-          "rank": 75
+          "rank": 87
         }
       ]
     },
@@ -11732,7 +13943,7 @@
             "libero_90": null,
             "average": 94.7
           },
-          "rank": 97
+          "rank": 111
         }
       ]
     },
@@ -11771,7 +13982,7 @@
             "libero_90": null,
             "average": 98.1
           },
-          "rank": 37
+          "rank": 45
         }
       ],
       "robotwin": [
@@ -11785,7 +13996,7 @@
             "hard": 39.0
           },
           "data_scaling": false,
-          "rank": 1
+          "rank": 2
         },
         {
           "setting": "default",
@@ -11797,7 +14008,7 @@
             "hard": 72.84
           },
           "data_scaling": true,
-          "rank": 28
+          "rank": 48
         }
       ],
       "calvin_abc_d": [
@@ -11915,7 +14126,7 @@
             "libero_90": null,
             "average": 95.9
           },
-          "rank": 83
+          "rank": 95
         }
       ]
     },
@@ -11978,7 +14189,7 @@
             "libero_90": null,
             "average": 97.0
           },
-          "rank": 70
+          "rank": 82
         }
       ]
     },
@@ -12023,7 +14234,7 @@
             "libero_90": null,
             "average": 98.3
           },
-          "rank": 33
+          "rank": 40
         }
       ],
       "metaworld": [
@@ -12104,7 +14315,7 @@
             "libero_90": 98.6,
             "average": 98.1
           },
-          "rank": 38
+          "rank": 46
         }
       ]
     },
@@ -12212,7 +14423,7 @@
             "libero_90": null,
             "average": 91.1
           },
-          "rank": 106
+          "rank": 120
         }
       ]
     },
@@ -12383,7 +14594,7 @@
             "libero_90": null,
             "average": 94.9
           },
-          "rank": 94
+          "rank": 108
         }
       ]
     },
@@ -12423,7 +14634,7 @@
             "libero_90": 94.7,
             "average": 96.9
           },
-          "rank": 73
+          "rank": 85
         }
       ],
       "calvin_abcd_d": [
@@ -12514,7 +14725,7 @@
             "libero_90": null,
             "average": 99.1
           },
-          "rank": 6
+          "rank": 7
         }
       ]
     },
@@ -12611,7 +14822,7 @@
             "libero_90": null,
             "average": 98.5
           },
-          "rank": 23
+          "rank": 27
         }
       ],
       "calvin_abc_d": [
@@ -12813,7 +15024,7 @@
             "libero_90": null,
             "average": 74.0
           },
-          "rank": 122
+          "rank": 136
         }
       ]
     },
@@ -12854,7 +15065,7 @@
             "libero_90": 95.6,
             "average": 96.5
           },
-          "rank": 77
+          "rank": 89
         }
       ]
     },
@@ -12898,7 +15109,7 @@
             "libero_90": null,
             "average": 86.6
           },
-          "rank": 111
+          "rank": 125
         }
       ]
     },
@@ -12951,7 +15162,7 @@
             "libero_90": null,
             "average": 96.3
           },
-          "rank": 78
+          "rank": 90
         }
       ]
     },
@@ -13036,7 +15247,7 @@
             "libero_90": null,
             "average": 98.2
           },
-          "rank": 35
+          "rank": 43
         }
       ]
     },
@@ -13107,7 +15318,7 @@
             "libero_90": null,
             "average": 98.0
           },
-          "rank": 43
+          "rank": 52
         }
       ]
     },
@@ -13263,7 +15474,7 @@
             "libero_90": null,
             "average": 92.6
           },
-          "rank": 103
+          "rank": 117
         }
       ],
       "calvin_abc_d": [
@@ -13355,7 +15566,7 @@
             "libero_90": null,
             "average": 95.8
           },
-          "rank": 84
+          "rank": 96
         }
       ]
     },
@@ -13399,7 +15610,7 @@
             "libero_90": null,
             "average": 88.8
           },
-          "rank": 108
+          "rank": 122
         }
       ],
       "metaworld": [
@@ -13463,7 +15674,7 @@
             "libero_90": null,
             "average": 88.6
           },
-          "rank": 109
+          "rank": 123
         }
       ]
     },
@@ -13508,7 +15719,7 @@
             "libero_90": null,
             "average": 95.5
           },
-          "rank": 88
+          "rank": 101
         }
       ],
       "calvin_abcd_d": [
@@ -13584,7 +15795,7 @@
             "libero_90": null,
             "average": 81.8
           },
-          "rank": 114
+          "rank": 128
         }
       ],
       "libero_plus": [
@@ -13603,7 +15814,7 @@
             "layout": 38.0,
             "total": 25.0
           },
-          "rank": 41
+          "rank": 58
         }
       ]
     },
@@ -13649,7 +15860,7 @@
             "libero_90": null,
             "average": 94.8
           },
-          "rank": 96
+          "rank": 110
         }
       ]
     },
@@ -13774,7 +15985,7 @@
             "libero_90": 96.0,
             "average": 94.3
           },
-          "rank": 98
+          "rank": 112
         }
       ]
     },
@@ -13807,7 +16018,7 @@
             "libero_90": null,
             "average": 81.0
           },
-          "rank": 115
+          "rank": 129
         }
       ]
     },
@@ -13895,7 +16106,7 @@
             "libero_90": null,
             "average": 95.2
           },
-          "rank": 92
+          "rank": 105
         }
       ],
       "libero_plus": [
@@ -13914,7 +16125,7 @@
             "layout": 31.9,
             "total": 43.9
           },
-          "rank": 39
+          "rank": 56
         }
       ]
     },
@@ -14072,7 +16283,7 @@
             "libero_90": null,
             "average": 97.5
           },
-          "rank": 57
+          "rank": 67
         }
       ],
       "libero_plus": [
@@ -14091,7 +16302,7 @@
             "layout": 74.2,
             "total": 68.4
           },
-          "rank": 32
+          "rank": 48
         }
       ]
     },
@@ -14129,7 +16340,7 @@
             "libero_90": null,
             "average": 98.1
           },
-          "rank": 39
+          "rank": 47
         }
       ]
     },
@@ -14170,7 +16381,7 @@
             "libero_90": null,
             "average": 96.9
           },
-          "rank": 72
+          "rank": 84
         }
       ],
       "libero_plus": [
@@ -14189,7 +16400,7 @@
             "layout": 87.0,
             "total": 85.7
           },
-          "rank": 4
+          "rank": 7
         }
       ],
       "metaworld": [
@@ -14244,7 +16455,7 @@
             "composite_unseen": 1.2,
             "average": 16.9
           },
-          "rank": 8
+          "rank": 15
         }
       ],
       "robotwin": [
@@ -14258,7 +16469,7 @@
             "hard": 76.76
           },
           "data_scaling": true,
-          "rank": 27
+          "rank": 46
         }
       ]
     },
@@ -14328,7 +16539,7 @@
             "libero_90": null,
             "average": 87.9
           },
-          "rank": 110
+          "rank": 124
         }
       ],
       "libero_plus": [
@@ -14347,7 +16558,7 @@
             "layout": 62.1,
             "total": 39.0
           },
-          "rank": 40
+          "rank": 57
         }
       ]
     },
@@ -14389,7 +16600,7 @@
             "libero_90": null,
             "average": 93.9
           },
-          "rank": 102
+          "rank": 116
         }
       ]
     },
@@ -14697,7 +16908,7 @@
             "hard": 13.72
           },
           "data_scaling": false,
-          "rank": 4
+          "rank": 5
         }
       ]
     },
@@ -14740,7 +16951,7 @@
             "libero_90": null,
             "average": 82.4
           },
-          "rank": 113
+          "rank": 127
         }
       ],
       "calvin_abc_d": [
@@ -14805,7 +17016,7 @@
             "libero_90": null,
             "average": 95.3
           },
-          "rank": 90
+          "rank": 103
         },
         {
           "setting": "wrist & third-person images",
@@ -14821,7 +17032,7 @@
             "libero_90": null,
             "average": 97.1
           },
-          "rank": 67
+          "rank": 79
         }
       ],
       "libero_plus": [
@@ -14840,7 +17051,7 @@
             "layout": 74.2,
             "total": 69.6
           },
-          "rank": 30
+          "rank": 46
         },
         {
           "setting": "mix-sft",
@@ -14857,7 +17068,7 @@
             "layout": 68.7,
             "total": 67.9
           },
-          "rank": 33
+          "rank": 49
         },
         {
           "setting": "without wrist input",
@@ -14874,7 +17085,7 @@
             "layout": 69.9,
             "total": 55.8
           },
-          "rank": 37
+          "rank": 54
         }
       ],
       "robochallenge": [
@@ -14924,7 +17135,7 @@
             "libero_90": null,
             "average": 97.4
           },
-          "rank": 61
+          "rank": 72
         }
       ]
     },
@@ -14964,7 +17175,7 @@
             "libero_90": null,
             "average": 85.5
           },
-          "rank": 112
+          "rank": 126
         }
       ],
       "libero_plus": [
@@ -14983,7 +17194,7 @@
             "layout": 68.8,
             "total": 61.6
           },
-          "rank": 35
+          "rank": 51
         }
       ]
     },
@@ -15082,7 +17293,7 @@
             "libero_90": 73.0,
             "average": 74.0
           },
-          "rank": 121
+          "rank": 135
         }
       ]
     },
@@ -15126,7 +17337,7 @@
             "libero_90": null,
             "average": 78.1
           },
-          "rank": 117
+          "rank": 131
         }
       ]
     },
@@ -15209,7 +17420,7 @@
             "libero_90": null,
             "average": 74.8
           },
-          "rank": 120
+          "rank": 134
         }
       ]
     },
@@ -15545,7 +17756,7 @@
             "libero_90": null,
             "average": 80.2
           },
-          "rank": 116
+          "rank": 130
         }
       ]
     },
@@ -15717,7 +17928,7 @@
             "libero_90": null,
             "average": 94.2
           },
-          "rank": 99
+          "rank": 113
         }
       ],
       "libero_plus": [
@@ -15736,7 +17947,7 @@
             "layout": 68.9,
             "total": 53.6
           },
-          "rank": 38
+          "rank": 55
         }
       ],
       "metaworld": [
@@ -15752,7 +17963,7 @@
             "very_hard": 30.0,
             "average": 47.9
           },
-          "rank": 18
+          "rank": 19
         }
       ],
       "robochallenge": [
@@ -15791,7 +18002,7 @@
             "composite_unseen": 0.7,
             "average": 15.0
           },
-          "rank": 9
+          "rank": 16
         }
       ],
       "robotwin": [
@@ -15805,7 +18016,7 @@
             "hard": 16.34
           },
           "data_scaling": false,
-          "rank": 3
+          "rank": 4
         },
         {
           "setting": "default",
@@ -15817,7 +18028,7 @@
             "hard": 58.4
           },
           "data_scaling": true,
-          "rank": 29
+          "rank": 49
         }
       ]
     },
@@ -16037,7 +18248,7 @@
             "very_hard": 15.8,
             "average": 31.6
           },
-          "rank": 19
+          "rank": 20
         }
       ]
     },
@@ -16297,7 +18508,7 @@
             "libero_90": null,
             "average": 76.5
           },
-          "rank": 118
+          "rank": 132
         }
       ],
       "libero_plus": [
@@ -16316,7 +18527,7 @@
             "layout": 28.5,
             "total": 15.6
           },
-          "rank": 42
+          "rank": 59
         }
       ]
     },
@@ -16504,7 +18715,7 @@
             "libero_90": null,
             "average": 75.1
           },
-          "rank": 119
+          "rank": 133
         }
       ]
     },
@@ -16590,7 +18801,7 @@
             "composite_unseen": 9.0,
             "average": 35.3
           },
-          "rank": 3
+          "rank": 10
         }
       ]
     },
@@ -16628,7 +18839,7 @@
             "very_hard": 44.0,
             "average": 50.5
           },
-          "rank": 17
+          "rank": 18
         }
       ],
       "calvin_abcd_d": [
@@ -17212,7 +19423,7 @@
             "libero_90": null,
             "average": 72.4
           },
-          "rank": 123
+          "rank": 137
         }
       ],
       "metaworld": [
@@ -17228,7 +19439,7 @@
             "very_hard": 6.1,
             "average": 10.5
           },
-          "rank": 20
+          "rank": 21
         }
       ],
       "robocasa365": [
@@ -17243,7 +19454,7 @@
             "composite_unseen": 1.3,
             "average": 6.1
           },
-          "rank": 10
+          "rank": 17
         }
       ],
       "calvin_abc_d": [
@@ -17274,7 +19485,7 @@
             "hard": 0.64
           },
           "data_scaling": false,
-          "rank": 6
+          "rank": 8
         }
       ]
     },
