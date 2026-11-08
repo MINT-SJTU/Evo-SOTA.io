@@ -1,6 +1,24 @@
 {
   "standard_opensource": [
     {
+      "name": "MOST-VLA",
+      "base_name": "MOST-VLA",
+      "setting": "",
+      "paper_url": "https://arxiv.org/abs/2611.00734",
+      "pub_date": "2026-11",
+      "is_opensource": true,
+      "opensource_url": "https://github.com/Intelligent-Interaction/MOST-vla",
+      "is_rl": false,
+      "atomic_seen": 81.8,
+      "composite_seen": 68.7,
+      "composite_unseen": 64.7,
+      "average": 72.1,
+      "source": "original",
+      "is_standard": true,
+      "note": "",
+      "rank": 1
+    },
+    {
       "name": "HarnessVLA",
       "base_name": "HarnessVLA",
       "setting": "",
@@ -16,7 +34,61 @@
       "source": "original",
       "is_standard": true,
       "note": "",
-      "rank": 1
+      "rank": 2
+    },
+    {
+      "name": "Long-WAM",
+      "base_name": "Long-WAM",
+      "setting": "",
+      "paper_url": "https://arxiv.org/abs/2610.10528",
+      "pub_date": "2026-10",
+      "is_opensource": true,
+      "opensource_url": "https://github.com/NVlabs/LongLive/tree/main/Long-WAM",
+      "is_rl": false,
+      "atomic_seen": 85.6,
+      "composite_seen": 38.8,
+      "composite_unseen": 35.0,
+      "average": 54.4,
+      "source": "original",
+      "is_standard": true,
+      "note": "",
+      "rank": 3
+    },
+    {
+      "name": "CausalAlign",
+      "base_name": "CausalAlign",
+      "setting": "",
+      "paper_url": "https://arxiv.org/abs/2610.29915",
+      "pub_date": "2026-10",
+      "is_opensource": true,
+      "opensource_url": "https://github.com/PKU-VaLuE-Lab/CausalAlign",
+      "is_rl": false,
+      "atomic_seen": 78.1,
+      "composite_seen": 40.8,
+      "composite_unseen": 40.6,
+      "average": 54.2,
+      "source": "original",
+      "is_standard": true,
+      "note": "",
+      "rank": 4
+    },
+    {
+      "name": "LoopWAM",
+      "base_name": "LoopWAM",
+      "setting": "",
+      "paper_url": "https://arxiv.org/abs/2610.18873",
+      "pub_date": "2026-10",
+      "is_opensource": true,
+      "opensource_url": "https://github.com/loop-wam/LoopWAM",
+      "is_rl": true,
+      "atomic_seen": 79.7,
+      "composite_seen": 50.3,
+      "composite_unseen": 14.9,
+      "average": 49.5,
+      "source": "original",
+      "is_standard": true,
+      "note": "",
+      "rank": 5
     },
     {
       "name": "Abot-M0.5",
@@ -34,7 +106,61 @@
       "source": "original",
       "is_standard": true,
       "note": "",
-      "rank": 2
+      "rank": 6
+    },
+    {
+      "name": "OmniBrain-0",
+      "base_name": "OmniBrain-0",
+      "setting": "",
+      "paper_url": "https://arxiv.org/abs/2610.36013",
+      "pub_date": "2026-10",
+      "is_opensource": true,
+      "opensource_url": "https://github.com/luo-yc17/OmniBrain-0",
+      "is_rl": true,
+      "atomic_seen": 74.4,
+      "composite_seen": 36.3,
+      "composite_unseen": 15.0,
+      "average": 43.2,
+      "source": "original",
+      "is_standard": true,
+      "note": "",
+      "rank": 7
+    },
+    {
+      "name": "REKI",
+      "base_name": "REKI",
+      "setting": "",
+      "paper_url": "https://arxiv.org/abs/2610.22178",
+      "pub_date": "2026-10",
+      "is_opensource": true,
+      "opensource_url": "https://github.com/kyutai-labs/reki",
+      "is_rl": false,
+      "atomic_seen": 65.8,
+      "composite_seen": 32.0,
+      "composite_unseen": 14.1,
+      "average": 38.4,
+      "source": "original",
+      "is_standard": true,
+      "note": "",
+      "rank": 8
+    },
+    {
+      "name": "OneWM",
+      "base_name": "OneWM",
+      "setting": "",
+      "paper_url": "https://arxiv.org/abs/2610.21095",
+      "pub_date": "2026-10",
+      "is_opensource": true,
+      "opensource_url": "https://github.com/Interactive-Active-AI/OneWM",
+      "is_rl": false,
+      "atomic_seen": 68.78,
+      "composite_seen": 30.25,
+      "composite_unseen": 7.0,
+      "average": 36.68,
+      "source": "original",
+      "is_standard": true,
+      "note": "",
+      "rank": 9
     },
     {
       "name": "WorldDreamer",
@@ -52,7 +178,7 @@
       "source": "original",
       "is_standard": true,
       "note": "",
-      "rank": 3
+      "rank": 10
     },
     {
       "name": "RLDX-1",
@@ -70,7 +196,7 @@
       "source": "original",
       "is_standard": true,
       "note": "",
-      "rank": 4
+      "rank": 11
     },
     {
       "name": "GR00T-N1.5",
@@ -88,7 +214,7 @@
       "source": "from RoboCasa365",
       "is_standard": true,
       "note": "",
-      "rank": 5
+      "rank": 12
     },
     {
       "name": "GR00T-N1.6",
@@ -106,7 +232,7 @@
       "source": "from RoboCasa365",
       "is_standard": true,
       "note": "",
-      "rank": 6
+      "rank": 13
     },
     {
       "name": "GigaWorld-policy",
@@ -124,7 +250,7 @@
       "source": "from RoboCasa365",
       "is_standard": true,
       "note": "",
-      "rank": 7
+      "rank": 14
     },
     {
       "name": "pi0.5",
@@ -142,7 +268,7 @@
       "source": "from RoboCasa365",
       "is_standard": true,
       "note": "",
-      "rank": 8
+      "rank": 15
     },
     {
       "name": "pi0",
@@ -160,7 +286,7 @@
       "source": "from RoboCasa365",
       "is_standard": true,
       "note": "",
-      "rank": 9
+      "rank": 16
     },
     {
       "name": "Diffusion Policy",
@@ -178,7 +304,7 @@
       "source": "from RoboCasa365",
       "is_standard": true,
       "note": "",
-      "rank": 10
+      "rank": 17
     }
   ],
   "standard_closed": [
